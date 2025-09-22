@@ -7,6 +7,7 @@ function createSwiper(block) {
     const rows = Array.from(block.children);
     const swiperWrapper = document.createElement("div");
     swiperWrapper.classList.add("swiper-wrapper");
+console.log(block)
 
     rows.forEach((row) => {
       row.classList.add("swiper-slide");

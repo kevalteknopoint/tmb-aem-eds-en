@@ -15,8 +15,13 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "bannervedio"
+      "fragment"
+    ]
+  },
+  {
+    "id": "bannervedio",
+    "components": [
+      "banner-vedio-item"
     ]
   },
   {
