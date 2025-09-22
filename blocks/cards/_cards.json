@@ -36,22 +36,6 @@
       "id": "card",
       "fields": [
         {
-          "component": "multiselect",
-          "name": "classes",
-          "label": "Style",
-          "options": [
-            {
-              "name": "Expandable Tiles",
-              "value": "expandabletiles"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "card",
-      "fields": [
-        {
           "component": "reference",
           "valueType": "string",
           "name": "image",
