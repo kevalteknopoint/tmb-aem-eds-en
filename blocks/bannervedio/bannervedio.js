@@ -7,7 +7,7 @@ function createSwiper(block) {
     const rows = Array.from(block.children);
     const swiperWrapper = document.createElement("div");
     swiperWrapper.classList.add("swiper-wrapper");
-console.log(block)
+    console.log(block);
 
     rows.forEach((row) => {
       row.classList.add("swiper-slide");
@@ -21,7 +21,6 @@ console.log(block)
 }
 function createSwiper2(block) {
   if (!block.classList.contains("swiper")) {
-    
     block.classList.add("swiper");
     const rows = Array.from(block.children);
     const swiperWrapper = document.createElement("div");
@@ -32,21 +31,19 @@ function createSwiper2(block) {
       swiperWrapper.append(row);
     });
     const navWrapper = document.createElement("div");
-    navWrapper.classList.add('nav-buttons');
+    navWrapper.classList.add("nav-buttons");
     block.append(navWrapper);
 
     const prevBtn = document.createElement("button");
     prevBtn.classList.add("swiper-button-prev");
     navWrapper.append(prevBtn);
-     const nextBtn = document.createElement("button");
+    const nextBtn = document.createElement("button");
     nextBtn.classList.add("swiper-button-next");
     navWrapper.append(nextBtn);
     block.append(swiperWrapper);
-    
   }
 }
 export default function decorate(block) {
-
   const link1 = block.querySelector(".button-container");
   embedblock(link1);
   createSwiper(block);
@@ -57,10 +54,10 @@ export default function decorate(block) {
       el: ".swiper-pagination",
       clickable: true,
     },
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
   });
 
   swiper.on("slideChange", () => {
@@ -97,35 +94,25 @@ export default function decorate(block) {
     }
   });
 
-
-  document.querySelectorAll('.section.secsecond .bannervedio').forEach((block, index) => {
-    createSwiper2(block)
-    // const nextEl: '.swiper-button-next',
-    // prevEl: '.swiper-button-prev',
-    Swiperblock(block, {
-    slidesPerView: 3,
-    spaceBetween: 2,
-    loop: true,
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
-    navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-    on: {
-      slideChange: function () {
-        console.log(`Swiper in secsecond changed to slide ${this.activeIndex}`);
-      }
-    }
-  });
-  const navbtn = block.querySelector('.nav-buttons');
-  const sec = block.closest('.section');
-  const def = sec.querySelector('.default-content-wrapper');
-  def.append(navbtn)
-});
-
+  document.querySelectorAll(".secsecond.bannervedio-container .video-banner").forEach((block, index) => {
+    console.log(block)
+      createSwiper2(block);
+      Swiperblock(block, {
+        slidesPerView: 3,
+        spaceBetween: 2,
+        loop: true,
+        // autoplay: {
+        //   delay: 1000,
+        //   disableOnInteraction: false,
+        // },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }
+      });
+      const navbtn = block.querySelector(".nav-buttons");
+      const sec = block.closest(".section");
+      const def = sec.querySelector(".default-content-wrapper");
+      def.append(navbtn);
+    });
 }
-
-

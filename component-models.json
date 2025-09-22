@@ -134,16 +134,8 @@
         "label": "Style",
         "options": [
           {
-            "name": "secfirst",
-            "value": "secfirst"
-          },
-          {
-            "name": "secsecond",
-            "value": "secsecond"
-          },
-          {
-            "name": "accordin",
-            "value": "accordin"
+            "name": "Highlight",
+            "value": "highlight"
           }
         ]
       }
@@ -192,6 +184,16 @@
         "value": "",
         "label": "context-model",
         "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
       }
     ]
   },
