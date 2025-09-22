@@ -134,8 +134,16 @@
         "label": "Style",
         "options": [
           {
-            "name": "Highlight",
-            "value": "highlight"
+            "name": "Video banner",
+            "value": "secfirst"
+          },
+          {
+            "name": "News and helpfull info",
+            "value": "secsecond"
+          },
+          {
+            "name": "accordin",
+            "value": "accordin"
           }
         ]
       }

@@ -117,7 +117,6 @@ export default function decorate(block) {
     on: {
       slideChange: function () {
         console.log(`Swiper in secsecond changed to slide ${this.activeIndex}`);
-        // 👉 if you have iframe/video handling, add here
       }
     }
   });
