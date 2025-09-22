@@ -46,6 +46,8 @@
           "component": "multiselect",
           "name": "style",
           "label": "Style",
+          "valueType": "array",
+          "multi": true,
           "options": [
             {
               "name": "Expandable Tiles",
