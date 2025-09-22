@@ -33,6 +33,22 @@
   ],
   "models": [
     {
+      "id": "cards",
+      "fields": [
+        {
+          "component": "multiselect",
+          "name": "style",
+          "label": "Style",
+          "options": [
+            {
+              "name": "Expandable Tiles",
+              "value": "expandabletiles"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "card",
       "fields": [
         {
