@@ -134,11 +134,11 @@
         "label": "Style",
         "options": [
           {
-            "name": "Video banner",
+            "name": "secfirst",
             "value": "secfirst"
           },
           {
-            "name": "News and helpfull info",
+            "name": "secsecond",
             "value": "secsecond"
           },
           {
