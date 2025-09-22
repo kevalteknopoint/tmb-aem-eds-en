@@ -1,0 +1,91 @@
+{
+  "definitions": [
+    {
+      "title": "Banner Vedio",
+      "id": "bannervedio",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "bannervedio",
+              "filter": "bannervedio",
+              "model": "bannervedio"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Banner Vedio Item",
+      "id": "banner-vedio-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "banner-vedio-item",
+              "model": "banner-vedio-item"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "bannervedio",
+      "fields":[
+        {
+      "component": "multiselect",
+      "name": "classes",
+      "label": "Style",
+      "options": [
+        {
+          "name": "Video banner",
+          "value": "video-banner"
+        },
+        {
+          "name": "Text Center",
+          "value": "text-center"
+        }
+    ]
+  }
+      ]
+    },
+  {
+    "id": "banner-vedio-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "context",
+        "value": "",
+        "label": "context-model",
+        "valueType": "string"
+      }
+    ]
+  }
+],
+"filters": [
+  {
+    "id": "bannervedio",
+    "components": [
+      "banner-vedio-item"
+    ]
+  }
+]
+}
