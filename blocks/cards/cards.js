@@ -31,68 +31,71 @@ export default function decorate(block) {
   // block.textContent = '';
   // block.append(ul);
 
-  [...block.children].forEach(row => {
-    const imgCol = row.firstElementChild;
-    const textCol = row.lastElementChild;
-
-    imgCol.classList.add('banner-image');
-    textCol.classList.add('tile-content');
-
-    textCol.firstElementChild.classList.add('content-title');
-    textCol?.querySelector('p:not(.button-container)')?.classList.add('content-description');
-    textCol?.querySelector('p.button-container')?.replaceWith(textCol.lastElementChild.firstElementChild);
-    textCol?.lastElementChild?.classList.add('tile-cta');
-    textCol?.lastElementChild?.classList.remove('button');
-
-    imgCol.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '730' }])));
-
-    const bannerSlide = htmlToElement(`
-      <div class="expandable-tile${screen.width < 768 ? ' swiper-slide' : ''}">${row.innerHTML}</div>  
-    `);
-
-    row.replaceWith(bannerSlide);
-
-    if (screen.width > 768) {
-      bannerSlide?.firstElementChild?.addEventListener('click', function(e) {
-        e.preventDefault();
+  if (block.classList.contains('expandable-tiles')) {
+    [...block.children].forEach(row => {
+      const imgCol = row.firstElementChild;
+      const textCol = row.lastElementChild;
   
-        const allSlides = document.querySelectorAll('.expandable-tile');
+      imgCol.classList.add('banner-image');
+      textCol.classList.add('tile-content');
   
-        if (bannerSlide?.classList.contains('active')) {
-          bannerSlide?.classList.remove('active')
-        } else {
-          allSlides?.forEach(slide => slide.classList.remove('active'));
-          bannerSlide?.classList.add('active')
-        }
-      })
-    } else {
+      textCol.firstElementChild.classList.add('content-title');
+      textCol?.querySelector('p:not(.button-container)')?.classList.add('content-description');
+      textCol?.querySelector('p.button-container')?.replaceWith(textCol.lastElementChild.firstElementChild);
+      textCol?.lastElementChild?.classList.add('tile-cta');
+      textCol?.lastElementChild?.classList.remove('button');
+  
+      imgCol.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '730' }])));
+  
+      const bannerSlide = htmlToElement(`
+        <div class="expandable-tile${screen.width < 768 ? ' swiper-slide' : ''}">${row.innerHTML}</div>  
+      `);
+  
+      row.replaceWith(bannerSlide);
+  
+      if (screen.width > 768) {
+        bannerSlide?.firstElementChild?.addEventListener('click', function(e) {
+          e.preventDefault();
+    
+          const allSlides = document.querySelectorAll('.expandable-tile');
+    
+          if (bannerSlide?.classList.contains('active')) {
+            bannerSlide?.classList.remove('active')
+          } else {
+            allSlides?.forEach(slide => slide.classList.remove('active'));
+            bannerSlide?.classList.add('active')
+          }
+        })
+      } else {
+      }
+    })
+  
+    if (screen.width < 768) {
+      const swiperWrapper = htmlToElement(`<div class="swiper-wrapper"></div"`);
+      [...block.children].forEach(row => swiperWrapper.appendChild(row));
+  
+      block?.classList.add('swiper');
+      block.appendChild(swiperWrapper);    
+      block?.insertAdjacentHTML('beforeend', `<div class="swiper-pagination"></div>`);
+  
+      const swiper = new Swiper('.swiper', {
+        slidersPerView: 1,
+        centeredSlides: true,
+        spaceBetween: 24,
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      });
     }
-  })
-
-  if (screen.width < 768) {
-    const swiperWrapper = htmlToElement(`<div class="swiper-wrapper"></div"`);
-    [...block.children].forEach(row => swiperWrapper.appendChild(row));
-
-    block?.classList.add('swiper');
-    block.appendChild(swiperWrapper);    
-    block?.insertAdjacentHTML('beforeend', `<div class="swiper-pagination"></div>`);
-
-    const swiper = new Swiper('.swiper', {
-      slidersPerView: 1,
-      centeredSlides: true,
-      spaceBetween: 24,
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    });
+  
+    function documentHandler(e) {
+      if (!e.target.closest('.expandable-tile') && document.querySelector('.expandable-tile.active')) {
+        document.querySelectorAll('.expandable-tile.active')?.forEach(slide => slide.classList.remove('active'));
+      }
+    }
+  
+    document.removeEventListener('click', documentHandler);
   }
 
-  function documentHandler(e) {
-    if (!e.target.closest('.expandable-tile') && document.querySelector('.expandable-tile.active')) {
-      document.querySelectorAll('.expandable-tile.active')?.forEach(slide => slide.classList.remove('active'));
-    }
-  }
-
-  document.removeEventListener('click', documentHandler)
-  document.addEventListener('click', documentHandler)
+  document.addEventListener('click', documentHandler);
 }
