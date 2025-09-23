@@ -37,6 +37,10 @@
             {
               "name": "quick-links",
               "value": "quick-links"
+            },
+            {
+              "name": "momentum-section",
+              "value": "momentum-section"
             }
           ]
         }
@@ -56,7 +60,7 @@
         "columns",
         "fragment",
         "quick-links",
-        "accordion"
+        "momentum-section"
       ]
     }
   ]
