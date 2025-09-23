@@ -19,9 +19,9 @@
     ]
   },
   {
-    "id": "bannervedio",
+    "id": "bannervideo",
     "components": [
-      "banner-vedio-item"
+      "banner-video-item"
     ]
   },
   {

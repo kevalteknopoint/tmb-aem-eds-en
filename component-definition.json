@@ -83,31 +83,31 @@
       "id": "blocks",
       "components": [
         {
-          "title": "BannerVedio",
-          "id": "bannervedio",
+          "title": "BannerVideo",
+          "id": "bannervideo",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "bannervedio",
-                  "filter": "bannervedio",
-                  "model": "bannervedio"
+                  "name": "bannervideo",
+                  "filter": "bannervideo",
+                  "model": "bannervideo"
                 }
               }
             }
           }
         },
         {
-          "title": "Banner Vedio Item",
-          "id": "banner-vedio-item",
+          "title": "Banner Video Item",
+          "id": "banner-video-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "banner-vedio-item",
-                  "model": "banner-vedio-item"
+                  "name": "banner-video-item",
+                  "model": "banner-video-item"
                 }
               }
             }
