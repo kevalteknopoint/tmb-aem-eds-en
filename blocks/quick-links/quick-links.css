@@ -27,9 +27,17 @@
     position: relative;
 }
 
-.quick-links-wrapper{
+.quick-links-wrapper:nth-child(1),
+.quick-links-wrapper:nth-child(3),
+.quick-links-wrapper:nth-child(4),
+.quick-links-wrapper:nth-child(6){
     margin: 0 !important;
     padding: 0 0 0 32px!important;
+}
+.quick-links-wrapper:nth-child(2),
+.quick-links-wrapper:nth-child(5){
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .quick-links-wrapper >div >div >div >ul{
