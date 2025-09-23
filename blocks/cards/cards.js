@@ -70,7 +70,7 @@ export default function decorate(block) {
   })
 
   if (screen.width < 768) {
-    const swiperWrapper = htmlToElement(`<div class="swiper-wrapper></div"`);
+    const swiperWrapper = htmlToElement(`<div class="swiper-wrapper"></div"`);
     [...block.children].forEach(row => swiperWrapper.appendChild(row));
 
     block?.classList.add('swiper');
