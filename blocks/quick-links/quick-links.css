@@ -29,11 +29,11 @@
 
 .quick-links-wrapper{
     margin: 0 !important;
-    padding: 0 !important;
+    padding: 0 0 0 32px!important;
 }
 
 .quick-links-wrapper >div >div >div >ul{
-    width: 400px;
+    width: 316px;
     padding: 0 0 0 80px !important;
 
 }
@@ -60,6 +60,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  text-decoration: none;
 }
 
 .icon{
