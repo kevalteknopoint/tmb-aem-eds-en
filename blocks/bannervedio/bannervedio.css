@@ -1,13 +1,15 @@
 @import './swiper-bundle.min.css';
 
-.secsecond .block{
-  position: relative;
-}
-.section.bannervedio-container {
+
+.section.secfirst.bannervedio-container {
   max-width: none;
 }
 
-.section.bannervedio-container .bannervedio-wrapper {
+.section.secsecond.bannervedio-container {
+  position: relative;
+}
+
+.section.secfirst.bannervedio-container .bannervedio-wrapper {
   max-width: none;
   padding: 0;
   height: 100%;
@@ -32,7 +34,7 @@
 }
 
 .secfirst .swiper-wrapper {
-  max-height: 500px;
+  max-height: 516px;
 }
 
 .secfirst .swiper-slide:nth-child(1)>div:nth-child(2) {
@@ -42,9 +44,8 @@
   left: 40px;
   background: #ffffff47;
   border-radius: 4px;
-  height: 400px;
-  /* padding: 80px 0 41.412px 0; */
-  padding: 32px;
+  height: 350px;
+  padding: 80px 0 41.412px 0;
   text-align: center;
   align-items: center;
   align-self: stretch;
@@ -52,52 +53,56 @@
 }
 
 .nav-buttons {
-  margin-top: 15px;
   max-width: 92px;
-  width: 94%;
-  height: 32px;
+  width: 100%;
+  height: 50px;
   position: absolute;
-  top: 500px;
-  right: 5%;
+  top: 10%;
+  right: 0;
   display: flex;
   gap: 8px;
   justify-content: space-between;
-
 }
 
 .nav-buttons button {
-  padding: 8px 16px;
-  background: #0073e6;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  display: flex;
+  width: 56px;
+  height: 56px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 12px;
+  background: var(--Cream, #F5F8DE);
 }
 
 .nav-buttons button:hover {
   background: #005bb5;
+
 }
 
 .secsecond .swiper-wrapper {
   display: flex;
 }
-#banking-for-teachers-owned-by-teachers{
-  color: var(--Dark-Teal, #00525B);
-font-size: 40px;
-font-style: normal;
-font-weight: 500;
-line-height: 52px; /* 86.667% */
-letter-spacing: 2px;
-text-transform: uppercase;
-text-align: left;
-}
-.secfirst .swiper-slide:nth-child(1)>div:nth-child(2)>p{
-  color: var(--Dark-Teal, #00525B);
 
-/* Desktop & tablet/Body */
-font-family: Inter;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; /* 150% */
+#banking-for-teachers-owned-by-teachers {
+  color: var(--Dark-Teal, #00525B);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  /* 86.667% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 20px;
+}
+
+.secfirst .swiper-slide:nth-child(1)>div:nth-child(2)>p {
+  color: var(--Dark-Teal, #00525B);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
 }

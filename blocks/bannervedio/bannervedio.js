@@ -54,19 +54,15 @@ export default function decorate(block) {
       el: ".swiper-pagination",
       clickable: true,
     },
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 4000,
+    //   disableOnInteraction: false,
+    // },
   });
 
   swiper.on("slideChange", () => {
-    const prevIndex = swiper.previousIndex; // 👈 last active slide
-    const currentIndex = swiper.activeIndex; // 👈 new active slide
-
-    console.log("Previous slide:", prevIndex);
-    console.log("Current slide:", currentIndex);
-
+    const prevIndex = swiper.previousIndex;
+    const currentIndex = swiper.activeIndex;
     const prevSlide = swiper.slides[prevIndex];
     const currentSlide = swiper.slides[currentIndex];
 
