@@ -48,6 +48,57 @@
     width: 136px;
     height: 40px;
 }
+@media screen and (max-width: 767px) {
+    .momentum-block {
+        gap: 8px;
+    }
+
+    .momentum-block h1 {
+        font-size: 20px;
+        font-weight: 800;
+        display: none;
+    }
+
+    /* .tmb-teaser-wrapper > .momentum-block >div:nth-child(2) > div > p:nth-child(2){
+        display: none;
+        background-color: red;
+    } */
+    /* Targeting the 3rd child (which is the <p> you want to remove) */
+    .momentum-block div>div>p:nth-child(3) {
+        display: none;
+        margin: unset;
+        line-height: 24px;
+
+    }
+
+    .momentum-block div>div>p:nth-child(4) {
+        display: block;
+        margin: unset;
+        line-height: 18px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .momentum-block h3 {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .momentum-block .button-container>a {
+        font-size: 9px;
+        font-weight: 600;
+        margin: unset;
+        display: flex;
+        justify-content: center;
+        width: 77px;
+        height: 23px;
+    }
+
+    .momentum-block div {
+        width: 150px;
+        height: 230px;
+    }
+}
 
 .momentum-teaser-block h2 {
     color: #0B231F;
@@ -58,6 +109,129 @@
 .momentum-block div>div>p:nth-child(4) {
     display: none;
 }
+
+.momentum-section > div:nth-child(2) {
+    display: flex;
+    gap: 40px;
+    padding: 0 40px !important;
+}
+@media screen and (max-width: 767px){
+    .momentum-section > div:nth-child(2){
+        display: none;
+    }
+}
+
+.momentum-section > div:nth-child(2) > ul:nth-child(1)>li {
+    display: flex;
+}
+
+.momentum-section > div:nth-child(2) > ul:nth-child(1) >li >p {
+    font-family: 'American Grotesk', 'Condensed';
+    font-weight: 900;
+    font-style: Black;
+    font-size: 144.52px;
+    line-height: 99.1px;
+    text-transform: capitalize;
+    margin: unset;
+
+}
+
+.momentum-section > div:nth-child(2) > ul:nth-child(1) >li>ul>li:nth-child(1) {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 28.9px;
+    line-height: 49.55px;
+
+
+}
+.momentum-section > div:nth-child(2) > ul:nth-child(1) >li:nth-child(2)>ul{
+    padding-left: 0;
+}
+.momentum-section > div:nth-child(2) > ul:nth-child(1)>li:nth-child(1)>ul>li:nth-child(1){
+   font-family: American Grotesk Condensed;
+    font-weight: 900;
+    font-style: Black;
+    font-size: 73.03px;
+    line-height: 49.55px;
+    letter-spacing: 0%;
+    margin: 0;
+}
+.momentum-section > div:nth-child(2) > ul:nth-child(1)>li:nth-child(1)>ul{
+    padding-left: 0;
+}
+.momentum-section > div:nth-child(2) > ul:nth-child(1)>li:nth-child(1)>ul>li:nth-child(2){
+    font-family: 'Inter',American Grotesk Condensed;
+    font-weight: 900;
+    font-size: 33.03px;
+    line-height: 49.55px;
+
+
+}
+.momentum-section > div:nth-child(2) > ul:nth-child(1) >li >ul,
+.momentum-section > div:nth-child(2) > ul:nth-child(1),
+.momentum-section > div:nth-child(2) > ul:nth-child(2){
+    list-style: none;
+}
+
+.momentum-section > div:nth-child(2)>ul:nth-child(2)>li>ul {
+    list-style: none;
+}
+
+.momentum-section > div:nth-child(2)>ul:nth-child(2)>li>ul>li>ul {
+    list-style: none;
+    padding-left: unset;
+
+}
+
+.momentum-section > div:nth-child(2)>ul:nth-child(2)>li>ul>li:nth-child(1) p {
+    color: #0B231F;
+    font-family: 'Inter';
+    font-weight: 900;
+    font-style: Black;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: capitalize;
+    margin: 0 auto;
+
+}
+
+.momentum-section > div:nth-child(2)>ul:nth-child(2)>li>ul>li:nth-child(2) {
+    margin: 20px 0;
+}
+
+.momentum-section > div:nth-child(2)>ul:nth-child(2)>li>ul>li:nth-child(2) p {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: capitalize;
+    margin: 0 auto;
+}
+
+.momentum-section > div:nth-child(2)>ul:nth-child(2)>li>ul>li:nth-child(3) {
+    margin-bottom: 20px;
+}
+
+.momentum-section > div:nth-child(2)>ul:nth-child(2)>li>ul>li:nth-child(3) p {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+}
+
+.momentum-section > div:nth-child(2)>ul:nth-child(2)>li>ul>li:nth-child(4) .button-container>a {
+    background-color: #00525B;
+    border-radius: 20px;
+    padding-top: 8px 24px;
+    width: 136px;
+    height: 40px;
+}
+
+
+
 
 .momentum-teaser-wrapper {
     display: flex;
@@ -180,54 +354,3 @@
 }
 
 
-@media screen and (max-width: 767px) {
-    .momentum-block {
-        gap: 8px;
-    }
-
-    .momentum-block h1 {
-        font-size: 20px;
-        font-weight: 800;
-        display: none;
-    }
-
-    /* .tmb-teaser-wrapper > .momentum-block >div:nth-child(2) > div > p:nth-child(2){
-        display: none;
-        background-color: red;
-    } */
-    /* Targeting the 3rd child (which is the <p> you want to remove) */
-    .momentum-block div>div>p:nth-child(3) {
-        display: none;
-        margin: unset;
-        line-height: 24px;
-
-    }
-
-    .momentum-block div>div>p:nth-child(4) {
-        display: block;
-        margin: unset;
-        line-height: 18px;
-        font-size: 16px;
-        font-weight: 600;
-    }
-
-    .momentum-block h3 {
-        font-size: 20px;
-        font-weight: 800;
-    }
-
-    .momentum-block .button-container>a {
-        font-size: 9px;
-        font-weight: 600;
-        margin: unset;
-        display: flex;
-        justify-content: center;
-        width: 77px;
-        height: 23px;
-    }
-
-    .momentum-block div {
-        width: 150px;
-        height: 230px;
-    }
-}
