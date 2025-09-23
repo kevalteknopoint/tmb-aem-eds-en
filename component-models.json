@@ -136,6 +136,18 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "quick-links",
+            "value": "quick-links"
+          },
+          {
+            "name": "momentum-teaser",
+            "value": "momentum-teaser"
+          },
+          {
+            "name": "momentum-section",
+            "value": "momentum-section"
           }
         ]
       }
@@ -212,6 +224,36 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "tmb-teaser",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "momentum-block",
+            "value": "momentum-block"
+          }
+        ]
       }
     ]
   }
