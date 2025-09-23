@@ -11,7 +11,7 @@
 
 .quick-links-container > .quick-links-wrapper > .quick-links >div >div > p{
     color: #00525B;
-    font-family: Inter, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -40,7 +40,7 @@
 
 .quick-links-wrapper >div >div >div >ul >li{
     list-style-type: none;
-    font-family: Inter, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
@@ -54,7 +54,7 @@
 
 .quick-links-wrapper >div >div >div >ul >li >a {
   color: #000;
-  font-family: Inter, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
