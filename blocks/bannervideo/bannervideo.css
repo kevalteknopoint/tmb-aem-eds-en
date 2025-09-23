@@ -3,11 +3,11 @@
 /* ==============================
    Section Styles
 ============================== */
-.section.secfirst.bannervedio-container {
+.section.secfirst.bannervideo-container {
   max-width: none;
 }
 
-.section.secsecond.bannervedio-container {
+.section.secsecond.bannervideo-container {
   position: relative;
 }
 
@@ -15,7 +15,7 @@
   display: flex;
 }
 
-.section.secfirst.bannervedio-container .bannervedio-wrapper {
+.section.secfirst.bannervideo-container .bannervideo-wrapper {
   max-width: none;
   padding: 0;
   height: 100%;
@@ -37,11 +37,11 @@
 /* ==============================
    Swiper Slides
 ============================== */
-.secfirst .bannervedio-wrapper .bannervedio {
+.secfirst .bannervideo-wrapper .bannervideo {
   border-radius: 0 0 50px 50px;
 }
 
-.secfirst .bannervedio-wrapper .bannervedio .swiper-slide {
+.secfirst .bannervideo-wrapper .bannervideo .swiper-slide {
   position: relative;
 }
 
@@ -125,7 +125,7 @@
   background: #FFF;
 }
 
-.secsecond .bannervedio-wrapper {
+.secsecond .bannervideo-wrapper {
   padding: 40px;
 }
 
