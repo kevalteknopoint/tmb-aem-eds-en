@@ -34,9 +34,14 @@ export default function decorate(block) {
   if (block.classList.contains('expandable-tiles')) {
     [...block.children].forEach(row => {
       const imgCol = row.firstElementChild;
-      const textCol = row.lastElementChild;
+
+      if (row.lastElementChild?.querySelector('[data-aue-type]')) {
+        row.lastElementChild?.replaceWith(row.lastElementChild.firstElementChild)
+      }
+
+      let textCol = row.lastElementChild;
   
-      imgCol.classList.add('banner-image');
+      imgCol.classList.add('tile-image');
       textCol.classList.add('tile-content');
   
       textCol.firstElementChild.classList.add('content-title');

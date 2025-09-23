@@ -27,12 +27,12 @@
   opacity: 1;
 }
 
-.expandable-tile .banner-image {
+.expandable-tile .tile-image {
   cursor: pointer;
   font-size: 0;
 }
 
-.expandable-tile .banner-image img {
+.expandable-tile .tile-image img {
   border-radius: 20px;
   height: 555px;
   -o-object-fit: cover;
@@ -102,7 +102,7 @@
     flex: none;
   }
 
-  .expandable-tile .banner-image {
+  .expandable-tile .tile-image {
     cursor: default;
   }
 
