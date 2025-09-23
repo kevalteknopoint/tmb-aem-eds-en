@@ -37,11 +37,6 @@
       "id": "cards",
       "fields": [
         {
-          "component": "aem-content",
-          "name": "reference",
-          "label": "Reference"
-        },
-        {
           "component": "multiselect",
           "name": "classes",
           "label": "Style",
