@@ -90,7 +90,7 @@ export default function decorate(block) {
     }
   });
 
-  document.querySelectorAll(".secsecond.bannervedio-container .video-banner").forEach((block, index) => {
+  document.querySelectorAll(".secsecond.bannervideo-container .video-banner").forEach((block, index) => {
     console.log(block)
       createSwiper2(block);
       Swiperblock(block, {

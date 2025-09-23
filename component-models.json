@@ -162,7 +162,7 @@
     ]
   },
   {
-    "id": "banner-vedio-item",
+    "id": "banner-video-item",
     "fields": [
       {
         "component": "reference",
