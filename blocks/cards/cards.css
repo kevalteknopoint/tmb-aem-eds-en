@@ -1,27 +1,138 @@
-.cards > ul {
-  list-style: none;
+@import url("https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+@import url("./swiper-bundle.min.css");
+
+* {
+  font-family: Inter, sans-serif;
+}
+
+.cards.block {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.expandable-tile {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.expandable-tile.active {
+  flex: 3.85;
+}
+
+.expandable-tile.active .tile-content {
+  opacity: 1;
+}
+
+.expandable-tile .banner-image {
+  cursor: pointer;
+  font-size: 0;
+}
+
+.expandable-tile .banner-image img {
+  border-radius: 20px;
+  height: 555px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.expandable-tile .tile-content {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  opacity: 0;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+
+.expandable-tile .tile-content .content-title {
+  color: #00525b;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  margin: 0 0 10px;
+}
+
+.expandable-tile .tile-content .content-description {
+  color: #00525b;
+  font-size: 14px;
+  line-height: 17px;
   margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
+  max-width: 90%;
 }
 
-.cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+.expandable-tile .tile-content .tile-cta {
+  align-items: center;
+  color: #00525b;
+  display: flex;
+  font-size: 0;
+  gap: 18px;
+  line-height: 19px;
+  margin: 0;
+  position: absolute;
+  right: 9px;
+  top: 0;
 }
 
-.cards .cards-card-body {
-  margin: 16px;
+.expandable-tile .tile-content .tile-cta:hover {
+  text-decoration: none;
 }
 
-.cards .cards-card-image {
-  line-height: 0;
+.expandable-tile .tile-content .tile-cta::after {
+  border-right: 1px solid #083344;
+  border-top: 1px solid #083344;
+  content: "";
+  display: block;
+  height: 10px;
+  transform: rotate(45deg);
+  width: 10px;
 }
 
-.cards > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+@media (width <= 768px){
+  .cards.block {
+    gap: unset;
+    justify-content: unset;
+  }
+
+  .expandable-tile {
+    flex: none;
+  }
+
+  .expandable-tile .banner-image {
+    cursor: default;
+  }
+
+  .expandable-tile .tile-content {
+    opacity: 1;
+  }
+
+  .expandable-tile .tile-content .tile-cta {
+    font-size: 16px;
+    margin-top: 8px;
+    padding: 8px 0;
+    position: static;
+  }
+
+  .cards-wrapper {
+    --swiper-pagination-bottom: 0;
+
+    padding-bottom: 30px;
+  }
+
+  .cards-wrapper .swiper-pagination-bullet {
+    background-color: #000;
+    border-radius: 30px;
+    height: 8px;
+    margin: 0 4px;
+    opacity: 1;
+    width: 20px;
+  }
+
+  .cards-wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #00525b;
+  }
 }
