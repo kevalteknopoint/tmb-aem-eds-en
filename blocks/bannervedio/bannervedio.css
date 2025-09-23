@@ -1,6 +1,8 @@
 @import './swiper-bundle.min.css';
 
-
+/* ==============================
+   Section Styles
+============================== */
 .section.secfirst.bannervedio-container {
   max-width: none;
 }
@@ -8,129 +10,145 @@
 .section.secsecond.bannervedio-container {
   position: relative;
 }
+
 .section.secsecond .default-content-wrapper {
   display: flex;
 }
+
 .section.secfirst.bannervedio-container .bannervedio-wrapper {
   max-width: none;
   padding: 0;
   height: 100%;
 }
 
-.swiper-pagination-bullet-active {
-  background: var(--Dark-teal, #00525B);
-}
-
+/* ==============================
+   Swiper Pagination
+============================== */
 .swiper-pagination-bullet {
   width: 49px;
   height: 12px;
   border-radius: 40px;
 }
 
-.secfirst .bannervedio-wrapper .bannervedio .swiper-slide {
-  position: relative;
+.swiper-pagination-bullet-active {
+  background: var(--Dark-teal, #00525B);
 }
 
+/* ==============================
+   Swiper Slides
+============================== */
 .secfirst .bannervedio-wrapper .bannervedio {
   border-radius: 0 0 50px 50px;
+}
+
+.secfirst .bannervedio-wrapper .bannervedio .swiper-slide {
+  position: relative;
 }
 
 .secfirst .swiper-wrapper {
   max-height: 516px;
 }
 
-.secfirst .swiper-slide:nth-child(1)>div:nth-child(2) {
+.secfirst .swiper-slide:nth-child(1) > div:nth-child(2) {
   position: absolute;
-  width: 400px;
   bottom: 38px;
   left: 40px;
+  width: 400px;
+  height: 350px;
+  padding: 80px 0 41.412px;
   background: #ffffff47;
   border-radius: 4px;
-  height: 350px;
-  padding: 80px 0 41.412px 0;
   text-align: center;
   align-items: center;
   align-self: stretch;
-
 }
 
+.secfirst .swiper-slide:nth-child(1) > div:nth-child(2) > p {
+  color: var(--Dark-Teal, #00525B);
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  font-style: normal;
+}
+
+/* ==============================
+   Navigation Buttons
+============================== */
 .nav-buttons {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  width: 106%;
   max-width: 92px;
-    width: 106%;
-    height: 12px;
-    position: absolute;
-    top: 15%;
-    right: 10%;
-    display: flex;
-    gap: 8px;
-    justify-content: space-between;
+  height: 12px;
 }
 
 .nav-buttons button {
   display: flex;
-  width: 56px;
-  height: 56px;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   gap: 8px;
+  width: 56px;
+  height: 56px;
   border-radius: 12px;
   background: var(--Cream, #F5F8DE);
 }
 
 .nav-buttons button:hover {
   background: #005bb5;
-
 }
 
+.nav-buttons .swiper-button-prev {
+  position: absolute;
+  left: -45%;
+}
+
+/* ==============================
+   Section Two Styles
+============================== */
 .secsecond .swiper-wrapper {
   display: flex;
 }
 
+.secsecond .swiper-wrapper .swiper-slide {
+  display: flex;
+  justify-content: flex-start;
+  gap: 19px;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.20);
+  border-radius: 12px;
+  background: #FFF;
+}
+
+.secsecond .bannervedio-wrapper {
+  padding: 40px;
+}
+
+/* ==============================
+   Typography
+============================== */
 #banking-for-teachers-owned-by-teachers {
   color: var(--Dark-Teal, #00525B);
   font-size: 40px;
-  font-style: normal;
   font-weight: 400;
   line-height: 52px;
-  /* 86.667% */
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: left;
   padding: 20px;
-}
-
-.secfirst .swiper-slide:nth-child(1)>div:nth-child(2)>p {
-  color: var(--Dark-Teal, #00525B);
-  font-family: Inter;
-  font-size: 16px;
   font-style: normal;
-  font-weight: 300;
-  line-height: 24px;
 }
 
 #news-and-helpful-info {
   color: #00525B;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 40px;
-  font-style: normal;
   font-weight: 900;
   line-height: 48px;
-}
-.nav-buttons .swiper-button-prev{
-      position: absolute;
-    left: -45%;
-}
-.secsecond .swiper-wrapper .swiper-slide{
-  display: flex;
-  border-radius: 12px;
-border: 1px solid rgba(0, 0, 0, 0.20);
-justify-content: flex-start;
-gap: 19px;
-background: #FFF;
-padding: 20px;
-}
-.secsecond .bannervedio-wrapper{
- padding: 40px;
- 
+  font-style: normal;
 }
