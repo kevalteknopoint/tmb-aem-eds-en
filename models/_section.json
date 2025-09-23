@@ -27,7 +27,7 @@
         },
         {
           "component": "multiselect",
-          "name": "classes",
+          "name": "style",
           "label": "Style",
           "options": [
             {
@@ -54,7 +54,8 @@
         "hero",
         "cards",
         "columns",
-        "fragment"
+        "fragment",
+        "bannervideo"
       ]
     }
   ]
