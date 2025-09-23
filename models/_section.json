@@ -38,6 +38,10 @@
               "name": "quick-links",
               "value": "quick-links"
             },
+                        {
+              "name": "momentum-teaser",
+              "value": "momentum-teaser"
+            },
             {
               "name": "momentum-section",
               "value": "momentum-section"
