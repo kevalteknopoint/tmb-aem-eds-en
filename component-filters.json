@@ -16,7 +16,14 @@
       "cards",
       "columns",
       "fragment",
-      "bannervideo"
+      "quick-links",
+      "accordion"
+    ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordion-item"
     ]
   },
   {

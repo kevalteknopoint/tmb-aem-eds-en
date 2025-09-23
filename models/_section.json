@@ -55,7 +55,8 @@
         "cards",
         "columns",
         "fragment",
-        "quick-links"
+        "quick-links",
+        "accordion"
       ]
     }
   ]
