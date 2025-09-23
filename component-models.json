@@ -145,6 +145,11 @@
     "id": "cards",
     "fields": [
       {
+        "component": "aem-content",
+        "name": "reference",
+        "label": "Reference"
+      },
+      {
         "component": "multiselect",
         "name": "style",
         "label": "Style",
@@ -202,17 +207,6 @@
         "component": "aem-content",
         "name": "reference",
         "label": "Reference"
-      },
-      {
-        "component": "multiselect",
-        "name": "style",
-        "label": "Style",
-        "options": [
-          {
-            "name": "Highlight",
-            "value": "highlight"
-          }
-        ]
       }
     ]
   },
