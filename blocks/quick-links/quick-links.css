@@ -1,7 +1,3 @@
-header,footer{
-  display: none;
-}
-
 .quick-links-container{
     display: flex;
     justify-content: space-between;
