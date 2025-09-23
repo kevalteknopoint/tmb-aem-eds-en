@@ -8,7 +8,9 @@
 .section.secsecond.bannervedio-container {
   position: relative;
 }
-
+.section.secsecond .default-content-wrapper {
+  display: flex;
+}
 .section.secfirst.bannervedio-container .bannervedio-wrapper {
   max-width: none;
   padding: 0;
@@ -54,14 +56,14 @@
 
 .nav-buttons {
   max-width: 92px;
-  width: 100%;
-  height: 50px;
-  position: absolute;
-  top: 10%;
-  right: 0;
-  display: flex;
-  gap: 8px;
-  justify-content: space-between;
+    width: 106%;
+    height: 12px;
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
 }
 
 .nav-buttons button {
@@ -105,4 +107,30 @@
   font-style: normal;
   font-weight: 300;
   line-height: 24px;
+}
+
+#news-and-helpful-info {
+  color: #00525B;
+  font-family: Inter;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 48px;
+}
+.nav-buttons .swiper-button-prev{
+      position: absolute;
+    left: -45%;
+}
+.secsecond .swiper-wrapper .swiper-slide{
+  display: flex;
+  border-radius: 12px;
+border: 1px solid rgba(0, 0, 0, 0.20);
+justify-content: flex-start;
+gap: 19px;
+background: #FFF;
+padding: 20px;
+}
+.secsecond .bannervedio-wrapper{
+ padding: 40px;
+ 
 }
