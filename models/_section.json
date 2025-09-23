@@ -33,6 +33,14 @@
             {
               "name": "Highlight",
               "value": "highlight"
+            },
+            {
+              "name": "quick-links",
+              "value": "quick-links"
+            },
+            {
+              "name": "momentum-section",
+              "value": "momentum-section"
             }
           ]
         }
@@ -50,7 +58,9 @@
         "hero",
         "cards",
         "columns",
-        "fragment"
+        "fragment",
+        "quick-links",
+        "momentum-section"
       ]
     }
   ]
