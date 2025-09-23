@@ -42,8 +42,8 @@
           "label": "Style",
           "options": [
             {
-              "name": "Highlight",
-              "value": "highlight"
+              "name": "Expandable Tiles",
+              "value": "expandable-tiles"
             }
           ]
         }

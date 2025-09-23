@@ -5,7 +5,7 @@
   font-family: Inter, sans-serif;
 }
 
-.cards.block {
+.cards.block.expandable-tiles {
   display: flex;
   gap: 24px;
   justify-content: center;
@@ -93,7 +93,7 @@
 }
 
 @media (width <= 768px){
-  .cards.block {
+  .cards.block.expandable-tiles {
     gap: unset;
     justify-content: unset;
   }
