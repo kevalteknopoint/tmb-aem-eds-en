@@ -37,13 +37,10 @@
             {
               "name": "quick-links",
               "value": "quick-links"
-<<<<<<< HEAD
-=======
             },
             {
               "name": "momentum-section",
               "value": "momentum-section"
->>>>>>> 3d3d6f46d75fe2a008fc633157b676cb2ca1a954
             }
           ]
         }
@@ -63,11 +60,8 @@
         "columns",
         "fragment",
         "quick-links",
-<<<<<<< HEAD
-        "accordion"
-=======
+        "accordion",
         "momentum-section"
->>>>>>> 3d3d6f46d75fe2a008fc633157b676cb2ca1a954
       ]
     }
   ]
