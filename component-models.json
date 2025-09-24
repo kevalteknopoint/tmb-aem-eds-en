@@ -212,12 +212,28 @@
         "component": "text",
         "name": "linkText",
         "label": "Text"
+      },
+      {
+        "component": "text",
+        "name": "linkTitle",
+        "label": "Title"
       }
     ]
   },
   {
     "id": "card",
     "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "card-class",
+            "value": "card-class"
+          }
+        ]
+      },
       {
         "component": "reference",
         "valueType": "string",
