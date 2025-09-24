@@ -80,7 +80,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "imageAlt",
+        "name": "imageAlt1",
         "label": "Alt1",
         "value": ""
       },
