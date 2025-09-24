@@ -113,6 +113,9 @@
 ============================== */
 .secsecond .swiper-wrapper {
   display: flex;
+  gap: 30px;
+  align-self: stretch;
+  align-items: flex-start;
 }
 
 .secsecond .swiper-wrapper .swiper-slide {
@@ -123,6 +126,7 @@
   border: 1px solid rgba(0, 0, 0, 0.20);
   border-radius: 12px;
   background: #FFF;
+  width: auto;
 }
 
 .secsecond .bannervideo-wrapper {
@@ -151,4 +155,17 @@
   font-weight: 900;
   line-height: 48px;
   font-style: normal;
+}
+
+@media only screen and (max-width: 767px) {
+  Swiperblock.destroy(true, true);
+  .secsecond .swiper-wrapper {
+  display: block;
+}
+.nav-buttons{
+  display: none;
+}
+.secsecond .swiper-wrapper .swiper-slide {
+  display: block;
+}
 }
