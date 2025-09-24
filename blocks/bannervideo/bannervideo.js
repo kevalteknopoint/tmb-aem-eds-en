@@ -43,6 +43,13 @@ function createSwiper2(block) {
     block.append(swiperWrapper);
   }
 }
+function mobileviewswiper(block){
+  console.log(block)
+  const rows = Array.from(block.children);
+  rows.forEach((row) => {
+      row.classList.add('mob-swiper')
+    });
+}
 export default function decorate(block) {
   const link1 = block.querySelector(".button-container");
   embedblock(link1);
@@ -92,7 +99,11 @@ export default function decorate(block) {
 
   document.querySelectorAll(".secsecond.bannervideo-container .video-banner").forEach((block, index) => {
     console.log(block)
+    if (window.matchMedia("(min-width: 1024px)").matches) {
       createSwiper2(block);
+    }else{
+      mobileviewswiper(block)
+    }
       Swiperblock(block, {
         slidesPerView: 3,
         spaceBetween: 2,

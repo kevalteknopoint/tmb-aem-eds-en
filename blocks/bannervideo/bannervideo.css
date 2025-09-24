@@ -3,11 +3,12 @@
 /* ==============================
    Section Styles
 ============================== */
-.section.secfirst.bannervedio-container {
+.section.secfirst .bannervideo-wrapper {
   max-width: none;
+  margin: 0;
 }
 
-.section.secsecond.bannervedio-container {
+.bannervideo-container {
   position: relative;
 }
 
@@ -15,7 +16,7 @@
   display: flex;
 }
 
-.section.secfirst.bannervedio-container .bannervedio-wrapper {
+.bannervedio-container .bannervedio-wrapper {
   max-width: none;
   padding: 0;
   height: 100%;
@@ -49,7 +50,7 @@
   max-height: 516px;
 }
 
-.secfirst .swiper-slide:nth-child(1) > div:nth-child(2) {
+.secfirst .swiper-slide:nth-child(1)>div:nth-child(2) {
   position: absolute;
   bottom: 38px;
   left: 40px;
@@ -63,7 +64,7 @@
   align-self: stretch;
 }
 
-.secfirst .swiper-slide:nth-child(1) > div:nth-child(2) > p {
+.secfirst .swiper-slide:nth-child(1)>div:nth-child(2)>p {
   color: var(--Dark-Teal, #00525B);
   font-family: Inter, sans-serif;
   font-size: 16px;
@@ -132,7 +133,7 @@
 /* ==============================
    Typography
 ============================== */
-#banking-for-teachers-owned-by-teachers {
+#banking-for-dept-owned-by-teachers {
   color: var(--Dark-Teal, #00525B);
   font-size: 40px;
   font-weight: 400;
@@ -146,9 +147,61 @@
 
 #news-and-helpful-info {
   color: #00525B;
-  font-family:sans-serif;
+  font-family: sans-serif;
   font-size: 40px;
   font-weight: 900;
   line-height: 48px;
   font-style: normal;
+}
+
+/* /////mobile view/// */
+
+.bannervideo-container .bannervideo-wrapper .mob-swiper {
+  display: flex;
+}
+
+
+@media (max-width: 767px) {
+
+  .bannervideo-container .bannervideo-wrapper .mob-swiper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    background: #fff;
+    padding: 12px;
+    margin: 17px;
+  }
+
+  .bannervideo-container .bannervideo-wrapper .mob-swiper p {
+    color: var(--Black, #000);
+
+    /* Mobile/Small bold body */
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    /* 128.571% */
+  }
+
+  .bannervideo-container .bannervideo-wrapper .mob-swiper p:nth-child(2) {
+    display: none;
+  }
+
+  .bannervideo-container .bannervideo-wrapper .mob-swiper>div>picture>img {
+    max-width: none;
+  }
+
+  #news-and-helpful-info {
+    color: #00525B;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    /* 133.333% */
+    letter-spacing: -0.24px;
+  }
 }
