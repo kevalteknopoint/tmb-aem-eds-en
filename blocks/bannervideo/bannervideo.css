@@ -7,7 +7,9 @@
   max-width: none;
   margin: 0;
 }
-
+.mob-pbanner{
+  display: none;
+}
 .bannervideo-container {
   position: relative;
 }
