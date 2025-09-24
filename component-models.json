@@ -81,22 +81,6 @@
     ]
   },
   {
-    "id": "text",
-    "fields": [
-      {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Style",
-        "options": [
-          {
-            "name": "Expandable Tiles",
-            "value": "expandable-tiles-heading"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "id": "button",
     "fields": [
       {

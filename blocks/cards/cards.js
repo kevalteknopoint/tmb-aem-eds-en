@@ -32,7 +32,7 @@ export default function decorate(block) {
   // block.append(ul);
 
   if (block.classList.contains('expandable-tiles')) {
-    [...block.children].forEach(row => {
+    [...block.children].forEach((row, index) => {
       const imgCol = row.firstElementChild;
 
       if (row.lastElementChild?.querySelector('[data-aue-type]')) {
@@ -53,7 +53,7 @@ export default function decorate(block) {
       imgCol.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '730' }])));
   
       const bannerSlide = htmlToElement(`
-        <div class="expandable-tile${screen.width < 768 ? ' swiper-slide' : ''}">${row.innerHTML}</div>  
+        <div class="expandable-tile${screen.width < 768 ? ' swiper-slide' : (index == 0 ? ' active' : '')}">${row.innerHTML}</div>  
       `);
   
       row.replaceWith(bannerSlide);
@@ -64,12 +64,12 @@ export default function decorate(block) {
     
           const allSlides = document.querySelectorAll('.expandable-tile');
     
-          if (bannerSlide?.classList.contains('active')) {
-            bannerSlide?.classList.remove('active')
-          } else {
+          // if (bannerSlide?.classList.contains('active')) {
+          //   bannerSlide?.classList.remove('active')
+          // } else {
             allSlides?.forEach(slide => slide.classList.remove('active'));
             bannerSlide?.classList.add('active')
-          }
+          // }
         })
       } else {
       }
@@ -92,15 +92,14 @@ export default function decorate(block) {
         },
       });
     }
-  
-    function documentHandler(e) {
-      if (!e.target.closest('.expandable-tile') && document.querySelector('.expandable-tile.active')) {
-        document.querySelectorAll('.expandable-tile.active')?.forEach(slide => slide.classList.remove('active'));
-      }
-    }
-  
-    document.removeEventListener('click', documentHandler);
   }
 
-  document.addEventListener('click', documentHandler);
+  // function documentHandler(e) {
+  //   if (!e.target.closest('.expandable-tile') && document.querySelector('.expandable-tile.active')) {
+  //     document.querySelectorAll('.expandable-tile.active')?.forEach(slide => slide.classList.remove('active'));
+  //   }
+  // }
+  
+  // document.removeEventListener('click', documentHandler);
+  // document.addEventListener('click', documentHandler);
 }

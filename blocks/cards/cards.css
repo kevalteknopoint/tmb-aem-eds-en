@@ -55,6 +55,7 @@
   font-weight: 600;
   line-height: 19px;
   margin: 0 0 10px;
+  max-width: 90%;
 }
 
 .expandable-tile .tile-content .content-description {
@@ -92,7 +93,82 @@
   width: 10px;
 }
 
+.expandable-tiles-section {
+  padding: 177px 0 187px;
+  background: linear-gradient(46.23deg, #59FFA0 1.03%, #1BE7FF 98.97%);
+}
+
+main > .expandable-tiles-section > .cards-wrapper {
+  box-sizing: border-box;
+  max-width: 1452px;
+  padding: 0 40px;
+}
+
+.expandable-tiles-section > .default-content-wrapper {
+  box-sizing: border-box;
+  max-width: 832px;
+  padding: 0;
+  margin: 0 auto 40px;
+}
+
+.expandable-tiles-section > .default-content-wrapper h1,
+.expandable-tiles-section > .default-content-wrapper h2,
+.expandable-tiles-section > .default-content-wrapper h3,
+.expandable-tiles-section > .default-content-wrapper h4,
+.expandable-tiles-section > .default-content-wrapper h5,
+.expandable-tiles-section > .default-content-wrapper h6 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 30px;
+  text-align: left;
+  color: #00525B;
+  margin: 0 0 20px;
+}
+
+.expandable-tiles-section > .default-content-wrapper p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #00525BCC;
+  text-align: left;
+  margin: 0;
+}
+
 @media (width <= 768px){
+  .expandable-tiles-section {
+    padding: 40px 0;
+  }
+
+  main > .expandable-tiles-section > .cards-wrapper {
+    padding: 0 20px;
+  }
+  
+  .expandable-tiles-section > .default-content-wrapper {
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+
+  .expandable-tiles-section > .default-content-wrapper h1,
+  .expandable-tiles-section > .default-content-wrapper h2,
+  .expandable-tiles-section > .default-content-wrapper h3,
+  .expandable-tiles-section > .default-content-wrapper h4,
+  .expandable-tiles-section > .default-content-wrapper h5,
+  .expandable-tiles-section > .default-content-wrapper h6 {
+    font-family: Inter, sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    margin: 0 0 15px;
+  }
+
+  .expandable-tiles-section > .default-content-wrapper p {
+    line-height: 18px;
+    color: #00525BCC;
+    text-align: center;
+    margin: 0;
+  }
+
   .cards.block.expandable-tiles {
     gap: unset;
     justify-content: unset;
@@ -110,6 +186,22 @@
     opacity: 1;
   }
 
+  .expandable-tile .tile-content .content-title {
+    color: #00525b;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24px;
+    margin: 0 0 8px;
+    max-width: 100%;
+  }
+
+  .expandable-tile .tile-content .content-description {
+    color: #00525b;
+    font-size: 16px;
+    line-height: 18px;
+    max-width: 100%;
+  }
+
   .expandable-tile .tile-content .tile-cta {
     font-size: 16px;
     margin-top: 8px;
@@ -123,7 +215,7 @@
   }
 
   .expandable-tiles .swiper-pagination-bullet {
-    background-color: #646464;
+    background-color: #fff;
     border-radius: 30px;
     height: 8px;
     margin: 0 4px;
