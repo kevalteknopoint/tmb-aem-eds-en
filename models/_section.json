@@ -35,6 +35,17 @@
               "value": "highlight"
             }
           ]
+        },
+        {
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Style Class",
+          "options": [
+            {
+              "name": "Expandable Tiles",
+              "value": "expandable-tiles-section"
+            }
+          ]
         }
       ]
     }
