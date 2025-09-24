@@ -28,17 +28,6 @@ function createSwiper2(block) {
 
     rows.forEach((row) => {
       row.classList.add("swiper-slide");
-      ////remove empty div////
-      row.querySelectorAll(":scope > div").forEach((child) => {
-        if (!child.innerHTML.trim()) {
-          child.remove();
-        }
-      });
-      ///wrap p and text///
-      const secondDiv = row.querySelector(":scope > div:nth-child(2)");
-      if (secondDiv) {
-        secondDiv.classList.add("text-wrapper"); 
-      }
       swiperWrapper.append(row);
     });
     const navWrapper = document.createElement("div");
@@ -53,6 +42,13 @@ function createSwiper2(block) {
     navWrapper.append(nextBtn);
     block.append(swiperWrapper);
   }
+}
+function mobileviewswiper(block){
+  console.log(block)
+  const rows = Array.from(block.children);
+  rows.forEach((row) => {
+      row.classList.add('mob-swiper')
+    });
 }
 export default function decorate(block) {
   const link1 = block.querySelector(".button-container");
@@ -102,11 +98,15 @@ export default function decorate(block) {
   });
 
   document.querySelectorAll(".secsecond.bannervideo-container .video-banner").forEach((block, index) => {
-      console.log(block);
+    console.log(block)
+    if (window.matchMedia("(min-width: 1024px)").matches) {
       createSwiper2(block);
+    }else{
+      mobileviewswiper(block)
+    }
       Swiperblock(block, {
         slidesPerView: 3,
-        spaceBetween:1,
+        spaceBetween: 2,
         loop: true,
         // autoplay: {
         //   delay: 1000,
@@ -115,7 +115,7 @@ export default function decorate(block) {
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
-        },
+        }
       });
       const navbtn = block.querySelector(".nav-buttons");
       const sec = block.closest(".section");
