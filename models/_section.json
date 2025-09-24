@@ -45,6 +45,10 @@
             {
               "name": "momentum-section",
               "value": "momentum-section"
+            },
+            {
+              "name": "online-banking",
+              "value": "online-banking"
             }
           ]
         }
