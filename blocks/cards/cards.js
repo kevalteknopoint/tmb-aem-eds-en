@@ -10,6 +10,8 @@ function htmlToElement(htmlString) {
 
 export default function decorate(block) {
   if (block.classList.contains('expandable-tiles')) {
+    let autoplayTimeoutId;
+    
     [...block.children].forEach((row, index) => {
       const imgCol = row.firstElementChild;
 
@@ -35,14 +37,14 @@ export default function decorate(block) {
       });
   
       const bannerSlide = htmlToElement(`
-        <div class="expandable-tile${screen.width < 768 ? ' swiper-slide' : (index == 0 ? ' active' : '')}">${row.innerHTML}</div>  
+        <div class="expandable-tile${window.innerWidth < 768 ? ' swiper-slide' : (index == 0 ? ' active' : '')}">${row.innerHTML}</div>  
       `);
 
       moveInstrumentation(row, bannerSlide)
 
       row.replaceWith(bannerSlide);
   
-      if (screen.width > 768) {
+      if (window.innerWidth > 768) {
         bannerSlide?.firstElementChild?.addEventListener('click', function(e) {
           e.preventDefault();
     
@@ -55,11 +57,10 @@ export default function decorate(block) {
             bannerSlide?.classList.add('active')
           // }
         })
-      } else {
       }
     })
   
-    if (screen.width < 768) {
+    if (window.innerWidth < 768) {
       const swiperWrapper = htmlToElement(`<div class="swiper-wrapper"></div"`);
       [...block.children].forEach(row => swiperWrapper.appendChild(row));
   
@@ -68,6 +69,9 @@ export default function decorate(block) {
       block?.insertAdjacentHTML('beforeend', `<div class="swiper-pagination"></div>`);
   
       const swiper = new Swiper('.swiper', {
+        autoplay: {
+          delay: 3000,
+        },
         slidersPerView: 1,
         centeredSlides: true,
         spaceBetween: 24,
@@ -76,14 +80,25 @@ export default function decorate(block) {
         },
       });
     }
+
+    autoplayTimeoutId = setInterval(() => {
+      if (window.innerWidth > 768) {
+        if (block?.querySelector('.expandable-tile.active')?.nextElementSibling) {
+          block?.querySelector('.expandable-tile.active')?.nextElementSibling?.firstElementChild?.dispatchEvent(new Event('click'));
+        } else {
+          block?.querySelector('.expandable-tile .tile-image')?.dispatchEvent(new Event('click'));
+        }
+      }
+    }, 3000)
+
+    // function documentHandler(e) {
+    //   if (!e.target.closest('.expandable-tile') && document.querySelector('.expandable-tile.active')) {
+    //     document.querySelectorAll('.expandable-tile.active')?.forEach(slide => slide.classList.remove('active'));
+    //   }
+    // }
+    
+    // document.removeEventListener('click', documentHandler);
+    // document.addEventListener('click', documentHandler);
   }
 
-  // function documentHandler(e) {
-  //   if (!e.target.closest('.expandable-tile') && document.querySelector('.expandable-tile.active')) {
-  //     document.querySelectorAll('.expandable-tile.active')?.forEach(slide => slide.classList.remove('active'));
-  //   }
-  // }
-  
-  // document.removeEventListener('click', documentHandler);
-  // document.addEventListener('click', documentHandler);
 }
