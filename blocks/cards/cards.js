@@ -11,26 +11,6 @@ function htmlToElement(htmlString) {
 }
 
 export default function decorate(block) {
-  /* change to ul, li */
-  // const ul = document.createElement('ul');
-  // [...block.children].forEach((row) => {
-  //   const li = document.createElement('li');
-  //   moveInstrumentation(row, li);
-  //   while (row.firstElementChild) li.append(row.firstElementChild);
-  //   [...li.children].forEach((div) => {
-  //     if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
-  //     else div.className = 'cards-card-body';
-  //   });
-  //   ul.append(li);
-  // });
-  // ul.querySelectorAll('picture > img').forEach((img) => {
-  //   const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
-  //   moveInstrumentation(img, optimizedPic.querySelector('img'));
-  //   img.closest('picture').replaceWith(optimizedPic);
-  // });
-  // block.textContent = '';
-  // block.append(ul);
-
   if (block.classList.contains('expandable-tiles')) {
     [...block.children].forEach((row, index) => {
       const imgCol = row.firstElementChild;
@@ -50,12 +30,18 @@ export default function decorate(block) {
       textCol?.lastElementChild?.classList.add('tile-cta');
       textCol?.lastElementChild?.classList.remove('button');
   
-      imgCol.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '730' }])));
+      imgCol.querySelectorAll('picture > img').forEach((img) => {
+        const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
+        moveInstrumentation(img, optimizedPic.querySelector('img'));
+        img.closest('picture').replaceWith(optimizedPic);
+      });
   
       const bannerSlide = htmlToElement(`
         <div class="expandable-tile${screen.width < 768 ? ' swiper-slide' : (index == 0 ? ' active' : '')}">${row.innerHTML}</div>  
       `);
-  
+
+      moveInstrumentation(row, bannerSlide)
+
       row.replaceWith(bannerSlide);
   
       if (screen.width > 768) {
