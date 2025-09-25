@@ -42,6 +42,7 @@
 .online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body,
 .online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body {
   margin: 24px;
+  line-height: 0;
 }
 .online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h2{
   color: #00525B;
