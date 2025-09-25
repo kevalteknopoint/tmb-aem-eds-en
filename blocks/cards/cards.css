@@ -25,3 +25,93 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+/* online banking help section css starts  */
+.online-banking .cards-wrapper .cards ul {
+  display: flex;
+  justify-content: space-between;
+}
+.online-banking .cards-wrapper .cards ul li:first-child{
+  background-color: #F5F8DE;
+  padding: 32px 32px;
+  border-radius: 20px
+}
+.online-banking .cards-wrapper .cards ul li:first-child .cards-card-body{
+  margin: 0;
+}
+.online-banking .cards-wrapper .cards ul li:nth-child(2) .cards-card-body,
+.online-banking .cards-wrapper .cards ul li:nth-child(3) .cards-card-body {
+  margin: 24px;
+}
+.online-banking .cards-wrapper .cards ul li:first-child .cards-card-body h2{
+  color: #00525B;
+  font-family: Inter;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 48px;
+  text-transform: capitalize;
+  margin: 0;
+}
+.online-banking .cards-wrapper .cards ul li:first-child .cards-card-body ul{
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 32px;
+  padding: 0;
+}
+.online-banking .cards-wrapper .cards ul li:first-child .cards-card-body ul li{
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  padding: 0;
+}
+.online-banking .cards-wrapper .cards ul li:first-child .cards-card-body ul li a{
+  text-decoration: none;
+  color: #000;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.online-banking .cards-wrapper .cards ul li:nth-child(2),
+.online-banking .cards-wrapper .cards ul li:nth-child(3) {
+  width: 420px;
+  border-radius: 20px;
+}
+.online-banking .cards-wrapper .cards ul li:nth-child(2) .cards-card-image img,
+.online-banking .cards-wrapper .cards ul li:nth-child(3) .cards-card-image img {
+  width: 420px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.cards-card-body p:nth-child(1){
+  color: #00525B;
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  text-transform: capitalize;
+}
+.cards-card-body p:nth-child(2){
+  color: #000;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.cards-card-body ul{
+  list-style-type: none;
+}
+.cards-card-body ul li{
+  padding: 0;
+}
+.icon-badge-app-store-1,
+.icon-badge-android-google-play-1{
+  width: 142px;
+  height: 43px;
+}
+/* online banking help section css ends  */
