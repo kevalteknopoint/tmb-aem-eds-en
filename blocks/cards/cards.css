@@ -28,17 +28,26 @@
 }
 
 .expandable-tile .tile-image {
+  border-radius: 20px;
   cursor: pointer;
   font-size: 0;
+  height: 555px;
+  width: auto;
+  overflow: hidden;
 }
 
 .expandable-tile .tile-image img {
   border-radius: 20px;
   height: 555px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: center;
-     object-position: center;
+  object-position: center;
+  transition: all 0.7s ease-in-out;
+}
+
+.expandable-tile.active .tile-image img {
+  transform: scale(1.2);
 }
 
 .expandable-tile .tile-content {
@@ -180,6 +189,12 @@ main > .expandable-tiles-section > .cards-wrapper {
 
   .expandable-tile .tile-image {
     cursor: default;
+    height: auto;
+  }
+
+  .expandable-tile .tile-image img {
+    /* height: auto; */
+    height: 399px;
   }
 
   .expandable-tile .tile-content {

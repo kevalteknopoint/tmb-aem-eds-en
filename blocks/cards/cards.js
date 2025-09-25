@@ -11,7 +11,7 @@ function htmlToElement(htmlString) {
 export default function decorate(block) {
   if (block.classList.contains('expandable-tiles')) {
     let autoplayTimeoutId;
-    
+
     [...block.children].forEach((row, index) => {
       const imgCol = row.firstElementChild;
 
@@ -20,22 +20,22 @@ export default function decorate(block) {
       }
 
       let textCol = row.lastElementChild;
-  
+
       imgCol.classList.add('tile-image');
       textCol.classList.add('tile-content');
-  
+
       textCol.firstElementChild.classList.add('content-title');
       textCol?.querySelector('p:not(.button-container)')?.classList.add('content-description');
       textCol?.querySelector('p.button-container')?.replaceWith(textCol.lastElementChild.firstElementChild);
       textCol?.lastElementChild?.classList.add('tile-cta');
       textCol?.lastElementChild?.classList.remove('button');
-  
+
       imgCol.querySelectorAll('picture > img').forEach((img) => {
         const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
         moveInstrumentation(img, optimizedPic.querySelector('img'));
         img.closest('picture').replaceWith(optimizedPic);
       });
-  
+
       const bannerSlide = htmlToElement(`
         <div class="expandable-tile${window.innerWidth < 768 ? ' swiper-slide' : (index == 0 ? ' active' : '')}">${row.innerHTML}</div>  
       `);
@@ -43,7 +43,7 @@ export default function decorate(block) {
       moveInstrumentation(row, bannerSlide)
 
       row.replaceWith(bannerSlide);
-  
+
       if (window.innerWidth > 768) {
         bannerSlide?.firstElementChild?.addEventListener('click', function(e) {
           e.preventDefault();
@@ -59,16 +59,16 @@ export default function decorate(block) {
         })
       }
     })
-  
+
     if (window.innerWidth < 768) {
       const swiperWrapper = htmlToElement(`<div class="swiper-wrapper"></div"`);
       [...block.children].forEach(row => swiperWrapper.appendChild(row));
-  
+
       block?.classList.add('swiper');
-      block.appendChild(swiperWrapper);    
+      block.appendChild(swiperWrapper);
       block?.insertAdjacentHTML('beforeend', `<div class="swiper-pagination"></div>`);
   
-      const swiper = new Swiper('.swiper', {
+      new Swiper('.swiper', {
         autoplay: {
           delay: 3000,
         },
@@ -96,7 +96,7 @@ export default function decorate(block) {
     //     document.querySelectorAll('.expandable-tile.active')?.forEach(slide => slide.classList.remove('active'));
     //   }
     // }
-    
+
     // document.removeEventListener('click', documentHandler);
     // document.addEventListener('click', documentHandler);
   }
