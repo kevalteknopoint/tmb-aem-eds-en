@@ -23,19 +23,19 @@
 }
 
 .momentum-block h1 {
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     font-weight: 600;
     font-size: 40px;
 }
 
 .momentum-block h3 {
-    font-family:sans-serif;
+    /* font-family:sans-serif; */
     font-weight: 700;
     font-size: 24px;
 }
 
 .momentum-block p {
-    font-family:sans-serif;
+    /* font-family:sans-serif; */
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -131,7 +131,7 @@
 }
 
 .momentum-section > div:nth-child(2) > ul:nth-child(1) >li >p {
-    font-family: 'American Grotesk', 'Condensed';
+    /* font-family: 'American Grotesk', 'Condensed'; */
     font-weight: 900;
     font-style: Black;
     font-size: 144.52px;
@@ -142,7 +142,7 @@
 }
 
 .momentum-section > div:nth-child(2) > ul:nth-child(1) >li>ul>li:nth-child(1) {
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     font-weight: 400;
     font-size: 28.9px;
     line-height: 49.55px;
@@ -153,7 +153,7 @@
     padding-left: 0;
 }
 .momentum-section > div:nth-child(2) > ul:nth-child(1)>li:nth-child(1)>ul>li:nth-child(1){
-   font-family: American Grotesk Condensed;
+   /* font-family: American Grotesk Condensed; */
     font-weight: 900;
     font-style: Black;
     font-size: 73.03px;
@@ -165,7 +165,7 @@
     padding-left: 0;
 }
 .momentum-section > div:nth-child(2) > ul:nth-child(1)>li:nth-child(1)>ul>li:nth-child(2){
-    font-family:sans-serif,American Grotesk Condensed;
+    /* font-family:sans-serif,American Grotesk Condensed; */
     font-weight: 900;
     font-size: 33.03px;
     line-height: 49.55px;
@@ -190,7 +190,7 @@
 
 .momentum-section > div:nth-child(2)>ul:nth-child(2)>li>ul>li:nth-child(1) p {
     color: #0B231F;
-    font-family:sans-serif;
+    /* font-family:sans-serif; */
     font-weight: 900;
     font-style: Black;
     font-size: 40px;
@@ -205,7 +205,7 @@
 }
 
 .momentum-section > div:nth-child(2)>ul:nth-child(2)>li>ul>li:nth-child(2) p {
-    font-family:sans-serif;
+    /* font-family:sans-serif; */
     font-weight: 700;
     font-style: Bold;
     font-size: 24px;
@@ -219,7 +219,7 @@
 }
 
 .momentum-section > div:nth-child(2)>ul:nth-child(2)>li>ul>li:nth-child(3) p {
-    font-family:sans-serif;
+    /* font-family:sans-serif; */
     font-weight: 400;
     font-style: Regular;
     font-size: 16px;
@@ -254,7 +254,7 @@
 }
 
 .momentum-listing-wrapper>li p {
-    font-family: 'American Grotesk', 'Condensed';
+    /* font-family: 'American Grotesk', 'Condensed'; */
     font-weight: 900;
     font-style: Black;
     font-size: 144.52px;
@@ -265,7 +265,7 @@
 }
 
 .momentum-listing-wrapper>li>ul>li:nth-child(1) {
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     font-weight: 400;
     font-size: 28.9px;
     line-height: 49.55px;
@@ -276,7 +276,7 @@
     padding-left: 0;
 }
 .momentum-listing-wrapper>li:nth-child(1)>ul>li:nth-child(1){
-   font-family: American Grotesk Condensed;
+   /* font-family: American Grotesk Condensed; */
     font-weight: 900;
     font-style: Black;
     font-size: 73.03px;
@@ -288,7 +288,7 @@
     padding-left: 0;
 }
 .momentum-listing-wrapper>li:nth-child(1)>ul>li:nth-child(2){
-    font-family:sans-serif,American Grotesk Condensed;
+    /* font-family:sans-serif,American Grotesk Condensed; */
     font-weight: 900;
     font-size: 33.03px;
     line-height: 49.55px;
@@ -313,7 +313,7 @@
 
 .momentum-teaser-wrapper>ul:nth-child(2)>li>ul>li:nth-child(1) p {
     color: #0B231F;
-    font-family:sans-serif;
+    /* font-family:sans-serif; */
     font-weight: 900;
     font-style: Black;
     font-size: 40px;
@@ -328,7 +328,7 @@
 }
 
 .momentum-teaser-wrapper>ul:nth-child(2)>li>ul>li:nth-child(2) p {
-    font-family:sans-serif;
+    /* font-family:sans-serif; */
     font-weight: 700;
     font-style: Bold;
     font-size: 24px;
@@ -342,9 +342,9 @@
 }
 
 .momentum-teaser-wrapper>ul:nth-child(2)>li>ul>li:nth-child(3) p {
-    font-family:sans-serif;
+    /* font-family:sans-serif; */
     font-weight: 400;
-    font-style: Regular;
+    font-style: normal;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0%;
