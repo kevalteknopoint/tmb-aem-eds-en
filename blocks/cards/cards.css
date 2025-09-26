@@ -202,8 +202,17 @@
     font-weight: 800;
     line-height: 24px;
   }
-  .banking-li-2 .card-bottom-2 {
+  .banking-li-2 .card-bottom-2,
+ .banking-li-3 .cards-card-body .card-bottom-2 {
     margin-top: 13.5px;
   }
+  .banking-li-2 .cards-card-body, 
+  .banking-li-3 .cards-card-body{
+    height: unset;
+  }
+  .icon-badge-app-store-1, .icon-badge-android-google-play-1 {
+    width: 131px;
+    height: 40px;
+}
 }
 /* online banking help section css ends  */
