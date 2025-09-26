@@ -1,9 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
-@import url("./swiper-bundle.min.css");
-
-* {
-  font-family: Inter, sans-serif;
-}
+@import "./swiper-bundle.min.css";
 
 .cards.block.expandable-tiles {
   display: flex;
@@ -21,6 +16,14 @@
 
 .expandable-tile.active {
   flex: 3.85;
+}
+
+.expandable-tile .tile-content {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  opacity: 0;
+  position: relative;
+  transition: all 0.4s ease-in-out;
 }
 
 .expandable-tile.active .tile-content {
@@ -48,14 +51,6 @@
 
 .expandable-tile.active .tile-image img {
   transform: scale(1.2);
-}
-
-.expandable-tile .tile-content {
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-  opacity: 0;
-  position: relative;
-  transition: all 0.4s ease-in-out;
 }
 
 .expandable-tile .tile-content .content-title {
@@ -226,6 +221,7 @@ main > .expandable-tiles-section > .cards-wrapper {
 
   .expandable-tiles {
     --swiper-pagination-bottom: 0;
+    
     padding-bottom: 30px;
   }
 
