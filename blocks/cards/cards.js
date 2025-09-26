@@ -13,7 +13,11 @@ export default function decorate(block) {
     let autoplayTimeoutId;
 
     [...block.children].forEach((row, index) => {
-      const imgCol = row.firstElementChild;
+      let imgCol = row.firstElementChild;
+      if (imgCol?.textContent?.toLowerCase()?.trim() == 'card') {
+        row?.firstElementChild?.remove();
+        imgCol = row.firstElementChild;
+      }
 
       if (row.lastElementChild?.querySelector('[data-aue-type]')) {
         row.lastElementChild?.replaceWith(row.lastElementChild.firstElementChild)
