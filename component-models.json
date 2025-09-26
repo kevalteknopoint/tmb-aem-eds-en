@@ -326,5 +326,58 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "quick-links",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "quick-links-block",
+            "value": "quick-links-block"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tmb-teaser",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "momentum-block",
+            "value": "momentum-block"
+          }
+        ]
+      }
+    ]
   }
 ]
