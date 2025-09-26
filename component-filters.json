@@ -16,14 +16,7 @@
       "cards",
       "columns",
       "fragment",
-      "quick-links",
-      "tmb-teaser"
-    ]
-  },
-  {
-    "id": "accordion",
-    "components": [
-      "accordion-item"
+      "bannervideo"
     ]
   },
   {

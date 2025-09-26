@@ -31,8 +31,12 @@
           "label": "Style",
           "options": [
             {
-              "name": "Highlight",
-              "value": "highlight"
+              "name": "secfirst",
+              "value": "secfirst"
+            },
+            {
+              "name": "secsecond",
+              "value": "secsecond"
             },
             {
               "name": "quick-links",
@@ -67,8 +71,7 @@
         "cards",
         "columns",
         "fragment",
-        "quick-links",
-        "tmb-teaser"
+        "bannervideo"
       ]
     }
   ]
