@@ -246,17 +246,6 @@
     "id": "card",
     "fields": [
       {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Style",
-        "options": [
-          {
-            "name": "card-class",
-            "value": "card-class"
-          }
-        ]
-      },
-      {
         "component": "reference",
         "valueType": "string",
         "name": "image",
