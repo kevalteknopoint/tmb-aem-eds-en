@@ -51,8 +51,15 @@
               "value": "momentum-section"
             },
             {
+              "name": "online-banking",
+              "value": "online-banking"
+            },
+            {
               "name": "Expandable Tiles",
               "value": "expandable-tiles-section"
+            },
+            {
+
             }
           ]
         }
@@ -71,6 +78,8 @@
         "cards",
         "columns",
         "fragment",
+        "quick-links",
+        "tmb-teaser",
         "bannervideo"
       ]
     }

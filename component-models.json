@@ -154,9 +154,14 @@
             "value": "momentum-section"
           },
           {
+            "name": "online-banking",
+            "value": "online-banking"
+          },
+          {
             "name": "Expandable Tiles",
             "value": "expandable-tiles-section"
-          }
+          },
+          {}
         ]
       }
     ]
