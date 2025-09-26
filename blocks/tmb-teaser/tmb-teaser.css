@@ -100,8 +100,13 @@
     }
 
     .momentum-block div {
+        /* width: 150px;
+        height: 230px; */
+    }
+    .momentum-block img{
         width: 150px;
-        height: 230px;
+        height: 232px;
+        object-fit: cover;
     }
 }
 
