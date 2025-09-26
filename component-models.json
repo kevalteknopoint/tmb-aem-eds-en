@@ -149,10 +149,10 @@
             "name": "momentum-section",
             "value": "momentum-section"
           },
-            {
-              "name": "online-banking",
-              "value": "online-banking"
-            }
+          {
+            "name": "Expandable Tiles",
+            "value": "expandable-tiles-section"
+          }
         ]
       }
     ]
@@ -229,6 +229,22 @@
         "component": "text",
         "name": "linkText",
         "label": "Text"
+      }
+    ]
+  },
+  {
+    "id": "cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Expandable Tiles",
+            "value": "expandable-tiles"
+          }
+        ]
       }
     ]
   },
