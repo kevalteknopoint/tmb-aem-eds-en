@@ -2,6 +2,7 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
 export default function decorate(block) {
+  
   /* change to ul, li */
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {
@@ -21,4 +22,25 @@ export default function decorate(block) {
   });
   block.textContent = '';
   block.append(ul);
+  // online banking help js starts
+  const cardsUl =  block.querySelector('.online-banking .cards-wrapper .cards ul');
+  cardsUl.classList.add('banking-cards-ul');
+  block.querySelectorAll('.banking-cards-ul > li').forEach((li, idx) => {
+    li.classList.add(`banking-li-${idx + 1}`);
+  });
+  block.querySelectorAll('.online-banking .cards-wrapper .cards ul li:nth-child(2) .cards-card-body ul').forEach((ul,idx) => {
+      ul.classList.add(`card-bottom-${idx + 1}`);
+  });
+  block.querySelectorAll('.online-banking .cards-wrapper .cards ul li:nth-child(2) .cards-card-body li')
+  .forEach((li, idx) => {
+    li.classList.add(`banking-desc-${idx + 1}`);
+  });
+    block.querySelectorAll('.online-banking .cards-wrapper .cards ul li:nth-child(3) .cards-card-body ul').forEach((ul,idx) => {
+      ul.classList.add(`card-bottom-${idx + 1}`);
+  });
+  block.querySelectorAll('.online-banking .cards-wrapper .cards ul li:nth-child(3) .cards-card-body li')
+  .forEach((li, idx) => {
+    li.classList.add(`banking-desc-${idx + 1}`);
+  });
+  // online banking help js end
 }
