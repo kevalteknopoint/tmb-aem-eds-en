@@ -46,7 +46,7 @@
 }
 .online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h2{
   color: #00525B;
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 40px;
   font-style: normal;
   font-weight: 900;
@@ -70,7 +70,7 @@
 .online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li a{
   text-decoration: none;
   color: #000;
-  font-family: 'Inter', sans-serif;
+  /* font-family: 'Inter', sans-serif; */
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -104,7 +104,7 @@
 .banking-li-2 .cards-card-body .card-bottom-1 .banking-desc-1,
 .banking-li-3 .cards-card-body .card-bottom-1 .banking-desc-1{
   color: #00525B;
-  font-family: 'Inter', sans-serif;
+  /* font-family: 'Inter', sans-serif; */
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -114,7 +114,7 @@
 .banking-li-2 .cards-card-body .card-bottom-1 .banking-desc-2,
 .banking-li-3 .cards-card-body .card-bottom-1 .banking-desc-2 {
   color: #000;
-  font-family: 'Inter', sans-serif;
+  /* font-family: 'Inter', sans-serif; */
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -131,7 +131,7 @@
 }
 .banking-li-2 .cards-card-body .banking-desc-3 a{
   color: #00525B;
-  font-family: 'Inter', sans-serif;
+  /* font-family: 'Inter', sans-serif; */
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -169,4 +169,41 @@
   margin: auto 0 0;
 }
 
+@media (max-width:767px) {
+  .online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul {
+    flex-direction: column;
+  }
+  .online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 {
+    padding: 20px;
+  }
+  .online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li {
+    width: auto;
+  }
+  .banking-cards-ul{
+    flex-direction: column;
+    gap: 18px;
+  }
+  .online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2, 
+  .online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3{
+    width: unset;
+  }
+  .online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-image img, 
+  .online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-image img {
+    width: 100%;
+    height: 133px;
+  }
+  .cards-ul .banking-li-2 .cards-card-body, 
+  .online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body {
+    margin: 20px;
+  }
+  .banking-li-2 .cards-card-body .card-bottom-1 .banking-desc-1, 
+  .banking-li-3 .cards-card-body .card-bottom-1 .banking-desc-1 {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24px;
+  }
+  .banking-li-2 .card-bottom-2 {
+    margin-top: 13.5px;
+  }
+}
 /* online banking help section css ends  */
