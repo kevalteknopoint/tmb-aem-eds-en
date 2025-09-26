@@ -140,6 +140,22 @@
           {
             "name": "secsecond",
             "value": "secsecond"
+          },
+          {
+            "name": "quick-links",
+            "value": "quick-links"
+          },
+          {
+            "name": "momentum-teaser",
+            "value": "momentum-teaser"
+          },
+          {
+            "name": "momentum-section",
+            "value": "momentum-section"
+          },
+          {
+            "name": "Expandable Tiles",
+            "value": "expandable-tiles-section"
           }
         ]
       }
@@ -202,6 +218,22 @@
         "value": "",
         "label": "context-model",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Expandable Tiles",
+            "value": "expandable-tiles"
+          }
+        ]
       }
     ]
   },

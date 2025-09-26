@@ -34,9 +34,25 @@
               "name": "secfirst",
               "value": "secfirst"
             },
-             {
+            {
               "name": "secsecond",
               "value": "secsecond"
+            },
+            {
+              "name": "quick-links",
+              "value": "quick-links"
+            },
+                        {
+              "name": "momentum-teaser",
+              "value": "momentum-teaser"
+            },
+            {
+              "name": "momentum-section",
+              "value": "momentum-section"
+            },
+            {
+              "name": "Expandable Tiles",
+              "value": "expandable-tiles-section"
             }
           ]
         }
