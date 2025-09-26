@@ -134,50 +134,19 @@
         "label": "Style",
         "options": [
           {
-            "name": "Highlight",
-            "value": "highlight"
+            "name": "secfirst",
+            "value": "secfirst"
           },
           {
-            "name": "quick-links",
-            "value": "quick-links"
-          },
-          {
-            "name": "momentum-teaser",
-            "value": "momentum-teaser"
-          },
-          {
-            "name": "momentum-section",
-            "value": "momentum-section"
-          },
-            {
-              "name": "online-banking",
-              "value": "online-banking"
-            }
+            "name": "secsecond",
+            "value": "secsecond"
+          }
         ]
       }
     ]
   },
   {
-    "id": "accordion-item",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "title",
-        "value": "",
-        "label": "Heading"
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "content",
-        "value": "",
-        "label": "Body"
-      }
-    ]
-  },
-  {
-    "id": "bannervedio",
+    "id": "bannervideo",
     "fields": [
       {
         "component": "multiselect",
@@ -214,27 +183,42 @@
         "value": ""
       },
       {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image1",
+        "label": "Image1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt1",
+        "label": "Alt1",
+        "value": ""
+      },
+      {
         "component": "richtext",
         "name": "context",
         "value": "",
         "label": "context-model",
         "valueType": "string"
-      },
-      {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "name": "linkText",
-        "label": "Text"
       }
     ]
   },
   {
     "id": "card",
     "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "card-class",
+            "value": "card-class"
+          }
+        ]
+      },
       {
         "component": "reference",
         "valueType": "string",
@@ -303,59 +287,6 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "quick-links",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-      {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Style",
-        "options": [
-          {
-            "name": "quick-links-block",
-            "value": "quick-links-block"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "tmb-teaser",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-      {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Style",
-        "options": [
-          {
-            "name": "momentum-block",
-            "value": "momentum-block"
-          }
-        ]
       }
     ]
   }
