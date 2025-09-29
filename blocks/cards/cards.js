@@ -55,6 +55,7 @@ export default function decorate(block) {
         });
 
         bannerSlide?.firstElementChild?.addEventListener('mouseout', () => {
+          clearInterval(autoplayTimeoutId);
           autoplayTimeoutId = setInterval(() => {
             if (window.innerWidth > 768) {
               if (block?.querySelector('.expandable-tile.active')?.nextElementSibling) {
@@ -122,6 +123,7 @@ export default function decorate(block) {
       });
     }
 
+    clearInterval(autoplayTimeoutId);
     autoplayTimeoutId = setInterval(() => {
       if (window.innerWidth > 768) {
         if (block?.querySelector('.expandable-tile.active')?.nextElementSibling) {

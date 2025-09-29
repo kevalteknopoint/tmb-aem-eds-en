@@ -11,7 +11,7 @@
   flex: 1;
   flex-direction: column;
   gap: 20px;
-  transition: all 2.3s;
+  transition: all 1.7s;
   transition-timing-function: cubic-bezier(.11,.45,.4,1);
 }
 
