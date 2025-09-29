@@ -19,14 +19,14 @@
 }
 .tmb-teaser-wrapper{
     padding: 0 !important;
-    /* margin: 0 !important; */
+    margin-left: 0 !important;
 }
 .momentum-block {
     display: flex;
     gap: 40px;
 
 }
-.momentum-block >div >div{
+.momentum-block >.tmb-teaser-content{
     width: 600px;
     height: 437px;
 }
