@@ -11,6 +11,8 @@ export default function decorate(block) {
 
     const secondulClassname = document.querySelector(".momentum-teaser-wrapper").nextElementSibling;
     secondulClassname.classList.add("listing-wrapper");
+    const tmbTeaser = document.querySelector(".momentum-block div").nextElementSibling;
+    tmbTeaser.classList.add("tmb-teaser-content");
 
     // document.querySelectorAll('.momentum-section .tmb-teaser-wrapper .momentum-block div:nth-child(2) div')
     // .forEach((li, idx) => {
