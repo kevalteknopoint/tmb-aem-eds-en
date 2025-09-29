@@ -10,7 +10,7 @@
 }
 .tmb-teaser-wrapper{
     padding: 0 !important;
-    margin: 0 !important;
+    /* margin: 0 !important; */
 }
 .momentum-block {
     display: flex;
