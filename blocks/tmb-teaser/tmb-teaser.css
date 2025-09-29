@@ -30,6 +30,18 @@
     width: 600px;
     height: 437px;
 }
+@media screen and (max-width:767px) {
+    .momentum-block >.tmb-teaser-content{
+    width: auto !important;
+    padding-left: 20px;
+}
+}
+@media screen and (max-width:1024px) {
+    .momentum-block >.tmb-teaser-content{
+    width: 300px !important;
+    /* padding-left: 20px; */
+}
+}
 .momentum-block img {
     /* max-width: 603px; */
     /* max-height: 437px; */
@@ -42,6 +54,12 @@
     margin: 0;
     font-weight: 900;
     font-size: 40px;
+    
+}
+@media screen and (max-width:1024px){
+    .momentum-block h2{
+        font-size: 35px;
+    }
 }
 
 .momentum-block h3 {
@@ -49,12 +67,22 @@
     font-weight: 700;
     font-size: 24px;
 }
+@media screen and (max-width:1024px){
+    .momentum-block h3{
+        font-size: 19px;
+    }
+}
 
 .momentum-block p {
     /* font-family:sans-serif; */
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+}
+@media screen and (max-width:1024px){
+    .momentum-block p{
+        font-size: 11px;
+    }
 }
 
 .momentum-block .button-container>a {
@@ -117,13 +145,10 @@
         /* height: 23px; */
     }
 
-    .momentum-block div {
-        /* width: 150px;
-        height: 230px; */
-    }
+
 
     .momentum-block img {
-        width: 150px;
+        /* width: 150px; */
         height: 232px;
         object-fit: cover;
     }
