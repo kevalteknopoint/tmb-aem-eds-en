@@ -9,10 +9,10 @@ export default function decorate(block) {
     const ulClassname = document.querySelector(".momentum-teaser-wrapper ul");
     ulClassname.classList.add("momentum-listing-wrapper");
 
-    const secondulClassname = document.querySelector(".momentum-teaser-wrapper").nextElementSibling;
-    secondulClassname.classList.add("listing-wrapper");
+    // const secondulClassname = document.querySelector(".momentum-teaser-wrapper").nextElementSibling;
+    // secondulClassname.classList.add("listing-wrapper");
 
-    const tmbTeaser = document.querySelector(".momentum-block div")
+    const tmbTeaser = document.querySelector(".momentum-block div");
     tmbTeaser.classList.add("tmb-teaser-content");
 
     // document.querySelectorAll('.momentum-section  .momentum-block div:nth-child(2) div')
