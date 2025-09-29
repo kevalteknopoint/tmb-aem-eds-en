@@ -15,7 +15,7 @@ export default function decorate(block) {
     const tmbTeaser = document.querySelector(".momentum-block div");
     tmbTeaser.classList.add("tmb-teaser-content");
 
-    const teaserCont = document.querySelector(".momentum-block .momentum-block div:nth-child(2)");
+    const teaserCont = document.querySelector(".momentum-block div:nth-child(2)");
     teaserCont.classList.add("teaser-content");
 
     // document.querySelectorAll('.momentum-section  .momentum-block div:nth-child(2) div')
