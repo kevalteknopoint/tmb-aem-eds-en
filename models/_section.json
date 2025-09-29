@@ -57,6 +57,14 @@
             {
               "name": "Expandable Tiles",
               "value": "expandable-tiles-section"
+            },
+            {
+              "name": "Highlight",
+              "value": "highlight"
+            },
+            {
+              "name": "tmb-acc-sec",
+              "value": "tmb-acc-sec"
             }
           ]
         }
@@ -77,7 +85,8 @@
         "fragment",
         "quick-links",
         "tmb-teaser",
-        "bannervideo"
+        "bannervideo",
+        "accordion"
       ]
     }
   ]
