@@ -15,7 +15,12 @@ export default async function decorate(block) {
       const ul = heading.nextElementSibling;
       if (ul && ul.tagName === "UL") {
         ul.classList.toggle("active");
-        icon.classList.toggle("rotated");
+        if (icon.style.transform === "rotate(180deg)") {
+            icon.style.transform = "rotate(0deg)";
+        } else {
+            icon.style.transform = "rotate(180deg)";
+        }
+        icon.style.transition = "transform 0.1s ease";
       }
     });
   });
