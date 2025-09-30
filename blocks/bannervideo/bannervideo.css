@@ -83,10 +83,6 @@
   display: none;
 }
 
-.swiperinnerdiv3 .mob-pbanner {
-  display: block;
-}
-
 /* ==============================
    Navigation Buttons
 ============================== */
@@ -113,7 +109,7 @@
   background: #F5F8DE;
 }
 .nav-buttons button:hover {
-  background: #005bb5;
+  background: #F5F8DE;
 }
 .nav-buttons .swiper-button-prev {
   position: absolute;
@@ -267,10 +263,14 @@
   .desktop-banner {
     display: none;
   }
+<<<<<<< HEAD
   .secfirst .bannervideo-wrapper .bannervideo .swiper-wrapper {
     height: 450px;
   }
   .secfirst .bannervideo-wrapper .bannervideo .swiper-pagination {
+=======
+  .bannervideo .swiper-pagination {
+>>>>>>> banner-page
     bottom: 0;
     right: 20px;
     width: 100%;
