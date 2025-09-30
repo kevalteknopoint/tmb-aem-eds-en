@@ -23,13 +23,10 @@
   background: #FFF;
   height: 120px;
 }
-.secsecond .bannervedio-wrapper {
+.secsecond .bannervideo-wrapper {
   padding: 40px;
 }
 
-/* ==============================
-   Swiper Pagination
-============================== */
 /* ==============================
    Section One Styles
 ============================== */
@@ -66,7 +63,7 @@
   display: flex;
 }
 
-.bannervedio-container .bannervedio-wrapper {
+.bannervideo-container .bannervideo-wrapper {
   max-width: none;
   padding: 0;
   height: 100%;
@@ -75,12 +72,10 @@
 .desktop-banner {
   display: block;
 }
-
 .desktop-banner img {
   width: 100%;
   height: revert-layer;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .mob-pbanner {
@@ -111,9 +106,14 @@
   height: 56px;
   border-radius: 12px;
   background: #F5F8DE;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
 }
-.nav-buttons button:hover {
+.nav-buttons button:hover, .nav-buttons button:focus {
   background: #F5F8DE;
+  box-shadow: 0 0 0 2px #00525B;
+  outline: none;
 }
 .nav-buttons .swiper-button-prev {
   position: absolute;
@@ -124,24 +124,25 @@
   background-image: url("../../icons/mdi_arrow-left.svg");
   height: 100px;
   width: 200px;
+  display: block;
 }
 .nav-buttons .swiper-button-next::after {
   content: "";
   background-image: url("../../icons/mdi_arrow-right.svg");
   height: 100px;
   width: 200px;
+  display: block;
 }
 
 /* ==============================
    Typography
 ============================== */
-/* move this block above swiperinnerdiv1 to fix specificity */
 .inner-section1 {
   position: relative;
 }
 .inner-section1 > h1 {
   color: #00525B;
-  font-family: sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 40px;
   font-weight: 900;
   line-height: 48px;
@@ -175,13 +176,11 @@
 }
 .swiperinnerdiv > div:nth-child(1) > p {
   color: var(--Dark-teal, #00525B);
-  /* Desktop & tablet/Body */
   font-family: Inter, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  /* 150% */
 }
 .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container > a {
   color: #F5F8DE;
@@ -327,6 +326,13 @@
   .swiperinnerdiv > div:nth-child(1) {
     display: none;
   }
+  .bannervideo .swiper-pagination .swiper-pagination-bullet {
+    width: 20px;
+    height: 7px;
+    border-radius: 40px;
+    opacity: 1;
+    background-color: #fff;
+  }
   .bannervideo .swiper-pagination {
     bottom: 80px;
     right: 0;
@@ -336,11 +342,4 @@
     color: #fff;
     text-align: right;
   }
-  .bannervideo .swiper-pagination .swiper-pagination-bullet {
-    width: 20px;
-    height: 7px;
-    border-radius: 40px;
-    opacity: 1;
-    background-color: #fff;
-  }
-}/*# sourceMappingURL=bannervideo.css.map */
+}
