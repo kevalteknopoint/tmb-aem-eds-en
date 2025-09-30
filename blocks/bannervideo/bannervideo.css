@@ -270,6 +270,9 @@
   .swiperinnerdiv1 > div:nth-child(1) {
     display: none;
   }
+  .secfirst .bannervideo-wrapper .bannervideo .swiper-wrapper {
+    height: 450px;
+  }
   .secfirst .bannervideo-wrapper .bannervideo .swiper-pagination {
     bottom: 0;
     right: 20px;

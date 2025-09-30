@@ -403,6 +403,10 @@
   .secfirst {
     .bannervideo-wrapper {
       .bannervideo {
+        .swiper-wrapper {
+          height: 450px;
+        }
+
         .swiper-pagination {
           .swiper-pagination-bullet {
             width: 24px;
