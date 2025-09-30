@@ -267,9 +267,6 @@
   .desktop-banner {
     display: none;
   }
-  .swiperinnerdiv1 > div:nth-child(1) {
-    display: none;
-  }
   .bannervideo .swiper-pagination {
     bottom: 0;
     right: 20px;
