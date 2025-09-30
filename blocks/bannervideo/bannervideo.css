@@ -263,14 +263,10 @@
   .desktop-banner {
     display: none;
   }
-<<<<<<< HEAD
-  .secfirst .bannervideo-wrapper .bannervideo .swiper-wrapper {
+  .secfirst .bannervideo-wrapper .swiper-wrapper {
     height: 450px;
   }
   .secfirst .bannervideo-wrapper .bannervideo .swiper-pagination {
-=======
-  .bannervideo .swiper-pagination {
->>>>>>> banner-page
     bottom: 0;
     right: 20px;
     width: 100%;
