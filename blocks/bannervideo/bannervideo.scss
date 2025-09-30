@@ -314,6 +314,12 @@
    Media Queries
 ============================== */
 @media (max-width: 767px) {
+  .secfirst {
+    .swiper-wrapper {
+      height: 450px;
+    }
+  }
+
   .mob-noswiper-child1 {
     display: flex;
     justify-content: space-between;
