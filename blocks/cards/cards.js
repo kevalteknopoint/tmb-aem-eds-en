@@ -101,13 +101,14 @@ export default function decorate(block) {
       const swiperWrapper = htmlToElement('<div class="swiper-wrapper"></div>');
       [...block.children].forEach((row) => swiperWrapper.appendChild(row));
 
-      block?.classList.add('swiper');
+      block?.classList.add('swiper', 'expandable-tiles-swiper');
       block.appendChild(swiperWrapper);
       block?.insertAdjacentHTML('beforeend', '<div class="swiper-pagination"></div>');
 
       /* eslint-disable no-new */
-      new Swiper('.swiper', {
+      new Swiper('.expandable-tiles-swiper', {
         effect: 'fade',
+        loop: true,
         fadeEffect: {
           crossFade: true,
         },
@@ -118,7 +119,7 @@ export default function decorate(block) {
         centeredSlides: true,
         spaceBetween: 24,
         pagination: {
-          el: '.swiper-pagination',
+          el: '.expandable-tiles-swiper .swiper-pagination',
           clickable: true,
         },
       });
