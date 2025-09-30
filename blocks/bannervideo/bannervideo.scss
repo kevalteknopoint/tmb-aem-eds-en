@@ -1,14 +1,19 @@
 @import './swiper-bundle.min.css';
-// Variables
-$primary-color: #00525B;
-$secondary-bg: #F5F8DE;
-$border-radius: 12px;
-$font-family: Inter, sans-serif;
+@import './swiper-bundle.min.css';
 
 /* ==============================
    Section Two Styles
 ============================== */
 .secsecond {
+
+  // p,
+  // a,
+  // .button-container,
+  // .button {
+  //   margin: 0;
+  //   padding: 0;
+  // }
+
   .default-content-wrapper {
     display: flex;
   }
@@ -27,16 +32,29 @@ $font-family: Inter, sans-serif;
       gap: 19px;
       padding: 20px;
       border: 1px solid rgba(0, 0, 0, 0.20);
-      border-radius: $border-radius;
+      border-radius: 12px;
       background: #FFF;
       height: 120px;
     }
   }
 
-  .bannervideo-wrapper {
+  .bannervedio-wrapper {
     padding: 40px;
   }
 }
+
+/* ==============================
+   Swiper Pagination
+============================== */
+// .swiper-pagination-bullet {
+//   width: 49px;
+//   height: 12px;
+//   border-radius: 40px;
+// }
+
+// .swiper-pagination-bullet-active {
+//   background: #00525B;
+// }
 
 /* ==============================
    Section One Styles
@@ -51,6 +69,7 @@ $font-family: Inter, sans-serif;
       border-radius: 0 0 50px 50px;
 
       .swiper-slide {
+        // width: 1457px;
         position: relative;
         margin-right: 2px;
       }
@@ -65,7 +84,7 @@ $font-family: Inter, sans-serif;
         }
 
         .swiper-pagination-bullet-active {
-          background: $primary-color;
+          background: #00525B;
         }
       }
     }
@@ -86,8 +105,8 @@ $font-family: Inter, sans-serif;
   }
 }
 
-.bannervideo-container {
-  .bannervideo-wrapper {
+.bannervedio-container {
+  .bannervedio-wrapper {
     max-width: none;
     padding: 0;
     height: 100%;
@@ -96,17 +115,23 @@ $font-family: Inter, sans-serif;
 
 .desktop-banner {
   display: block;
+}
 
-  img {
-    width: 100%;
-    height: revert-layer;
-    object-fit: cover;
-  }
+.desktop-banner img {
+  width: 100%;
+  height: revert-layer;
+  object-fit: cover;
 }
 
 .mob-pbanner {
   display: none;
 }
+
+// .swiperinnerdiv3 {
+//   .mob-pbanner {
+//     display: block;
+//   }
+// }
 
 /* ==============================
    Navigation Buttons
@@ -130,17 +155,11 @@ $font-family: Inter, sans-serif;
     gap: 8px;
     width: 56px;
     height: 56px;
-    border-radius: $border-radius;
-    background: $secondary-bg;
-    border: none;
-    cursor: pointer;
-    transition: box-shadow 0.2s;
+    border-radius: 12px;
+    background: #F5F8DE;
 
-    &:hover,
-    &:focus {
-      background: $secondary-bg;
-      box-shadow: 0 0 0 2px $primary-color;
-      outline: none;
+    &:hover {
+      background: #F5F8DE;
     }
   }
 
@@ -153,7 +172,6 @@ $font-family: Inter, sans-serif;
       background-image: url('../../icons/mdi_arrow-left.svg');
       height: 100px;
       width: 200px;
-      display: block;
     }
   }
 
@@ -163,7 +181,6 @@ $font-family: Inter, sans-serif;
       background-image: url('../../icons/mdi_arrow-right.svg');
       height: 100px;
       width: 200px;
-      display: block;
     }
   }
 }
@@ -171,12 +188,14 @@ $font-family: Inter, sans-serif;
 /* ==============================
    Typography
 ============================== */
+
+/* move this block above swiperinnerdiv1 to fix specificity */
 .inner-section1 {
   position: relative;
 
   >h1 {
-    color: $primary-color;
-    font-family: $font-family;
+    color: #00525B;
+    font-family: sans-serif;
     font-size: 40px;
     font-weight: 900;
     line-height: 48px;
@@ -202,8 +221,8 @@ $font-family: Inter, sans-serif;
     background: transparent;
 
     >h1 {
-      color: $primary-color;
-      font-family: $font-family;
+      color: #00525B;
+      font-family: Inter, sans-serif;
       font-size: 60px;
       font-style: normal;
       font-weight: 900;
@@ -213,24 +232,27 @@ $font-family: Inter, sans-serif;
     }
 
     >p {
-      color: var(--Dark-teal, $primary-color);
-      font-family: $font-family;
+      color: var(--Dark-teal, #00525B);
+
+      /* Desktop & tablet/Body */
+      font-family: Inter, sans-serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
       line-height: 24px;
+      /* 150% */
     }
 
     &:nth-child(1) {
       >p.button-container {
         >a {
-          color: $secondary-bg;
-          font-family: $font-family;
+          color: #F5F8DE;
+          font-family: Inter, sans-serif;
           font-size: 16px;
           font-weight: 600;
           line-height: 24px;
           font-style: normal;
-          background-color: $primary-color;
+          background-color: #00525B;
         }
       }
     }
@@ -240,14 +262,28 @@ $font-family: Inter, sans-serif;
 /* ==============================
    Mobile View
 ============================== */
+// .swiperinnerdiv1 {
+//   >div:nth-child(1) {
+//     position: absolute;
+//     display: flex;
+//     width: 484px;
+//     padding: 32px;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     gap: 15px;
+//     background: rgba(245, 248, 222, 0.50);
+//     left: 20px;
+//   }
+// }
+
 .inner-section2 {
   .video-banner {
     .swiper-wrapper {
       .swiper-slide {
         >div {
           >.button-container>a {
-            color: $primary-color;
-            font-family: $font-family;
+            color: #00525B;
+            font-family: Inter, sans-serif;
             font-size: 16px;
             font-weight: 700;
             line-height: 24px;
@@ -287,7 +323,7 @@ $font-family: Inter, sans-serif;
               padding: 0;
               margin: 0;
               color: #000;
-              font-family: $font-family;
+              font-family: Inter, sans-serif;
               font-size: 20px;
               font-weight: 700;
               line-height: 24px;
@@ -317,8 +353,8 @@ $font-family: Inter, sans-serif;
     align-self: stretch;
 
     >h1 {
-      color: $primary-color;
-      font-family: $font-family;
+      color: #00525B;
+      font-family: Inter, sans-serif;
       font-size: 24px;
       font-weight: 700;
       line-height: 32px;
@@ -327,8 +363,8 @@ $font-family: Inter, sans-serif;
     }
 
     >.button-container>a {
-      color: $primary-color;
-      font-family: $font-family;
+      color: #00525B;
+      font-family: Inter, sans-serif;
       font-size: 16px;
       font-weight: 700;
       line-height: 24px;
@@ -355,12 +391,13 @@ $font-family: Inter, sans-serif;
       .bannervideo {
         border-radius: 0;
       }
+
       .mob-swiper {
         display: flex;
         align-items: center;
         gap: 8px;
         border: 1px solid rgba(0, 0, 0, 0.15);
-        border-radius: $border-radius;
+        border-radius: 12px;
         background: #fff;
         padding: 12px;
 
@@ -368,18 +405,21 @@ $font-family: Inter, sans-serif;
           margin: 0;
           padding: 0;
           color: #000;
-          font-family: $font-family;
+          font-family: Inter, sans-serif;
           font-size: 14px;
           font-weight: 700;
           line-height: 18px;
           font-style: normal;
 
+          // margin: 0 0 50px 0;
+
           >a {
+            // display: none;
             margin: 0;
             padding: 0;
-            color: $primary-color;
+            color: #00525B;
             background-color: transparent;
-            font-family: $font-family;
+            font-family: Inter, sans-serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 700;
@@ -408,23 +448,22 @@ $font-family: Inter, sans-serif;
     }
   }
 
-  .bannervideo {
-    .swiper-pagination {
-      .swiper-pagination-bullet {
+  .secfirst .bannervideo-wrapper .bannervideo .swiper-pagination .swiper-pagination-bullet {
         width: 20px;
         height: 7px;
         border-radius: 40px;
         opacity: 1;
         background-color: #fff;
-      }
+      
+  }
 
+  .bannervideo-wrapper .bannervideo .swiper-pagination-bullets {
       bottom: 80px;
       right: 0;
       width: 100%;
       left: -20px;
       opacity: 1;
       color: #fff;
-      text-align: right;
-    }
+      text-align: right;    
   }
 }
