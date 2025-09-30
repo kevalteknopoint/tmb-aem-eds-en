@@ -72,43 +72,36 @@
   max-width: 90%;
 }
 
-.expandable-tile .tile-content .tile-cta {
+.expandable-tile .tile-content .content-cta {
   align-items: center;
-  color: #00525b;
   display: flex;
-  font-size: 0;
-  gap: 18px;
-  line-height: 19px;
-  margin: 0;
+  gap: 12px;
   position: absolute;
   right: 9px;
   top: 0;
 }
 
-.expandable-tile .tile-content .tile-cta:hover {
-  text-decoration: none;
+.expandable-tile .tile-content .content-cta a {
+  color: #00525b;
+  font-size: 0;
+  line-height: 19px;
 }
 
-.expandable-tile .tile-content .tile-cta::after {
-  border-right: 1px solid #083344;
-  border-top: 1px solid #083344;
-  content: "";
+.expandable-tile .tile-content .content-cta .icon {
   display: block;
-  height: 10px;
-  transform: rotate(45deg);
-  width: 10px;
+  width: fit-content;
+  height: fit-content;
 }
 
-/* .expandable-tile .tile-content .tile-cta::after {
-  content: "";
+.expandable-tile .tile-content .content-cta img {
   display: block;
   width: 24px;
-  height: 24px;
-  background-image: url('/content/dam/DEMO/tmb/icons/chevron-right.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-} */
+  height: auto;
+}
+
+.expandable-tile .tile-content .content-cta:hover {
+  text-decoration: none;
+}
 
 .expandable-tiles-section {
   padding: 100px 0;
@@ -225,17 +218,24 @@ main > .expandable-tiles-section > .cards-wrapper {
     max-width: 100%;
   }
 
-  .expandable-tile .tile-content .tile-cta {
-    font-size: 16px;
+  .expandable-tile .tile-content .content-cta {
     margin-top: 8px;
     padding: 8px 0;
     position: static;
     gap: 12px;
   }
 
-  .expandable-tile .tile-content .tile-cta::after {
-    margin-bottom: 3px;
+  .expandable-tile .tile-content .content-cta a {
+    font-size: 16px;
   }
+
+  .expandable-tile .tile-content .content-cta img {
+    width: 18px;
+  }
+
+  /* .expandable-tile .tile-content .content-cta::after {
+    margin-bottom: 3px;
+  } */
 
   .expandable-tiles {
     --swiper-pagination-bottom: 0;
