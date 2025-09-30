@@ -76,6 +76,14 @@
   padding-left: 80px;
 }
 
+.quick-links .icon.icon-Flyout-menu-icon img {
+  transition: all 0.2s ease-in-out;
+}
+
+.quick-links.block:has(ul.active) > div > div > p .icon.icon-Flyout-menu-icon img {
+  transform: rotate(180deg);
+}
+
 .quick-links-container > .quick-links-wrapper > .quick-links >div >div > p >.icon {
   display: flex;
   align-items: center;
