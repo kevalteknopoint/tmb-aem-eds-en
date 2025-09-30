@@ -34,7 +34,7 @@
   ],
   "models": [
     {
-      "id": "bannervedio",
+      "id": "bannervideo",
       "fields":[
         {
       "component": "multiselect",
@@ -70,22 +70,26 @@
         "label": "Alt",
         "value": ""
       },
+       {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image1",
+        "label": "Image1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt1",
+        "label": "Alt1",
+        "value": ""
+      },
       {
         "component": "richtext",
         "name": "context",
         "value": "",
         "label": "context-model",
         "valueType": "string"
-      },
-      {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "name": "linkText",
-        "label": "Text"
       }
     ]
   }

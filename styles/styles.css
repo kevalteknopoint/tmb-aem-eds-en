@@ -20,8 +20,8 @@
   --link-hover-color: #1d3ecf;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: 'Inter', sans-serif;
+  --heading-font-family: 'Inter', sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -53,31 +53,14 @@
   src: local('Arial');
 }
 
-@media (width >= 900px) {
-  :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
-
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
-  }
-}
-
 body {
-  display: none;
-  margin: 0;
   background-color: var(--background-color);
   color: var(--text-color);
+  display: none;
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
   line-height: 1.6;
+  margin: 0;
 }
 
 body.appear {
@@ -104,11 +87,11 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
   font-weight: 600;
   line-height: 1.25;
+  margin-bottom: 0.25em;
+  margin-top: 0.8em;
   scroll-margin: 40px;
 }
 
@@ -125,8 +108,8 @@ ol,
 ul,
 pre,
 blockquote {
-  margin-top: 0.8em;
   margin-bottom: 0.25em;
+  margin-top: 0.8em;
 }
 
 code,
@@ -135,10 +118,10 @@ pre {
 }
 
 pre {
-  padding: 16px;
-  border-radius: 8px;
   background-color: var(--light-color);
+  border-radius: 8px;
   overflow-x: auto;
+  padding: 16px;
   white-space: pre;
 }
 
@@ -156,8 +139,1538 @@ button {
 /* links */
 a:any-link {
   color: var(--link-color);
-  text-decoration: none;
   overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
+}
+
+a:any-link {
+  color: var(--link-color);
+  overflow-wrap: break-word;
+  text-decoration: none;
 }
 
 a:hover {
@@ -166,25 +1679,5635 @@ a:hover {
 }
 
 /* buttons */
-a.button:any-link,
-button {
-  box-sizing: border-box;
-  display: inline-block;
-  max-width: 100%;
-  margin: 12px 0;
+a.button:any-link {
+  background-color: var(--link-color);
   border: 2px solid transparent;
   border-radius: 2.4em;
-  padding: 0.5em 1.2em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
   font-family: var(--body-font-family);
   font-style: normal;
   font-weight: 500;
   line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
   text-align: center;
   text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
   background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
   color: var(--background-color);
   cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
   overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.button:any-link,
+button {
+  background-color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  box-sizing: border-box;
+  color: var(--background-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 12px 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  text-decoration: none;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -211,9 +7334,9 @@ button.secondary {
 }
 
 main img {
+  height: auto;
   max-width: 100%;
   width: auto;
-  height: auto;
 }
 
 .icon {
@@ -233,19 +7356,13 @@ main > .section {
 }
 
 main > .section > div {
-  max-width: 1200px;
   margin: auto;
+  max-width: 1328px;
   padding: 0 24px;
 }
 
 main > .section:first-of-type {
   margin-top: 0;
-}
-
-@media (width >= 900px) {
-  main > .section > div {
-    padding: 0 32px;
-  }
 }
 
 /* section metadata */
@@ -254,4 +7371,25 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+@media (width >= 900px) {
+  :root {
+    /* body sizes */
+    --body-font-size-m: 18px;
+    --body-font-size-s: 16px;
+    --body-font-size-xs: 14px;
+
+    /* heading sizes */
+    --heading-font-size-xxl: 45px;
+    --heading-font-size-xl: 36px;
+    --heading-font-size-l: 28px;
+    --heading-font-size-m: 22px;
+    --heading-font-size-s: 20px;
+    --heading-font-size-xs: 18px;
+  }
+
+  main > .section > div {
+    padding: 0 32px;
+  }
 }

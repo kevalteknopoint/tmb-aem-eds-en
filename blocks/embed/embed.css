@@ -1,8 +1,8 @@
 .embed {
-  width: unset;
-  text-align: center;
-  max-width: 800px;
   margin: 32px auto;
+  max-width: 800px;
+  text-align: center;
+  width: unset;
 }
 
 .embed > div {
@@ -16,47 +16,48 @@
 }
 
 .embed .embed-placeholder {
-  width: 100%;
   aspect-ratio: 16 / 9;
   position: relative;
+  width: 100%;
 }
 
 .embed .embed-placeholder > * {
-  display: flex;
   align-items: center;
+  display: flex;
+  inset: 0;
   justify-content: center;
   position: absolute;
-  inset: 0;
 }
 
 .embed .embed-placeholder picture img {
-  width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 
 .embed .embed-placeholder-play button {
-  box-sizing: border-box;
-  position: relative;
-  display: block;
-  transform: scale(3);
-  width: 22px;
-  height: 22px;
   border: 2px solid;
   border-radius: 20px;
+  box-sizing: border-box;
+  display: block;
+  height: 22px;
   padding: 0;
+  position: relative;
+  transform: scale(3);
+  width: 22px;
 }
 
 .embed .embed-placeholder-play button::before {
-  content: "";
-  display: block;
-  box-sizing: border-box;
-  position: absolute;
-  width: 0;
-  height: 10px;
-  border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
   border-left: 6px solid;
-  top: 4px;
+  border-top: 5px solid transparent;
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  height: 10px;
   left: 7px;
+  position: absolute;
+  top: 4px;
+  width: 0;
 }
