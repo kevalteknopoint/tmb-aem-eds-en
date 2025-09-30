@@ -1,4 +1,5 @@
 @import './swiper-bundle.min.css';
+@import './swiper-bundle.min.css';
 /* ==============================
    Section Two Styles
 ============================== */
@@ -79,8 +80,7 @@
 .desktop-banner img {
   width: 100%;
   height: revert-layer;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .mob-pbanner {
@@ -325,14 +325,35 @@
     display: none;
   }
   .swiperinnerdiv > div:nth-child(1) {
-    display: none;
+    display: block;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    bottom: 10px;
+    top: auto;
+    padding: 0px;
+    border-radius: 0 0 20px 20px;
+    background: linear-gradient(252.23deg, rgba(245, 248, 222, 0.5) -7.15%, #F5F8DE 98.28%);
+  }
+  .swiperinnerdiv > div:nth-child(1) h1 {
+    font-size: 32px;
+    width: 85%;
+    line-height: 32px;
+    letter-spacing: 1.13px;
+    padding: 0 20px;
+  }
+  .swiperinnerdiv > div:nth-child(1):nth-child(1) p.button-container {
+    padding: 0 20px;
+    margin: 0px;
+  }
+  .swiperinnerdiv > div:nth-child(1):nth-child(1) p.button-container a {
+    font-size: 9px;
+    letter-spacing: normal;
+    line-height: 13.5px;
   }
   .secfirst .bannervideo-wrapper .bannervideo .swiper-pagination .swiper-pagination-bullet {
     width: 20px;
     height: 7px;
-    border-radius: 40px;
-    opacity: 1;
-    background-color: #fff;
   }
   .bannervideo-wrapper .bannervideo .swiper-pagination-bullets {
     bottom: 80px;
@@ -343,4 +364,4 @@
     color: #fff;
     text-align: right;
   }
-}/*# sourceMappingURL=bannervideo.css.map */
+}
