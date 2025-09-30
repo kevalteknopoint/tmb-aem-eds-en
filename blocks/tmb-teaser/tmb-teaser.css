@@ -354,10 +354,10 @@
     .momentum-teaser-wrapper {
         display: none;
     }
-    .momentum-block img {
+    /* .momentum-block img {
         width: 150px;
         height: 235px;
-    }
+    } */
 }
 
 .momentum-listing-wrapper>li {
