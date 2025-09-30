@@ -387,9 +387,10 @@
 
   .bannervideo-container {
     .bannervideo-wrapper {
-       .bannervideo {
-      border-radius: 0;
-    }
+      .bannervideo {
+        border-radius: 0;
+      }
+
       .mob-swiper {
         display: flex;
         align-items: center;
@@ -446,23 +447,22 @@
     }
   }
 
-  .bannervideo {
-    .swiper-pagination {
-      .swiper-pagination-bullet {
+  .secfirst .bannervideo-wrapper .bannervideo .swiper-pagination .swiper-pagination-bullet {
         width: 20px;
         height: 7px;
         border-radius: 40px;
         opacity: 1;
         background-color: #fff;
-      }
+      
+  }
 
+  .bannervideo-wrapper .bannervideo .swiper-pagination-bullets {
       bottom: 80px;
       right: 0;
       width: 100%;
       left: -20px;
       opacity: 1;
       color: #fff;
-      text-align: right;
-    }
+      text-align: right;    
   }
 }

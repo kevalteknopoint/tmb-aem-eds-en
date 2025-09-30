@@ -327,7 +327,14 @@
   .swiperinnerdiv > div:nth-child(1) {
     display: none;
   }
-  .bannervideo .swiper-pagination {
+  .secfirst .bannervideo-wrapper .bannervideo .swiper-pagination .swiper-pagination-bullet {
+    width: 20px;
+    height: 7px;
+    border-radius: 40px;
+    opacity: 1;
+    background-color: #fff;
+  }
+  .bannervideo-wrapper .bannervideo .swiper-pagination-bullets {
     bottom: 80px;
     right: 0;
     width: 100%;
@@ -335,12 +342,5 @@
     opacity: 1;
     color: #fff;
     text-align: right;
-  }
-  .bannervideo .swiper-pagination .swiper-pagination-bullet {
-    width: 20px;
-    height: 7px;
-    border-radius: 40px;
-    opacity: 1;
-    background-color: #fff;
   }
 }/*# sourceMappingURL=bannervideo.css.map */
