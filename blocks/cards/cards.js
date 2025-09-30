@@ -100,12 +100,12 @@ export default function decorate(block) {
       const swiperWrapper = htmlToElement('<div class="swiper-wrapper"></div>');
       [...block.children].forEach((row) => swiperWrapper.appendChild(row));
 
-      block?.classList.add('swiper');
+      block?.classList.add('swiper', 'expandable-tiles-swiper');
       block.appendChild(swiperWrapper);
       block?.insertAdjacentHTML('beforeend', '<div class="swiper-pagination"></div>');
 
       /* eslint-disable no-new */
-      new Swiper('.swiper', {
+      new Swiper('.expandable-tiles-swiper', {
         effect: 'fade',
         fadeEffect: {
           crossFade: true,
