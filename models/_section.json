@@ -31,12 +31,44 @@
           "label": "Style",
           "options": [
             {
+              "name": "secfirst",
+              "value": "secfirst"
+            },
+            {
+              "name": "secsecond",
+              "value": "secsecond"
+            },
+            {
+              "name": "quick-links",
+              "value": "quick-links"
+            },
+                        {
+              "name": "momentum-teaser",
+              "value": "momentum-teaser"
+            },
+            {
+              "name": "momentum-section",
+              "value": "momentum-section"
+            },
+            {
+              "name": "online-banking",
+              "value": "online-banking"
+            },
+            {
+              "name": "Expandable Tiles",
+              "value": "expandable-tiles-section"
+            },
+            {
               "name": "Highlight",
               "value": "highlight"
             },
             {
               "name": "AOS Enabled",
               "value": "aos-enabled"
+            },
+            {
+              "name": "tmb-acc-sec",
+              "value": "tmb-acc-sec"
             }
           ]
         }
@@ -54,7 +86,11 @@
         "hero",
         "cards",
         "columns",
-        "fragment"
+        "fragment",
+        "quick-links",
+        "tmb-teaser",
+        "bannervideo",
+        "accordion"
       ]
     }
   ]

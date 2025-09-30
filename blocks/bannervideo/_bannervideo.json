@@ -1,0 +1,105 @@
+{
+  "definitions": [
+    {
+      "title": "BannerVideo",
+      "id": "bannervideo",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "bannervideo",
+              "filter": "bannervideo",
+              "model": "bannervideo"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Banner Video Item",
+      "id": "banner-video-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "banner-video-item",
+              "model": "banner-video-item"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "bannervideo",
+      "fields":[
+        {
+      "component": "multiselect",
+      "name": "classes",
+      "label": "Style",
+      "options": [
+        {
+          "name": "Video banner",
+          "value": "video-banner"
+        },
+        {
+          "name": "Text Center",
+          "value": "text-center"
+        }
+    ]
+  }
+      ]
+    },
+  {
+    "id": "banner-video-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+       {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image1",
+        "label": "Image1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt1",
+        "label": "Alt1",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "context",
+        "value": "",
+        "label": "context-model",
+        "valueType": "string"
+      }
+    ]
+  }
+],
+"filters": [
+  {
+    "id": "bannervideo",
+    "components": [
+      "banner-video-item"
+    ]
+  }
+]
+}
