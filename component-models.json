@@ -134,12 +134,139 @@
         "label": "Style",
         "options": [
           {
+            "name": "secfirst",
+            "value": "secfirst"
+          },
+          {
+            "name": "secsecond",
+            "value": "secsecond"
+          },
+          {
+            "name": "quick-links",
+            "value": "quick-links"
+          },
+          {
+            "name": "momentum-teaser",
+            "value": "momentum-teaser"
+          },
+          {
+            "name": "momentum-section",
+            "value": "momentum-section"
+          },
+          {
+            "name": "online-banking",
+            "value": "online-banking"
+          },
+          {
+            "name": "Expandable Tiles",
+            "value": "expandable-tiles-section"
+          },
+          {
             "name": "Highlight",
             "value": "highlight"
           },
           {
             "name": "AOS Enabled",
             "value": "aos-enabled"
+          },
+          {
+            "name": "tmb-acc-sec",
+            "value": "tmb-acc-sec"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "value": "",
+        "label": "Heading"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "value": "",
+        "label": "Body"
+      }
+    ]
+  },
+  {
+    "id": "bannervideo",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Video banner",
+            "value": "video-banner"
+          },
+          {
+            "name": "Text Center",
+            "value": "text-center"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "banner-video-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image1",
+        "label": "Image1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt1",
+        "label": "Alt1",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "context",
+        "value": "",
+        "label": "context-model",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Expandable Tiles",
+            "value": "expandable-tiles"
           }
         ]
       }
@@ -216,6 +343,59 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "quick-links",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "quick-links-block",
+            "value": "quick-links-block"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tmb-teaser",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "momentum-block",
+            "value": "momentum-block"
+          }
+        ]
       }
     ]
   }
