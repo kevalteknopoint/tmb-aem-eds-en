@@ -139,7 +139,7 @@ function loadDelayed() {
     const script = document.createElement('script');
     script.setAttribute('src', '/scripts/aos.min.js');
     document.body.appendChild(script);
-  }, 3000);
+  });
   // load anything that can be postponed to the latest here
 }
 
