@@ -267,9 +267,6 @@
   .desktop-banner {
     display: none;
   }
-  .swiperinnerdiv1 > div:nth-child(1) {
-    display: none;
-  }
   .secfirst .bannervideo-wrapper .bannervideo .swiper-wrapper {
     height: 450px;
   }
