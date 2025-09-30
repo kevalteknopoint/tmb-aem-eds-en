@@ -104,6 +104,7 @@
 
 @media screen and (max-width:767px) {
   .quick-links-container{
+    margin: 40px auto !important;
     padding: 0 20px;
     row-gap: unset;
     flex-direction: column;
