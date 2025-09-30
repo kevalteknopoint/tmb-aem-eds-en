@@ -270,14 +270,14 @@
   .swiperinnerdiv1 > div:nth-child(1) {
     display: none;
   }
-  .bannervideo .swiper-pagination {
+  .secfirst .bannervideo-wrapper .bannervideo .swiper-pagination {
     bottom: 0;
     right: 20px;
     width: 100%;
     left: 160px;
     color: #c2c7d1;
   }
-  .bannervideo .swiper-pagination .swiper-pagination-bullet {
+  .secfirst .bannervideo-wrapper .bannervideo .swiper-pagination .swiper-pagination-bullet {
     width: 24px;
     height: 7px;
     border-radius: 40px;
