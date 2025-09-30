@@ -29,10 +29,11 @@ export default function decorate(block) {
       textCol.classList.add('tile-content');
 
       textCol.firstElementChild.classList.add('content-title');
-      textCol?.querySelector('p:not(.button-container)')?.classList.add('content-description');
-      textCol?.querySelector('p.button-container')?.replaceWith(textCol.lastElementChild.firstElementChild);
-      textCol?.lastElementChild?.classList.add('tile-cta');
-      textCol?.lastElementChild?.classList.remove('button');
+      textCol?.querySelector('p:not(& a)')?.classList.add('content-description');
+
+      const btnElement = textCol?.querySelector('p:has(a)');
+      btnElement?.replaceWith(htmlToElement(`<div class="content-cta">${btnElement.innerHTML}</div>`));
+      btnElement?.querySelector('a')?.classList?.remove('button');
 
       imgCol.querySelectorAll('picture > img').forEach((img) => {
         const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
@@ -100,13 +101,14 @@ export default function decorate(block) {
       const swiperWrapper = htmlToElement('<div class="swiper-wrapper"></div>');
       [...block.children].forEach((row) => swiperWrapper.appendChild(row));
 
-      block?.classList.add('swiper');
+      block?.classList.add('swiper', 'expandable-tiles-swiper');
       block.appendChild(swiperWrapper);
       block?.insertAdjacentHTML('beforeend', '<div class="swiper-pagination"></div>');
 
       /* eslint-disable no-new */
-      new Swiper('.swiper', {
+      new Swiper('.expandable-tiles-swiper', {
         effect: 'fade',
+        loop: true,
         fadeEffect: {
           crossFade: true,
         },
@@ -117,7 +119,7 @@ export default function decorate(block) {
         centeredSlides: true,
         spaceBetween: 24,
         pagination: {
-          el: '.swiper-pagination',
+          el: '.expandable-tiles-swiper .swiper-pagination',
           clickable: true,
         },
       });
