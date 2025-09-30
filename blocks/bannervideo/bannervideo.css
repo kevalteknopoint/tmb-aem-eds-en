@@ -147,7 +147,7 @@
   display: none;
 }
 
-.swiperinnerdiv1 > div:nth-child(1) {
+.swiperinnerdiv > div:nth-child(1) {
   position: absolute;
   top: 37px;
   left: 56px;
@@ -157,11 +157,11 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
-  background: #F5F8DE;
+  background: transparent;
 }
-.swiperinnerdiv1 > div:nth-child(1) > h1 {
-  color: var(--Dark-teal, #00525B);
-  font-family: American Grotesk Condensed;
+.swiperinnerdiv > div:nth-child(1) > h1 {
+  color: #00525B;
+  font-family: Inter, sans-serif;
   font-size: 60px;
   font-style: normal;
   font-weight: 900;
@@ -169,17 +169,17 @@
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-.swiperinnerdiv1 > div:nth-child(1) > p {
+.swiperinnerdiv > div:nth-child(1) > p {
   color: var(--Dark-teal, #00525B);
   /* Desktop & tablet/Body */
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
   /* 150% */
 }
-.swiperinnerdiv1 > div:nth-child(1):nth-child(1) > p.button-container > a {
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container > a {
   color: #F5F8DE;
   font-family: Inter, sans-serif;
   font-size: 16px;
@@ -242,7 +242,7 @@
 ============================== */
 @media (max-width: 767px) {
   .secfirst .swiper-wrapper {
-    height: 450px;
+    height: auto;
   }
   .mob-noswiper-child1 {
     display: flex;
@@ -278,6 +278,9 @@
     gap: 18px;
     align-self: stretch;
   }
+  .bannervideo-container .bannervideo {
+    border-radius: 0;
+  }
   .bannervideo-container .bannervideo-wrapper .mob-swiper {
     display: flex;
     align-items: center;
@@ -288,16 +291,25 @@
     padding: 12px;
   }
   .bannervideo-container .bannervideo-wrapper .mob-swiper p {
+    margin: 0;
+    padding: 0;
     color: #000;
     font-family: Inter, sans-serif;
     font-size: 14px;
     font-weight: 700;
     line-height: 18px;
     font-style: normal;
-    margin: 0 0 50px 0;
   }
-  .bannervideo-container .bannervideo-wrapper .mob-swiper p:nth-child(2) {
-    display: none;
+  .bannervideo-container .bannervideo-wrapper .mob-swiper p > a {
+    margin: 0;
+    padding: 0;
+    color: #00525B;
+    background-color: transparent;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
   }
   .bannervideo-container .bannervideo-wrapper .mob-swiper > div > picture > img {
     max-width: none;
@@ -312,11 +324,12 @@
     display: none;
   }
   .bannervideo .swiper-pagination {
-    bottom: 0;
-    right: 20px;
+    bottom: 20px;
+    right: 0;
     width: 100%;
-    left: 160px;
+    left: 0;
     color: #c2c7d1;
+    text-align: right;
   }
   .bannervideo .swiper-pagination .swiper-pagination-bullet {
     width: 24px;

@@ -4,6 +4,15 @@
    Section Two Styles
 ============================== */
 .secsecond {
+
+  // p,
+  // a,
+  // .button-container,
+  // .button {
+  //   margin: 0;
+  //   padding: 0;
+  // }
+
   .default-content-wrapper {
     display: flex;
   }
@@ -194,7 +203,7 @@
   }
 }
 
-.swiperinnerdiv1 {
+.swiperinnerdiv {
   >div:nth-child(1) {
     position: absolute;
     top: 37px;
@@ -205,11 +214,11 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
-    background: #F5F8DE;
+    background: transparent;
 
     >h1 {
-      color: var(--Dark-teal, #00525B);
-      font-family: American Grotesk Condensed ;
+      color:#00525B;
+      font-family: Inter, sans-serif;
       font-size: 60px;
       font-style: normal;
       font-weight: 900;
@@ -222,7 +231,7 @@
       color: var(--Dark-teal, #00525B);
 
       /* Desktop & tablet/Body */
-      font-family: Inter;
+      font-family: Inter, sans-serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
@@ -329,7 +338,7 @@
 @media (max-width: 767px) {
   .secfirst {
     .swiper-wrapper {
-      height: 450px;
+      height: auto;
     }
   }
 
@@ -374,6 +383,9 @@
   }
 
   .bannervideo-container {
+    .bannervideo{
+      border-radius:0;
+    }
     .bannervideo-wrapper {
       .mob-swiper {
         display: flex;
@@ -385,16 +397,28 @@
         padding: 12px;
 
         p {
+          margin: 0;
+          padding: 0;
           color: #000;
           font-family: Inter, sans-serif;
           font-size: 14px;
           font-weight: 700;
           line-height: 18px;
           font-style: normal;
-          margin: 0 0 50px 0;
 
-          &:nth-child(2) {
-            display: none;
+          // margin: 0 0 50px 0;
+
+          >a {
+            // display: none;
+            margin: 0;
+            padding: 0;
+            color: #00525B;
+            background-color: transparent;
+            font-family: Inter, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
           }
         }
 
@@ -427,11 +451,12 @@
         border-radius: 40px;
       }
 
-      bottom: 0;
-      right: 20px;
+      bottom: 20px;
+      right: 0;
       width: 100%;
-      left: 160px;
+      left: 0;
       color: #c2c7d1;
+      text-align: right;
     }
   }
 }
