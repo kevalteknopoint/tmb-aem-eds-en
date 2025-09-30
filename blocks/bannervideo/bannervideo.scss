@@ -262,19 +262,6 @@
 /* ==============================
    Mobile View
 ============================== */
-// .swiperinnerdiv1 {
-//   >div:nth-child(1) {
-//     position: absolute;
-//     display: flex;
-//     width: 484px;
-//     padding: 32px;
-//     flex-direction: column;
-//     align-items: flex-start;
-//     gap: 15px;
-//     background: rgba(245, 248, 222, 0.50);
-//     left: 20px;
-//   }
-// }
 
 .inner-section2 {
   .video-banner {
@@ -444,16 +431,21 @@
 
   .swiperinnerdiv {
     >div:nth-child(1) {
-      display: none;
+      display: flex;
+      margin: 0;
+      left: 0;
+      background: linear-gradient(252.23deg, rgba(245, 248, 222, 0.5) -7.15%, #F5F8DE 98.28%);
+   
+      h1{
+        font-size:32px
+      }
+      
     }
   }
 
   .secfirst .bannervideo-wrapper .bannervideo .swiper-pagination .swiper-pagination-bullet {
         width: 20px;
         height: 7px;
-        border-radius: 40px;
-        opacity: 1;
-        background-color: #fff;
       
   }
 
