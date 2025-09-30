@@ -194,44 +194,57 @@
   }
 }
 
-// .swiperinnerdiv1 {
-//   >div {
-//     >h1 {
-//       color: #00525B;
-//       font-size: 40px;
-//       font-weight: 400;
-//       line-height: 52px;
-//       letter-spacing: 2px;
-//       text-transform: uppercase;
-//       text-align: left;
-//       padding: 20px;
-//       font-style: normal;
-//     }
+.swiperinnerdiv1 {
+  >div:nth-child(1) {
+    position: absolute;
+    top: 37px;
+    left: 56px;
+    display: flex;
+    width: 632px;
+    padding: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    background: #F5F8DE;
 
-//     >p {
-//       color: #00525B;
-//       font-family: Inter, sans-serif;
-//       font-size: 16px;
-//       font-weight: 400;
-//       line-height: 24px;
-//       font-style: normal;
-//     }
+    >h1 {
+      color: var(--Dark-teal, #00525B);
+      font-family: American Grotesk Condensed ;
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 52px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
 
-//     &:nth-child(1) {
-//       >p.button-container {
-//         >a {
-//           color: #F5F8DE;
-//           font-family: Inter, sans-serif;
-//           font-size: 16px;
-//           font-weight: 600;
-//           line-height: 24px;
-//           font-style: normal;
-//           background-color: #00525B;
-//         }
-//       }
-//     }
-//   }
-// }
+    >p {
+      color: var(--Dark-teal, #00525B);
+
+      /* Desktop & tablet/Body */
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      /* 150% */
+    }
+
+    &:nth-child(1) {
+      >p.button-container {
+        >a {
+          color: #F5F8DE;
+          font-family: Inter, sans-serif;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 24px;
+          font-style: normal;
+          background-color: #00525B;
+        }
+      }
+    }
+  }
+}
 
 /* ==============================
    Mobile View
@@ -400,11 +413,11 @@
     display: none;
   }
 
-  // .swiperinnerdiv1 {
-  //   >div:nth-child(1) {
-  //     display: none;
-  //   }
-  // }
+  .swiperinnerdiv1 {
+    >div:nth-child(1) {
+      display: none;
+    }
+  }
 
   .bannervideo {
     .swiper-pagination {

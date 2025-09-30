@@ -171,29 +171,29 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "image",
+        "name": "desk_image",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "imageAlt",
+        "name": "desk_imageAlt",
         "label": "Alt",
         "value": ""
       },
       {
         "component": "reference",
         "valueType": "string",
-        "name": "image1",
-        "label": "Image1",
+        "name": "mob_image",
+        "label": "Mobile Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "imageAlt1",
-        "label": "Alt1",
+        "name": "mob_imageAlt",
+        "label": "Mobile Alt",
         "value": ""
       },
       {

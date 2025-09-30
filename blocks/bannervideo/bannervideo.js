@@ -98,7 +98,7 @@ export default function decorate(block) {
         clickable: true,
       },
       // autoplay: {
-      //   delay: 4000,
+      //   delay: 40000000,
       //   disableOnInteraction: false,
       // },
     });
