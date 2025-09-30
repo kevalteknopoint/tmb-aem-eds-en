@@ -107,6 +107,7 @@ export default function decorate(block) {
       /* eslint-disable no-new */
       new Swiper('.expandable-tiles-swiper', {
         effect: 'fade',
+        loop: true,
         fadeEffect: {
           crossFade: true,
         },
@@ -117,7 +118,7 @@ export default function decorate(block) {
         centeredSlides: true,
         spaceBetween: 24,
         pagination: {
-          el: '.swiper-pagination',
+          el: '.expandable-tiles-swiper .swiper-pagination',
           clickable: true,
         },
       });
