@@ -342,11 +342,11 @@
     letter-spacing: 1.13px;
     padding: 0 20px;
   }
-  .swiperinnerdiv > div:nth-child(1) p.button-container {
+  .swiperinnerdiv > div:nth-child(1):nth-child(1) p.button-container {
     padding: 0 20px;
     margin: 0px;
   }
-  .swiperinnerdiv > div:nth-child(1) p.button-container a {
+  .swiperinnerdiv > div:nth-child(1):nth-child(1) p.button-container a {
     font-size: 9px;
     letter-spacing: normal;
     line-height: 13.5px;
