@@ -8,8 +8,11 @@ export default async function decorate(block) {
 
     if (!heading || !ul) return;
 
+<<<<<<< HEAD
     heading.style.cursor = 'pointer';
 
+=======
+>>>>>>> 204a4cf0f2a15091d6e3001a2b6b4f3e33e419f7
     heading.addEventListener('click', () => {
       const isActive = ul.classList.contains('active');
       items.forEach((other) => {
@@ -26,4 +29,7 @@ export default async function decorate(block) {
     });
   });
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 204a4cf0f2a15091d6e3001a2b6b4f3e33e419f7
