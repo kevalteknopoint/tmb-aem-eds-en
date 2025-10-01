@@ -44,6 +44,10 @@
             {
               "name": "Expandable Tiles",
               "value": "expandable-tiles"
+            },
+            {
+              "name": "Banking Good",
+              "value": "banking-good"
             }
           ]
         }
