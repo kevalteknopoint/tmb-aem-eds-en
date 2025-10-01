@@ -48,6 +48,17 @@
           "name": "content",
           "value": "",
           "label": "Body"
+        },
+         {
+            "component": "multiselect",
+            "name": "classes",
+            "label": "Style",
+            "options": [
+                {
+                    "name": "accordion-open",
+                    "value": "accordion-open"
+                }
+            ]
         }
       ]
     }
