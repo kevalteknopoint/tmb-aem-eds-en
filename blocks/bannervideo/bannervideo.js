@@ -15,7 +15,7 @@ function createSwiper(block) {
       const desktopDiv = row.children[0];
       const mobDiv = row.children[1];
       row.classList.add("swiper-slide");
-      row.classList.add(`swiperinnerdiv${i + 1}`);
+      row.classList.add(`swiperinnerdiv`); //${i + 1}
       swiperWrapper.append(row);
       desktopDiv.classList.add("desktop-banner");
       mobDiv.classList.add("mob-pbanner");
@@ -25,11 +25,11 @@ function createSwiper(block) {
       row.append(towrapdeskandmob);
       // appendclasses.CLASS_PREFIXES = ['mainswrapper'];
       // appendclasses.addIndexed(row)
-      Array.from(row.children).forEach((child, i) => {
-        if (child.tagName === "DIV" && child.innerHTML.trim() === "") {
-          child.remove();
-        }
-      });
+      // Array.from(row.children).forEach((child, i) => {
+      //   if (child.tagName === "DIV" && child.innerHTML.trim() === "") {
+      //     child.remove();
+      //   }
+      // });
     });
     block.append(swiperWrapper);
     const swiperpagination = document.createElement("div");
@@ -98,7 +98,7 @@ export default function decorate(block) {
         clickable: true,
       },
       // autoplay: {
-      //   delay: 4000,
+      //   delay: 40000000,
       //   disableOnInteraction: false,
       // },
     });
