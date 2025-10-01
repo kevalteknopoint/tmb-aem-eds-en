@@ -3,14 +3,14 @@ footer {
   font-size: var(--body-font-size-xs);
 }
 
+footer .footer p {
+  margin: 0;
+}
+
 footer .footer > div {
   margin: auto;
   max-width: 1200px;
   padding: 40px 24px 24px;
-}
-
-footer .footer p {
-  margin: 0;
 }
 
 @media (width >= 900px) {
