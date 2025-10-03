@@ -197,6 +197,29 @@
     ]
   },
   {
+    "id": "banking-good",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "bg-block",
+            "value": "bg-block"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "bannervideo",
     "fields": [
       {
@@ -267,10 +290,6 @@
           {
             "name": "Expandable Tiles",
             "value": "expandable-tiles"
-          },
-          {
-            "name": "Banking Good",
-            "value": "banking-good"
           }
         ]
       }
