@@ -200,6 +200,20 @@
     "id": "banking-good",
     "fields": [
       {
+        "component": "reference",
+        "valueType": "string",
+        "name": "bg-image",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bg-imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
         "component": "richtext",
         "name": "text",
         "value": "",
@@ -212,8 +226,8 @@
         "label": "Style",
         "options": [
           {
-            "name": "bg-block",
-            "value": "bg-block"
+            "name": "banking-good",
+            "value": "banking-good"
           }
         ]
       }
