@@ -30,8 +30,8 @@
                 {
                     "component": "text",
                     "valueType": "string",
-                    "name": "bg-imageAlt",
-                    "label": "Alt",
+                    "name": "heading",
+                    "label": "Heading",
                     "value": ""
                 },
                 {

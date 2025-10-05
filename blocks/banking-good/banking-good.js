@@ -1,28 +1,50 @@
-export default function decorate(block) {
-  const bgImage = block.dataset.bgImage;
-  const heading = block.dataset.heading || "";
-  const listItems = block.dataset.listItems || "";
+import { moveInstrumentation } from "../../scripts/scripts.js";
 
-  // Create container div
-  const container = document.createElement("div");
-  container.className = "banking-good";
-  if (bgImage) {
-    container.style.backgroundImage = `url('${bgImage}')`;
-    container.style.backgroundSize = "cover";
-    container.style.backgroundPosition = "center";
+export default async function decorate(block) {
+  // Step 1: Create wrapper div
+  const wrapper = document.createElement("div");
+  wrapper.classList.add("banking-good");
+
+  // Step 2: Get background image from first row if exists
+  const firstRow = block.children[0];
+  if (firstRow && firstRow.querySelector("img")) {
+    const img = firstRow.querySelector("img");
+    wrapper.style.backgroundImage = `url('${img.src}')`;
+    // wrapper.style.backgroundSize = "cover";
+    // wrapper.style.backgroundPosition = "center";
+    // wrapper.style.backgroundRepeat = "no-repeat";
+
+    // Remove the image row from DOM since it's used as bg
+    firstRow.remove();
   }
 
-  // Add heading
-  const h3 = document.createElement("h3");
-  h3.textContent = heading;
-  container.appendChild(h3);
-
-  // Add list
+  // Step 3: Create UL for content
   const ul = document.createElement("ul");
-  ul.innerHTML = listItems; // richtext will allow <li> and <a>
-  container.appendChild(ul);
 
-  // Replace block content
+  [...block.children].forEach((row) => {
+    const li = document.createElement("li");
+    moveInstrumentation(row, li);
+
+    // Move all row children inside li
+    while (row.firstElementChild) li.append(row.firstElementChild);
+
+    // Assign a class
+    li.className = "banking-good-item";
+
+    ul.append(li);
+  });
+
+  // Step 4: If first element is heading, move it above UL
+  let heading = null;
+  const firstLi = ul.querySelector("li");
+  if (firstLi && firstLi.querySelector("h3")) {
+    heading = firstLi.querySelector("h3");
+    firstLi.removeChild(heading);
+  }
+
+  // Step 5: Clean up block and append structure
   block.textContent = "";
-  block.appendChild(container);
+  if (heading) wrapper.appendChild(heading);
+  wrapper.appendChild(ul);
+  block.append(wrapper);
 }
