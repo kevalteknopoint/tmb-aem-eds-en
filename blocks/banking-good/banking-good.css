@@ -3,6 +3,8 @@
     margin: 40px auto;
     padding: 0 40px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     column-gap: 30px;
     row-gap: 34px;
@@ -19,7 +21,7 @@
 }
 .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(2),
 .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(3){
-    padding: 0px 24px;
+    padding: 0px 32px;
 }
 .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(2) div p{
     font-size: 30px;
@@ -59,7 +61,7 @@
     line-height: 24px;
     letter-spacing: 0.4px;
     filter: drop-shadow(0px 0px 0.5px rgb(52, 51, 51));
-    padding: 15px 24px;
+    padding: 15px 32px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
