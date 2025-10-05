@@ -2,7 +2,6 @@
     max-width: 1452px;
     margin: 40px auto;
     padding: 0 40px;
-    border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
     column-gap: 30px;
