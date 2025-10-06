@@ -236,6 +236,36 @@
           }
         },
         {
+          "title": "tmb-footer",
+          "id": "tmb-footer",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "tmb-footer",
+                  "model": "tmb-footer"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Accordion Item",
+          "id": "footer-accordion-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Accordion Item",
+                  "model": "footer-accordion-item"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Tmb Teaser",
           "id": "tmb-teaser",
           "plugins": {

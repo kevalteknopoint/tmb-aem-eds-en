@@ -65,6 +65,10 @@
             {
               "name": "tmb-acc-sec",
               "value": "tmb-acc-sec"
+            },
+            {
+              "name": "tmb-footer",
+              "value": "tmb-footer"
             }
           ]
         }
@@ -86,7 +90,8 @@
         "quick-links",
         "tmb-teaser",
         "bannervideo",
-        "accordion"
+        "accordion",
+        "tmb-footer"
       ]
     }
   ]
