@@ -1,5 +1,4 @@
 @import './swiper-bundle.min.css';
-@import './swiper-bundle.min.css';
 /* ==============================
    Section Two Styles
 ============================== */
@@ -40,7 +39,7 @@
   padding: 0;
 }
 .secfirst .bannervideo-wrapper .bannervideo {
-  border-radius: 0 0 50px 50px;
+  border-radius: 0 0 40px 40px;
 }
 .secfirst .bannervideo-wrapper .bannervideo .swiper-slide {
   position: relative;
@@ -80,7 +79,8 @@
 .desktop-banner img {
   width: 100%;
   height: revert-layer;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .mob-pbanner {
@@ -364,4 +364,4 @@
     color: #fff;
     text-align: right;
   }
-}
+}/*# sourceMappingURL=bannervideo.css.map */
