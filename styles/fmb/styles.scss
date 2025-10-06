@@ -3,64 +3,64 @@
 :root {
   /* ---------- BORDER VARIABLES ---------- */
 
-  --border-primary: #0a0f0d; // colour/neutral/charcoal
-  --border-brand: #279b9b; // colour/teal/corporate-teal
-  --border-error: #e34850; // colour/red/red
+  --border-primary: #222; /* from "border-primary" */
+  --border-brand: #ff6c36;   /* from "border-brand" */
+  --border-error: #fff;   /* from "border-error" */
 
   /* ---------- BORDER VARIABLES ---------- */
 
 
   /* ---------- TEXT VARIABLES ---------- */
 
-  --text-primary: #000; // colour/neutral/black
-  --text-secondary: #4b4b4b; // colour/neutral/dark-grey
-  --text-inverse: #fff; // colour/neutral/white
-  --text-light: #fff7d6; // colour/yellow/cream
-  --text-brand: #279b9b; // colour/teal/teal
-  --text-brand-secondary: #1a6e6e; // colour/teal/dark-corporate-teal
+  --text-primary: #222; /* from "text-primary" */
+  --text-secondary: #fafafa; /* from "text-secondary" */
+  --text-inverse: #fafafa; /* from "text-inverse" */
+  --text-light: #fafafa; /* from "text-light" */
+  --text-brand: #222; /* from "text-brand" */
+  --text-brand-secondary: #fff; /* from "text-brand secondary" */
 
   /* -------------------- */
-  --text-primary-cta: #fff7d6; // colour/yellow/cream
-  --text-secondary-cta: #279b9b; // colour/teal/teal
-  --text-accent-cta: #279b9b; // colour/teal/teal
-  --text-disabled: #bdbdbd; // colour/neutral/grey
-  --text-error: #e34850; // colour/red/red
+  --text-primary-cta: #fafafa; /* from "text-primarycta" */
+  --text-secondary-cta: #fafafa; /* from "text-secondarycta" */
+  --text-accent-cta: #fafafa; /* from "text-accentcta" */
+  --text-disabled: #d9dadb; /* from "text-disabled" */
+  --text-error: #fff; /* from "text-error" */
 
   /* -------------------- */
-  --text-ghost-default: #279b9b; // colour/teal/teal
-  --text-ghost-hover: #000; // colour/neutral/black
-  --text-ghost-focused: #000; // colour/neutral/black
-  --text-ghost-disabled: #bdbdbd; // colour/neutral/grey
-  --text-ghost-active: #1a6e6e; // colour/teal/dark-corporate-teal
+  --text-ghost-default: #fff; /* from "text -ghost default" */
+  --text-ghost-hover: #fff; /* from "text -ghost hover" */
+  --text-ghost-focused: #fff; /* from "text -ghost focused" */
+  --text-ghost-disabled: #fff; /* from "text -ghost disabled" */
+  --text-ghost-active: #fff; /* from "text -ghost active" */
 
   /* ---------- TEXT VARIABLES ---------- */
 
 
   /* ---------- SURFACE VARIABLES ---------- */
   
-  --surface-primary: #e6e6e6; // colour/neutral/cool-grey
-  --surface-secondary: #f2f2f2; // colour/neutral/grey
-  --surface-overlay: #4b4b4b80; // colour/neutral/dark-grey-50
-  --surface-brand: #279b9b; // colour/teal/teal
-  --surface-login-cta: #fff7d6; // colour/yellow/cream
+  --surface-primary: #f4f4f5; /* from "surface-primary" */
+  --surface-secondary: #f4f4f5; /* from "surface-secondary" */
+  --surface-overlay: #565659; /* from "surface-overlay" */
+  --surface-brand: #003764; /* from "surface-brand" */
+  --surface-login-cta: #ffa400; /* from "surface-login cta" */
 
   /* -------------------- */
-  --surface-primary-cta: #279b9b; // colour/teal/teal
-  --surface-prim-hover-cta: #1a6e6e; // colour/teal/dark-teal
-  --surface-prim-active-cta: #0a0f0d; // colour/neutral/charcoal
+  --surface-primary-cta: #003764; /* from "surface-primary cta" */
+  --surface-prim-hover-cta: #ffa400; /* from "surface-primhover cta" */
+  --surface-prim-active-cta: #fff; /* from "surface-primactive cta" */
 
   /* -------------------- */
-  --surface-secondary-cta: #d9e8ed; // colour/blue/grey-blue
-  --surface-sec-hover-cta: #1a6e6e; // colour/teal/dark-corporate-teal
+  --surface-secondary-cta: #003764; /* from "surface-secondary cta" */
+  --surface-sec-hover-cta: #ffa400; /* from "surface-sechover cta" */
 
   /* -------------------- */
-  --surface-accent-cta: #fff7d6; // colour/yellow/cream
-  --surface-accent-hover-cta: #edf7bf; // colour/yellow/pale-lime
-  --surface-accent-active-cta: #fff2a6; // colour/yellow/pastel-yellow
+  --surface-accent-cta: #003764; /* from "surface-accent cta" */
+  --surface-accent-hover-cta: #ffa400; /* from "surface-accenthover cta" */
+  --surface-accent-active-cta: #ffa400; /* from "surface-accentactive cta" */
 
   /* -------------------- */
-  --surface-disabled-cta: #ccc; // colour/neutral/pale-grey
-  --surface-highlight: #b8e8e6; // colour/teal/teal-10
+  --surface-disabled-cta: #efefef; /* from "surface-disabledcta" */
+  --surface-highlight: #efefef; /* from "surface-highlight" */
 
   /* ---------- SURFACE VARIABLES ---------- */
 

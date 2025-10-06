@@ -1,20 +1,17 @@
 @use 'variables' as *;
 
-/* 1. Box sizing rules */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* 2. Remove default margin & padding */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* 3. Typography defaults */
 html {
-  -webkit-text-size-adjust: 100%; // Prevent font scaling in landscape
-  font-size: 100%; // Respect user settings
+  -webkit-text-size-adjust: 100%;
+  font-size: 100%;
 }
 
 body {
@@ -27,25 +24,21 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* 4. Remove list styles */
 ul, ol {
   list-style: none;
 }
 
-/* 5. Reset anchor styles */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* 6. Media elements */
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-/* 7. Form elements */
 input, button, textarea, select {
   font: inherit;
   color: inherit;
@@ -54,12 +47,10 @@ input, button, textarea, select {
   outline: none;
 }
 
-/* Ensure textareas resize vertically */
 textarea {
   resize: vertical;
 }
 
-/* Reset buttons */
 button {
   cursor: pointer;
   background: transparent;
@@ -67,30 +58,25 @@ button {
   padding: 0;
 }
 
-/* 8. Table resets */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* 9. Headings inherit font styles */
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit;
 }
 
-/* 10. Accessibility: focus styles */
 :focus-visible {
   outline: 2px solid #000;
   outline-offset: 2px;
 }
 
-/* Remove focus outline when not keyboard navigating */
 :focus:not(:focus-visible) {
   outline: none;
 }
 
-/* 11. Reduced motion for users with preferences */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

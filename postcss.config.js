@@ -1,6 +1,6 @@
 module.exports = {
   plugins: {
-    autoprefixer: {},
+    'autoprefixer': {},
     'postcss-sorting': {
       order: [
         'custom-properties',
@@ -13,9 +13,11 @@ module.exports = {
       'unspecified-properties-position': 'bottom',
       'sort-order': 'alphabetical',
     },
-
     'postcss-sort-media-queries': {
       sort: 'mobile-first'
+    },
+    'postcss-discard-comments': {
+      remove: (comment) => (!comment.startsWith('!') && !comment.includes('stylelint-disable'))
     }
   }
 };

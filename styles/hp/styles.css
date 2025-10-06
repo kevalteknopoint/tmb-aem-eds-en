@@ -1,172 +1,125 @@
-/* ---------- BORDER VARIABLES ---------- */
-/* ---------- BORDER VARIABLES ---------- */
-/* ---------- TEXT VARIABLES ---------- */
-/* -------------------- */
-/* -------------------- */
-/* ---------- TEXT VARIABLES ---------- */
-/* ---------- SURFACE VARIABLES ---------- */
-/* -------------------- */
-/* -------------------- */
-/* -------------------- */
-/* -------------------- */
-/* ---------- SURFACE VARIABLES ---------- */
-/* ---------- VIEWPORT VARIABLES ---------- */
-/* ---------- VIEWPORT VARIABLES ---------- */
-/* ---------- FONTS VARIABLES ---------- */
-/* ---------- FONTS VARIABLES ---------- */
-/* 1. Box sizing rules */
-*, *::before, *::after {
-  box-sizing: border-box;
+*, *::before, *::after{
+  box-sizing:border-box;
 }
 
-/* 2. Remove default margin & padding */
-* {
-  margin: 0;
-  padding: 0;
+*{
+  margin:0;
+  padding:0;
 }
 
-/* 3. Typography defaults */
-html {
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
+html{
+  font-size:100%;
+  -webkit-text-size-adjust:100%;
 }
 
-body {
-  background-color: #fff;
-  color: #000;
-  font-family: var(--primary-font);
-  -webkit-font-smoothing: antialiased;
-  line-height: 1.5;
-  min-height: 100vh;
-  text-rendering: optimizelegibility;
+body{
+  background-color:#fff;
+  color:#000;
+  font-family:var(--primary-font);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.5;
+  min-height:100vh;
+  text-rendering:optimizelegibility;
 }
 
-/* 4. Remove list styles */
-ul, ol {
-  list-style: none;
+ul, ol{
+  list-style:none;
 }
 
-/* 5. Reset anchor styles */
-a {
-  color: inherit;
-  text-decoration: none;
+a{
+  color:inherit;
+  text-decoration:none;
 }
 
-/* 6. Media elements */
-img, picture, video, canvas, svg {
-  display: block;
-  height: auto;
-  max-width: 100%;
+img, picture, video, canvas, svg{
+  display:block;
+  height:auto;
+  max-width:100%;
 }
 
-/* 7. Form elements */
-input, button, textarea, select {
-  background: none;
-  border: none;
-  color: inherit;
-  font: inherit;
-  outline: none;
+input, button, textarea, select{
+  background:none;
+  border:none;
+  color:inherit;
+  font:inherit;
+  outline:none;
 }
 
-/* Ensure textareas resize vertically */
-textarea {
-  resize: vertical;
+textarea{
+  resize:vertical;
 }
 
-/* Reset buttons */
-button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
+button{
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  padding:0;
 }
 
-/* 8. Table resets */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+table{
+  border-collapse:collapse;
+  border-spacing:0;
 }
 
-/* 9. Headings inherit font styles */
-h1, h2, h3, h4, h5, h6 {
-  font-size: inherit;
-  font-weight: inherit;
+h1, h2, h3, h4, h5, h6{
+  font-size:inherit;
+  font-weight:inherit;
 }
 
-/* 10. Accessibility: focus styles */
-:focus-visible {
-  outline: 2px solid #000;
-  outline-offset: 2px;
+:focus-visible{
+  outline:2px solid #000;
+  outline-offset:2px;
 }
 
-/* Remove focus outline when not keyboard navigating */
-:focus:not(:focus-visible) {
-  outline: none;
+:focus:not(:focus-visible){
+  outline:none;
 }
-
-/* 11. Reduced motion for users with preferences */
-:root {
-  /* ---------- BORDER VARIABLES ---------- */
-  --border-primary: #0a0f0d;
-  --border-brand: #279b9b;
-  --border-error: #e34850;
-  /* ---------- BORDER VARIABLES ---------- */
-  /* ---------- TEXT VARIABLES ---------- */
-  --text-primary: #000;
-  --text-secondary: #4b4b4b;
-  --text-inverse: #fff;
-  --text-light: #fff7d6;
-  --text-brand: #279b9b;
-  --text-brand-secondary: #1a6e6e;
-  /* -------------------- */
-  --text-primary-cta: #fff7d6;
-  --text-secondary-cta: #279b9b;
-  --text-accent-cta: #279b9b;
-  --text-disabled: #bdbdbd;
-  --text-error: #e34850;
-  /* -------------------- */
-  --text-ghost-default: #279b9b;
-  --text-ghost-hover: #000;
-  --text-ghost-focused: #000;
-  --text-ghost-disabled: #bdbdbd;
-  --text-ghost-active: #1a6e6e;
-  /* ---------- TEXT VARIABLES ---------- */
-  /* ---------- SURFACE VARIABLES ---------- */
-  --surface-primary: #e6e6e6;
-  --surface-secondary: #f2f2f2;
-  --surface-overlay: #4b4b4b80;
-  --surface-brand: #279b9b;
-  --surface-login-cta: #fff7d6;
-  /* -------------------- */
-  --surface-primary-cta: #279b9b;
-  --surface-prim-hover-cta: #1a6e6e;
-  --surface-prim-active-cta: #0a0f0d;
-  /* -------------------- */
-  --surface-secondary-cta: #d9e8ed;
-  --surface-sec-hover-cta: #1a6e6e;
-  /* -------------------- */
-  --surface-accent-cta: #fff7d6;
-  --surface-accent-hover-cta: #edf7bf;
-  --surface-accent-active-cta: #fff2a6;
-  /* -------------------- */
-  --surface-disabled-cta: #ccc;
-  --surface-highlight: #b8e8e6;
-  /* ---------- SURFACE VARIABLES ---------- */
-  /* ---------- VIEWPORT VARIABLES ---------- */
-  --desktop: 1025px;
-  --tablet: 1024px;
-  --mobile: 768px;
-  /* ---------- VIEWPORT VARIABLES ---------- */
-  /* ---------- FONTS VARIABLES ---------- */
-  --primary-font: "Inter", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
-  --secondary-font: "American Grotesk", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
-  /* ---------- FONTS VARIABLES ---------- */
+:root{
+  --border-primary:#222;
+  --border-brand:#003764;
+  --border-error:#fff;
+  --text-primary:#222;
+  --text-secondary:#f7c0b3;
+  --text-inverse:#f7c0b3;
+  --text-light:#f7c0b3;
+  --text-brand:#003764;
+  --text-brand-secondary:#fff;
+  --text-primary-cta:#fafafa;
+  --text-secondary-cta:#fafafa;
+  --text-accent-cta:#fafafa;
+  --text-disabled:#d9dadb;
+  --text-error:#fff;
+  --text-ghost-default:#fff;
+  --text-ghost-hover:#fff;
+  --text-ghost-focused:#fff;
+  --text-ghost-disabled:#fff;
+  --text-ghost-active:#fff;
+  --surface-primary:#f4f4f5;
+  --surface-secondary:#d9dadb;
+  --surface-overlay:#565659;
+  --surface-brand:#172983;
+  --surface-login-cta:#f7c0b3;
+  --surface-primary-cta:#a2daf3;
+  --surface-prim-hover-cta:#f7c0b3;
+  --surface-prim-active-cta:#172983;
+  --surface-secondary-cta:#a2daf3;
+  --surface-sec-hover-cta:#f7c0b3;
+  --surface-accent-cta:#172983;
+  --surface-accent-hover-cta:#f7c0b3;
+  --surface-accent-active-cta:#f7c0b3;
+  --surface-disabled-cta:#efefef;
+  --surface-highlight:#efefef;
+  --desktop:1025px;
+  --tablet:1024px;
+  --mobile:768px;
+  --primary-font:"Inter", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
+  --secondary-font:"American Grotesk", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
 }
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation-duration:0.01ms !important;
+    animation-iteration-count:1 !important;
+    scroll-behavior:auto !important;
+    transition-duration:0.01ms !important;
   }
 }
