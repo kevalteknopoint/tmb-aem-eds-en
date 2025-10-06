@@ -214,6 +214,13 @@
         "value": ""
       },
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "mobile-heading",
+        "label": "Heading for mobile",
+        "value": ""
+      },
+      {
         "component": "richtext",
         "name": "text",
         "value": "",
