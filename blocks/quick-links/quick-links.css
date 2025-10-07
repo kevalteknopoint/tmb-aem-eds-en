@@ -74,6 +74,7 @@
   justify-content: space-between;
   position: relative;
   padding-left: 80px;
+  margin-top: 0;
 }
 
 .quick-links .icon.icon-Flyout-menu-icon img {
@@ -107,6 +108,7 @@
     padding: 0 20px;
     row-gap: unset;
     flex-direction: column;
+    margin: 40px auto !important;
   }
 
   .quick-links-wrapper {
