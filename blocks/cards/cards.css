@@ -49,11 +49,12 @@
   -o-object-position: center;
   object-position: center;
   transition: all 0.7s ease-in-out;
+  transition-delay: 1s;
 }
 
-/* .expandable-tile.active .tile-image img {
-  transform: scale(1.2);
-} */
+.expandable-tile.active .tile-image img {
+  transform: scale(1.1);
+}
 
 .expandable-tile .tile-content .content-title {
   color: #00525b;
