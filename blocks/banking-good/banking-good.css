@@ -1,6 +1,6 @@
 .section.banking-good-container{
     max-width: 1452px;
-    margin: 40px auto;
+    margin: 160px auto 40px;
     padding: 0 40px;
     display: flex;
     justify-content: space-between;
@@ -131,6 +131,7 @@
         padding: 0px 20px;
         column-gap: normal;
         row-gap: 23px;
+        margin: 40px auto;
     }
     .section >div.banking-good-wrapper{
         max-width: 170px;
