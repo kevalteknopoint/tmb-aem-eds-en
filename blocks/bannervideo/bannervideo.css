@@ -54,6 +54,8 @@
 }
 .secfirst .bannervideo-wrapper .bannervideo .swiper-pagination .swiper-pagination-bullet-active {
   background: #00525B;
+  width: 10px;
+  height: 10px;
 }
 .secfirst .swiper-wrapper {
   height: 600px;
@@ -78,7 +80,7 @@
 
 .desktop-banner img {
   width: 100%;
-  height: revert-layer;
+  height: 600px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -151,31 +153,51 @@
   display: none;
 }
 
-.swiperinnerdiv > div:nth-child(1) {
+.inner-container {
   position: absolute;
-  top: 37px;
-  left: 56px;
+  left: 0;
+  bottom: 0;
   display: flex;
-  width: 632px;
-  padding: 32px;
+  width: 100%;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.inner-container > div:nth-child(1) {
+  display: flex;
+  width: 100%;
+  max-width: 1328px;
+  height: 474px;
+  margin: 0 auto;
   flex-direction: column;
   align-items: flex-start;
-  gap: 12px;
+  justify-content: center;
+  gap: 24px;
   background: transparent;
+  flex-shrink: 0;
+  padding: 32px;
 }
-.swiperinnerdiv > div:nth-child(1) > h1 {
-  color: #00525B;
-  font-family: Inter, sans-serif;
-  font-size: 60px;
+.inner-container > div:nth-child(1) > h1,
+.inner-container > div:nth-child(1) h2,
+.inner-container > div:nth-child(1) h3,
+.inner-container > div:nth-child(1) h4,
+.inner-container > div:nth-child(1) h5,
+.inner-container > div:nth-child(1) h6 {
+  color: var(--text-text-brand, #00525B);
+  /* Desktop & tablet/Large heading */
+  width: 408px;
+  font-family: var(--desktop-tablet-fonts-family-larger-header, "American Grotesk Condensed");
+  font-size: var(--desktop-tablet-fonts-size-larger-header, 60px);
   font-style: normal;
   font-weight: 900;
-  line-height: 52px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  line-height: var(--desktop-tablet-fonts-line-height-larger-header, 52px);
+  /* 86.667% */
+  letter-spacing: var(--large-heading-old-letter-spacing, 2px);
 }
-.swiperinnerdiv > div:nth-child(1) > p {
+.inner-container > div:nth-child(1) > p {
   color: var(--Dark-teal, #00525B);
   /* Desktop & tablet/Body */
+  width: 408px;
   font-family: Inter, sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -183,7 +205,10 @@
   line-height: 24px;
   /* 150% */
 }
-.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container > a {
+.inner-container > div:nth-child(1):nth-child(1) > p.button-container {
+  width: 408px;
+}
+.inner-container > div:nth-child(1):nth-child(1) > p.button-container > a {
   color: #F5F8DE;
   font-family: Inter, sans-serif;
   font-size: 16px;
@@ -324,36 +349,54 @@
   .desktop-banner {
     display: none;
   }
-  .swiperinnerdiv > div:nth-child(1) {
-    display: block;
-    margin: 0;
+  .inner-container > div:nth-child(1) {
     left: 0;
     width: 100%;
     bottom: 10px;
     top: auto;
-    padding: 0px;
-    border-radius: 0 0 20px 20px;
-    background: linear-gradient(252.23deg, rgba(245, 248, 222, 0.5) -7.15%, #F5F8DE 98.28%);
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1 0 0;
   }
-  .swiperinnerdiv > div:nth-child(1) h1 {
-    font-size: 32px;
-    width: 85%;
-    line-height: 32px;
-    letter-spacing: 1.13px;
-    padding: 0 20px;
+  .inner-container > div:nth-child(1) h1,
+  .inner-container > div:nth-child(1) h2,
+  .inner-container > div:nth-child(1) h3,
+  .inner-container > div:nth-child(1) h4,
+  .inner-container > div:nth-child(1) h5 {
+    width: inherit;
+    margin: 0;
+    padding: 0;
   }
-  .swiperinnerdiv > div:nth-child(1):nth-child(1) p.button-container {
-    padding: 0 20px;
-    margin: 0px;
+  .inner-container > div:nth-child(1) p {
+    color: var(--Colour-Teal-Teal, #00525B);
+    font-family: var(--mobile-fonts-family-Small-bold-body, Inter);
+    font-size: var(--mobile-fonts-size-small-bold-body, 14px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: var(--mobile-fonts-line-height-small-bold-body, 24px);
+    /* 171.429% */
   }
-  .swiperinnerdiv > div:nth-child(1):nth-child(1) p.button-container a {
-    font-size: 9px;
+  .inner-container > div:nth-child(1):nth-child(1) p.button-container a {
+    display: flex;
+    font-size: 16px;
     letter-spacing: normal;
     line-height: 13.5px;
+    font-style: normal;
+    font-weight: 700;
   }
   .secfirst .bannervideo-wrapper .bannervideo .swiper-pagination .swiper-pagination-bullet {
-    width: 20px;
-    height: 7px;
+    width: 8px;
+    height: 8px;
+    aspect-ratio: 1/1;
+  }
+  .secfirst .bannervideo-wrapper .bannervideo .swiper-pagination .swiper-pagination-bullet-active {
+    background: #00525B;
+    width: 10px;
+    height: 10px;
   }
   .bannervideo-wrapper .bannervideo .swiper-pagination-bullets {
     bottom: 80px;

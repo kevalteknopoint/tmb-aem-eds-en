@@ -11,18 +11,21 @@ function createSwiper(block) {
     rows.forEach((row, i) => {
       const towrapdeskandmob = document.createElement("div");
       towrapdeskandmob.classList.add("mob-desk-wrapper");
-
+      const innercontainer = document.createElement("div");
+      innercontainer.classList.add("inner-container");
       const desktopDiv = row.children[0];
       const mobDiv = row.children[1];
+      const middelcontainer =row.children[2];
       row.classList.add("swiper-slide");
       row.classList.add(`swiperinnerdiv`); //${i + 1}
       swiperWrapper.append(row);
       desktopDiv.classList.add("desktop-banner");
       mobDiv.classList.add("mob-pbanner");
-
+      innercontainer.appendChild(middelcontainer)   //////inner container h1 and button 
       towrapdeskandmob.appendChild(desktopDiv);
       towrapdeskandmob.appendChild(mobDiv);
       row.append(towrapdeskandmob);
+      row.append(innercontainer)
       // appendclasses.CLASS_PREFIXES = ['mainswrapper'];
       // appendclasses.addIndexed(row)
       // Array.from(row.children).forEach((child, i) => {
@@ -76,7 +79,6 @@ function mobileviewswiper(block) {
           child.classList.add("mob-noswiper-child"+(i+1));
         })
     })
-  console.log(block);
   const rows = Array.from(block.children);
   rows.forEach((row) => {
     row.classList.add("mob-swiper");
