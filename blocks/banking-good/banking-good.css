@@ -77,7 +77,6 @@
     line-height: 40px;
     letter-spacing: 0.16px;
     text-transform: uppercase;
-    filter: drop-shadow(0px 0px 1px #F5F8DE);
 }
  .banking-good-wrapper:not(.card-1) .banking-good-item:nth-child(2) > div > p {
   display: none;
