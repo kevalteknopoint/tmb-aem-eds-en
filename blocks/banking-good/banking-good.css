@@ -29,7 +29,7 @@
     margin-top: 95px;
     text-transform: uppercase;
 }
-.banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(3) div p{
+.banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(4) div p{
     color: var(--Black, #000);
     font-size: 19px;
     font-weight: 100;
@@ -67,6 +67,7 @@
     justify-content: flex-end;
     height: 100%;
 }
+
 .banking-good-item:nth-child(1) > div >p{
     color: #F5F8DE;
     font-family: Inter;
@@ -77,6 +78,9 @@
     letter-spacing: 0.16px;
     text-transform: uppercase;
     filter: drop-shadow(0px 0px 1px #F5F8DE);
+}
+ .banking-good-wrapper:not(.card-1) .banking-good-item:nth-child(2) > div > p {
+  display: none;
 }
 .banking-for-good ul li a {
     text-decoration: none;
@@ -113,7 +117,9 @@
   opacity: 0;
   transform: translateY(-30px);
 }
-
+.desktop-heading{
+    display: block;
+}
 @media (max-width:767px) {
     .section.banking-good-container {
         padding: 0px 20px;
@@ -130,11 +136,22 @@
         width: 100%;
     }
     .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(2), 
-    .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(3) {
+    .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(4) {
         padding: 0;
     }
     .banking-good-item {
         padding: 0px 18px;
+    }
+    .banking-good-item:nth-child(1){
+        display: none;
+    }
+    .banking-good-item:nth-child(2){
+        display: block;
+    }
+     .banking-good-wrapper:not(.card-1) .banking-good-item:nth-child(2) > div > p {
+        display: block;
+        padding-bottom: 25px;
+        text-transform: uppercase;
     }
     .card-1 .banking-good-item {
         padding: 15px 0px;
@@ -163,15 +180,22 @@
     .banking-good{
         width: 170px;
     }
+    .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(4) div p {
+        color: var(--Black, #000);
+        font-size: 16px;
+        font-weight: 100;
+        line-height: 18px;
+        font-family: 'Inter';
+        margin-top: 10px;
+    }
     .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(2) div p {
         font-size: 20px;
-        color: #00525B;
-        margin-top: 15px;
+        color: var(--Dark-Teal, #00525B);
+        margin-top: 35px;
         font-weight: 900;
         line-height: 24px;
         letter-spacing: 0.4px;
         text-transform: uppercase;
-        color: var(--Dark-Teal, #00525B);
     }
     .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(3) div p {
         color: var(--Black, #000);
@@ -181,11 +205,74 @@
         line-height: 18px;
     }
     .banking-good-item:nth-child(1) > div >p{
-        font-family: 'Inter';
         font-family: 'American Grotesk Condensed';
         font-size: 20px;
         font-weight: 900;
         line-height: 24px;
         letter-spacing: 0.4px;
+    }
+    .banking-for-good ul li ul {        
+        bottom: 0;               
+        left: 0;
+        width: 100%;
+        background: #00525B;
+        color: #F5F8DE;
+        padding: 20px 24px;
+        box-sizing: border-box;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        z-index: 9999;          
+        transition: transform 0.5s ease;
+    }
+    .banking-for-good:hover ul li ul,
+    .banking-for-good.active ul li ul {
+        transform: translateY(0);
+    }
+    .banking-for-good ul li ul li:last-child {
+        margin-top: 12px;
+        position: unset;
+    }
+    .banking-good-wrapper:not(.card-1) .banking-good-item:last-child {
+        display: block;
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        padding: 0;
+        z-index: 2;
+        height: auto;
+    }
+    .banking-for-good:hover .banking-good-item:last-child >div > ul > li:first-child{
+        padding-top: 30px;
+        /* border-top: 5px solid #F5F8DE; */
+        border-top: 5px solid transparent;
+        border-image-source: linear-gradient(to right, #00525B 0%, #00525B 24%, #ffffff 25%, #ffffff 75%, #00525B 76%,  #00525B 98%,                                                     #00525B 100%);
+        border-image-slice: 1;
+    }
+}
+@media (min-width: 550px) and (max-width:670px) {
+    .section >div.banking-good-wrapper{
+        max-width: 250px;
+        width: 100%;
+    }
+    .banking-good-wrapper.card-1 .banking-for-good {
+        max-width: 250px;
+        width: 100%;
+    }
+    .banking-good{
+        width: 250px;
+    }
+}
+@media (min-width: 670px) and (max-width:767px) {
+    .section >div.banking-good-wrapper{
+        max-width: 270px;
+        width: 100%;
+    }
+    .banking-good-wrapper.card-1 .banking-for-good {
+        max-width: 270px;
+        width: 100%;
+    }
+    .banking-good{
+        width: 270px;
     }
 }
