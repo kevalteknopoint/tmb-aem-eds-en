@@ -1,7 +1,6 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 import Swiper from './swiper-bundle.min.js';
-import '../cards/banking-good.js';
 
 
 function htmlToElement(htmlString) {
