@@ -120,6 +120,13 @@
 .desktop-heading{
     display: block;
 }
+.bottom-li-1,
+.bottom-li-4,
+.bottom-li-7,
+.bottom-li-10,
+.bottom-li-13{
+        display: none;
+    }
 @media (max-width:767px) {
     .section.banking-good-container {
         padding: 0px 20px;
@@ -243,12 +250,48 @@
         height: auto;
     }
     .banking-for-good:hover .banking-good-item:last-child >div > ul > li:first-child{
-        padding-top: 30px;
-        /* border-top: 5px solid #F5F8DE; */
+        padding-top: 15px;
         border-top: 5px solid transparent;
         border-image-source: linear-gradient(to right, #00525B 0%, #00525B 24%, #ffffff 25%, #ffffff 75%, #00525B 76%,  #00525B 98%,                                                     #00525B 100%);
         border-image-slice: 1;
+        line-height: 25px;
     }
+
+    .bottom-li-1,
+    .bottom-li-4,
+    .bottom-li-7,
+    .bottom-li-10,
+    .bottom-li-13{
+        padding-bottom: 25px;
+        color: #F5F8DE;
+        text-transform: uppercase;
+        line-height: 14px;
+        word-spacing: 1px;
+        display: block;
+    }
+    .bottom-li-2,
+    .bottom-li-5,
+    .bottom-li-8,
+    .bottom-li-11,
+    .bottom-li-14{
+        padding-bottom: 7px;
+        color: #F5F8DE;
+        font-size: 18px;
+        font-weight: 100;
+        line-height: 25px;
+    }
+    .bottom-li-3,
+    .bottom-li-6,
+    .bottom-li-9,
+    .bottom-li-12,
+    .bottom-li-15{
+        padding-bottom: 7px;
+        color: #F5F8DE;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 25px;
+    }
+
 }
 @media (min-width: 550px) and (max-width:670px) {
     .section >div.banking-good-wrapper{

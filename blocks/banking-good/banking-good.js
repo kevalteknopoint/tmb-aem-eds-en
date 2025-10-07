@@ -43,4 +43,8 @@ export default async function decorate(block) {
 
   wrapper.appendChild(ul);
   block.append(wrapper);
+  const bottomUl = document.querySelectorAll('.banking-good-wrapper:not(.card-1) .banking-good-item:nth-child(3) >div >ul >li');
+  bottomUl.forEach((wrapper, index) => {
+    wrapper.classList.add(`bottom-li-${index + 1}`);
+  });
 }
