@@ -158,6 +158,8 @@
         display: block;
         padding-bottom: 25px;
         text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 900;
     }
     .card-1 .banking-good-item {
         padding: 15px 0px;
@@ -261,7 +263,7 @@
     .bottom-li-7,
     .bottom-li-10,
     .bottom-li-13{
-        padding-bottom: 25px;
+        padding-bottom: 15px;
         color: #F5F8DE;
         text-transform: uppercase;
         line-height: 14px;
@@ -276,8 +278,9 @@
         padding-bottom: 7px;
         color: #F5F8DE;
         font-size: 18px;
-        font-weight: 100;
+        font-weight: 300;
         line-height: 25px;
+        letter-spacing: 0;
     }
     .bottom-li-3,
     .bottom-li-6,
@@ -290,7 +293,11 @@
         font-weight: 700;
         line-height: 25px;
     }
-
+    .banking-for-good ul li a {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+    }
 }
 @media (min-width: 550px) and (max-width:670px) {
     .section >div.banking-good-wrapper{
