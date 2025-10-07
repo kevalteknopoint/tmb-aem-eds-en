@@ -125,7 +125,7 @@
 .bottom-li-7,
 .bottom-li-10,
 .bottom-li-13{
-        visibility: hidden;
+        display: none;
     }
 @media (max-width:767px) {
     .section.banking-good-container {
@@ -267,6 +267,7 @@
         text-transform: uppercase;
         line-height: 14px;
         word-spacing: 1px;
+        display: block;
     }
     .bottom-li-2,
     .bottom-li-5,
