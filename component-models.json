@@ -168,6 +168,10 @@
           {
             "name": "tmb-acc-sec",
             "value": "tmb-acc-sec"
+          },
+          {
+            "name": "banking-container",
+            "value": "banking-container"
           }
         ]
       }
@@ -205,6 +209,50 @@
         "name": "content",
         "value": "",
         "label": "Body"
+      }
+    ]
+  },
+  {
+    "id": "banking-good",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "bg-image",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Heading",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "mobile-heading",
+        "label": "Heading for mobile",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "banking-good",
+            "value": "banking-good"
+          }
+        ]
       }
     ]
   },
