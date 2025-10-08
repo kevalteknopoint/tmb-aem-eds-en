@@ -22,13 +22,14 @@
     width: 600px;
     height: 437px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .momentum-section {
         gap: 80px;
         margin: 40px auto !important;
     }
     .momentum-block > .tmb-teaser-content {
         max-width: 300px;
+        min-width: 150px;
         width: 100%;
         padding-left: 20px;
         height: 100%;
@@ -37,16 +38,25 @@
         padding-right: 20px;
     }
 }
-@media (min-width: 767px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
+    .momentum-block > .teaser-content {
+      width: 60%;
+    }
     .momentum-block > .tmb-teaser-content {
-        width: 300px !important;
-        /* padding-left: 20px; */
-        height: 100%;
+      width: 40%;
+      min-height: 100%;
+      height: auto;
+    }
+
+    .momentum-block > .tmb-teaser-content > div {
+      height: 100%;
+    }
+
+    .momentum-block > .tmb-teaser-content img {
+      object-fit: cover;
     }
 }
 .momentum-block img {
-    /* max-width: 603px; */
-    /* max-height: 437px; */
     border-radius: 20px;
     width: 100%;
     height: 100%;
@@ -90,8 +100,9 @@
     background-color: #00525b;
     border-radius: 20px;
     padding: 8px 24px;
-    /* width: 136px; */
-    /* height: 40px; */
+    margin: 0;
+    display: block;
+    width: fit-content;
 }
 
 @media screen and (max-width: 767px) {
@@ -142,11 +153,9 @@
         display: flex;
         justify-content: center;
         width: 77px;
-        /* height: 23px; */
     }
 
     .momentum-block img {
-        /* width: 150px; */
         height: 232px;
         object-fit: cover;
     }
@@ -167,11 +176,6 @@
     gap: 40px;
     padding: 0 !important;
 }
-@media screen and (max-width: 1024px) {
-    .momentum-section > div:nth-child(2) {
-        /* padding: unset !important; */
-    }
-}
 
 @media screen and (max-width: 767px) {
     .momentum-section > div:nth-child(2) {
@@ -184,7 +188,8 @@
 }
 
 .momentum-section > div:nth-child(2) > ul:nth-child(1) > li > p {
-    /* font-family: 'American Grotesk', 'Condensed'; */
+    font-family: 'American Grotesk';
+    font-weight: 900;
     font-weight: 900;
     font-style: Black;
     font-size: 144.52px;
@@ -216,7 +221,7 @@
     > li:nth-child(1)
     > ul
     > li:nth-child(1) {
-    /* font-family: American Grotesk Condensed; */
+    font-family: 'American Grotesk';
     font-weight: 900;
     font-style: Black;
     font-size: 73.03px;
@@ -237,7 +242,7 @@
     > li:nth-child(1)
     > ul
     > li:nth-child(2) {
-    /* font-family:sans-serif,American Grotesk Condensed; */
+    font-family: 'American Grotesk';
     font-weight: 900;
     font-size: 33.03px;
     line-height: 49.55px;
@@ -347,6 +352,11 @@
     border-radius: 20px;
     padding: 8px 24px;
     height: 40px;
+    display: block;
+    width: fit-content;
+    font-size: 16px;
+    line-height: 24px;
+    border: 0;
 }
 
 .momentum-teaser-wrapper {
@@ -373,6 +383,8 @@
     .momentum-section > div:nth-child(2) > ul:nth-child(1) > li > p {
         font-size: 80px;
         line-height: 50px;
+        font-family: 'American Grotesk';
+        font-weight: 900;
     }
     .momentum-section
         > div:nth-child(2)
@@ -382,6 +394,8 @@
         > li:nth-child(1) {
         font-size: 60px;
         line-height: 40px;
+        font-family: 'American Grotesk';
+        font-weight: 900;
     }
     .momentum-section
         > div:nth-child(2)
@@ -389,8 +403,8 @@
         > li
         > ul
         > li:nth-child(1) {
-        font-size: 28px;
-        line-height: 37px;
+        font-size: 24px;
+        line-height: 32px;
     }
     .momentum-section
         > div:nth-child(2)
@@ -408,10 +422,6 @@
     .momentum-teaser-wrapper {
         display: none;
     }
-    /* .momentum-block img {
-        width: 150px;
-        height: 235px;
-    } */
 }
 
 .momentum-listing-wrapper > li {
@@ -455,7 +465,7 @@
 }
 
 .momentum-listing-wrapper > li:nth-child(1) > ul > li:nth-child(2) {
-    /* font-family:sans-serif,American Grotesk Condensed; */
+    font-family: 'American Grotesk';
     font-weight: 900;
     font-size: 33.03px;
     line-height: 49.55px;
