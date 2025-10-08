@@ -1,5 +1,6 @@
 .section.banking-good-container{
-    max-width: 1452px;
+    /* max-width: 1452px; */
+    max-width: 1372px;
     margin: 160px auto 80px;
     padding: 0 40px;
     display: flex;
@@ -46,6 +47,7 @@
     align-items: flex-end;
     color: #fff;
     overflow: hidden;
+    
 }
 .banking-for-good ul{
     list-style-type: none;

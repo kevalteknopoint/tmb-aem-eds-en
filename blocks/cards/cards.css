@@ -723,6 +723,9 @@ main > .expandable-tiles-section > .cards-wrapper {
     }
 }
 @media (min-width: 766px) and (max-width: 1220px) {
+    .online-banking .cards-wrapper .cards .banking-cards-ul{
+        gap: 20px;
+    }
     .online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 {
         padding: 20px;
     }
