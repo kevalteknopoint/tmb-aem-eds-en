@@ -82,10 +82,10 @@
     top: 0;
 }
 
-.expandable-tile .tile-content .content-cta a {
-    color: #00525b;
-    font-size: 0;
-    line-height: 19px;
+.expandable-tile .tile-content .content-cta .cta-link {
+  color: #00525b;
+  font-size: 0;
+  line-height: 19px;
 }
 
 .expandable-tile .tile-content .content-cta .icon {
@@ -145,10 +145,30 @@ main > .expandable-tiles-section > .cards-wrapper {
     margin: 0;
 }
 
-@media (width <= 768px) {
-    .expandable-tiles-section {
-        padding: 40px 0;
-    }
+@media (width <= 1024px){
+
+  .expandable-tiles-section {
+    padding-bottom: 0;
+  }
+
+  .expandable-tiles-section > .default-content-wrapper h1,
+  .expandable-tiles-section > .default-content-wrapper h2,
+  .expandable-tiles-section > .default-content-wrapper h3,
+  .expandable-tiles-section > .default-content-wrapper h4,
+  .expandable-tiles-section > .default-content-wrapper h5,
+  .expandable-tiles-section > .default-content-wrapper h6 {
+    text-align: center;
+  }
+
+  .expandable-tiles-section > .default-content-wrapper p {
+    text-align: center;
+  }
+}
+
+@media (width <= 768px){
+  .expandable-tiles-section {
+    padding: 40px 0;
+  }
 
     main > .expandable-tiles-section > .cards-wrapper {
         padding: 0 20px;
@@ -226,7 +246,7 @@ main > .expandable-tiles-section > .cards-wrapper {
         gap: 12px;
     }
 
-    .expandable-tile .tile-content .content-cta a {
+    .expandable-tile .tile-content .content-cta .cta-link {
         font-size: 16px;
     }
 
