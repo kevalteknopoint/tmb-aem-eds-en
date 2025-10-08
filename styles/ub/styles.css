@@ -1,0 +1,122 @@
+*, *::before, *::after{
+  box-sizing:border-box;
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+
+html{
+  font-size:100%;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background-color:#fff;
+  color:#000;
+  font-family:var(--primary-font);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.5;
+  min-height:100vh;
+  text-rendering:optimizelegibility;
+}
+
+ul, ol{
+  list-style:none;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img, picture, video, canvas, svg{
+  display:block;
+  height:auto;
+  max-width:100%;
+}
+
+input, button, textarea, select{
+  background:none;
+  border:none;
+  color:inherit;
+  font:inherit;
+  outline:none;
+}
+
+textarea{
+  resize:vertical;
+}
+
+button{
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  padding:0;
+}
+
+table{
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-size:inherit;
+  font-weight:inherit;
+}
+
+:focus-visible{
+  outline:2px solid #000;
+  outline-offset:2px;
+}
+
+:focus:not(:focus-visible){
+  outline:none;
+}
+:root{
+  --border-primary:#222;
+  --border-brand:#1e282d;
+  --border-error:#fff;
+  --text-primary:#1e282d;
+  --text-secondary:#d4eefc;
+  --text-inverse:#d4eefc;
+  --text-light:#d4eefc;
+  --text-brand:#00aeef;
+  --text-brand-secondary:#fff;
+  --text-primary-cta:#fafafa;
+  --text-secondary-cta:#fafafa;
+  --text-accent-cta:#fafafa;
+  --text-disabled:#d9dadb;
+  --text-error:#fff;
+  --text-ghost-default:#fff;
+  --text-ghost-hover:#fff;
+  --text-ghost-focused:#fff;
+  --text-ghost-disabled:#fff;
+  --text-ghost-active:#fff;
+  --surface-primary:#f4f4f5;
+  --surface-secondary:#f4f4f5;
+  --surface-overlay:#565659;
+  --surface-brand:#00aeef;
+  --surface-login-cta:#1e3787;
+  --surface-primary-cta:#00aeef;
+  --surface-prim-hover-cta:#00aeef;
+  --surface-prim-active-cta:#502d91;
+  --surface-secondary-cta:#f3f5f6;
+  --surface-sec-hover-cta:#003764;
+  --surface-accent-cta:#d4eefc;
+  --surface-accent-hover-cta:#003764;
+  --surface-accent-active-cta:#003764;
+  --surface-disabled-cta:#efefef;
+  --surface-highlight:#d4eefc;
+  --primary-font:"Inter", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
+  --secondary-font:"American Grotesk", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
+}
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation-duration:0.01ms !important;
+    animation-iteration-count:1 !important;
+    scroll-behavior:auto !important;
+    transition-duration:0.01ms !important;
+  }
+}
