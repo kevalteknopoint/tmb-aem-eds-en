@@ -172,6 +172,10 @@
           {
             "name": "tmb-footer",
             "value": "tmb-footer"
+          },
+          {
+            "name": "tmb-sub-footer",
+            "value": "tmb-sub-footer"
           }
         ]
       }

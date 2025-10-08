@@ -17,4 +17,37 @@ export default async function decorate(block) {
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
   block.append(footer);
+
+  //
+
+  const teaserContent = document.querySelector(".tmb-footer .default-content-wrapper");
+  teaserContent.classList.add("tmb-footer-wrapper");
+
+  const content = document.querySelectorAll('.tmb-footer .default-content-wrapper p');
+  content.forEach((e, index) => {
+    e.classList.add(`para-${index + 1}`);
+  });
+
+  const ul = document.querySelectorAll('.tmb-footer .tmb-footer-wrapper ul');
+  ul.forEach((e, index) => {
+    e.classList.add(`ul-${index + 1}`);
+  });
+
+
+//toggle functionality for icon
+  const iconBtn = document.querySelector('.icon-tmb-btn');
+
+  iconBtn.addEventListener('click', function () {
+    const wrapper = this.closest('.default-content-wrapper');
+    if (!wrapper) return;
+
+    const ulToToggle = wrapper.querySelector('.ul-1');
+    if (!ulToToggle) return;
+
+    ulToToggle.classList.toggle('active');
+    this.classList.toggle('rotated');
+  });
+
+
 }
+
