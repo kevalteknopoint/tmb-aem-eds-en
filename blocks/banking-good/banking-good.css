@@ -154,20 +154,6 @@
 .bottom-li-13{
         display: none;
     }
-@media (max-width: 400px){
-    .section >div.banking-good-wrapper {
-        width: 150px !important;
-    }
-    .section.banking-good-container {
-        column-gap: 8px
-    }
-    .banking-good {
-        width: 150px !important;
-    }
-    .banking-good-wrapper:not(.card-1) .banking-good-item:nth-child(2) > div > p {
-        font-size: 16px;
-    }
-}
 @media (max-width:767px) {
     .section.banking-good-container {
         padding: 0px 20px;
@@ -342,6 +328,20 @@
         font-size: 16px;
         font-weight: 700;
         letter-spacing: 0.2px;
+    }
+}
+@media (max-width: 400px){
+    .section >div.banking-good-wrapper {
+        width: 150px !important;
+    }
+    .section.banking-good-container {
+        column-gap: 8px
+    }
+    .banking-good {
+        width: 150px !important;
+    }
+    .banking-good-wrapper:not(.card-1) .banking-good-item:nth-child(2) > div > p {
+        font-size: 16px;
     }
 }
 @media (min-width: 550px) and (max-width:670px) {
