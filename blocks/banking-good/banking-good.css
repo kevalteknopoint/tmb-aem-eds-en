@@ -131,6 +131,7 @@
 .banking-for-good:hover ul li ul {
   transform: translateY(10%);
   opacity: 1;
+  background: unset;
 }
 .banking-for-good ul li ul li:last-child {
   position: absolute;
