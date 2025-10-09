@@ -281,9 +281,9 @@ main > .expandable-tiles-section > .cards-wrapper {
 }
 
 /* online banking help section css starts  */
-.online-banking {
+.section.online-banking {
     max-width: 1372px;
-    margin: 80px auto !important;
+    margin: 80px auto;
     padding: 0 40px;
 }
 .online-banking .cards-wrapper {
@@ -743,6 +743,9 @@ main > .expandable-tiles-section > .cards-wrapper {
     }
 }
 @media (min-width: 766px) and (max-width: 1220px) {
+    .online-banking .cards-wrapper .cards .banking-cards-ul{
+        gap: 20px;
+    }
     .online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 {
         padding: 20px;
     }

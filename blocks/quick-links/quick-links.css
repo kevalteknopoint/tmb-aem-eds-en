@@ -34,11 +34,14 @@
 .quick-links-wrapper >div >div >div >ul{
     width: 316px;
     padding: 0 0 0 80px !important;
-
+    margin-bottom: 0;
 }
 
-.quick-links-wrapper >div >div >div >ul >li{
-    list-style-type: none;
+.quick-links-wrapper >div >div >div >ul >li:last-child{
+    margin-bottom: 0;
+}
+.quick-links-wrapper > div > div > div > ul > li{
+   list-style-type: none;
     /* font-family: Inter, sans-serif; */
     font-weight: 400;
     font-size: 16px;
