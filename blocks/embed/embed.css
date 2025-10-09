@@ -1,63 +1,63 @@
-.embed {
-  margin: 32px auto;
-  max-width: 800px;
-  text-align: center;
-  width: unset;
+.embed{
+  margin:32px auto;
+  max-width:800px;
+  text-align:center;
+  width:unset;
 }
 
-.embed > div {
-  display: flex;
-  justify-content: center;
+.embed > div{
+  display:flex;
+  justify-content:center;
 }
 
-.embed.embed-twitter .twitter-tweet-rendered {
-  margin-left: auto;
-  margin-right: auto;
+.embed.embed-twitter .twitter-tweet-rendered{
+  margin-left:auto;
+  margin-right:auto;
 }
 
-.embed .embed-placeholder {
-  aspect-ratio: 16 / 9;
-  position: relative;
-  width: 100%;
+.embed .embed-placeholder{
+  aspect-ratio:16 / 9;
+  position:relative;
+  width:100%;
 }
 
-.embed .embed-placeholder > * {
-  align-items: center;
-  display: flex;
-  inset: 0;
-  justify-content: center;
-  position: absolute;
+.embed .embed-placeholder > *{
+  align-items:center;
+  display:flex;
+  inset:0;
+  justify-content:center;
+  position:absolute;
 }
 
-.embed .embed-placeholder picture img {
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
+.embed .embed-placeholder picture img{
+  height:100%;
+  -o-object-fit:cover;
+     object-fit:cover;
+  width:100%;
 }
 
-.embed .embed-placeholder-play button {
-  border: 2px solid;
-  border-radius: 20px;
-  box-sizing: border-box;
-  display: block;
-  height: 22px;
-  padding: 0;
-  position: relative;
-  transform: scale(3);
-  width: 22px;
+.embed .embed-placeholder-play button{
+  border:2px solid;
+  border-radius:20px;
+  box-sizing:border-box;
+  display:block;
+  height:22px;
+  padding:0;
+  position:relative;
+  transform:scale(3);
+  width:22px;
 }
 
-.embed .embed-placeholder-play button::before {
-  border-bottom: 5px solid transparent;
-  border-left: 6px solid;
-  border-top: 5px solid transparent;
-  box-sizing: border-box;
-  content: "";
-  display: block;
-  height: 10px;
-  left: 7px;
-  position: absolute;
-  top: 4px;
-  width: 0;
+.embed .embed-placeholder-play button::before{
+  border-bottom:5px solid transparent;
+  border-left:6px solid;
+  border-top:5px solid transparent;
+  box-sizing:border-box;
+  content:"";
+  display:block;
+  height:10px;
+  left:7px;
+  position:absolute;
+  top:4px;
+  width:0;
 }

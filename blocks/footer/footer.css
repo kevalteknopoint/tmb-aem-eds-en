@@ -1,15 +1,16 @@
-footer {
-  background-color: #00525B;
-  font-size: var(--body-font-size-xs);
+footer{
+  background-color:var(--light-color);
+  font-size:var(--body-font-size-xs);
 }
 
 footer .footer p{
   margin:0;
 }
 
-footer .footer p {
-  margin: 0;
-  color: #fff;
+footer .footer > div{
+  margin:auto;
+  max-width:1200px;
+  padding:40px 24px 24px;
 }
 
 @media (width >= 900px){

@@ -1,4 +1,4 @@
-import Swiperblock from "./swiper-bundle.min.js";
+import Swiperblock from "../../libs/swiper/swiper-bundle.min.js";
 import embedblock from "../embed/embed.js";
 import appendclasses from "../../scripts/constatnt-classes.js";
 
@@ -50,7 +50,7 @@ function createSwiper2(block) {
       Array.from(row.children).forEach((child, i) => {
         if (child.tagName === "DIV" && child.innerHTML.trim() === "") {
           child.remove();
-        } 
+        }
         // appendclasses.CLASS_PREFIXES = ["swiper-inner"]; /// classes add to section div
         //   appendclasses.addIndexed(child);
       });
@@ -70,27 +70,27 @@ function createSwiper2(block) {
   }
 }
 function mobileviewswiper(block) {
-   document.querySelectorAll(".secsecond.bannervideo-container").forEach(function (e) {
-        const mobnoswiper=Array.from(e.children)
-        mobnoswiper.forEach(function(child,i){
-          child.classList.add("mob-noswiper-child"+(i+1));
-        })
+  document.querySelectorAll(".secsecond.bannervideo-container").forEach(function (e) {
+    const mobnoswiper = Array.from(e.children)
+    mobnoswiper.forEach(function (child, i) {
+      child.classList.add("mob-noswiper-child" + (i + 1));
     })
+  })
   console.log(block);
   const rows = Array.from(block.children);
   rows.forEach((row) => {
     row.classList.add("mob-swiper");
     Array.from(row.children).forEach((child, i) => {
-        if (child.tagName === "DIV" && child.innerHTML.trim() === "") {
-          child.remove();
-        }
-      });
+      if (child.tagName === "DIV" && child.innerHTML.trim() === "") {
+        child.remove();
+      }
+    });
   });
 }
 export default function decorate(block) {
   if (!block.closest(".secsecond")) {
     createSwiper(block);
-    const swiper = Swiperblock(block, {
+    const swiper = new Swiperblock(block, {
       slidesPerView: 1,
       spaceBetween: 2,
       pagination: {
@@ -138,10 +138,12 @@ export default function decorate(block) {
 
   document
     .querySelectorAll(".secsecond.bannervideo-container .video-banner")
-    .forEach((block) => {
+    .forEach((eachBlock) => {
       if (window.matchMedia("(min-width: 1024px)").matches) {
-        createSwiper2(block);
-        Swiperblock(block, {
+        createSwiper2(eachBlock);
+
+        // eslint-disable-next-line no-new
+        new Swiperblock(eachBlock, {
           slidesPerView: "auto",
           spaceBetween: 32,
           loop: true,
@@ -154,8 +156,8 @@ export default function decorate(block) {
             prevEl: ".swiper-button-prev",
           },
         });
-        const navbtn = block.querySelector(".nav-buttons");
-        const sec = block.closest(".section");
+        const navbtn = eachBlock.querySelector(".nav-buttons");
+        const sec = eachBlock.closest(".section");
         appendclasses.CLASS_PREFIXES = ["inner-section"]; /// classes add to section div
         appendclasses.addIndexed(sec);
         if (navbtn !== null) {
@@ -163,11 +165,11 @@ export default function decorate(block) {
           def.append(navbtn);
         }
       } else {
-        mobileviewswiper(block);
+        mobileviewswiper(eachBlock);
       }
     });
 
-    /////////second block mobile ///////
+  // ///////second block mobile ///////
 
   const link1 = block.querySelector(
     ".secfirst .swiperinnerdiv3 .button-container"
