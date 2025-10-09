@@ -267,6 +267,7 @@
     .banking-for-good:hover ul li ul,
     .banking-for-good.active ul li ul {
         transform: translateY(0);
+        background: #00525B;
     }
     .banking-for-good ul li ul li:last-child {
         margin-top: 12px;
