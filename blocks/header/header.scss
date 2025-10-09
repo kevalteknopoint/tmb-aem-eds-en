@@ -1,6 +1,10 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
 
+body {
+  margin-top: 141px;
+}
+
 .header.block {
   position: fixed;
   top: 0;
@@ -9,7 +13,8 @@
   height: fit-content;
   display: flex;
   flex-direction: column;
-  background-color: #fafafa; /* FIGMA VARIABLE MISSING (text/text-hover) */
+  background-color: $surface-light;
+  z-index: 20;
 }
 
 .secondary-header-wrap {

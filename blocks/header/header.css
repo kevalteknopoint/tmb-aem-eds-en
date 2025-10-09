@@ -1,5 +1,9 @@
+body{
+  margin-top:141px;
+}
+
 .header.block{
-  background-color:#fafafa;
+  background-color:var(--surface-light);
   display:flex;
   flex-direction:column;
   height:-moz-fit-content;
@@ -8,6 +12,7 @@
   position:fixed;
   top:0;
   width:100%;
+  z-index:20;
 }
 
 .secondary-header-wrap{
