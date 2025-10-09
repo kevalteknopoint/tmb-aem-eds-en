@@ -150,6 +150,7 @@
   .quick-links-wrapper >div >div >div > ul.active {
     display: block;
     width: auto;
+    margin-bottom: 5.5px;
   }
 
   .quick-links-wrapper >div >div >div >ul >li{
