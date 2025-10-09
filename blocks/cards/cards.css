@@ -281,9 +281,9 @@ main > .expandable-tiles-section > .cards-wrapper {
 }
 
 /* online banking help section css starts  */
-.online-banking {
+.section.online-banking {
     max-width: 1372px;
-    margin: 80px auto !important;
+    margin: 80px auto;
     padding: 0 40px;
 }
 .online-banking .cards-wrapper {
