@@ -1,6 +1,12 @@
 .tmb-acc-sec.accordion-container{
   background:#EDEDED;
-  padding:64px;
+  padding:80px 0;
+}
+
+.tmb-acc-sec.accordion-container .accordion{
+  margin:0 auto;
+  max-width:1452px;
+  padding:0 40px;
 }
 
 .tmb-acc-sec.accordion-container .accordion details{
@@ -71,12 +77,26 @@
   vertical-align:bottom;
 }
 
+.tmb-acc-sec.accordion-container .accordion-item-body{
+  margin-top:32px;
+}
+
 .tmb-acc-sec.accordion-container .accordion-item-body p{
-  color:#000;
+  color:#333;
   font-size:16px;
   font-weight:400;
   line-height:24px;
   margin:32px 0 0;
+}
+
+@media screen and (max-width: 768px){
+  .tmb-acc-sec.accordion-container .accordion{
+    padding:0 20px;
+  }
+
+  .tmb-acc-sec.accordion-container .accordion-item-body{
+    margin-top:18px;
+  }
 }
 
 @media (max-width: 720px){

@@ -1,6 +1,8 @@
+@use '../../styles/mixins' as *;
+
 .tmb-acc-sec.accordion-container {
   background: #EDEDED;
-  padding: 64px;
+  padding: 80px 0;
 
   @media (max-width: 390px) {
     padding: 40px 0px;
@@ -11,6 +13,14 @@
   }
 
   .accordion {
+    margin: 0 auto;
+    max-width: 1452px;
+    padding: 0 40px;
+
+    @include mobile {
+      padding: 0 20px;
+    }
+
     details {
       border: none;
 
@@ -85,13 +95,18 @@
   }
 
   .accordion-item-body {
+    margin-top: 32px;
+
+    @include mobile {
+      margin-top: 18px;
+    }
+    
     p {
-      /* font-family: Inter; */
       font-weight: 400;
       font-size: 16px;
       line-height: 24px;
       margin: 32px 0 0 0;
-      color: #000000;
+      color: #333333;
     }
   }
 }

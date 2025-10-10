@@ -4,8 +4,9 @@
   flex-flow:column wrap;
   gap:80px;
   justify-content:space-between;
-  margin:80px auto !important;
-  max-width:1372px;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:1452px;
   padding:0 40px;
 }
 
@@ -26,6 +27,15 @@
 
 .momentum-block > .tmb-teaser-content picture{
   height:100%;
+}
+
+.momentum-block > .tmb-teaser-content > div{
+  height:100%;
+}
+
+.momentum-block > .tmb-teaser-content img{
+  -o-object-fit:cover;
+     object-fit:cover;
 }
 
 .momentum-block img{
@@ -92,7 +102,7 @@
 
 .momentum-section > div:nth-child(2) > ul:nth-child(1) > li > p{
   color:#0b231f;
-  font-family:"American Grotesk";
+  font-family:var(--secondary-font);
   font-size:144.52px;
   font-style:black;
   font-weight:900;
@@ -114,7 +124,7 @@
 
 .momentum-section > div:nth-child(2) > ul:nth-child(1) > li:nth-child(1) > ul > li:nth-child(1){
   color:#0b231f;
-  font-family:"American Grotesk";
+  font-family:var(--secondary-font);
   font-size:73.03px;
   font-style:black;
   font-weight:900;
@@ -130,7 +140,7 @@
 
 .momentum-section > div:nth-child(2) > ul:nth-child(1) > li:nth-child(1) > ul > li:nth-child(2){
   color:#0b231f;
-  font-family:"American Grotesk";
+  font-family:var(--secondary-font);
   font-size:33.03px;
   font-weight:900;
   line-height:49.55px;
@@ -260,7 +270,7 @@
 }
 
 .momentum-listing-wrapper > li:nth-child(1) > ul > li:nth-child(2){
-  font-family:"American Grotesk";
+  font-family:var(--secondary-font);
   font-size:33.03px;
   font-weight:900;
   line-height:49.55px;
@@ -340,14 +350,14 @@
   }
 
   .momentum-section > div:nth-child(2) > ul:nth-child(1) > li > p{
-    font-family:"American Grotesk";
+    font-family:var(--secondary-font);
     font-size:80px;
     font-weight:900;
     line-height:50px;
   }
 
   .momentum-section > div:nth-child(2) > ul:nth-child(1) > li:nth-child(1) > ul > li:nth-child(1){
-    font-family:"American Grotesk";
+    font-family:var(--secondary-font);
     font-size:60px;
     font-weight:900;
     line-height:40px;
@@ -374,15 +384,6 @@
     min-height:100%;
     width:40%;
   }
-
-  .momentum-block > .tmb-teaser-content > div{
-    height:100%;
-  }
-
-  .momentum-block > .tmb-teaser-content img{
-    -o-object-fit:cover;
-       object-fit:cover;
-  }
 }
 
 @media screen and (max-width: 1024px){
@@ -405,7 +406,8 @@
 @media screen and (max-width: 768px){
   .momentum-section{
     gap:80px;
-    margin:40px auto !important;
+    margin-left:auto;
+    margin-right:auto;
   }
 
   .momentum-block > .tmb-teaser-content{

@@ -8,9 +8,10 @@
 .secsecond {
   max-width: 1452px;
   padding: 0 40px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 
-  @include mobile {
+  @include tablet {
     padding: 0 20px;
   }
 
@@ -18,7 +19,7 @@
     display: flex;
     justify-content: space-between;
 
-    @include mobile {
+    @include tablet {
       flex-wrap: wrap;
       margin-bottom: 12px;
     }
@@ -26,7 +27,7 @@
 
   .swiper-wrapper {
     display: flex;
-    padding: 30px 0;
+    padding: 30px 0 0;
     align-items: flex-start;
     gap: 0;
     align-self: stretch;
@@ -251,7 +252,7 @@
 }
 
 /* ==============================
-   Mobile View
+   Tablet View
 ============================== */
 .inner-section2 {
   .video-banner {
@@ -310,7 +311,7 @@
 /* ==============================
    Media Queries
 ============================== */
-@include mobile {
+@include tablet {
   .secfirst .swiper-wrapper {
     height: auto;
   }

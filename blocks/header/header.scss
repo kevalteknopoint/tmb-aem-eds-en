@@ -3,6 +3,10 @@
 
 body {
   margin-top: 141px;
+
+  @include mobile {
+    margin-top: 60px;
+  }
 }
 
 .header.block {
