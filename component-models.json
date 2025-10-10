@@ -166,6 +166,10 @@
             "value": "highlight"
           },
           {
+            "name": "AOS Enabled",
+            "value": "aos-enabled"
+          },
+          {
             "name": "tmb-acc-sec",
             "value": "tmb-acc-sec"
           },
