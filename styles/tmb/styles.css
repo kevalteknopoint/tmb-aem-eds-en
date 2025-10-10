@@ -1,3 +1,4 @@
+@import '../../libs/aos/aos.min.css';
 *, *::before, *::after{
   box-sizing:border-box;
 }
