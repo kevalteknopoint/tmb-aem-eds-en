@@ -86,6 +86,23 @@ function mobileviewswiper(block) {
       }
     });
   });
+  document.querySelectorAll(".mob-swiper").forEach(swipermob => {
+    const btn = swipermob.querySelector(".button-container a");
+    const picture = swipermob.querySelector("picture");
+
+    if (btn && picture) {
+      const link = btn.getAttribute("href");
+
+      // check if picture already wrapped
+      if (!picture.parentElement.matches("a")) {
+        const anchor = document.createElement("a");
+        anchor.href = link;
+        anchor.title = btn.title || "Discover more";
+        picture.parentNode.insertBefore(anchor, picture);
+        anchor.appendChild(picture);
+      }
+    }
+  });
 }
 export default function decorate(block) {
   if (!block.closest(".secsecond")) {
@@ -97,10 +114,10 @@ export default function decorate(block) {
         el: ".swiper-pagination",
         clickable: true,
       },
-      // autoplay: {
-      //   delay: 40000000,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
     });
 
     swiper.on("slideChange", () => {
@@ -171,8 +188,8 @@ export default function decorate(block) {
 
   // ///////second block mobile ///////
 
-  const link1 = block.querySelector(
-    ".secfirst .swiperinnerdiv3 .button-container"
-  );
-  embedblock(link1);
+  // const link1 = block.querySelector(
+  //   ".secfirst .swiperinnerdiv3 .button-container"
+  // );
+  // embedblock(link1);
 }
