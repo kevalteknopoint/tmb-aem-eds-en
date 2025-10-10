@@ -137,7 +137,7 @@ function loadDelayed() {
   window.setTimeout(() => import('./delayed.js'), 3000);
   window.setTimeout(() => {
     const script = document.createElement('script');
-    script.setAttribute('src', '/libs/aos.min.js');
+    script.setAttribute('src', '/scripts/aos.min.js');
     document.body.appendChild(script);
   });
   // load anything that can be postponed to the latest here
