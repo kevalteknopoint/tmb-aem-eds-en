@@ -450,6 +450,36 @@
     ]
   },
   {
+    "id": "teachers-form-block",
+    "fields": [
+      {
+        "component": "text",
+        "name": "css link",
+        "label": "Css link"
+      },
+      {
+        "component": "text",
+        "name": "js link",
+        "label": "JS link"
+      },
+      {
+        "component": "text",
+        "name": "form id",
+        "label": "Enter Form ID"
+      },
+      {
+        "component": "text",
+        "name": "form key",
+        "label": "Enter Form Key"
+      },
+      {
+        "component": "text",
+        "name": "action link",
+        "label": "Enter action link"
+      }
+    ]
+  },
+  {
     "id": "accordion",
     "fields": [
       {

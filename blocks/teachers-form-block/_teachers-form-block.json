@@ -1,0 +1,53 @@
+{
+    "definitions": [
+        {
+          "title": "Teachers form Block",
+          "id": "teachers-form-block",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Teachers form Block",
+                  "filter":"teachers-form-block",
+                  "model": "teachers-form-block"
+                }
+              }
+            }
+          }
+        }
+    ],
+    "models": [
+        {
+            "id": "teachers-form-block",
+            "fields": [
+                {
+                    "component": "text",
+                    "name": "css link",
+                    "label": "Css link"
+                },
+                {
+                    "component": "text",
+                    "name": "js link",
+                    "label": "JS link"
+                },
+                {
+                    "component": "text",
+                    "name": "form id",
+                    "label": "Enter Form ID"
+                },
+                {
+                    "component": "text",
+                    "name": "form key",
+                    "label": "Enter Form Key"
+                },
+                {
+                    "component": "text",
+                    "name": "action link",
+                    "label": "Enter action link"
+                }
+            ]
+        }
+    ],
+    "filters": []
+}
