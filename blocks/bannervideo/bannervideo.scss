@@ -8,7 +8,8 @@
 .secsecond {
   max-width: 1452px;
   padding: 0 40px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 
   @include tablet {
     padding: 0 20px;
