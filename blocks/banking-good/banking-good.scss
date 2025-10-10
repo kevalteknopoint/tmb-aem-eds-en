@@ -1,7 +1,10 @@
+@use '../../styles/variables' as *;
+
 .section.banking-good-container{
     max-width: 1452px;
-    margin: 160px auto 80px;
     padding: 0 40px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -82,7 +85,6 @@
 }
 .banking-good-item{
     color: var(--Cream, #F5F8DE);
-    font-family: 'Inter';
     font-size: 20px;
     font-weight: 900;
     line-height: 24px;
@@ -97,7 +99,6 @@
 
 .banking-good-item:nth-child(1) > div >p{
     color: #F5F8DE;
-    font-family: 'Inter';
     font-size: 30px;
     font-style: normal;
     font-weight: 900;
@@ -111,7 +112,6 @@
 .banking-for-good ul li a {
     text-decoration: none;
     color: var(--Cream, #F5F8DE);
-    font-family: 'Inter';
     font-size: 20px;
     font-weight: 900;
     line-height: 24px;
@@ -173,7 +173,8 @@
         padding: 0px 20px;
         column-gap: normal;
         row-gap: 23px;
-        margin: 40px auto;
+        margin-left: auto;
+        margin-right: auto;
     }
     .section >div.banking-good-wrapper{
         max-width: 170px;
@@ -237,7 +238,6 @@
         font-size: 16px;
         font-weight: 100;
         line-height: 18px;
-        font-family: 'Inter';
         margin-top: 10px;
     }
     .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(2) div p {
@@ -251,13 +251,12 @@
     }
     .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(3) div p {
         color: var(--Black, #000);
-        font-family: 'Inter';
         font-size: 16px;
         font-weight: 400;
         line-height: 18px;
     }
     .banking-good-item:nth-child(1) > div >p{
-        font-family: 'American Grotesk Condensed';
+        font-family: $secondary-font;
         font-size: 20px;
         font-weight: 900;
         line-height: 24px;

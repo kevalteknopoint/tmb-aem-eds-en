@@ -255,12 +255,6 @@
 }
 
 @media screen and (max-width: 1024px){
-  .swiperinnerdiv > div:nth-child(1){
-    gap:12px;
-  }
-}
-
-@media screen and (max-width: 768px){
   .secsecond{
     padding:0 20px;
   }
@@ -268,6 +262,10 @@
   .secsecond .default-content-wrapper{
     flex-wrap:wrap;
     margin-bottom:12px;
+  }
+
+  .swiperinnerdiv > div:nth-child(1){
+    gap:12px;
   }
 
   .secfirst .swiper-wrapper{

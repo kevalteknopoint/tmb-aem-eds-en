@@ -231,6 +231,10 @@ body{
 }
 
 @media screen and (max-width: 768px){
+  body{
+    margin-top:60px;
+  }
+
   .secondary-header-wrap{
     display:none;
   }
