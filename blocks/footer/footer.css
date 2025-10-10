@@ -142,10 +142,10 @@ footer .footer > div {
   padding: 0;
 }
 
-.ul-5 li a,
-.ul-6 li a,
-.ul-7 li a,
-.ul-8 li a {
+.tmb-footer .ul-5 li a,
+.tmb-footer .ul-6 li a,
+.tmb-footer .ul-7 li a,
+.tmb-footer .ul-8 li a {
   text-decoration: none;
   font-weight: 400;
   font-style: Regular;
@@ -156,10 +156,10 @@ footer .footer > div {
   color: #484848;
 }
 
-.ul-10 li a,
-.ul-11 li a,
-.ul-12 li a,
-.ul-13 li a {
+.tmb-footer .tmb-footer .ul-10 li a,
+.tmb-footer .tmb-footer .ul-11 li a,
+.tmb-footer .tmb-footer .ul-12 li a,
+.tmb-footer .tmb-footer .ul-13 li a {
   text-decoration: none;
   font-weight: 400;
   font-style: Regular;
@@ -178,14 +178,14 @@ footer .footer > div {
   list-style-type: none;
 }
 
-.ul-9 li {
+.tmb-footer .ul-9 li {
   width: 271px;
 }
 
-.ul-10,
-.ul-11,
-.ul-12,
-.ul-13 {
+.tmb-footer .ul-10,
+.tmb-footer .ul-11,
+.tmb-footer .ul-12,
+.tmb-footer .ul-13 {
   position: relative;
   margin: 4px auto;
 }
