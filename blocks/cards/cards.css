@@ -700,6 +700,7 @@
     border-top-right-radius:35px;
     display:flex;
     flex-direction:column;
+    margin:0 auto;
     width:unset;
   }
 

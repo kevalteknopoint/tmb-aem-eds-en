@@ -29,6 +29,13 @@
       height: 100%;
     }
 }
+.momentum-block > .tmb-teaser-content > div {
+  height: 100%;
+}
+
+.momentum-block > .tmb-teaser-content img {
+  object-fit: cover;
+}
 @media screen and (max-width: 768px) {
     .momentum-section {
         gap: 80px;
@@ -50,14 +57,6 @@
       width: 40%;
       min-height: 100%;
       height: auto;
-    }
-
-    .momentum-block > .tmb-teaser-content > div {
-      height: 100%;
-    }
-
-    .momentum-block > .tmb-teaser-content img {
-      object-fit: cover;
     }
 }
 .momentum-block img {

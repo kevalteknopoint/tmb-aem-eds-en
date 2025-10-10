@@ -29,6 +29,15 @@
   height:100%;
 }
 
+.momentum-block > .tmb-teaser-content > div{
+  height:100%;
+}
+
+.momentum-block > .tmb-teaser-content img{
+  -o-object-fit:cover;
+     object-fit:cover;
+}
+
 .momentum-block img{
   border-radius:20px;
   height:100%;
@@ -374,15 +383,6 @@
     height:auto;
     min-height:100%;
     width:40%;
-  }
-
-  .momentum-block > .tmb-teaser-content > div{
-    height:100%;
-  }
-
-  .momentum-block > .tmb-teaser-content img{
-    -o-object-fit:cover;
-       object-fit:cover;
   }
 }
 
