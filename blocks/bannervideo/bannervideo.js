@@ -70,12 +70,14 @@ function createSwiper2(block) {
   }
 }
 function mobileviewswiper(block) {
-  document.querySelectorAll(".secsecond.bannervideo-container").forEach(function (e) {
-    const mobnoswiper = Array.from(e.children)
-    mobnoswiper.forEach(function (child, i) {
-      child.classList.add("mob-noswiper-child" + (i + 1));
-    })
-  })
+  document
+    .querySelectorAll(".secsecond.bannervideo-container")
+    .forEach(function (e) {
+      const mobnoswiper = Array.from(e.children);
+      mobnoswiper.forEach(function (child, i) {
+        child.classList.add("mob-noswiper-child" + (i + 1));
+      });
+    });
   console.log(block);
   const rows = Array.from(block.children);
   rows.forEach((row) => {
@@ -86,7 +88,7 @@ function mobileviewswiper(block) {
       }
     });
   });
-  document.querySelectorAll(".mob-swiper").forEach(swipermob => {
+  document.querySelectorAll(".mob-swiper").forEach((swipermob) => {
     const btn = swipermob.querySelector(".button-container a");
     const picture = swipermob.querySelector("picture");
 
@@ -114,10 +116,10 @@ export default function decorate(block) {
         el: ".swiper-pagination",
         clickable: true,
       },
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
+      // autoplay: {
+      //   delay: 5000,
+      //   disableOnInteraction: false,
+      // },
     });
 
     swiper.on("slideChange", () => {
