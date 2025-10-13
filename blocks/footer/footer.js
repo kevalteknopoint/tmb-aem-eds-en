@@ -31,7 +31,7 @@ export default async function decorate(block) {
     e.classList.add(`para-${index + 1}`);
   });
 
-   const subcontent = document.querySelectorAll('.tmb-footer .tmb-footer-wrapper.default-content-wrapper p');
+  const subcontent = document.querySelectorAll('.tmb-footer .tmb-footer-wrapper.default-content-wrapper p');
   subcontent.forEach((e, index) => {
     e.classList.add(`para-${index + 1}`);
   });
@@ -41,7 +41,7 @@ export default async function decorate(block) {
     e.classList.add(`ul-${index + 1}`);
   });
 
-  
+
   const subul = document.querySelectorAll('.tmb-sub-footer .tmb-sub-footer-wrapper ul');
   subul.forEach((e, index) => {
     e.classList.add(`ul-${index + 1}`);
@@ -49,18 +49,23 @@ export default async function decorate(block) {
 
 
 
-//toggle functionality for icon
+  //toggle functionality for icon
   const iconBtn = document.querySelector('.icon-tmb-btn');
 
   iconBtn.addEventListener('click', function () {
     const wrapper = this.closest('.default-content-wrapper');
     if (!wrapper) return;
 
-    const ulToToggle = wrapper.querySelector('.ul-1');
-    if (!ulToToggle) return;
+    // const ulToToggle = wrapper.querySelector('.ul-1');
+    // if (!ulToToggle) return;
 
-    ulToToggle.classList.toggle('active');
-    this.classList.toggle('rotated');
+    // ulToToggle.classList.toggle('active');
+    // this.classList.toggle('rotated');
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    })
   });
 
 
