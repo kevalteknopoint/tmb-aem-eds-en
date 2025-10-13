@@ -479,9 +479,6 @@ footer .footer>div {
 }
 
 @media screen and (max-width: 767px) {
-  .section.tmb-footer {
-    max-width: 425px;
-  }
 
   .tmb-footer .para-2,
   .tmb-footer .para-3,
@@ -655,18 +652,17 @@ footer .footer>div {
     width: 50px;
     height: 42px;
   }
+}
 
+/* ------------ Tablet: 768px - 1024px ------------- */
+@media (max-width: 1024px) {
   .ul-10 li .icon-link,
   .ul-11 li .icon-link,
   .ul-12 li .icon-Search-Magnifying-Glass,
   .ul-13 li .icon-Device-Phone-Call {
     position: unset;
-
   }
-}
 
-/* ------------ Tablet: 768px - 1024px ------------- */
-@media (max-width: 1024px) {
   .tmb-footer-wrapper ul.ul-4 {
     display: flex;
     flex-wrap: wrap;
