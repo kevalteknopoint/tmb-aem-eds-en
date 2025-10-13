@@ -354,6 +354,10 @@
     display:block;
   }
 
+  .mob-pbanner img{
+    width:100%;
+  }
+
   .desktop-banner{
     display:none;
   }
