@@ -137,7 +137,7 @@
   width:95%;
 }
 
-.banking-for-good:hover ul li ul{
+.banking-for-good:hover ul li ul, .banking-for-good:has(:focus) ul li ul{
   opacity:1;
   transform:translateY(10%);
 }
@@ -152,7 +152,8 @@
   transition:opacity 0.6s ease, transform 0.6s ease;
 }
 
-.banking-for-good:hover .banking-good-item:nth-child(1) > div > p{
+.banking-for-good:hover .banking-good-item:nth-child(1) > div > p,
+.banking-for-good:has(:focus) .banking-good-item:nth-child(1) > div > p{
   opacity:0;
   transform:translateY(-30px);
 }
@@ -353,6 +354,7 @@
   }
 
   .banking-for-good:hover ul li ul,
+  .banking-for-good:has(:focus) ul li ul,
   .banking-for-good.active ul li ul{
     transform:translateY(0);
   }
@@ -373,7 +375,7 @@
     z-index:2;
   }
 
-  .banking-for-good:hover .banking-good-item:last-child > div > ul > li:first-child{
+  .banking-for-good:hover .banking-good-item:last-child > div > ul > li:first-child .banking-for-good:has(:focus) .banking-good-item:last-child > div > ul > li:first-child{
     border-image-slice:1;
     border-image-source:linear-gradient(to right, #00525B 0%, #00525B 24%, #fff 25%, #fff 75%, #00525B 76%, #00525B 98%, #00525B 100%);
     border-top:5px solid transparent;

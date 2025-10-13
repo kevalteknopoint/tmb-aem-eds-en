@@ -128,7 +128,7 @@
   background: unset;
   opacity: 0;
 }
-.banking-for-good:hover ul li ul {
+.banking-for-good:hover ul li ul, .banking-for-good:has(:focus) ul li ul {
   transform: translateY(10%);
   opacity: 1;
 }
@@ -140,7 +140,8 @@
   transition: opacity 0.6s ease, transform 0.6s ease;
   transform: translateY(0);
 }
-.banking-for-good:hover .banking-good-item:nth-child(1) > div > p {
+.banking-for-good:hover .banking-good-item:nth-child(1) > div > p,
+.banking-for-good:has(:focus) .banking-good-item:nth-child(1) > div > p {
   opacity: 0;
   transform: translateY(-30px);
 }
@@ -277,6 +278,7 @@
         transition: transform 0.5s ease;
     }
     .banking-for-good:hover ul li ul,
+    .banking-for-good:has(:focus) ul li ul,
     .banking-for-good.active ul li ul {
         transform: translateY(0);
     }
@@ -294,7 +296,8 @@
         z-index: 2;
         height: auto;
     }
-    .banking-for-good:hover .banking-good-item:last-child >div > ul > li:first-child{
+    .banking-for-good:hover .banking-good-item:last-child >div > ul > li:first-child
+    .banking-for-good:has(:focus) .banking-good-item:last-child >div > ul > li:first-child{
         padding-top: 15px;
         border-top: 5px solid transparent;
         border-image-source: linear-gradient(to right, #00525B 0%, #00525B 24%, #ffffff 25%, #ffffff 75%, #00525B 76%,  #00525B 98%,                                                     #00525B 100%);

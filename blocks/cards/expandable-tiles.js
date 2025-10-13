@@ -132,6 +132,10 @@ export default function expandableTiles(block) {
         // bannerSlide?.classList.add('active');
         // }
       });
+
+      bannerSlide?.querySelector('.tile-content')?.addEventListener('focus', () => {
+        bannerSlide?.firstElementChild?.dispatchEvent(new Event('click'));
+      });
     }
   });
 
