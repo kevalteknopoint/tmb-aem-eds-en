@@ -41,11 +41,15 @@ footer .footer > div {
 }
 
 .icon.icon-tmb-btn {
-  width: 40px;
+  display: none;
+}
+
+.icon.icon-jump_to_top {
+  width: 156px;
   height: 40px;
 }
 
-.icon.icon-tmb-btn img {
+.icon.icon-jump_to_top img {
   width: 100%;
 }
 
@@ -222,6 +226,10 @@ footer .footer > div {
   display: flex;
 }
 
+.tmb-footer .ul-15 li {
+  color: #FFFFFF;
+}
+
 .tmb-footer .ul-16 .icon {
   width: 40px;
   height: 40px;
@@ -259,20 +267,12 @@ footer .footer > div {
   display: none;
 }
 
-.icon-tmb-btn img {
+.icon-jump_to_top img {
   transition: transform 0.3s ease;
   transform-origin: center;
 }
 
 /* Rotate arrow 180deg when active (closed) */
-.icon-tmb-btn.rotated img {
-  transform: rotate(180deg);
-}
-
-.ul-15 li {
-  color: #fff;
-}
-
 /* trial for second footer starts */
 .section.tmb-sub-footer {
   margin: 0px auto;
@@ -697,6 +697,17 @@ footer .footer > div {
   }
 }
 @media (max-width: 1024px) and (min-width: 768px) {
+  .icon.icon-tmb-btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+  .icon.icon-tmb-btn img {
+    width: 100%;
+  }
+  .icon.icon-jump_to_top {
+    display: none;
+  }
   .ul-10 li .icon-link,
   .ul-11 li .icon-link,
   .ul-12 li .icon-Search-Magnifying-Glass,
