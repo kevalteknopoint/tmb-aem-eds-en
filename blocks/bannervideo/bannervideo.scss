@@ -199,7 +199,7 @@
 .swiperinnerdiv {
   > div:nth-child(1) {
     position: absolute;
-    top: 37px;
+    top: 94px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -395,6 +395,10 @@
 
   .mob-pbanner {
     display: block;
+
+    img {
+      width: 100%;
+    }
   }
 
   .desktop-banner {
