@@ -375,7 +375,8 @@
     z-index:2;
   }
 
-  .banking-for-good:hover .banking-good-item:last-child > div > ul > li:first-child .banking-for-good:has(:focus) .banking-good-item:last-child > div > ul > li:first-child{
+  .banking-for-good:hover .banking-good-item:last-child > div > ul > li:first-child,
+  .banking-for-good:has(:focus) .banking-good-item:last-child > div > ul > li:first-child{
     border-image-slice:1;
     border-image-source:linear-gradient(to right, #00525B 0%, #00525B 24%, #fff 25%, #fff 75%, #00525B 76%, #00525B 98%, #00525B 100%);
     border-top:5px solid transparent;

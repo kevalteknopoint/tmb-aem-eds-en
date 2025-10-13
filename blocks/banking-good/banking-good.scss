@@ -296,7 +296,7 @@
         z-index: 2;
         height: auto;
     }
-    .banking-for-good:hover .banking-good-item:last-child >div > ul > li:first-child
+    .banking-for-good:hover .banking-good-item:last-child >div > ul > li:first-child,
     .banking-for-good:has(:focus) .banking-good-item:last-child >div > ul > li:first-child{
         padding-top: 15px;
         border-top: 5px solid transparent;
