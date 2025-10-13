@@ -1,7 +1,7 @@
 .section.banking-good-container{
   align-items:center;
-  -moz-column-gap:30px;
-       gap:34px 30px;
+  -moz-column-gap:32px;
+       gap:34px 32px;
   display:flex;
   flex-wrap:wrap;
   justify-content:space-between;
