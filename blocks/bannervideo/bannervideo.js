@@ -11,6 +11,8 @@ function createSwiper(block) {
     rows.forEach((row, i) => {
       const towrapdeskandmob = document.createElement("div");
       towrapdeskandmob.classList.add("mob-desk-wrapper");
+      row.lastElementChild?.setAttribute('data-aos', 'fade-up');
+      row.lastElementChild?.setAttribute('data-aos-duration', '2000');
 
       const desktopDiv = row.children[0];
       const mobDiv = row.children[1];
