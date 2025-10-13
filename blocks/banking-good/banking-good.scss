@@ -384,14 +384,23 @@
 }
 @media (min-width: 1020px) and (max-width: 1350px){
     .section >div.banking-good-wrapper{
-        max-width: 600px;
+        max-width: 430px;
         width: 100%;
     }
     .banking-for-good ul li ul{
         width: 85%;
     }
 }
-@media (min-width: 1350px) and (max-width: 1450px){
+@media (min-width: 1350px) and (max-width: 1400px){
+    .section >div.banking-good-wrapper{
+        max-width: 400px;
+        width: 100%;
+    }
+    .banking-for-good ul li ul{
+        width: 85%;
+    }
+}
+@media (min-width: 1400px) and (max-width: 1450px){
     .section >div.banking-good-wrapper{
         max-width: 430px;
         width: 100%;
