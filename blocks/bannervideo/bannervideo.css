@@ -256,10 +256,6 @@
 }
 
 @media screen and (max-width: 1024px){
-  .secsecond{
-    padding:0 20px;
-  }
-
   .secsecond .default-content-wrapper{
     flex-wrap:wrap;
     margin-bottom:12px;
@@ -325,6 +321,15 @@
     width:100%;
   }
 
+  .bannervideo-container .bannervideo-wrapper .mob-swiper > div:first-child img{
+    height:115px;
+    min-width:125px;
+    -o-object-fit:contain;
+       object-fit:contain;
+    width:-moz-fit-content;
+    width:fit-content;
+  }
+
   .bannervideo-container .bannervideo-wrapper .mob-swiper p{
     color:#000;
     font-size:14px;
@@ -366,6 +371,7 @@
 
   .swiperinnerdiv > div:nth-child(1){
     background:linear-gradient(252.23deg, rgb(245 248 222 / 50%) -7.15%, #F5F8DE 98.28%);
+    border-radius:0 0 19px 19px;
     bottom:0;
     display:block;
     left:0;
@@ -408,5 +414,11 @@
     right:0;
     text-align:right;
     width:100%;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .secsecond{
+    padding:0 20px;
   }
 }

@@ -11,7 +11,7 @@
   margin-left: auto;
   margin-right: auto;
 
-  @include tablet {
+  @include mobile {
     padding: 0 20px;
   }
 
@@ -366,6 +366,13 @@
     background: #fff;
     padding: 12px;
     width: 100%;
+
+    & > div:first-child img {
+        min-width: 125px;
+        height: 115px;
+        width: fit-content;
+        object-fit: contain;
+    }
   }
 
   .bannervideo-container .bannervideo-wrapper .mob-swiper p {
