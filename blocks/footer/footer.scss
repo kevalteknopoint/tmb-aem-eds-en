@@ -195,7 +195,7 @@ footer .footer>div {
 }
 
 .ul-10 li .icon-link,
-.ul-11 li .icon-link,
+.ul-11 li .icon-chat-comment,
 .ul-12 li .icon-Device-Phone-Call,
 .ul-13 li .icon-Device-Phone-Call {
   // position: absolute;
@@ -654,11 +654,6 @@ footer .footer>div {
       display: flex;
       flex-direction: row-reverse;
       justify-content: start;
-
-      .icon.icon-chat-comment {
-        width: 24px;
-        height: 24px;
-      }
     }
   }
 

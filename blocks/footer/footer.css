@@ -180,7 +180,7 @@ footer .footer > div{
 }
 
 .ul-10 li .icon-link,
-.ul-11 li .icon-link,
+.ul-11 li .icon-chat-comment,
 .ul-12 li .icon-Device-Phone-Call,
 .ul-13 li .icon-Device-Phone-Call{
   height:auto;
@@ -189,7 +189,7 @@ footer .footer > div{
 }
 
 .ul-10 li .icon-link img,
-.ul-11 li .icon-link img,
+.ul-11 li .icon-chat-comment img,
 .ul-12 li .icon-Device-Phone-Call img,
 .ul-13 li .icon-Device-Phone-Call img{
   height:24px;
@@ -933,11 +933,6 @@ footer .footer > div{
     display:flex;
     flex-direction:row-reverse;
     justify-content:start;
-  }
-
-  .tmb-footer .ul-12 li .icon.icon-chat-comment{
-    height:24px;
-    width:24px;
   }
 }
 
