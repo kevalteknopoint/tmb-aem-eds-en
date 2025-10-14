@@ -49,19 +49,11 @@ export default async function decorate(block) {
 
 
 
-  //toggle functionality for icon
-  // const iconBtn = document.querySelector('.icon-tmb-btn') ;
-  //  const jumpiconBtn = document.querySelector('.icon-jump_to_top');
-  const iconBtn = document.querySelector('section.tmb-footer .tmb-footer-wrapper .para-1 .icon.icon-tmb-btn') || document.querySelector('.section.tmb-footer .tmb-footer-wrapper .para-1 .icon.icon-jump_to_top');
+  //window scroll up functionality for icon
+  const iconBtn = document.querySelector('.section.tmb-footer .tmb-footer-wrapper .para-1 .icon.icon-tmb-btn') || document.querySelector('.section.tmb-footer .tmb-footer-wrapper .para-1 .icon.icon-jump_to_top');
   iconBtn.addEventListener('click', function () {
     const wrapper = this.closest('.default-content-wrapper');
     if (!wrapper) return;
-
-    // const ulToToggle = wrapper.querySelector('.ul-1');
-    // if (!ulToToggle) return;
-
-    // ulToToggle.classList.toggle('active');
-    // this.classList.toggle('rotated');
     window.scroll({
       top: 0,
       left: 0,
