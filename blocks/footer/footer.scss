@@ -190,12 +190,12 @@ footer .footer>div {
 .ul-11,
 .ul-12,
 .ul-13 {
-  position: relative;
+  // position: relative;
   margin: 4px auto;
 }
 
-.ul-10 li .icon-link,
-.ul-11 li .icon-link,
+.ul-10 li,
+.ul-11 li .icon-chat-comment,
 .ul-12 li .icon-Device-Phone-Call,
 .ul-13 li .icon-Device-Phone-Call {
   // position: absolute;
@@ -654,11 +654,6 @@ footer .footer>div {
       display: flex;
       flex-direction: row-reverse;
       justify-content: start;
-
-      .icon.icon-chat-comment {
-        width: 24px;
-        height: 24px;
-      }
     }
   }
 
@@ -691,9 +686,6 @@ footer .footer>div {
   font-size: 16px;
 }
 
-.tmb-sub-footer .tmb-sub-footer-wrapper .ul-1 li {
-  justify-content: flex-start;
-}
 
 
 @media screen and (max-width: 400px) {
