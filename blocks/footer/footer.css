@@ -176,10 +176,9 @@ footer .footer > div{
 .ul-12,
 .ul-13{
   margin:4px auto;
-  position:relative;
 }
 
-.ul-10 li .icon-link,
+.ul-10 li,
 .ul-11 li .icon-chat-comment,
 .ul-12 li .icon-Device-Phone-Call,
 .ul-13 li .icon-Device-Phone-Call{
@@ -188,7 +187,7 @@ footer .footer > div{
   top:7px;
 }
 
-.ul-10 li .icon-link img,
+.ul-10 li img,
 .ul-11 li .icon-chat-comment img,
 .ul-12 li .icon-Device-Phone-Call img,
 .ul-13 li .icon-Device-Phone-Call img{
