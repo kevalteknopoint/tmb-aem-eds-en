@@ -44,6 +44,7 @@ footer .footer > div{
 }
 
 .icon.icon-jump_to_top{
+  cursor:pointer;
   height:40px;
   width:156px;
 }
