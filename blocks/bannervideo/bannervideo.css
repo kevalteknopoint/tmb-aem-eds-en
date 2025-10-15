@@ -378,7 +378,7 @@
 
   .swiperinnerdiv > div:nth-child(1){
     background:linear-gradient(252.23deg, rgb(245 248 222 / 50%) -7.15%, #F5F8DE 98.28%);
-    border-radius:0 0 20px 20px;
+    border-radius:0 0 19px 19px;
     bottom:0;
     display:block;
     left:0;
