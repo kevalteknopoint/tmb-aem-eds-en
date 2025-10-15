@@ -160,6 +160,21 @@
           }
         },
         {
+          "title": "Banner Video Item 2",
+          "id": "banner-video-item-2",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Banner Video Item 2",
+                  "model": "banner-video-item-2"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Cards",
           "id": "cards",
           "plugins": {

@@ -76,15 +76,39 @@
   position: relative;
   margin-right: 2px;
 }
+.secfirst .bannervideo-wrapper .bannervideo .swiper-pagination {
+  left: 84%;
+  width: 100px;
+  /* top: -38px; */
+  bottom: 145px;
+  /* max-width: 1728px; */
+  display: flex;
+  height: 35px;
+  padding: 0 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 30px;
+  background: var(--surface-surface-primary, #F4F4F5);
+  -webkit-backdrop-filter: blur(18px);
+          backdrop-filter: blur(18px);
+}
 .secfirst .bannervideo-wrapper .bannervideo .swiper-pagination .swiper-pagination-bullet {
-  width: 49px;
-  height: 12px;
-  border-radius: 40px;
   opacity: 1;
-  background-color: #fff;
+  width: 4px;
+  height: 4px;
+  aspect-ratio: 1/1;
+  border-radius: 40px;
+  background: var(--Colour-Teal-Teal-60, rgba(0, 82, 91, 0.6));
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
 }
 .secfirst .bannervideo-wrapper .bannervideo .swiper-pagination .swiper-pagination-bullet-active {
-  background: #00525B;
+  border-radius: 40px;
+  background: var(--surface-surface-brand, #00525B);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+  width: 8px;
+  height: 8px;
+  aspect-ratio: 1/1;
 }
 .secfirst .swiper-wrapper {
   height: 600px;
@@ -215,7 +239,6 @@
   font-style: normal;
   font-weight: 400;
   width: 360px;
-  height: 96px;
   line-height: 24px;
 }
 .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container > a {
@@ -334,7 +357,7 @@
     width: 100%;
   }
   .bannervideo-container .bannervideo-wrapper .mob-swiper p {
-    margin: 0;
+    margin: 0 0 20px;
     padding: 0;
     color: #000;
     font-size: 14px;
@@ -352,8 +375,11 @@
     font-weight: 700;
     line-height: 24px;
   }
-  .bannervideo-container .bannervideo-wrapper .mob-swiper > div > picture > img {
+  .bannervideo-container .bannervideo-wrapper .mob-swiper > div > a > picture > img {
     max-width: none;
+    width: 120px;
+    border-radius: 5px;
+    height: 115px;
   }
   .mob-pbanner {
     display: block;
@@ -362,43 +388,77 @@
     display: none;
   }
   .swiperinnerdiv > div:nth-child(1) {
-    display: block;
-    margin: 0;
-    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
     width: 100%;
     bottom: 0;
     top: auto;
-    padding: 38px 18px;
-    border-radius: 0 0 20px 20px;
   }
   .swiperinnerdiv > div:nth-child(1) h1 {
-    font-size: 32px;
+    font-size: 40px;
     width: 85%;
     line-height: 32px;
     letter-spacing: 1.13px;
     margin-bottom: 13.5px;
+    font-family: var(--secondary-font);
+    font-style: normal;
+    font-weight: 900;
   }
   .swiperinnerdiv > div:nth-child(1):nth-child(1) p.button-container {
-    margin: 0px;
+    display: flex;
+    height: 35px;
+    /* min-width: 100px; */
+    /* min-height: 35px; */
+    /* padding: 8px 16px; */
+    align-items: center;
+    gap: 8px;
+    border-radius: 20px;
+    /* background: var(--surface-surface-brand, #00525B); */
+    width: 100%;
   }
   .swiperinnerdiv > div:nth-child(1):nth-child(1) p.button-container a {
-    font-size: 9px;
-    letter-spacing: normal;
-    line-height: 13.5px;
-    padding: 5.6px 23px;
-    font-weight: 600;
+    color: var(--text-text-primarycta, #F5F8DE);
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
   }
   .secfirst .bannervideo-wrapper .bannervideo .swiper-pagination .swiper-pagination-bullet {
-    width: 20px;
-    height: 7px;
+    width: 4px;
+    height: 4px;
+    aspect-ratio: 1/1;
+    border-radius: 40px;
+    background: var(--Colour-Teal-Teal-60, rgba(0, 82, 91, 0.6));
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
   }
   .bannervideo-wrapper .bannervideo .swiper-pagination-bullets {
-    bottom: 40px;
+    bottom: 33px;
     right: 0;
-    width: 100%;
-    left: -20px;
+    left: 295px;
     opacity: 1;
     color: #fff;
     text-align: right;
+    border-radius: 30px;
+    background: var(--surface-surface-primary, #F4F4F5);
+    -webkit-backdrop-filter: blur(18px);
+            backdrop-filter: blur(18px);
+    width: 74px;
+    display: flex;
+    height: 35px;
+    padding: 0 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .secfirst .bannervideo-wrapper .bannervideo .swiper-pagination .swiper-pagination-bullet-active {
+    background: #00525B;
+    border-radius: 40px;
+    width: 8px;
+    height: 8px;
+    aspect-ratio: 1/1;
   }
 }/*# sourceMappingURL=bannervideo.css.map */

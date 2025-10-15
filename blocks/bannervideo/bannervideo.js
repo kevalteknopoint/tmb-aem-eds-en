@@ -1,5 +1,4 @@
 import Swiperblock from "../../libs/swiper/swiper-bundle.min.js";
-import embedblock from "../embed/embed.js";
 import appendclasses from "../../scripts/constatnt-classes.js";
 
 function createSwiper(block) {
@@ -34,7 +33,17 @@ function createSwiper(block) {
     block.append(swiperWrapper);
     const swiperpagination = document.createElement("div");
     swiperpagination.classList.add("swiper-pagination");
-    block.append(swiperpagination);
+    const swiperpaginationouter = document.createElement("div");
+    swiperpaginationouter.classList.add("outer-pegination-div");  ///for play btn 
+    const playbtn = document.createElement('button');
+    playbtn.classList.add('play-btn');
+    const iconp = document.createElement('img');
+    iconp.src = '../../icons/Vector.svg';
+    iconp.alt = 'play Icon';
+    playbtn.appendChild(iconp);
+    swiperpaginationouter.append(swiperpagination);
+    swiperpaginationouter.append(playbtn);
+    block.append(swiperpaginationouter);
   }
 }
 function createSwiper2(block) {
