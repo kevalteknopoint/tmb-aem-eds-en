@@ -169,6 +169,12 @@ export default function decorate(block) {
           //   delay: 1000,
           //   disableOnInteraction: false,
           // },
+          on: {
+            slideChange() {
+              document.querySelector(".swiper-button-prev").disabled = this.isBeginning;
+              document.querySelector(".swiper-button-next").disabled = this.isEnd;
+            },
+          },
           navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",

@@ -166,6 +166,7 @@
   gap:32px;
   justify-content:space-between;
   list-style-type:none;
+  min-height:520px;
   padding-left:0;
 }
 
@@ -512,13 +513,7 @@
   }
 }
 
-@media screen and (min-width: 1025px){
-  .online-banking .cards-wrapper .cards .banking-cards-ul{
-    min-height:520px;
-  }
-}
-
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1023px){
   .section.expandable-tiles-section{
     padding-bottom:0;
   }
@@ -534,6 +529,10 @@
 
   .section.expandable-tiles-section .default-content-wrapper p{
     text-align:center;
+  }
+
+  .online-banking .cards-wrapper .cards .banking-cards-ul{
+    min-height:unset;
   }
 
   .banking-li-2 .cards-card-body .banking-desc-3 a{

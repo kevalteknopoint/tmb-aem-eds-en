@@ -1,4 +1,36 @@
 /* ---------- MEDIA MIXINS ---------- */
+// @mixin mobile {
+//   @media screen and (max-width: 768px) {
+//     @content;
+//   }
+// }
+
+// @mixin tablet {
+//   @media screen and (max-width: 1024px) {
+//     @content;
+//   }
+// }
+
+// @mixin desktop {
+//   @media screen and (min-width: 1025px) {
+//     @content;
+//   }
+// }
+
+
+/* ---------- MEDIA MIXINS UPDATED ---------- */
+@mixin mobileS {
+  @media screen and (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin mobileM {
+  @media screen and (max-width: 425px) {
+    @content;
+  }
+}
+
 @mixin mobile {
   @media screen and (max-width: 768px) {
     @content;
@@ -6,49 +38,22 @@
 }
 
 @mixin tablet {
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin desktopS {
+  @media screen and (max-width: 1439px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media screen and (min-width: 1025px) {
+  @media screen and (min-width: 1440px) {
     @content;
   }
 }
-
-
-/* ---------- MEDIA MIXINS UPDATED ---------- */
-// @mixin mobileS {
-//   @media screen and (max-width: 375px) {
-//     @content;
-//   }
-// }
-
-// @mixin mobileM {
-//   @media screen and (max-width: 425px) {
-//     @content;
-//   }
-// }
-
-// @mixin mobileL {
-//   @media screen and (max-width: 768px) {
-//     @content;
-//   }
-// }
-
-// @mixin tablet {
-//   @media screen and (max-width: 1023px) {
-//     @content;
-//   }
-// }
-
-// @mixin desktopS {
-//   @media screen and (max-width: 1439px) {
-//     @content;
-//   }
-// }
-
 
 /* ---------- LAYOUT MIXINS ---------- */
 // @mixin responsive-container {}

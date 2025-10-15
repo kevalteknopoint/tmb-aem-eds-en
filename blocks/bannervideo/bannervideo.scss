@@ -81,6 +81,12 @@
             background: #00525B;
           }
         }
+        
+        .swiper-button-next:disabled,
+        .swiper-button-prev:disabled {
+          opacity: 0.8;
+          pointer-events: none;
+        }
       }
     }
   }
@@ -108,14 +114,23 @@
   }
 }
 
+.mob-desk-wrapper {
+  height: 100%;
+}
+
 .desktop-banner {
   display: block;
-  border-radius: 0 0 40px 40px;
+  height: 100%;
+
+  picture {
+    height: 100%;
+  }
 
   img {
     width: 100%;
-    height: revert-layer;
+    height: 100%;
     object-fit: cover;
+    border-radius: 0 0 40px 40px;
   }
 }
 
@@ -402,10 +417,10 @@
 
   .mob-pbanner {
     display: block;
-    border-radius: 0 0 20px 20px;
-
+    
     img {
       width: 100%;
+      border-radius: 0 0 20px 20px;
     }
   }
 
