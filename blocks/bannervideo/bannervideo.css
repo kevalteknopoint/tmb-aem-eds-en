@@ -58,12 +58,6 @@
   background:#00525B;
 }
 
-.secfirst .bannervideo-wrapper .bannervideo .swiper-pagination .swiper-button-next:disabled,
-.secfirst .bannervideo-wrapper .bannervideo .swiper-pagination .swiper-button-prev:disabled{
-  opacity:0.8;
-  pointer-events:none;
-}
-
 .secfirst .swiper-wrapper{
   height:600px;
 }
