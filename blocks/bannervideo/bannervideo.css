@@ -41,10 +41,6 @@
   padding:0;
 }
 
-.secfirst .bannervideo-wrapper .bannervideo{
-  border-radius:0 0 50px 50px;
-}
-
 .secfirst .bannervideo-wrapper .bannervideo .swiper-slide{
   margin-right:2px;
   position:relative;
@@ -81,6 +77,7 @@
 }
 
 .desktop-banner{
+  border-radius:0 0 40px 40px;
   display:block;
 }
 
@@ -356,6 +353,7 @@
   }
 
   .mob-pbanner{
+    border-radius:0 0 20px 20px;
     display:block;
   }
 
@@ -371,7 +369,7 @@
 
   .swiperinnerdiv > div:nth-child(1){
     background:linear-gradient(252.23deg, rgb(245 248 222 / 50%) -7.15%, #F5F8DE 98.28%);
-    border-radius:0 0 19px 19px;
+    border-radius:0 0 20px 20px;
     bottom:0;
     display:block;
     left:0;
