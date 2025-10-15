@@ -132,7 +132,7 @@ h1, h2, h3, h4, h5, h6{
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
   .spacer-bottom{
     margin-bottom:40px;
   }

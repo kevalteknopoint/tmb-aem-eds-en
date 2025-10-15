@@ -115,7 +115,7 @@
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
   .quick-links-container{
     flex-direction:column;
     margin-left:auto;

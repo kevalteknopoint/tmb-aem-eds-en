@@ -540,7 +540,7 @@
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
   .section.expandable-tiles-section{
     padding:40px 0;
   }

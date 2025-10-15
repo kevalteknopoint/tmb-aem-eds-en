@@ -34,7 +34,7 @@ export default function expandableTiles(block) {
     const anchorElement = btnElement?.querySelector('a');
     const anchorLink = anchorElement?.getAttribute('href');
 
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 767) {
       btnElement?.querySelector('a')?.classList?.remove('button');
       btnElement?.querySelector('a')?.classList?.add('cta-link');
     } else {
@@ -63,14 +63,14 @@ export default function expandableTiles(block) {
 
     /* eslint-disable no-nested-ternary */
     const bannerSlide = htmlToElement(`
-      <div class="expandable-tile${window.innerWidth <= 768 ? ' swiper-slide' : index === 0 ? ' active' : ''}">${row.innerHTML}</div>  
+      <div class="expandable-tile${window.innerWidth <= 767 ? ' swiper-slide' : index === 0 ? ' active' : ''}">${row.innerHTML}</div>  
     `);
 
     moveInstrumentation(row, bannerSlide);
 
     row.replaceWith(bannerSlide);
 
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 767) {
       bannerSlide?.firstElementChild?.addEventListener('mouseover', () => {
         clearInterval(autoplayTimeoutId);
       });
@@ -78,7 +78,7 @@ export default function expandableTiles(block) {
       bannerSlide?.firstElementChild?.addEventListener('mouseout', () => {
         clearInterval(autoplayTimeoutId);
         autoplayTimeoutId = setInterval(() => {
-          if (window.innerWidth > 768) {
+          if (window.innerWidth > 767) {
             if (
               block?.querySelector('.expandable-tile.active')
                 ?.nextElementSibling
@@ -107,7 +107,7 @@ export default function expandableTiles(block) {
         clearInterval(autoplayTimeoutId);
 
         autoplayTimeoutId = setInterval(() => {
-          if (window.innerWidth > 768) {
+          if (window.innerWidth > 767) {
             if (
               block?.querySelector('.expandable-tile.active')
                 ?.nextElementSibling
@@ -139,7 +139,7 @@ export default function expandableTiles(block) {
     }
   });
 
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 767) {
     const swiperWrapper = htmlToElement('<div class="swiper-wrapper"></div>');
     [...block.children].forEach((row) => swiperWrapper.appendChild(row));
 
@@ -172,7 +172,7 @@ export default function expandableTiles(block) {
 
   clearInterval(autoplayTimeoutId);
   autoplayTimeoutId = setInterval(() => {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 767) {
       if (block?.querySelector('.expandable-tile.active')?.nextElementSibling) {
         block
           ?.querySelector('.expandable-tile.active')
