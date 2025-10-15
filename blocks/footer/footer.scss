@@ -39,12 +39,15 @@ footer .footer>div {
 .icon.icon-tmb-logo img {
   width: 100%;
 }
-.icon.icon-tmb-btn{
+
+.icon.icon-tmb-btn {
   display: none;
 }
+
 .icon.icon-jump_to_top {
   width: 156px;
   height: 40px;
+  cursor: pointer;
 }
 
 .icon.icon-jump_to_top img {
@@ -175,7 +178,7 @@ footer .footer>div {
 .tmb-footer .ul-9 {
   display: flex;
   justify-content: space-between;
-  padding: 0px 27px;
+  padding: 0px 27px 40px;
   margin-top: 0;
   list-style-type: none;
 }
@@ -188,17 +191,34 @@ footer .footer>div {
 .ul-11,
 .ul-12,
 .ul-13 {
-  position: relative;
+  // position: relative;
   margin: 4px auto;
 }
 
-.ul-10 li .icon-link,
-.ul-11 li .icon-link,
-.ul-12 li .icon-Search-Magnifying-Glass,
+.ul-10 li,
+.ul-11 li .icon-chat-comment,
+.ul-12 li .icon-Device-Phone-Call,
 .ul-13 li .icon-Device-Phone-Call {
-  position: absolute;
+  // position: absolute;
   top: 7px;
-  margin-left: 4px;
+  margin-left: 0;
+  height: auto;
+  img{
+     max-width: unset;
+     width: 24px;
+     height: 24px;
+  }
+ 
+}
+
+.ul-11 li,
+.ul-12 li,
+.ul-13 li {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  align-items:center;
+  gap: 4px;
 }
 
 .tmb-footer .ul-14,
@@ -224,7 +244,7 @@ footer .footer>div {
   display: flex;
 }
 
-.tmb-footer .ul-15 li{
+.tmb-footer .ul-15 li {
   color: #FFFFFF;
 }
 
@@ -236,6 +256,10 @@ footer .footer>div {
 
 .tmb-footer .ul-16 .icon img {
   width: 100%;
+}
+
+.tmb-footer .ul-16 {
+  gap: 24px;
 }
 
 .tmb-footer .ul-17 {
@@ -302,7 +326,8 @@ footer .footer>div {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 32px;
+  padding-left: 32px;
+  padding-right: 10px;
 }
 
 .tmb-sub-footer .default-content-wrapper .ul-1 li p {
@@ -330,7 +355,8 @@ footer .footer>div {
   vertical-align: bottom;
   text-decoration: underline;
   text-decoration-style: solid;
-  color: #000000;
+  color: #565659;
+
 }
 
 .tmb-sub-footer .tmb-sub-footer-wrapper .ul-3 {
@@ -379,13 +405,13 @@ footer .footer>div {
   width: 100%;
 }
 
-.icon.icon-cerifiedBcorp {
+.icon.icon-updated-certificated {
   width: 54px;
   height: 80px;
   display: block;
 }
 
-.icon.icon-cerifiedBcorp img {
+.icon.icon-updated-certificated img {
   width: 100%;
 }
 
@@ -429,7 +455,7 @@ footer .footer>div {
 .tmb-sub-footer .tmb-sub-footer-wrapper .ul-5 li:nth-child(2) a {
   font-weight: 400;
   font-size: 12px;
-  line-height: 100%;
+  line-height: normal;
   vertical-align: bottom;
   color: #737373;
   text-decoration: underline;
@@ -439,7 +465,7 @@ footer .footer>div {
 .tmb-sub-footer .tmb-sub-footer-wrapper .ul-5 li:nth-child(2) {
   font-weight: 400;
   font-size: 12px;
-  line-height: 100%;
+  line-height: normal;
   vertical-align: bottom;
   color: #737373;
 }
@@ -461,12 +487,13 @@ footer .footer>div {
 .tmb-footer .ul-17 li {
   display: flex;
   align-items: center;
-  flex-direction: row-reverse;
+  flex-direction: row;
   gap: 8px;
 
   .icon.icon-office {
     width: 24px;
     height: 24px;
+    display: block;
 
     img {
       width: 100%;
@@ -499,6 +526,10 @@ footer .footer>div {
   .tmb-footer .ul-2,
   .ul-3 {
     margin: 0 auto;
+  }
+
+  .tmb-footer>.tmb-footer-wrapper>.para-1 {
+    padding: 20px 10px;
   }
 
   .tmb-footer .ul-4,
@@ -546,6 +577,8 @@ footer .footer>div {
 
   .tmb-sub-footer .tmb-sub-footer-wrapper .ul-3 {
     padding: 46.7px 6px;
+    gap: 35px;
+    justify-content: center;
   }
 
   .tmb-sub-footer .ul-3 .icon.icon-image-4,
@@ -617,41 +650,53 @@ footer .footer>div {
     display: flex;
   }
 
-  .tmb-footer .ul-15 li .icon-phone {
-    width: 40px;
-    height: 40px;
-    padding-right: 12px;
+  .tmb-footer .ul-12 {
+    li {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: start;
+    }
   }
 
-  .tmb-footer .ul-15 li .icon-phone img {
-    min-width: 40px;
-  }
 
-  .tmb-footer .ul-16 {
-    gap: 24px;
-  }
-
-  .tmb-footer .ul-17 {
-    width: fit-content;
-  }
-
-  .tmb-footer .ul-17 li .icon-office {
-    margin-left: 8px;
-  }
-
-  .tmb-footer .ul-17 li {
-    font-size: 16px;
-  }
-
-  .tmb-sub-footer .tmb-sub-footer-wrapper .ul-1 li {
-    justify-content: flex-start;
-  }
 }
+
+.tmb-footer .ul-15 li .icon-phone {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+.tmb-footer .ul-15 li .icon-phone img {
+  min-width: 40px;
+}
+
+.tmb-footer .ul-16 {
+  gap: 24px;
+}
+
+.tmb-footer .ul-17 {
+  width: fit-content;
+}
+
+.tmb-footer .ul-17 li .icon-office {
+  margin-left: 8px;
+}
+
+.tmb-footer .ul-17 li {
+  font-size: 16px;
+}
+
+
 
 @media screen and (max-width: 400px) {
   .tmb-sub-footer .ul-3 .icon.icon-image-4 {
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .tmb-sub-footer .ul-3 {
+    gap: 25px;
   }
 
   .tmb-sub-footer .ul-3 .icon.icon-image-6 {
@@ -662,6 +707,7 @@ footer .footer>div {
 
 /* ------------ Tablet: 768px - 1024px ------------- */
 @media (max-width: 1024px) {
+
   .ul-10 li .icon-link,
   .ul-11 li .icon-link,
   .ul-12 li .icon-Search-Magnifying-Glass,
@@ -737,7 +783,7 @@ footer .footer>div {
   .tmb-footer-wrapper ul.ul-17 a {
     background-color: #fff;
     color: #004d52;
-    padding: 10px 20px;
+    // padding: 10px 20px;
     border-radius: 25px;
     font-weight: 600;
     /* display: inline-flex; */
@@ -752,17 +798,19 @@ footer .footer>div {
 
 @media (max-width: 1024px) and (min-width: 768px) {
 
-  .icon.icon-tmb-btn{
-  display: block;
-   width: 40px;
-  height: 40px;
-  img{
-    width: 100%;
+  .icon.icon-tmb-btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    img {
+      width: 100%;
+    }
   }
-}
-.icon.icon-jump_to_top{
-  display: none;
-}
+
+  .icon.icon-jump_to_top {
+    display: none;
+  }
 
   .ul-10 li .icon-link,
   .ul-11 li .icon-link,
@@ -902,7 +950,32 @@ footer .footer>div {
 @media (max-width: 767px) {
   .tmb-footer {
     padding: 24px 16px;
+
+    .tmb-footer-wrapper {
+      .para-1 {
+        .icon.icon-tmb-btn {
+          display: block;
+          width: 40px;
+          height: 40px;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .icon.icon-jump_to_top {
+          display: none;
+        }
+
+        .icon.icon-tmb-btn {
+          display: block;
+        }
+      }
+    }
+
   }
+
+
 
   .tmb-footer-wrapper ul.ul-4 {
     display: flex;
@@ -945,7 +1018,7 @@ footer .footer>div {
   }
 
   .tmb-footer-wrapper ul.ul-17 a {
-    width: 100%;
+    // width: 100%;
     justify-content: center;
   }
 }
