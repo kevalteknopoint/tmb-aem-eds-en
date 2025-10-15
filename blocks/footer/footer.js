@@ -49,20 +49,37 @@ export default async function decorate(block) {
 
 
 
-  //window scroll up functionality for icon
-  const iconBtn = document.querySelector('.section.tmb-footer .tmb-footer-wrapper .para-1 .icon.icon-tmb-btn') || document.querySelector('.section.tmb-footer .tmb-footer-wrapper .para-1 .icon.icon-jump_to_top');
-  iconBtn.addEventListener('click', function () {
-    const wrapper = this.closest('.default-content-wrapper');
-    if (!wrapper) return;
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: "smooth"
-    })
-  });
+const iconBtns = document.querySelectorAll(
+    '.section.tmb-footer .tmb-footer-wrapper .para-1 .icon.icon-tmb-btn:not(.a11y-processed), ' +
+    '.section.tmb-footer .tmb-footer-wrapper .para-1 .icon.icon-jump_to_top:not(.a11y-processed)'
+);
+
+iconBtns.forEach(iconBtn => {
+
+    // ACCESSIBILITY  
+    iconBtn.setAttribute('role', 'button');
+    iconBtn.setAttribute('tabindex', '0');
+    iconBtn.setAttribute('aria-label', 'Scroll to top of page');
+
+    //Add a flag class to mark this element as processed.
+    iconBtn.classList.add('a11y-processed');
+    iconBtn.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault(); 
+            this.click(); 
+        }
+    });
 
 
-
+    iconBtn.addEventListener('click', function () {
+        //scroll-to-top action.
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
+    });
+});
 
 }
 
