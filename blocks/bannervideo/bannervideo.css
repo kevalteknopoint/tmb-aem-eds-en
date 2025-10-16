@@ -76,8 +76,11 @@
   position: relative;
   margin-right: 2px;
 }
-.secfirst .bannervideo-wrapper .bannervideo .swiper-pagination {
-  left: 84%;
+.secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div {
+  position: relative;
+}
+.secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div .swiper-pagination {
+  left: 75%;
   width: 100px;
   /* top: -38px; */
   bottom: 145px;
@@ -93,7 +96,7 @@
   -webkit-backdrop-filter: blur(18px);
           backdrop-filter: blur(18px);
 }
-.secfirst .bannervideo-wrapper .bannervideo .swiper-pagination .swiper-pagination-bullet {
+.secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div .swiper-pagination .swiper-pagination-bullet {
   opacity: 1;
   width: 4px;
   height: 4px;
@@ -102,13 +105,39 @@
   background: var(--Colour-Teal-Teal-60, rgba(0, 82, 91, 0.6));
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
 }
-.secfirst .bannervideo-wrapper .bannervideo .swiper-pagination .swiper-pagination-bullet-active {
+.secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div .swiper-pagination .swiper-pagination-bullet-active {
   border-radius: 40px;
   background: var(--surface-surface-brand, #00525B);
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
   width: 8px;
   height: 8px;
   aspect-ratio: 1/1;
+}
+.secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div .play-btn {
+  position: absolute;
+  left: 80%;
+  bottom: 145px;
+  opacity: 11;
+  visibility: visible;
+  z-index: 1;
+  display: flex;
+  width: 35px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  aspect-ratio: 1/1;
+  border-radius: 56px;
+  background: var(--surface-surface-primary, #F4F4F5);
+  -webkit-backdrop-filter: blur(18px);
+          backdrop-filter: blur(18px);
+}
+.secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div .play-btn img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
 }
 .secfirst .swiper-wrapper {
   height: 600px;
@@ -435,7 +464,7 @@
     background: var(--Colour-Teal-Teal-60, rgba(0, 82, 91, 0.6));
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
   }
-  .bannervideo-wrapper .bannervideo .swiper-pagination-bullets {
+  .secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div .swiper-pagination {
     bottom: 33px;
     right: 0;
     left: 295px;
@@ -453,6 +482,9 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+  }
+  .secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div .play-btn {
+    display: none;
   }
   .secfirst .bannervideo-wrapper .bannervideo .swiper-pagination .swiper-pagination-bullet-active {
     background: #00525B;

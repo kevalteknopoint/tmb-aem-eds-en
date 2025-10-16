@@ -7,39 +7,34 @@ function createSwiper(block) {
     const rows = Array.from(block.children);
     const swiperWrapper = document.createElement("div");
     swiperWrapper.classList.add("swiper-wrapper");
-    rows.forEach((row, i) => {
+    rows.forEach((row) => {
       const towrapdeskandmob = document.createElement("div");
       towrapdeskandmob.classList.add("mob-desk-wrapper");
 
       const desktopDiv = row.children[0];
       const mobDiv = row.children[1];
+      const richtextdiv = row.children[2];
       row.classList.add("swiper-slide");
       row.classList.add(`swiperinnerdiv`); //${i + 1}
       swiperWrapper.append(row);
       desktopDiv.classList.add("desktop-banner");
       mobDiv.classList.add("mob-pbanner");
+      richtextdiv.classList.add("richtext-class");
 
       towrapdeskandmob.appendChild(desktopDiv);
       towrapdeskandmob.appendChild(mobDiv);
       row.append(towrapdeskandmob);
-      // appendclasses.CLASS_PREFIXES = ['mainswrapper'];
-      // appendclasses.addIndexed(row)
-      // Array.from(row.children).forEach((child, i) => {
-      //   if (child.tagName === "DIV" && child.innerHTML.trim() === "") {
-      //     child.remove();
-      //   }
-      // });
     });
     block.append(swiperWrapper);
     const swiperpagination = document.createElement("div");
     swiperpagination.classList.add("swiper-pagination");
     const swiperpaginationouter = document.createElement("div");
-    swiperpaginationouter.classList.add("outer-pegination-div");  ///for play btn 
-    const playbtn = document.createElement('button');
-    playbtn.classList.add('play-btn');
-    const iconp = document.createElement('img');
-    iconp.src = '../../icons/Vector.svg';
-    iconp.alt = 'play Icon';
+    swiperpaginationouter.classList.add("outer-pegination-div"); ///for play btn
+    const playbtn = document.createElement("button");
+    playbtn.classList.add("play-btn");
+    const iconp = document.createElement("img");
+    iconp.src = "../../icons/Vector.svg";
+    iconp.alt = "play Icon";
     playbtn.appendChild(iconp);
     swiperpaginationouter.append(swiperpagination);
     swiperpaginationouter.append(playbtn);
@@ -125,10 +120,10 @@ export default function decorate(block) {
         el: ".swiper-pagination",
         clickable: true,
       },
-      // autoplay: {
-      //   delay: 5000,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+      },
     });
 
     swiper.on("slideChange", () => {
@@ -160,8 +155,23 @@ export default function decorate(block) {
         );
       }
     });
-  }
+    ///////autoplay js////
 
+    const playBtn = document.querySelector(".play-btn");
+    let isPlaying = false;
+    swiper.autoplay.stop();
+    playBtn.addEventListener("click", () => {
+      if (!isPlaying) {
+        swiper.autoplay.start();
+        isPlaying = true;
+        playBtn.querySelector("img").src = "../../icons/pause.svg"; // change icon
+      } else {
+        swiper.autoplay.stop();
+        isPlaying = false;
+        playBtn.querySelector("img").src = "../../icons/Vector.svg"; // change back to play
+      }
+    });
+  }
   /// ///second block//////////////
 
   document
@@ -180,8 +190,16 @@ export default function decorate(block) {
           //   disableOnInteraction: false,
           // },
           navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: eachBlock.querySelector(".swiper-button-next"),
+            prevEl: eachBlock.querySelector(".swiper-button-prev"),
+          },
+          on: {
+            slideChange() {
+              document.querySelector(".swiper-button-prev").disabled =
+                this.isBeginning;
+              document.querySelector(".swiper-button-next").disabled =
+                this.isEnd;
+            },
           },
         });
         const navbtn = eachBlock.querySelector(".nav-buttons");
@@ -196,11 +214,4 @@ export default function decorate(block) {
         mobileviewswiper(eachBlock);
       }
     });
-
-  // ///////second block mobile ///////
-
-  // const link1 = block.querySelector(
-  //   ".secfirst .swiperinnerdiv3 .button-container"
-  // );
-  // embedblock(link1);
 }
