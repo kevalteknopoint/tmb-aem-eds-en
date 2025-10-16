@@ -324,6 +324,7 @@
     .online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 {
         width: unset;
         display: flex;
+        max-width: unset;
         flex-direction: column;
         border-top-left-radius: 35px;
         border-top-right-radius: 35px;
