@@ -251,7 +251,6 @@ footer .footer > div{
 .tmb-footer .ul-17{
   background-color:white;
   border-radius:20px;
-  padding:8px 16px;
 }
 
 .tmb-footer .ul-17 a{
@@ -459,7 +458,14 @@ footer .footer > div{
   align-items:center;
   display:flex;
   flex-direction:row;
-  gap:8px;
+}
+
+.tmb-footer .ul-17 li a:first-child{
+  padding:8px 0 8px 16px;
+}
+
+.tmb-footer .ul-17 li a:last-child{
+  padding:8px 16px 8px 0;
 }
 
 .tmb-footer .ul-17 li .icon.icon-office{
@@ -921,6 +927,7 @@ footer .footer > div{
   }
 
   .tmb-footer .ul-15 li{
+    align-items:flex-start;
     display:flex;
     font-size:14px;
   }
