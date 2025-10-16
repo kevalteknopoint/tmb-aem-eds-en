@@ -1,31 +1,31 @@
-/* ---------- MEDIA MIXINS ---------- */
-// @mixin mobile {
-//   @media screen and (max-width: 768px) {
-//     @content;
-//   }
-// }
+/* ---------- MEDIA MIXINS ----------
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
 
-// @mixin tablet {
-//   @media screen and (max-width: 1024px) {
-//     @content;
-//   }
-// }
+@mixin tablet {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
 
-// @mixin desktop {
-//   @media screen and (min-width: 1025px) {
-//     @content;
-//   }
-// }
-
+@mixin desktop {
+  @media screen and (min-width: 1025px) {
+    @content;
+  }
+}
+*/
 
 /* ---------- MEDIA MIXINS UPDATED ---------- */
-@mixin mobileS {
+@mixin mobile-s {
   @media screen and (max-width: 375px) {
     @content;
   }
 }
 
-@mixin mobileM {
+@mixin mobile-m {
   @media screen and (max-width: 425px) {
     @content;
   }
@@ -43,7 +43,7 @@
   }
 }
 
-@mixin desktopS {
+@mixin desktop-s {
   @media screen and (max-width: 1439px) {
     @content;
   }
@@ -56,4 +56,26 @@
 }
 
 /* ---------- LAYOUT MIXINS ---------- */
-// @mixin responsive-container {}
+@mixin responsive-container {
+  max-width: 1328px;
+
+  @include desktop-s() {
+    max-width: 960px;
+  }
+
+  @include tablet() {
+    max-width: 720px;
+  }
+
+  @include mobile() {
+    max-width: 410px;
+  }
+
+  @include mobile-m() {
+    max-width: 359px;
+  }
+
+  @include mobile-s() {
+    max-width: 304px;
+  }
+}

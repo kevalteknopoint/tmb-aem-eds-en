@@ -118,7 +118,7 @@
   }
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1023px){
   .section.quick-links-container{
     align-items:baseline;
     -moz-column-gap:40px;
@@ -137,7 +137,7 @@
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
   .section.quick-links-container{
     display:grid;
     flex-direction:column;
