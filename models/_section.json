@@ -63,6 +63,10 @@
               "value": "highlight"
             },
             {
+              "name": "AOS Enabled",
+              "value": "aos-enabled"
+            },
+            {
               "name": "tmb-acc-sec",
               "value": "tmb-acc-sec"
             },
@@ -77,7 +81,19 @@
             {
               "name": "tmb-sub-footer",
               "value": "tmb-sub-footer"
-            }  
+            },  
+            {
+              "name": "Bottom Spacer",
+              "value": "spacer-bottom"
+            },
+            {
+              "name": "Top Spacer",
+              "value": "spacer-top"
+            },
+            {
+              "name": "Hide Section",
+              "value": "d-none"
+            }
           ]
         }
       ]
@@ -99,7 +115,8 @@
         "tmb-teaser",
         "bannervideo",
         "accordion",
-        "banking-good"
+        "banking-good",
+        "teachers-form-block"
       ]
     }
   ]

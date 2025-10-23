@@ -3,6 +3,10 @@
 
 body {
   margin-top: 141px;
+
+  @include mobile {
+    margin-top: 60px;
+  }
 }
 
 .header.block {
@@ -75,12 +79,10 @@ body {
 
 .ham-menu-btn-wrap {
   height: fit-content;
+  display: none;
 
-  @include desktop {
-    display: none;
-  }
-
-  @include mobile {
+  @include tablet {
+    display: block;
     padding: 6px;
     background-color: #FFFFFF1A;
     border-radius: 100%;

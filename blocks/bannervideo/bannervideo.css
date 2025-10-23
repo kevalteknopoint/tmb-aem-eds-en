@@ -13,16 +13,37 @@
 /* ---------- SURFACE VARIABLES ---------- */
 /* ---------- FONTS VARIABLES ---------- */
 /* ---------- FONTS VARIABLES ---------- */
-/* ---------- MEDIA MIXINS ---------- */
+/* ---------- MEDIA MIXINS ----------
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1025px) {
+    @content;
+  }
+}
+*/
+/* ---------- MEDIA MIXINS UPDATED ---------- */
+/* ---------- LAYOUT MIXINS ---------- */
 /* ==============================
    Section Two Styles
 ============================== */
 .secsecond {
   max-width: 1452px;
   padding: 0 40px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .secsecond {
     padding: 0 20px;
   }
@@ -31,7 +52,7 @@
   display: flex;
   justify-content: space-between;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
   .secsecond .default-content-wrapper {
     flex-wrap: wrap;
     margin-bottom: 12px;
@@ -39,7 +60,7 @@
 }
 .secsecond .swiper-wrapper {
   display: flex;
-  padding: 30px 0;
+  padding: 30px 0 0;
   align-items: flex-start;
   gap: 0;
   align-self: stretch;
@@ -68,9 +89,6 @@
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
-}
-.secfirst .bannervideo-wrapper .bannervideo {
-  border-radius: 0 0 50px 50px;
 }
 .secfirst .bannervideo-wrapper .bannervideo .swiper-slide {
   position: relative;
@@ -167,14 +185,23 @@
   height: 100%;
 }
 
+.mob-desk-wrapper {
+  height: 100%;
+}
+
 .desktop-banner {
   display: block;
+  height: 100%;
+}
+.desktop-banner picture {
+  height: 100%;
 }
 .desktop-banner img {
   width: 100%;
-  height: revert-layer;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 0 0 40px 40px;
 }
 
 .mob-pbanner {
@@ -257,7 +284,7 @@
   left: 0;
   right: 0;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .swiperinnerdiv > div:nth-child(1) {
     gap: 12px;
   }
@@ -298,7 +325,7 @@
 }
 
 /* ==============================
-   Mobile View
+   Tablet View
 ============================== */
 .inner-section2 .video-banner .swiper-wrapper .swiper-slide > div > .button-container > a {
   color: #00525B;
@@ -346,7 +373,7 @@
 /* ==============================
    Media Queries
 ============================== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
   .secfirst .swiper-wrapper {
     height: auto;
   }
@@ -396,6 +423,14 @@
     padding: 12px;
     width: 100%;
   }
+  .bannervideo-container .bannervideo-wrapper .mob-swiper > div:first-child img {
+    min-width: 125px;
+    height: 115px;
+    width: -moz-fit-content;
+    width: fit-content;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
   .bannervideo-container .bannervideo-wrapper .mob-swiper p {
     margin: 0 0 20px;
     padding: 0;
@@ -415,7 +450,7 @@
     font-weight: 700;
     line-height: 24px;
   }
-  .bannervideo-container .bannervideo-wrapper .mob-swiper > div > a > picture > img {
+  .bannervideo-container .bannervideo-wrapper .mob-swiper > div > picture > img {
     max-width: none;
     width: 120px;
     border-radius: 5px;
@@ -424,8 +459,14 @@
   .mob-pbanner {
     display: block;
   }
+  .mob-pbanner img {
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+  }
   .desktop-banner {
     display: none;
+    width: 125px;
+    height: 115px;
   }
   .swiperinnerdiv > div:nth-child(1) {
     display: flex;

@@ -31,7 +31,7 @@ export default async function decorate(block) {
     e.classList.add(`para-${index + 1}`);
   });
 
-   const subcontent = document.querySelectorAll('.tmb-footer .tmb-footer-wrapper.default-content-wrapper p');
+  const subcontent = document.querySelectorAll('.tmb-footer .tmb-footer-wrapper.default-content-wrapper p');
   subcontent.forEach((e, index) => {
     e.classList.add(`para-${index + 1}`);
   });
@@ -41,7 +41,7 @@ export default async function decorate(block) {
     e.classList.add(`ul-${index + 1}`);
   });
 
-  
+
   const subul = document.querySelectorAll('.tmb-sub-footer .tmb-sub-footer-wrapper ul');
   subul.forEach((e, index) => {
     e.classList.add(`ul-${index + 1}`);
@@ -49,20 +49,37 @@ export default async function decorate(block) {
 
 
 
-//toggle functionality for icon
-  const iconBtn = document.querySelector('.icon-tmb-btn');
+const iconBtns = document.querySelectorAll(
+    '.section.tmb-footer .tmb-footer-wrapper .para-1 .icon.icon-tmb-btn:not(.a11y-processed), ' +
+    '.section.tmb-footer .tmb-footer-wrapper .para-1 .icon.icon-jump_to_top:not(.a11y-processed)'
+);
 
-  iconBtn.addEventListener('click', function () {
-    const wrapper = this.closest('.default-content-wrapper');
-    if (!wrapper) return;
+iconBtns.forEach(iconBtn => {
 
-    const ulToToggle = wrapper.querySelector('.ul-1');
-    if (!ulToToggle) return;
+    // ACCESSIBILITY  
+    iconBtn.setAttribute('role', 'button');
+    iconBtn.setAttribute('tabindex', '0');
+    iconBtn.setAttribute('aria-label', 'Scroll to top of page');
 
-    ulToToggle.classList.toggle('active');
-    this.classList.toggle('rotated');
-  });
+    //Add a flag class to mark this element as processed.
+    iconBtn.classList.add('a11y-processed');
+    iconBtn.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault(); 
+            this.click(); 
+        }
+    });
 
+
+    iconBtn.addEventListener('click', function () {
+        //scroll-to-top action.
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
+    });
+});
 
 }
 

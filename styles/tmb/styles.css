@@ -1,19 +1,6 @@
-/* ---------- BORDER VARIABLES ---------- */
-/* ---------- BORDER VARIABLES ---------- */
-/* ---------- TEXT VARIABLES ---------- */
-/* -------------------- */
-/* -------------------- */
-/* ---------- TEXT VARIABLES ---------- */
-/* ---------- SURFACE VARIABLES ---------- */
-/* -------------------- */
-/* -------------------- */
-/* -------------------- */
-/* -------------------- */
-/* ---------- SURFACE VARIABLES ---------- */
-/* ---------- FONTS VARIABLES ---------- */
-/* ---------- FONTS VARIABLES ---------- */
-*, *::before, *::after {
-  box-sizing: border-box;
+@import '../../libs/aos/aos.min.css';
+*, *::before, *::after{
+  box-sizing:border-box;
 }
 
 * {
@@ -89,12 +76,21 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+.d-none{
+  display:none !important;
+}
+
+.spacer-bottom{
+  margin-bottom:80px;
+}
+
+.spacer-top{
+  margin-top:80px;
+}
+
+@media screen and (max-width: 1023px){
+  .spacer-bottom{
+    margin-bottom:60px;
   }
 }
 /* ---------- MEDIA MIXINS ---------- */
@@ -166,12 +162,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.spacer-top {
-  margin-top: 80px;
-}
-@media screen and (max-width: 1024px) {
-  .spacer-top {
-    margin-top: 60px;
+@media screen and (max-width: 767px){
+  .spacer-bottom{
+    margin-bottom:40px;
+  }
+  .spacer-top{
+    margin-top:40px;
   }
 }
 @media screen and (max-width: 768px) {

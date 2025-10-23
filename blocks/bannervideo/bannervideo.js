@@ -10,6 +10,8 @@ function createSwiper(block) {
     rows.forEach((row) => {
       const towrapdeskandmob = document.createElement("div");
       towrapdeskandmob.classList.add("mob-desk-wrapper");
+      row.lastElementChild?.setAttribute('data-aos', 'fade-up');
+      row.lastElementChild?.setAttribute('data-aos-duration', '2000');
 
       const desktopDiv = row.children[0];
       const mobDiv = row.children[1];
@@ -92,13 +94,12 @@ function mobileviewswiper(block) {
       }
     });
   });
+
   document.querySelectorAll(".mob-swiper").forEach((swipermob) => {
     const btn = swipermob.querySelector(".button-container a");
     const picture = swipermob.querySelector("picture");
-
     if (btn && picture) {
       const link = btn.getAttribute("href");
-
       // check if picture already wrapped
       if (!picture.parentElement.matches("a")) {
         const anchor = document.createElement("a");
