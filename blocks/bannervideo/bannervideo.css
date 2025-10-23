@@ -77,9 +77,20 @@
   margin-right: 2px;
 }
 .secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div {
-  position: relative;
+  position: absolute;
+  width: 100%;
+  max-width: 1452px;
+  padding: 0 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 20;
+  top: 69%;
 }
 .secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div .swiper-pagination {
+  position: static;
   left: 75%;
   width: 100px;
   /* top: -38px; */
@@ -114,7 +125,7 @@
   aspect-ratio: 1/1;
 }
 .secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div .play-btn {
-  position: absolute;
+  position: static;
   left: 80%;
   bottom: 145px;
   opacity: 11;
