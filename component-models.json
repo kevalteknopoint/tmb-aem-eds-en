@@ -196,6 +196,14 @@
           {
             "name": "Hide Section",
             "value": "d-none"
+          },
+          {
+            "name": "section table wrapper",
+            "value": "section-wrapper"
+          },
+          {
+            "name": "sub section wrapper",
+            "value": "sub-section-wrapper"
           }
         ]
       }
