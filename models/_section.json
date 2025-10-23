@@ -93,6 +93,10 @@
             {
               "name": "Hide Section",
               "value": "d-none"
+            },
+            {
+              "name": "FAQ Landing Banner",
+              "value": "faq-landing-banner"
             }
           ]
         }
