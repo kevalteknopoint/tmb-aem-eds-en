@@ -1,5 +1,4 @@
 import Swiperblock from "../../libs/swiper/swiper-bundle.min.js";
-import embedblock from "../embed/embed.js";
 import appendclasses from "../../scripts/constatnt-classes.js";
 
 function createSwiper(block) {
@@ -16,11 +15,13 @@ function createSwiper(block) {
 
       const desktopDiv = row.children[0];
       const mobDiv = row.children[1];
+      const richtextdiv = row.children[2];
       row.classList.add("swiper-slide");
       row.classList.add(`swiperinnerdiv`); //${i + 1}
       swiperWrapper.append(row);
       desktopDiv.classList.add("desktop-banner");
       mobDiv.classList.add("mob-pbanner");
+      richtextdiv.classList.add("richtext-class");
 
       towrapdeskandmob.appendChild(desktopDiv);
       towrapdeskandmob.appendChild(mobDiv);
@@ -36,7 +37,17 @@ function createSwiper(block) {
     block.append(swiperWrapper);
     const swiperpagination = document.createElement("div");
     swiperpagination.classList.add("swiper-pagination");
-    block.append(swiperpagination);
+    const swiperpaginationouter = document.createElement("div");
+    swiperpaginationouter.classList.add("outer-pegination-div"); ///for play btn
+    const playbtn = document.createElement("button");
+    playbtn.classList.add("play-btn");
+    const iconp = document.createElement("img");
+    iconp.src = "../../icons/Vector.svg";
+    iconp.alt = "play Icon";
+    playbtn.appendChild(iconp);
+    swiperpaginationouter.append(swiperpagination);
+    swiperpaginationouter.append(playbtn);
+    block.append(swiperpaginationouter);
   }
 }
 function createSwiper2(block) {
@@ -116,7 +127,7 @@ export default function decorate(block) {
         clickable: true,
       },
       autoplay: {
-        delay: 5000,
+        delay: 1000,
         disableOnInteraction: false,
       },
     });
@@ -150,8 +161,23 @@ export default function decorate(block) {
         );
       }
     });
-  }
+    ///////autoplay js////
 
+    const playBtn = document.querySelector(".play-btn");
+    let isPlaying = false;
+    swiper.autoplay.stop();
+    playBtn.addEventListener("click", () => {
+      if (!isPlaying) {
+        swiper.autoplay.start();
+        isPlaying = true;
+        playBtn.querySelector("img").src = "../../icons/pause.svg"; // change icon
+      } else {
+        swiper.autoplay.stop();
+        isPlaying = false;
+        playBtn.querySelector("img").src = "../../icons/Vector.svg"; // change back to play
+      }
+    });
+  }
   /// ///second block//////////////
 
   document
@@ -169,15 +195,17 @@ export default function decorate(block) {
           //   delay: 1000,
           //   disableOnInteraction: false,
           // },
+          navigation: {
+            nextEl: eachBlock.querySelector(".swiper-button-next"),
+            prevEl: eachBlock.querySelector(".swiper-button-prev"),
+          },
           on: {
             slideChange() {
-              document.querySelector(".swiper-button-prev").disabled = this.isBeginning;
-              document.querySelector(".swiper-button-next").disabled = this.isEnd;
+              document.querySelector(".swiper-button-prev").disabled =
+                this.isBeginning;
+              document.querySelector(".swiper-button-next").disabled =
+                this.isEnd;
             },
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
           },
         });
         const navbtn = eachBlock.querySelector(".nav-buttons");
@@ -192,11 +220,4 @@ export default function decorate(block) {
         mobileviewswiper(eachBlock);
       }
     });
-
-  // ///////second block mobile ///////
-
-  const link1 = block.querySelector(
-    ".secfirst .swiperinnerdiv3 .button-container"
-  );
-  embedblock(link1);
 }
