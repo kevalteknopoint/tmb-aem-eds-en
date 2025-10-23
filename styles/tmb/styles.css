@@ -115,6 +115,10 @@ h1, h2, h3, h4, h5, h6{
   --secondary-font:"American Grotesk", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
+.d-none{
+  display:none !important;
+}
+
 .spacer-bottom{
   margin-bottom:80px;
 }
