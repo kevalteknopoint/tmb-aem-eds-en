@@ -667,6 +667,7 @@ async function loadSection(section, loadCallback) {
     }
     if (loadCallback) await loadCallback(section);
     section.dataset.sectionStatus = 'loaded';
+    if (section.classList.contains('aos-enabled')) section.dataset.aos = 'fade-up';
     section.style.display = null;
   }
 }

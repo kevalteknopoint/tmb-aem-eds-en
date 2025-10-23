@@ -134,8 +134,223 @@
         "label": "Style",
         "options": [
           {
+            "name": "secfirst",
+            "value": "secfirst"
+          },
+          {
+            "name": "secsecond",
+            "value": "secsecond"
+          },
+          {
+            "name": "quick-links",
+            "value": "quick-links"
+          },
+          {
+            "name": "momentum-teaser",
+            "value": "momentum-teaser"
+          },
+          {
+            "name": "momentum-section",
+            "value": "momentum-section"
+          },
+          {
+            "name": "online-banking",
+            "value": "online-banking"
+          },
+          {
+            "name": "Expandable Tiles",
+            "value": "expandable-tiles-section"
+          },
+          {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "AOS Enabled",
+            "value": "aos-enabled"
+          },
+          {
+            "name": "tmb-acc-sec",
+            "value": "tmb-acc-sec"
+          },
+          {
+            "name": "banking-container",
+            "value": "banking-container"
+          },
+          {
+            "name": "tmb-footer",
+            "value": "tmb-footer"
+          },
+          {
+            "name": "tmb-sub-footer",
+            "value": "tmb-sub-footer"
+          },
+          {
+            "name": "Bottom Spacer",
+            "value": "spacer-bottom"
+          },
+          {
+            "name": "Top Spacer",
+            "value": "spacer-top"
+          },
+          {
+            "name": "Hide Section",
+            "value": "d-none"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "accordion-open",
+            "value": "accordion-open"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "value": "",
+        "label": "Heading"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "value": "",
+        "label": "Body"
+      }
+    ]
+  },
+  {
+    "id": "banking-good",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "bg-image",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Heading",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "mobile-heading",
+        "label": "Heading for mobile",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "banking-good",
+            "value": "banking-good"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bannervideo",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Video banner",
+            "value": "video-banner"
+          },
+          {
+            "name": "Text Center",
+            "value": "text-center"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "banner-video-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "desk_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "desk_imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "mob_image",
+        "label": "Mobile Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "mob_imageAlt",
+        "label": "Mobile Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "context",
+        "value": "",
+        "label": "context-model",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Expandable Tiles",
+            "value": "expandable-tiles"
           }
         ]
       }
@@ -212,6 +427,124 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "quick-links",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "quick-links-block",
+            "value": "quick-links-block"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "teachers-form-block",
+    "fields": [
+      {
+        "component": "text",
+        "name": "css-link",
+        "label": "Css link"
+      },
+      {
+        "component": "text",
+        "name": "js-link",
+        "label": "JS link"
+      },
+      {
+        "component": "text",
+        "name": "form-id",
+        "label": "Enter Form ID"
+      },
+      {
+        "component": "text",
+        "name": "form-key",
+        "label": "Enter Form Key"
+      },
+      {
+        "component": "text",
+        "name": "action-link",
+        "label": "Enter action link"
+      }
+    ]
+  },
+  {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "accordion-open",
+            "value": "accordion-open"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "title",
+        "value": "",
+        "label": "Heading"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "value": "",
+        "label": "Body"
+      }
+    ]
+  },
+  {
+    "id": "tmb-teaser",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "momentum-block",
+            "value": "momentum-block"
+          }
+        ]
       }
     ]
   }

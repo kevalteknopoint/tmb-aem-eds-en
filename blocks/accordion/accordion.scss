@@ -1,0 +1,112 @@
+@use '../../styles/mixins' as *;
+
+.tmb-acc-sec.accordion-container {
+  background: #EDEDED;
+  padding: 80px 0;
+
+  @media (max-width: 390px) {
+    padding: 40px 0px;
+  }
+
+  @media (max-width: 720px) {
+    padding: 40px 0px;
+  }
+
+  .accordion {
+    margin: 0 auto;
+    max-width: 1452px;
+    padding: 0 40px;
+
+    @include mobile {
+      padding: 0 20px;
+    }
+
+    details {
+      border: none;
+
+      & + details {
+        margin-top: 24px;
+      }
+
+      p {
+        margin: 0px;
+      }
+
+      summary {
+        position: relative;
+        padding: 0 16px;
+        padding-right: 46px;
+        cursor: pointer;
+        list-style: none;
+        overflow: auto;
+        transition: background-color 0.2s;
+
+        &:focus,
+        &:hover {
+          background-color: EDEDED;
+        }
+
+        &::-webkit-details-marker {
+          display: none;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 18px;
+          transform: translateY(-50%) rotate(135deg);
+          width: 6px;
+          height: 6px;
+          border: 2px solid;
+          border-width: 2px 2px 0 0;
+          transition: transform 0.2s;
+        }
+      }
+
+      &[open] {
+        summary {
+          background-color: EDEDED;
+
+          &::after {
+            transform: translateY(-50%) rotate(-45deg);
+          }
+        }
+
+        .accordion-item-body {
+          border-top: none;
+          background-color: EDEDED;
+        }
+      }
+
+      .accordion-item-body {
+        padding: 0 16px;
+      }
+    }
+  }
+
+  .accordion-item-label {
+    /* font-family: Inter; */
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    vertical-align: bottom;
+    color: #00525B;
+  }
+
+  .accordion-item-body {
+    margin-top: 32px;
+
+    @include mobile {
+      margin-top: 18px;
+    }
+    
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 32px 0 0 0;
+      color: #333333;
+    }
+  }
+}

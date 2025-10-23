@@ -15,7 +15,25 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "quick-links",
+      "tmb-teaser",
+      "bannervideo",
+      "accordion",
+      "banking-good",
+      "teachers-form-block"
+    ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordion-item"
+    ]
+  },
+  {
+    "id": "bannervideo",
+    "components": [
+      "banner-video-item"
     ]
   },
   {
