@@ -204,6 +204,10 @@
           {
             "name": "sub section wrapper",
             "value": "sub-section-wrapper"
+          },
+          {
+            "name": "right section wrapper",
+            "value": "right-section-wrapper"
           }
         ]
       }

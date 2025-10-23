@@ -1,20 +1,55 @@
-.section.banking-good-container{
-  align-items:center;
-  -moz-column-gap:32px;
-       gap:34px 32px;
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  margin-left:auto;
-  margin-right:auto;
-  max-width:1452px;
-  padding:0 40px;
+/* ---------- BORDER VARIABLES ---------- */
+/* ---------- BORDER VARIABLES ---------- */
+/* ---------- TEXT VARIABLES ---------- */
+/* -------------------- */
+/* -------------------- */
+/* ---------- TEXT VARIABLES ---------- */
+/* ---------- SURFACE VARIABLES ---------- */
+/* -------------------- */
+/* -------------------- */
+/* -------------------- */
+/* -------------------- */
+/* ---------- SURFACE VARIABLES ---------- */
+/* ---------- FONTS VARIABLES ---------- */
+/* ---------- FONTS VARIABLES ---------- */
+/* ---------- MEDIA MIXINS ----------
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
 }
 
-.section > div.banking-good-wrapper{
-  border-radius:24px;
-  margin:0;
-  padding:0;
-  width:100%;
+@mixin tablet {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1025px) {
+    @content;
+  }
+}
+*/
+/* ---------- MEDIA MIXINS UPDATED ---------- */
+/* ---------- LAYOUT MIXINS ---------- */
+.section.banking-good-container {
+  max-width: 1452px;
+  padding: 0 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  column-gap: 32px;
+  row-gap: 34px;
+}
+
+.section > div.banking-good-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 24px;
 }
 
 .banking-good-wrapper.card-1 .banking-for-good {
@@ -89,10 +124,8 @@
   justify-content: flex-end;
 }
 
-<<<<<<< HEAD
 .banking-good-item {
   color: var(--Cream, #F5F8DE);
-  font-family: "Inter";
   font-size: 20px;
   font-weight: 900;
   line-height: 24px;
@@ -107,62 +140,26 @@
 
 .banking-good-item:nth-child(1) > div > p {
   color: #F5F8DE;
-  font-family: "Inter";
   font-size: 30px;
   font-style: normal;
   font-weight: 900;
   line-height: 40px;
   letter-spacing: 0.16px;
   text-transform: uppercase;
-=======
-.banking-good-item{
-  color:var(--Cream, #F5F8DE);
-  display:flex;
-  filter:drop-shadow(0 0 0.5px rgb(52 51 51));
-  flex-direction:column;
-  font-size:20px;
-  font-weight:900;
-  justify-content:flex-end;
-  letter-spacing:0.4px;
-  line-height:24px;
-  padding:15px 32px;
-}
-
-.banking-good-item:nth-child(1) > div > p{
-  color:#F5F8DE;
-  font-size:30px;
-  font-style:normal;
-  font-weight:900;
-  letter-spacing:0.16px;
-  line-height:40px;
-  text-transform:uppercase;
->>>>>>> ba2c887769e02e2efa015e832ce5d10b0cd41770
 }
 
 .banking-good-wrapper:not(.card-1) .banking-good-item:nth-child(2) > div > p {
   display: none;
 }
 
-<<<<<<< HEAD
 .banking-for-good ul li a {
   text-decoration: none;
   color: var(--Cream, #F5F8DE);
-  font-family: "Inter";
   font-size: 20px;
   font-weight: 900;
   line-height: 24px;
   letter-spacing: 0.4px;
   filter: drop-shadow(0px 0px 0.5px rgb(52, 51, 51));
-=======
-.banking-for-good ul li a{
-  color:var(--Cream, #F5F8DE);
-  filter:drop-shadow(0 0 0.5px rgb(52 51 51));
-  font-size:20px;
-  font-weight:900;
-  letter-spacing:0.4px;
-  line-height:24px;
-  text-decoration:none;
->>>>>>> ba2c887769e02e2efa015e832ce5d10b0cd41770
 }
 
 .banking-for-good ul li ul {
@@ -176,15 +173,9 @@
   opacity: 0;
 }
 
-<<<<<<< HEAD
-.banking-for-good:hover ul li ul {
+.banking-for-good:hover ul li ul, .banking-for-good:has(:focus) ul li ul {
   transform: translateY(10%);
   opacity: 1;
-=======
-.banking-for-good:hover ul li ul, .banking-for-good:has(:focus) ul li ul{
-  opacity:1;
-  transform:translateY(10%);
->>>>>>> ba2c887769e02e2efa015e832ce5d10b0cd41770
 }
 
 .banking-for-good ul li ul li:last-child {
@@ -197,16 +188,10 @@
   transform: translateY(0);
 }
 
-<<<<<<< HEAD
-.banking-for-good:hover .banking-good-item:nth-child(1) > div > p {
+.banking-for-good:hover .banking-good-item:nth-child(1) > div > p,
+.banking-for-good:has(:focus) .banking-good-item:nth-child(1) > div > p {
   opacity: 0;
   transform: translateY(-30px);
-=======
-.banking-for-good:hover .banking-good-item:nth-child(1) > div > p,
-.banking-for-good:has(:focus) .banking-good-item:nth-child(1) > div > p{
-  opacity:0;
-  transform:translateY(-30px);
->>>>>>> ba2c887769e02e2efa015e832ce5d10b0cd41770
 }
 
 .desktop-heading {
@@ -221,71 +206,31 @@
   display: none;
 }
 
-<<<<<<< HEAD
-@media (max-width: 400px) {
-  .section > div.banking-good-wrapper {
-    width: 150px !important;
-  }
+@media screen and (max-width: 1023px) {
   .section.banking-good-container {
-    -moz-column-gap: 8px;
-         column-gap: 8px;
+    grid-template-columns: 1fr 1fr;
   }
-  .banking-good {
-    width: 150px !important;
-  }
-  .banking-good-wrapper:not(.card-1) .banking-good-item:nth-child(2) > div > p {
-    font-size: 16px;
+  .section.banking-good-container > div.banking-good-wrapper {
+    width: 100%;
   }
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .section.banking-good-container {
     padding: 0px 20px;
-    -moz-column-gap: normal;
-         column-gap: normal;
-    row-gap: 23px;
-    margin: 40px auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 23px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .section > div.banking-good-wrapper {
-    max-width: 170px;
-    width: 100%;
+  .section.banking-good-container > div.banking-good-wrapper {
+    max-width: unset;
+    width: 100% !important;
   }
   .banking-good-wrapper.card-1 .banking-for-good {
     padding: 0;
-    max-width: 180px;
+    max-width: unset;
     width: 100%;
   }
-=======
-@media screen and (max-width: 1023px){
-  .section.banking-good-container{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .section.banking-good-container > div.banking-good-wrapper{
-    width:100%;
-  }
-}
-
-@media screen and (max-width: 767px){
-  .section.banking-good-container{
-    gap:23px;
-    grid-template-columns:1fr 1fr;
-    margin-left:auto;
-    margin-right:auto;
-    padding:0 20px;
-  }
-
-  .section.banking-good-container > div.banking-good-wrapper{
-    max-width:unset;
-    width:100% !important;
-  }
-
-  .banking-good-wrapper.card-1 .banking-for-good{
-    max-width:unset;
-    padding:0;
-    width:100%;
-  }
-
->>>>>>> ba2c887769e02e2efa015e832ce5d10b0cd41770
   .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(2),
   .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(4) {
     padding: 0;
@@ -298,37 +243,20 @@
   }
   .banking-good-item:nth-child(2) {
     display: block;
-    height: -moz-fit-content;
     height: fit-content;
   }
-<<<<<<< HEAD
   .banking-good-wrapper:not(.card-1) .banking-good-item:nth-child(2) > div > p {
     display: block;
     padding-bottom: 25px;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 900;
-=======
-
-  .banking-good-wrapper:not(.card-1) .banking-good-item:nth-child(2) > div > p{
-    display:block;
-    font-size:18px;
-    font-weight:900;
-    padding-bottom:25px;
-    text-transform:uppercase;
->>>>>>> ba2c887769e02e2efa015e832ce5d10b0cd41770
   }
   .card-1 .banking-good-item {
     padding: 15px 0px;
   }
-<<<<<<< HEAD
   .banking-for-good {
-    height: 280px;
-=======
-
-  .banking-for-good{
-    height:300px;
->>>>>>> ba2c887769e02e2efa015e832ce5d10b0cd41770
+    height: 300px;
   }
   .card-1 {
     order: 3;
@@ -348,30 +276,15 @@
   .card-6 {
     order: 5;
   }
-<<<<<<< HEAD
   .banking-good {
-    width: 170px;
+    width: 100%;
   }
   .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(4) div p {
     color: var(--Black, #000);
     font-size: 16px;
     font-weight: 100;
     line-height: 18px;
-    font-family: "Inter";
     margin-top: 10px;
-=======
-
-  .banking-good{
-    width:100%;
-  }
-
-  .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(4) div p{
-    color:var(--Black, #000);
-    font-size:16px;
-    font-weight:100;
-    line-height:18px;
-    margin-top:10px;
->>>>>>> ba2c887769e02e2efa015e832ce5d10b0cd41770
   }
   .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(2) div p {
     font-size: 20px;
@@ -382,39 +295,20 @@
     letter-spacing: 0.4px;
     text-transform: uppercase;
   }
-<<<<<<< HEAD
   .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(3) div p {
     color: var(--Black, #000);
-    font-family: "Inter";
     font-size: 16px;
     font-weight: 400;
     line-height: 18px;
   }
   .banking-good-item:nth-child(1) > div > p {
-    font-family: "American Grotesk Condensed";
+    font-family: var(--secondary-font);
     font-size: 20px;
     font-weight: 900;
     line-height: 24px;
     letter-spacing: 0.4px;
-=======
-
-  .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(3) div p{
-    color:var(--Black, #000);
-    font-size:16px;
-    font-weight:400;
-    line-height:18px;
-  }
-
-  .banking-good-item:nth-child(1) > div > p{
-    font-family:var(--secondary-font);
-    font-size:20px;
-    font-weight:900;
-    letter-spacing:0.4px;
-    line-height:24px;
->>>>>>> ba2c887769e02e2efa015e832ce5d10b0cd41770
   }
   .banking-for-good ul li ul {
-    height: -moz-fit-content;
     height: fit-content;
     bottom: 0;
     left: 0;
@@ -429,14 +323,9 @@
     transition: transform 0.5s ease;
   }
   .banking-for-good:hover ul li ul,
-<<<<<<< HEAD
+  .banking-for-good:has(:focus) ul li ul,
   .banking-for-good.active ul li ul {
     transform: translateY(0);
-=======
-  .banking-for-good:has(:focus) ul li ul,
-  .banking-for-good.active ul li ul{
-    transform:translateY(0);
->>>>>>> ba2c887769e02e2efa015e832ce5d10b0cd41770
   }
   .banking-for-good ul li ul li:last-child {
     margin-top: 12px;
@@ -452,23 +341,13 @@
     z-index: 2;
     height: auto;
   }
-<<<<<<< HEAD
-  .banking-for-good:hover .banking-good-item:last-child > div > ul > li:first-child {
+  .banking-for-good:hover .banking-good-item:last-child > div > ul > li:first-child,
+  .banking-for-good:has(:focus) .banking-good-item:last-child > div > ul > li:first-child {
     padding-top: 15px;
     border-top: 5px solid transparent;
     border-image-source: linear-gradient(to right, #00525B 0%, #00525B 24%, #ffffff 25%, #ffffff 75%, #00525B 76%, #00525B 98%, #00525B 100%);
     border-image-slice: 1;
     line-height: 25px;
-=======
-
-  .banking-for-good:hover .banking-good-item:last-child > div > ul > li:first-child,
-  .banking-for-good:has(:focus) .banking-good-item:last-child > div > ul > li:first-child{
-    border-image-slice:1;
-    border-image-source:linear-gradient(to right, #00525B 0%, #00525B 24%, #fff 25%, #fff 75%, #00525B 76%, #00525B 98%, #00525B 100%);
-    border-top:5px solid transparent;
-    line-height:25px;
-    padding-top:15px;
->>>>>>> ba2c887769e02e2efa015e832ce5d10b0cd41770
   }
   .bottom-li-1,
   .bottom-li-4,
@@ -510,52 +389,7 @@
     font-weight: 700;
     letter-spacing: 0.2px;
   }
-<<<<<<< HEAD
-}
-@media (min-width: 550px) and (max-width: 670px) {
-  .section > div.banking-good-wrapper {
-    max-width: 250px;
-    width: 100%;
-  }
-  .banking-good-wrapper.card-1 .banking-for-good {
-    max-width: 250px;
-    width: 100%;
-  }
   .banking-good {
-    width: 250px;
-=======
-
-  .banking-good{
-    width:100% !important;
->>>>>>> ba2c887769e02e2efa015e832ce5d10b0cd41770
+    width: 100% !important;
   }
 }
-@media (min-width: 670px) and (max-width: 767px) {
-  .section > div.banking-good-wrapper {
-    max-width: 300px;
-    width: 100%;
-  }
-  .banking-good-wrapper.card-1 .banking-for-good {
-    max-width: 300px;
-    width: 100%;
-  }
-  .banking-good {
-    width: 300px;
-  }
-}
-@media (min-width: 767px) and (max-width: 830px) {
-  .section > div.banking-good-wrapper {
-    width: 320px;
-  }
-}
-@media (min-width: 830px) and (max-width: 980px) {
-  .section > div.banking-good-wrapper {
-    width: 360px;
-  }
-}
-@media (min-width: 1020px) and (max-width: 1350px) {
-  .section > div.banking-good-wrapper {
-    max-width: 400px;
-    width: 100%;
-  }
-}/*# sourceMappingURL=banking-good.css.map */

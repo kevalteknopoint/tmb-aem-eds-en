@@ -1,0 +1,8 @@
+.section-wrapper {
+    display: grid;
+    grid-template-columns: 392px 1fr;
+    font-family: "Open Sans", sans-serif;
+    position: relative;
+    gap: 0 2%;
+    padding: 0 80px;
+}

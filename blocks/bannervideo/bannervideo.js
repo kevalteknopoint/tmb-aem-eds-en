@@ -1,5 +1,6 @@
 import Swiperblock from "../../libs/swiper/swiper-bundle.min.js";
 import appendclasses from "../../scripts/constatnt-classes.js";
+import faqdetailpage from "./faqdetails.js";
 
 function createSwiper(block) {
   if (!block.classList.contains("swiper")) {
@@ -10,8 +11,8 @@ function createSwiper(block) {
     rows.forEach((row) => {
       const towrapdeskandmob = document.createElement("div");
       towrapdeskandmob.classList.add("mob-desk-wrapper");
-      row.lastElementChild?.setAttribute('data-aos', 'fade-up');
-      row.lastElementChild?.setAttribute('data-aos-duration', '2000');
+      row.lastElementChild?.setAttribute("data-aos", "fade-up");
+      row.lastElementChild?.setAttribute("data-aos-duration", "2000");
 
       const desktopDiv = row.children[0];
       const mobDiv = row.children[1];
@@ -112,6 +113,8 @@ function mobileviewswiper(block) {
   });
 }
 export default function decorate(block) {
+  faqdetailpage(block);
+  console.log(block);
   if (!block.closest(".secsecond")) {
     createSwiper(block);
     const swiper = new Swiperblock(block, {

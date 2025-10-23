@@ -1,6 +1,21 @@
 @import '../../libs/aos/aos.min.css';
-*, *::before, *::after{
-  box-sizing:border-box;
+@import '../tmb/faqdetails.css';
+/* ---------- BORDER VARIABLES ---------- */
+/* ---------- BORDER VARIABLES ---------- */
+/* ---------- TEXT VARIABLES ---------- */
+/* -------------------- */
+/* -------------------- */
+/* ---------- TEXT VARIABLES ---------- */
+/* ---------- SURFACE VARIABLES ---------- */
+/* -------------------- */
+/* -------------------- */
+/* -------------------- */
+/* -------------------- */
+/* ---------- SURFACE VARIABLES ---------- */
+/* ---------- FONTS VARIABLES ---------- */
+/* ---------- FONTS VARIABLES ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 * {
@@ -76,24 +91,35 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 
-.d-none{
-  display:none !important;
-}
-
-.spacer-bottom{
-  margin-bottom:80px;
-}
-
-.spacer-top{
-  margin-top:80px;
-}
-
-@media screen and (max-width: 1023px){
-  .spacer-bottom{
-    margin-bottom:60px;
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
-/* ---------- MEDIA MIXINS ---------- */
+/* ---------- MEDIA MIXINS ----------
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1025px) {
+    @content;
+  }
+}
+*/
+/* ---------- MEDIA MIXINS UPDATED ---------- */
+/* ---------- LAYOUT MIXINS ---------- */
 :root {
   /* ---------- BORDER VARIABLES ---------- */
   --border-primary: #0b231f; /* from "border-primary" */
@@ -148,29 +174,33 @@ h1, h2, h3, h4, h5, h6 {
   /* ---------- FONTS VARIABLES ---------- */
 }
 
+.d-none {
+  display: none !important;
+}
+
 .spacer-bottom {
   margin-bottom: 80px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .spacer-bottom {
     margin-bottom: 60px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .spacer-bottom {
     margin-bottom: 40px;
   }
 }
 
-@media screen and (max-width: 767px){
-  .spacer-bottom{
-    margin-bottom:40px;
-  }
-  .spacer-top{
-    margin-top:40px;
+.spacer-top {
+  margin-top: 80px;
+}
+@media screen and (max-width: 1023px) {
+  .spacer-top {
+    margin-top: 60px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .spacer-top {
     margin-top: 40px;
   }
