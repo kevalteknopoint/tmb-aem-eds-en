@@ -458,27 +458,27 @@
     "fields": [
       {
         "component": "text",
-        "name": "css link",
+        "name": "css-link",
         "label": "Css link"
       },
       {
         "component": "text",
-        "name": "js link",
+        "name": "js-link",
         "label": "JS link"
       },
       {
         "component": "text",
-        "name": "form id",
+        "name": "form-id",
         "label": "Enter Form ID"
       },
       {
         "component": "text",
-        "name": "form key",
+        "name": "form-key",
         "label": "Enter Form Key"
       },
       {
         "component": "text",
-        "name": "action link",
+        "name": "action-link",
         "label": "Enter action link"
       }
     ]
