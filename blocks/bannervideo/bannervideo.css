@@ -475,6 +475,17 @@
     background: var(--Colour-Teal-Teal-60, rgba(0, 82, 91, 0.6));
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
   }
+  .secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 20;
+    /* bottom: 34px; */
+    top: 605px;
+  }
   .secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div .swiper-pagination {
     bottom: 33px;
     right: 0;

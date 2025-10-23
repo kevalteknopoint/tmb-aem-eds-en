@@ -557,6 +557,16 @@
   }
 
   .secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 20;
+    /* bottom: 34px; */
+    top: 605px;
+
     .swiper-pagination {
       bottom: 33px;
       right: 0;
