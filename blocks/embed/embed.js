@@ -33,9 +33,7 @@ const embedYoutube = (url, autoplay) => {
     [, vid] = url.pathname.split("/");
   }
   const embedHTML = `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
-      <iframe src="https://www.youtube.com${
-        vid ? `/embed/${vid}?rel=0&v=${vid}${suffix}` : embed
-      }" style="border: 0; top: 0; left: 0; width: 100%; height: 563px; position: absolute;" 
+      <iframe src="https://www.youtube.com${vid ? `/embed/${vid}?rel=0&v=${vid}${suffix}` : embed}" style="border: 0; top: 0; left: 0; width: 100%; height: 563px; position: absolute;" 
       allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope; picture-in-picture" allowfullscreen="" scrolling="no" title="Content from Youtube" loading="lazy"></iframe>
     </div>`;
   return embedHTML;
@@ -102,8 +100,7 @@ export default function decorate(block) {
   if (placeholder) {
     const wrapper = document.createElement("div");
     wrapper.className = "embed-placeholder";
-    wrapper.innerHTML =
-      '<div class="embed-placeholder-play"><button type="button" title="Play"></button></div>';
+    wrapper.innerHTML = '<div class="embed-placeholder-play"><button type="button" title="Play"></button></div>';
     wrapper.prepend(placeholder);
     wrapper.addEventListener("click", () => {
       loadEmbed(block, link, true);

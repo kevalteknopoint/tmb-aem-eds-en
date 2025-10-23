@@ -7,7 +7,7 @@ function createSwiper(block) {
     const rows = Array.from(block.children);
     const swiperWrapper = document.createElement("div");
     swiperWrapper.classList.add("swiper-wrapper");
-    rows.forEach((row, i) => {
+    rows.forEach((row) => {
       const towrapdeskandmob = document.createElement("div");
       towrapdeskandmob.classList.add("mob-desk-wrapper");
       row.lastElementChild?.setAttribute('data-aos', 'fade-up');
@@ -17,7 +17,7 @@ function createSwiper(block) {
       const mobDiv = row.children[1];
       const richtextdiv = row.children[2];
       row.classList.add("swiper-slide");
-      row.classList.add(`swiperinnerdiv`); //${i + 1}
+      row.classList.add(`swiperinnerdiv`); // ${i + 1}
       swiperWrapper.append(row);
       desktopDiv.classList.add("desktop-banner");
       mobDiv.classList.add("mob-pbanner");
@@ -38,7 +38,7 @@ function createSwiper(block) {
     const swiperpagination = document.createElement("div");
     swiperpagination.classList.add("swiper-pagination");
     const swiperpaginationouter = document.createElement("div");
-    swiperpaginationouter.classList.add("outer-pegination-div"); ///for play btn
+    swiperpaginationouter.classList.add("outer-pegination-div"); // for play btn
     const playbtn = document.createElement("button");
     playbtn.classList.add("play-btn");
     const iconp = document.createElement("img");
@@ -60,7 +60,7 @@ function createSwiper2(block) {
     rows.forEach((row) => {
       row.classList.add("swiper-slide");
       swiperWrapper.append(row);
-      Array.from(row.children).forEach((child, i) => {
+      Array.from(row.children).forEach((child) => {
         if (child.tagName === "DIV" && child.innerHTML.trim() === "") {
           child.remove();
         }
@@ -83,17 +83,17 @@ function createSwiper2(block) {
   }
 }
 function mobileviewswiper(block) {
-  document.querySelectorAll(".secsecond.bannervideo-container").forEach(function (e) {
-    const mobnoswiper = Array.from(e.children)
-    mobnoswiper.forEach(function (child, i) {
-      child.classList.add("mob-noswiper-child" + (i + 1));
-    })
-  })
+  document.querySelectorAll(".secsecond.bannervideo-container").forEach((e) => {
+    const mobnoswiper = Array.from(e.children);
+    mobnoswiper.forEach((child, i) => {
+      child.classList.add(`mob-noswiper-child${i + 1}`);
+    });
+  });
   console.log(block);
   const rows = Array.from(block.children);
   rows.forEach((row) => {
     row.classList.add("mob-swiper");
-    Array.from(row.children).forEach((child, i) => {
+    Array.from(row.children).forEach((child) => {
       if (child.tagName === "DIV" && child.innerHTML.trim() === "") {
         child.remove();
       }
@@ -161,7 +161,7 @@ export default function decorate(block) {
         );
       }
     });
-    ///////autoplay js////
+    // autoplay js //
 
     const playBtn = document.querySelector(".play-btn");
     let isPlaying = false;
@@ -201,10 +201,8 @@ export default function decorate(block) {
           },
           on: {
             slideChange() {
-              document.querySelector(".swiper-button-prev").disabled =
-                this.isBeginning;
-              document.querySelector(".swiper-button-next").disabled =
-                this.isEnd;
+              document.querySelector(".swiper-button-prev").disabled = this.isBeginning;
+              document.querySelector(".swiper-button-next").disabled = this.isEnd;
             },
           },
         });

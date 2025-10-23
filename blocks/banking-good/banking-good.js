@@ -23,7 +23,6 @@ export default async function decorate(block) {
     ul.append(li);
   });
 
-  let desktopHeading = null;
   let mobileHeading = null;
 
   const firstLi = ul.querySelector("li");
@@ -44,7 +43,7 @@ export default async function decorate(block) {
   wrapper.appendChild(ul);
   block.append(wrapper);
   const bottomUl = document.querySelectorAll('.banking-good-wrapper:not(.card-1) .banking-good-item:nth-child(3) >div >ul >li');
-  bottomUl.forEach((wrapper, index) => {
-    wrapper.classList.add(`bottom-li-${index + 1}`);
+  bottomUl.forEach((liItem, index) => {
+    liItem.classList.add(`bottom-li-${index + 1}`);
   });
 }

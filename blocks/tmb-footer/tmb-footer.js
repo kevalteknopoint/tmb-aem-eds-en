@@ -1,4 +1,3 @@
-
 export default function decorate(block) {
   if (window.location.href.includes("author")) return;
 

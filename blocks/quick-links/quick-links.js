@@ -4,7 +4,6 @@ export default async function decorate(block) {
   items.forEach((item) => {
     const heading = item.querySelector('p');
     const ul = item.querySelector('ul');
-    const icon = heading.querySelector('.icon-Flyout-menu-icon img');
 
     if (!heading || !ul) return;
 
@@ -12,13 +11,12 @@ export default async function decorate(block) {
       const isActive = ul.classList.contains('active');
       items.forEach((other) => {
         const otherUl = other.querySelector('ul');
-        const otherIcon = other.querySelector('.icon-Flyout-menu-icon img');
         if (otherUl) otherUl.classList.remove('active');
       });
 
       if (!isActive) {
         const allLists = block?.closest('.quick-links-container').querySelectorAll('ul');
-        allLists.forEach(item => item.classList.remove('active'));
+        allLists.forEach((listItem) => listItem.classList.remove('active'));
         ul.classList.add('active');
       }
     });
