@@ -75,26 +75,6 @@ h1, h2, h3, h4, h5, h6{
 :focus:not(:focus-visible){
   outline:none;
 }
-header{
-  display:none;
-}
-
-footer{
-  display:none;
-}
-
-.section.d-none{
-  display:none;
-}
-
-.section.sub-section-wrapper{
-  display:none;
-}
-
-.section.faq-heading-section{
-  display:none;
-}
-
 .section.faq-looking-for{
   margin:0 auto;
   max-width:1328px;

@@ -1,26 +1,6 @@
 @use '../mixins' as *;
 @use '../variables' as *;
 
-header {
-    display: none;
-}
-
-footer {
-    display: none;
-}
-
-.section.d-none{
-    display: none;
-}
-
-.section.sub-section-wrapper{
-    display: none;
-}
-
-.section.faq-heading-section{
-    display: none;
-}
-
 .section.faq-looking-for {
     max-width: 1328px;
     margin: 0 auto;
