@@ -591,7 +591,8 @@ footer .footer > div {
     vertical-align: bottom;
     text-decoration-style: solid;
     text-decoration-thickness: 0%;
-    text-decoration-skip-ink: auto;
+    -webkit-text-decoration-skip: ink;
+            text-decoration-skip-ink: auto;
   }
   .tmb-sub-footer .tmb-sub-footer-wrapper .ul-1 li {
     padding: unset;
@@ -633,6 +634,7 @@ footer .footer > div {
 }
 
 .tmb-footer .ul-17 {
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -913,4 +915,4 @@ footer .footer > div {
   .tmb-footer-wrapper ul.ul-17 a {
     justify-content: center;
   }
-}
+}/*# sourceMappingURL=footer.css.map */

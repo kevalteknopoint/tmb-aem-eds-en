@@ -1,8 +1,89 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
 .section-wrapper {
     display: grid;
-    grid-template-columns: 392px 1fr;
+    grid-template-columns: 1fr 392px; // Left | Right
+    gap: 74px;
+    padding: 0 80px;
     font-family: "Open Sans", sans-serif;
     position: relative;
-    gap: 0 2%;
-    padding: 0 80px;
+    align-items: start;
+    padding: 32px;
+
+    // Left side: stacked sub-section wrappers
+    .sub-section-wrapper:not(.right-section-wrapper) {
+        grid-column: 1;
+        grid-row: auto; // flow naturally
+
+        .default-content-wrapper>h3 {
+            color: $surface-prim-active-cta;
+            font-family: $primary-font;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0;
+        }
+
+        p {
+            color: $surface-prim-active-cta;
+            font-family: $primary-font;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+
+    .right-section-wrapper {
+        grid-column: 2;
+        grid-row: 1 / span 1;
+        align-self: start;
+        margin-top: 0;
+        position: sticky;
+        top: 80px; // distance from top when scrolling (adjust as needed)
+
+        .default-content-wrapper>h2 {
+            color: $text-secondary-cta;
+            font-family: $primary-font;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 36px;
+            letter-spacing: -1px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0, 82, 91, 0.20);
+        }
+
+        p {
+            color: $text-secondary;
+            font-family: $primary-font;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            padding: 24px 0;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex: 1 0 0;
+
+            li {
+                padding: 5px;
+                color: #0B231F;
+                font-family: $primary-font;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0;
+            }
+        }
+
+    }
 }

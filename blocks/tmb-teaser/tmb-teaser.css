@@ -48,7 +48,8 @@
 }
 
 .momentum-block > .tmb-teaser-content img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (max-width: 768px) {
@@ -129,6 +130,7 @@
   border-radius: 20px;
   margin: 0;
   display: block;
+  width: -moz-fit-content;
   width: fit-content;
   color: #fff;
 }
@@ -181,7 +183,8 @@
   }
   .momentum-block img {
     height: 232px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .momentum-teaser-block h2 {
@@ -321,6 +324,7 @@
   padding: 8px 24px;
   height: 40px;
   display: block;
+  width: -moz-fit-content;
   width: fit-content;
   font-size: 16px;
   line-height: 24px;
@@ -478,4 +482,4 @@
 
 .momentum-section > div:nth-child(2) > ul:nth-child(2) > li > ul {
   margin: 0 auto;
-}
+}/*# sourceMappingURL=tmb-teaser.css.map */

@@ -146,8 +146,10 @@
   border-radius: 20px;
   width: 100%;
   height: 555px;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   transition: all 0.7s ease-in-out;
   transition-delay: 1s;
 }
@@ -162,6 +164,7 @@
 }
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content {
   display: block;
+  min-width: -moz-fit-content;
   min-width: fit-content;
   opacity: 0;
   position: relative;
@@ -227,7 +230,9 @@
 }
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta .icon {
   display: block;
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta img {
@@ -321,6 +326,7 @@
 
 .cards-card-image {
   min-height: 250px;
+  height: -moz-fit-content;
   height: fit-content;
   position: relative;
   overflow: hidden;
@@ -397,8 +403,10 @@
   width: 100%;
   height: 100%;
   max-width: unset;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -465,6 +473,7 @@
   text-decoration: none;
   display: flex;
   align-items: center;
+  width: -moz-max-content;
   width: max-content;
   gap: 4px;
 }
@@ -630,7 +639,9 @@
     max-width: 300px;
   }
   .cards-card-image {
+    min-height: -moz-fit-content;
     min-height: fit-content;
+    height: -moz-fit-content;
     height: fit-content;
   }
   .online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li {
@@ -755,4 +766,4 @@
     line-height: 0;
   }
 }
-*/
+*//*# sourceMappingURL=cards.css.map */

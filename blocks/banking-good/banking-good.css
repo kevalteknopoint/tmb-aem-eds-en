@@ -41,7 +41,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  column-gap: 32px;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
   row-gap: 34px;
 }
 
@@ -243,6 +244,7 @@
   }
   .banking-good-item:nth-child(2) {
     display: block;
+    height: -moz-fit-content;
     height: fit-content;
   }
   .banking-good-wrapper:not(.card-1) .banking-good-item:nth-child(2) > div > p {
@@ -309,6 +311,7 @@
     letter-spacing: 0.4px;
   }
   .banking-for-good ul li ul {
+    height: -moz-fit-content;
     height: fit-content;
     bottom: 0;
     left: 0;
@@ -392,4 +395,4 @@
   .banking-good {
     width: 100% !important;
   }
-}
+}/*# sourceMappingURL=banking-good.css.map */

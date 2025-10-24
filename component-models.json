@@ -208,6 +208,10 @@
           {
             "name": "right section wrapper",
             "value": "right-section-wrapper"
+          },
+          {
+            "name": "Faq heading section",
+            "value": "faq-heading-section"
           }
         ]
       }
