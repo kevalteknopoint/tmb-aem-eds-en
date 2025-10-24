@@ -1,5 +1,6 @@
 @use '../reset';
 @use '../mixins' as *;
+@use '../components';
 @import '../../libs/aos/aos.min.css';
 
 :root {
