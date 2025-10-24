@@ -79,6 +79,10 @@ header{
   display:none;
 }
 
+footer{
+  display:none;
+}
+
 .section.d-none{
   display:none;
 }
