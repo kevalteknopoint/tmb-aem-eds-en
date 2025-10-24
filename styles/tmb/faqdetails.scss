@@ -1,15 +1,29 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
 
+.faq-heading-section {
+    h1 {
+        color: $surface-highlight;
+        font-family: $primary-font;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 44px;
+        letter-spacing: 0;
+        padding: 32px;
+        max-width: 1440px;
+    }
+}
+
 .section-wrapper {
     display: grid;
     grid-template-columns: 1fr 392px; // Left | Right
     gap: 74px;
-    padding: 0 80px;
     font-family: "Open Sans", sans-serif;
     position: relative;
     align-items: start;
     padding: 32px;
+    max-width: 1440px;
 
     // Left side: stacked sub-section wrappers
     .sub-section-wrapper:not(.right-section-wrapper) {
@@ -24,6 +38,7 @@
             font-weight: 500;
             line-height: 24px;
             letter-spacing: 0;
+            padding: 0 0 30px
         }
 
         p {
@@ -73,6 +88,18 @@
             gap: 4px;
             flex: 1 0 0;
 
+            a {
+                padding: 6px 0;
+                color: #555;
+                text-decoration: none;
+                transition: color .3s;
+            }
+
+            a.active {
+                font-weight: 600;
+                background-color: $text-inverse;
+            }
+
             li {
                 padding: 5px;
                 color: #0B231F;
@@ -82,8 +109,20 @@
                 font-weight: 400;
                 line-height: 24px;
                 letter-spacing: 0;
+
             }
         }
 
+    }
+}
+
+@include mobile {
+    .section-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .right-section-wrapper{
+        display: none;
+    }
     }
 }

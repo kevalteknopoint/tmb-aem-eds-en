@@ -33,15 +33,27 @@
 */
 /* ---------- MEDIA MIXINS UPDATED ---------- */
 /* ---------- LAYOUT MIXINS ---------- */
+.faq-heading-section h1 {
+  color: var(--surface-highlight);
+  font-family: var(--primary-font);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0;
+  padding: 32px;
+  max-width: 1440px;
+}
+
 .section-wrapper {
   display: grid;
   grid-template-columns: 1fr 392px;
   gap: 74px;
-  padding: 0 80px;
   font-family: "Open Sans", sans-serif;
   position: relative;
   align-items: start;
   padding: 32px;
+  max-width: 1440px;
 }
 .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) {
   grid-column: 1;
@@ -55,6 +67,7 @@
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0;
+  padding: 0 0 30px;
 }
 .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) p {
   color: var(--surface-prim-active-cta);
@@ -99,6 +112,16 @@
   gap: 4px;
   flex: 1 0 0;
 }
+.section-wrapper .right-section-wrapper ul a {
+  padding: 6px 0;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.section-wrapper .right-section-wrapper ul a.active {
+  font-weight: 600;
+  background-color: var(--text-inverse);
+}
 .section-wrapper .right-section-wrapper ul li {
   padding: 5px;
   color: #0B231F;
@@ -108,4 +131,14 @@
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .section-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .section-wrapper .right-section-wrapper {
+    display: none;
+  }
 }/*# sourceMappingURL=faqdetails.css.map */
