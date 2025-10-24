@@ -37,6 +37,9 @@
     ]
   },
   {
+    "id": "breadcrumb"
+  },
+  {
     "id": "cards",
     "components": [
       "card"

@@ -345,6 +345,22 @@
     ]
   },
   {
+    "id": "breadcrumb",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Alternate Variation",
+            "value": "alt-variation"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "cards",
     "fields": [
       {
