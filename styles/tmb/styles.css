@@ -75,6 +75,10 @@ h1, h2, h3, h4, h5, h6{
 :focus:not(:focus-visible){
   outline:none;
 }
+header{
+  display:none;
+}
+
 .section.d-none{
   display:none;
 }
