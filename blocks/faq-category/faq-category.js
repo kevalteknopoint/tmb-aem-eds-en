@@ -1,16 +1,18 @@
 export default function decorate(block) {
-  // Create a new div element
+  // Select the <p> element inside the block
+  const p = block.querySelector('p');
+  if (!p) return;
+
+  // Create a new div and give it a class
   const wrapper = document.createElement('div');
-  wrapper.classList.add('questions-wrapper'); // Add your desired class name
+  wrapper.classList.add('questions-container');
 
-  // Select all <ul> elements inside the block
+  // Insert the new div right after the <p> tag
+  p.insertAdjacentElement('afterend', wrapper);
+
+  // Move all <ul> elements into the new div
   const uls = block.querySelectorAll('ul');
-
-  // Move all <ul> elements into the wrapper
   uls.forEach((ul) => {
     wrapper.appendChild(ul);
   });
-
-  // Insert the wrapper into the DOM
-  block.appendChild(wrapper);
 }
