@@ -1,4 +1,6 @@
 @use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
 @import "../../libs/swiper/swiper-bundle.min.css";
 
 .section.expandable-tiles-section {
@@ -29,7 +31,7 @@
       font-size: 32px;
       line-height: 30px;
       text-align: left;
-      color: #00525b;
+      color: $text-brand;
       margin: 0 0 20px;
 
       @include tablet {
@@ -84,8 +86,24 @@
       justify-content: center;
 
       @include mobile {
+        --swiper-pagination-bottom: 0;
+        --swiper-pagination-bullet-horizontal-gap: 2px;
         gap: unset;
         justify-content: unset;
+        padding-bottom: 30px;
+
+        .swiper-pagination-bullet {
+          transition: all 0.3s linear;
+          background-color: #fff;
+          border-radius: 30px;
+          height: 7px;
+          opacity: 1;
+          width: 20px;
+
+          &.swiper-pagination-bullet-active {
+            background-color: $surface-brand;
+          }
+        }
       }
 
       .expandable-tile {
@@ -145,7 +163,7 @@
           }
 
           .content-title {
-            color: #00525b;
+            color: $text-brand;
             font-size: 16px;
             font-weight: 600;
             line-height: 19px;
@@ -162,7 +180,7 @@
           }
 
           .content-description {
-            color: #00525b;
+            color: $text-brand;
             font-size: 14px;
             line-height: 17px;
             margin: 0;
@@ -184,7 +202,7 @@
             top: 0;
 
             .cta-link {
-              color: #00525b;
+              color: $text-brand;
               font-size: 0;
               line-height: 19px;
 
@@ -234,25 +252,6 @@
 
         @include mobile {
           flex: none;
-        }
-      }
-
-      @include mobile {
-        --swiper-pagination-bottom: 0;
-        --swiper-pagination-bullet-horizontal-gap: 2px;
-        padding-bottom: 30px;
-
-        .swiper-pagination-bullet {
-          transition: all 0.3s linear;
-          background-color: #fff;
-          border-radius: 30px;
-          height: 7px;
-          opacity: 1;
-          width: 20px;
-
-          &.swiper-pagination-bullet-active {
-            background-color: #00525b;
-          }
         }
       }
     }
