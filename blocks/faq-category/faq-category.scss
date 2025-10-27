@@ -1,0 +1,9 @@
+@use '../../styles/variables' as *;
+
+.faq-container{
+    .default-content-wrapper{
+        p{
+                border-bottom: 1px dotted black;
+        }
+    }
+}
