@@ -48,7 +48,7 @@ export default async function decorate(block) {
 
   const iconBtns = document.querySelectorAll(
     '.section.tmb-footer .tmb-footer-wrapper .para-1 .icon.icon-tmb-btn:not(.a11y-processed), '
-    + '.section.tmb-footer .tmb-footer-wrapper .para-1 .icon.icon-jump_to_top:not(.a11y-processed)'
+    + '.section.tmb-footer .tmb-footer-wrapper .para-1 .icon.icon-jump-to-top:not(.a11y-processed)'
   );
 
   iconBtns.forEach((iconBtn) => {
