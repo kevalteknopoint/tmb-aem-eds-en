@@ -1,3 +1,4 @@
+@import '../../libs/aos/aos.min.css';
 *, *::before, *::after{
   box-sizing:border-box;
 }
@@ -113,6 +114,36 @@ h1, h2, h3, h4, h5, h6{
   --primary-font:"Inter", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
   --secondary-font:"American Grotesk", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
 }
+.d-none{
+  display:none !important;
+}
+
+.spacer-bottom{
+  margin-bottom:80px;
+}
+
+.spacer-top{
+  margin-top:80px;
+}
+
+@media screen and (max-width: 1023px){
+  .spacer-bottom{
+    margin-bottom:60px;
+  }
+  .spacer-top{
+    margin-top:60px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .spacer-bottom{
+    margin-bottom:40px;
+  }
+  .spacer-top{
+    margin-top:40px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce){
   *{
     animation-duration:0.01ms !important;
