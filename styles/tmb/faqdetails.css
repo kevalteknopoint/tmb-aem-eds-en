@@ -50,6 +50,7 @@ html {
   line-height: 44px;
   letter-spacing: 0;
   padding: 32px;
+  max-width: 1440px;
 }
 
 .section-wrapper {
@@ -159,14 +160,9 @@ html {
 }
 
 @media screen and (max-width: 767px) {
-  .faq-heading-section h1 {
-    padding: 24px 16px;
-    height: 200px;
-  }
   .section-wrapper {
     display: flex;
     flex-direction: column;
-    padding: 24px 16px;
   }
   .section-wrapper .right-section-wrapper {
     display: none;
