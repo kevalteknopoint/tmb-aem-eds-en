@@ -80,6 +80,7 @@
             line-height: 24px;
             letter-spacing: 0;
             padding: 24px 0;
+            padding-bottom: 30px;
         }
 
         ul {
@@ -90,14 +91,15 @@
 
             a {
                 padding: 6px 0;
-                color: #555;
+                color:$surface-prim-active-cta;
                 text-decoration: none;
                 transition: color .3s;
             }
 
             a.active {
                 font-weight: 600;
-                background-color: $text-inverse;
+                background-color: $surface-secondary;
+                transition: 0.3s;
             }
 
             li {

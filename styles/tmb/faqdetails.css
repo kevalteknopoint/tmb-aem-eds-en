@@ -105,6 +105,7 @@
   line-height: 24px;
   letter-spacing: 0;
   padding: 24px 0;
+  padding-bottom: 30px;
 }
 .section-wrapper .right-section-wrapper ul {
   display: flex;
@@ -114,13 +115,14 @@
 }
 .section-wrapper .right-section-wrapper ul a {
   padding: 6px 0;
-  color: #555;
+  color: var(--surface-prim-active-cta);
   text-decoration: none;
   transition: color 0.3s;
 }
 .section-wrapper .right-section-wrapper ul a.active {
   font-weight: 600;
-  background-color: var(--text-inverse);
+  background-color: var(--surface-secondary);
+  transition: 0.3s;
 }
 .section-wrapper .right-section-wrapper ul li {
   padding: 5px;
