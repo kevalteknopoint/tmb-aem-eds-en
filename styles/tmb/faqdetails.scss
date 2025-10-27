@@ -57,7 +57,8 @@
         align-self: start;
         margin-top: 0;
         position: sticky;
-        top: 80px; // distance from top when scrolling (adjust as needed)
+        top: 140px;
+        height: max-content;
 
         .default-content-wrapper>h2 {
             color: $text-secondary-cta;
@@ -91,7 +92,7 @@
 
             a {
                 padding: 6px 0;
-                color:$surface-prim-active-cta;
+                color: $surface-prim-active-cta;
                 text-decoration: none;
                 transition: color .3s;
             }
@@ -120,11 +121,11 @@
 
 @include mobile {
     .section-wrapper {
-    display: flex;
-    flex-direction: column;
+        display: flex;
+        flex-direction: column;
 
-    .right-section-wrapper{
-        display: none;
-    }
+        .right-section-wrapper {
+            display: none;
+        }
     }
 }
