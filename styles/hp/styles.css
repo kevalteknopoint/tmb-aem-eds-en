@@ -221,10 +221,15 @@ html{
   flex-direction:column;
   gap:4px;
 }
+.section-wrapper .right-section-wrapper ul .faq-number{
+  display:block;
+  min-width:28px;
+  width:-moz-fit-content;
+  width:fit-content;
+}
 .section-wrapper .right-section-wrapper ul a{
   color:var(--surface-prim-active-cta);
-  height:24px;
-  padding:0px 0 0px 8px;
+  padding:5px;
   text-decoration:none;
   transition:color 0.3s;
   width:100%;
@@ -234,7 +239,6 @@ html{
 }
 .section-wrapper .right-section-wrapper ul a.active{
   background-color:var(--surface-secondary);
-  font-weight:600;
   transition:0.3s;
 }
 .section-wrapper .right-section-wrapper ul li{
@@ -245,10 +249,8 @@ html{
   font-size:14px;
   font-style:normal;
   font-weight:400;
-  gap:6px;
   letter-spacing:0;
   line-height:24px;
-  padding:5px;
 }
 .section.faq-looking-for{
   margin:0 auto;
@@ -359,6 +361,12 @@ html{
   }
   .spacer-top{
     margin-top:40px;
+  }
+  .faq-heading-section h1{
+    padding:24px 16px 0 16px;
+  }
+  .section-wrapper{
+    padding:24px 16px;
   }
   .section-wrapper{
     display:flex;

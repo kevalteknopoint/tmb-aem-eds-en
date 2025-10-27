@@ -19,6 +19,10 @@ html {
         letter-spacing: 0;
         padding: 32px;
         max-width: 1440px;
+
+        @include mobile {
+          padding: 24px 16px 0 16px;
+        }
     }
 }
 
@@ -33,6 +37,10 @@ html {
     position: relative;
     align-items: start;
     padding: 32px;
+
+    @include mobile {
+      padding: 24px 16px;
+    }
 
     .sub-section-wrapper h3[id] {
         scroll-margin-top: 140px;
@@ -104,13 +112,18 @@ html {
             gap: 4px;
             flex: 1 0 0;
 
+            .faq-number {
+              display: block;
+              min-width: 28px;
+              width: fit-content;
+            }
+
             a {
-                padding: 0px 0 0px 8px;
+                padding: 5px;
                 color: $surface-prim-active-cta;
                 text-decoration: none;
                 transition: color .3s;
                 width: 100%;
-                height :24px;
             }
 
             a:hover {
@@ -118,7 +131,7 @@ html {
             }
 
             a.active {
-                font-weight: 600;
+                /* font-weight: 600; */
                 background-color: $surface-secondary;
                 transition: 0.3s;
             }
@@ -126,8 +139,6 @@ html {
             li {
                 display: flex;
                 align-items: center;
-                gap: 6px;
-                padding: 5px;
                 color: #0B231F;
                 font-family: $primary-font;
                 font-size: 14px;
@@ -135,7 +146,6 @@ html {
                 font-weight: 400;
                 line-height: 24px;
                 letter-spacing: 0;
-
             }
         }
 
