@@ -206,7 +206,7 @@
           }
         },
         {
-          "title": "faq-category",
+          "title": "FAQ Category",
           "id": "faq-category",
           "plugins": {
             "xwalk": {
