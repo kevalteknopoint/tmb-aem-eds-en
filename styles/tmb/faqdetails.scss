@@ -2,10 +2,13 @@
 @use '../../styles/mixins' as *;
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 .faq-heading-section {
+    max-width: 1264px;
+    margin: 0 auto;
+
     h1 {
         color: $surface-highlight;
         font-family: $primary-font;
@@ -15,11 +18,13 @@ html {
         line-height: 44px;
         letter-spacing: 0;
         padding: 32px;
-        max-width: 1440px;
+
     }
 }
 
 .section-wrapper {
+    max-width: 1264px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 392px; // Left | Right
     gap: 74px;
@@ -27,8 +32,6 @@ html {
     position: relative;
     align-items: start;
     padding: 32px;
-    max-width: 1440px;
-
 
     .sub-section-wrapper h3[id] {
         scroll-margin-top: 140px;
