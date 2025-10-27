@@ -6,8 +6,16 @@ if (window.location.href.includes("/faq-detail")) {
   const addclsstoul = mainClass.querySelector(".right-section-wrapper ul");
 
   if (addclsstoul) addclsstoul.classList.add("right-ul");
-
   Array.from(subsecwrapper).forEach((e) => secwrapper.append(e));
+
+  document.querySelectorAll(".right-ul li").forEach((li) => {
+    const text = li.firstChild.textContent.trim();
+    const span = document.createElement("span");
+    span.textContent = text;
+    span.classList.add("faq-number");
+    li.firstChild.remove();
+    li.prepend(span);
+  });
 
   const sections = mainClass.querySelectorAll(
     ".sub-section-wrapper .default-content-wrapper h3[id]"
@@ -26,7 +34,8 @@ if (window.location.href.includes("/faq-detail")) {
       const sectionWrapper = heading.closest(".sub-section-wrapper");
 
       const offset = 140;
-      const topPos = sectionWrapper.getBoundingClientRect().top + window.scrollY - offset;
+      const topPos =
+        sectionWrapper.getBoundingClientRect().top + window.scrollY - offset;
 
       window.scrollTo({
         top: topPos,
