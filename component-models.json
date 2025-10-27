@@ -414,8 +414,8 @@
         "label": "Style",
         "options": [
           {
-            "name": "faq-category-block",
-            "value": "faq-category-block"
+            "name": "faq-category",
+            "value": "faq-category"
           }
         ]
       }

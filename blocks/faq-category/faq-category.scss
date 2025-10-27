@@ -1,25 +1,19 @@
 @use '../../styles/variables' as *;
 
-.faq-category-container{
-        display: flex;
-    // justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 32px;
-    // margin-left: auto;
-    // margin-right: auto;
-    // padding: 0 40px;.faq-category
-    .faq-category{
-            p{
-                    border-bottom: 1px dotted black;
-            }
-            .questions-container{
-                ul{
-                    li{
-                        min-width: 588px;
-                        max-width: 100%;
-                    }
-                }
-            }
+.faq-container {
+
+    .default-content-wrapper {
+
+        display: grid;
+        grid-template-areas:
+            "faq-title faq-title"
+            "left-content right-content";
+        grid-template-columns: 1fr 1fr;
+
+        p {
+            width: 100%;
+            grid-area: faq-title;
+            border-bottom: 1px solid;
+        }
     }
 }

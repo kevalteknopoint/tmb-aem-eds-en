@@ -1,15 +1,11 @@
-.faq-category-container{
-  align-items:center;
-  display:flex;
-  flex-wrap:wrap;
-  gap:32px;
+.faq-container .default-content-wrapper{
+  display:grid;
+  grid-template-areas:"faq-title faq-title" "left-content right-content";
+  grid-template-columns:1fr 1fr;
 }
 
-.faq-category-container .faq-category p{
-  border-bottom:1px dotted black;
-}
-
-.faq-category-container .faq-category .questions-container ul li{
-  max-width:100%;
-  min-width:588px;
+.faq-container .default-content-wrapper p{
+  border-bottom:1px solid;
+  grid-area:faq-title;
+  width:100%;
 }
