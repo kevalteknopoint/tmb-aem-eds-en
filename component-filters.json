@@ -34,7 +34,8 @@
   {
     "id": "bannervideo",
     "components": [
-      "banner-video-item"
+      "banner-video-item",
+      "banner-video-item-2"
     ]
   },
   {

@@ -1,4 +1,3 @@
-// add delayed functionality here
 if (window.location.href.includes("/faq-detail")) {
   const mainClass = document.querySelector("main");
 
@@ -35,8 +34,7 @@ if (window.location.href.includes("/faq-detail")) {
       const sectionWrapper = heading.closest(".sub-section-wrapper");
 
       const offset = 150;
-      const topPos =
-        sectionWrapper.getBoundingClientRect().top + window.scrollY - offset;
+      const topPos = sectionWrapper.getBoundingClientRect().top + window.scrollY - offset;
 
       heading.scrollIntoView({
         behavior: "smooth",
