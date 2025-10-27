@@ -6,6 +6,9 @@ html {
 }
 
 .faq-heading-section {
+    max-width: 1264px;
+    margin: 0 auto;
+
     h1 {
         color: $surface-highlight;
         font-family: $primary-font;
@@ -20,15 +23,16 @@ html {
 }
 
 .section-wrapper {
+    max-width: 1264px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 392px; // Left | Right
-    gap: 74px;
+    column-gap: 74px;
+    row-gap: 32px;
     font-family: "Open Sans", sans-serif;
     position: relative;
     align-items: start;
     padding: 32px;
-    max-width: 1440px;
-
 
     .sub-section-wrapper h3[id] {
         scroll-margin-top: 140px;
@@ -101,11 +105,12 @@ html {
             flex: 1 0 0;
 
             a {
-                padding: 8px 0 6px 8px;
+                padding: 0px 0 0px 8px;
                 color: $surface-prim-active-cta;
                 text-decoration: none;
                 transition: color .3s;
                 width: 100%;
+                height :24px;
             }
 
             a:hover {
@@ -141,6 +146,7 @@ html {
     .section-wrapper {
         display: flex;
         flex-direction: column;
+        gap:32px;
 
         .right-section-wrapper {
             display: none;
