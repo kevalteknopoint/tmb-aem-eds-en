@@ -128,8 +128,7 @@
   .section.quick-links-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    -moz-column-gap: 40px;
-         column-gap: 40px;
+    column-gap: 40px;
     row-gap: 80px;
     align-items: baseline;
   }
@@ -141,8 +140,7 @@
   .section.quick-links-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    -moz-column-gap: 40px;
-         column-gap: 40px;
+    column-gap: 40px;
     row-gap: 80px;
     align-items: baseline;
   }
@@ -208,4 +206,4 @@
     width: 18px;
     height: 18px;
   }
-}/*# sourceMappingURL=quick-links.css.map */
+}

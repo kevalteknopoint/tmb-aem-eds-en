@@ -47,7 +47,6 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: -moz-fit-content;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -113,7 +112,6 @@ body {
 }
 
 .ham-menu-btn-wrap {
-  height: -moz-fit-content;
   height: fit-content;
   display: none;
 }
@@ -223,7 +221,6 @@ body {
   align-items: center;
   justify-content: flex-end;
   gap: 24px;
-  width: -moz-fit-content;
   width: fit-content;
 }
 @media screen and (max-width: 1023px) {
@@ -254,7 +251,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .header-actions-wrap .login-btn-wrap:has(.disabled) {
@@ -270,7 +266,6 @@ body {
   line-height: 24px;
   font-weight: 500;
   min-width: 100px;
-  width: -moz-fit-content;
   width: fit-content;
   border-radius: 20px;
   transition: all 0.3s ease-in-out;
@@ -290,4 +285,4 @@ body {
 }
 .header-actions-wrap .login-btn-wrap .login-btn:active {
   background-color: var(--surface-accent-active-cta);
-}/*# sourceMappingURL=header.css.map */
+}
