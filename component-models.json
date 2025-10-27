@@ -200,6 +200,10 @@
           {
             "name": "faq-Looking",
             "value": "faq-looking-for"
+          },
+          {
+            "name": "FAQ Landing Banner",
+            "value": "faq-landing-banner"
           }
         ]
       }
@@ -341,6 +345,22 @@
         "value": "",
         "label": "context-model",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "breadcrumb",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Alternate Variation",
+            "value": "alt-variation"
+          }
+        ]
       }
     ]
   },

@@ -21,7 +21,8 @@
       "bannervideo",
       "accordion",
       "banking-good",
-      "teachers-form-block"
+      "teachers-form-block",
+      "breadcrumb"
     ]
   },
   {
@@ -35,6 +36,9 @@
     "components": [
       "banner-video-item"
     ]
+  },
+  {
+    "id": "breadcrumb"
   },
   {
     "id": "cards",

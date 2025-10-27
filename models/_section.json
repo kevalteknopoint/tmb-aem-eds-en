@@ -97,6 +97,10 @@
             {
               "name": "faq-Looking",
               "value": "faq-looking-for"
+            },
+            {
+              "name": "FAQ Landing Banner",
+              "value": "faq-landing-banner"
             }
           ]
         }
@@ -120,7 +124,8 @@
         "bannervideo",
         "accordion",
         "banking-good",
-        "teachers-form-block"
+        "teachers-form-block",
+        "breadcrumb"
       ]
     }
   ]
