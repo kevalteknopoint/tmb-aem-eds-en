@@ -33,6 +33,10 @@
 */
 /* ---------- MEDIA MIXINS UPDATED ---------- */
 /* ---------- LAYOUT MIXINS ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
 .faq-heading-section h1 {
   color: var(--surface-highlight);
   font-family: var(--primary-font);
@@ -54,6 +58,10 @@
   align-items: start;
   padding: 32px;
   max-width: 1440px;
+}
+.section-wrapper .sub-section-wrapper h3[id] {
+  scroll-margin-top: 140px;
+  /* Adjust depending on header height */
 }
 .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) {
   grid-column: 1;
@@ -115,11 +123,14 @@
   flex: 1 0 0;
 }
 .section-wrapper .right-section-wrapper ul a {
-  padding: 6px 0;
+  padding: 8px 0 6px 8px;
   color: var(--surface-prim-active-cta);
   text-decoration: none;
   transition: color 0.3s;
   width: 100%;
+}
+.section-wrapper .right-section-wrapper ul a:hover {
+  background: var(--surface-disabled-cta);
 }
 .section-wrapper .right-section-wrapper ul a.active {
   font-weight: 600;

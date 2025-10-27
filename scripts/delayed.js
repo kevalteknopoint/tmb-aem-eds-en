@@ -33,10 +33,14 @@ if (window.location.href.includes("/faq-detail")) {
 
       const sectionWrapper = heading.closest(".sub-section-wrapper");
 
-      const offset = 140;
+      const offset = 150;
       const topPos =
         sectionWrapper.getBoundingClientRect().top + window.scrollY - offset;
 
+      heading.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
       window.scrollTo({
         top: topPos,
         behavior: "smooth",
@@ -59,7 +63,7 @@ if (window.location.href.includes("/faq-detail")) {
     },
     {
       threshold: 0.4,
-      rootMargin: "-100px 0px -50% 0px",
+      rootMargin: "-100px 0px -40% 0px",
     }
   );
 
