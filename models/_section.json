@@ -42,7 +42,7 @@
               "name": "quick-links",
               "value": "quick-links"
             },
-                        {
+            {
               "name": "momentum-teaser",
               "value": "momentum-teaser"
             },
@@ -81,7 +81,7 @@
             {
               "name": "tmb-sub-footer",
               "value": "tmb-sub-footer"
-            },  
+            },
             {
               "name": "Bottom Spacer",
               "value": "spacer-bottom"
@@ -93,6 +93,10 @@
             {
               "name": "Hide Section",
               "value": "d-none"
+            },
+            {
+              "name": "Faq container",
+              "value": "faq-container"
             }
           ]
         }
@@ -116,7 +120,8 @@
         "bannervideo",
         "accordion",
         "banking-good",
-        "teachers-form-block"
+        "teachers-form-block",
+        "faq-category"
       ]
     }
   ]
