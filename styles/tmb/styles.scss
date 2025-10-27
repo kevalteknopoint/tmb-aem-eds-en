@@ -1,6 +1,7 @@
-@import '../../libs/aos/aos.min.css';
 @use '../reset';
 @use '../mixins' as *;
+@import '../../libs/aos/aos.min.css';
+@import '../tmb/faqdetails.css';
 
 :root {
   /* ---------- BORDER VARIABLES ---------- */

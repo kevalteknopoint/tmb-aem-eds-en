@@ -1,17 +1,207 @@
-/* Error: @use rules must be written before any other rules.
- *   ,
- * 2 | @use '../reset';
- *   | ^^^^^^^^^^^^^^^
- *   '
- *   styles\tmb\styles.scss 2:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: @use rules must be written before any other rules.\a   \2577 \a 2 \2502  @use '../reset';\d\a   \2502  ^^^^^^^^^^^^^^^\a   \2575 \a   styles\\tmb\\styles.scss 2:1  root stylesheet";
+@import '../../libs/aos/aos.min.css';
+@import '../tmb/faqdetails.css';
+/* ---------- BORDER VARIABLES ---------- */
+/* ---------- BORDER VARIABLES ---------- */
+/* ---------- TEXT VARIABLES ---------- */
+/* -------------------- */
+/* -------------------- */
+/* ---------- TEXT VARIABLES ---------- */
+/* ---------- SURFACE VARIABLES ---------- */
+/* -------------------- */
+/* -------------------- */
+/* -------------------- */
+/* -------------------- */
+/* ---------- SURFACE VARIABLES ---------- */
+/* ---------- FONTS VARIABLES ---------- */
+/* ---------- FONTS VARIABLES ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  font-size: 100%;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: var(--primary-font);
+  background-color: #fff;
+  color: #000;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* ---------- MEDIA MIXINS ----------
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1025px) {
+    @content;
+  }
+}
+*/
+/* ---------- MEDIA MIXINS UPDATED ---------- */
+/* ---------- LAYOUT MIXINS ---------- */
+:root {
+  /* ---------- BORDER VARIABLES ---------- */
+  --border-primary: #0b231f; /* from "border-primary" */
+  --border-brand: #00a8b8; /* from "border-brand" */
+  --border-error: #e52336; /* from "border-error" */
+  /* ---------- BORDER VARIABLES ---------- */
+  /* ---------- TEXT VARIABLES ---------- */
+  --text-primary: #000; /* from "text-primary" */
+  --text-secondary: #565659; /* from "text-secondary" */
+  --text-inverse: #fff; /* from "text-inverse" */
+  --text-light: #f5f8de; /* from "text-light" */
+  --text-brand: #00525b; /* from "text-brand" */
+  --text-brand-secondary: #009bab; /* from "text-brand secondary" */
+  /* -------------------- */
+  --text-primary-cta: #f5f8de; /* from "text-primarycta" */
+  --text-secondary-cta: #00525b; /* from "text-secondarycta" */
+  --text-accent-cta: #00525b; /* from "text-accentcta" */
+  --text-disabled: #d9dadb; /* from "text-disabled" */
+  --text-error: #e52336; /* from "text-error" */
+  /* -------------------- */
+  --text-ghost-default: #00525b; /* from "text -ghost default" */
+  --text-ghost-hover: #000; /* from "text -ghost hover" */
+  --text-ghost-focused: #000; /* from "text -ghost focused" */
+  --text-ghost-disabled: #d9dadb; /* from "text -ghost disabled" */
+  --text-ghost-active: #009bab; /* from "text -ghost active" */
+  /* ---------- TEXT VARIABLES ---------- */
+  /* ---------- SURFACE VARIABLES ---------- */
+  --surface-primary: #f4f4f5; /* from "surface-primary" */
+  --surface-secondary: #d9dadb; /* from "surface-secondary" */
+  --surface-overlay: #565659; /* from "surface-overlay" */
+  --surface-brand: #00525b; /* from "surface-brand" */
+  --surface-light: #fafafa; /* from "surface-light" */
+  --surface-login-cta: #f5f8de; /* from "surface-login cta" */
+  /* -------------------- */
+  --surface-primary-cta: #00525b; /* from "surface-primary cta" */
+  --surface-prim-hover-cta: #014047; /* from "surface-primhover cta" */
+  --surface-prim-active-cta: #0b231f; /* from "surface-primactive cta" */
+  /* -------------------- */
+  --surface-secondary-cta: #f3f5f6; /* from "surface-secondary cta" */
+  --surface-sec-hover-cta: #009bab; /* from "surface-sechover cta" */
+  /* -------------------- */
+  --surface-accent-cta: #f5f8de; /* from "surface-accent cta" */
+  --surface-accent-hover-cta: #f9ffc8; /* from "surface-accenthover cta" */
+  --surface-accent-active-cta: #fff67f; /* from "surface-accentactive cta" */
+  /* -------------------- */
+  --surface-disabled-cta: #efefef; /* from "surface-disabledcta" */
+  --surface-highlight: #00525b; /* from "surface-highlight" */
+  /* ---------- SURFACE VARIABLES ---------- */
+  /* ---------- FONTS VARIABLES ---------- */
+  --primary-font: "Inter", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
+  --secondary-font: "American Grotesk", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
+  /* ---------- FONTS VARIABLES ---------- */
+}
+
+.d-none {
+  display: none !important;
+}
+
+.spacer-bottom {
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 1023px) {
+  .spacer-bottom {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .spacer-bottom {
+    margin-bottom: 40px;
+  }
+}
+
+.spacer-top {
+  margin-top: 80px;
+}
+@media screen and (max-width: 1023px) {
+  .spacer-top {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .spacer-top {
+    margin-top: 40px;
+  }
+}/*# sourceMappingURL=styles.css.map */
