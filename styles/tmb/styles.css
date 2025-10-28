@@ -130,7 +130,7 @@ h1, h2, h3, h4, h5, h6{
 
 .faq-heading-section{
   margin:0 auto;
-  max-width:1264px;
+  max-width:1328px;
 }
 .faq-heading-section h1{
   color:var(--surface-highlight);
@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5, h6{
   font-family:"Open Sans", sans-serif;
   grid-template-columns:1fr 392px;
   margin:0 auto;
-  max-width:1264px;
+  max-width:1328px;
   padding:32px;
   position:relative;
 }
