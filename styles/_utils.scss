@@ -1,0 +1,29 @@
+@use './mixins' as *;
+
+.d-none {
+  display: none !important;
+}
+
+.spacer-bottom {
+  margin-bottom: 80px;
+  
+  @include tablet {
+    margin-bottom: 60px;
+  }
+
+  @include mobile {
+    margin-bottom: 40px;
+  }
+}
+
+.spacer-top {
+  margin-top: 80px;
+  
+  @include tablet {
+    margin-top: 60px;
+  }
+
+  @include mobile {
+    margin-top: 40px;
+  }
+}
