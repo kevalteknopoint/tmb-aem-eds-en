@@ -1,7 +1,7 @@
 module.exports = {
   plugins: {
     'autoprefixer': {},
-    'postcss-merge-selectors': {},
+    'postcss-combine-duplicated-selectors': {},
     'postcss-sorting': {
       order: [
         'custom-properties',
