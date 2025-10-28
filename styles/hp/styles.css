@@ -132,7 +132,7 @@ html{
 
 .faq-heading-section{
   margin:0 auto;
-  max-width:1328px;
+  max-width:1264px;
 }
 .faq-heading-section h1{
   color:var(--surface-highlight);
@@ -154,7 +154,7 @@ html{
   font-family:"Open Sans", sans-serif;
   grid-template-columns:1fr 392px;
   margin:0 auto;
-  max-width:1328px;
+  max-width:1264px;
   padding:32px;
   position:relative;
   row-gap:32px;
@@ -193,6 +193,7 @@ html{
   margin-top:0;
   position:sticky;
   top:140px;
+  width:326px;
 }
 .section-wrapper .right-section-wrapper .default-content-wrapper > h2{
   border-bottom:1px solid rgba(0, 82, 91, 0.2);
@@ -221,15 +222,10 @@ html{
   flex-direction:column;
   gap:4px;
 }
-.section-wrapper .right-section-wrapper ul .faq-number{
-  display:block;
-  min-width:28px;
-  width:-moz-fit-content;
-  width:fit-content;
-}
 .section-wrapper .right-section-wrapper ul a{
   color:var(--surface-prim-active-cta);
-  padding:5px;
+  height:24px;
+  padding:0px 0 0px 8px;
   text-decoration:none;
   transition:color 0.3s;
   width:100%;
@@ -238,7 +234,8 @@ html{
   background:var(--surface-disabled-cta);
 }
 .section-wrapper .right-section-wrapper ul a.active{
-  background-color:rgba(0, 82, 91, 0.2);
+  background-color:var(--surface-secondary);
+  font-weight:600;
   transition:0.3s;
 }
 .section-wrapper .right-section-wrapper ul li{
@@ -249,8 +246,10 @@ html{
   font-size:14px;
   font-style:normal;
   font-weight:400;
+  gap:6px;
   letter-spacing:0;
   line-height:24px;
+  padding:5px;
 }
 .section.faq-looking-for{
   margin:0 auto;
@@ -361,12 +360,6 @@ html{
   }
   .spacer-top{
     margin-top:40px;
-  }
-  .faq-heading-section h1{
-    padding:24px 16px 0 16px;
-  }
-  .section-wrapper{
-    padding:24px 16px;
   }
   .section-wrapper{
     display:flex;

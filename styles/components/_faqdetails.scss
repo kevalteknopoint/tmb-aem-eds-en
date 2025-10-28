@@ -6,7 +6,7 @@ html {
 }
 
 .faq-heading-section {
-    max-width: 1328px;
+    max-width: 1264px;
     margin: 0 auto;
 
     h1 {
@@ -19,15 +19,11 @@ html {
         letter-spacing: 0;
         padding: 32px;
         max-width: 1440px;
-
-        @include mobile {
-          padding: 24px 16px 0 16px;
-        }
     }
 }
 
 .section-wrapper {
-    max-width: 1328px;
+    max-width: 1264px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 392px; // Left | Right
@@ -37,10 +33,6 @@ html {
     position: relative;
     align-items: start;
     padding: 32px;
-
-    @include mobile {
-      padding: 24px 16px;
-    }
 
     .sub-section-wrapper h3[id] {
         scroll-margin-top: 140px;
@@ -82,6 +74,7 @@ html {
         position: sticky;
         top: 140px;
         height: max-content;
+        width: 326px;
 
         .default-content-wrapper>h2 {
             color: $text-secondary-cta;
@@ -112,18 +105,13 @@ html {
             gap: 4px;
             flex: 1 0 0;
 
-            .faq-number {
-              display: block;
-              min-width: 28px;
-              width: fit-content;
-            }
-
             a {
-                padding: 5px;
+                padding: 0px 0 0px 8px;
                 color: $surface-prim-active-cta;
                 text-decoration: none;
                 transition: color .3s;
                 width: 100%;
+                height :24px;
             }
 
             a:hover {
@@ -131,14 +119,16 @@ html {
             }
 
             a.active {
-                /* font-weight: 600; */
-                background-color: #00525B33;
+                font-weight: 600;
+                background-color: $surface-secondary;
                 transition: 0.3s;
             }
 
             li {
                 display: flex;
                 align-items: center;
+                gap: 6px;
+                padding: 5px;
                 color: #0B231F;
                 font-family: $primary-font;
                 font-size: 14px;
@@ -146,6 +136,7 @@ html {
                 font-weight: 400;
                 line-height: 24px;
                 letter-spacing: 0;
+
             }
         }
 
