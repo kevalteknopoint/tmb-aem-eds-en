@@ -14,7 +14,22 @@
                     }
                 }
             }
+        },
+         {
+      "title": "FAQ  Category Item",
+      "id": "faq-category-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "faq-category-item",
+              "model": "faq-category-item"
+            }
+          }
         }
+      }
+    }
     ],
     "models": [
         {

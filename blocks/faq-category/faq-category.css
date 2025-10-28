@@ -1,3 +1,85 @@
+*, *::before, *::after{
+  box-sizing:border-box;
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+
+html{
+  font-size:100%;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background-color:#fff;
+  color:#000;
+  font-family:var(--primary-font);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.5;
+  min-height:100vh;
+  text-rendering:optimizelegibility;
+}
+
+ul, ol{
+  list-style:none;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img, picture, video, canvas, svg{
+  display:block;
+  height:auto;
+  max-width:100%;
+}
+
+input, button, textarea, select{
+  background:none;
+  border:none;
+  color:inherit;
+  font:inherit;
+  outline:none;
+}
+
+textarea{
+  resize:vertical;
+}
+
+button{
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  padding:0;
+}
+
+table{
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-size:inherit;
+  font-weight:inherit;
+}
+
+:focus-visible{
+  outline:2px solid #000;
+  outline-offset:2px;
+}
+
+:focus:not(:focus-visible){
+  outline:none;
+}
+
+.faq-container{
+  margin:auto;
+  max-width:1440px;
+}
+
 .faq-container .default-content-wrapper{
   display:grid;
   grid-template-areas:"faq-title faq-title" "left-content right-content";
@@ -5,7 +87,43 @@
 }
 
 .faq-container .default-content-wrapper p{
-  border-bottom:1px solid;
+  border-bottom:1px dotted;
+  color:var(--text-primary);
   grid-area:faq-title;
+  padding:18px 0;
   width:100%;
+}
+
+.faq-container .default-content-wrapper ul{
+  margin-right:32px;
+}
+
+.faq-container .default-content-wrapper ul li{
+  align-items:center;
+  color:var(--text-primary);
+  display:flex;
+  justify-content:space-between;
+  padding-left:8px;
+  padding-top:18px;
+}
+
+.faq-container .default-content-wrapper ul li:last-child{
+  padding-bottom:18px;
+}
+
+.faq-container .default-content-wrapper ul:first-child{
+  grid-area:left-content;
+}
+
+.faq-container .default-content-wrapper ul:last-child{
+  grid-area:right-content;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation-duration:0.01ms !important;
+    animation-iteration-count:1 !important;
+    scroll-behavior:auto !important;
+    transition-duration:0.01ms !important;
+  }
 }

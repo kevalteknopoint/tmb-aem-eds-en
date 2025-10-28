@@ -1,6 +1,10 @@
 @use '../../styles/variables' as *;
+@use '../../styles/variables' as *;
+@use '../../styles/reset' as *;
 
 .faq-container {
+        max-width: 1440px;
+    margin: auto;
 
     .default-content-wrapper {
 
@@ -11,9 +15,34 @@
         grid-template-columns: 1fr 1fr;
 
         p {
+            color: $text-primary;
             width: 100%;
             grid-area: faq-title;
-            border-bottom: 1px solid;
+            border-bottom: 1px dotted;
+            padding: 18px 0;
         }
+
+        ul {
+            margin-right: 32px;
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                color: $text-primary;
+                padding-left: 8px;
+                padding-top: 18px;
+                align-items: center;
+                &:last-child{
+                    padding-bottom: 18px;
+                }
+            }
+            &:first-child{
+                 grid-area: left-content;
+            }
+            &:last-child{
+                grid-area: right-content;
+            }
+        }
+
     }
 }
