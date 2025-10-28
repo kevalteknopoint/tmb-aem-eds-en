@@ -108,12 +108,11 @@ html {
         ul {
             display: flex;
             flex-direction: column;
-            gap: 4px;
             flex: 1 0 0;
 
             .faq-number {
                 display: block;
-                min-width: 28px;
+                min-width: 28px; 
                 width: fit-content;
             }
 
@@ -135,7 +134,6 @@ html {
             }
 
             a.active {
-                /* font-weight: 600; */
                 background-color: #00525B33;
                 transition: 0.3s;
             }
