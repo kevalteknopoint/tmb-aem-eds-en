@@ -58,7 +58,9 @@
   .bannervideo-container .bannervideo-wrapper .mob-swiper > div:first-child img {
     height: 115px;
     min-width: 125px;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: -moz-fit-content;
     width: fit-content;
   }
   .bannervideo-container .bannervideo-wrapper .mob-swiper p {
@@ -103,7 +105,8 @@
 .desktop-banner img {
   border-radius: 0 0 40px 40px;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
 }
 @media screen and (max-width: 1023px) {
@@ -546,4 +549,4 @@
     flex-direction: column;
     gap: 18px;
   }
-}
+}/*# sourceMappingURL=bannervideo.css.map */

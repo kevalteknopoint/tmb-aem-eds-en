@@ -155,6 +155,7 @@
   height: 40px;
   line-height: 24px;
   padding: 8px 24px;
+  width: -moz-fit-content;
   width: fit-content;
 }
 @media screen and (max-width: 767px) {
@@ -196,7 +197,8 @@
   height: 100%;
 }
 .momentum-block > .tmb-teaser-content img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .momentum-block img {
   border-radius: 20px;
@@ -232,6 +234,7 @@
   line-height: 24px;
   margin: 0;
   padding: 8px 24px;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .momentum-block div > div > p:nth-child(4) {
@@ -309,7 +312,8 @@
   }
   .momentum-block img {
     height: 232px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -445,4 +449,4 @@
   .momentum-teaser-wrapper {
     display: none;
   }
-}
+}/*# sourceMappingURL=tmb-teaser.css.map */

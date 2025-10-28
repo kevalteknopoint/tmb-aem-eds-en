@@ -509,6 +509,7 @@ footer .footer > div {
   display: flex;
   border-radius: 20px;
   background-color: white;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .section.tmb-footer .tmb-footer-wrapper .ul-17 a {
@@ -805,7 +806,8 @@ footer .footer > div {
     vertical-align: bottom;
     text-decoration-style: solid;
     text-decoration-thickness: 0%;
-    text-decoration-skip-ink: auto;
+    -webkit-text-decoration-skip: ink;
+            text-decoration-skip-ink: auto;
   }
 }
 
@@ -888,4 +890,4 @@ footer .footer > div {
   letter-spacing: 0%;
   vertical-align: bottom;
   color: #ffffff;
-}
+}/*# sourceMappingURL=footer.css.map */

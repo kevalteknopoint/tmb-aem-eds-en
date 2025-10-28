@@ -2,7 +2,7 @@
 @use '../../styles/mixins' as *;
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 .faq-heading-section {
@@ -21,7 +21,7 @@ html {
         max-width: 1440px;
 
         @include mobile {
-          padding: 24px 16px 0 16px;
+            padding: 24px 16px 0 16px;
         }
     }
 }
@@ -39,7 +39,7 @@ html {
     padding: 32px;
 
     @include mobile {
-      padding: 24px 16px;
+        padding: 24px 16px;
     }
 
     .sub-section-wrapper h3[id] {
@@ -113,9 +113,9 @@ html {
             flex: 1 0 0;
 
             .faq-number {
-              display: block;
-              min-width: 28px;
-              width: fit-content;
+                display: block;
+                min-width: 28px;
+                width: fit-content;
             }
 
             a {
@@ -152,11 +152,28 @@ html {
     }
 }
 
+.faq-class-for-four-img {
+    max-width: 1328px;
+    margin: 0 auto;
+
+    .default-content-wrapper {
+        display: flex;
+        padding: 10px;
+        align-items: flex-start;
+        gap: 10px;
+
+        img {
+            height: 395px;
+            width: 395px;
+        }
+    }
+}
+
 @include mobile {
     .section-wrapper {
         display: flex;
         flex-direction: column;
-        gap:32px;
+        gap: 32px;
 
         .right-section-wrapper {
             display: none;

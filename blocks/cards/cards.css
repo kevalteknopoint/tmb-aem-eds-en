@@ -174,8 +174,10 @@
   border-radius: 20px;
   width: 100%;
   height: 555px;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   transition: all 0.7s ease-in-out;
   transition-delay: 1s;
 }
@@ -190,6 +192,7 @@
 }
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content {
   display: block;
+  min-width: -moz-fit-content;
   min-width: fit-content;
   opacity: 0;
   position: relative;
@@ -255,7 +258,9 @@
 }
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta .icon {
   display: block;
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta img {
@@ -576,8 +581,10 @@
   border-top-right-radius: 20px;
   height: 100%;
   max-width: unset;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   width: 100%;
 }
 @media screen and (max-width: 767px) {
@@ -627,6 +634,7 @@
   line-height: 24px;
   padding: 8px 24px;
   text-decoration: none;
+  width: -moz-max-content;
   width: max-content;
 }
 @media screen and (max-width: 1023px) {
@@ -687,6 +695,7 @@
 }
 
 .cards-card-image {
+  height: -moz-fit-content;
   height: fit-content;
   min-height: 250px;
   overflow: hidden;
@@ -694,7 +703,9 @@
 }
 @media (min-width: 766px) and (max-width: 1220px) {
   .cards-card-image {
+    min-height: -moz-fit-content;
     min-height: fit-content;
+    height: -moz-fit-content;
     height: fit-content;
   }
 }
@@ -766,4 +777,4 @@
     line-height: 0;
   }
 }
-*/
+*//*# sourceMappingURL=cards.css.map */
