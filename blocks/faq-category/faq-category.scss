@@ -1,29 +1,44 @@
 @use '../../styles/variables' as *;
-@use '../../styles/variables' as *;
-@use '../../styles/reset' as *;
+@use '../../styles/mixins' as *;
+@import '../../libs/swiper/swiper-bundle.min.css';
 
-.faq-container {
-        max-width: 1440px;
+.faq-question{
+    
+}
+
+.faq-category-container {
+    max-width: 1328px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 32px;
 
-    .default-content-wrapper {
+    @include mobile{
+        padding: 0 8px;
+    }
 
-        display: grid;
-        grid-template-areas:
-            "faq-title faq-title"
-            "left-content right-content";
-        grid-template-columns: 1fr 1fr;
+    .faq-category-wrapper {
+        display: block;
+        // display: grid;
+        // grid-template-areas:
+        //     "faq-title faq-title"
+        //     "left-content right-content";
+        // grid-template-columns: 1fr 1fr;
 
         p {
             color: $text-primary;
             width: 100%;
-            grid-area: faq-title;
+            // grid-area: faq-title;
             border-bottom: 1px dotted;
             padding: 18px 0;
         }
 
         ul {
             margin-right: 32px;
+
+            @include mobile {
+                margin-right: 12px;
+            }
 
             li {
                 display: flex;
@@ -32,17 +47,71 @@
                 padding-left: 8px;
                 padding-top: 18px;
                 align-items: center;
-                &:last-child{
+
+                &:last-child {
                     padding-bottom: 18px;
                 }
             }
-            &:first-child{
-                 grid-area: left-content;
+
+            &:first-child {
+                grid-area: left-content;
             }
-            &:last-child{
+
+            &:last-child {
                 grid-area: right-content;
             }
         }
 
     }
+
+    .swiper-pagination {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        // gap: 16px;
+        /* space between numbers */
+        // margin-top: 20px;
+        font-family: "Inter", sans-serif;
+        padding: 32px 56px;
+        position: relative;
+
+        @include mobile{
+            padding: 0;
+            padding-bottom: 24px;
+            padding-right: 30px;
+            padding-top: 30px;
+        }
+    }
+
+
+    .swiper-pagination-bullet {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        /* remove default Swiper dot */
+        color: #5f6368;
+        /* subtle gray text */
+        font-size: 14px;
+         width: 35px;
+        height: 35px;
+        opacity: 1;
+        /* make sure text is visible */
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .swiper-pagination-bullet:hover {
+        color: #202124;
+    }
+
+    .swiper-pagination-bullet-active {
+        color: #202124;
+        /* darker text for active */
+        background: #f1f3f4;
+        /* light gray background circle */
+        border-radius: 50%;
+        padding: 6px 10px;
+    }
+
 }

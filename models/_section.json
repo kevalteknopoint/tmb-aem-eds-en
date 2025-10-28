@@ -97,6 +97,10 @@
             {
               "name": "Faq container",
               "value": "faq-container"
+            },
+             {
+              "name": "Faq question",
+              "value": "faq-question"
             }
           ]
         }
