@@ -57,5 +57,11 @@
       "button",
       "title"
     ]
+  },
+    {
+    "id": "faq-category",
+    "components": [
+      "faq-category-item"
+    ]
   }
 ]
