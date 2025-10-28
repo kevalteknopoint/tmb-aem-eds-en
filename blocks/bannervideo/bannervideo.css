@@ -161,6 +161,7 @@
 }
 
 .secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div{
+  bottom:91px;
   display:flex;
   justify-content:flex-end;
   left:0;
@@ -169,14 +170,13 @@
   padding:0 40px;
   position:absolute;
   right:0;
-  top:69%;
+  top:unset;
   width:100%;
   z-index:20;
 }
 
 .secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div .swiper-pagination{
   align-items:center;
-  -webkit-backdrop-filter:blur(18px);
   backdrop-filter:blur(18px);
   background:var(--surface-primary);
   border-radius:30px;
@@ -212,19 +212,17 @@
 
 .secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div .play-btn{
   align-items:center;
-  aspect-ratio:1/1;
-  -webkit-backdrop-filter:blur(18px);
   backdrop-filter:blur(18px);
   background:var(--surface-primary);
-  border-radius:56px;
-  bottom:145px;
+  border-radius:100%;
+  bottom:0;
   display:flex;
-  gap:10px;
   height:35px;
   justify-content:center;
-  left:80%;
-  opacity:11;
-  position:static;
+  left:unset;
+  opacity:4;
+  position:absolute;
+  right:1px;
   visibility:visible;
   width:35px;
   z-index:1;
@@ -286,7 +284,7 @@
   left:0;
   margin:0 auto;
   max-width:1452px;
-  padding:32px 40px;
+  padding:16px;
   position:absolute;
   right:0;
   top:200px;
@@ -311,7 +309,7 @@
   font-style:normal;
   font-weight:400;
   line-height:24px;
-  width:360px;
+  width:402px;
 }
 
 .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container > a{
@@ -391,11 +389,6 @@
     display:block;
   }
 
-  .mob-pbanner img{
-    border-radius:0 0 20px 20px;
-    width:100%;
-  }
-
   .secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div .swiper-pagination .swiper-pagination-bullet{
     aspect-ratio:1/1;
     background:var(--colour-teal-teal-60, rgb(0 82 91 / 60%));
@@ -415,7 +408,6 @@
 
   .secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div .swiper-pagination{
     align-items:center;
-    -webkit-backdrop-filter:blur(18px);
     backdrop-filter:blur(18px);
     background:var(--surface-primary);
     border-radius:30px;
@@ -438,12 +430,11 @@
   }
 
   .secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div{
-    display:flex;
-    justify-content:flex-end;
-    left:0;
+    bottom:34px;
+    left:unset;
     position:absolute;
     right:0;
-    top:605px;
+    top:unset;
     width:100%;
     z-index:20;
   }
@@ -536,6 +527,23 @@
 }
 
 @media screen and (max-width: 767px){
+  .mob-pbanner img{
+    border-radius:0 0 20px 20px;
+    height:585px;
+    -o-object-fit:cover;
+       object-fit:cover;
+    -o-object-position:center;
+       object-position:center;
+    width:100%;
+  }
+
+  .secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div .swiper-pagination{
+    bottom:-16px;
+    left:unset;
+    position:absolute;
+    right:17px;
+  }
+
   .secsecond{
     padding:0 20px;
   }

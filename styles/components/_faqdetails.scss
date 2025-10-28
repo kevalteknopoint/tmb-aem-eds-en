@@ -2,7 +2,7 @@
 @use '../../styles/mixins' as *;
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 .faq-heading-section {
@@ -19,6 +19,10 @@ html {
         letter-spacing: 0;
         padding: 32px;
         max-width: 1440px;
+
+        @include mobile {
+            padding: 24px 16px 0;
+        }
     }
 }
 
@@ -28,11 +32,14 @@ html {
     display: grid;
     grid-template-columns: 1fr 392px; // Left | Right
     column-gap: 74px;
-    row-gap: 32px;
     font-family: "Open Sans", sans-serif;
     position: relative;
     align-items: start;
     padding: 32px;
+
+    @include mobile {
+        padding: 24px 16px;
+    }
 
     .sub-section-wrapper h3[id] {
         scroll-margin-top: 140px;
@@ -62,7 +69,7 @@ html {
             font-style: normal;
             font-weight: 400;
             line-height: 24px;
-            // padding-bottom: 30px;
+            padding-bottom: 32px;
         }
     }
 
@@ -85,7 +92,7 @@ html {
             line-height: 36px;
             letter-spacing: -1px;
             padding: 12px 0;
-            border-bottom: 1px solid rgba(0, 82, 91, 0.20);
+            border-bottom: 1px solid #0B231F;
         }
 
         p {
@@ -105,8 +112,14 @@ html {
             gap: 4px;
             flex: 1 0 0;
 
+            .faq-number {
+                display: block;
+                min-width: 28px;
+                width: fit-content;
+            }
+
             a {
-                padding: 0px 0 0px 8px;
+                padding: 0 0 0 8px;
                 color: $surface-prim-active-cta;
                 text-decoration: none;
                 transition: color .3s;
@@ -115,7 +128,12 @@ html {
             }
 
             a:hover {
-                background: $surface-disabled-cta;
+                text-decoration-line: underline;
+                text-decoration-style: solid;
+                text-decoration-skip-ink: auto;
+                text-decoration-thickness: auto;
+                text-underline-offset: auto;
+                text-underline-position: from-font;
             }
 
             a.active {
@@ -143,11 +161,32 @@ html {
     }
 }
 
+.faq-class-for-four-img {
+    max-width: 1328px;
+    margin: 0 auto;
+
+    .default-content-wrapper {
+        display: flex;
+        padding: 10px;
+        align-items: flex-start;
+        gap: 10px;
+
+        p{
+            padding:0;
+        }
+
+        img {
+            height: 395px;
+            width: 395px;
+        }
+    }
+}
+
 @include mobile {
     .section-wrapper {
         display: flex;
         flex-direction: column;
-        gap:32px;
+        gap: 32px;
 
         .right-section-wrapper {
             display: none;

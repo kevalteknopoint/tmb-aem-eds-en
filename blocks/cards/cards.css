@@ -146,10 +146,6 @@
   text-decoration:none;
 }
 
-.section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile.active .tile-content{
-  opacity:1;
-}
-
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile.active .tile-image img{
   transform:scale(1.1);
 }
