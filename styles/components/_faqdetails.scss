@@ -32,7 +32,6 @@ html {
     display: grid;
     grid-template-columns: 1fr 392px; // Left | Right
     column-gap: 74px;
-    // row-gap: 32px;
     font-family: "Open Sans", sans-serif;
     position: relative;
     align-items: start;
@@ -72,9 +71,6 @@ html {
             line-height: 24px;
             padding-bottom: 32px;
         }
-        // img{
-        //     height:674px;
-        // }
     }
 
     .right-section-wrapper {
@@ -95,7 +91,7 @@ html {
             line-height: 36px;
             letter-spacing: -1px;
             padding: 12px 0;
-            border-bottom: 1px solid rgba(0, 82, 91, 0.20);
+            border-bottom: 1px solid #0B231F;
         }
 
         p {
@@ -169,9 +165,11 @@ html {
         padding: 10px;
         align-items: flex-start;
         gap: 10px;
+
         p{
             padding:0;
         }
+
         img {
             height: 395px;
             width: 395px;
