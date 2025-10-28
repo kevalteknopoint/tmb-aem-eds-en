@@ -75,6 +75,58 @@ h1, h2, h3, h4, h5, h6{
 :focus:not(:focus-visible){
   outline:none;
 }
+:root{
+  --border-primary:#0b231f;
+  --border-brand:#00a8b8;
+  --border-error:#e52336;
+  --text-primary:#000;
+  --text-secondary:#565659;
+  --text-inverse:#fff;
+  --text-light:#f5f8de;
+  --text-brand:#00525b;
+  --text-brand-secondary:#009bab;
+  --text-primary-cta:#f5f8de;
+  --text-secondary-cta:#00525b;
+  --text-accent-cta:#00525b;
+  --text-disabled:#d9dadb;
+  --text-error:#e52336;
+  --text-ghost-default:#00525b;
+  --text-ghost-hover:#000;
+  --text-ghost-focused:#000;
+  --text-ghost-disabled:#d9dadb;
+  --text-ghost-active:#009bab;
+  --surface-primary:#f4f4f5;
+  --surface-secondary:#d9dadb;
+  --surface-overlay:#565659;
+  --surface-brand:#00525b;
+  --surface-light:#fafafa;
+  --surface-login-cta:#f5f8de;
+  --surface-primary-cta:#00525b;
+  --surface-prim-hover-cta:#014047;
+  --surface-prim-active-cta:#0b231f;
+  --surface-secondary-cta:#f3f5f6;
+  --surface-sec-hover-cta:#009bab;
+  --surface-accent-cta:#f5f8de;
+  --surface-accent-hover-cta:#f9ffc8;
+  --surface-accent-active-cta:#fff67f;
+  --surface-disabled-cta:#efefef;
+  --surface-highlight:#00525b;
+  --primary-font:"Inter", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
+  --secondary-font:"American Grotesk", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.d-none{
+  display:none !important;
+}
+
+.spacer-bottom{
+  margin-bottom:80px;
+}
+
+.spacer-top{
+  margin-top:80px;
+}
+
 .section.faq-looking-for{
   margin:0 auto;
   max-width:1328px;
@@ -167,68 +219,24 @@ h1, h2, h3, h4, h5, h6{
   width:-moz-fit-content;
   width:fit-content;
 }
-
-:root{
-  --border-primary:#0b231f;
-  --border-brand:#00a8b8;
-  --border-error:#e52336;
-  --text-primary:#000;
-  --text-secondary:#565659;
-  --text-inverse:#fff;
-  --text-light:#f5f8de;
-  --text-brand:#00525b;
-  --text-brand-secondary:#009bab;
-  --text-primary-cta:#f5f8de;
-  --text-secondary-cta:#00525b;
-  --text-accent-cta:#00525b;
-  --text-disabled:#d9dadb;
-  --text-error:#e52336;
-  --text-ghost-default:#00525b;
-  --text-ghost-hover:#000;
-  --text-ghost-focused:#000;
-  --text-ghost-disabled:#d9dadb;
-  --text-ghost-active:#009bab;
-  --surface-primary:#f4f4f5;
-  --surface-secondary:#d9dadb;
-  --surface-overlay:#565659;
-  --surface-brand:#00525b;
-  --surface-light:#fafafa;
-  --surface-login-cta:#f5f8de;
-  --surface-primary-cta:#00525b;
-  --surface-prim-hover-cta:#014047;
-  --surface-prim-active-cta:#0b231f;
-  --surface-secondary-cta:#f3f5f6;
-  --surface-sec-hover-cta:#009bab;
-  --surface-accent-cta:#f5f8de;
-  --surface-accent-hover-cta:#f9ffc8;
-  --surface-accent-active-cta:#fff67f;
-  --surface-disabled-cta:#efefef;
-  --surface-highlight:#00525b;
-  --primary-font:"Inter", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
-  --secondary-font:"American Grotesk", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
-}
-
-.spacer-bottom{
-  margin-bottom:80px;
-}
-
-.spacer-top{
-  margin-top:80px;
-}
-
 @media screen and (max-width: 1023px){
-  .section.faq-looking-for div h2{
-    padding-bottom:0;
-  }
   .spacer-bottom{
     margin-bottom:60px;
   }
   .spacer-top{
     margin-top:60px;
   }
+  .section.faq-looking-for div h2{
+    padding-bottom:0;
+  }
 }
-
 @media screen and (max-width: 767px){
+  .spacer-bottom{
+    margin-bottom:40px;
+  }
+  .spacer-top{
+    margin-top:40px;
+  }
   .section.faq-looking-for{
     padding:8px;
   }
@@ -258,14 +266,7 @@ h1, h2, h3, h4, h5, h6{
   .section.faq-looking-for div ul li ul li:nth-child(2) p{
     margin-bottom:8px;
   }
-  .spacer-bottom{
-    margin-bottom:40px;
-  }
-  .spacer-top{
-    margin-top:40px;
-  }
 }
-
 @media (prefers-reduced-motion: reduce){
   *{
     animation-duration:0.01ms !important;

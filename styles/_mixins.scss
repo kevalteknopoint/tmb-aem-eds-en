@@ -1,3 +1,8 @@
+@use "sass:string" as *;
+@use "sass:math" as *;
+@use "sass:color" as *;
+@use "sass:meta" as *;
+
 /* ---------- MEDIA MIXINS ----------
 @mixin mobile {
   @media screen and (max-width: 768px) {
@@ -18,15 +23,29 @@
 }
 */
 
-/* ---------- MEDIA MIXINS UPDATED ---------- */
-@mixin mobile-s {
-  @media screen and (max-width: 375px) {
-    @content;
+@function to-rgba($var, $opacity: 1) {
+  @if $opacity > 1 {
+    $opacity: $opacity / 100;
   }
+  @return unquote("rgb(var(#{$var}) / #{$opacity * 100}%)");
 }
 
-@mixin mobile-m {
-  @media screen and (max-width: 425px) {
+@function to-rgb($hex) {
+  @if type-of($hex) != "color" {
+    @warn "⚠️ to-rgb(): expected a color, got `#{$hex}`. Returning as-is.";
+    @return $hex;
+  }
+
+  $r: channel($hex, "red", $space: rgb);
+  $g: channel($hex, "green", $space: rgb);
+  $b: channel($hex, "blue", $space: rgb);
+
+  @return rgb($r, $g, $b);
+}
+
+/* ---------- MEDIA MIXINS UPDATED ---------- */
+@mixin mobile-s {
+  @media screen and (max-width: 480px) {
     @content;
   }
 }
@@ -43,13 +62,19 @@
   }
 }
 
-@mixin desktop-s {
-  @media screen and (max-width: 1439px) {
+@mixin tablet-lg {
+  @media screen and (max-width: 1279px) {
     @content;
   }
 }
 
 @mixin desktop {
+  @media screen and (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin desktop-lg {
   @media screen and (min-width: 1440px) {
     @content;
   }
@@ -57,25 +82,17 @@
 
 /* ---------- LAYOUT MIXINS ---------- */
 @mixin responsive-container {
-  max-width: 1328px;
+  width: 100%;
+  max-width: 1440px;
+  padding-inline: 64px;
+  margin-left: auto;
+  margin-right: auto;
 
-  @include desktop-s() {
-    max-width: 960px;
-  }
-
-  @include tablet() {
-    max-width: 720px;
+  @include tablet-lg() {
+    padding-inline: 24px;
   }
 
   @include mobile() {
-    max-width: 410px;
-  }
-
-  @include mobile-m() {
-    max-width: 359px;
-  }
-
-  @include mobile-s() {
-    max-width: 304px;
+    padding-inline: 16px;
   }
 }

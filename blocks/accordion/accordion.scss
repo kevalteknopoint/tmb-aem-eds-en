@@ -4,11 +4,11 @@
   background: #EDEDED;
   padding: 80px 0;
 
-  @media (max-width: 390px) {
+  @media (max-width: 720px) {
     padding: 40px 0px;
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 390px) {
     padding: 40px 0px;
   }
 
@@ -32,18 +32,23 @@
         margin: 0px;
       }
 
-      summary {
+      .accordion-item-label {
         position: relative;
         padding: 0 16px;
         padding-right: 46px;
         cursor: pointer;
         list-style: none;
         overflow: auto;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        vertical-align: bottom;
+        color: #00525B;
         transition: background-color 0.2s;
 
         &:focus,
         &:hover {
-          background-color: EDEDED;
+          background-color: #EDEDED;
         }
 
         &::-webkit-details-marker {
@@ -64,9 +69,26 @@
         }
       }
 
+      .accordion-item-body {
+        margin-top: 32px;
+        padding: 0 16px;
+
+        @include mobile {
+          margin-top: 18px;
+        }
+        
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          margin: 32px 0 0 0;
+          color: #333333;
+        }
+      }
+
       &[open] {
         summary {
-          background-color: EDEDED;
+          background-color: #EDEDED;
 
           &::after {
             transform: translateY(-50%) rotate(-45deg);
@@ -75,38 +97,9 @@
 
         .accordion-item-body {
           border-top: none;
-          background-color: EDEDED;
+          background-color: #EDEDED;
         }
       }
-
-      .accordion-item-body {
-        padding: 0 16px;
-      }
-    }
-  }
-
-  .accordion-item-label {
-    /* font-family: Inter; */
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 32px;
-    vertical-align: bottom;
-    color: #00525B;
-  }
-
-  .accordion-item-body {
-    margin-top: 32px;
-
-    @include mobile {
-      margin-top: 18px;
-    }
-    
-    p {
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
-      margin: 32px 0 0 0;
-      color: #333333;
     }
   }
 }

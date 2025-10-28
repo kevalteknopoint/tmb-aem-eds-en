@@ -91,6 +91,10 @@
               "value": "spacer-top"
             },
             {
+              "name": "Hide Section",
+              "value": "d-none"
+            },
+            {
               "name": "faq-Looking",
               "value": "faq-looking-for"
             }
