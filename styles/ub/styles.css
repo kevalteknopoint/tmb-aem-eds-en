@@ -227,7 +227,6 @@ h1, h2, h3, h4, h5, h6{
 }
 .section-wrapper .right-section-wrapper ul a{
   color:var(--surface-prim-active-cta);
-  height:24px;
   padding:5px;
   text-decoration:none;
   transition:color 0.3s;
