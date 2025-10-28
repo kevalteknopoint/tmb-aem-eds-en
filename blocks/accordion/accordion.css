@@ -37,7 +37,7 @@
 }
 
 .tmb-acc-sec.accordion-container .accordion details .accordion-item-label:focus, .tmb-acc-sec.accordion-container .accordion details .accordion-item-label:hover, .tmb-acc-sec.accordion-container .accordion details[open] summary{
-  background-color:ededed;
+  background-color:#EDEDED;
 }
 
 .tmb-acc-sec.accordion-container .accordion details .accordion-item-label::-webkit-details-marker{
@@ -75,7 +75,7 @@
 }
 
 .tmb-acc-sec.accordion-container .accordion details[open] .accordion-item-body{
-  background-color:ededed;
+  background-color:#EDEDED;
   border-top:none;
 }
 
@@ -89,10 +89,10 @@
   }
 }
 
-@media (max-width: 720px);
-
-@media (max-width: 390px){
+@media (max-width: 720px){
   .tmb-acc-sec.accordion-container{
     padding:40px 0;
   }
 }
+
+@media (max-width: 390px)
