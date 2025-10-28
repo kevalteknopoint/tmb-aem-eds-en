@@ -22,7 +22,7 @@
   width:690px;
 }
 
-.momentum-section > div:nth-child(2) > ul:nth-child(1) > li{
+.momentum-section > div:nth-child(2) > ul:nth-child(1) > li, .momentum-listing-wrapper > li{
   display:flex;
 }
 
@@ -73,7 +73,7 @@
   line-height:49.55px;
 }
 
-.momentum-section > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > ul{
+.momentum-section > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > ul, .momentum-listing-wrapper > li:nth-child(2) > ul{
   padding-left:0;
 }
 
@@ -94,7 +94,7 @@
   padding-left:unset;
 }
 
-.momentum-section > div:nth-child(2) > ul:nth-child(2) > li > ul > li:nth-child(1) p{
+.momentum-section > div:nth-child(2) > ul:nth-child(2) > li > ul > li:nth-child(1) p, .momentum-teaser-wrapper > ul:nth-child(2) > li > ul > li:nth-child(1) p{
   color:#0b231f;
   font-size:40px;
   font-style:black;
@@ -104,11 +104,11 @@
   text-transform:capitalize;
 }
 
-.momentum-section > div:nth-child(2) > ul:nth-child(2) > li > ul > li:nth-child(2){
+.momentum-section > div:nth-child(2) > ul:nth-child(2) > li > ul > li:nth-child(2), .momentum-teaser-wrapper > ul:nth-child(2) > li > ul > li:nth-child(2){
   margin:20px 0;
 }
 
-.momentum-section > div:nth-child(2) > ul:nth-child(2) > li > ul > li:nth-child(2) p{
+.momentum-section > div:nth-child(2) > ul:nth-child(2) > li > ul > li:nth-child(2) p, .momentum-teaser-wrapper > ul:nth-child(2) > li > ul > li:nth-child(2) p{
   font-size:24px;
   font-style:bold;
   font-weight:700;
@@ -117,7 +117,7 @@
   text-transform:capitalize;
 }
 
-.momentum-section > div:nth-child(2) > ul:nth-child(2) > li > ul > li:nth-child(3){
+.momentum-section > div:nth-child(2) > ul:nth-child(2) > li > ul > li:nth-child(3), .momentum-teaser-wrapper > ul:nth-child(2) > li > ul > li:nth-child(3){
   margin-bottom:20px;
 }
 
@@ -161,11 +161,7 @@
   width:600px;
 }
 
-.momentum-block > .tmb-teaser-content picture{
-  height:100%;
-}
-
-.momentum-block > .tmb-teaser-content > div{
+.momentum-block > .tmb-teaser-content picture, .momentum-block > .tmb-teaser-content > div{
   height:100%;
 }
 
@@ -216,10 +212,6 @@
   width:fit-content;
 }
 
-.momentum-block div > div > p:nth-child(4){
-  display:none;
-}
-
 .momentum-teaser-block h2{
   color:#0b231f;
   font-size:144.52px;
@@ -232,10 +224,6 @@
   padding:0 !important;
 }
 
-.momentum-listing-wrapper > li{
-  display:flex;
-}
-
 .momentum-listing-wrapper > li p{
   font-size:144.52px;
   font-style:black;
@@ -245,7 +233,7 @@
   text-transform:capitalize;
 }
 
-.momentum-listing-wrapper > li > ul{
+.momentum-listing-wrapper > li > ul, .momentum-listing-wrapper + ul, .momentum-teaser-wrapper > ul:nth-child(2) > li > ul{
   list-style:none;
 }
 
@@ -276,49 +264,10 @@
   line-height:49.55px;
 }
 
-.momentum-listing-wrapper > li:nth-child(2) > ul{
-  padding-left:0;
-}
-
-.momentum-listing-wrapper + ul{
-  list-style:none;
-}
-
-.momentum-teaser-wrapper > ul:nth-child(2) > li > ul{
-  list-style:none;
-}
-
 .momentum-teaser-wrapper > ul:nth-child(2) > li > ul > li > ul{
   list-style:none;
   margin:0 auto;
   padding-left:unset;
-}
-
-.momentum-teaser-wrapper > ul:nth-child(2) > li > ul > li:nth-child(1) p{
-  color:#0b231f;
-  font-size:40px;
-  font-style:black;
-  font-weight:900;
-  line-height:48px;
-  margin:0 auto;
-  text-transform:capitalize;
-}
-
-.momentum-teaser-wrapper > ul:nth-child(2) > li > ul > li:nth-child(2){
-  margin:20px 0;
-}
-
-.momentum-teaser-wrapper > ul:nth-child(2) > li > ul > li:nth-child(2) p{
-  font-size:24px;
-  font-style:bold;
-  font-weight:700;
-  line-height:32px;
-  margin:0 auto;
-  text-transform:capitalize;
-}
-
-.momentum-teaser-wrapper > ul:nth-child(2) > li > ul > li:nth-child(3){
-  margin-bottom:20px;
 }
 
 .momentum-teaser-wrapper > ul:nth-child(2) > li > ul > li:nth-child(3) p{
@@ -414,10 +363,6 @@
     min-width:150px;
     width:100%;
   }
-
-  .momentum-teaser-wrapper{
-    display:none;
-  }
 }
 
 @media screen and (max-width: 767px){
@@ -425,7 +370,7 @@
     padding:0;
   }
 
-  .momentum-section > div:nth-child(2){
+  .momentum-section > div:nth-child(2), .momentum-block div > div > p:nth-child(4), .momentum-teaser-wrapper{
     display:none;
   }
 

@@ -36,7 +36,7 @@
   vertical-align:bottom;
 }
 
-.tmb-acc-sec.accordion-container .accordion details .accordion-item-label:focus, .tmb-acc-sec.accordion-container .accordion details .accordion-item-label:hover{
+.tmb-acc-sec.accordion-container .accordion details .accordion-item-label:focus, .tmb-acc-sec.accordion-container .accordion details .accordion-item-label:hover, .tmb-acc-sec.accordion-container .accordion details[open] summary{
   background-color:ededed;
 }
 
@@ -70,10 +70,6 @@
   margin:32px 0 0;
 }
 
-.tmb-acc-sec.accordion-container .accordion details[open] summary{
-  background-color:ededed;
-}
-
 .tmb-acc-sec.accordion-container .accordion details[open] summary::after{
   transform:translateY(-50%) rotate(-45deg);
 }
@@ -93,11 +89,7 @@
   }
 }
 
-@media (max-width: 720px){
-  .tmb-acc-sec.accordion-container{
-    padding:40px 0;
-  }
-}
+@media (max-width: 720px);
 
 @media (max-width: 390px){
   .tmb-acc-sec.accordion-container{

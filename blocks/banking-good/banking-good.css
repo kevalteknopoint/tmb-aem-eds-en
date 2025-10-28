@@ -110,10 +110,6 @@
   width:100%;
 }
 
-.section.banking-good-container .banking-good-wrapper:not(.card-1) .banking-good-item:nth-child(2) > div > p{
-  display:none;
-}
-
 .section.banking-good-container .banking-good-wrapper.card-1 .banking-for-good{
   align-items:flex-start;
   padding:0 24px 10px;
@@ -155,16 +151,8 @@
   display:block;
 }
 
-.bottom-li-1,
-.bottom-li-4,
-.bottom-li-7,
-.bottom-li-10,
-.bottom-li-13{
-  display:none;
-}
-
 @media screen and (max-width: 1023px){
-  .section.banking-good-container > div.banking-good-wrapper{
+  .section.banking-good-container > div.banking-good-wrapper, .banking-good{
     width:100%;
   }
 
@@ -229,7 +217,7 @@
     line-height:24px;
   }
 
-  .banking-for-good .banking-good-item:nth-child(1){
+  .banking-for-good .banking-good-item:nth-child(1), .section.banking-good-container .banking-good-wrapper:not(.card-1) .banking-good-item:nth-child(2) > div > p, .bottom-li-1, .bottom-li-4, .bottom-li-7, .bottom-li-10, .bottom-li-13{
     display:none;
   }
 
@@ -267,7 +255,7 @@
     padding:15px 0;
   }
 
-  .section.banking-good-container .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(2){
+  .section.banking-good-container .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(2), .section.banking-good-container .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(4){
     padding:0;
   }
 
@@ -286,10 +274,6 @@
     font-size:16px;
     font-weight:400;
     line-height:18px;
-  }
-
-  .section.banking-good-container .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(4){
-    padding:0;
   }
 
   .section.banking-good-container .banking-good-wrapper.card-1 .banking-for-good ul .banking-good-item:nth-child(4) div p{
@@ -374,9 +358,5 @@
     font-weight:700;
     line-height:25px;
     padding-bottom:7px;
-  }
-
-  .banking-good{
-    width:100%;
   }
 }

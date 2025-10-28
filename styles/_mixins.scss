@@ -45,13 +45,7 @@
 
 /* ---------- MEDIA MIXINS UPDATED ---------- */
 @mixin mobile-s {
-  @media screen and (max-width: 375px) {
-    @content;
-  }
-}
-
-@mixin mobile-m {
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 480px) {
     @content;
   }
 }
@@ -68,13 +62,19 @@
   }
 }
 
-@mixin desktop-s {
-  @media screen and (max-width: 1439px) {
+@mixin tablet-lg {
+  @media screen and (max-width: 1279px) {
     @content;
   }
 }
 
 @mixin desktop {
+  @media screen and (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin desktop-lg {
   @media screen and (min-width: 1440px) {
     @content;
   }
@@ -82,25 +82,17 @@
 
 /* ---------- LAYOUT MIXINS ---------- */
 @mixin responsive-container {
-  max-width: 1328px;
+  width: 100%;
+  max-width: 1440px;
+  padding-inline: 64px;
+  margin-left: auto;
+  margin-right: auto;
 
-  @include desktop-s() {
-    max-width: 960px;
-  }
-
-  @include tablet() {
-    max-width: 720px;
+  @include tablet-lg() {
+    padding-inline: 24px;
   }
 
   @include mobile() {
-    max-width: 410px;
-  }
-
-  @include mobile-m() {
-    max-width: 359px;
-  }
-
-  @include mobile-s() {
-    max-width: 304px;
+    padding-inline: 16px;
   }
 }
