@@ -191,6 +191,7 @@ h1, h2, h3, h4, h5, h6{
   margin-top:0;
   position:sticky;
   top:140px;
+  width:326px;
 }
 .section-wrapper .right-section-wrapper .default-content-wrapper > h2{
   border-bottom:1px solid #0B231F;
@@ -252,8 +253,10 @@ h1, h2, h3, h4, h5, h6{
   font-size:14px;
   font-style:normal;
   font-weight:400;
+  gap:6px;
   letter-spacing:0;
   line-height:24px;
+  padding:5px;
 }
 
 .faq-class-for-four-img{
@@ -384,7 +387,7 @@ h1, h2, h3, h4, h5, h6{
     margin-top:40px;
   }
   .faq-heading-section h1{
-    padding:24px 16px 0 16px;
+    padding:24px 16px 0;
   }
   .section-wrapper{
     display:flex;

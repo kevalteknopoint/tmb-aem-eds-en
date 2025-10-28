@@ -21,7 +21,7 @@ html {
         max-width: 1440px;
 
         @include mobile {
-            padding: 24px 16px 0 16px;
+            padding: 24px 16px 0;
         }
     }
 }
@@ -81,6 +81,7 @@ html {
         position: sticky;
         top: 140px;
         height: max-content;
+        width: 326px;
 
         .default-content-wrapper>h2 {
             color: $text-secondary-cta;
@@ -141,6 +142,8 @@ html {
             li {
                 display: flex;
                 align-items: center;
+                gap: 6px;
+                padding: 5px;
                 color: #0B231F;
                 font-family: $primary-font;
                 font-size: 14px;
@@ -148,6 +151,7 @@ html {
                 font-weight: 400;
                 line-height: 24px;
                 letter-spacing: 0;
+
             }
         }
 
