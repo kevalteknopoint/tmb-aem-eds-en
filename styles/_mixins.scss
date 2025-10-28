@@ -23,11 +23,25 @@
 }
 */
 
-@function format-color($var, $opacity: 1) {
-  @if $opacity > 1 { $opacity: $opacity / 100; }
-  @return rgba(var(#{$var}), $opacity);
+@function to-rgba($var, $opacity: 1) {
+  @if $opacity > 1 {
+    $opacity: $opacity / 100;
+  }
+  @return unquote("rgb(var(#{$var}) / #{$opacity * 100}%)");
 }
 
+@function to-rgb($hex) {
+  @if type-of($hex) != "color" {
+    @warn "⚠️ to-rgb(): expected a color, got `#{$hex}`. Returning as-is.";
+    @return $hex;
+  }
+
+  $r: channel($hex, "red", $space: rgb);
+  $g: channel($hex, "green", $space: rgb);
+  $b: channel($hex, "blue", $space: rgb);
+
+  @return rgb($r, $g, $b);
+}
 
 /* ---------- MEDIA MIXINS UPDATED ---------- */
 @mixin mobile-s {
