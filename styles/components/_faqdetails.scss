@@ -32,7 +32,7 @@ html {
     display: grid;
     grid-template-columns: 1fr 392px; // Left | Right
     column-gap: 74px;
-    row-gap: 32px;
+    // row-gap: 32px;
     font-family: "Open Sans", sans-serif;
     position: relative;
     align-items: start;
@@ -70,8 +70,11 @@ html {
             font-style: normal;
             font-weight: 400;
             line-height: 24px;
-            // padding-bottom: 30px;
+            padding-bottom: 32px;
         }
+        // img{
+        //     height:674px;
+        // }
     }
 
     .right-section-wrapper {
@@ -127,7 +130,12 @@ html {
             }
 
             a:hover {
-                background: $surface-disabled-cta;
+                text-decoration-line: underline;
+                text-decoration-style: solid;
+                text-decoration-skip-ink: auto;
+                text-decoration-thickness: auto;
+                text-underline-offset: auto;
+                text-underline-position: from-font;
             }
 
             a.active {
@@ -161,7 +169,9 @@ html {
         padding: 10px;
         align-items: flex-start;
         gap: 10px;
-
+        p{
+            padding:0;
+        }
         img {
             height: 395px;
             width: 395px;
