@@ -4,11 +4,11 @@
   background: #EDEDED;
   padding: 80px 0;
 
-  @media (max-width: 390px) {
+  @media (max-width: 720px) {
     padding: 40px 0px;
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 390px) {
     padding: 40px 0px;
   }
 
@@ -48,7 +48,7 @@
 
         &:focus,
         &:hover {
-          background-color: EDEDED;
+          background-color: #EDEDED;
         }
 
         &::-webkit-details-marker {
@@ -88,7 +88,7 @@
 
       &[open] {
         summary {
-          background-color: EDEDED;
+          background-color: #EDEDED;
 
           &::after {
             transform: translateY(-50%) rotate(-45deg);
@@ -97,7 +97,7 @@
 
         .accordion-item-body {
           border-top: none;
-          background-color: EDEDED;
+          background-color: #EDEDED;
         }
       }
     }
