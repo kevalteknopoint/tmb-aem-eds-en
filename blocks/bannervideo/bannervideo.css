@@ -1,6 +1,6 @@
 @import '../../libs/swiper/swiper-bundle.min.css';
 
-.bannervideo-container, .inner-section1{
+.bannervideo-container{
   position:relative;
 }
 
@@ -19,7 +19,7 @@
   height:100%;
 }
 
-.desktop-banner picture, .mob-desk-wrapper{
+.desktop-banner picture{
   height:100%;
 }
 
@@ -31,6 +31,10 @@
   width:100%;
 }
 
+.inner-section1{
+  position:relative;
+}
+
 .inner-section1 > h1{
   color:#00525B;
   font-family:sans-serif;
@@ -40,7 +44,7 @@
   line-height:48px;
 }
 
-.inner-section1 > p, .mob-pbanner, .nav-buttons .swiper-navigation-icon, .secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div .play-btn{
+.inner-section1 > p{
   display:none;
 }
 
@@ -92,10 +96,22 @@
   padding:0;
 }
 
+.mob-desk-wrapper{
+  height:100%;
+}
+
+.mob-pbanner{
+  display:none;
+}
+
 .nav-buttons{
   display:flex;
   gap:16px;
   justify-content:space-between;
+}
+
+.nav-buttons .swiper-navigation-icon{
+  display:none;
 }
 
 .nav-buttons button{
@@ -412,6 +428,10 @@
     right:0;
     text-align:right;
     width:74px;
+  }
+
+  .secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div .play-btn{
+    display:none;
   }
 
   .secfirst .bannervideo-wrapper .bannervideo .outer-pegination-div{
