@@ -190,7 +190,7 @@ export default function decorate(block) {
         new Swiperblock(eachBlock, {
           slidesPerView: "auto",
           spaceBetween: 32,
-          loop: true,
+          loop: false,
           // autoplay: {
           //   delay: 1000,
           //   disableOnInteraction: false,
@@ -198,12 +198,6 @@ export default function decorate(block) {
           navigation: {
             nextEl: eachBlock.querySelector(".swiper-button-next"),
             prevEl: eachBlock.querySelector(".swiper-button-prev"),
-          },
-          on: {
-            slideChange() {
-              document.querySelector(".swiper-button-prev").disabled = this.isBeginning;
-              document.querySelector(".swiper-button-next").disabled = this.isEnd;
-            },
           },
         });
         const navbtn = eachBlock.querySelector(".nav-buttons");
