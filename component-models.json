@@ -206,6 +206,14 @@
             "value": "faq-landing-banner"
           },
           {
+            "name": "section table wrapper",
+            "value": "section-wrapper"
+          },
+          {
+            "name": "sub section wrapper",
+            "value": "sub-section-wrapper"
+          },
+          {
             "name": "faq class for four img",
             "value": "faq-class-for-four-img"
           }
