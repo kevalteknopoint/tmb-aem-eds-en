@@ -204,6 +204,10 @@
           {
             "name": "FAQ Landing Banner",
             "value": "faq-landing-banner"
+          },
+          {
+            "name": "faq class for four img",
+            "value": "faq-class-for-four-img"
           }
         ]
       }
