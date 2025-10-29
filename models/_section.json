@@ -101,6 +101,10 @@
              {
               "name": "Faq question",
               "value": "faq-question"
+            },
+            {
+              "name": "faq Frequently Question",
+              "value": "faq-frequently-question"
             }
           ]
         }
