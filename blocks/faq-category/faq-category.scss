@@ -144,31 +144,89 @@
     }
 }
 
-.faq-frequently-question-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    margin-top: 32px;
-    align-items: start;
+// .faq-frequently-question-list {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     gap: 16px;
+//     margin-top: 32px;
+//     align-items: start;
   
-    h4,
-    h5,
-    h6 {
-        color: #00525B;
-        font-family: var(--primary-font);
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 36px;
-        // text-align: center;
-    }
+//     h4,
+//     h5,
+//     h6 {
+//         color: #00525B;
+//         font-family: var(--primary-font);
+//         font-size: 20px;
+//         font-style: normal;
+//         font-weight: 500;
+//         line-height: 36px;
+//         // text-align: center;
+//     }
 
+//     .faq-category-wrapper {
+//         background-color: $surface-light;
+//         border-radius: 10px;
+//         padding: 24px;
+//         display: flex;
+//         flex-direction: column;
+//         height: auto;
+//     }
+// }
+.faq-frequently-question-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+  align-items: flex-start;
+  flex-direction: row;
+
+  h4,
+  h5,
+  h6 {
+    color: #00525B;
+    font-family: var(--primary-font);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+  }
+
+  .faq-category-wrapper {
+    background-color: $surface-light;
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    box-sizing: border-box;
+    flex: 1 1 calc(50% - 16px); // two columns with space for gap
+  }
+
+  @media (max-width: 768px) {
     .faq-category-wrapper {
-        background-color: $surface-light;
-        border-radius: 10px;
-        padding: 24px;
-        display: flex;
-        flex-direction: column;
-        height: auto;
+      flex: 1 1 100%; // stack on small screens
     }
+  }
 }
+// .faq-frequently-question-list {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin: -8px; // negative margin to balance padding
+//   margin-top: 32px;
+//   flex-direction: row;
+
+//   .faq-category-wrapper {
+//     background-color: $surface-light;
+//     border-radius: 10px;
+//     padding: 24px;
+//     display: flex;
+//     flex-direction: column;
+//     height: auto;
+//     box-sizing: border-box;
+//     width: calc(50% - 16px);
+//     margin: 8px; // creates consistent spacing around cards
+//   }
+// }
+
+
+
