@@ -102,7 +102,6 @@
 
 .faq-frequently-question-title{
   margin:auto;
-  margin-bottom:12px;
   max-width:1328px;
 }
 
@@ -128,10 +127,11 @@
 }
 
 .faq-frequently-question-list{
+  align-items:start;
   display:grid;
   gap:16px;
-  grid-template-columns:1fr 1fr;
-  margin-top:20px;
+  grid-template-columns:repeat(2, 1fr);
+  margin-top:32px;
 }
 
 .faq-frequently-question-list h4,
@@ -148,6 +148,9 @@
 .faq-frequently-question-list .faq-category-wrapper{
   background-color:var(--surface-light);
   border-radius:10px;
+  display:flex;
+  flex-direction:column;
+  height:auto;
   padding:24px;
 }
 

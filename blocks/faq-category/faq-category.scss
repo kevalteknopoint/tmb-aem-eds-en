@@ -9,7 +9,7 @@
     .default-content-wrapper {
         display: flex;
         justify-content: space-between;
-        align-items: center; // ✅ ensures “Questions” and indicator are vertically centered
+        align-items: center; // ensures “Questions” and indicator are vertically centered
         border-bottom: 1px dotted $text-ghost-default;
 
         p {
@@ -21,7 +21,7 @@
             }
         }
 
-        // ✅ Fix selector nesting: remove extra `.faq-question` reference
+        //Fix selector nesting: remove extra `.faq-question` reference
         .slide-indicator {
             font-size: 14px;
             color: #333;
@@ -120,7 +120,6 @@
 .faq-frequently-question-title {
     max-width: 1328px;
     margin: auto;
-    margin-bottom: 12px;
 
     h1,
     h2,
@@ -147,10 +146,11 @@
 
 .faq-frequently-question-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
-    margin-top: 20px;
-
+    margin-top: 32px;
+    align-items: start;
+  
     h4,
     h5,
     h6 {
@@ -167,5 +167,8 @@
         background-color: $surface-light;
         border-radius: 10px;
         padding: 24px;
+        display: flex;
+        flex-direction: column;
+        height: auto;
     }
 }
