@@ -126,16 +126,15 @@
   width:50%;
 }
 
-.faq-frequently-question-list.faq-frequently-question.faq-category-container h4,
-.faq-frequently-question-list.faq-frequently-question.faq-category-container h5,
-.faq-frequently-question-list.faq-frequently-question.faq-category-container h6{
+.faq-frequently-question-list h4,
+.faq-frequently-question-list h5,
+.faq-frequently-question-list h6{
   color:#00525B;
   font-family:var(--primary-font);
   font-size:20px;
   font-style:normal;
   font-weight:500;
   line-height:36px;
-  text-align:center;
 }
 
 @media screen and (max-width: 767px){
