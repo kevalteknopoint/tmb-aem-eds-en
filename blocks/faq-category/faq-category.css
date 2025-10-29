@@ -101,11 +101,22 @@
   padding:6px 10px;
 }
 
-.faq-frequent-question.faq-category-container{
+.faq-frequently-question-title h2{
+  color:#00525B;
+  font-family:var(--secondary-font);
+  font-size:40px;
+  font-style:normal;
+  font-weight:900;
+  letter-spacing:0;
+  line-height:44px;
+}
+
+.faq-frequently-question.faq-category-container{
+  display:flex;
   flex-direction:row;
 }
 
-.faq-frequent-question.faq-category-container .faq-category-wrapper{
+.faq-frequently-question.faq-category-container .faq-category-wrapper{
   width:50%;
 }
 

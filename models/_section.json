@@ -103,8 +103,12 @@
               "value": "faq-question"
             },
             {
-              "name": "faq Frequently Question",
+              "name": "Faq Frequently Question",
               "value": "faq-frequently-question"
+            },
+            {
+              "name": "Faq Frequently Question Title",
+              "value": "faq-frequently-question-title"
             }
           ]
         }
