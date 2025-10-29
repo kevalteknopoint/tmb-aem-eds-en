@@ -1,6 +1,5 @@
 import Swiperblock from "../../libs/swiper/swiper-bundle.min.js";
 import appendclasses from "../../scripts/constatnt-classes.js";
-import faqdetailpage from "./faqdetails.js";
 
 function createSwiper(block) {
   if (!block.classList.contains("swiper")) {
@@ -79,10 +78,10 @@ function createSwiper2(block) {
 function mobileviewswiper(block) {
   document
     .querySelectorAll(".secsecond.bannervideo-container")
-    .forEach(function (e) {
+    .forEach((e) => {
       const mobnoswiper = Array.from(e.children);
-      mobnoswiper.forEach(function (child, i) {
-        child.classList.add("mob-noswiper-child" + (i + 1));
+      mobnoswiper.forEach((child, i) => {
+        child.classList.add(`mob-noswiper-child${i + 1}`);
       });
     });
   console.log(block);
@@ -113,7 +112,6 @@ function mobileviewswiper(block) {
   });
 }
 export default function decorate(block) {
-  faqdetailpage(block);
   console.log(block);
   if (!block.closest(".secsecond")) {
     createSwiper(block);
