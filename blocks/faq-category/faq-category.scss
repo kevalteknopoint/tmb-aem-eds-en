@@ -52,7 +52,7 @@
         p {
             color: $text-primary;
             width: 100%;
-            border-bottom: 1px dotted;
+            // border-bottom: 1px dotted;
             padding: 18px 0;
         }
 
@@ -118,7 +118,12 @@
 }
 
 .faq-frequently-question-title {
-    h2 {
+    max-width: 1328px;
+    margin: auto;
+
+    h1,
+    h2,
+    h3 {
         color: #00525B;
         font-family: var(--secondary-font);
         font-size: 40px;
@@ -136,5 +141,20 @@
 
     .faq-category-wrapper {
         width: 50%;
+    }
+}
+
+.faq-frequently-question-list.faq-category-container {
+
+    h4,
+    h5,
+    h6 {
+        color: #00525B;
+        font-family: var(--primary-font);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 36px;
+        text-align: center;
     }
 }

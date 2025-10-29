@@ -212,6 +212,10 @@
           {
             "name": "Faq Frequently Question Title",
             "value": "faq-frequently-question-title"
+          },
+          {
+            "name": "Faq Frequently Question List",
+            "value": "faq-frequently-question-list"
           }
         ]
       }
