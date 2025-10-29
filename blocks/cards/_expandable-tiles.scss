@@ -116,6 +116,14 @@
 
         &.active {
           flex: 3.85;
+
+          .tile-content {
+            opacity: 1;
+          }
+
+          .tile-image img {
+            transform: scale(1.1);
+          }
         }
 
         .tile-image {
@@ -237,16 +245,6 @@
               position: static;
               gap: 12px;
             }
-          }
-        }
-
-        &.active {
-          .tile-content {
-            opacity: 1;
-          }
-
-          .tile-image img {
-            transform: scale(1.1);
           }
         }
 
