@@ -36,7 +36,8 @@ export default function decorateFaqDetail() {
       const sectionWrapper = heading.closest(".sub-section-wrapper");
 
       const offset = 150;
-      const topPos = sectionWrapper.getBoundingClientRect().top + window.scrollY - offset;
+      const topPos =
+        sectionWrapper.getBoundingClientRect().top + window.scrollY - offset;
 
       heading.scrollIntoView({
         behavior: "smooth",
@@ -69,4 +70,19 @@ export default function decorateFaqDetail() {
   );
 
   sections.forEach((section) => observer.observe(section));
+
+  document.addEventListener("scroll", () => {
+    const mainHeading = document.querySelector(".faq-heading-section h1");
+    const rightHeading = document.querySelector(".right-section-wrapper h2");
+
+    if (!mainHeading || !rightHeading) return;
+
+    if (window.scrollY > 100) {
+      mainHeading.style.display = "none";
+      rightHeading.style.display = "block";
+    } else {
+      mainHeading.style.display = "block";
+      rightHeading.style.display = "none";
+    }
+  });
 }
