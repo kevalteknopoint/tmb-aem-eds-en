@@ -102,6 +102,7 @@
 
 .faq-frequently-question-title{
   margin:auto;
+  margin-bottom:12px;
   max-width:1328px;
 }
 
@@ -126,6 +127,13 @@
   width:50%;
 }
 
+.faq-frequently-question-list{
+  display:grid;
+  gap:16px;
+  grid-template-columns:1fr 1fr;
+  margin-top:20px;
+}
+
 .faq-frequently-question-list h4,
 .faq-frequently-question-list h5,
 .faq-frequently-question-list h6{
@@ -135,6 +143,12 @@
   font-style:normal;
   font-weight:500;
   line-height:36px;
+}
+
+.faq-frequently-question-list .faq-category-wrapper{
+  background-color:var(--surface-light);
+  border-radius:10px;
+  padding:24px;
 }
 
 @media screen and (max-width: 767px){
