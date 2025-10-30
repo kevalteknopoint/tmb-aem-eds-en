@@ -148,20 +148,27 @@ export default async function decorateFaqDetail() {
       // ==== Left section ====
       const subsectionAndleftSection = document.createElement("div");
       subsectionAndleftSection.classList.add("sub-section-wrapper");
-      if (lidata.sectionImage?._path) {
-        const img = document.createElement("img");
-        img.src = lidata.sectionImage._path;
-        img.alt = lidata.sectionTitle;
-        img.loading = "lazy";
-        img.classList.add("faq-image");
-        subsectionAndleftSection.appendChild(img);
+      if (lidata.sectionImages && lidata.sectionImages.length > 0) {
+        const imgContainer = document.createElement("div");
+        imgContainer.classList.add("faq-image-wrapper");
+
+        lidata.sectionImages.forEach((imgData) => {
+          const img = document.createElement("img");
+          img.src = imgData._dynamicUrl || imgData._path;
+          img.width = imgData.width || 600;
+          img.height = imgData.height || 400;
+          img.alt = lidata.sectionTitle || "FAQ Image";
+          img.loading = "lazy";
+          imgContainer.appendChild(img);
+        });
+
+        subsectionAndleftSection.appendChild(imgContainer);
       }
 
       const headingh3 = document.createElement("h3");
       headingh3.id = subtitle; // ✅ Correct: no # symbol
       headingh3.textContent = lidata.sectionTitle;
       const leftsectionPtag = document.createElement("p");
-      debugger
       leftsectionPtag.innerHTML = lidata.sectionContent.plaintext?.replaceAll('\n', '<br>'); // ✅ use innerHTML if content is HTML
 
       subsectionAndleftSection.appendChild(headingh3);
