@@ -125,7 +125,7 @@ export default async function decorateFaqDetail() {
     rightsectionPtag.textContent = "On this page:";
 
     const ul = document.createElement("ul");
-    ul.classList.add("navLinks");
+    ul.classList.add("right-ul");
 
     // ===== Create list items =====
     faq.faqContentReference.forEach((lidata, i) => {
