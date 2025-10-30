@@ -145,6 +145,29 @@
   padding:24px;
 }
 
+.faq-frequently-question-list .faq-category-wrapper .faq-category h4,
+.faq-frequently-question-list .faq-category-wrapper .faq-category h5,
+.faq-frequently-question-list .faq-category-wrapper .faq-category h6{
+  color:var(--text-brand);
+  font-size:32px;
+  font-weight:600;
+  line-height:36px;
+}
+
+.faq-frequently-question-list .faq-category-wrapper .faq-category ul:last-child li:first-child{
+  padding-top:0;
+}
+
+.faq-frequently-question-list .faq-category-wrapper .faq-category p{
+  align-items:center;
+  color:var(--text-brand);
+  display:flex;
+  font-size:16px;
+  font-weight:400;
+  line-height:24px;
+  position:relative;
+}
+
 @media screen and (max-width: 1023px){
   .faq-question .default-content-wrapper p{
     padding:18px 8px;

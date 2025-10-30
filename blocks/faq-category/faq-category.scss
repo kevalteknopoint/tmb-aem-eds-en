@@ -185,5 +185,39 @@
         background-color: $surface-light;
         // display: block;
         margin-bottom: 16px;
+
+        .faq-category {
+
+            h4,
+            h5,
+            h6 {
+                font-weight: 600;
+                line-height: 36px;
+                font-size: 32px;
+                color: $text-brand;
+
+            }
+
+            ul {
+                &:last-child {
+                    li {
+                        &:first-child {
+                            padding-top: 0;
+                        }
+                    }
+                }
+            }
+
+            p {
+                display: flex;
+                align-items: center;
+                color: $text-brand;
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 400;
+                position: relative;
+
+            }
+        }
     }
 }
