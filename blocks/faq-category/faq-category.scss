@@ -11,6 +11,9 @@
         justify-content: space-between;
         align-items: center; // ensures “Questions” and indicator are vertically centered
         border-bottom: 1px dotted $text-ghost-default;
+        @include tablet{
+            padding: 0 16px;
+        }
 
         p {
             padding: 18px 0;
@@ -58,9 +61,15 @@
 
         ul {
             margin-right: 32px;
+            padding: 8px 0;
 
-            @include mobile {
+            li {
+                margin-bottom: 13px;
+            }
+
+            @include tablet {
                 margin-right: 12px;
+                padding: 8px 4px;
             }
 
             li {
@@ -69,6 +78,9 @@
                 align-items: center;
                 color: $text-primary;
                 padding: 18px 8px 0;
+                @include tablet{
+                    padding: 13px 8px
+                }
 
                 &:last-child {
                     padding-bottom: 18px;
@@ -120,10 +132,11 @@
 .faq-frequently-question-title {
     max-width: 1328px;
     margin: auto;
-    padding-bottom: 16px;
+    padding: 0 32px;
 
     @include tablet {
-        padding: 24px 8px;
+        // padding: 24px 8px;
+        padding: 0 16px;
     }
 
 
@@ -137,34 +150,67 @@
         font-weight: 900;
         letter-spacing: 0;
         line-height: 44px;
-        // text-align: center;
+        margin-bottom: 12px;
+        padding: 10px 0;
+
+        @include mobile {
+            line-height: 32px;
+            padding:0;
+            margin-top:72px;
+            margin-bottom: 24px;
+        }
     }
 }
 
 .faq-frequently-question.faq-category-container {
     display: flex;
     flex-direction: row;
+    padding: 0 32px;
 
     @include tablet {
+        padding: 0 16px;
         flex-direction: column;
     }
 
     .faq-category-wrapper {
         width: 50%;
 
-        @include tablet {
-            width: 100%;
+        ul {
+            margin-right: 32px;
+            padding: 8px 0;
+
+            @include mobile {
+                margin-right: 0;
+                padding: 0;
+            }
+
+            li {
+                padding: 13px 8px;
+                margin-bottom: 8px;
+
+                @include mobile {
+                    padding: 13px 0;
+                }
+            }
         }
 
-        ul {
-            &:last-child {
-                li {
-                    &:first-child {
-                        padding-top: 0;
+        @include tablet {
+            width: 100%;
+
+            ul {
+                &:last-child {
+                    li {
+                        @include tablet {}
+
+                        &:first-child {
+                            padding-top: 0;
+                        }
                     }
                 }
             }
         }
+
+
     }
 }
 
@@ -173,9 +219,10 @@
     column-count: 2;
     column-gap: 28px;
     display: block;
-
+    
     @include tablet {
-        padding: 24px 8px;
+       
+        padding:0 16px;
         column-count: 1;
         column-gap: 8px;
     }
@@ -184,7 +231,12 @@
         padding: 24px;
         background-color: $surface-light;
         // display: block;
+        border-radius: 10px;
         margin-bottom: 16px;
+        @include tablet{
+            padding: 16px 12px;
+           
+        }
 
         .faq-category {
 
@@ -195,10 +247,24 @@
                 line-height: 36px;
                 font-size: 32px;
                 color: $text-brand;
+                @include tablet{
+                    margin-bottom: 40px;
+                }
 
             }
 
             ul {
+                @include tablet{
+                    padding:0;
+                    margin:0;
+                }
+                li{
+                    @include tablet
+                    {
+                        padding:0px;
+                        margin-bottom: 24px;
+                    }
+                }
                 &:last-child {
                     li {
                         &:first-child {
@@ -216,8 +282,24 @@
                 line-height: 24px;
                 font-weight: 400;
                 position: relative;
+                @include tablet{
+                    padding: 0;
+                    margin-top: 40px ;
+                }
 
             }
         }
     }
+}
+/*  Screen reader–only utility */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
