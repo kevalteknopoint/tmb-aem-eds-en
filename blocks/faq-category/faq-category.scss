@@ -1,0 +1,223 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+@import '../../libs/swiper/swiper-bundle.min.css';
+
+.faq-question {
+    max-width: 1328px;
+    margin: auto;
+
+    .default-content-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; // ensures “Questions” and indicator are vertically centered
+        border-bottom: 1px dotted $text-ghost-default;
+
+        p {
+            padding: 18px 0;
+            color: $text-primary;
+
+            @include tablet {
+                padding: 18px 8px;
+            }
+        }
+
+        //Fix selector nesting: remove extra `.faq-question` reference
+        .slide-indicator {
+            font-size: 14px;
+            color: #333;
+            margin-top: 0; // ✅ removes unnecessary top spacing inside flex
+            text-align: right;
+
+            .active-slide-indicator {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.faq-category-container {
+    max-width: 1328px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 32px;
+
+    @include tablet {
+        padding: 0 8px;
+    }
+
+    .faq-category-wrapper {
+        display: block;
+
+        p {
+            color: $text-primary;
+            width: 100%;
+            // border-bottom: 1px dotted;
+            padding: 18px 0;
+        }
+
+        ul {
+            margin-right: 32px;
+
+            @include mobile {
+                margin-right: 12px;
+            }
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: $text-primary;
+                padding: 18px 8px 0;
+
+                &:last-child {
+                    padding-bottom: 18px;
+                }
+            }
+        }
+    }
+
+    /* ✅ Pagination styling */
+    .swiper-pagination {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-family: "Inter", sans-serif;
+        padding: 32px 56px;
+        position: relative;
+
+        @include mobile {
+            padding: 30px 30px 24px 0;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        color: #5f6368;
+        font-size: 14px;
+        width: 35px;
+        height: 35px;
+        opacity: 1;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+            color: #202124;
+        }
+
+        &-active {
+            color: #202124;
+            background: #f1f3f4;
+            border-radius: 50%;
+            padding: 6px 10px;
+        }
+    }
+}
+
+.faq-frequently-question-title {
+    max-width: 1328px;
+    margin: auto;
+    padding-bottom: 16px;
+
+    @include tablet {
+        padding: 24px 8px;
+    }
+
+
+    h1,
+    h2,
+    h3 {
+        color: #00525B;
+        font-family: var(--secondary-font);
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 900;
+        letter-spacing: 0;
+        line-height: 44px;
+        // text-align: center;
+    }
+}
+
+.faq-frequently-question.faq-category-container {
+    display: flex;
+    flex-direction: row;
+
+    @include tablet {
+        flex-direction: column;
+    }
+
+    .faq-category-wrapper {
+        width: 50%;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        ul {
+            &:last-child {
+                li {
+                    &:first-child {
+                        padding-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.faq-frequently-question-list {
+    column-count: 2;
+    column-gap: 28px;
+    display: block;
+
+    @include tablet {
+        padding: 24px 8px;
+        column-count: 1;
+        column-gap: 8px;
+    }
+
+    .faq-category-wrapper {
+        padding: 24px;
+        background-color: $surface-light;
+        // display: block;
+        margin-bottom: 16px;
+
+        .faq-category {
+
+            h4,
+            h5,
+            h6 {
+                font-weight: 600;
+                line-height: 36px;
+                font-size: 32px;
+                color: $text-brand;
+
+            }
+
+            ul {
+                &:last-child {
+                    li {
+                        &:first-child {
+                            padding-top: 0;
+                        }
+                    }
+                }
+            }
+
+            p {
+                display: flex;
+                align-items: center;
+                color: $text-brand;
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 400;
+                position: relative;
+
+            }
+        }
+    }
+}
