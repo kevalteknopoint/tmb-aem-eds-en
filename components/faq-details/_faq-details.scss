@@ -57,7 +57,7 @@ html {
     grid-column: 1;
     grid-row: auto;
 
-    .default-content-wrapper > h3 {
+    h3 {
       color: $surface-prim-active-cta;
       font-family: $primary-font;
       font-size: 20px;
@@ -89,7 +89,7 @@ html {
     height: max-content;
     width: 326px;
 
-    .default-content-wrapper > h2 {
+    h2 {
       color: $text-secondary-cta;
       font-family: $primary-font;
       font-size: 32px;
@@ -99,9 +99,9 @@ html {
       letter-spacing: -1px;
       padding: 12px 0;
       border-bottom: 1px solid #0B231F;
-      transition: opacity 0.4s ease, transform 0.4s ease;
-      opacity: 0;
-      transform: translateY(-10px);
+    //   transition: opacity 0.4s ease, transform 0.4s ease;
+    //   opacity: 0;
+    //   transform: translateY(-10px);
 
       &[style*="block"] {
         opacity: 1;
