@@ -16,7 +16,7 @@
             padding: 18px 0;
             color: $text-primary;
 
-            @include mobile {
+            @include tablet {
                 padding: 18px 8px;
             }
         }
@@ -42,7 +42,7 @@
     flex-direction: column;
     padding-bottom: 32px;
 
-    @include mobile {
+    @include tablet {
         padding: 0 8px;
     }
 
@@ -122,6 +122,11 @@
     margin: auto;
     padding-bottom: 16px;
 
+    @include tablet {
+        padding: 24px 8px;
+    }
+
+
     h1,
     h2,
     h3 {
@@ -140,132 +145,41 @@
     display: flex;
     flex-direction: row;
 
+    @include tablet {
+        flex-direction: column;
+    }
+
     .faq-category-wrapper {
         width: 50%;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        ul {
+            &:last-child {
+                li {
+                    &:first-child {
+                        padding-top: 0;
+                    }
+                }
+            }
+        }
     }
 }
 
-// .faq-frequently-question-list {
-//     display: grid;
-//     grid-template-columns: repeat(2, 1fr);
-//     gap: 16px;
-//     margin-top: 32px;
-//     align-items: start;
 
-//     h4,
-//     h5,
-//     h6 {
-//         color: #00525B;
-//         font-family: var(--primary-font);
-//         font-size: 20px;
-//         font-style: normal;
-//         font-weight: 500;
-//         line-height: 36px;
-//         // text-align: center;
-//     }
-
-//     .faq-category-wrapper {
-//         background-color: $surface-light;
-//         border-radius: 10px;
-//         padding: 24px;
-//         display: flex;
-//         flex-direction: column;
-//         height: auto;
-//     }
-// }
-// .faq-frequently-question-list {
-//     //   display: flex;
-//     //   flex-wrap: wrap;
-//     //   gap: 16px;
-//     margin-top: 20px;
-//     //   align-items: flex-start;
-//     //   flex-direction: row;
-//     column-count: 2;
-//     column-gap: 16px;
-
-//     h4,
-//     h5,
-//     h6 {
-//         color: #00525B;
-//         font-family: var(--primary-font);
-//         font-size: 20px;
-//         font-style: normal;
-//         font-weight: 500;
-//         line-height: 36px;
-//     }
-
-//     .faq-category-wrapper {
-//         background-color: $surface-light;
-//         display: inline-block;
-//         // border-radius: 10px;
-//         // padding: 24px;
-//         // // display: flex;
-//         // flex-direction: column;
-//         // height: auto;
-//         // box-sizing: border-box;
-//         // // flex: 1 1 calc(50% - 16px); // two columns with space for gap
-//     }
-
-//     @media (max-width: 768px) {
-//         .faq-category-wrapper {
-//             // flex: 1 1 100%; // stack on small screens
-//         }
-//     }
-// }
-
-// .faq-frequently-question-list {
-//   display: flex;
-//   flex-wrap: wrap;
-//   gap: 16px;
-//   margin-top: 32px;
-//   align-items: flex-start;
-//   justify-content: center; // ✅ centers cards when there’s an odd count
-//   flex-direction: row;
-
-//   h4,
-//   h5,
-//   h6 {
-//     color: #00525B;
-//     font-family: var(--primary-font);
-//     font-size: 20px;
-//     font-style: normal;
-//     font-weight: 500;
-//     line-height: 36px;
-//   }
-
-//   .faq-category-wrapper {
-//     background-color: $surface-light;
-//     border-radius: 10px;
-//     padding: 24px;
-//     display: flex;
-//     flex-direction: column;
-//     height: auto; // ✅ allows uneven card heights
-//     box-sizing: border-box;
-//     flex: 1 1 calc(50% - 16px); // ✅ two columns layout
-//     max-width: 624px; // ✅ prevents stretching beyond this width
-//   }
-
-//   // 🧹 Reset default margins for inner elements to avoid extra spacing
-//   p, ul, li {
-//     margin: 0;
-//     padding: 0;
-//   }
-
-//   @media (max-width: 1024px) {
-//     justify-content: flex-start; // ✅ left align on tablets
-//   }
-
-//   @media (max-width: 768px) {
-//     .faq-category-wrapper {
-//       flex: 1 1 100%;
-//       max-width: 100%; // ✅ stack cards fully on small screens
-//     }
-//   }
-// }
 .faq-frequently-question-list {
     column-count: 2;
     column-gap: 28px;
     display: block;
+
+    @include tablet {
+        padding: 24px 8px;
+        column-count: 1;
+        column-gap: 8px;
+    }
+
     .faq-category-wrapper {
         padding: 24px;
         background-color: $surface-light;
