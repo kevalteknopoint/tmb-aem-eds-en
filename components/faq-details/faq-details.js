@@ -156,22 +156,20 @@ export default async function decorateFaqDetail() {
 
       subsectionAndleftSection.appendChild(headingh3);
       subsectionAndleftSection.appendChild(leftsectionPtag);
-      if (lidata.sectionImages && lidata.sectionImages.length > 0) {
-        const imgContainer = document.createElement("div");
-        imgContainer.classList.add("faq-image-wrapper");
+      // if (lidata.sectionImages && lidata.sectionImages.length > 0) {
+      //   const imgContainer = document.createElement("div");
+      //   imgContainer.classList.add("faq-class-for-four-img ");
 
-        lidata.sectionImages.forEach((imgData) => {
-          const img = document.createElement("img");
-          img.src = imgData._path;
-          img.width = imgData.width || 600;
-          img.height = imgData.height || 400;
-          img.alt = lidata.sectionTitle || "FAQ Image";
-          img.loading = "lazy";
-          imgContainer.appendChild(img);
-        });
+      //   lidata.sectionImages.forEach((imgData) => {
+      //     const img = document.createElement("img");
+      //     img.src = imgData._path;
+      //     img.alt = lidata.sectionTitle || "FAQ Image";
+      //     img.loading = "lazy";
+      //     imgContainer.appendChild(img);
+      //   });
 
-        subsectionAndleftSection.appendChild(imgContainer);
-      }
+      //   subsectionAndleftSection.appendChild(imgContainer);
+      // }
 
       secwrapper.appendChild(subsectionAndleftSection);
     });

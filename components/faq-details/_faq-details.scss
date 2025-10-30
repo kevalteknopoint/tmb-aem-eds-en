@@ -168,22 +168,12 @@ html {
 .faq-class-for-four-img {
   max-width: 1328px;
   margin: 0 auto;
-
-  .default-content-wrapper {
     display: flex;
     padding: 10px;
     align-items: flex-start;
     gap: 10px;
-
-    p {
-      padding: 0;
-    }
-
-    img {
       height: 395px;
       width: 395px;
-    }
-  }
 }
 
 @include mobile {

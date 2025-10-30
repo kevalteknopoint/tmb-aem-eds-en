@@ -358,17 +358,10 @@ html {
 .faq-class-for-four-img {
   max-width: 1328px;
   margin: 0 auto;
-}
-.faq-class-for-four-img .default-content-wrapper {
   display: flex;
   padding: 10px;
   align-items: flex-start;
   gap: 10px;
-}
-.faq-class-for-four-img .default-content-wrapper p {
-  padding: 0;
-}
-.faq-class-for-four-img .default-content-wrapper img {
   height: 395px;
   width: 395px;
 }
