@@ -234,7 +234,14 @@ h1, h2, h3, h4, h5, h6{
   letter-spacing:0;
   line-height:44px;
   max-width:1440px;
+  opacity:1;
   padding:32px;
+  transform:translateY(0);
+  transition:opacity 0.4s ease, transform 0.4s ease;
+}
+.faq-heading-section h1[style*=none]{
+  opacity:0;
+  transform:translateY(-10px);
 }
 
 .section-wrapper{
@@ -256,7 +263,7 @@ h1, h2, h3, h4, h5, h6{
   grid-column:1;
   grid-row:auto;
 }
-.section-wrapper .sub-section-wrapper:not(.right-section-wrapper) .default-content-wrapper > h3{
+.section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h3{
   color:var(--surface-prim-active-cta);
   font-family:var(--primary-font);
   font-size:20px;
@@ -286,7 +293,7 @@ h1, h2, h3, h4, h5, h6{
   top:140px;
   width:326px;
 }
-.section-wrapper .right-section-wrapper .default-content-wrapper > h2{
+.section-wrapper .right-section-wrapper h2{
   border-bottom:1px solid #0B231F;
   color:var(--text-secondary-cta);
   font-family:var(--primary-font);
@@ -296,6 +303,10 @@ h1, h2, h3, h4, h5, h6{
   letter-spacing:-1px;
   line-height:36px;
   padding:12px 0;
+}
+.section-wrapper .right-section-wrapper h2[style*=block]{
+  opacity:1;
+  transform:translateY(0);
 }
 .section-wrapper .right-section-wrapper p{
   color:var(--text-secondary);
@@ -327,12 +338,6 @@ h1, h2, h3, h4, h5, h6{
 }
 .section-wrapper .right-section-wrapper ul a:hover{
   text-decoration-line:underline;
-  -webkit-text-decoration-skip:ink;
-          text-decoration-skip-ink:auto;
-  text-decoration-style:solid;
-  text-decoration-thickness:auto;
-  text-underline-offset:auto;
-  text-underline-position:from-font;
 }
 .section-wrapper .right-section-wrapper ul a.active{
   background-color:rgba(0, 82, 91, 0.2);
@@ -353,22 +358,16 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .faq-class-for-four-img{
-  margin:0 auto;
-  max-width:1328px;
-}
-.faq-class-for-four-img .default-content-wrapper{
   align-items:flex-start;
   display:flex;
   gap:10px;
-  padding:10px;
-}
-.faq-class-for-four-img .default-content-wrapper p{
-  padding:0;
-}
-.faq-class-for-four-img .default-content-wrapper img{
   height:395px;
+  margin:0 auto;
+  max-width:1328px;
+  padding:10px;
   width:395px;
 }
+
 @media screen and (max-width: 1023px){
   .spacer-bottom{
     margin-bottom:60px;
@@ -380,6 +379,7 @@ h1, h2, h3, h4, h5, h6{
     padding-bottom:0;
   }
 }
+
 @media screen and (max-width: 767px){
   .spacer-bottom{
     margin-bottom:40px;
@@ -429,6 +429,7 @@ h1, h2, h3, h4, h5, h6{
     display:none;
   }
 }
+
 @media (prefers-reduced-motion: reduce){
   *{
     animation-duration:0.01ms !important;
