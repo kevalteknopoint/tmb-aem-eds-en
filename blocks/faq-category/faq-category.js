@@ -6,7 +6,6 @@ function createSwiper(block) {
   if (!block.classList.contains("swiper")) {
     block.classList.add("swiper");
 
-    // Wrap slides
     const rows = Array.from(block.children);
     const swiperWrapper = document.createElement("div");
     swiperWrapper.classList.add("swiper-wrapper");
@@ -18,12 +17,10 @@ function createSwiper(block) {
 
     block.append(swiperWrapper);
 
-    // Add pagination container
     const swiperPagination = document.createElement("div");
     swiperPagination.classList.add("swiper-pagination");
     block.append(swiperPagination);
 
-    // Add indicator below "Questions"
     const indicatorContainer = document.querySelector(".faq-question .default-content-wrapper");
     if (indicatorContainer && !indicatorContainer.querySelector(".slide-indicator")) {
       const slideIndicator = document.createElement("div");
@@ -33,12 +30,11 @@ function createSwiper(block) {
   }
 }
 
-// Initialize Swiper creation
 createSwiper(mainFaqContainer);
 
-// ✅ Initialize Swiper instance
 const swiper = new Swiperblock(mainFaqContainer, {
   slidesPerView: 2,
+  slidesPerGroup: 2,
   spaceBetween: 2,
   pagination: {
     el: ".swiper-pagination",
@@ -65,18 +61,27 @@ const swiper = new Swiperblock(mainFaqContainer, {
   },
 });
 
-// ✅ Function to update “1–10 of 32” style indicator
 function updateIndicator(swiperInstance) {
-  const currentStart = swiperInstance.activeIndex * 5 + 1;
-  const currentEnd = Math.min(currentStart + 4, swiperInstance.slides.length * 5);
-  const total = swiperInstance.slides.length * 5;
+  // ✅ Count total FAQ items across all slides
+  const allItems = Array.from(mainFaqContainer.querySelectorAll("li"));
+  const totalLinks = allItems.length;
 
+  // ✅ Determine how many links per slide (from first slide)
+  const firstSlideItems = swiperInstance.slides[0].querySelectorAll("li").length || 0;
+  const linksPerPage = firstSlideItems * swiperInstance.params.slidesPerGroup;
+
+  // ✅ Calculate current range
+  const currentPage = swiperInstance.activeIndex / swiperInstance.params.slidesPerGroup + 1;
+  const currentStart = (currentPage - 1) * linksPerPage + 1;
+  const currentEnd = Math.min(currentPage * linksPerPage, totalLinks);
+
+  // ✅ Update indicator
   const indicator = document.querySelector(".faq-question .slide-indicator");
   if (indicator) {
     indicator.innerHTML = `
       <span class="active-slide-indicator">${currentStart}-${currentEnd}</span>
       of
-      <span class="total-slide-indicator">${total}</span>
+      <span class="total-slide-indicator">${totalLinks}</span>
     `;
   }
 }
