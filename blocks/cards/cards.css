@@ -61,6 +61,14 @@
   flex:3.85;
 }
 
+.section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile.active .tile-content{
+  opacity:1;
+}
+
+.section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile.active .tile-image img{
+  transform:scale(1.1);
+}
+
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-image{
   border-radius:20px;
   cursor:pointer;
@@ -90,10 +98,6 @@
   position:relative;
   text-decoration:none;
   transition:all 1s ease-in-out;
-}
-
-.section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content.active{
-  opacity:1;
 }
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-title{
@@ -144,14 +148,6 @@
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta:hover{
   text-decoration:none;
-}
-
-.section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile.active .tile-content{
-  opacity:1;
-}
-
-.section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile.active .tile-image img{
-  transform:scale(1.1);
 }
 
 .section.online-banking{
