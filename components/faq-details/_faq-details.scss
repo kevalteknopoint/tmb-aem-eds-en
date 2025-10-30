@@ -24,6 +24,8 @@ html {
     transform: translateY(0);
 
     @include mobile {
+      font-size: 32px;
+      line-height: 40px;
       padding: 24px 16px 0;
     }
 
@@ -99,13 +101,11 @@ html {
       letter-spacing: -1px;
       padding: 12px 0;
       border-bottom: 1px solid #0B231F;
-    //   transition: opacity 0.4s ease, transform 0.4s ease;
-    //   opacity: 0;
-    //   transform: translateY(-10px);
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
 
-      &[style*="block"] {
-        opacity: 1;
-        transform: translateY(0);
+      &.hide-heading {
+        padding: 0;
       }
     }
 

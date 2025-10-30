@@ -65,7 +65,7 @@
 //     },
 //     {
 //       threshold: 0.4,
-//       rootMargin: "-100px 0px -40% 0px",
+//       rootMargin: "-141px 0px -40% 0px",
 //     }
 //   );
 
@@ -90,10 +90,10 @@
 export default async function decorateFaqDetail() {
   const mainClass = document.querySelector("main");
   const secwrapper = mainClass?.querySelector(".section-wrapper");
+
   if (!secwrapper) return;
 
-  const graphqlUrl =
-    "https://publish-p162853-e1744823.adobeaemcloud.com/graphql/execute.json/tmb/faqDetailByPath;path=/content/dam/tmb/content-fragments/faqs/test-category/how-do-i-change-a-direct-debit-from-another-financial-institution-to-teachers-mutual-bank/how-do-i-change-a-direct-debit-from-another-financial-institution-to-teachers-mutual-bank";
+  const graphqlUrl = "https://publish-p162853-e1744823.adobeaemcloud.com/graphql/execute.json/tmb/faqDetailByPath;path=/content/dam/tmb/content-fragments/faqs/test-category/how-do-i-change-a-direct-debit-from-another-financial-institution-to-teachers-mutual-bank/how-do-i-change-a-direct-debit-from-another-financial-institution-to-teachers-mutual-bank";
 
   try {
     const res = await fetch(graphqlUrl);
@@ -220,9 +220,37 @@ export default async function decorateFaqDetail() {
     },
     {
       threshold: 0.4,
-      rootMargin: "-100px 0px -40% 0px",
+      rootMargin: "-141px 0px -40% 0px",
     }
   );
 
   sections.forEach((section) => observer.observe(section));
+
+  const mainHeading = document.querySelector(".faq-heading-section h1");
+  const rightHeading = document.querySelector(".right-section-wrapper h2");
+
+  if (!rightHeading) return;
+
+  const headingHeight = rightHeading.offsetHeight;
+  rightHeading.style.height = 0;
+
+  const headingObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          rightHeading.classList.add('hide-heading');
+          rightHeading.style.height = `0px`;
+        } else {
+          rightHeading.classList.remove('hide-heading');
+          rightHeading.style.height = `${headingHeight}px`;
+        }
+      });
+    },
+    {
+      threshold: 0,
+      rootMargin: "-190px 0px 0px 0px",
+    }
+  );
+
+  headingObserver.observe(mainHeading);
 }
