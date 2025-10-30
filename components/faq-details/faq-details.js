@@ -148,13 +148,21 @@ export default async function decorateFaqDetail() {
       // ==== Left section ====
       const subsectionAndleftSection = document.createElement("div");
       subsectionAndleftSection.classList.add("sub-section-wrapper");
+      if (lidata.sectionImage?._path) {
+        const img = document.createElement("img");
+        img.src = lidata.sectionImage._path;
+        img.alt = lidata.sectionTitle;
+        img.loading = "lazy";
+        img.classList.add("faq-image");
+        subsectionAndleftSection.appendChild(img);
+      }
 
       const headingh3 = document.createElement("h3");
       headingh3.id = subtitle; // ✅ Correct: no # symbol
       headingh3.textContent = lidata.sectionTitle;
-
       const leftsectionPtag = document.createElement("p");
-      leftsectionPtag.innerHTML = lidata.sectionContent.html; // ✅ use innerHTML if content is HTML
+      debugger
+      leftsectionPtag.innerHTML = lidata.sectionContent.plaintext?.replaceAll('\n', '<br>'); // ✅ use innerHTML if content is HTML
 
       subsectionAndleftSection.appendChild(headingh3);
       subsectionAndleftSection.appendChild(leftsectionPtag);
@@ -184,8 +192,7 @@ export default async function decorateFaqDetail() {
       if (!heading) return;
 
       const offset = 140; // adjust for sticky header
-      const topPos =
-        heading.getBoundingClientRect().top + window.scrollY - offset;
+      const topPos = heading.getBoundingClientRect().top + window.scrollY - offset;
 
       window.scrollTo({
         top: topPos,
