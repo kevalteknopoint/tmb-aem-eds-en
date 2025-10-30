@@ -111,7 +111,7 @@ export default async function decorateFaqDetail() {
     headingh1.textContent = faq.question;
     headingSection.appendChild(headingh1);
 
-    // ===== Sub Section Wrapper =====
+    // ===== Right Section Wrapper =====
     const subsectionAndRightSection = document.createElement("div");
     subsectionAndRightSection.classList.add(
       "sub-section-wrapper",
@@ -127,44 +127,50 @@ export default async function decorateFaqDetail() {
     const ul = document.createElement("ul");
     ul.classList.add("right-ul");
 
-    // ===== Create list items =====
+    // ===== Create list items & left sections =====
     faq.faqContentReference.forEach((lidata, i) => {
-      // ====for right section ===
+      // ====== Create IDs consistently =====
+      const subtitle = lidata.sectionTitle.toLowerCase().replace(/\s+/g, "-");
+
+      // ==== Right side nav ====
       const li = document.createElement("li");
       const link = document.createElement("a");
       const spanforcount = document.createElement("span");
-      const subtitle = lidata.sectionTitle.toLowerCase().replace(/\s+/g, "-");
-      link.href = `#${subtitle}`;
       spanforcount.textContent = `[${i + 1}]`;
-      link.textContent = `${lidata.sectionTitle}`;
+
+      link.href = `#${subtitle}`;
+      link.textContent = lidata.sectionTitle;
+
       li.appendChild(spanforcount);
       li.appendChild(link);
       ul.appendChild(li);
 
+      // ==== Left section ====
       const subsectionAndleftSection = document.createElement("div");
       subsectionAndleftSection.classList.add("sub-section-wrapper");
+
       const headingh3 = document.createElement("h3");
-      headingh3.id = lidata.sectionTitle;
+      headingh3.id = subtitle; // ✅ Correct: no # symbol
       headingh3.textContent = lidata.sectionTitle;
 
       const leftsectionPtag = document.createElement("p");
-      leftsectionPtag.textContent = lidata.sectionContent.html;
+      leftsectionPtag.innerHTML = lidata.sectionContent.html; // ✅ use innerHTML if content is HTML
+
       subsectionAndleftSection.appendChild(headingh3);
       subsectionAndleftSection.appendChild(leftsectionPtag);
       secwrapper.appendChild(subsectionAndleftSection);
     });
 
-    // ===== Append all only ONCE =====
+    // ===== Append right section only once =====
     subsectionAndRightSection.appendChild(headingh2);
     subsectionAndRightSection.appendChild(rightsectionPtag);
     subsectionAndRightSection.appendChild(ul);
-
-    // ===== Wrap inside secwrapper =====
     secwrapper.appendChild(subsectionAndRightSection);
   } catch (err) {
     console.error("Error loading FAQ:", err);
   }
 
+  // ===== Smooth Scroll Logic =====
   const sections = document.querySelectorAll(".sub-section-wrapper h3[id]");
   const navLinks = document.querySelectorAll(".right-ul a");
 
@@ -177,16 +183,10 @@ export default async function decorateFaqDetail() {
 
       if (!heading) return;
 
-      const sectionWrapper = heading.closest(".sub-section-wrapper");
-
-      const offset = 150;
+      const offset = 140; // adjust for sticky header
       const topPos =
-        sectionWrapper.getBoundingClientRect().top + window.scrollY - offset;
+        heading.getBoundingClientRect().top + window.scrollY - offset;
 
-      heading.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
       window.scrollTo({
         top: topPos,
         behavior: "smooth",
@@ -194,15 +194,14 @@ export default async function decorateFaqDetail() {
     });
   });
 
+  // ===== Active link highlight on scroll =====
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-
         const { id } = entry.target;
 
         navLinks.forEach((link) => link.classList.remove("active"));
-
         const activeLink = document.querySelector(`.right-ul a[href="#${id}"]`);
         if (activeLink) activeLink.classList.add("active");
       });
