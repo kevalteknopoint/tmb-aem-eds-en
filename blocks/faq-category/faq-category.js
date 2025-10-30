@@ -26,7 +26,7 @@ function createSwiper(block) {
       const slideIndicator = document.createElement("div");
       slideIndicator.classList.add("slide-indicator");
 
-      // ✅ Accessibility attributes for the indicator
+      //  Accessibility attributes for the indicator
       slideIndicator.setAttribute("role", "status");
       slideIndicator.setAttribute("aria-live", "polite");
       slideIndicator.setAttribute("aria-atomic", "true");
