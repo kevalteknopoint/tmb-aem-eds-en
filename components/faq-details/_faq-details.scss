@@ -2,191 +2,198 @@
 @use '../../styles/mixins' as *;
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .faq-heading-section {
-    max-width: 1328px;
-    margin: 0 auto;
+  max-width: 1328px;
+  margin: 0 auto;
 
-    h1 {
-        color: $surface-highlight;
-        font-family: $primary-font;
-        font-size: 40px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 44px;
-        letter-spacing: 0;
-        padding: 32px;
-        max-width: 1440px;
+  h1 {
+    color: $surface-highlight;
+    font-family: $primary-font;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0;
+    padding: 32px;
+    max-width: 1440px;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 1;
+    transform: translateY(0);
 
-        @include mobile {
-            padding: 24px 16px 0;
-        }
+    @include mobile {
+      padding: 24px 16px 0;
     }
+
+    &[style*="none"] {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
 }
 
 .section-wrapper {
-    max-width: 1328px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 392px; // Left | Right
-    column-gap: 74px;
-    font-family: "Open Sans", sans-serif;
-    position: relative;
-    align-items: start;
-    padding: 32px;
+  max-width: 1328px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 392px; // Left | Right
+  column-gap: 74px;
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+  align-items: start;
+  padding: 32px;
 
-    @include mobile {
-        padding: 24px 16px;
+  @include mobile {
+    padding: 24px 16px;
+  }
+
+  .sub-section-wrapper h3[id] {
+    scroll-margin-top: 140px;
+  }
+
+  .sub-section-wrapper:not(.right-section-wrapper) {
+    grid-column: 1;
+    grid-row: auto;
+
+    .default-content-wrapper > h3 {
+      color: $surface-prim-active-cta;
+      font-family: $primary-font;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0;
+      padding: 0 0 30px;
     }
 
-    .sub-section-wrapper h3[id] {
-        scroll-margin-top: 140px;
-        /* Adjust depending on header height */
+    p {
+      color: $surface-prim-active-cta;
+      font-family: $primary-font;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      padding-bottom: 32px;
+    }
+  }
+
+  .right-section-wrapper {
+    grid-column: 2;
+    grid-row: 1 / span 1;
+    align-self: start;
+    margin-top: 0;
+    position: sticky;
+    top: 140px;
+    height: max-content;
+    width: 326px;
+
+    .default-content-wrapper > h2 {
+      color: $text-secondary-cta;
+      font-family: $primary-font;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 36px;
+      letter-spacing: -1px;
+      padding: 12px 0;
+      border-bottom: 1px solid #0B231F;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      opacity: 0;
+      transform: translateY(-10px);
+
+      &[style*="block"] {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    // Left side: stacked sub-section wrappers
-    .sub-section-wrapper:not(.right-section-wrapper) {
-        grid-column: 1;
-        grid-row: auto; // flow naturally
-
-        .default-content-wrapper>h3 {
-            color: $surface-prim-active-cta;
-            font-family: $primary-font;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 24px;
-            letter-spacing: 0;
-            padding: 0 0 30px
-        }
-
-        p {
-            color: $surface-prim-active-cta;
-            font-family: $primary-font;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 24px;
-            padding-bottom: 32px;
-        }
+    p {
+      color: $text-secondary;
+      font-family: $primary-font;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0;
+      padding: 24px 0;
     }
 
-    .right-section-wrapper {
-        grid-column: 2;
-        grid-row: 1 / span 1;
-        align-self: start;
-        margin-top: 0;
-        position: sticky;
-        top: 140px;
-        height: max-content;
-        width: 326px;
+    ul {
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 0;
 
-        .default-content-wrapper>h2 {
-            color: $text-secondary-cta;
-            font-family: $primary-font;
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 36px;
-            letter-spacing: -1px;
-            padding: 12px 0;
-            border-bottom: 1px solid #0B231F;
-        }
+      .faq-number {
+        display: block;
+        min-width: 28px;
+        width: fit-content;
+      }
 
-        p {
-            color: $text-secondary;
-            font-family: $primary-font;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 24px;
-            letter-spacing: 0;
-            padding: 24px 0;
-        }
+      a {
+        padding: 5px;
+        color: $surface-prim-active-cta;
+        text-decoration: none;
+        transition: color 0.3s;
+        width: 100%;
+      }
 
-        ul {
-            display: flex;
-            flex-direction: column;
-            flex: 1 0 0;
+      a:hover {
+        text-decoration-line: underline;
+      }
 
-            .faq-number {
-                display: block;
-                min-width: 28px; 
-                width: fit-content;
-            }
+      a.active {
+        background-color: #00525B33;
+        transition: 0.3s;
+      }
 
-            a {
-                padding: 5px;
-                color: $surface-prim-active-cta;
-                text-decoration: none;
-                transition: color .3s;
-                width: 100%;
-            }
-
-            a:hover {
-                text-decoration-line: underline;
-                text-decoration-style: solid;
-                text-decoration-skip-ink: auto;
-                text-decoration-thickness: auto;
-                text-underline-offset: auto;
-                text-underline-position: from-font;
-            }
-
-            a.active {
-                background-color: #00525B33;
-                transition: 0.3s;
-            }
-
-            li {
-                display: flex;
-                align-items: center;
-                gap: 6px;
-                padding: 5px;
-                color: #0B231F;
-                font-family: $primary-font;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 24px;
-                letter-spacing: 0;
-
-            }
-        }
-
+      li {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 5px;
+        color: #0B231F;
+        font-family: $primary-font;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0;
+      }
     }
+  }
 }
 
 .faq-class-for-four-img {
-    max-width: 1328px;
-    margin: 0 auto;
+  max-width: 1328px;
+  margin: 0 auto;
 
-    .default-content-wrapper {
-        display: flex;
-        padding: 10px;
-        align-items: flex-start;
-        gap: 10px;
+  .default-content-wrapper {
+    display: flex;
+    padding: 10px;
+    align-items: flex-start;
+    gap: 10px;
 
-        p{
-            padding:0;
-        }
-
-        img {
-            height: 395px;
-            width: 395px;
-        }
+    p {
+      padding: 0;
     }
+
+    img {
+      height: 395px;
+      width: 395px;
+    }
+  }
 }
 
 @include mobile {
-    .section-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
+  .section-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 
-        .right-section-wrapper {
-            display: none;
-        }
+    .right-section-wrapper {
+      display: none;
     }
+  }
 }
