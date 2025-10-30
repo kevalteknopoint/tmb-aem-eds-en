@@ -4,6 +4,7 @@
 .faq-question{
   margin:auto;
   max-width:1328px;
+  padding:0 32px;
 }
 
 .faq-question .default-content-wrapper{
@@ -30,7 +31,7 @@
   flex-direction:column;
   margin:auto;
   max-width:1328px;
-  padding-bottom:32px;
+  padding:0 32px 32px;
 }
 
 .faq-category-container .faq-category-wrapper{
