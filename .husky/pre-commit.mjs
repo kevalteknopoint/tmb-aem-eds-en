@@ -18,3 +18,8 @@ if (modifledPartials.length > 0) {
   console.log(output);
   await run('git add component-models.json component-definition.json component-filters.json');
 }
+
+console.log('Building CSS...');
+const cssOutput = await run('npm run build:css --silent');
+console.log(cssOutput);
+await run('git add *.css **/*.css');
