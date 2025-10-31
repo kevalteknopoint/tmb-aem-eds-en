@@ -157,12 +157,12 @@ function createSwiper(block) {
 
   block.append(swiperWrapper);
 
-  // ✅ Pagination
+  //  Pagination
   const swiperPagination = document.createElement("div");
   swiperPagination.classList.add("swiper-pagination");
   block.append(swiperPagination);
 
-  // ✅ Indicator (for screen readers and visual counter)
+  //  Indicator (for screen readers and visual counter)
   const indicatorContainer = document.querySelector(".faq-question .default-content-wrapper");
   if (indicatorContainer && !indicatorContainer.querySelector(".slide-indicator")) {
     const slideIndicator = document.createElement("div");
@@ -173,7 +173,7 @@ function createSwiper(block) {
     indicatorContainer.append(slideIndicator);
   }
 
-  // ✅ Navigation arrows (curved / minimal style)
+  // Navigation arrows (curved / minimal style)
   const prevBtn = document.createElement("button");
   prevBtn.classList.add("faq-swiper-button-prev");
   prevBtn.setAttribute("aria-label", "Previous FAQ category");
