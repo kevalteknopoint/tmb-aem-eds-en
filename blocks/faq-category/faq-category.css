@@ -219,19 +219,21 @@
   z-index:15;
 }
 
-.faq-category-container svg{
-  stroke:#555;
-  transition:stroke 0.25s ease;
-}
-
-.faq-category-container:active{
+.faq-category-container .faq-swiper-button-prev:active,
+.faq-category-container .faq-swiper-button-next:active{
   background:#f1f3f4;
   border-radius:50%;
   color:#202124;
 }
 
-.faq-category-container:active svg{
+.faq-category-container .faq-swiper-button-prev:active svg,
+.faq-category-container .faq-swiper-button-next:active svg{
   stroke:#000;
+}
+
+.faq-category-container svg{
+  stroke:#555;
+  transition:stroke 0.25s ease;
 }
 
 .faq-category-container::after{
