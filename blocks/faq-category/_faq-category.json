@@ -36,6 +36,12 @@
             "id": "faq-category",
             "fields": [
                 {
+                    "component": "tag",
+                    "name": "cq:tags",
+                    "label": "AEM Tags",
+                    "valueType": "string[]"
+                },
+                {
                     "component": "richtext",
                     "name": "text",
                     "value": "",
