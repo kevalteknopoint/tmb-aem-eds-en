@@ -309,67 +309,69 @@
         top: 77%;
         transform: translateY(-50%);
         z-index: 15;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
         color: #333;
         cursor: pointer;
         transition: all 0.25s ease;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    svg {
+        stroke: #555;
+        transition: stroke 0.25s ease;
+    }
+
+    &:active {
+        background: #f1f3f4;
+        border-radius: 50%;
+        color: #202124;
 
         svg {
-            stroke: #555;
-            transition: stroke 0.25s ease;
+            stroke: #000;
         }
+    }
+
+    &::after {
+        display: none;
+    }
+}
+
+.faq-swiper-button-prev {
+    right: 13.125rem;
+}
+
+.faq-swiper-button-next {
+    right: 64px;
+}
+
+// Responsive tweaks
+@include tablet {
+
+    .faq-swiper-button-prev,
+    .faq-swiper-button-next {
+        height: 24px;
+        width: 24px;
+        top: 84% !important;
 
         &:active {
             background: #f1f3f4;
             border-radius: 50%;
             color: #202124;
-
-            svg {
-                stroke: #000;
-            }
-        }
-
-        &::after {
-            display: none;
         }
     }
 
     .faq-swiper-button-prev {
-        right: 14.125rem;
+        right: 17.125rem;
+
     }
 
     .faq-swiper-button-next {
-        right: 45px;
-    }
+        right: 2px;
+        margin-left: 8px;
 
-    // Responsive tweaks
-    @include tablet {
-
-        .faq-swiper-button-prev,
-        .faq-swiper-button-next {
-            height: 24px;
-            width: 24px;
-            top: 84%;
-
-            &:active {
-                background: #f1f3f4;
-                border-radius: 50%;
-                color: #202124;
-            }
-        }
-
-        .faq-swiper-button-prev {
-            right: 17.125rem;
-
-        }
-
-        .faq-swiper-button-next {
-            right: 2px;
-
-        }
     }
 }

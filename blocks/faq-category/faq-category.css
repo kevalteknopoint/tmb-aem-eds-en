@@ -208,46 +208,42 @@
   align-items:center;
   color:#333;
   cursor:pointer;
-  display:flex;
-  height:40px;
+  display:inline-flex;
+  height:35px;
   justify-content:center;
   position:absolute;
   top:77%;
   transform:translateY(-50%);
   transition:all 0.25s ease;
-  width:40px;
+  width:35px;
   z-index:15;
 }
 
-.faq-category-container .faq-swiper-button-prev svg,
-.faq-category-container .faq-swiper-button-next svg{
+.faq-category-container svg{
   stroke:#555;
   transition:stroke 0.25s ease;
 }
 
-.faq-category-container .faq-swiper-button-prev:active,
-.faq-category-container .faq-swiper-button-next:active{
+.faq-category-container:active{
   background:#f1f3f4;
   border-radius:50%;
   color:#202124;
 }
 
-.faq-category-container .faq-swiper-button-prev:active svg,
-.faq-category-container .faq-swiper-button-next:active svg{
+.faq-category-container:active svg{
   stroke:#000;
 }
 
-.faq-category-container .faq-swiper-button-prev::after,
-.faq-category-container .faq-swiper-button-next::after{
+.faq-category-container::after{
   display:none;
 }
 
-.faq-category-container .faq-swiper-button-prev{
-  right:14.125rem;
+.faq-swiper-button-prev{
+  right:13.125rem;
 }
 
-.faq-category-container .faq-swiper-button-next{
-  right:45px;
+.faq-swiper-button-next{
+  right:64px;
 }
 
 @media screen and (max-width: 1023px){
@@ -291,25 +287,26 @@
     padding:0;
   }
 
-  .faq-category-container .faq-swiper-button-prev,
-  .faq-category-container .faq-swiper-button-next{
+  .faq-swiper-button-prev,
+  .faq-swiper-button-next{
     height:24px;
-    top:84%;
+    top:84% !important;
     width:24px;
   }
 
-  .faq-category-container .faq-swiper-button-prev:active,
-  .faq-category-container .faq-swiper-button-next:active{
+  .faq-swiper-button-prev:active,
+  .faq-swiper-button-next:active{
     background:#f1f3f4;
     border-radius:50%;
     color:#202124;
   }
 
-  .faq-category-container .faq-swiper-button-prev{
+  .faq-swiper-button-prev{
     right:17.125rem;
   }
 
-  .faq-category-container .faq-swiper-button-next{
+  .faq-swiper-button-next{
+    margin-left:8px;
     right:2px;
   }
 }
