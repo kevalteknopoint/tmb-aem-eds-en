@@ -33,6 +33,45 @@ function createSwiper(block) {
 
       indicatorContainer.append(slideIndicator);
     }
+     // Navigation arrows (curved / minimal style)
+
+  const prevBtn = document.createElement("button");
+
+  prevBtn.classList.add("faq-swiper-button-prev");
+
+  prevBtn.setAttribute("aria-label", "Previous FAQ category");
+
+  prevBtn.innerHTML = `
+
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+
+      <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+
+    </svg>
+
+  `;
+
+
+
+  const nextBtn = document.createElement("button");
+
+  nextBtn.classList.add("faq-swiper-button-next");
+
+  nextBtn.setAttribute("aria-label", "Next FAQ category");
+
+  nextBtn.innerHTML = `
+
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+
+      <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+
+    </svg>
+
+  `;
+
+
+
+  block.append(prevBtn, nextBtn);
   }
 }
 
@@ -85,7 +124,8 @@ function updateIndicator(swiperInstance) {
 
   indicator.setAttribute("aria-label", ariaMessage);
 }
-
+createSwiper(mainFaqContainer);
+// Initialize Swiper
 const swiper = new Swiperblock(mainFaqContainer, {
   slidesPerView: 2,
   slidesPerGroup: 2,
@@ -95,6 +135,13 @@ const swiper = new Swiperblock(mainFaqContainer, {
     prevSlideMessage: "Previous FAQ items",
     nextSlideMessage: "Next FAQ items",
     paginationBulletMessage: "Go to FAQ slide {{index}}",
+  },
+  navigation: {
+
+    nextEl: ".faq-swiper-button-next",
+
+    prevEl: ".faq-swiper-button-prev",
+
   },
   pagination: {
     el: ".swiper-pagination",
