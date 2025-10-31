@@ -347,7 +347,7 @@
     }
 
     // Responsive tweaks
-    @media (max-width: 768px) {
+    @include tablet {
 
         .faq-swiper-button-prev,
         .faq-swiper-button-next {
