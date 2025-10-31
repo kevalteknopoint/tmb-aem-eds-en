@@ -243,11 +243,11 @@
 }
 
 .faq-category-container .faq-swiper-button-prev{
-  right:14.125rem;
+  right:13.125rem;
 }
 
 .faq-category-container .faq-swiper-button-next{
-  right:45px;
+  right:64px;
 }
 
 @media screen and (max-width: 1023px){
