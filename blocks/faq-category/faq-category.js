@@ -100,7 +100,8 @@ function updateIndicator(swiperInstance, mainFaqContainer) {
 }
 
 export default async function decorate(block) {
-  const params = block.querySelector("p")?.textContent?.trim();
+  const paramsBlock = block.querySelector("p");
+  const params = paramsBlock?.textContent?.trim();
 
   if (!params) return;
 
@@ -126,8 +127,7 @@ export default async function decorate(block) {
     )
   );
 
-  block.innerHTML = "";
-  block.appendChild(htmlElement);
+  paramsBlock?.replaceWith(htmlElement);
 
   const mainFaqContainer = document.querySelector(".faq-category-container:not(.faq-frequently-question,.faq-frequently-question-list)");
 
