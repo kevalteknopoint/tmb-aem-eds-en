@@ -34,9 +34,12 @@ function createSwiper(block) {
 
     block.append(swiperWrapper);
 
+    const swiperPaginationWrap = document.createElement("div");
+    swiperPaginationWrap.classList.add("swiper-pagination-wrap");
+    block.append(swiperPaginationWrap);
+
     const swiperPagination = document.createElement("div");
     swiperPagination.classList.add("swiper-pagination");
-    block.append(swiperPagination);
 
     const indicatorContainer = document.querySelector(".faq-question .default-content-wrapper");
     if (indicatorContainer && !indicatorContainer.querySelector(".slide-indicator")) {
@@ -69,7 +72,7 @@ function createSwiper(block) {
       </svg>
     `;
 
-    block.append(prevBtn, nextBtn);
+    swiperPaginationWrap.append(prevBtn, swiperPagination, nextBtn);
   }
 }
 
@@ -128,54 +131,52 @@ export default async function decorate(block) {
   );
 
   paramsBlock?.replaceWith(htmlElement);
-
-  const mainFaqContainer = document.querySelector(".faq-category-container:not(.faq-frequently-question,.faq-frequently-question-list)");
-
-  if (!mainFaqContainer) return;
-
-  createSwiper(mainFaqContainer);
-
-  const swiper = new Swiper(mainFaqContainer, {
-    slidesPerView: 2,
-    slidesPerGroup: 2,
-    spaceBetween: 2,
-    a11y: {
-      enabled: true,
-      prevSlideMessage: "Previous FAQ items",
-      nextSlideMessage: "Next FAQ items",
-      paginationBulletMessage: "Go to FAQ slide {{index}}",
-    },
-    navigation: {
-      nextEl: ".faq-swiper-button-next",
-      prevEl: ".faq-swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      renderBullet: (index, className) =>
-        `<span class="${className}" role="button" aria-label="Go to slide ${index + 1}">${index + 1}</span>`,
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 16,
-        slidesPerGroup: 1,
-      },
-      1366: {
-        slidesPerGroup: 2,
-        slidesPerView: 2,
-        spaceBetween: 32,
-      },
-    },
-    on: {
-      init() {
-        updateIndicator(this);
-      },
-      slideChange() {
-        updateIndicator(this);
-      },
-    },
-  });
-
-  window.addEventListener("resize", () => updateIndicator(swiper));
 }
+
+const mainFaqContainer = document.querySelector(".faq-category-container:not(.faq-frequently-question,.faq-frequently-question-list)");
+
+createSwiper(mainFaqContainer);
+
+const swiper = new Swiper(mainFaqContainer, {
+  slidesPerView: 2,
+  slidesPerGroup: 2,
+  spaceBetween: 2,
+  a11y: {
+    enabled: true,
+    prevSlideMessage: "Previous FAQ items",
+    nextSlideMessage: "Next FAQ items",
+    paginationBulletMessage: "Go to FAQ slide {{index}}",
+  },
+  navigation: {
+    nextEl: ".faq-swiper-button-next",
+    prevEl: ".faq-swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    renderBullet: (index, className) =>
+      `<span class="${className}" role="button" aria-label="Go to slide ${index + 1}">${index + 1}</span>`,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      slidesPerGroup: 1,
+    },
+    1366: {
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+      spaceBetween: 32,
+    },
+  },
+  on: {
+    init() {
+      updateIndicator(this, mainFaqContainer);
+    },
+    slideChange() {
+      updateIndicator(this, mainFaqContainer);
+    },
+  },
+});
+
+window.addEventListener("resize", () => updateIndicator(swiper));

@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center; // ensures “Questions” and indicator are vertically centered
-    border-bottom: 1px dotted $text-ghost-default;
+    border-bottom: 1px solid #00525B33;
 
     p {
       padding: 18px 0;
@@ -84,17 +84,22 @@
     }
   }
 
+  .swiper-pagination-wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 1328px;
+    margin: 0 0 0 auto;
+    padding: 32px 0;
+  }
+
   .swiper-pagination {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     font-family: "Inter", sans-serif;
-    padding: 32px 56px;
-    position: relative;
-
-    @include mobile {
-      padding: 32px 34px;
-    }
+    position: static;
+    width: fit-content;
   }
 
   .swiper-pagination-bullet {
@@ -305,9 +310,6 @@
 
     .faq-swiper-button-prev,
     .faq-swiper-button-next {
-        position: absolute;
-        bottom: 72px;
-        z-index: 15;
         color: #333;
         cursor: pointer;
         transition: all 0.25s ease;
@@ -325,6 +327,11 @@
           svg {
             stroke: #000;
           }
+        }
+
+        &.swiper-button-disabled {
+          opacity: 0.4;
+          cursor: not-allowed;
         }
 
         @include mobile {
@@ -352,14 +359,6 @@
     }
 }
 
-.faq-swiper-button-prev {
-    right: 13.125rem;
-}
-
-.faq-swiper-button-next {
-    right: 64px;
-}
-
 // Responsive tweaks
 @include tablet {
 
@@ -375,13 +374,7 @@
         }
     }
 
-    .faq-swiper-button-prev {
-        right: 19rem;
-
-    }
-
     .faq-swiper-button-next {
-        right: 16px;
         margin-left: 8px;
     }
 }

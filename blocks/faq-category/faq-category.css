@@ -9,7 +9,7 @@
 
 .faq-question .default-content-wrapper{
   align-items:center;
-  border-bottom:1px dotted var(--text-ghost-default);
+  border-bottom:1px solid rgb(0 82 91 / 20%);
   display:flex;
   justify-content:space-between;
 }
@@ -59,13 +59,23 @@
   padding:13px 8px;
 }
 
+.faq-category-container .swiper-pagination-wrap{
+  align-items:center;
+  display:flex;
+  justify-content:flex-end;
+  margin:0 0 0 auto;
+  max-width:1328px;
+  padding:32px 0;
+}
+
 .faq-category-container .swiper-pagination{
   align-items:center;
   display:flex;
   font-family:Inter, sans-serif;
   justify-content:flex-end;
-  padding:32px 56px;
-  position:relative;
+  position:static;
+  width:-moz-fit-content;
+  width:fit-content;
 }
 
 .faq-category-container .swiper-pagination-bullet{
@@ -207,16 +217,13 @@
 .faq-category-container .faq-swiper-button-prev,
 .faq-category-container .faq-swiper-button-next{
   align-items:center;
-  bottom:72px;
   color:#333;
   cursor:pointer;
   display:inline-flex;
   height:35px;
   justify-content:center;
-  position:absolute;
   transition:all 0.25s ease;
   width:35px;
-  z-index:15;
 }
 
 .faq-category-container .faq-swiper-button-prev:active,
@@ -231,6 +238,12 @@
   stroke:#000;
 }
 
+.faq-category-container .faq-swiper-button-prev.swiper-button-disabled,
+.faq-category-container .faq-swiper-button-next.swiper-button-disabled{
+  cursor:not-allowed;
+  opacity:0.4;
+}
+
 .faq-category-container svg{
   stroke:#555;
   transition:stroke 0.25s ease;
@@ -238,14 +251,6 @@
 
 .faq-category-container::after{
   display:none;
-}
-
-.faq-swiper-button-prev{
-  right:13.125rem;
-}
-
-.faq-swiper-button-next{
-  right:64px;
 }
 
 @media screen and (max-width: 1023px){
@@ -302,13 +307,8 @@
     color:#202124;
   }
 
-  .faq-swiper-button-prev{
-    right:19rem;
-  }
-
   .faq-swiper-button-next{
     margin-left:8px;
-    right:16px;
   }
 }
 
@@ -327,10 +327,6 @@
 
   .faq-category-container .faq-category-wrapper ul li a{
     padding-right:4px;
-  }
-
-  .faq-category-container .swiper-pagination{
-    padding:32px 34px;
   }
 
   .faq-frequently-question-title h1,
