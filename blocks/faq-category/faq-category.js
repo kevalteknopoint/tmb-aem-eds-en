@@ -11,8 +11,6 @@ async function fetchFaqs(tagValue, limit = 5, offset = 0, fill = 0) {
       allFaqs = Array(fill).fill(allFaqs?.[0]);
     }
 
-    console.log(allFaqs);
-
     return allFaqs;
   } catch (error) {
     console.log('[FAQ_FETCH_ERROR]: ', error);
