@@ -75,6 +75,7 @@
         align-items: center;
         color: $text-primary;
         padding: 13px 8px;
+        gap: 24px;
 
         @include mobile {
           padding-right: 4px;
