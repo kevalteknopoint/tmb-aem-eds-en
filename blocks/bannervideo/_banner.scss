@@ -1,0 +1,51 @@
+.secfirst {
+  .bannervideo-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+
+    .bannervideo {
+      border-radius: 0 0 50px 50px;
+
+      .swiper-slide {
+        position: relative;
+        margin-right: 2px;
+      }
+
+      .swiper-pagination {
+        .swiper-pagination-bullet {
+          width: 49px;
+          height: 12px;
+          border-radius: 40px;
+          opacity: 1;
+          background-color: #fff;
+        }
+
+        .swiper-pagination-bullet-active {
+          background: #00525b;
+        }
+      }
+    }
+  }
+
+  .swiper-wrapper {
+    height: 600px;
+  }
+
+  @media (max-width: 767px) {
+    .swiper-wrapper {
+      height: auto;
+    }
+
+    .bannervideo-wrapper {
+      .bannervideo {
+        .swiper-pagination {
+          .swiper-pagination-bullet {
+            width: 20px;
+            height: 7px;
+          }
+        }
+      }
+    }
+  }
+}

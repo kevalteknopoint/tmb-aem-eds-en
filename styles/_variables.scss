@@ -38,6 +38,7 @@ $surface-primary: var(--surface-primary); // colour/neutral/cool-grey
 $surface-secondary: var(--surface-secondary); // colour/neutral/grey
 $surface-overlay: var(--surface-overlay); // colour/neutral/dark-grey-50
 $surface-brand: var(--surface-brand); // colour/teal/teal
+$surface-light: var(--surface-light); // colour/neutral/white
 $surface-login-cta: var(--surface-login-cta); // colour/yellow/cream
 
 /* -------------------- */
@@ -59,14 +60,6 @@ $surface-disabled-cta: var(--surface-disabled-cta); // colour/neutral/pale-grey
 $surface-highlight: var(--surface-highlight); // colour/teal/teal-10
 
 /* ---------- SURFACE VARIABLES ---------- */
-
-/* ---------- VIEWPORT VARIABLES ---------- */
-
-$desktop: var(--desktop);
-$tablet: var(--tablet);
-$mobile: var(--mobile);
-
-/* ---------- VIEWPORT VARIABLES ---------- */
 
 /* ---------- FONTS VARIABLES ---------- */
 

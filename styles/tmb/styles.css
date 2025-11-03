@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ---------- BORDER VARIABLES ---------- */
 /* ---------- BORDER VARIABLES ---------- */
 /* ---------- TEXT VARIABLES ---------- */
@@ -16,6 +17,11 @@
 /* ---------- FONTS VARIABLES ---------- */
 *, *::before, *::after {
   box-sizing: border-box;
+=======
+@import '../../libs/aos/aos.min.css';
+*, *::before, *::after{
+  box-sizing:border-box;
+>>>>>>> d6b2b3b3a4ac4975c7eacc75c95408bf4580ede8
 }
 
 * {
@@ -90,6 +96,7 @@ h1, h2, h3, h4, h5, h6 {
 :focus:not(:focus-visible) {
   outline: none;
 }
+<<<<<<< HEAD
 
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -97,6 +104,84 @@ h1, h2, h3, h4, h5, h6 {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+=======
+:root{
+  --border-primary:#0b231f;
+  --border-brand:#00a8b8;
+  --border-error:#e52336;
+  --text-primary:#000;
+  --text-secondary:#565659;
+  --text-inverse:#fff;
+  --text-light:#f5f8de;
+  --text-brand:#00525b;
+  --text-brand-secondary:#009bab;
+  --text-primary-cta:#f5f8de;
+  --text-secondary-cta:#00525b;
+  --text-accent-cta:#00525b;
+  --text-disabled:#d9dadb;
+  --text-error:#e52336;
+  --text-ghost-default:#00525b;
+  --text-ghost-hover:#000;
+  --text-ghost-focused:#000;
+  --text-ghost-disabled:#d9dadb;
+  --text-ghost-active:#009bab;
+  --surface-primary:#f4f4f5;
+  --surface-secondary:#d9dadb;
+  --surface-overlay:#565659;
+  --surface-brand:#00525b;
+  --surface-light:#fafafa;
+  --surface-login-cta:#f5f8de;
+  --surface-primary-cta:#00525b;
+  --surface-prim-hover-cta:#014047;
+  --surface-prim-active-cta:#0b231f;
+  --surface-secondary-cta:#f3f5f6;
+  --surface-sec-hover-cta:#009bab;
+  --surface-accent-cta:#f5f8de;
+  --surface-accent-hover-cta:#f9ffc8;
+  --surface-accent-active-cta:#fff67f;
+  --surface-disabled-cta:#efefef;
+  --surface-highlight:#00525b;
+  --primary-font:"Inter", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
+  --secondary-font:"American Grotesk", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.d-none{
+  display:none !important;
+}
+
+.spacer-bottom{
+  margin-bottom:80px;
+}
+
+.spacer-top{
+  margin-top:80px;
+}
+
+@media screen and (max-width: 1023px){
+  .spacer-bottom{
+    margin-bottom:60px;
+  }
+  .spacer-top{
+    margin-top:60px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .spacer-bottom{
+    margin-bottom:40px;
+  }
+  .spacer-top{
+    margin-top:40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation-duration:0.01ms !important;
+    animation-iteration-count:1 !important;
+    scroll-behavior:auto !important;
+    transition-duration:0.01ms !important;
+>>>>>>> d6b2b3b3a4ac4975c7eacc75c95408bf4580ede8
   }
 }
 :root {

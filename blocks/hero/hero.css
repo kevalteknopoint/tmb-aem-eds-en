@@ -3,6 +3,7 @@
   padding: 0;
 }
 
+<<<<<<< HEAD
 .hero {
   position: relative;
   padding: 40px 24px;
@@ -32,5 +33,39 @@
 @media (width >= 900px) {
   .hero {
     padding: 40px 32px;
+=======
+.hero{
+  min-height:300px;
+  padding:40px 24px;
+  position:relative;
+}
+
+.hero h1{
+  color:var(--background-color);
+  margin-left:auto;
+  margin-right:auto;
+  max-width:1200px;
+}
+
+.hero picture{
+  box-sizing:border-box;
+  inset:0;
+  -o-object-fit:cover;
+     object-fit:cover;
+  position:absolute;
+  z-index:-1;
+}
+
+.hero img{
+  height:100%;
+  -o-object-fit:cover;
+     object-fit:cover;
+  width:100%;
+}
+
+@media (width >= 900px){
+  .hero{
+    padding:40px 32px;
+>>>>>>> d6b2b3b3a4ac4975c7eacc75c95408bf4580ede8
   }
 }/*# sourceMappingURL=hero.css.map */

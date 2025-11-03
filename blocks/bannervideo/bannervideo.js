@@ -1,5 +1,4 @@
-import Swiperblock from "./swiper-bundle.min.js";
-import embedblock from "../embed/embed.js";
+import Swiperblock from "../../libs/swiper/swiper-bundle.min.js";
 import appendclasses from "../../scripts/constatnt-classes.js";
 
 function createSwiper(block) {
@@ -8,20 +7,22 @@ function createSwiper(block) {
     const rows = Array.from(block.children);
     const swiperWrapper = document.createElement("div");
     swiperWrapper.classList.add("swiper-wrapper");
-    rows.forEach((row, i) => {
+    rows.forEach((row) => {
       const towrapdeskandmob = document.createElement("div");
       towrapdeskandmob.classList.add("mob-desk-wrapper");
-      const innercontainer = document.createElement("div");
-      innercontainer.classList.add("inner-container");
+      row.lastElementChild?.setAttribute('data-aos', 'fade-up');
+      row.lastElementChild?.setAttribute('data-aos-duration', '2000');
+
       const desktopDiv = row.children[0];
       const mobDiv = row.children[1];
-      const middelcontainer =row.children[2];
+      const richtextdiv = row.children[2];
       row.classList.add("swiper-slide");
-      row.classList.add(`swiperinnerdiv`); //${i + 1}
+      row.classList.add(`swiperinnerdiv`); // ${i + 1}
       swiperWrapper.append(row);
       desktopDiv.classList.add("desktop-banner");
       mobDiv.classList.add("mob-pbanner");
-      innercontainer.appendChild(middelcontainer)   //////inner container h1 and button 
+      richtextdiv.classList.add("richtext-class");
+
       towrapdeskandmob.appendChild(desktopDiv);
       towrapdeskandmob.appendChild(mobDiv);
       row.append(towrapdeskandmob);
@@ -37,7 +38,17 @@ function createSwiper(block) {
     block.append(swiperWrapper);
     const swiperpagination = document.createElement("div");
     swiperpagination.classList.add("swiper-pagination");
-    block.append(swiperpagination);
+    const swiperpaginationouter = document.createElement("div");
+    swiperpaginationouter.classList.add("outer-pegination-div"); // for play btn
+    const playbtn = document.createElement("button");
+    playbtn.classList.add("play-btn");
+    const iconp = document.createElement("img");
+    iconp.src = "../../icons/Vector.svg";
+    iconp.alt = "play Icon";
+    playbtn.appendChild(iconp);
+    swiperpaginationouter.append(swiperpagination);
+    swiperpaginationouter.append(playbtn);
+    block.append(swiperpaginationouter);
   }
 }
 function createSwiper2(block) {
@@ -50,10 +61,10 @@ function createSwiper2(block) {
     rows.forEach((row) => {
       row.classList.add("swiper-slide");
       swiperWrapper.append(row);
-      Array.from(row.children).forEach((child, i) => {
+      Array.from(row.children).forEach((child) => {
         if (child.tagName === "DIV" && child.innerHTML.trim() === "") {
           child.remove();
-        } 
+        }
         // appendclasses.CLASS_PREFIXES = ["swiper-inner"]; /// classes add to section div
         //   appendclasses.addIndexed(child);
       });
@@ -73,36 +84,53 @@ function createSwiper2(block) {
   }
 }
 function mobileviewswiper(block) {
-   document.querySelectorAll(".secsecond.bannervideo-container").forEach(function (e) {
-        const mobnoswiper=Array.from(e.children)
-        mobnoswiper.forEach(function(child,i){
-          child.classList.add("mob-noswiper-child"+(i+1));
-        })
-    })
+  document.querySelectorAll(".secsecond.bannervideo-container").forEach((e) => {
+    const mobnoswiper = Array.from(e.children);
+    mobnoswiper.forEach((child, i) => {
+      child.classList.add(`mob-noswiper-child${i + 1}`);
+    });
+  });
+  console.log(block);
   const rows = Array.from(block.children);
   rows.forEach((row) => {
     row.classList.add("mob-swiper");
-    Array.from(row.children).forEach((child, i) => {
-        if (child.tagName === "DIV" && child.innerHTML.trim() === "") {
-          child.remove();
-        }
-      });
+    Array.from(row.children).forEach((child) => {
+      if (child.tagName === "DIV" && child.innerHTML.trim() === "") {
+        child.remove();
+      }
+    });
+  });
+
+  document.querySelectorAll(".mob-swiper").forEach((swipermob) => {
+    const btn = swipermob.querySelector(".button-container a");
+    const picture = swipermob.querySelector("picture");
+    if (btn && picture) {
+      const link = btn.getAttribute("href");
+      // check if picture already wrapped
+      if (!picture.parentElement.matches("a")) {
+        const anchor = document.createElement("a");
+        anchor.href = link;
+        anchor.title = btn.title || "Discover more";
+        picture.parentNode.insertBefore(anchor, picture);
+        anchor.appendChild(picture);
+      }
+    }
   });
 }
 export default function decorate(block) {
   if (!block.closest(".secsecond")) {
     createSwiper(block);
-    const swiper = Swiperblock(block, {
+    const swiper = new Swiperblock(block, {
       slidesPerView: 1,
       spaceBetween: 2,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
       },
-      // autoplay: {
-      //   delay: 40000000,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+      },
     });
 
     swiper.on("slideChange", () => {
@@ -134,30 +162,47 @@ export default function decorate(block) {
         );
       }
     });
-  }
+    // autoplay js //
 
+    const playBtn = document.querySelector(".play-btn");
+    let isPlaying = false;
+    swiper.autoplay.stop();
+    playBtn.addEventListener("click", () => {
+      if (!isPlaying) {
+        swiper.autoplay.start();
+        isPlaying = true;
+        playBtn.querySelector("img").src = "../../icons/pause.svg"; // change icon
+      } else {
+        swiper.autoplay.stop();
+        isPlaying = false;
+        playBtn.querySelector("img").src = "../../icons/Vector.svg"; // change back to play
+      }
+    });
+  }
   /// ///second block//////////////
 
   document
     .querySelectorAll(".secsecond.bannervideo-container .video-banner")
-    .forEach((block) => {
+    .forEach((eachBlock) => {
       if (window.matchMedia("(min-width: 1024px)").matches) {
-        createSwiper2(block);
-        Swiperblock(block, {
+        createSwiper2(eachBlock);
+
+        // eslint-disable-next-line no-new
+        new Swiperblock(eachBlock, {
           slidesPerView: "auto",
           spaceBetween: 32,
-          loop: true,
+          loop: false,
           // autoplay: {
           //   delay: 1000,
           //   disableOnInteraction: false,
           // },
           navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: eachBlock.querySelector(".swiper-button-next"),
+            prevEl: eachBlock.querySelector(".swiper-button-prev"),
           },
         });
-        const navbtn = block.querySelector(".nav-buttons");
-        const sec = block.closest(".section");
+        const navbtn = eachBlock.querySelector(".nav-buttons");
+        const sec = eachBlock.closest(".section");
         appendclasses.CLASS_PREFIXES = ["inner-section"]; /// classes add to section div
         appendclasses.addIndexed(sec);
         if (navbtn !== null) {
@@ -165,14 +210,7 @@ export default function decorate(block) {
           def.append(navbtn);
         }
       } else {
-        mobileviewswiper(block);
+        mobileviewswiper(eachBlock);
       }
     });
-
-    /////////second block mobile ///////
-
-  const link1 = block.querySelector(
-    ".secfirst .swiperinnerdiv3 .button-container"
-  );
-  embedblock(link1);
 }

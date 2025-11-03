@@ -34,9 +34,65 @@
               "name": "secfirst",
               "value": "secfirst"
             },
-             {
+            {
               "name": "secsecond",
               "value": "secsecond"
+            },
+            {
+              "name": "quick-links",
+              "value": "quick-links"
+            },
+                        {
+              "name": "momentum-teaser",
+              "value": "momentum-teaser"
+            },
+            {
+              "name": "momentum-section",
+              "value": "momentum-section"
+            },
+            {
+              "name": "online-banking",
+              "value": "online-banking"
+            },
+            {
+              "name": "Expandable Tiles",
+              "value": "expandable-tiles-section"
+            },
+            {
+              "name": "Highlight",
+              "value": "highlight"
+            },
+            {
+              "name": "AOS Enabled",
+              "value": "aos-enabled"
+            },
+            {
+              "name": "tmb-acc-sec",
+              "value": "tmb-acc-sec"
+            },
+            {
+              "name": "banking-container",
+              "value": "banking-container"
+            },
+            {
+              "name": "tmb-footer",
+              "value": "tmb-footer"
+            },
+            {
+              "name": "tmb-sub-footer",
+              "value": "tmb-sub-footer"
+            },  
+            {
+              "name": "Bottom Spacer",
+              "value": "spacer-bottom"
+            },
+            {
+              "name": "Top Spacer",
+              "value": "spacer-top"
+            },
+            {
+              "name": "Hide Section",
+              "value": "d-none"
             }
           ]
         }
@@ -55,7 +111,12 @@
         "cards",
         "columns",
         "fragment",
-        "bannervideo"
+        "quick-links",
+        "tmb-teaser",
+        "bannervideo",
+        "accordion",
+        "banking-good",
+        "teachers-form-block"
       ]
     }
   ]

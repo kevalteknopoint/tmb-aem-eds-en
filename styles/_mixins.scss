@@ -1,20 +1,98 @@
-@use 'variables' as *;
+@use "sass:string" as *;
+@use "sass:math" as *;
+@use "sass:color" as *;
+@use "sass:meta" as *;
 
-/* ---------- MEDIA MIXINS ---------- */
+/* ---------- MEDIA MIXINS ----------
 @mixin mobile {
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: 768px) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media screen and (max-width: $tablet) {
+  @media screen and (max-width: 1024px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1025px) {
     @content;
+  }
+}
+*/
+
+@function to-rgba($var, $opacity: 1) {
+  @if $opacity > 1 {
+    $opacity: $opacity / 100;
+  }
+  @return unquote("rgb(var(#{$var}) / #{$opacity * 100}%)");
+}
+
+@function to-rgb($hex) {
+  @if type-of($hex) != "color" {
+    @warn "⚠️ to-rgb(): expected a color, got `#{$hex}`. Returning as-is.";
+    @return $hex;
+  }
+
+  $r: channel($hex, "red", $space: rgb);
+  $g: channel($hex, "green", $space: rgb);
+  $b: channel($hex, "blue", $space: rgb);
+
+  @return rgb($r, $g, $b);
+}
+
+/* ---------- MEDIA MIXINS UPDATED ---------- */
+@mixin mobile-s {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media screen and (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin desktop-lg {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+/* ---------- LAYOUT MIXINS ---------- */
+@mixin responsive-container {
+  width: 100%;
+  max-width: 1440px;
+  padding-inline: 64px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include tablet-lg() {
+    padding-inline: 24px;
+  }
+
+  @include mobile() {
+    padding-inline: 16px;
   }
 }

@@ -16,7 +16,18 @@
       "cards",
       "columns",
       "fragment",
-      "bannervideo"
+      "quick-links",
+      "tmb-teaser",
+      "bannervideo",
+      "accordion",
+      "banking-good",
+      "teachers-form-block"
+    ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordion-item"
     ]
   },
   {
