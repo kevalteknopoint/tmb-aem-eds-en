@@ -206,14 +206,13 @@
 .faq-category-container .faq-swiper-button-prev,
 .faq-category-container .faq-swiper-button-next{
   align-items:center;
+  bottom:72px;
   color:#333;
   cursor:pointer;
   display:inline-flex;
   height:35px;
   justify-content:center;
   position:absolute;
-  top:77.6%;
-  transform:translateY(-50%);
   transition:all 0.25s ease;
   width:35px;
   z-index:15;
@@ -292,7 +291,6 @@
   .faq-swiper-button-prev,
   .faq-swiper-button-next{
     height:24px;
-    top:84% !important;
     width:24px;
   }
 
@@ -304,12 +302,12 @@
   }
 
   .faq-swiper-button-prev{
-    right:17.125rem;
+    right:19rem;
   }
 
   .faq-swiper-button-next{
     margin-left:8px;
-    right:2px;
+    right:16px;
   }
 }
 
@@ -331,7 +329,7 @@
   }
 
   .faq-category-container .swiper-pagination{
-    padding:30px 0;
+    padding:32px 34px;
   }
 
   .faq-frequently-question-title h1,
@@ -365,5 +363,10 @@
 
   .faq-frequently-question-list .faq-category-wrapper .faq-category .button-container{
     margin-top:24px;
+  }
+
+  .faq-category-container .faq-swiper-button-prev,
+  .faq-category-container .faq-swiper-button-next{
+    bottom:38px;
   }
 }
