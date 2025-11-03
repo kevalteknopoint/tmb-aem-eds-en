@@ -323,6 +323,7 @@ h1, h2, h3, h4, h5, h6{
   display:flex;
   flex:1 0 0;
   flex-direction:column;
+  gap:4px;
 }
 .section-wrapper .right-section-wrapper ul .faq-number{
   display:block;
@@ -341,7 +342,7 @@ h1, h2, h3, h4, h5, h6{
   text-decoration-line:underline;
 }
 .section-wrapper .right-section-wrapper ul a.active{
-  background-color:rgba(0, 82, 91, 0.2);
+  background-color:rgba(0, 82, 91, 0.0705882353);
   transition:0.3s;
 }
 .section-wrapper .right-section-wrapper ul li{
@@ -355,7 +356,6 @@ h1, h2, h3, h4, h5, h6{
   gap:6px;
   letter-spacing:0;
   line-height:24px;
-  padding:5px;
 }
 
 .faq-class-for-four-img{

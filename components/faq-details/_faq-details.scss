@@ -123,6 +123,7 @@ html {
     ul {
       display: flex;
       flex-direction: column;
+      gap: 4px;
       flex: 1 0 0;
 
       .faq-number {
@@ -144,7 +145,7 @@ html {
       }
 
       a.active {
-        background-color: #00525B33;
+        background-color: #00525B12;
         transition: 0.3s;
       }
 
@@ -152,7 +153,6 @@ html {
         display: flex;
         align-items: center;
         gap: 6px;
-        padding: 5px;
         color: #0B231F;
         font-family: $primary-font;
         font-size: 14px;
