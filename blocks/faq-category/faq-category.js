@@ -102,6 +102,9 @@ function updateIndicator(swiperInstance, mainFaqContainer) {
   indicator.setAttribute("aria-label", ariaMessage);
 }
 
+const mainFaqContainer = document.querySelector(".faq-category-container:not(.faq-frequently-question,.faq-frequently-question-list)");
+let swiper = null;
+
 export default async function decorate(block) {
   const paramsBlock = block.querySelector("p");
   const params = paramsBlock?.textContent?.trim();
@@ -131,13 +134,13 @@ export default async function decorate(block) {
   );
 
   paramsBlock?.replaceWith(htmlElement);
-}
 
-const mainFaqContainer = document.querySelector(".faq-category-container:not(.faq-frequently-question,.faq-frequently-question-list)");
+  if (swiper) updateIndicator(swiper, mainFaqContainer);
+}
 
 createSwiper(mainFaqContainer);
 
-const swiper = new Swiper(mainFaqContainer, {
+swiper = new Swiper(mainFaqContainer, {
   slidesPerView: 2,
   slidesPerGroup: 2,
   spaceBetween: 2,
@@ -179,4 +182,4 @@ const swiper = new Swiper(mainFaqContainer, {
   },
 });
 
-window.addEventListener("resize", () => updateIndicator(swiper));
+window.addEventListener("resize", () => updateIndicator(swiper, mainFaqContainer));
