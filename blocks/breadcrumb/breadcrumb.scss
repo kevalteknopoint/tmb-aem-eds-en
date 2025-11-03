@@ -1,0 +1,26 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.breadcrumb {
+  max-width: 1328px;
+  padding: 64px 32px 32px 32px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 24px;
+  color: $text-primary;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  @include mobile {
+    padding: 36px 16px 48px 16px;
+  }
+
+  span {
+    display: block;
+    margin: 0 8px 0 4px;
+  }
+}

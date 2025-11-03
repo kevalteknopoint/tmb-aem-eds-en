@@ -1,0 +1,153 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.section.faq-looking-for {
+    max-width: 1328px;
+    margin: 0 auto;
+    padding: 32px;
+
+    @include mobile {
+        padding: 8px;
+    }
+
+    div{
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        padding: 5px;
+
+        @include mobile {
+            padding: 8px;
+            gap: 24px;
+        }
+
+        h2 {
+            color: #00525B;
+            font-family: $secondary-font;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 44px;
+            letter-spacing: 0;
+            text-align: center;
+
+            @include tablet {
+                padding-bottom: 0;
+            }
+
+            @include mobile {
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 32px;
+            }
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            gap: 32px;
+            padding: 32px 0;
+
+            @include mobile {
+                flex-direction: column;
+                padding: 8px 0;
+            }
+
+            li {
+                ul {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                padding: 0;
+
+                @include mobile {
+                    gap: 20px;
+                }
+
+                li:nth-child(1) {
+                    p {
+                        span {
+                            display: flex;
+                            justify-content: center; 
+                            align-items: center;
+                            height: 64px; 
+                            width: 64px; 
+                            background-color: #00525B;
+                            border-radius: 50%;
+                            margin: 0 auto; 
+
+                            img {
+                                width: 44px;
+                                height: 44px;
+                            }
+                        }
+                    }
+                    
+                    ul {
+                        margin-top: 32px;
+                        gap: 8px;
+
+                        @include mobile {
+                            margin-top: 20px;
+                        }
+                        
+                        li:nth-child(1) {
+                            text-align: center;
+                            color: #00525B;
+                            font-family: $primary-font;
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 24px;
+                        }
+
+                        li:nth-child(2) {
+                            text-align: center;
+                            color: #0B231F;
+                            font-family: $primary-font;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 24px;
+                            margin-bottom: 14px;
+
+                            @include mobile {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+
+                li:nth-child(2){
+                    p{
+                        text-align: center;
+                        margin: 0;
+
+                        @include mobile{
+                            margin-bottom: 8px;
+                        }
+
+                        a{
+                            text-decoration: none;
+                            color: #00525B;
+                            font-family: $primary-font;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 24px;
+                            letter-spacing: 0;
+                            border-radius: 20px;
+                            padding: 8px 16px;
+                            border: 1px solid #00525B;
+                            cursor: pointer;
+                            display: block;
+                            width: fit-content;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+                }   
+            }
+        }
+    }
+}

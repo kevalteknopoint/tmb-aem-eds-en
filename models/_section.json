@@ -42,7 +42,7 @@
               "name": "quick-links",
               "value": "quick-links"
             },
-                        {
+            {
               "name": "momentum-teaser",
               "value": "momentum-teaser"
             },
@@ -81,7 +81,7 @@
             {
               "name": "tmb-sub-footer",
               "value": "tmb-sub-footer"
-            },  
+            },
             {
               "name": "Bottom Spacer",
               "value": "spacer-bottom"
@@ -93,6 +93,36 @@
             {
               "name": "Hide Section",
               "value": "d-none"
+            },
+            {
+              "name": "faq-Looking",
+              "value": "faq-looking-for"
+            },
+            {
+              "name": "FAQ Landing Banner",
+              "value": "faq-landing-banner"
+              
+              
+            },
+            {
+              "name": "Faq container",
+              "value": "faq-container"
+            },
+             {
+              "name": "Faq question",
+              "value": "faq-question"
+            },
+            {
+              "name": "Faq Frequently Question",
+              "value": "faq-frequently-question"
+            },
+            {
+              "name": "Faq Frequently Question Title",
+              "value": "faq-frequently-question-title"
+            },
+            {
+              "name": "Faq Frequently Question List",
+              "value": "faq-frequently-question-list"
             }
           ]
         }
@@ -116,7 +146,9 @@
         "bannervideo",
         "accordion",
         "banking-good",
-        "teachers-form-block"
+        "teachers-form-block",
+        "breadcrumb",
+        "faq-category"
       ]
     }
   ]

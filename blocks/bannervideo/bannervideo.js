@@ -10,8 +10,8 @@ function createSwiper(block) {
     rows.forEach((row) => {
       const towrapdeskandmob = document.createElement("div");
       towrapdeskandmob.classList.add("mob-desk-wrapper");
-      row.lastElementChild?.setAttribute('data-aos', 'fade-up');
-      row.lastElementChild?.setAttribute('data-aos-duration', '2000');
+      row.lastElementChild?.setAttribute("data-aos", "fade-up");
+      row.lastElementChild?.setAttribute("data-aos-duration", "2000");
 
       const desktopDiv = row.children[0];
       const mobDiv = row.children[1];
@@ -26,13 +26,6 @@ function createSwiper(block) {
       towrapdeskandmob.appendChild(desktopDiv);
       towrapdeskandmob.appendChild(mobDiv);
       row.append(towrapdeskandmob);
-      // appendclasses.CLASS_PREFIXES = ['mainswrapper'];
-      // appendclasses.addIndexed(row)
-      // Array.from(row.children).forEach((child, i) => {
-      //   if (child.tagName === "DIV" && child.innerHTML.trim() === "") {
-      //     child.remove();
-      //   }
-      // });
     });
     block.append(swiperWrapper);
     const swiperpagination = document.createElement("div");
@@ -83,12 +76,14 @@ function createSwiper2(block) {
   }
 }
 function mobileviewswiper(block) {
-  document.querySelectorAll(".secsecond.bannervideo-container").forEach((e) => {
-    const mobnoswiper = Array.from(e.children);
-    mobnoswiper.forEach((child, i) => {
-      child.classList.add(`mob-noswiper-child${i + 1}`);
+  document
+    .querySelectorAll(".secsecond.bannervideo-container")
+    .forEach((e) => {
+      const mobnoswiper = Array.from(e.children);
+      mobnoswiper.forEach((child, i) => {
+        child.classList.add(`mob-noswiper-child${i + 1}`);
+      });
     });
-  });
   console.log(block);
   const rows = Array.from(block.children);
   rows.forEach((row) => {
@@ -117,6 +112,7 @@ function mobileviewswiper(block) {
   });
 }
 export default function decorate(block) {
+  console.log(block);
   if (!block.closest(".secsecond")) {
     createSwiper(block);
     const swiper = new Swiperblock(block, {
