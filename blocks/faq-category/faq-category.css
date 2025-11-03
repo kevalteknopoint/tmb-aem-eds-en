@@ -306,10 +306,6 @@
     border-radius:50%;
     color:#202124;
   }
-
-  .faq-swiper-button-next{
-    margin-left:8px;
-  }
 }
 
 @media screen and (max-width: 767px){
