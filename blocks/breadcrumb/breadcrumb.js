@@ -1,3 +1,5 @@
+import { img } from "../../scripts/dom-helpers.js";
+
 // function extractTitleFromHtml(rawHtml, pagePath) {
 //   const parser = new DOMParser();
 //   const doc = parser.parseFromString(rawHtml, "text/html");
@@ -50,5 +52,12 @@ export default async function decorate(block) {
   // block.innerHTML = `Teacher's Mutual Bank<span>/</span>${resolvedPromises.join('<span>/</span>')}`;
 
   const breadcrumbData = block?.querySelector('p');
-  block.innerHTML = breadcrumbData.innerHTML?.replaceAll(' / ', '<span>/</span>');
+  const splitCrumb = breadcrumbData?.innerHTML?.trim()?.split(' / ');
+  block.innerHTML = breadcrumbData.innerHTML?.trim()?.replaceAll(' / ', '<span>/</span>');
+
+  if (window.innerWidth <= 767 && splitCrumb?.length > 2) {
+    const ctaBtn = splitCrumb?.map((item) => item?.trim())?.[splitCrumb.length - 2];
+    block.innerHTML = ctaBtn;
+    block?.querySelector('a')?.insertAdjacentElement('afterbegin', img({ src: '/icons/chevron-left-green.svg' }));
+  }
 }
