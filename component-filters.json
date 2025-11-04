@@ -38,12 +38,6 @@
     ]
   },
   {
-    "id": "bankingoodsnew",
-    "components": [
-      "banking-goods-new-item"
-    ]
-  },
-  {
     "id": "cards",
     "components": [
       "card"
