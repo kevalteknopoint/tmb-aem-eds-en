@@ -128,6 +128,22 @@ h1, h2, h3, h4, h5, h6{
   margin-top:80px;
 }
 
+.top-margin{
+  margin-top:32px;
+}
+
+.bottom-margin{
+  margin-bottom:32px;
+}
+
+.top-padding{
+  padding-top:32px;
+}
+
+.bottom-padding{
+  padding-bottom:32px;
+}
+
 .section.faq-looking-for{
   margin:0 auto;
   max-width:1328px;
@@ -375,6 +391,18 @@ h1, h2, h3, h4, h5, h6{
   }
   .spacer-top{
     margin-top:60px;
+  }
+  .top-margin{
+    margin-top:24px;
+  }
+  .bottom-margin{
+    margin-bottom:24px;
+  }
+  .top-padding{
+    padding-top:24px;
+  }
+  .bottom-padding{
+    padding-bottom:24px;
   }
   .section.faq-looking-for div h2{
     padding-bottom:0;
