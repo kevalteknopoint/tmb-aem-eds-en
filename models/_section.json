@@ -82,10 +82,7 @@
               "name": "tmb-sub-footer",
               "value": "tmb-sub-footer"
             },
-            {
-              "name": "fmb-momentum",
-              "value": "fmb-momentum"
-            },
+            
             {
               "name": "Bottom Spacer",
               "value": "spacer-bottom"
