@@ -166,7 +166,7 @@ swiper = new Swiper(mainFaqContainer, {
       spaceBetween: 16,
       slidesPerGroup: 1,
     },
-    1366: {
+    1024: {
       slidesPerGroup: 2,
       slidesPerView: 2,
       spaceBetween: 32,
