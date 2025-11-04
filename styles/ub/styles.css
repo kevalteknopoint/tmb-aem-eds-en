@@ -264,7 +264,7 @@ html {
   grid-row: auto;
 }
 .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h3 {
-  color: var(--surface-prim-active-cta);
+  color: #0B231F;
   font-family: var(--primary-font);
   font-size: 20px;
   font-style: normal;
@@ -302,7 +302,7 @@ html {
   line-height: 36px;
   letter-spacing: -1px;
   padding: 12px 0;
-  border-bottom: 1px solid #0B231F;
+  border-bottom: 1px solid rgba(0, 82, 91, 0.2);
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
@@ -324,7 +324,7 @@ html {
   flex-direction: column;
   flex: 1 0 0;
   padding-bottom: 24px;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid rgba(0, 82, 91, 0.2);
 }
 .section-wrapper .right-section-wrapper ul .faq-number {
   display: block;
@@ -343,7 +343,7 @@ html {
   text-decoration-line: underline;
 }
 .section-wrapper .right-section-wrapper ul a.active {
-  background-color: rgba(0, 82, 91, 0.2);
+  background: rgba(0, 82, 91, 0.07);
   transition: 0.3s;
 }
 .section-wrapper .right-section-wrapper ul li {
