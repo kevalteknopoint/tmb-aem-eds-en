@@ -640,6 +640,17 @@
             "value": "momentum-block"
           }
         ]
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "fmb-momentum",
+            "value": "fmb-momentum"
+          }
+        ]
       }
     ]
   }
