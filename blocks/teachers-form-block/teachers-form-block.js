@@ -22,7 +22,7 @@ export default function decorate(block) {
     css: cssLink,
     js: jsLink,
     id: formId,
-    key: formApiK,
+    key: formApiKey,
     action: formAction,
     envt: formBranchEnvt,
     channel:formChannel,
