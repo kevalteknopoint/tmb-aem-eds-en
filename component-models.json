@@ -605,7 +605,7 @@
       {
         "component": "text",
         "name": "action-link",
-        "label": "Enter action link"
+        "label": "Enter Action Link"
       },
       {
         "name": "branch",
@@ -624,9 +624,28 @@
         ]
       },
       {
-        "component": "text",
         "name": "channel",
-        "label": "Select channel"
+        "component": "select",
+        "type": "select",
+        "label": "Select channel",
+        "options": [
+          {
+            "name": "TeacherTeachers Mutual Bank",
+            "value": "tmb"
+          },
+          {
+            "name": "Health Professionals Bank",
+            "value": "hpb"
+          },
+          {
+            "name": "Firefighters Mutual Bank",
+            "value": "fmb"
+          },
+          {
+            "name": "UniBank",
+            "value": "ub"
+          }
+        ]
       },
       {
         "component": "text",
