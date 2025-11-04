@@ -650,7 +650,8 @@
       {
         "component": "text",
         "name": "config",
-        "label": "Enter Form Config"
+        "label": "Enter Form Config",
+        "default": "default"
       }
     ]
   },
