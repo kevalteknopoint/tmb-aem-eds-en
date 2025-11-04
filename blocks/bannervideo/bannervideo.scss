@@ -206,7 +206,7 @@
   button {
     align-items: center;
     background: #F5F8DE;
-    border-radius: 12px;
+    border-radius: 44px;
     display: flex;
     flex-direction: column;
     height: 56px;
@@ -214,6 +214,10 @@
     margin: 0;
     position: static;
     width: 56px;
+    gap: 8px;
+    padding: 8px;
+    min-height: 40px;
+    min-width: 40px;
 
     &:hover {
       background: #F5F8DE;

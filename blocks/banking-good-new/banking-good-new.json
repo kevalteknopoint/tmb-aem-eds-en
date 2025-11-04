@@ -1,0 +1,87 @@
+{
+  "definitions": [
+    {
+      "title": "BankingGoodsNew",
+      "id": "bankingoodsnew",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "bankingoodsnew",
+              "filter": "bankingoodsnew",
+              "model": "bankingoodsnew"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Banking goods New item",
+      "id": "banking-goods-new-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name":  "banking-goods-new-item",
+              "model":  "banking-goods-new-item"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "bankingoodsnew",
+      "fields":[
+        {
+      "component": "multiselect",
+      "name": "classes",
+      "label": "Style",
+      "options": [
+        {
+          "name": "banking goods",
+          "value": "banking-goods"
+        }
+    ]
+  }
+      ]
+    },
+  {
+    "id": "banking-goods-new-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "backgroundimg",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "backgroundimg_alt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "context",
+        "value": "",
+        "label": "context-model",
+        "valueType": "string"
+      }
+    ]
+  }
+],
+"filters": [
+  {
+    "id": "bankingoodsnew",
+    "components": [
+      "banking-goods-new-item"
+    ]
+  }
+]
+}
