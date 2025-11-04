@@ -23,7 +23,7 @@ html {
     opacity: 1;
     transform: translateY(0);
 
-    @include mobile {
+    @include tablet {
       font-size: 32px;
       line-height: 40px;
       padding: 24px 16px 0;
@@ -47,7 +47,7 @@ html {
   align-items: start;
   padding: 32px;
 
-  @include mobile {
+  @include tablet {
     padding: 24px 16px;
   }
 
@@ -176,7 +176,7 @@ html {
       width: 395px;
 }
 
-@include mobile {
+@include tablet {
   .section-wrapper {
     display: flex;
     flex-direction: column;
