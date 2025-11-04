@@ -15,8 +15,9 @@ async function fetchFaqs(tagValue, limit = 10, offset = 0) {
 }
 
 export default async function decorate(block) {
-  const paramsWrap = block.querySelector("p");
-  const params = paramsWrap?.textContent?.trim();
+  const paramsBlock = block.querySelector("p");
+  const params = paramsBlock?.textContent?.trim();
+
   if (!params) return;
 
   const [tag] = params.split(";");
@@ -77,9 +78,7 @@ export default async function decorate(block) {
       );
     });
 
-    renderRangeIndicator(offset + 1, offset + faqs.length, totalItems);
-    renderPagination();
-  }
+  paramsBlock?.replaceWith(htmlElement);
 
   function renderPagination() {
     paginationContainer.innerHTML = "";
@@ -161,4 +160,4 @@ export default async function decorate(block) {
 
   // Initial render
   renderPage(currentPage);
-}
+}}

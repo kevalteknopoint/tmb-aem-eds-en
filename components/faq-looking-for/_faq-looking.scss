@@ -36,10 +36,9 @@
             }
 
             @include mobile {
-                font-size: 32px;
+                font-size: 40px;
                 font-weight: 700;
-                font-family: $primary-font;
-                line-height: 40px;
+                line-height: 32px;
             }
         }
 
