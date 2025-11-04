@@ -609,7 +609,7 @@
       },
       {
         "name": "branch",
-        "component": "multiselect",
+        "component": "select",
         "type": "select",
         "label": "Select environment branch",
         "options": [
