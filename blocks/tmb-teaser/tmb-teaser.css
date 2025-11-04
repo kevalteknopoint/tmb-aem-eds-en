@@ -337,6 +337,10 @@
   background:#F7F7F7;
 }
 
+.fmb-momentum.tmb-teaser-wrapper .tmb-teaser-content picture img{
+  border-radius:0%;
+}
+
 .fmb-momentum.tmb-teaser-wrapper .momentum-block h2{
   color:#003764;
   font-style:normal;

@@ -495,6 +495,13 @@
 
 .fmb-momentum.tmb-teaser-wrapper {
   background: #F7F7F7;
+  .tmb-teaser-content{
+    picture{
+      img{
+        border-radius: 0%;
+      }
+    }
+  }
 
   .momentum-block h2 {
     color: #003764;
