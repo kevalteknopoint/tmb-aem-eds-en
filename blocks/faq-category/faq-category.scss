@@ -1,6 +1,5 @@
 @use '../../styles/variables' as *;
 @use '../../styles/mixins' as *;
-@import '../../libs/swiper/swiper-bundle.min.css';
 
 .faq-question {
   max-width: 1328px;
@@ -280,12 +279,12 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 0.5rem;
-  margin-top: 1.5rem;
+  gap: 8px;
+  margin-top: 24px;
 }
 
 .faq-items-list {
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 
   .faq-link-icon {
     margin-left: 24px;
@@ -295,7 +294,7 @@
 .faq-range-indicator {
   font-size: 14px;
   color: #1a1a1a;
-  margin-bottom: 0.75rem;
+  margin-bottom: 12px;
   text-align: left; // range on left
 }
 
@@ -303,7 +302,7 @@
   border: none;
   background: none;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 16px;
   color: #333;
   border-radius: 50%;
   width: 35px;

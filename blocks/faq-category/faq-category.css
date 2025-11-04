@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import '../../libs/swiper/swiper-bundle.min.css';
 
 .faq-question{
   margin:auto;
@@ -178,13 +177,13 @@
 .faq-pagination-container{
   align-items:center;
   display:flex;
-  gap:0.5rem;
+  gap:8px;
   justify-content:flex-end;
-  margin-top:1.5rem;
+  margin-top:24px;
 }
 
 .faq-items-list{
-  margin-bottom:1rem;
+  margin-bottom:16px;
 }
 
 .faq-items-list .faq-link-icon{
@@ -194,7 +193,7 @@
 .faq-range-indicator{
   color:#1a1a1a;
   font-size:14px;
-  margin-bottom:0.75rem;
+  margin-bottom:12px;
   text-align:left;
 }
 
@@ -206,7 +205,7 @@
   color:#333;
   cursor:pointer;
   display:flex;
-  font-size:1rem;
+  font-size:16px;
   height:35px;
   justify-content:center;
   transition:background-color 0.2s ease, color 0.2s ease;
