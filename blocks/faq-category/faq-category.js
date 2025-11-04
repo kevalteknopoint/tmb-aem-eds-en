@@ -29,7 +29,7 @@ export default async function decorate(block) {
         li(
           { class: "faq-item" },
           a(
-            { class: "faq-link", href: item?.faqPageUrl?._path || "#" },
+            { class: "faq-link", href: item?.faqPageUrl?._path?.replace(/\/content\/[A-Za-z]+\//, '/') || "#" },
             item.question,
             span(
               { class: "faq-link-icon" },
@@ -169,7 +169,7 @@ export default async function decorate(block) {
         li(
           { class: "faq-item" },
           a(
-            { class: "faq-link", href: item?.faqPageUrl?._path || "#" },
+            { class: "faq-link", href: item?.faqPageUrl?._path?.replace(/\/content\/[A-Za-z]+\//, '/') || "#" },
             item.question,
             span(
               { class: "faq-link-icon" },
