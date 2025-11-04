@@ -9,7 +9,7 @@
 
 .faq-question .default-content-wrapper{
   align-items:center;
-  border-bottom:1px solid rgb(0 82 91 / 20%);
+  border-bottom:1px dotted var(--text-ghost-default);
   display:flex;
   justify-content:space-between;
 }
@@ -52,7 +52,6 @@
   align-items:center;
   color:var(--text-primary);
   display:flex;
-  gap:24px;
   justify-content:space-between;
   padding:13px 8px;
 }

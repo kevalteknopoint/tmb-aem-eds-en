@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center; // ensures “Questions” and indicator are vertically centered
-    border-bottom: 1px solid #00525B33;
+    border-bottom: 1px dotted $text-ghost-default;
 
     p {
       padding: 18px 0;
@@ -75,7 +75,6 @@
         align-items: center;
         color: $text-primary;
         padding: 13px 8px;
-        gap: 24px;
 
         @include tablet {
           padding-right: 4px;
