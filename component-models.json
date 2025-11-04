@@ -585,12 +585,12 @@
       {
         "component": "text",
         "name": "css-link",
-        "label": "Css link"
+        "label": "Enter CSS Path"
       },
       {
         "component": "text",
         "name": "js-link",
-        "label": "JS link"
+        "label": "Enter JavaScript Path"
       },
       {
         "component": "text",
@@ -600,12 +600,37 @@
       {
         "component": "text",
         "name": "form-key",
-        "label": "Enter Form Key"
+        "label": "Enter Form API Key"
       },
       {
         "component": "text",
         "name": "action-link",
         "label": "Enter action link"
+      },
+      {
+        "name": "branch",
+        "type": "select",
+        "label": "Select environment branch",
+        "options": [
+          {
+            "name": "Staging",
+            "value": "staging"
+          },
+          {
+            "name": "Live",
+            "value": "live"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "channel",
+        "label": "Select channel"
+      },
+      {
+        "component": "text",
+        "name": "config",
+        "label": "Enter Form Config"
       }
     ]
   },
