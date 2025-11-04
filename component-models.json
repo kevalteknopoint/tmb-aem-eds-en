@@ -206,20 +206,24 @@
             "value": "faq-landing-banner"
           },
           {
-            "name": "faq heading section",
-            "value": "faq-heading-section"
+            "name": "Faq container",
+            "value": "faq-container"
           },
           {
-            "name": "section table wrapper",
-            "value": "section-wrapper"
+            "name": "Faq question",
+            "value": "faq-question"
           },
           {
-            "name": "sub section wrapper",
-            "value": "sub-section-wrapper"
+            "name": "Faq Frequently Question",
+            "value": "faq-frequently-question"
           },
           {
-            "name": "faq class for four img",
-            "value": "faq-class-for-four-img"
+            "name": "Faq Frequently Question Title",
+            "value": "faq-frequently-question-title"
+          },
+          {
+            "name": "Faq Frequently Question List",
+            "value": "faq-frequently-question-list"
           }
         ]
       }
@@ -490,6 +494,29 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
+      }
+    ]
+  },
+  {
+    "id": "faq-category",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "faq-category",
+            "value": "faq-category"
+          }
+        ]
       }
     ]
   },

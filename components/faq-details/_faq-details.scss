@@ -123,6 +123,7 @@ html {
     ul {
       display: flex;
       flex-direction: column;
+      gap: 4px;
       flex: 1 0 0;
       padding-bottom: 24px;
       border-bottom: 1px solid rgba(0, 82, 91, 0.20);
@@ -146,8 +147,12 @@ html {
       }
 
       a.active {
+<<<<<<< HEAD
         // background-color: #00525B33;
         background: rgba(0, 82, 91, 0.07);
+=======
+        background-color: #00525B12;
+>>>>>>> ccf3443e5bdf8c1089a91ce9dd0565c6a1e6b8a1
         transition: 0.3s;
       }
 
@@ -155,7 +160,6 @@ html {
         display: flex;
         align-items: center;
         gap: 6px;
-        padding: 5px;
         color: #0B231F;
         font-family: $primary-font;
         font-size: 14px;
