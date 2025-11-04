@@ -615,11 +615,11 @@
         "options": [
           {
             "name": "Staging",
-            "value": "staging"
+            "value": "Staging"
           },
           {
             "name": "Live",
-            "value": "live"
+            "value": "Live"
           }
         ]
       },
