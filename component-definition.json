@@ -114,6 +114,21 @@
           }
         },
         {
+          "title": "banking-good",
+          "id": "banking-good",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "banking-good",
+                  "model": "banking-good"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "BankingGoodsNew",
           "id": "banking-goods-new",
           "plugins": {
@@ -139,21 +154,6 @@
                 "template": {
                   "name": "banking goods new item",
                   "model": "banking-goods-new-item"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "banking-good",
-          "id": "banking-good",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "banking-good",
-                  "model": "banking-good"
                 }
               }
             }

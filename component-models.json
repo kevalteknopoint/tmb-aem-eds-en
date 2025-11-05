@@ -237,48 +237,6 @@
     ]
   },
   {
-    "id": "banking-goods-new",
-    "fields": [
-      {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Style",
-        "options": [
-          {
-            "name": "banking goods",
-            "value": "banking-goods"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "banking-goods-new-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "backgroundimg",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "backgroundimg_alt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "context",
-        "value": "",
-        "label": "context-model",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
     "id": "banking-good",
     "fields": [
       {
@@ -319,6 +277,48 @@
             "value": "banking-good"
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "banking-goods-new",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "banking goods",
+            "value": "banking-goods"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "banking-goods-new-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "backgroundimg",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "backgroundimg_alt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "context",
+        "value": "",
+        "label": "context-model",
+        "valueType": "string"
       }
     ]
   },

@@ -1,0 +1,55 @@
+/* ---------- MEDIA MIXINS ----------
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1025px) {
+    @content;
+  }
+}
+*/
+/* ---------- MEDIA MIXINS UPDATED ---------- */
+/* ---------- LAYOUT MIXINS ---------- */
+/* ---------- BORDER VARIABLES ---------- */
+/* ---------- BORDER VARIABLES ---------- */
+/* ---------- TEXT VARIABLES ---------- */
+/* -------------------- */
+/* -------------------- */
+/* ---------- TEXT VARIABLES ---------- */
+/* ---------- SURFACE VARIABLES ---------- */
+/* -------------------- */
+/* -------------------- */
+/* -------------------- */
+/* -------------------- */
+/* ---------- SURFACE VARIABLES ---------- */
+/* ---------- FONTS VARIABLES ---------- */
+/* ---------- FONTS VARIABLES ---------- */
+.section.bankinggoodsnew-container {
+  max-width: 1328px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+.section.bankinggoodsnew-container .bankinggoodsnew-wrapper .bankinggoodsnew.block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  row-gap: 32px;
+}
+@media screen and (max-width: 1023px) {
+  .section.bankinggoodsnew-container .bankinggoodsnew-wrapper .bankinggoodsnew.block {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 24px;
+  }
+}/*# sourceMappingURL=banking-good-new.css.map */
