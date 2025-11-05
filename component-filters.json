@@ -33,6 +33,12 @@
     ]
   },
   {
+    "id": "banking-goods-new",
+    "components": [
+      "banking-goods-new-item"
+    ]
+  },
+  {
     "id": "bannervideo",
     "components": [
       "banner-video-item",
