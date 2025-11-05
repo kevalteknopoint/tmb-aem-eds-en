@@ -32,7 +32,8 @@
                     "name": "text",
                     "value": "",
                     "label": "Text",
-                    "valueType": "string"
+                    "valueType": "string",
+                    "multi": true
                 },
                 {
                     "component": "multiselect",
