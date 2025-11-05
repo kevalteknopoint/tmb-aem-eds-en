@@ -3,7 +3,9 @@ import { moveInstrumentation } from "../../scripts/scripts.js";
 import expandableTiles from "./expandable-tiles.js";
 
 export default function decorate(block) {
-  console.log(block)
+  if (block.classList.contains("banking-goods")) {
+    console.log(block);
+  }
   if (block.classList.contains("expandable-tiles")) {
     expandableTiles(block);
   } else {
