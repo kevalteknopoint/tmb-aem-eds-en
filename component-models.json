@@ -240,6 +240,10 @@
           {
             "name": "Faq Frequently Question List",
             "value": "faq-frequently-question-list"
+          },
+          {
+            "name": "Banking Goods",
+            "value": "banking-goods"
           }
         ]
       }
