@@ -365,6 +365,47 @@
   display:none;
 }
 
+.banking-goods .cards > ul{
+  display:grid;
+  gap:32px;
+  grid-template-columns:repeat(3, 1fr);
+  grid-template-rows:repeat(2, auto);
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.banking-goods .cards > ul > li{
+  background-color:var(--background-color);
+  border:1px solid #dadada;
+  border-radius:24px;
+  height:500px;
+  position:relative;
+}
+
+.banking-goods .cards > ul > li img{
+  aspect-ratio:4/3;
+  border-radius:24px;
+  height:500px;
+  -o-object-fit:cover;
+     object-fit:cover;
+  width:100%;
+}
+
+.banking-goods .cards .cards-card-body{
+  backdrop-filter:blur(5px);
+  background:var(--color-card-surface, rgb(0 82 91 / 90%));
+  border-radius:0 0 24px 24px;
+  bottom:0;
+  padding:24px;
+  position:absolute;
+  width:100%;
+}
+
+.banking-goods .cards .cards-card-image{
+  line-height:0;
+}
+
 @media (min-width: 766px) and (max-width: 1220px){
   .section.online-banking .cards-wrapper .cards .banking-cards-ul{
     gap:20px;

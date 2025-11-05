@@ -240,10 +240,6 @@
           {
             "name": "Faq Frequently Question List",
             "value": "faq-frequently-question-list"
-          },
-          {
-            "name": "Banking Goods",
-            "value": "banking-goods"
           }
         ]
       }
@@ -516,6 +512,10 @@
           {
             "name": "Expandable Tiles",
             "value": "expandable-tiles"
+          },
+          {
+            "name": "Banking Goods",
+            "value": "banking goods"
           }
         ]
       }

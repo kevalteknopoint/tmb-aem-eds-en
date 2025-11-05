@@ -1,0 +1,44 @@
+.banking-goods {
+    .cards {
+        >ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            // grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 32px;
+
+            >li {
+                border: 1px solid #dadada;
+                background-color: var(--background-color);
+                position: relative;
+                border-radius: 24px;
+                height: 500px;
+
+                img {
+                    width: 100%;
+                    aspect-ratio: 4 / 3;
+                    object-fit: cover;
+                    height: 500px;
+                    border-radius: 24px;
+                }
+            }
+        }
+
+        .cards-card-body {
+            width: 100%;
+            padding: 24px;
+            border-radius: 0 0 24px 24px;
+            background: var(--color-card-surface, rgba(0, 82, 91, 0.90));
+            backdrop-filter: blur(5px);
+            position: absolute;
+            bottom: 0;
+        }
+
+        .cards-card-image {
+            line-height: 0;
+        }
+    }
+}
