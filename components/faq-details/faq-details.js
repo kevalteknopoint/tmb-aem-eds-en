@@ -196,7 +196,7 @@ export default async function decorateFaqDetail() {
 
       if (!heading) return;
 
-      const offset = 140; // adjust for sticky header
+      const offset = 175; // adjust for sticky header
       const topPos = heading.getBoundingClientRect().top + window.scrollY - offset;
 
       window.scrollTo({
