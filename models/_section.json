@@ -31,6 +31,22 @@
           "label": "Style",
           "options": [
             {
+              "name": "Top Spacing",
+              "value": "top-margin"
+            },
+            {
+              "name": "Bottom Spacing",
+              "value": "bottom-margin"
+            },
+            {
+              "name": "Top Inner Spacing",
+              "value": "top-padding"
+            },
+            {
+              "name": "Bottom Inner Spacing",
+              "value": "bottom-padding"
+            },
+            {
               "name": "secfirst",
               "value": "secfirst"
             },
