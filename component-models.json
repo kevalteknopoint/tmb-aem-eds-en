@@ -651,17 +651,10 @@
           {
             "name": "momentum-block",
             "value": "momentum-block"
-          }
-        ]
-      },
-      {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Style",
-        "options": [
+          },
           {
-            "name": "fmb-momentum",
-            "value": "fmb-momentum"
+            "name": "momentum-image-version",
+            "value": "momentum-image-version"
           }
         ]
       }
