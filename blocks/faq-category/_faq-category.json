@@ -38,7 +38,7 @@
         {
           "component": "aem-tag",
           "label": "FAQ Tag",
-          "name": "cq:tags",
+          "name": "aem",
           "valueType": "string"
         },
         {
