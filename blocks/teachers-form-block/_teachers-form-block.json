@@ -89,8 +89,7 @@
         {
           "component": "text",
           "name": "config",
-          "label": "Enter Form Config",
-          "default": "default"
+          "label": "Enter Form Config"
         }
       ]
     }

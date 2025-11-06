@@ -43,6 +43,12 @@
                     "valueType": "string"
                 },
                 {
+                    "component": "aem-tag",
+                    "label": "AEM Tag Picker",
+                    "name": "cq:tags",
+                    "valueType": "string"
+                },
+                {
                     "component": "multiselect",
                     "name": "classes",
                     "label": "Style",
