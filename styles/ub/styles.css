@@ -363,12 +363,10 @@ h1, h2, h3, h4, h5, h6{
   line-height:24px;
 }
 
-.faq-class-for-four-img{
+.two-img-class{
   align-items:flex-start;
   display:flex;
   gap:10px;
-  height:395px;
-  margin:0 auto;
   max-width:1328px;
   padding:10px;
   width:395px;
