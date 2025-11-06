@@ -18,7 +18,7 @@
   ],
   "models": [
     {
-      "id": "faqdetail",
+      "id": "aem-content-fragment",
       "fields": [
         {
           "component": "aem-content-fragment",
@@ -27,7 +27,7 @@
           "valueType": "string",
           "variationName": "contentFragmentVariation",
           "validation": {
-            "rootPath": "/content/dam"
+            "rootPath": "/content/"
           }
         }
       ]
