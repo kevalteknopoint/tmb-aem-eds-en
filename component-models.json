@@ -501,6 +501,13 @@
     "id": "faq-category",
     "fields": [
       {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "FAQ Content",
+        "valueType": "string"
+      },
+      {
         "component": "aem-tag",
         "label": "FAQ Tag",
         "name": "aem",
