@@ -255,6 +255,10 @@ h1, h2, h3, h4, h5, h6{
   max-width:1328px;
   padding:32px;
   position:relative;
+  row-gap:32px;
+}
+.section-wrapper .default-content-wrapper{
+  display:none;
 }
 .section-wrapper .sub-section-wrapper h3[id]{
   scroll-margin-top:140px;
@@ -264,7 +268,7 @@ h1, h2, h3, h4, h5, h6{
   grid-row:auto;
 }
 .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h3{
-  color:var(--surface-prim-active-cta);
+  color:#0B231F;
   font-family:var(--primary-font);
   font-size:20px;
   font-style:normal;
@@ -294,7 +298,7 @@ h1, h2, h3, h4, h5, h6{
   width:326px;
 }
 .section-wrapper .right-section-wrapper h2{
-  border-bottom:1px solid #0B231F;
+  border-bottom:1px solid rgba(0, 82, 91, 0.2);
   color:var(--text-secondary-cta);
   font-family:var(--primary-font);
   font-size:32px;
@@ -320,10 +324,12 @@ h1, h2, h3, h4, h5, h6{
   padding:24px 0;
 }
 .section-wrapper .right-section-wrapper ul{
+  border-bottom:1px solid rgba(0, 82, 91, 0.2);
   display:flex;
   flex:1 0 0;
   flex-direction:column;
   gap:4px;
+  padding-bottom:24px;
 }
 .section-wrapper .right-section-wrapper ul .faq-number{
   display:block;
@@ -358,12 +364,10 @@ h1, h2, h3, h4, h5, h6{
   line-height:24px;
 }
 
-.faq-class-for-four-img{
+.two-img-class{
   align-items:flex-start;
   display:flex;
   gap:10px;
-  height:395px;
-  margin:0 auto;
   max-width:1328px;
   padding:10px;
   width:395px;
@@ -378,6 +382,20 @@ h1, h2, h3, h4, h5, h6{
   }
   .section.faq-looking-for div h2{
     padding-bottom:0;
+  }
+  .faq-heading-section h1{
+    font-size:32px;
+    line-height:40px;
+    padding:24px 16px 0;
+  }
+  .section-wrapper{
+    display:flex;
+    flex-direction:column;
+    gap:32px;
+    padding:24px 16px;
+  }
+  .section-wrapper .right-section-wrapper{
+    display:none;
   }
 }
 
@@ -415,20 +433,6 @@ h1, h2, h3, h4, h5, h6{
   }
   .section.faq-looking-for div ul li ul li:nth-child(2) p{
     margin-bottom:8px;
-  }
-  .faq-heading-section h1{
-    font-size:32px;
-    line-height:40px;
-    padding:24px 16px 0;
-  }
-  .section-wrapper{
-    display:flex;
-    flex-direction:column;
-    gap:32px;
-    padding:24px 16px;
-  }
-  .section-wrapper .right-section-wrapper{
-    display:none;
   }
 }
 
