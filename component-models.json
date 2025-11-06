@@ -520,7 +520,7 @@
         "valueType": "string",
         "variationName": "contentFragmentVariation",
         "validation": {
-          "rootPath": "/content/refresh"
+          "rootPath": "/content/dam/tmb/content-fragments"
         }
       },
       {
