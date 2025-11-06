@@ -15,14 +15,18 @@ async function fetchFaqs(tagValue, limit = 10, offset = 0) {
 }
 
 export default async function decorate(block) {
-  const paramsWrap = block.querySelector("p");
-  const params = paramsWrap?.textContent?.trim();
+  const dynamicTextWrap = block.querySelector("pre");
 
-  if (!params) return;
+  const tagWrap = block.querySelector("div:nth-child(2)")?.querySelector('p');
+  const tagValue = tagWrap?.textContent?.trim();
+
+  const limitWrap = block.querySelector("div:nth-child(3) p");
+  const limitValue = limitWrap?.textContent?.trim();
+
+  if (!tagValue) return;
 
   if (!block?.classList.contains('enable-pagination')) {
-    const [tag, limit, offset] = params.split(";");
-    const allFaqs = await fetchFaqs(tag, Number(limit), Number(offset));
+    const allFaqs = await fetchFaqs(tagValue, Number(limitValue));
     const faqList = ul({ class: "faq-items-list" });
     allFaqs.forEach((item) => {
       faqList.append(
@@ -40,12 +44,18 @@ export default async function decorate(block) {
       );
     });
 
-    paramsWrap?.replaceWith(faqList);
+    if (dynamicTextWrap) dynamicTextWrap?.replaceWith(faqList);
+    else {
+      block.innerHTML = '';
+      block.appendChild(faqList);
+    }
+
+    tagWrap?.parentElement?.parentElement?.remove();
+    limitWrap?.parentElement?.parentElement?.remove();
 
     return;
   }
 
-  const [tag] = params.split(";");
   block.innerHTML = "";
 
   const faqList = ul({ class: "faq-items-list" });
@@ -155,7 +165,7 @@ export default async function decorate(block) {
       limit = totalItems - offset;
     }
 
-    const faqs = await fetchFaqs(tag, limit, offset);
+    const faqs = await fetchFaqs(tagValue, limit, offset);
 
     faqList.innerHTML = "";
     if (!faqs.length) {
