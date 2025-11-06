@@ -92,8 +92,10 @@ export default async function decorateFaqDetail() {
   const secwrapper = mainClass?.querySelector(".section-wrapper");
 
   if (!secwrapper) return;
-
-  const graphqlUrl = "https://publish-p162853-e1744823.adobeaemcloud.com/graphql/execute.json/tmb/faqDetailByPath;path=/content/dam/tmb/content-fragments/faqs/test-category/how-do-i-change-a-direct-debit-from-another-financial-institution-to-teachers-mutual-bank/how-do-i-change-a-direct-debit-from-another-financial-institution-to-teachers-mutual-bank";
+  const graphqlUrl = document.querySelector(
+    ".section-wrapper .button-container a"
+  ).href;
+  // const graphqlUrl = "https://publish-p162853-e1744823.adobeaemcloud.com/graphql/execute.json/tmb/faqDetailByPath;path=/content/dam/tmb/content-fragments/faqs/test-category/how-do-i-change-a-direct-debit-from-another-financial-institution-to-teachers-mutual-bank/how-do-i-change-a-direct-debit-from-another-financial-institution-to-teachers-mutual-bank";
 
   try {
     const res = await fetch(graphqlUrl);
@@ -152,7 +154,10 @@ export default async function decorateFaqDetail() {
       headingh3.id = subtitle; // ✅ Correct: no # symbol
       headingh3.textContent = lidata.sectionTitle;
       const leftsectionPtag = document.createElement("p");
-      leftsectionPtag.innerHTML = lidata.sectionContent.plaintext?.replaceAll('\n', '<br>'); // ✅ use innerHTML if content is HTML
+      leftsectionPtag.innerHTML = lidata.sectionContent.plaintext?.replaceAll(
+        "\n",
+        "<br>"
+      ); // ✅ use innerHTML if content is HTML
 
       subsectionAndleftSection.appendChild(headingh3);
       subsectionAndleftSection.appendChild(leftsectionPtag);
@@ -197,7 +202,8 @@ export default async function decorateFaqDetail() {
       if (!heading) return;
 
       const offset = 175; // adjust for sticky header
-      const topPos = heading.getBoundingClientRect().top + window.scrollY - offset;
+      const topPos =
+        heading.getBoundingClientRect().top + window.scrollY - offset;
 
       window.scrollTo({
         top: topPos,
@@ -238,10 +244,10 @@ export default async function decorateFaqDetail() {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          rightHeading.classList.add('hide-heading');
+          rightHeading.classList.add("hide-heading");
           rightHeading.style.height = `0px`;
         } else {
-          rightHeading.classList.remove('hide-heading');
+          rightHeading.classList.remove("hide-heading");
           rightHeading.style.height = `${headingHeight}px`;
         }
       });

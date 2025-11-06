@@ -256,6 +256,9 @@ h1, h2, h3, h4, h5, h6{
   padding:32px;
   position:relative;
 }
+.section-wrapper .default-content-wrapper{
+  display:none;
+}
 .section-wrapper .sub-section-wrapper h3[id]{
   scroll-margin-top:140px;
 }
