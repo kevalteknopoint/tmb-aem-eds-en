@@ -2,11 +2,9 @@ import {
   div,
   h1,
   h2,
-  h3,
   p,
   a,
   ul,
-  li,
   span,
   img,
 } from "../../scripts/dom-helpers.js";
@@ -14,8 +12,7 @@ import {
 export default async function decorateFaqDetail() {
   const secwrapper = document?.querySelector(".section-wrapper");
   if (!secwrapper) return;
-  const graphqlUrl =
-    "https://publish-p162853-e1744823.adobeaemcloud.com/graphql/execute.json/tmb/faqDetailByPath;path=";
+  const graphqlUrl = "https://publish-p162853-e1744823.adobeaemcloud.com/graphql/execute.json/tmb/faqDetailByPath;path=";
 
   try {
     const defaultContentWrapper = secwrapper.querySelector(
@@ -139,8 +136,7 @@ export default async function decorateFaqDetail() {
       if (!heading) return;
 
       const offset = 180; // adjust for sticky header
-      const topPos =
-        heading.getBoundingClientRect().top + window.scrollY - offset;
+      const topPos = heading.getBoundingClientRect().top + window.scrollY - offset;
 
       window.scrollTo({ top: topPos, behavior: "smooth" });
     });
