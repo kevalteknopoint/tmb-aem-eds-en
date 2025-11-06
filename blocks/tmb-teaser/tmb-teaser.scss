@@ -9,8 +9,9 @@
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1452px;
+  // max-width: 1452px;
   padding: 0 40px;
+  background-color: $color-background-background-3;
 
   &>div:nth-child(2) {
     display: flex;
@@ -171,15 +172,17 @@
 
 .tmb-teaser-wrapper {
   margin-left: 0 !important;
-  padding: 0 !important;
+  // padding: 64px;
   display: flex;
-  gap: 40px;
+  gap: 32px;
+  align-items: flex-start;
   max-width: 1372px !important;
 }
 
 .momentum-block {
   display: flex;
-  gap: 40px;
+  gap: 32px;
+  padding: 64px 64px;
 
   &>.tmb-teaser-content {
     height: auto;
@@ -199,38 +202,38 @@
   }
 
   img {
-    border-radius: 20px;
+    // border-radius: 20px;
     height: 100%;
     width: 100%;
   }
 
   h2 {
-    color: #0B231F;
+    color: $color-background-background-4;
     font-size: 40px;
-    font-weight: 900;
-    line-height: 48px;
-    margin-bottom: 20px;
+    font-weight: 500;
+    line-height: 44px;
+    margin-bottom: 16px;
   }
 
   h3 {
-    color: #0B231F;
+    color: $color-background-background-4;
     font-size: 24px;
-    font-weight: 700;
-    line-height: 32px;
-    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 36px;
+    margin-bottom: 4px
   }
 
   p {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
   }
 
   .button-container>a {
-    background-color: #00525b;
-    border-radius: 20px;
-    color: #fff;
+    background-color: $color-button-primary-default;
+    border-radius: 24px;
+    color: $color-text-reversed-heading;
     display: block;
     font-size: 16px;
     line-height: 24px;
@@ -240,7 +243,7 @@
   }
 
   div>div>p:nth-child(4) {
-    display: none;
+    display: block;
   }
 
   // Media Queries nested inside .momentum-block
@@ -327,6 +330,29 @@
     img {
       height: 232px;
       object-fit: cover;
+    }
+  }
+}
+
+.momentum-image-version.momentum-section {
+  background-color: $color-background-background-4;
+
+  .momentum-block {
+    h2 {
+      color: $color-text-reversed-heading;
+    }
+
+    h3 {
+      color: $color-text-reversed-body;
+    }
+
+    p {
+      color: $color-text-reversed-body;
+    }
+
+    .button-container>a {
+      background-color: $color-button-secondary-default;
+      color: $color-button-text-stroke-default;
     }
   }
 }
@@ -449,7 +475,7 @@
     }
 
     &>li:nth-child(1) p {
-      color: #0b231f;
+      color: $color-text-default-heading;
       font-size: 40px;
       font-style: black;
       font-weight: 900;
@@ -492,51 +518,78 @@
     display: none;
   }
 }
+
+// .fmb-momentum-saving.momentum-section {
+//   padding: 64px 0;
+
+//   .fmb-momentum-teaser.momentum-teaser-wrapper {
+//     background-color: green;
+//     padding: 64px;
+//   }
+// }
+// .momentum-section > div:nth-child(2) > ul:nth-child(1) > li > p {
+//   color: $color-text-default-heading;
+//     font-size: 144.52px;
+//     font-style: black;
+//     font-weight: 900;
+//     line-height: 99.1px;
+//     margin: unset;
+//     text-transform: capitalize;
+// }
+// .fmb-momentum-saving>div:nth-child(2)>ul:nth-child(1)>li:nth-child(1)>ul>li:nth-child(2) {
+//   color: $color-text-default-heading;
+//   text-align: center;
+//   font-style: normal;
+//   font-weight: 300;
+//   line-height: 32px;
+// }
+
 // ---------------------------------------------
 // FMB HOMEPAGE
 // ---------------------------------------------
 
-.fmb-momentum.tmb-teaser-wrapper {
-  background: #F7F7F7;
-  .tmb-teaser-content{
-    picture{
-      img{
-        border-radius: 0%;
-      }
-    }
-  }
+// .fmb-momentum.tmb-teaser-wrapper {
+//   background: #F7F7F7;
 
-  .momentum-block h2 {
-    color: #003764;
-    font-style: normal;
-    font-weight: 750;
-    line-height: 44px;
-    margin-bottom: 16px;
+//   .tmb-teaser-content {
+//     picture {
+//       img {
+//         border-radius: 0%;
+//       }
+//     }
+//   }
 
-  }
+//   .momentum-block h2 {
+//     color: #003764;
+//     font-style: normal;
+//     font-weight: 750;
+//     line-height: 44px;
+//     margin-bottom: 16px;
 
-  .momentum-block h3 {
-    color: #003764;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 36px;
-    margin-bottom: 4px;
-  }
+//   }
 
-  p {
-    color: #565659;
-    font-style: normal;
-    line-height: 24px;
-    margin-bottom: 32px;
-  }
+//   .momentum-block h3 {
+//     color: #003764;
+//     font-style: normal;
+//     font-weight: 400;
+//     line-height: 36px;
+//     margin-bottom: 4px;
+//   }
 
-  .button-container {
-    display: block;
+//   p {
+//     color: #565659;
+//     font-style: normal;
+//     line-height: 24px;
+//     margin-bottom: 32px;
+//   }
 
-    >a {
-      font-weight: 500px;
-      border-radius: 2px;
-      background: #003764;
-    }
-  }
-}
+//   .button-container {
+//     display: block;
+
+//     >a {
+//       font-weight: 500px;
+//       border-radius: 2px;
+//       background: #003764;
+//     }
+//   }
+// }
