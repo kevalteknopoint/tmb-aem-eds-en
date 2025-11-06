@@ -31,10 +31,6 @@
           "label": "Style",
           "options": [
             {
-              "name":"momentum-saver-section",
-              "value":"momentum-saver-section"
-            },
-            {
               "name": "secfirst",
               "value": "secfirst"
             },
@@ -53,6 +49,10 @@
             {
               "name": "momentum-section",
               "value": "momentum-section"
+            },
+            {
+              "name": "momentum-saver-section",
+              "value": "momentum-saver-section"
             },
             {
               "name": "online-banking",
@@ -105,14 +105,12 @@
             {
               "name": "FAQ Landing Banner",
               "value": "faq-landing-banner"
-              
-              
             },
             {
               "name": "Faq container",
               "value": "faq-container"
             },
-             {
+            {
               "name": "Faq question",
               "value": "faq-question"
             },
