@@ -37,16 +37,9 @@
       "fields": [
         {
           "component": "aem-tag",
-          "label": "AEM Tag Picker",
+          "label": "FAQ Tag",
           "name": "cq:tags",
           "valueType": "string"
-        },
-        {
-          "component": "number",
-          "name": "number",
-          "label": "Number of FAQs to be rendered",
-          "valueType": "number",
-          "value": 0
         },
         {
           "component": "multiselect",
