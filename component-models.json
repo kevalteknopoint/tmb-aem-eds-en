@@ -501,11 +501,27 @@
     "id": "faq-category",
     "fields": [
       {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
+        "id": "number",
+        "fields": [
+          {
+            "component": "number",
+            "name": "number",
+            "label": "Number of FAQs to be rendered",
+            "valueType": "number",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "id": "aem-tag-picker",
+        "fields": [
+          {
+            "component": "aem-tag",
+            "label": "FAQ Tags",
+            "name": "cq:tags",
+            "valueType": "string"
+          }
+        ]
       },
       {
         "component": "multiselect",
@@ -515,17 +531,6 @@
           {
             "name": "With Pagination",
             "value": "enable-pagination"
-          }
-        ]
-      },
-      {
-        "id": "aem-tag-picker",
-        "fields": [
-          {
-            "component": "aem-tag",
-            "label": "AEM Tag Picker",
-            "name": "cq:tags",
-            "valueType": "string"
           }
         ]
       }
