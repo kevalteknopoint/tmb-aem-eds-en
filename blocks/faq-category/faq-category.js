@@ -20,7 +20,7 @@ export default async function decorate(block) {
   const tagWrap = block.querySelector("div:nth-child(2)")?.querySelector('p');
   const tagValue = tagWrap?.textContent?.trim();
 
-  const limitWrap = block.querySelector("div:nth-child(3) p");
+  const limitWrap = block.querySelector("div:nth-child(3)")?.querySelector('p');
   const limitValue = limitWrap?.textContent?.trim();
 
   if (!tagValue) return;
