@@ -501,27 +501,17 @@
     "id": "faq-category",
     "fields": [
       {
-        "id": "number",
-        "fields": [
-          {
-            "component": "number",
-            "name": "number",
-            "label": "Number of FAQs to be rendered",
-            "valueType": "number",
-            "value": 0
-          }
-        ]
+        "component": "aem-tag",
+        "label": "AEM Tag Picker",
+        "name": "cq:tags",
+        "valueType": "string"
       },
       {
-        "id": "aem-tag-picker",
-        "fields": [
-          {
-            "component": "aem-tag",
-            "label": "FAQ Tags",
-            "name": "cq:tags",
-            "valueType": "string"
-          }
-        ]
+        "component": "number",
+        "name": "number",
+        "label": "Number of FAQs to be rendered",
+        "valueType": "number",
+        "value": 0
       },
       {
         "component": "multiselect",
