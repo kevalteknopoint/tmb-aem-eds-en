@@ -28,7 +28,107 @@
         {
           "component": "multiselect",
           "name": "style",
-          "label": "Style"
+          "label": "Style",
+          "options": [
+            {
+              "name":"momentum-saver-section",
+              "value":"momentum-saver-section"
+            },
+            {
+              "name": "secfirst",
+              "value": "secfirst"
+            },
+            {
+              "name": "secsecond",
+              "value": "secsecond"
+            },
+            {
+              "name": "quick-links",
+              "value": "quick-links"
+            },
+            {
+              "name": "momentum-teaser",
+              "value": "momentum-teaser"
+            },
+            {
+              "name": "momentum-section",
+              "value": "momentum-section"
+            },
+            {
+              "name": "online-banking",
+              "value": "online-banking"
+            },
+            {
+              "name": "Expandable Tiles",
+              "value": "expandable-tiles-section"
+            },
+            {
+              "name": "Highlight",
+              "value": "highlight"
+            },
+            {
+              "name": "AOS Enabled",
+              "value": "aos-enabled"
+            },
+            {
+              "name": "tmb-acc-sec",
+              "value": "tmb-acc-sec"
+            },
+            {
+              "name": "banking-container",
+              "value": "banking-container"
+            },
+            {
+              "name": "tmb-footer",
+              "value": "tmb-footer"
+            },
+            {
+              "name": "tmb-sub-footer",
+              "value": "tmb-sub-footer"
+            },
+            {
+              "name": "Bottom Spacer",
+              "value": "spacer-bottom"
+            },
+            {
+              "name": "Top Spacer",
+              "value": "spacer-top"
+            },
+            {
+              "name": "Hide Section",
+              "value": "d-none"
+            },
+            {
+              "name": "faq-Looking",
+              "value": "faq-looking-for"
+            },
+            {
+              "name": "FAQ Landing Banner",
+              "value": "faq-landing-banner"
+              
+              
+            },
+            {
+              "name": "Faq container",
+              "value": "faq-container"
+            },
+             {
+              "name": "Faq question",
+              "value": "faq-question"
+            },
+            {
+              "name": "Faq Frequently Question",
+              "value": "faq-frequently-question"
+            },
+            {
+              "name": "Faq Frequently Question Title",
+              "value": "faq-frequently-question-title"
+            },
+            {
+              "name": "Faq Frequently Question List",
+              "value": "faq-frequently-question-list"
+            }
+          ]
         }
       ]
     }
