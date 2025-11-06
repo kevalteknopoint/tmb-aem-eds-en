@@ -224,6 +224,10 @@
           {
             "name": "Faq Frequently Question List",
             "value": "faq-frequently-question-list"
+          },
+          {
+            "name": "section wrapper",
+            "value": "section-wrapper"
           }
         ]
       }
