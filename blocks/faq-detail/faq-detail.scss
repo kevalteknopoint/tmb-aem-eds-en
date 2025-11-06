@@ -23,7 +23,7 @@ html {
     opacity: 1;
     transform: translateY(0);
 
-    @include tablet {
+    @include mobile {
       font-size: 32px;
       line-height: 40px;
       padding: 24px 16px 0;
@@ -52,7 +52,7 @@ html {
     display: none;
   }
 
-  @include tablet {
+  @include mobile {
     padding: 24px 16px;
   }
 
@@ -174,14 +174,12 @@ html {
 
 .two-img-class {
   max-width: 1328px;
-  display: flex;
-  padding: 10px;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
-  width: 395px;
 }
 
-@include tablet {
+@include mobile {
   .section-wrapper {
     display: flex;
     flex-direction: column;

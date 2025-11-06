@@ -109,6 +109,8 @@
 .faq-frequently-question-list .faq-category-wrapper{
   background-color:var(--surface-light);
   border-radius:10px;
+  -moz-column-break-inside:avoid;
+       break-inside:avoid;
   margin-bottom:16px;
   padding:24px;
 }
