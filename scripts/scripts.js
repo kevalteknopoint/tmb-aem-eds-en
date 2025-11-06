@@ -1,4 +1,3 @@
-import decorateFaqDetail from '../components/faq-details/faq-details.js';
 import {
   loadHeader,
   loadFooter,
@@ -147,7 +146,6 @@ function loadDelayed() {
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
-  decorateFaqDetail();
   loadDelayed();
 }
 
