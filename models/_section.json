@@ -31,6 +31,10 @@
           "label": "Style",
           "options": [
             {
+              "name":"momentum-saver-section",
+              "value":"momentum-saver-section"
+            },
+            {
               "name": "secfirst",
               "value": "secfirst"
             },
@@ -49,10 +53,6 @@
             {
               "name": "momentum-section",
               "value": "momentum-section"
-            },
-            {
-              "name":"momentum-saver-section",
-              "value":"momentum-saver-section"
             },
             {
               "name": "online-banking",
