@@ -48,71 +48,79 @@ export default async function decorateFaqDetail() {
     const ulEl = subsectionAndRightSection.querySelector("ul");
 
     // ========== Build Sections + Right Nav ==========
-    faq.faqContentReference.forEach((content, i) => {
-      const id = content.sectionTitle.toLowerCase().replace(/\s+/g, "-");
+    // faq.faqContentReference.forEach((content, i) => {
+    // const id = content.sectionTitle.toLowerCase().replace(/\s+/g, "-");
 
-      // Right nav item
+    // Right nav item
+    // ulEl.append(
+    //   li(span(`[${i + 1}]`), a({ href: `#${id}` }, content.sectionTitle))
+    // );
+
+    // const paraEle = p();
+    // paraEle.innerHTML = content.sectionContent.plaintext?.replaceAll(
+    //   "\n",
+    //   "<br>"
+    // );
+
+    // ===== Create list items & left sections =====
+    faq.faqContentReference.forEach((lidata, i) => {
+      // ====== Create IDs consistently =====
+      const ul = document.createElement("ul");
+      const li = document.createElement("li");
+      const subtitle = lidata.sectionTitle.toLowerCase().replace(/\s+/g, "-");
+      const id = lidata.sectionTitle.toLowerCase().replace(/\s+/g, "-");
       ulEl.append(
-        li(span(`[${i + 1}]`), a({ href: `#${id}` }, content.sectionTitle))
+        li.append(span(`[${i + 1}]`), a({ href: `#${id}` }, lidata.sectionTitle))
       );
-
       const paraEle = p();
-      paraEle.innerHTML = content.sectionContent.plaintext?.replaceAll(
+      paraEle.innerHTML = lidata.sectionContent.plaintext?.replaceAll(
         "\n",
         "<br>"
       );
+      // ==== Right side nav ====
 
-      // ===== Create list items & left sections =====
-      faq.faqContentReference.forEach((lidata, i) => {
-        // ====== Create IDs consistently =====
-        const subtitle = lidata.sectionTitle.toLowerCase().replace(/\s+/g, "-");
+      const link = document.createElement("a");
+      const spanforcount = document.createElement("span");
+      spanforcount.textContent = `[${i + 1}]`;
 
-        // ==== Right side nav ====
-        const ul = document.createElement("ul");
-        const li = document.createElement("li");
-        const link = document.createElement("a");
-        const spanforcount = document.createElement("span");
-        spanforcount.textContent = `[${i + 1}]`;
+      link.href = `#${subtitle}`;
+      link.textContent = lidata.sectionTitle;
 
-        link.href = `#${subtitle}`;
-        link.textContent = lidata.sectionTitle;
+      li.appendChild(spanforcount);
+      li.appendChild(link);
+      ul.appendChild(li);
 
-        li.appendChild(spanforcount);
-        li.appendChild(link);
-        ul.appendChild(li);
-
-        // ==== Left section ====
-        const subsectionAndleftSection = document.createElement("div");
-        subsectionAndleftSection.classList.add("sub-section-wrapper");
-        const headingh3 = document.createElement("h3");
-        headingh3.id = subtitle; // ✅ Correct: no # symbol
-        headingh3.textContent = lidata.sectionTitle;
-        const leftsectionPtag = document.createElement("p");
-        leftsectionPtag.innerHTML = lidata.sectionContent.plaintext?.replaceAll(
-          "\n",
-          "<br>"
+      // ==== Left section ====
+      const subsectionAndleftSection = document.createElement("div");
+      subsectionAndleftSection.classList.add("sub-section-wrapper");
+      const headingh3 = document.createElement("h3");
+      headingh3.id = subtitle; // ✅ Correct: no # symbol
+      headingh3.textContent = lidata.sectionTitle;
+      const leftsectionPtag = document.createElement("p");
+      leftsectionPtag.innerHTML = lidata.sectionContent.plaintext?.replaceAll(
+        "\n",
+        "<br>"
+      );
+      if (lidata.sectionImages && lidata.sectionImages.length > 0) {
+        const imgContainer = div(
+          { class: "two-img-class" },
+          ...lidata.sectionImages.map((imgData) =>
+            img({
+              src: imgData._publishUrl,
+              alt: lidata.sectionTitle || "FAQ Image",
+              loading: "lazy",
+            })
+          )
         );
-        // ✅ use innerHTML if content is HTML
 
-        subsectionAndleftSection.appendChild(headingh3);
-        subsectionAndleftSection.appendChild(leftsectionPtag);
-        if (lidata.sectionImages && lidata.sectionImages.length > 0) {
-          const imgContainer = div(
-            { class: "two-img-class" },
-            ...lidata.sectionImages.map((imgData) =>
-              img({
-                src: imgData._publishUrl,
-                alt: lidata.sectionTitle || "FAQ Image",
-                loading: "lazy",
-              })
-            )
-          );
+        subsectionAndleftSection.append(imgContainer);
+      }
 
-          subsectionAndleftSection.append(imgContainer);
-        }
-        secwrapper.appendChild(subsectionAndleftSection);
-      });
+      subsectionAndleftSection.appendChild(headingh3);
+      subsectionAndleftSection.appendChild(leftsectionPtag);
+      secwrapper.appendChild(subsectionAndleftSection);
     });
+    // });
 
     // Append right nav
     defaultContentWrapper?.replaceWith(subsectionAndRightSection);
@@ -130,7 +138,7 @@ export default async function decorateFaqDetail() {
       const heading = document.querySelector(href);
       if (!heading) return;
 
-      const offset = 175; // adjust for sticky header
+      const offset = 180; // adjust for sticky header
       const topPos =
         heading.getBoundingClientRect().top + window.scrollY - offset;
 
