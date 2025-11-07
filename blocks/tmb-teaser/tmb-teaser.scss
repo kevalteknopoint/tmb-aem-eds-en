@@ -12,22 +12,22 @@
   max-width: 1452px;
   padding: 0 40px;
 
-  & > div:nth-child(2) {
+  &>div:nth-child(2) {
     display: flex;
     gap: 40px;
     padding: 0 !important;
 
     // UL 1 (The number/large text block)
-    & > ul:nth-child(1) {
+    &>ul:nth-child(1) {
       list-style: none;
       padding-left: 0;
       width: 690px;
 
-      & > li {
+      &>li {
         display: flex;
 
         // Large number/paragraph
-        & > p {
+        &>p {
           color: #0b231f;
           font-family: var(--secondary-font);
           font-size: 144.52px;
@@ -38,11 +38,11 @@
           text-transform: capitalize;
         }
 
-        & > ul {
+        &>ul {
           list-style: none;
           padding-left: 0;
 
-          & > li:nth-child(1) {
+          &>li:nth-child(1) {
             font-size: 28.9px;
             font-weight: 400;
             line-height: 49.55px;
@@ -51,11 +51,11 @@
         }
 
         &:nth-child(1) {
-          & > ul {
+          &>ul {
             margin-top: 0;
             padding-left: 0;
 
-            & > li:nth-child(1) {
+            &>li:nth-child(1) {
               color: #0b231f;
               font-family: var(--secondary-font);
               font-size: 73.03px;
@@ -66,7 +66,7 @@
               margin: 0 !important;
             }
 
-            & > li:nth-child(2) {
+            &>li:nth-child(2) {
               color: #0b231f;
               font-family: var(--secondary-font);
               font-size: 33.03px;
@@ -76,29 +76,29 @@
           }
         }
 
-        &:nth-child(2) > ul {
+        &:nth-child(2)>ul {
           padding-left: 0;
         }
       }
     }
 
     // UL 2 (The content block on the right)
-    & > ul:nth-child(2) {
+    &>ul:nth-child(2) {
       list-style: none;
       padding-left: 0;
       margin: 0 auto;
 
-      & > li > ul {
+      &>li>ul {
         list-style: none;
         padding: unset;
         margin: 0 auto; // Merged with rule from line 327 (duplicate selector fix)
 
-        & > li > ul {
+        &>li>ul {
           list-style: none;
           padding-left: unset;
         }
 
-        & > li:nth-child(1) p {
+        &>li:nth-child(1) p {
           color: #0b231f;
           font-size: 40px;
           font-style: black;
@@ -108,7 +108,7 @@
           text-transform: capitalize;
         }
 
-        & > li:nth-child(2) {
+        &>li:nth-child(2) {
           margin: 20px 0;
 
           p {
@@ -121,7 +121,7 @@
           }
         }
 
-        & > li:nth-child(3) {
+        &>li:nth-child(3) {
           margin-bottom: 20px;
 
           p {
@@ -133,7 +133,7 @@
           }
         }
 
-        & > li:nth-child(4) .button-container > a {
+        &>li:nth-child(4) .button-container>a {
           background-color: #00525b;
           border: 0;
           border-radius: 20px;
@@ -153,7 +153,7 @@
   @media screen and (max-width: 767px) {
     padding: 0;
 
-    & > div:nth-child(2) {
+    &>div:nth-child(2) {
       display: none;
     }
   }
@@ -181,7 +181,7 @@
   display: flex;
   gap: 40px;
 
-  & > .tmb-teaser-content {
+  &>.tmb-teaser-content {
     height: auto;
     width: 600px;
 
@@ -189,7 +189,7 @@
       height: 100%;
     }
 
-    & > div {
+    &>div {
       height: 100%;
     }
 
@@ -227,7 +227,7 @@
     margin-bottom: 20px;
   }
 
-  .button-container > a {
+  .button-container>a {
     background-color: #00525b;
     border-radius: 20px;
     color: #fff;
@@ -239,7 +239,7 @@
     width: fit-content;
   }
 
-  div > div > p:nth-child(4) {
+  div>div>p:nth-child(4) {
     display: none;
   }
 
@@ -262,11 +262,11 @@
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    & > .teaser-content {
+    &>.teaser-content {
       width: 60%;
     }
 
-    & > .tmb-teaser-content {
+    &>.tmb-teaser-content {
       height: auto;
       min-height: 100%;
       width: 40%;
@@ -274,7 +274,7 @@
   }
 
   @media screen and (max-width: 768px) {
-    & > .tmb-teaser-content {
+    &>.tmb-teaser-content {
       height: 100%;
       max-width: 300px;
       min-width: 150px;
@@ -299,13 +299,13 @@
       margin: 0;
     }
 
-    div > div > p:nth-child(3) {
+    div>div>p:nth-child(3) {
       display: none;
       line-height: 24px;
       margin: unset;
     }
 
-    div > div > p:nth-child(4) {
+    div>div>p:nth-child(4) {
       display: block !important;
       font-size: 16px;
       font-style: normal;
@@ -314,7 +314,7 @@
       margin: unset;
     }
 
-    .button-container > a {
+    .button-container>a {
       display: flex;
       font-size: 9px;
       font-weight: 600;
@@ -340,31 +340,31 @@
     padding: 0 !important;
   }
 
-  .momentum-section > div:nth-child(2) > ul:nth-child(1) {
+  .momentum-section>div:nth-child(2)>ul:nth-child(1) {
     max-width: 690px;
     width: 100%;
 
-    & > li > p {
+    &>li>p {
       font-family: var(--secondary-font);
       font-size: 80px;
       font-weight: 900;
       line-height: 50px;
     }
 
-    & > li:nth-child(1) > ul > li:nth-child(1) {
+    &>li:nth-child(1)>ul>li:nth-child(1) {
       font-family: var(--secondary-font);
       font-size: 60px;
       font-weight: 900;
       line-height: 40px;
     }
 
-    & > li > ul > li:nth-child(1) {
+    &>li>ul>li:nth-child(1) {
       font-size: 24px;
       line-height: 32px;
     }
   }
 
-  .momentum-section > div:nth-child(2) > ul:nth-child(2) > li > ul > li:nth-child(1) p {
+  .momentum-section>div:nth-child(2)>ul:nth-child(2)>li>ul>li:nth-child(1) p {
     font-size: 32px;
     line-height: 40px;
   }
@@ -385,7 +385,7 @@
   padding: 0 !important;
   list-style: none;
 
-  & > li {
+  &>li {
     display: flex;
 
     p {
@@ -397,21 +397,21 @@
       text-transform: capitalize;
     }
 
-    & > ul {
+    &>ul {
       list-style: none;
 
-      & > li:nth-child(1) {
+      &>li:nth-child(1) {
         font-size: 28.9px;
         font-weight: 400;
         line-height: 49.55px;
       }
     }
 
-    &:nth-child(1) > ul {
+    &:nth-child(1)>ul {
       margin-top: 20px;
       padding-left: 0;
 
-      & > li:nth-child(1) {
+      &>li:nth-child(1) {
         font-size: 73.03px;
         font-style: black;
         font-weight: 900;
@@ -420,7 +420,7 @@
         margin: 0;
       }
 
-      & > li:nth-child(2) {
+      &>li:nth-child(2) {
         font-family: var(--secondary-font);
         font-size: 33.03px;
         font-weight: 900;
@@ -428,27 +428,27 @@
       }
     }
 
-    &:nth-child(2) > ul {
+    &:nth-child(2)>ul {
       padding-left: 0;
     }
   }
 
-  & + ul {
+  &+ul {
     list-style: none;
   }
 }
 
 .momentum-teaser-wrapper {
-  & > ul:nth-child(2) > li > ul {
+  &>ul:nth-child(2)>li>ul {
     list-style: none;
 
-    & > li > ul {
+    &>li>ul {
       list-style: none;
       margin: 0 auto;
       padding-left: unset;
     }
 
-    & > li:nth-child(1) p {
+    &>li:nth-child(1) p {
       color: #0b231f;
       font-size: 40px;
       font-style: black;
@@ -458,7 +458,7 @@
       text-transform: capitalize;
     }
 
-    & > li:nth-child(2) {
+    &>li:nth-child(2) {
       margin: 20px 0;
 
       p {
@@ -471,7 +471,7 @@
       }
     }
 
-    & > li:nth-child(3) {
+    &>li:nth-child(3) {
       margin-bottom: 20px;
 
       p {
@@ -483,12 +483,86 @@
       }
     }
 
-    & > li:nth-child(4) .button-container {
+    &>li:nth-child(4) .button-container {
       margin: 0 auto;
     }
   }
 
   @media screen and (max-width: 768px) {
     display: none;
+  }
+}
+
+.momentum-saver-section {
+  max-width: 1800px;
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 80px;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  /* padding: 0 40px; */
+  padding: 64px;
+
+  .momentum-columns {
+    display: flex;
+    gap: 32px;
+    padding: 64px 64px;
+    background-color: #FAFBEE;
+    border-radius: 24px;
+    max-width: 1440px;
+
+    .momentum-content {
+      h2 {
+        color: $color-text-default-heading;
+        font-size: 140px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 120px;
+        text-transform: capitalize;
+      }
+
+      p {
+        color: $color-text-default-heading;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        width: 50%;
+      }
+    }
+
+    .momentum-second-content {
+      h2 {
+        color: $color-text-default-heading;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 40px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+
+      h3 {
+        color: $color-text-default-heading;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 36px;
+        margin-bottom: 4px;
+        ;
+      }
+
+      p {
+        color: $color-text-default-body;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height:24px;
+        margin-bottom: 32px;
+      }
+    }
   }
 }
