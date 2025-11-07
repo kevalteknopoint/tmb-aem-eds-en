@@ -174,11 +174,9 @@ html {
 
 .two-img-class {
   max-width: 1328px;
-  display: flex;
-  padding: 10px;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
-  width: 395px;
 }
 
 @include mobile {

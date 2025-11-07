@@ -214,20 +214,16 @@
             "value": "faq-question"
           },
           {
-            "name": "Faq Frequently Question",
+            "name": "FAQ List",
             "value": "faq-frequently-question"
           },
           {
-            "name": "Faq Frequently Question Title",
+            "name": "FAQ Title",
             "value": "faq-frequently-question-title"
           },
           {
-            "name": "Faq Frequently Question List",
+            "name": "FAQ Category List",
             "value": "faq-frequently-question-list"
-          },
-          {
-            "name": "section wrapper",
-            "value": "section-wrapper"
           }
         ]
       }
@@ -508,8 +504,21 @@
         "component": "richtext",
         "name": "text",
         "value": "",
-        "label": "Text",
+        "label": "FAQ Content",
         "valueType": "string"
+      },
+      {
+        "component": "aem-tag",
+        "label": "FAQ Tag",
+        "name": "aem",
+        "valueType": "string"
+      },
+      {
+        "component": "number",
+        "name": "number",
+        "label": "Number of FAQs to be rendered",
+        "valueType": "number",
+        "value": 0
       },
       {
         "component": "multiselect",
@@ -517,10 +526,25 @@
         "label": "Style",
         "options": [
           {
-            "name": "faq-category",
-            "value": "faq-category"
+            "name": "With Pagination",
+            "value": "enable-pagination"
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "aem-content-fragment",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "picker",
+        "label": "Content Fragment Picker",
+        "valueType": "string",
+        "variationName": "contentFragmentVariation",
+        "validation": {
+          "rootPath": "/content/dam/tmb/content-fragments"
+        }
       }
     ]
   },
