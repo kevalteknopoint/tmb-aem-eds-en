@@ -401,6 +401,25 @@
   margin-bottom:32px;
 }
 
+.momentum-saver-section .momentum-columns .momentum-second-content .button-container{
+  color:var(--color-text-default-body);
+  font-size:16px;
+  font-style:normal;
+  font-weight:400;
+  height:40px;
+  line-height:24px;
+  margin-bottom:32px;
+  width:150px;
+}
+
+.momentum-saver-section .momentum-columns .momentum-second-content .button-container a{
+  color:var(--color-button-text-stroke-reverse);
+  font-size:16px;
+  font-style:normal;
+  font-weight:500;
+  line-height:24px;
+}
+
 @media (min-width: 768px) and (max-width: 1024px){
   .momentum-block{
     flex-wrap:unset;
