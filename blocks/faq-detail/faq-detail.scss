@@ -42,10 +42,15 @@ html {
   display: grid;
   grid-template-columns: 1fr 392px; // Left | Right
   column-gap: 74px;
+  row-gap: 32px;
   font-family: "Open Sans", sans-serif;
   position: relative;
   align-items: start;
   padding: 32px;
+
+  .default-content-wrapper {
+    display: none;
+  }
 
   @include mobile {
     padding: 24px 16px;
@@ -60,7 +65,7 @@ html {
     grid-row: auto;
 
     h3 {
-      color: $surface-prim-active-cta;
+      color: #0B231F;
       font-family: $primary-font;
       font-size: 20px;
       font-style: normal;
@@ -100,7 +105,7 @@ html {
       line-height: 36px;
       letter-spacing: -1px;
       padding: 12px 0;
-      border-bottom: 1px solid #0B231F;
+      border-bottom: 1px solid rgba(0, 82, 91, 0.20);
       overflow: hidden;
       transition: all 0.3s ease-in-out;
 
@@ -125,6 +130,8 @@ html {
       flex-direction: column;
       gap: 4px;
       flex: 1 0 0;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(0, 82, 91, 0.20);
 
       .faq-number {
         display: block;
@@ -165,15 +172,11 @@ html {
   }
 }
 
-.faq-class-for-four-img {
+.two-img-class {
   max-width: 1328px;
-  margin: 0 auto;
-    display: flex;
-    padding: 10px;
-    align-items: flex-start;
-    gap: 10px;
-      height: 395px;
-      width: 395px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
 @include mobile {
