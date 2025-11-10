@@ -44,6 +44,10 @@
             {
               "name": "Expandable Tiles",
               "value": "expandable-tiles"
+            },
+            {
+              "name": "Faq-cant-find-looking-for",
+              "value": "faq-cant-find-looking-for"
             }
           ]
         }

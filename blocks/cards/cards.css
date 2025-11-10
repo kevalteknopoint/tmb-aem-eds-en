@@ -365,6 +365,10 @@
   display:none;
 }
 
+.faq-cant-find-looking-for{
+  background-color:grey;
+}
+
 @media (min-width: 766px) and (max-width: 1220px){
   .section.online-banking .cards-wrapper .cards .banking-cards-ul{
     gap:20px;
