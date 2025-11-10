@@ -530,11 +530,12 @@
         font-style: normal;
         font-weight: 400;
         line-height: 24px;
-        width: 50%;
+        width: 68%;
       }
     }
 
     .momentum-second-content {
+      flex-grow: 2;
       h2 {
         color: $color-text-default-heading;
         font-size: 40px;
@@ -573,6 +574,8 @@
         margin-bottom: 32px;
         width: 150px;
         height: 40px;
+        background-color: $color-button-primary-default;
+        border-radius: 24px;
 
         a {
           color: $color-button-text-stroke-reverse;

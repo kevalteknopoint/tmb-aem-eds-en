@@ -370,7 +370,11 @@
   font-style:normal;
   font-weight:400;
   line-height:24px;
-  width:50%;
+  width:68%;
+}
+
+.momentum-saver-section .momentum-columns .momentum-second-content{
+  flex-grow:2;
 }
 
 .momentum-saver-section .momentum-columns .momentum-second-content h2{
@@ -402,6 +406,8 @@
 }
 
 .momentum-saver-section .momentum-columns .momentum-second-content .button-container{
+  background-color:var(--color-button-primary-default);
+  border-radius:24px;
   color:var(--color-text-default-body);
   font-size:16px;
   font-style:normal;
