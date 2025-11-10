@@ -187,7 +187,9 @@
 }
 
 .faq-items-list .faq-link-icon{
+  height:24px;
   margin-left:24px;
+  width:24px;
 }
 
 .faq-range-indicator{
