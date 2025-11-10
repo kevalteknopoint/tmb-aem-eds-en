@@ -1,5 +1,4 @@
-@use '../../styles/mixins' as *;
-@use '../../styles/variables' as *;
+@use '../../styles/base' as *;
 
 .faq-landing-banner {
   background: linear-gradient(86.93deg, #59FFA0 0.12%, #1BE7FF 100%);

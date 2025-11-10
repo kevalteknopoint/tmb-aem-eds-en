@@ -1,5 +1,4 @@
-@use '../../styles/mixins' as *;
-@use '../../styles/variables' as *;
+@use '../../styles/base' as *;
 
 // Fix 1: Eliminate duplicate selector 'footer .footer > div'
 footer {
