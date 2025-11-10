@@ -1,5 +1,4 @@
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
+@use '../../styles/base' as *;
 
 .breadcrumb {
   max-width: 1328px;
@@ -17,6 +16,16 @@
 
   @include mobile {
     padding: 36px 16px 48px 16px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &:has(img) {
+      font-weight: 600;
+    }
   }
 
   span {

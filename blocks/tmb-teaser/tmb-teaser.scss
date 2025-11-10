@@ -1,5 +1,4 @@
-@use '../../styles/mixins' as *;
-@use '../../styles/variables' as *;
+@use '../../styles/base' as *;
 
 .momentum-section {
   align-items: center;
@@ -516,7 +515,7 @@
 
     .momentum-content {
       h2 {
-        color: $color-text-default-heading;
+        // color: $color-text-default-heading;
         font-size: 140px;
         font-style: normal;
         font-weight: 900;
@@ -525,7 +524,7 @@
       }
 
       p {
-        color: $color-text-default-heading;
+        // color: $color-text-default-heading;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -537,7 +536,7 @@
     .momentum-second-content {
       flex-grow: 2;
       h2 {
-        color: $color-text-default-heading;
+        // color: $color-text-default-heading;
         font-size: 40px;
         font-style: normal;
         font-weight: 900;
@@ -547,7 +546,7 @@
       }
 
       h3 {
-        color: $color-text-default-heading;
+        // color: $color-text-default-heading;
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
@@ -557,7 +556,7 @@
       }
 
       p {
-        color: $color-text-default-body;
+        // color: $color-text-default-body;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -566,7 +565,7 @@
       }
 
       .button-container {
-        color: $color-text-default-body;
+        // color: $color-text-default-body;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -574,11 +573,11 @@
         margin-bottom: 32px;
         width: 150px;
         height: 40px;
-        background-color: $color-button-primary-default;
+        // background-color: $color-button-primary-default;
         border-radius: 24px;
 
         a {
-          color: $color-button-text-stroke-reverse;
+          // color: $color-button-text-stroke-reverse;
           // text-align: center;
           font-size: 16px;
           font-style: normal;

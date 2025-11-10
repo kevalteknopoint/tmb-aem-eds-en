@@ -356,7 +356,6 @@
 }
 
 .momentum-saver-section .momentum-columns .momentum-content h2{
-  color:var(--color-text-default-heading);
   font-size:140px;
   font-style:normal;
   font-weight:900;
@@ -365,7 +364,6 @@
 }
 
 .momentum-saver-section .momentum-columns .momentum-content p{
-  color:var(--color-text-default-heading);
   font-size:16px;
   font-style:normal;
   font-weight:400;
@@ -378,7 +376,6 @@
 }
 
 .momentum-saver-section .momentum-columns .momentum-second-content h2{
-  color:var(--color-text-default-heading);
   font-size:40px;
   font-style:normal;
   font-weight:900;
@@ -388,7 +385,6 @@
 }
 
 .momentum-saver-section .momentum-columns .momentum-second-content h3{
-  color:var(--color-text-default-heading);
   font-size:24px;
   font-style:normal;
   font-weight:400;
@@ -397,7 +393,6 @@
 }
 
 .momentum-saver-section .momentum-columns .momentum-second-content p{
-  color:var(--color-text-default-body);
   font-size:16px;
   font-style:normal;
   font-weight:400;
@@ -406,9 +401,7 @@
 }
 
 .momentum-saver-section .momentum-columns .momentum-second-content .button-container{
-  background-color:var(--color-button-primary-default);
   border-radius:24px;
-  color:var(--color-text-default-body);
   font-size:16px;
   font-style:normal;
   font-weight:400;
@@ -419,7 +412,6 @@
 }
 
 .momentum-saver-section .momentum-columns .momentum-second-content .button-container a{
-  color:var(--color-button-text-stroke-reverse);
   font-size:16px;
   font-style:normal;
   font-weight:500;
