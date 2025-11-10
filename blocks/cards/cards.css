@@ -371,7 +371,7 @@
   padding:32px;
 }
 
-.section.faq-cant-find-looking-for .default-content-wrapper #cant-find-what-you-are-looking-for{
+.section.faq-cant-find-looking-for .default-content-wrapper h1, .section.faq-cant-find-looking-for .default-content-wrapper h2, .section.faq-cant-find-looking-for .default-content-wrapper h3, .section.faq-cant-find-looking-for .default-content-wrapper h4, .section.faq-cant-find-looking-for .default-content-wrapper h5, .section.faq-cant-find-looking-for .default-content-wrapper h6{
   color:#00525B;
   font-family:var(--secondary-font);
   font-size:40px;
