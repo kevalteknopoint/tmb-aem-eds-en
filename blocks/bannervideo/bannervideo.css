@@ -243,8 +243,9 @@
 .secsecond{
   margin-left:auto;
   margin-right:auto;
-  max-width:1452px;
-  padding:0 40px;
+  max-width:1440px;
+  padding-inline:64px;
+  width:100%;
 }
 
 .secsecond .default-content-wrapper{
@@ -263,7 +264,7 @@
 .secsecond .swiper-wrapper .swiper-slide{
   background:#FFF;
   border:1px solid rgb(0 0 0 / 20%);
-  border-radius:12px;
+  border-radius:24px;
   display:flex;
   gap:19px;
   justify-content:flex-start;
@@ -325,6 +326,12 @@
   padding:8.7px 20px;
   width:-moz-fit-content;
   width:fit-content;
+}
+
+@media screen and (max-width: 1279px){
+  .secsecond{
+    padding-inline:24px;
+  }
 }
 
 @media screen and (max-width: 1023px){
@@ -546,5 +553,6 @@
 
   .secsecond{
     padding:0 20px;
+    padding-inline:16px;
   }
 }

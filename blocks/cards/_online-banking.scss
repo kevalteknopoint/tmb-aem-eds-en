@@ -1,10 +1,9 @@
 @use '../../styles/base' as *;
+@use '../../styles/variables';
+@use '../../styles/mixins';
 
 .section.online-banking {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1452px;
-  padding: 0 40px;
+  @include responsive-container();
 
   @media (min-width: 766px) and (max-width: 980px) {
     margin-left: auto;
@@ -12,7 +11,7 @@
   }
 
   @media screen and (max-width: 767px) {
-    padding: 0 20px;
+    padding: 0 16px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -80,30 +79,30 @@
         }
 
         .banking-li-1 {
-          background-color: #f5f8de; /* FIGMA TOKEN MISSING */
-          border-radius: 20px;
+          background-color: $bg-light-2;
+          border-radius: 24px;
           min-height: 100%;
-          padding: 32px;
+          padding: 24px;
 
           @media (min-width: 766px) and (max-width: 1220px) {
             padding: 20px;
           }
 
           @media screen and (max-width: 767px) {
-            padding: 20px;
+            padding: 24px;
           }
 
           .cards-card-body {
             margin: 0;
 
             h2 {
-              color: $text-brand;
+              color: $heading-default;
               font-size: 40px;
               font-style: normal;
               font-weight: 900;
-              line-height: 48px;
+              line-height: 40px;
               margin: 0;
-              text-transform: capitalize;
+              text-transform: uppercase;
 
               @media (min-width: 766px) and (max-width: 1220px) {
                 font-size: 24px;
@@ -112,9 +111,9 @@
               }
 
               @media screen and (max-width: 767px) {
-                font-size: 20px;
-                font-weight: 800;
-                line-height: 24px;
+                font-size: 38px;
+                font-weight: 900;
+                line-height: 38px;
               }
             }
 
@@ -127,13 +126,14 @@
 
               @media screen and (max-width: 767px) {
                 flex-direction: column;
-                gap: 16px;
-                margin-top: 18px;
+                gap: unset;
+                margin-top: 24px;
               }
 
               li {
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
                 padding: 0;
                 width: 400px;
 
@@ -149,10 +149,11 @@
 
                 @media screen and (max-width: 767px) {
                   width: auto;
+                  padding: 10px 0;
                 }
 
                 a {
-                  color: $text-primary;
+                  color: $body-accent;
                   font-size: 16px;
                   font-style: normal;
                   font-weight: 400;
@@ -163,6 +164,10 @@
                     font-size: 13px;
                     line-height: 5px;
                   }
+                }
+                & a span {
+                  display: block;
+                  width: 12px;
                 }
               }
             }
@@ -211,12 +216,12 @@
               margin: 0;
               display: flex;
               flex-direction: column;
-              gap: 8px;
+              gap: 16px;
               list-style-type: none;
               padding: 0;
 
               .banking-desc-1 {
-                color: $text-brand;
+                color: $heading-default;
                 font-size: 24px;
                 font-style: normal;
                 font-weight: 700;
@@ -237,7 +242,7 @@
               }
 
               .banking-desc-2 {
-                color: $text-primary;
+                color: $body-accent;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
@@ -259,8 +264,8 @@
 
           .cards-card-image {
             img {
-              border-top-left-radius: 20px;
-              border-top-right-radius: 20px;
+              border-top-left-radius: 24px;
+              border-top-right-radius: 24px;
               height: 100%;
               max-width: unset;
               object-fit: cover;
@@ -289,7 +294,7 @@
               }
 
               @media screen and (max-width: 767px) {
-                margin-top: 13.5px;
+                margin-top: 24px;
               }
             }
 
@@ -304,16 +309,14 @@
               a {
                 align-items: center;
                 background: transparent;
-                border: 1px solid #00525b; /* FIGMA TOKEN MISSING */
                 border-radius: 20px;
-                color: $text-brand;
+                color: $link-accent;
                 display: flex;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 700;
                 gap: 4px;
                 line-height: 24px;
-                padding: 8px 24px;
                 text-decoration: none;
                 width: max-content;
 
@@ -324,7 +327,7 @@
                 @media screen and (max-width: 767px) {
                   border-radius: 11.25px;
                   line-height: 13.5px;
-                  padding: 7.5px 13.5px;
+                  padding: 0;
                 }
 
                 &::after {
@@ -365,7 +368,7 @@
             }
 
             @media screen and (max-width: 767px) {
-              margin-top: 13.5px;
+              margin-top: 24px;
             }
           }
 
@@ -394,6 +397,10 @@
   @media screen and (max-width: 767px) {
     height: auto;
     min-height: unset;
+  }
+
+  picture {
+    height: 100%;
   }
 }
 
