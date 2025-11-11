@@ -3,7 +3,7 @@ body{
 }
 
 .header.block{
-  background-color:var(--surface-light);
+  background-color:var(--bg-default);
   display:flex;
   flex-direction:column;
   height:-moz-fit-content;
@@ -39,7 +39,7 @@ body{
 }
 
 .secondary-nav-list .secondary-nav-link{
-  color:var(--text-brand);
+  color:var(--link-default);
   display:block;
   font-size:14px;
   font-weight:400;
@@ -48,7 +48,7 @@ body{
 }
 
 .primary-header{
-  background-color:var(--surface-brand);
+  background-color:var(--bg-reverse);
 }
 
 .primary-header .primary-header-wrap{
@@ -112,7 +112,7 @@ body{
 }
 
 .primary-nav-list .primary-nav-item::after{
-  border-color:var(--text-inverse);
+  border-color:var(--link-reverse);
   border-style:solid;
   border-width:2px 2px 0 0;
   bottom:4px;
@@ -135,7 +135,7 @@ body{
 }
 
 .primary-nav-list .primary-nav-link{
-  color:var(--text-inverse);
+  color:var(--link-reverse);
   display:block;
   font-size:16px;
   font-weight:600;
@@ -175,9 +175,9 @@ body{
 }
 
 .header-actions-wrap .login-btn-wrap .login-btn{
-  background-color:var(--surface-login-cta);
+  background-color:var(--bg-light-2);
   border-radius:20px;
-  color:var(--text-brand);
+  color:var(--link-default);
   display:block;
   font-size:16px;
   font-weight:500;

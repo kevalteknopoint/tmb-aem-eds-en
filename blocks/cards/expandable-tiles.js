@@ -139,7 +139,7 @@ export default function expandableTiles(block) {
     const btnImg = img({ src: '/icons/pause-icon.svg' });
     const autoplayBtn = button({ class: 'autoplay-btn' }, btnImg);
     block?.parentElement?.insertAdjacentElement('afterend', div({ class: 'autoplay-btn-wrapper' }, autoplayBtn));
-    autoplay();
+    // autoplay();
     autoplayBtn?.addEventListener('click', (e) => {
       e.preventDefault();
 

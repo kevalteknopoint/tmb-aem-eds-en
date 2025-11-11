@@ -113,6 +113,7 @@ h1, h2, h3, h4, h5, h6{
   --surface-highlight:#00525b;
   --primary-font:"Inter", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
   --secondary-font:"American Grotesk", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
+  --gradient-1:linear-gradient(46.23deg, #59ffa0 1.03%, #1be7ff 98.97%);
   --bg-accent:#59ffa0;
   --bg-default:#ffffff;
   --bg-light-2:#f5f8de;
