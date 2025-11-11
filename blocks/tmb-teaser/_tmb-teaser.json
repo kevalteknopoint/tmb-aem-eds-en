@@ -50,6 +50,10 @@
                         {
                             "name": "background-color-teal",
                             "value": "background-color-teal"
+                        },
+                        {
+                            "name": "momentum-image-saver",
+                            "value": "momentum-image-saver"
                         }
                     ]
                 }

@@ -359,6 +359,7 @@
 }
 
 .momentum-saver-section .momentum-columns > div{
+  align-items:flex-start;
   gap:40px;
 }
 
@@ -450,7 +451,7 @@
   background-color:var(--heading-default);
   border-radius:24px;
   display:inline-flex;
-  margin-bottom:32px;
+  margin-bottom:unset;
   padding:8px 24px;
   width:150px;
 }

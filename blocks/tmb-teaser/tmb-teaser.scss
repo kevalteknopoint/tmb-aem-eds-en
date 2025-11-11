@@ -529,6 +529,7 @@
 
     >div {
       gap: 40px;
+       align-items: flex-start;
     }
 
     .momentum-content {
@@ -648,7 +649,7 @@
       }
 
       .button-container {
-        margin-bottom: 32px;
+        margin-bottom: unset;
         width: 150px;
         background-color: $heading-default;
         border-radius: 24px;
@@ -679,3 +680,4 @@
     background-color: $bg-default;
   }
 }
+

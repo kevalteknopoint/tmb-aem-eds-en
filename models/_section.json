@@ -71,6 +71,10 @@
               "value": "momentum-saver-section"
             },
             {
+              "name": "Momentum Image Saver",
+              "value": "momentum-image-saver"
+            },
+            {
               "name": "Background Color Teal",
               "value": "background-color-teal"
             },
