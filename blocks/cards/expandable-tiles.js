@@ -1,5 +1,6 @@
-import Swiper from '../../libs/swiper/swiper-bundle.min.js';
+// import Swiper from '../../libs/swiper/swiper-bundle.min.js';
 import { createOptimizedPicture } from '../../scripts/aem.js';
+import { button, div, img } from '../../scripts/dom-helpers.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
 function htmlToElement(htmlString) {
@@ -10,6 +11,24 @@ function htmlToElement(htmlString) {
 
 export default function expandableTiles(block) {
   let autoplayTimeoutId;
+
+  const autoplay = () => {
+    autoplayTimeoutId = setInterval(() => {
+      if (window.innerWidth > 767) {
+        if (block?.querySelector('.expandable-tile.active')?.nextElementSibling) {
+          block
+            ?.querySelector('.expandable-tile.active')
+            ?.nextElementSibling?.firstElementChild?.dispatchEvent(
+              new Event('click'),
+            );
+        } else {
+          block
+            ?.querySelector('.expandable-tile .tile-image')
+            ?.dispatchEvent(new Event('click'));
+        }
+      }
+    }, 3000);
+  };
 
   [...block.children].forEach((row, index) => {
     let imgCol = row.firstElementChild;
@@ -34,14 +53,9 @@ export default function expandableTiles(block) {
     const anchorElement = btnElement?.querySelector('a');
     const anchorLink = anchorElement?.getAttribute('href');
 
-    if (window.innerWidth <= 767) {
-      btnElement?.querySelector('a')?.classList?.remove('button');
-      btnElement?.querySelector('a')?.classList?.add('cta-link');
-    } else {
-      anchorElement?.replaceWith(
-        htmlToElement(`<span class="cta-link">${anchorElement.innerHTML}</span>`),
-      );
-    }
+    anchorElement?.replaceWith(
+      htmlToElement(`<span class="cta-link">${anchorElement.innerHTML}</span>`),
+    );
 
     btnElement?.replaceWith(
       htmlToElement(`<div class="content-cta">${btnElement.innerHTML}</div>`),
@@ -53,12 +67,12 @@ export default function expandableTiles(block) {
       );
     }
 
-    imgCol.querySelectorAll('picture > img').forEach((img) => {
-      const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [
+    imgCol.querySelectorAll('picture > img').forEach((eachImg) => {
+      const optimizedPic = createOptimizedPicture(eachImg.src, eachImg.alt, false, [
         { width: '750' },
       ]);
-      moveInstrumentation(img, optimizedPic.querySelector('img'));
-      img.closest('picture').replaceWith(optimizedPic);
+      moveInstrumentation(eachImg, optimizedPic.querySelector('img'));
+      eachImg.closest('picture').replaceWith(optimizedPic);
     });
 
     /* eslint-disable no-nested-ternary */
@@ -71,32 +85,6 @@ export default function expandableTiles(block) {
     row.replaceWith(bannerSlide);
 
     if (window.innerWidth > 767) {
-      bannerSlide?.firstElementChild?.addEventListener('mouseover', () => {
-        clearInterval(autoplayTimeoutId);
-      });
-
-      bannerSlide?.firstElementChild?.addEventListener('mouseout', () => {
-        clearInterval(autoplayTimeoutId);
-        autoplayTimeoutId = setInterval(() => {
-          if (window.innerWidth > 767) {
-            if (
-              block?.querySelector('.expandable-tile.active')
-                ?.nextElementSibling
-            ) {
-              block
-                ?.querySelector('.expandable-tile.active')
-                ?.nextElementSibling?.firstElementChild?.dispatchEvent(
-                  new Event('click'),
-                );
-            } else {
-              block
-                ?.querySelector('.expandable-tile .tile-image')
-                ?.dispatchEvent(new Event('click'));
-            }
-          }
-        }, 3000);
-      });
-
       bannerSlide?.firstElementChild?.addEventListener('click', (e) => {
         e.preventDefault();
 
@@ -104,32 +92,11 @@ export default function expandableTiles(block) {
         allSlides?.forEach((slide) => slide.classList.remove('active'));
         bannerSlide?.classList.add('active');
 
-        clearInterval(autoplayTimeoutId);
-
-        autoplayTimeoutId = setInterval(() => {
-          if (window.innerWidth > 767) {
-            if (
-              block?.querySelector('.expandable-tile.active')
-                ?.nextElementSibling
-            ) {
-              block
-                ?.querySelector('.expandable-tile.active')
-                ?.nextElementSibling?.firstElementChild?.dispatchEvent(
-                  new Event('click'),
-                );
-            } else {
-              block
-                ?.querySelector('.expandable-tile .tile-image')
-                ?.dispatchEvent(new Event('click'));
-            }
-          }
-        }, 3000);
-
         // if (bannerSlide?.classList.contains('active')) {
         //   bannerSlide?.classList.remove('active')
         // } else {
-        // allSlides?.forEach(slide => slide.classList.remove('active'));
-        // bannerSlide?.classList.add('active');
+        //   allSlides?.forEach(slide => slide.classList.remove('active'));
+        //   bannerSlide?.classList.add('active');
         // }
       });
 
@@ -140,52 +107,53 @@ export default function expandableTiles(block) {
   });
 
   if (window.innerWidth <= 767) {
-    const swiperWrapper = htmlToElement('<div class="swiper-wrapper"></div>');
-    [...block.children].forEach((row) => swiperWrapper.appendChild(row));
+    // const swiperWrapper = htmlToElement('<div class="swiper-wrapper"></div>');
+    // [...block.children].forEach((row) => swiperWrapper.appendChild(row));
 
-    block?.classList.add('swiper', 'expandable-tiles-swiper');
-    block.appendChild(swiperWrapper);
-    block?.insertAdjacentHTML(
-      'beforeend',
-      '<div class="swiper-pagination"></div>',
-    );
+    // block?.classList.add('swiper', 'expandable-tiles-swiper');
+    // block.appendChild(swiperWrapper);
+    // block?.insertAdjacentHTML(
+    //   'beforeend',
+    //   '<div class="swiper-pagination"></div>',
+    // );
 
-    /* eslint-disable no-new */
-    new Swiper('.expandable-tiles-swiper', {
-      effect: 'fade',
-      loop: true,
-      fadeEffect: {
-        crossFade: true,
-      },
-      autoplay: {
-        delay: 3000,
-      },
-      slidersPerView: 1,
-      centeredSlides: true,
-      spaceBetween: 24,
-      pagination: {
-        el: '.expandable-tiles-swiper .swiper-pagination',
-        clickable: true,
-      },
+    // /* eslint-disable no-new */
+    // new Swiper('.expandable-tiles-swiper', {
+    //   effect: 'fade',
+    //   loop: true,
+    //   fadeEffect: {
+    //     crossFade: true,
+    //   },
+    //   autoplay: {
+    //     delay: 3000,
+    //   },
+    //   slidersPerView: 1,
+    //   centeredSlides: true,
+    //   spaceBetween: 24,
+    //   pagination: {
+    //     el: '.expandable-tiles-swiper .swiper-pagination',
+    //     clickable: true,
+    //   },
+    // });
+  } else {
+    const btnImg = img({ src: '/icons/pause-icon.svg' });
+    const autoplayBtn = button({ class: 'autoplay-btn' }, btnImg);
+    block?.parentElement?.insertAdjacentElement('afterend', div({ class: 'autoplay-btn-wrapper' }, autoplayBtn));
+    autoplay();
+    autoplayBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      if (autoplayBtn?.classList.contains('paused')) {
+        btnImg.src = '/icons/pause-icon.svg';
+        autoplayBtn?.classList.remove('paused');
+        autoplay();
+      } else {
+        autoplayBtn?.classList.add('paused');
+        btnImg.src = '/icons/play-icon.svg';
+        clearInterval(autoplayTimeoutId);
+      }
     });
   }
-
-  clearInterval(autoplayTimeoutId);
-  autoplayTimeoutId = setInterval(() => {
-    if (window.innerWidth > 767) {
-      if (block?.querySelector('.expandable-tile.active')?.nextElementSibling) {
-        block
-          ?.querySelector('.expandable-tile.active')
-          ?.nextElementSibling?.firstElementChild?.dispatchEvent(
-            new Event('click'),
-          );
-      } else {
-        block
-          ?.querySelector('.expandable-tile .tile-image')
-          ?.dispatchEvent(new Event('click'));
-      }
-    }
-  }, 3000);
 
   // function documentHandler(e) {
   //   if (!e.target.closest('.expandable-tile') && document.querySelector('.expandable-tile.active')) {
