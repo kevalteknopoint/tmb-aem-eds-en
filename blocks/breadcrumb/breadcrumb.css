@@ -30,6 +30,10 @@
 
 @media screen and (max-width: 767px){
   .breadcrumb{
-    padding:36px 16px 48px;
+    padding:24px 16px;
+  }
+
+  .breadcrumb:has(img){
+    padding-top:44px;
   }
 }
