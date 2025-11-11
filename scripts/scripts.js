@@ -47,10 +47,22 @@ export function moveInstrumentation(from, to) {
 }
 
 /**
+ * Get specific metadata value from the document.
+ * @param {string} name of the metadata tag.
+ */
+export function getMetadata(name) {
+  const attr = name && name.includes(":") ? "property" : "name";
+  const meta = [...document.head.querySelectorAll(`meta[${attr}="${name}"]`)]
+    .map((m) => m.content)
+    .join(", ");
+  return meta || "";
+}
+
+/**
  * load fonts.css and set a session storage flag
  */
 async function loadFonts() {
-  await loadCSS(`${window.hlx.codeBasePath}/styles/fonts.css`);
+  await loadCSS(`${window.hlx.codeBasePath}/styles/${getMetadata('theme')}/fonts.css`);
   try {
     if (!window.location.hostname.includes('localhost')) sessionStorage.setItem('fonts-loaded', 'true');
   } catch (e) {
