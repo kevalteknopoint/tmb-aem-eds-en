@@ -1,18 +1,10 @@
-body{
-  margin-top:141px;
-}
-
 .header.block{
   background-color:var(--bg-default);
   display:flex;
   flex-direction:column;
   height:-moz-fit-content;
   height:fit-content;
-  left:0;
-  position:fixed;
-  top:0;
   width:100%;
-  z-index:20;
 }
 
 .secondary-header-wrap{
@@ -242,10 +234,6 @@ body{
 }
 
 @media screen and (max-width: 767px){
-  body{
-    margin-top:60px;
-  }
-
   .secondary-header-wrap{
     display:none;
     padding-inline:16px;

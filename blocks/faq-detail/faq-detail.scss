@@ -22,7 +22,7 @@ html {
     opacity: 1;
     transform: translateY(0);
 
-    @include mobile {
+    @include tablet {
       font-size: 32px;
       line-height: 40px;
       padding: 24px 16px 0;
@@ -51,7 +51,7 @@ html {
     display: none;
   }
 
-  @include mobile {
+  @include tablet {
     padding: 24px 16px;
   }
 
@@ -83,6 +83,14 @@ html {
       line-height: 24px;
       padding-bottom: 32px;
     }
+
+    iframe {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      margin-top: 16px;
+      height: auto;
+    }
   }
 
   .right-section-wrapper {
@@ -91,7 +99,7 @@ html {
     align-self: start;
     margin-top: 0;
     position: sticky;
-    top: 140px;
+    top: 0;
     height: max-content;
     width: 326px;
 
@@ -171,14 +179,19 @@ html {
   }
 }
 
-.two-img-class {
+.img-1-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.img-2-grid, .img-4-grid, .img-6-grid {
   max-width: 1328px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
 
-@include mobile {
+@include tablet {
   .section-wrapper {
     display: flex;
     flex-direction: column;

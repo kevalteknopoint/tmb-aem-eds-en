@@ -47,23 +47,29 @@ export default async function decorate(block) {
       const paraEle = p();
       paraEle.innerHTML = content.sectionContent.plaintext?.replaceAll("\n", "<br>");
 
+      const subSection = div(
+        { class: "sub-section-wrapper" },
+        h3({ id }, content.sectionTitle),
+        paraEle,
+        (content.sectionImages && content.sectionImages.length > 0) ? div(
+          { class: `img-${content.sectionImages.length}-grid` },
+          ...content.sectionImages.map((imgData) =>
+            img({
+              src: imgData._publishUrl,
+              alt: content.sectionTitle || "FAQ Image",
+              loading: "lazy",
+            })
+          )
+        ) : ''
+      );
+
+      if (content.sectionVideo && content.sectionVideo.plaintext) {
+        subSection.insertAdjacentHTML('beforeend', content.sectionVideo.plaintext);
+      }
+
       // Left content section
       secwrapper.append(
-        div(
-          { class: "sub-section-wrapper" },
-          h3({ id }, content.sectionTitle),
-          paraEle,
-          (content.sectionImages && content.sectionImages.length > 0) ? div(
-            { class: "two-img-class" },
-            ...content.sectionImages.map((imgData) =>
-              img({
-                src: imgData._publishUrl,
-                alt: content.sectionTitle || "FAQ Image",
-                loading: "lazy",
-              })
-            )
-          ) : ''
-        )
+        subSection
       );
     });
 
@@ -129,7 +135,7 @@ export default async function decorate(block) {
             }
           });
         },
-        { threshold: 0, rootMargin: "-190px 0px 0px 0px" }
+        { threshold: 0, rootMargin: "-40px 0px 0px 0px" }
       );
 
       headingObserver.observe(mainHeading);

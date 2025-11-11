@@ -1,23 +1,11 @@
 @use '../../styles/base' as *;
 
-body {
-  margin-top: 141px;
-
-  @include mobile {
-    margin-top: 60px;
-  }
-}
-
 .header.block {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
   background-color: $bg-default;
-  z-index: 20;
 }
 
 .secondary-header-wrap {
