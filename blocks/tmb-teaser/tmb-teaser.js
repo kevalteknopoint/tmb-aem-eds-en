@@ -15,12 +15,16 @@ export default function decorate() {
 
   const momentumWrapper = document.querySelector(".momentum-saver-section .columns");
   momentumWrapper.classList.add("momentum-columns");
+  const momentumWrapperImg = document.querySelector(".momentum-image-saver .columns");
+  momentumWrapperImg.classList.add("momentum-columns");
 
   const momentumWrapperdiv = document.querySelector(".momentum-saver-section .momentum-columns > div > div");
   momentumWrapperdiv.classList.add("momentum-content");
 
   const momentumWrapperseconddiv = document.querySelector(".momentum-saver-section .momentum-columns > div > .momentum-content + div");
   momentumWrapperseconddiv.classList.add("momentum-second-content");
+    const momentumWrapperseconddivsaver = document.querySelector(".momentum-image-saver .momentum-columns > div > .momentum-content + div");
+  momentumWrapperseconddivsaver.classList.add("momentum-second-content");
 
   // 🔹 Add "% p.a" to all h2 elements inside momentum-content
 // Add a separate "% p.a" element after each h2 inside .momentum-content

@@ -182,6 +182,10 @@
             "value": "background-color-teal"
           },
           {
+            "name": "Bg Image Saver",
+            "value": "bg-image-saver"
+          },
+          {
             "name": "online-banking",
             "value": "online-banking"
           },
@@ -698,6 +702,10 @@
           {
             "name": "background-color-teal",
             "value": "background-color-teal"
+          },
+          {
+            "name": "bg-image-saver",
+            "value": "bg-image-saver"
           },
           {
             "name": "momentum-image-saver",

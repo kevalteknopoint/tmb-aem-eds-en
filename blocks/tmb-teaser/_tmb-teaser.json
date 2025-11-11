@@ -52,6 +52,10 @@
                             "value": "background-color-teal"
                         },
                         {
+                            "name": "bg-image-saver",
+                            "value": "bg-image-saver"
+                        },
+                        {
                             "name": "momentum-image-saver",
                             "value": "momentum-image-saver"
                         }

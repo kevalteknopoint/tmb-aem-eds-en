@@ -79,6 +79,10 @@
               "value": "background-color-teal"
             },
             {
+              "name": "Bg Image Saver",
+              "value": "bg-image-saver"
+            },
+            {
               "name": "online-banking",
               "value": "online-banking"
             },
