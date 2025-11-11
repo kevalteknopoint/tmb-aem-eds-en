@@ -340,22 +340,36 @@
   flex-flow:column wrap;
   gap:80px;
   justify-content:space-between;
+}
+
+.momentum-saver-section .columns-wrapper{
   margin-left:auto;
   margin-right:auto;
-  max-width:1800px;
-  padding:64px;
+  max-width:1440px;
+  padding-inline:64px;
+  width:100%;
 }
 
 .momentum-saver-section .momentum-columns{
-  background-color:#FAFBEE;
   border-radius:24px;
   display:flex;
-  gap:32px;
-  max-width:1440px;
+  margin:80px 0;
+  max-width:1312px;
   padding:64px;
 }
 
+.momentum-saver-section .momentum-columns > div{
+  gap:40px;
+}
+
+.momentum-saver-section .momentum-columns .momentum-content{
+  display:grid;
+  grid-template-columns:1fr 3fr;
+}
+
 .momentum-saver-section .momentum-columns .momentum-content h2{
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
   font-size:140px;
   font-style:normal;
   font-weight:900;
@@ -363,12 +377,42 @@
   text-transform:capitalize;
 }
 
+.momentum-saver-section .momentum-columns .momentum-content .rate-unit{
+  align-items:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  line-height:1;
+  margin-left:0.3em;
+}
+
+.momentum-saver-section .momentum-columns .momentum-content .rate-percent{
+  color:var(--heading-default);
+  font-size:2rem;
+  font-size:80px;
+  font-style:normal;
+  font-weight:900;
+  line-height:72px;
+}
+
+.momentum-saver-section .momentum-columns .momentum-content .rate-pa{
+  color:var(--heading-default);
+  font-size:1.5rem;
+  font-size:40px;
+  font-style:normal;
+  font-weight:900;
+  letter-spacing:0.05em;
+  line-height:40px;
+  text-transform:uppercase;
+}
+
 .momentum-saver-section .momentum-columns .momentum-content p{
+  color:var(--body-default);
   font-size:16px;
   font-style:normal;
   font-weight:400;
   line-height:24px;
-  width:68%;
+  width:100%;
 }
 
 .momentum-saver-section .momentum-columns .momentum-second-content{
@@ -376,6 +420,8 @@
 }
 
 .momentum-saver-section .momentum-columns .momentum-second-content h2{
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
   font-size:40px;
   font-style:normal;
   font-weight:900;
@@ -385,6 +431,7 @@
 }
 
 .momentum-saver-section .momentum-columns .momentum-second-content h3{
+  color:var(--heading-default);
   font-size:24px;
   font-style:normal;
   font-weight:400;
@@ -393,6 +440,7 @@
 }
 
 .momentum-saver-section .momentum-columns .momentum-second-content p{
+  color:var(--body-default);
   font-size:16px;
   font-style:normal;
   font-weight:400;
@@ -401,21 +449,24 @@
 }
 
 .momentum-saver-section .momentum-columns .momentum-second-content .button-container{
+  background-color:var(--heading-default);
   border-radius:24px;
-  font-size:16px;
-  font-style:normal;
-  font-weight:400;
-  height:40px;
-  line-height:24px;
+  display:inline-flex;
   margin-bottom:32px;
+  padding:8px 24px;
   width:150px;
 }
 
-.momentum-saver-section .momentum-columns .momentum-second-content .button-container a{
+.momentum-saver-section .momentum-columns .momentum-second-content a{
+  color:var(--stroke-reverse);
   font-size:16px;
   font-style:normal;
   font-weight:500;
   line-height:24px;
+}
+
+.momentum-saver-section.background-color-teal{
+  background-color:var(--bg-reverse);
 }
 
 @media (min-width: 768px) and (max-width: 1024px){
@@ -469,6 +520,12 @@
   }
 }
 
+@media screen and (max-width: 1279px){
+  .momentum-saver-section .columns-wrapper{
+    padding-inline:24px;
+  }
+}
+
 @media screen and (max-width: 1024px){
   .momentum-block h2{
     font-size:35px;
@@ -483,6 +540,12 @@
   .momentum-block p{
     font-size:11px;
     margin-bottom:10px;
+  }
+}
+
+@media screen and (max-width: 1023px){
+  .momentum-saver-section .momentum-columns .momentum-content .rate-unit{
+    align-items:unset;
   }
 }
 
@@ -561,5 +624,38 @@
     height:232px;
     -o-object-fit:cover;
        object-fit:cover;
+  }
+
+  .momentum-saver-section .columns-wrapper{
+    padding-inline:16px;
+  }
+
+  .momentum-saver-section .momentum-columns{
+    align-items:flex-start;
+    flex-direction:column;
+    padding:40px 16px;
+  }
+
+  .momentum-saver-section .momentum-columns .momentum-content h2{
+    font-size:120px;
+    font-style:normal;
+    font-weight:900;
+    line-height:120px;
+    text-transform:capitalize;
+  }
+
+  .momentum-saver-section .momentum-columns .momentum-content .rate-percent{
+    font-size:78px;
+    font-style:normal;
+    font-weight:900;
+    line-height:72px;
+  }
+
+  .momentum-saver-section .momentum-columns .momentum-content p{
+    font-size:16px;
+    font-style:normal;
+    font-weight:400;
+    line-height:24px;
+    width:121%;
   }
 }

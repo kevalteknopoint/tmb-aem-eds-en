@@ -1,4 +1,5 @@
 @use '../../styles/base' as *;
+@use '../../styles/mixins';
 
 .momentum-section {
   align-items: center;
@@ -209,6 +210,7 @@
     font-weight: 900;
     line-height: 48px;
     margin-bottom: 20px;
+
   }
 
   h3 {
@@ -492,61 +494,140 @@
   }
 }
 
+//updated strt
+
 .momentum-saver-section {
-  max-width: 1800px;
+  // max-width: 1800px;
   align-items: center;
   background-color: #fff;
   display: flex;
   flex-flow: column wrap;
   gap: 80px;
   justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
+
+  // margin-left: auto;
+  // margin-right: auto;
   /* padding: 0 40px; */
-  padding: 64px;
+  // padding: 64px;
+  .columns-wrapper {
+    @include responsive-container
+  }
 
   .momentum-columns {
     display: flex;
-    gap: 32px;
     padding: 64px 64px;
-    background-color: #FAFBEE;
+    // background-color: #FAFBEE;
     border-radius: 24px;
-    max-width: 1440px;
+    max-width: 1312px;
+    margin: 80px 0;
+
+    @include mobile {
+      padding: 40px 16px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    >div {
+      gap: 40px;
+    }
 
     .momentum-content {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+
       h2 {
-        // color: $color-text-default-heading;
+        font-family: $secondary-font;
+        color: $heading-default;
         font-size: 140px;
         font-style: normal;
         font-weight: 900;
         line-height: 120px;
         text-transform: capitalize;
+        @include mobile {
+          font-size: 120px;
+          font-style: normal;
+          font-weight: 900;
+          line-height: 120px; /* 100% */
+          text-transform: capitalize;
+        }
+      }
+
+      .rate-unit {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* Stack % above P.A. */
+        align-items: center;
+        margin-left: 0.3em;
+        line-height: 1;
+        @include tablet{
+          align-items: unset;
+        }
+      }
+
+      .rate-percent {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $heading-default;
+        font-size: 80px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 72px;
+        @include mobile {
+          font-size: 78px;
+          font-style: normal;
+          font-weight: 900;
+          line-height: 72px; 
+        }
+      }
+
+      .rate-pa {
+        color: $heading-default;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 40px;
+        text-transform: uppercase;
       }
 
       p {
-        // color: $color-text-default-heading;
+        color: $body-default;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: 24px;
-        width: 68%;
+        width: 100%;
+        @include mobile {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          width: 121%;
+        }
       }
     }
 
     .momentum-second-content {
       flex-grow: 2;
+
       h2 {
-        // color: $color-text-default-heading;
+        color: $heading-default;
+         font-family: $secondary-font;
         font-size: 40px;
         font-style: normal;
         font-weight: 900;
         line-height: 40px;
         text-transform: uppercase;
         margin-bottom: 16px;
+
       }
 
+
       h3 {
-        // color: $color-text-default-heading;
+        color: $heading-default;
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
@@ -556,7 +637,7 @@
       }
 
       p {
-        // color: $color-text-default-body;
+        color: $body-default;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -565,26 +646,30 @@
       }
 
       .button-container {
-        // color: $color-text-default-body;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
         margin-bottom: 32px;
         width: 150px;
-        height: 40px;
-        // background-color: $color-button-primary-default;
+        background-color: $heading-default;
         border-radius: 24px;
+        display: inline-flex;
+        padding: 8px 24px;
+      }
 
-        a {
-          // color: $color-button-text-stroke-reverse;
-          // text-align: center;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 24px;
-        }
+      a {
+        color: $stroke-reverse;
+        // text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
       }
     }
   }
+}
+
+//updated end
+
+//variant for section bg
+
+.momentum-saver-section.background-color-teal{
+  background-color: $bg-reverse;
 }

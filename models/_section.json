@@ -71,6 +71,10 @@
               "value": "momentum-saver-section"
             },
             {
+              "name": "Background Color Teal",
+              "value": "background-color-teal"
+            },
+            {
               "name": "online-banking",
               "value": "online-banking"
             },
@@ -120,7 +124,7 @@
             },
             {
               "name": "FAQ Landing Banner",
-              "value": "faq-landing-banner"              
+              "value": "faq-landing-banner"
             },
             {
               "name": "Faq container",
