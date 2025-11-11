@@ -469,6 +469,10 @@
   background-color:var(--bg-reverse);
 }
 
+.momentum-saver-section.background-color-teal .momentum-columns.background-color-white{
+  background-color:var(--bg-default);
+}
+
 @media (min-width: 768px) and (max-width: 1024px){
   .momentum-block{
     flex-wrap:unset;

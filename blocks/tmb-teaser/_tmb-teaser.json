@@ -50,6 +50,10 @@
                         {
                             "name": "background-color-teal",
                             "value": "background-color-teal"
+                        },
+                        {
+                            "name": "background-color-white",
+                            "value": "background-color-white"
                         }
                     ]
                 }

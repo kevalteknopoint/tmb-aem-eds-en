@@ -672,4 +672,7 @@
 
 .momentum-saver-section.background-color-teal{
   background-color: $bg-reverse;
+  .momentum-columns.background-color-white{
+    background-color: $bg-default;
+  }
 }
