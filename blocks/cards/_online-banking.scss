@@ -20,7 +20,7 @@
     .cards {
       .banking-cards-ul {
         display: flex;
-        gap: 32px;
+        gap: 24px;
         justify-content: space-between;
         list-style-type: none;
         min-height: 520px;
@@ -103,6 +103,8 @@
               line-height: 40px;
               margin: 0;
               text-transform: uppercase;
+              letter-spacing: 2px;
+              font-family: $secondary-font;
 
               @media (min-width: 766px) and (max-width: 1220px) {
                 font-size: 24px;
@@ -226,7 +228,6 @@
                 font-style: normal;
                 font-weight: 700;
                 line-height: 32px;
-                text-transform: capitalize;
 
                 @media (min-width: 766px) and (max-width: 1220px) {
                   font-size: 15px;
@@ -315,7 +316,7 @@
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 700;
-                gap: 4px;
+                gap: 8px;
                 line-height: 24px;
                 text-decoration: none;
                 width: max-content;
@@ -336,7 +337,6 @@
                   content: "";
                   display: inline-block;
                   height: 24px;
-                  margin-left: 6px;
                   transition: transform 0.2s ease;
                   width: 12px;
 

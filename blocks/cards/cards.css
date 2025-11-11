@@ -160,7 +160,7 @@
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul{
   display:flex;
-  gap:32px;
+  gap:24px;
   justify-content:space-between;
   list-style-type:none;
   min-height:520px;
@@ -196,9 +196,11 @@
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h2{
   color:var(--heading-default);
+  font-family:var(--secondary-font);
   font-size:40px;
   font-style:normal;
   font-weight:900;
+  letter-spacing:2px;
   line-height:40px;
   margin:0;
   text-transform:uppercase;
@@ -273,7 +275,6 @@
   font-style:normal;
   font-weight:700;
   line-height:32px;
-  text-transform:capitalize;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 .banking-desc-2,
@@ -321,7 +322,7 @@
   font-size:16px;
   font-style:normal;
   font-weight:700;
-  gap:4px;
+  gap:8px;
   line-height:24px;
   text-decoration:none;
   width:-moz-max-content;
@@ -334,7 +335,6 @@
   content:"";
   display:inline-block;
   height:24px;
-  margin-left:6px;
   transition:transform 0.2s ease;
   width:12px;
 }
