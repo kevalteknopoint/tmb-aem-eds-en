@@ -37,7 +37,7 @@ export default async function decorate(block) {
             item.question,
             span(
               { class: "faq-link-icon" },
-              img({ src: "/icons/flyout-menu-icon.svg", alt: "FAQ Link Icon" })
+              img({ src: "/icons/faq-link-icon.svg", alt: "FAQ Link Icon" })
             )
           )
         )
@@ -183,7 +183,7 @@ export default async function decorate(block) {
             item.question,
             span(
               { class: "faq-link-icon" },
-              img({ src: "/icons/flyout-menu-icon.svg", alt: "FAQ Link Icon" })
+              img({ src: "/icons/faq-link-icon.svg", alt: "FAQ Link Icon" })
             )
           )
         )
