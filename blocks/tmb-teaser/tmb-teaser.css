@@ -397,13 +397,11 @@
 
 .momentum-saver-section .momentum-columns .momentum-content .rate-pa{
   color:var(--heading-default);
-  font-size:1.5rem;
   font-size:40px;
   font-style:normal;
-  font-weight:900;
-  letter-spacing:0.05em;
-  line-height:40px;
-  text-transform:uppercase;
+  font-weight:300;
+  line-height:28px;
+  text-align:center;
 }
 
 .momentum-saver-section .momentum-columns .momentum-content p{

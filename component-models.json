@@ -178,10 +178,6 @@
             "value": "background-color-teal"
           },
           {
-            "name": "Background Color White",
-            "value": "background-color-white"
-          },
-          {
             "name": "online-banking",
             "value": "online-banking"
           },
@@ -698,10 +694,6 @@
           {
             "name": "background-color-teal",
             "value": "background-color-teal"
-          },
-          {
-            "name": "background-color-white",
-            "value": "background-color-white"
           }
         ]
       }

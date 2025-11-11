@@ -69,7 +69,7 @@ document.querySelectorAll(".momentum-content h2").forEach((heading) => {
   // Create the P.A. span
   const paSpan = document.createElement("span");
   paSpan.className = "rate-pa";
-  paSpan.textContent = "P.A.";
+  paSpan.textContent = "p.a.";
 
   // Append spans into the wrapper
   unitWrapper.appendChild(percentSpan);
