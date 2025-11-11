@@ -63,8 +63,8 @@ export default async function decorate(block) {
         ) : ''
       );
 
-      if (content.sectionVideo) {
-        subSection.insertAdjacentHTML('beforeend', content.sectionVideo);
+      if (content.sectionVideo && content.sectionVideo.plaintext) {
+        subSection.insertAdjacentHTML('beforeend', content.sectionVideo.plaintext);
       }
 
       // Left content section
@@ -135,7 +135,7 @@ export default async function decorate(block) {
             }
           });
         },
-        { threshold: 0, rootMargin: "-190px 0px 0px 0px" }
+        { threshold: 0, rootMargin: "-40px 0px 0px 0px" }
       );
 
       headingObserver.observe(mainHeading);
