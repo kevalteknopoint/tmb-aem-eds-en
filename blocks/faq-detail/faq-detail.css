@@ -74,6 +74,13 @@ html{
   padding-bottom:32px;
 }
 
+.section-wrapper .sub-section-wrapper:not(.right-section-wrapper) iframe{
+  aspect-ratio:16/9;
+  display:block;
+  margin-top:16px;
+  width:100%;
+}
+
 .section-wrapper .right-section-wrapper{
   align-self:start;
   grid-column:2;
@@ -161,14 +168,19 @@ html{
   line-height:24px;
 }
 
-.two-img-class{
+.img-1-grid{
+  display:grid;
+  grid-template-columns:1fr;
+}
+
+.img-2-grid, .img-4-grid, .img-6-grid{
   display:grid;
   gap:10px;
   grid-template-columns:1fr 1fr;
   max-width:1328px;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 1023px){
   .faq-heading-section h1{
     font-size:32px;
     line-height:40px;
