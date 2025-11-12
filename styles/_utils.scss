@@ -29,33 +29,49 @@
 }
 
 .top-margin {
-  margin-top: 32px;
+  margin-top: 80px;
 
-  @include tablet {
-    margin-top: 24px;
+  @include tablet-lg {
+    margin-top: 64px;
+  }
+
+  @include mobile {
+    margin-top: 40px;
   }
 }
 
 .bottom-margin {
-  margin-bottom: 32px;
+  margin-bottom: 80px;
 
-  @include tablet {
-    margin-bottom: 24px;
+  @include tablet-lg {
+    margin-bottom: 64px;
+  }
+
+  @include mobile {
+    margin-bottom: 40px;
   }
 }
 
 .top-padding {
-  padding-top: 32px;
+  padding-top: 80px;
 
-  @include tablet {
-    padding-top: 24px;
+  @include tablet-lg {
+    padding-top: 64px;
+  }
+
+  @include mobile {
+    padding-top: 40px;
   }
 }
 
 .bottom-padding {
-  padding-bottom: 32px;
+  padding-bottom: 80px;
 
-  @include tablet {
-    padding-bottom: 24px;
+  @include tablet-lg {
+    padding-bottom: 64px;
+  }
+
+  @include mobile {
+    padding-bottom: 40px;
   }
 }

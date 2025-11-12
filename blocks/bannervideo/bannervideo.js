@@ -31,11 +31,11 @@ function createSwiper(block) {
     const swiperpagination = document.createElement("div");
     swiperpagination.classList.add("swiper-pagination");
     const swiperpaginationouter = document.createElement("div");
-    swiperpaginationouter.classList.add("outer-pegination-div"); // for play btn
+    swiperpaginationouter.classList.add("outer-pagination-div"); // for play btn
     const playbtn = document.createElement("button");
     playbtn.classList.add("play-btn");
     const iconp = document.createElement("img");
-    iconp.src = "../../icons/Vector.svg";
+    iconp.src = "/icons/play-icon.svg";
     iconp.alt = "play Icon";
     playbtn.appendChild(iconp);
     swiperpaginationouter.append(swiperpagination);
@@ -166,11 +166,11 @@ export default function decorate(block) {
       if (!isPlaying) {
         swiper.autoplay.start();
         isPlaying = true;
-        playBtn.querySelector("img").src = "../../icons/pause.svg"; // change icon
+        playBtn.querySelector("img").src = "/icons/pause-icon.svg"; // change icon
       } else {
         swiper.autoplay.stop();
         isPlaying = false;
-        playBtn.querySelector("img").src = "../../icons/Vector.svg"; // change back to play
+        playBtn.querySelector("img").src = "/icons/play-icon.svg"; // change back to play
       }
     });
   }

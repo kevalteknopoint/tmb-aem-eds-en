@@ -3,12 +3,7 @@
 @import "../../libs/swiper/swiper-bundle.min.css";
 
 .section.expandable-tiles-section {
-  padding: 80px 0;
   background: $gradient-1;
-
-  @include mobile {
-    padding: 40px 0;
-  }
 
   .default-content-wrapper {
     box-sizing: border-box;

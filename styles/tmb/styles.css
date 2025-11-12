@@ -199,19 +199,19 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .top-margin{
-  margin-top:32px;
+  margin-top:80px;
 }
 
 .bottom-margin{
-  margin-bottom:32px;
+  margin-bottom:80px;
 }
 
 .top-padding{
-  padding-top:32px;
+  padding-top:80px;
 }
 
 .bottom-padding{
-  padding-bottom:32px;
+  padding-bottom:80px;
 }
 
 .section.faq-looking-for{
@@ -306,24 +306,26 @@ h1, h2, h3, h4, h5, h6{
   width:-moz-fit-content;
   width:fit-content;
 }
+@media screen and (max-width: 1279px){
+  .top-margin{
+    margin-top:64px;
+  }
+  .bottom-margin{
+    margin-bottom:64px;
+  }
+  .top-padding{
+    padding-top:64px;
+  }
+  .bottom-padding{
+    padding-bottom:64px;
+  }
+}
 @media screen and (max-width: 1023px){
   .spacer-bottom{
     margin-bottom:60px;
   }
   .spacer-top{
     margin-top:60px;
-  }
-  .top-margin{
-    margin-top:24px;
-  }
-  .bottom-margin{
-    margin-bottom:24px;
-  }
-  .top-padding{
-    padding-top:24px;
-  }
-  .bottom-padding{
-    padding-bottom:24px;
   }
   .section.faq-looking-for div h2{
     padding-bottom:0;
@@ -335,6 +337,18 @@ h1, h2, h3, h4, h5, h6{
   }
   .spacer-top{
     margin-top:40px;
+  }
+  .top-margin{
+    margin-top:40px;
+  }
+  .bottom-margin{
+    margin-bottom:40px;
+  }
+  .top-padding{
+    padding-top:40px;
+  }
+  .bottom-padding{
+    padding-bottom:40px;
   }
   .section.faq-looking-for{
     padding:8px;
