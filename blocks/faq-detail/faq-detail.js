@@ -2,12 +2,15 @@ import {
   div, h1, h2, h3, p, a, ul, li, span,
   img,
 } from '../../scripts/dom-helpers.js';
+import { fetchPlaceholders } from '../../scripts/placeholders.js';
 
 export default async function decorate(block) {
   const secwrapper = document?.querySelector(".section-wrapper");
   if (!secwrapper) return;
 
-  const graphqlUrl = "https://publish-p162853-e1744823.adobeaemcloud.com/graphql/execute.json/tmb/faqDetailByPath;path=";
+  const placeholders = await fetchPlaceholders();
+
+  const graphqlUrl = `${placeholders.graphqlurl}faqDetailByPath;path=`;
 
   try {
     const fragUrl = block?.querySelector("a")?.getAttribute("href");
