@@ -244,6 +244,10 @@
           {
             "name": "Faq-cant-find-looking-for",
             "value": "faq-cant-find-looking-for"
+          },
+          {
+            "name": "Section Wrapper",
+            "value": "section-wrapper"
           }
         ]
       }
