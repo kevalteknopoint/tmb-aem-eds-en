@@ -26,7 +26,13 @@ export default function decorate() {
 
  const momentumWrapperSecondDivSaver = document.querySelector(".momentum-saver-section.momentum-image-saver > .columns-wrapper > .momentum-columns > div > div:nth-child(2)");
   momentumWrapperSecondDivSaver.classList.add("momentum-second-content");
-  
+
+   const variantText = document.querySelector(".momentum-saver-section.background-color-teal");
+   if(variantText){
+      const varText = document.querySelector(".momentum-saver-section.background-color-teal > .columns-wrapper > .momentum-columns")
+      varText.classList.add("background-color-white");
+   }
+
   // 🔹 Add "% p.a" to all h2 elements inside momentum-content
 // Add a separate "% p.a" element after each h2 inside .momentum-content
 document.querySelectorAll(".momentum-content h2").forEach((heading) => {
