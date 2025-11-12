@@ -202,13 +202,14 @@
 .section.online-banking{
   margin-left:auto;
   margin-right:auto;
-  max-width:1452px;
-  padding:0 40px;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul{
   display:flex;
-  gap:32px;
+  gap:24px;
   justify-content:space-between;
   list-style-type:none;
   min-height:520px;
@@ -232,10 +233,10 @@
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1{
-  background-color:#f5f8de;
-  border-radius:20px;
+  background-color:var(--bg-light-2);
+  border-radius:24px;
   min-height:100%;
-  padding:32px;
+  padding:24px;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body{
@@ -243,13 +244,15 @@
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h2{
-  color:var(--text-brand);
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
   font-size:40px;
   font-style:normal;
   font-weight:900;
-  line-height:48px;
+  letter-spacing:2px;
+  line-height:40px;
   margin:0;
-  text-transform:capitalize;
+  text-transform:uppercase;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul{
@@ -261,6 +264,7 @@
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li{
+  align-items:center;
   display:flex;
   justify-content:space-between;
   padding:0;
@@ -268,12 +272,17 @@
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li a{
-  color:var(--text-primary);
+  color:var(--body-accent);
   font-size:16px;
   font-style:normal;
   font-weight:400;
   line-height:24px;
   text-decoration:none;
+}
+
+.section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li a span{
+  display:block;
+  width:12px;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2,
@@ -302,7 +311,7 @@
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .card-bottom-1{
   display:flex;
   flex-direction:column;
-  gap:8px;
+  gap:16px;
   list-style-type:none;
   margin:0;
   padding:0;
@@ -310,17 +319,16 @@
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 .banking-desc-1,
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .card-bottom-1 .banking-desc-1{
-  color:var(--text-brand);
+  color:var(--heading-default);
   font-size:24px;
   font-style:normal;
   font-weight:700;
   line-height:32px;
-  text-transform:capitalize;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 .banking-desc-2,
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .card-bottom-1 .banking-desc-2{
-  color:var(--text-primary);
+  color:var(--body-accent);
   font-size:16px;
   font-style:normal;
   font-weight:400;
@@ -329,8 +337,8 @@
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-image img,
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-image img{
-  border-top-left-radius:20px;
-  border-top-right-radius:20px;
+  border-top-left-radius:24px;
+  border-top-right-radius:24px;
   height:100%;
   max-width:unset;
   -o-object-fit:cover;
@@ -357,16 +365,14 @@
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .banking-desc-3 a{
   align-items:center;
   background:transparent;
-  border:1px solid #00525b;
   border-radius:20px;
-  color:var(--text-brand);
+  color:var(--link-accent);
   display:flex;
   font-size:16px;
   font-style:normal;
-  font-weight:700;
-  gap:4px;
+  font-weight:500;
+  gap:8px;
   line-height:24px;
-  padding:8px 24px;
   text-decoration:none;
   width:-moz-max-content;
   width:max-content;
@@ -378,7 +384,6 @@
   content:"";
   display:inline-block;
   height:24px;
-  margin-left:6px;
   transition:transform 0.2s ease;
   width:12px;
 }
@@ -404,6 +409,10 @@
   min-height:250px;
   overflow:hidden;
   position:relative;
+}
+
+.cards-card-image picture{
+  height:100%;
 }
 
 #online-bankinghelp{
@@ -637,6 +646,10 @@
   .section.expandable-tiles-section .autoplay-btn-wrapper{
     padding-inline:24px;
   }
+
+  .section.online-banking{
+    padding-inline:24px;
+  }
 }
 
 @media screen and (max-width: 1023px){
@@ -728,7 +741,8 @@
   .section.online-banking{
     margin-left:auto;
     margin-right:auto;
-    padding:0 20px;
+    padding:0 16px;
+    padding-inline:16px;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul{
@@ -743,22 +757,23 @@
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1{
-    padding:20px;
+    padding:24px;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h2{
-    font-size:20px;
-    font-weight:800;
-    line-height:24px;
+    font-size:38px;
+    font-weight:900;
+    line-height:38px;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul{
     flex-direction:column;
-    gap:16px;
-    margin-top:18px;
+    gap:unset;
+    margin-top:24px;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li{
+    padding:10px 0;
     width:auto;
   }
 
@@ -792,13 +807,13 @@
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-2{
-    margin-top:13.5px;
+    margin-top:24px;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .banking-desc-3 a{
     border-radius:11.25px;
     line-height:13.5px;
-    padding:7.5px 13.5px;
+    padding:0;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .banking-desc-3 a::after{
@@ -811,7 +826,7 @@
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .card-bottom-2{
-    margin-top:13.5px;
+    margin-top:24px;
   }
 
   .cards-card-image{

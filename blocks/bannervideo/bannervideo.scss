@@ -1,4 +1,6 @@
 @use '../../styles/base' as *;
+@use '../../styles/variables';
+@use '../../styles/mixins';
 @import '../../libs/swiper/swiper-bundle.min.css';
 
 .bannervideo-container {
@@ -343,10 +345,11 @@
 }
 
 .secsecond {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1452px;
-  padding: 0 40px;
+  @include responsive-container();
+  // margin-left: auto;
+  // margin-right: auto;
+  // max-width: 1452px;
+  // padding: 0 40px;
 
   .default-content-wrapper {
     display: flex;
@@ -368,7 +371,7 @@
     .swiper-slide {
       background: #FFF;
       border: 1px solid rgb(0 0 0 / 20%);
-      border-radius: 12px;
+      border-radius: 24px;
       display: flex;
       gap: 19px;
       justify-content: flex-start;

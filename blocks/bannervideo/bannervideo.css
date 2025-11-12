@@ -228,8 +228,9 @@
 .secsecond{
   margin-left:auto;
   margin-right:auto;
-  max-width:1452px;
-  padding:0 40px;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
 }
 
 .secsecond .default-content-wrapper{
@@ -248,7 +249,7 @@
 .secsecond .swiper-wrapper .swiper-slide{
   background:#FFF;
   border:1px solid rgb(0 0 0 / 20%);
-  border-radius:12px;
+  border-radius:24px;
   display:flex;
   gap:19px;
   justify-content:flex-start;
@@ -325,6 +326,10 @@
 
 @media screen and (max-width: 1279px){
   .secfirst .bannervideo-wrapper .bannervideo .outer-pagination-div{
+    padding-inline:24px;
+  }
+
+  .secsecond{
     padding-inline:24px;
   }
 
@@ -489,6 +494,7 @@
 
   .secsecond{
     padding:0 20px;
+    padding-inline:16px;
   }
 
   .swiperinnerdiv > div:nth-child(1){
