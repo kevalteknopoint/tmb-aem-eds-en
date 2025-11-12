@@ -1,5 +1,4 @@
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
+@use '../../styles/base' as *;
 @import '../../libs/swiper/swiper-bundle.min.css';
 
 .faq-question {

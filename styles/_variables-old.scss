@@ -1,0 +1,62 @@
+/* ---------- BORDER VARIABLES ---------- */
+
+$border-primary: var(--border-primary); // colour/neutral/charcoal
+$border-brand: var(--border-brand); // colour/teal/corporate-teal
+$border-error: var(--border-error); // colour/red/red
+
+/* ---------- BORDER VARIABLES ---------- */
+
+/* ---------- TEXT VARIABLES ---------- */
+
+$text-primary: var(--text-primary); // colour/neutral/black
+$text-secondary: var(--text-secondary); // colour/neutral/dark-grey
+$text-inverse: var(--text-inverse); // colour/neutral/white
+$text-light: var(--text-light); // colour/yellow/cream
+$text-brand: var(--text-brand); // colour/teal/teal
+$text-brand-secondary: var(--text-brand-secondary); // colour/teal/dark-corporate-teal
+
+/* -------------------- */
+$text-primary-cta: var(--text-primary-cta); // colour/yellow/cream
+$text-secondary-cta: var(--text-secondary-cta); // colour/teal/teal
+$text-accent-cta: var(--text-accent-cta); // colour/teal/teal
+$text-disabled: var(--text-disabled); // colour/neutral/grey
+$text-error: var(--text-error); // colour/red/red
+
+/* -------------------- */
+$text-ghost-default: var(--text-ghost-default); // colour/teal/teal
+$text-ghost-hover: var(--text-ghost-hover); // colour/neutral/black
+$text-ghost-focused: var(--text-ghost-focused); // colour/neutral/black
+$text-ghost-disabled: var(--text-ghost-disabled); // colour/neutral/grey
+$text-ghost-active: var(--text-ghost-active); // colour/teal/dark-corporate-teal
+
+/* ---------- TEXT VARIABLES ---------- */
+
+
+/* ---------- SURFACE VARIABLES ---------- */
+
+$surface-primary: var(--surface-primary); // colour/neutral/cool-grey
+$surface-secondary: var(--surface-secondary); // colour/neutral/grey
+$surface-overlay: var(--surface-overlay); // colour/neutral/dark-grey-50
+$surface-brand: var(--surface-brand); // colour/teal/teal
+$surface-light: var(--surface-light); // colour/neutral/white
+$surface-login-cta: var(--surface-login-cta); // colour/yellow/cream
+
+/* -------------------- */
+$surface-primary-cta: var(--surface-primary-cta); // colour/teal/teal
+$surface-prim-hover-cta: var(--surface-prim-hover-cta); // colour/teal/dark-teal
+$surface-prim-active-cta: var(--surface-prim-active-cta); // colour/neutral/charcoal
+
+/* -------------------- */
+$surface-secondary-cta: var(--surface-secondary-cta); // colour/blue/grey-blue
+$surface-sec-hover-cta: var(--surface-sec-hover-cta); // colour/teal/dark-corporate-teal
+
+/* -------------------- */
+$surface-accent-cta: var(--surface-accent-cta); // colour/yellow/cream
+$surface-accent-hover-cta: var(--surface-accent-hover-cta); // colour/yellow/pale-lime
+$surface-accent-active-cta: var(--surface-accent-active-cta); // colour/yellow/pastel-yellow
+
+/* -------------------- */
+$surface-disabled-cta: var(--surface-disabled-cta); // colour/neutral/pale-grey
+$surface-highlight: var(--surface-highlight); // colour/teal/teal-10
+
+/* ---------- SURFACE VARIABLES ---------- */

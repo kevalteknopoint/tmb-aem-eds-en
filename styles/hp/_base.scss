@@ -1,5 +1,4 @@
 @use '../reset';
-@use '../mixins' as *;
 @import '../../libs/aos/aos.min.css';
 
 :root {
@@ -71,7 +70,80 @@
   /* ---------- FONTS VARIABLES ---------- */
 
   --primary-font: 'Inter', system-ui, -apple-system, 'BlinkMacSystemFont', "Segoe UI", 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  --secondary-font: 'American Grotesk', system-ui, -apple-system, 'BlinkMacSystemFont', "Segoe UI", 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  --secondary-font: 'Roboto', system-ui, -apple-system, 'BlinkMacSystemFont', "Segoe UI", 'Roboto', 'Helvetica', 'Arial', sans-serif;
   
-  /* ---------- FONTS VARIABLES ---------- */
+  /* ---------- FONT FAMILY VARIABLES ---------- */
+  
+
+  /* ---------- OTHER VARIABLES ---------- */
+  --bg-accent: #f7c0b3;
+  --bg-default: #ffffff;
+  --bg-light-2: #d4eefc;
+  --bg-light-3: #a2daf3;
+  --bg-light: #f7f7f7;
+  --bg-reverse-2: #172983;
+  --bg-reverse: #172983;
+  --body-accent: #525257;
+  --body-default: #525257;
+  --body-light-2: #525257;
+  --body-light-3: #525257;
+  --body-light: #525257;
+  --body-reverse-2: #d4eefc;
+  --body-reverse: #ffffff;
+  --burst-accent: #172983;
+  --burst-default: #f7c0b3;
+  --burst-light-2: #f7c0b3;
+  --burst-light-3: #f7c0b3;
+  --burst-light: #f7c0b3;
+  --burst-reverse-2: #f7c0b3;
+  --burst-reverse: #f7c0b3;
+  --heading-accent: #172983;
+  --heading-default: #172983;
+  --heading-light-2: #172983;
+  --heading-light-3: #172983;
+  --heading-light: #172983;
+  --heading-reverse-2: #d4eefc;
+  --heading-reverse: #ffffff;
+  --icon-2-accent: #172983;
+  --icon-2-default: #172983;
+  --icon-2-light-2: #172983;
+  --icon-2-light-3: #172983;
+  --icon-2-light: #172983;
+  --icon-2-reverse-2: #d4eefc;
+  --icon-2-reverse: #ffffff;
+  --icon-accent: #f7c0b3;
+  --icon-bg-accent: #172983;
+  --icon-bg-default: #172983;
+  --icon-bg-light-2: #ffffff;
+  --icon-bg-light-3: #ffffff;
+  --icon-bg-light: #ffffff;
+  --icon-bg-reverse-2: #d4eefc;
+  --icon-bg-reverse: #ffffff;
+  --icon-default: #ffffff;
+  --icon-light-2: #172983;
+  --icon-light-3: #172983;
+  --icon-light: #172983;
+  --icon-reverse-2: #172983;
+  --icon-reverse: #172983;
+  --line-accent: #00000033;
+  --line-default: #00000033;
+  --line-light-2: #00000033;
+  --line-light-3: #00000033;
+  --line-light: #00000033;
+  --line-reverse-2: #ffffff1a;
+  --line-reverse: #ffffff1a;
+  --link-accent: #172983;
+  --link-default: #172983;
+  --link-light-2: #172983;
+  --link-light-3: #172983;
+  --link-light: #172983;
+  --link-reverse-2: #d4eefc;
+  --link-reverse: #ffffff;
+  --stroke-accent: #f7c0b3;
+  --stroke-default: #172983;
+  --stroke-light-2: #172983;
+  --stroke-light-3: #172983;
+  --stroke-light: #172983;
+  --stroke-reverse-2: #ffffff;
+  --stroke-reverse: #ffffff;
 }
