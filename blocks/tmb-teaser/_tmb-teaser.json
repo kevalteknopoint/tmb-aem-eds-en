@@ -42,6 +42,22 @@
                         {
                             "name": "momentum-block",
                             "value": "momentum-block"
+                        },
+                        {
+                            "name": "momentum-saver-section",
+                            "value": "momentum-saver-section"
+                        },
+                        {
+                            "name": "background-color-teal",
+                            "value": "background-color-teal"
+                        },
+                        {
+                            "name": "bg-image-saver",
+                            "value": "bg-image-saver"
+                        },
+                        {
+                            "name": "momentum-image-saver",
+                            "value": "momentum-image-saver"
                         }
                     ]
                 }

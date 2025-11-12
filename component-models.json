@@ -170,6 +170,22 @@
             "value": "momentum-section"
           },
           {
+            "name": "momentum-saver-section",
+            "value": "momentum-saver-section"
+          },
+          {
+            "name": "Momentum Image Saver",
+            "value": "momentum-image-saver"
+          },
+          {
+            "name": "Background Color Teal",
+            "value": "background-color-teal"
+          },
+          {
+            "name": "Bg Image Saver",
+            "value": "bg-image-saver"
+          },
+          {
             "name": "online-banking",
             "value": "online-banking"
           },
@@ -682,6 +698,22 @@
           {
             "name": "momentum-block",
             "value": "momentum-block"
+          },
+          {
+            "name": "momentum-saver-section",
+            "value": "momentum-saver-section"
+          },
+          {
+            "name": "background-color-teal",
+            "value": "background-color-teal"
+          },
+          {
+            "name": "bg-image-saver",
+            "value": "bg-image-saver"
+          },
+          {
+            "name": "momentum-image-saver",
+            "value": "momentum-image-saver"
           }
         ]
       }

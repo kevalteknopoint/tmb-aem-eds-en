@@ -67,6 +67,22 @@
               "value": "momentum-section"
             },
             {
+              "name": "momentum-saver-section",
+              "value": "momentum-saver-section"
+            },
+            {
+              "name": "Momentum Image Saver",
+              "value": "momentum-image-saver"
+            },
+            {
+              "name": "Background Color Teal",
+              "value": "background-color-teal"
+            },
+            {
+              "name": "Bg Image Saver",
+              "value": "bg-image-saver"
+            },
+            {
               "name": "online-banking",
               "value": "online-banking"
             },
@@ -116,13 +132,13 @@
             },
             {
               "name": "FAQ Landing Banner",
-              "value": "faq-landing-banner"              
+              "value": "faq-landing-banner"
             },
             {
               "name": "Faq container",
               "value": "faq-container"
             },
-             {
+            {
               "name": "Faq question",
               "value": "faq-question"
             },
