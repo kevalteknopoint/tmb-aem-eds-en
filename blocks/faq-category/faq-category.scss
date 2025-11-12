@@ -148,7 +148,7 @@
     ul {
       padding: 8px 0;
 
-      @include mobile {
+      @include tablet {
         margin-right: 0;
         padding: 0;
       }
