@@ -1,10 +1,12 @@
 import { a, img, li, span, ul, div, button } from "../../scripts/dom-helpers.js";
+import { fetchPlaceholders } from "../../scripts/placeholders.js";
 
 // Fetch FAQs from GraphQL
 async function fetchFaqs(tagValue, limit = 10, offset = 0) {
   try {
+    const placeholders = await fetchPlaceholders();
     const res = await fetch(
-      `https://publish-p162853-e1744823.adobeaemcloud.com/graphql/execute.json/tmb/faqListByTags;tagValue=${tagValue};limit=${limit};offset=${offset}`
+      `${placeholders.graphqlurl}faqListByTags;tagValue=${tagValue};limit=${limit};offset=${offset}`
     );
     const json = await res.json();
     return json?.data?.faqList?.items || [];
