@@ -6,7 +6,7 @@
 .tmb-acc-sec.accordion-container .accordion-wrapper{
   margin-left:auto;
   margin-right:auto;
-  max-width:1440px;
+  max-width:calc(1440px - 0px);
   padding-inline:64px;
   width:100%;
 }
