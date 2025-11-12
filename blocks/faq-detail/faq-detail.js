@@ -30,7 +30,10 @@ export default async function decorate(block) {
       p("On this page:"),
       ul({ class: "right-ul" })
     );
+
     const ulEl = subsectionAndRightSection.querySelector("ul");
+
+    let rightSection = false;
 
     // ========== Build Sections + Right Nav ==========
     faq.faqContentReference.forEach((content, i) => {
@@ -44,8 +47,17 @@ export default async function decorate(block) {
         )
       );
 
-      const paraEle = p();
-      paraEle.innerHTML = content.sectionContent.plaintext?.replaceAll("\n", "<br>");
+      if (content.sectionTitle) {
+        rightSection = true;
+      }
+
+      function htmlToElement(htmlString) {
+        const template = document.createElement('template');
+        template.innerHTML = htmlString.trim();
+        return template.content.firstChild;
+      }
+
+      const paraEle = htmlToElement(content.sectionContent.html);
 
       const subSection = div(
         { class: "sub-section-wrapper" },
@@ -74,7 +86,11 @@ export default async function decorate(block) {
     });
 
     // Append right nav
-    secwrapper?.querySelector('.faq-detail-wrapper')?.replaceWith(subsectionAndRightSection);
+    if (rightSection) {
+      secwrapper?.querySelector('.faq-detail-wrapper')?.replaceWith(subsectionAndRightSection);
+    } else {
+      secwrapper?.querySelector('.faq-detail-wrapper')?.remove();
+    }
 
     setTimeout(() => {
       // ========== Smooth Scroll ==========
