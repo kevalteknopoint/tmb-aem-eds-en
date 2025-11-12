@@ -48,10 +48,10 @@
         color: #00525B;
         transition: background-color 0.2s;
 
-        &:focus,
-        &:hover {
-          background-color: #EDEDED;
-        }
+        // &:focus,
+        // &:hover {
+        //   background-color: #EDEDED;
+        // }
 
         &::-webkit-details-marker {
           display: none;

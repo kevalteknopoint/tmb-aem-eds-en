@@ -41,10 +41,6 @@
   vertical-align:bottom;
 }
 
-.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-label:focus, .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-label:hover{
-  background-color:#EDEDED;
-}
-
 .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-label::-webkit-details-marker{
   display:none;
 }
