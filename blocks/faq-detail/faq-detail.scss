@@ -40,13 +40,17 @@ html {
   max-width: 1328px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 392px; // Left | Right
+  grid-template-columns: 1fr;
   column-gap: 74px;
   row-gap: 32px;
   font-family: "Open Sans", sans-serif;
   position: relative;
   align-items: start;
   padding: 32px;
+
+  &:has(.right-section-wrapper) {
+    grid-template-columns: 1fr 392px; // Left | Right
+  }
 
   .default-content-wrapper {
     display: none;
@@ -75,7 +79,7 @@ html {
       padding: 0 0 30px;
     }
 
-    p {
+    h1, p, h2, h4, h5, h6 {
       color: $surface-prim-active-cta;
       font-family: $primary-font;
       font-size: 16px;
@@ -83,6 +87,12 @@ html {
       font-weight: 400;
       line-height: 24px;
       padding-bottom: 32px;
+    }
+
+    a {
+      color: $text-brand;
+      text-decoration: underline;
+      text-decoration-color: $text-brand;
     }
 
     iframe {
@@ -183,6 +193,10 @@ html {
 .img-1-grid {
   display: grid;
   grid-template-columns: 1fr;
+
+  img {
+    width: 100%;
+  }
 }
 
 .img-2-grid, .img-4-grid, .img-6-grid {
@@ -190,6 +204,10 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+
+  img {
+    width: 100%;
+  }
 }
 
 @include tablet {

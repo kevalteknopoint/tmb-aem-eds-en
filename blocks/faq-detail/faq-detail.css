@@ -33,11 +33,15 @@ html{
        gap:32px 74px;
   display:grid;
   font-family:"Open Sans", sans-serif;
-  grid-template-columns:1fr 392px;
+  grid-template-columns:1fr;
   margin:0 auto;
   max-width:1328px;
   padding:32px;
   position:relative;
+}
+
+.section-wrapper:has(.right-section-wrapper){
+  grid-template-columns:1fr 392px;
 }
 
 .section-wrapper .default-content-wrapper{
@@ -64,7 +68,7 @@ html{
   padding:0 0 30px;
 }
 
-.section-wrapper .sub-section-wrapper:not(.right-section-wrapper) p{
+.section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h1, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) p, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h2, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h4, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h5, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h6{
   color:var(--surface-prim-active-cta);
   font-family:var(--primary-font);
   font-size:16px;
@@ -72,6 +76,12 @@ html{
   font-weight:400;
   line-height:24px;
   padding-bottom:32px;
+}
+
+.section-wrapper .sub-section-wrapper:not(.right-section-wrapper) a{
+  color:var(--text-brand);
+  text-decoration:underline;
+  text-decoration-color:var(--text-brand);
 }
 
 .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) iframe{
@@ -174,11 +184,19 @@ html{
   grid-template-columns:1fr;
 }
 
+.img-1-grid img{
+  width:100%;
+}
+
 .img-2-grid, .img-4-grid, .img-6-grid{
   display:grid;
   gap:10px;
   grid-template-columns:1fr 1fr;
   max-width:1328px;
+}
+
+.img-2-grid img, .img-4-grid img, .img-6-grid img{
+  width:100%;
 }
 
 @media screen and (max-width: 1023px){
