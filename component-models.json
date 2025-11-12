@@ -182,6 +182,10 @@
             "value": "background-color-teal"
           },
           {
+            "name": "Background Color White",
+            "value": "background-color-white"
+          },
+          {
             "name": "Bg Image Saver",
             "value": "bg-image-saver"
           },
@@ -702,6 +706,10 @@
           {
             "name": "background-color-teal",
             "value": "background-color-teal"
+          },
+          {
+            "name": "background-color-white",
+            "value": "background-color-white"
           },
           {
             "name": "bg-image-saver",

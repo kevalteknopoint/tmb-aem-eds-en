@@ -680,13 +680,20 @@
     background-color: $bg-default;
   }
 }
+
+
 //image variant 
 
-.momentum-image-saver{
+.momentum-saver-section.momentum-image-saver{
     .columns-wrapper {
-    @include responsive-container
-  }
-  .momentum-columns{
+    @include responsive-container();
+
+    @include mobile{
+      padding-inline: 0;
+    }
+
+        .momentum-columns{
+          padding: 0;
     div{
       gap: 24px;
       .columns-img-col{
@@ -695,20 +702,48 @@
         }
       }
       .momentum-second-content{
-        font-family: $primary-font;
-        font-weight: 500;
         @include tablet{
           display: block;
         }
         h2{
+          font-family: $primary-font;
+          font-weight: 500;
+          text-transform: capitalize;
+          @include mobile{
+            font-size: 38px;
+          }
           @include tablet{
             font-size: 38px;
-            width: 121px;
+            // width: 121px;
           }
         }
       }
     }
   }
+  }
+  // .momentum-columns{
+  //   div{
+  //     gap: 24px;
+  //     .columns-img-col{
+  //       img {
+  //         border-radius: 24px;
+  //       }
+  //     }
+  //     .momentum-second-content{
+  //       font-family: $primary-font;
+  //       font-weight: 500;
+  //       @include tablet{
+  //         display: block;
+  //       }
+  //       h2{
+  //         @include tablet{
+  //           font-size: 38px;
+  //           width: 121px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 //bg variant

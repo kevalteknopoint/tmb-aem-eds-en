@@ -52,6 +52,10 @@
                             "value": "background-color-teal"
                         },
                         {
+                            "name": "background-color-white",
+                            "value": "background-color-white"
+                        },
+                        {
                             "name": "bg-image-saver",
                             "value": "bg-image-saver"
                         },
