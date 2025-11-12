@@ -458,6 +458,156 @@
   width:fit-content;
 }
 
+.banking-goods{
+  max-width:1440px;
+  padding:0 64px;
+}
+
+.banking-goods .cards-wrapper{
+  padding:80px 0;
+}
+
+.banking-goods .cards-wrapper .cards > ul{
+  align-self:stretch;
+  display:grid;
+  gap:24px;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  grid-template-rows:repeat(2, minmax(0, 1fr));
+  height:1080px;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:nth-child(1){
+  border-radius:24px;
+  height:500px;
+  position:relative;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:nth-child(1) .cards-card-body{
+  backdrop-filter:none;
+  background:none;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:nth-child(1) .cards-card-body:nth-child(2){
+  display:flex;
+  flex-direction:column;
+  position:absolute;
+  top:182px;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:nth-child(1) .cards-card-body:nth-child(2) > h2{
+  color:var(--heading, #00525B);
+  font-size:30px;
+  font-style:normal;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:nth-child(1) .cards-card-body:nth-child(2) > p{
+  color:var(--body, #0B231F);
+  font-family:var(--font-family-body, Inter);
+  font-size:var(--font-size-body, 16px);
+  font-style:normal;
+  font-weight:400;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child){
+  background-color:var(--background-color);
+  border:1px solid #dadada;
+  border-radius:24px;
+  height:500px;
+  position:relative;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) img{
+  aspect-ratio:4/3;
+  border-radius:24px;
+  height:500px;
+  -o-object-fit:cover;
+     object-fit:cover;
+  width:100%;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body{
+  backdrop-filter:blur(5px);
+  background:var(--color-card-delete-surface, rgb(0 82 91 / 90%));
+  border-radius:0 0 var(--radius-card, 24px) var(--radius-card, 24px);
+  bottom:0;
+  color:#F5F8DE;
+  height:80px;
+  overflow:hidden;
+  padding:24px;
+  position:absolute;
+  transition:all 0.4s ease;
+  width:100%;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h1{
+  font-size:32px;
+  font-style:normal;
+  font-weight:900;
+  margin-bottom:8px;
+  text-transform:uppercase;
+  transition:transform 0.4s ease;
+  width:368px;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body p{
+  opacity:0;
+  transform:translateY(10px);
+  transition:all 0.4s ease;
+  width:357px;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container{
+  opacity:0;
+  transform:translateY(10px);
+  transition:all 0.4s ease 0.1s;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container a{
+  position:relative;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container a::after{
+  background:#F5F8DE;
+  bottom:-2px;
+  content:"";
+  height:2px;
+  left:0;
+  position:absolute;
+  transition:width 0.3s ease;
+  width:0%;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container a:hover::after{
+  width:100%;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body:hover{
+  height:150px;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body:hover h1{
+  transform:translateY(-10px);
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body:hover p{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body:hover .button-container{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.banking-goods .cards-wrapper .cards .cards-card-image{
+  line-height:0;
+}
+
 @media (min-width: 766px) and (max-width: 1220px){
   .section.online-banking .cards-wrapper .cards .banking-cards-ul{
     gap:20px;

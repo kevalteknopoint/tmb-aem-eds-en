@@ -1,0 +1,163 @@
+.banking-goods {
+    max-width: 1440px;
+    padding: 0 64px;
+
+    .cards-wrapper {
+        padding: 80px 0;
+
+        .cards {
+            >ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: grid;
+                height: 1080px;
+                gap: 24px;
+                align-self: stretch;
+                grid-template-rows: repeat(2, minmax(0, 1fr));
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+
+                >li:nth-child(1) {
+                    position: relative;
+                    border-radius: 24px;
+                    height: 500px;
+
+                    .cards-card-body {
+                        background: none;
+                        backdrop-filter: none;
+                    }
+
+                    .cards-card-body:nth-child(2) {
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                        top: 182px;
+
+                        >h2 {
+                            color: var(--heading, #00525B);
+                            text-transform: uppercase;
+                            font-family: var(--font-family-h1, "American Grotesk Condensed");
+                            font-size: 30px;
+                            font-style: normal;
+                            font-weight: 900;
+                        }
+
+                        >p {
+                            color: var(--body, #0B231F);
+                            font-family: var(--font-family-body, Inter);
+                            font-size: var(--font-size-body, 16px);
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: var(--font-height-body, 24px);
+                            letter-spacing: var(--font-letter-spacing-body, 0);
+                        }
+                    }
+                }
+
+                >li:not(:first-child) {
+                    border: 1px solid #dadada;
+                    background-color: var(--background-color);
+                    position: relative;
+                    border-radius: 24px;
+                    height: 500px;
+
+                    img {
+                        width: 100%;
+                        aspect-ratio: 4 / 3;
+                        object-fit: cover;
+                        height: 500px;
+                        border-radius: 24px;
+                    }
+
+                    /* Hover animation only for other cards */
+                    .cards-card-body {
+                        width: 100%;
+                        padding: 24px;
+                        position: absolute;
+                        bottom: 0;
+                        border-radius: 0 0 var(--radius-card, 24px) var(--radius-card, 24px);
+                        background: var(--color-card-delete-surface, rgba(0, 82, 91, 0.90));
+                        backdrop-filter: blur(5px);
+                        overflow: hidden;
+                        transition: all 0.4s ease;
+                        height: 80px; ////only h1 is visible
+                        color: #F5F8DE;
+
+                        h1 {
+                            width: 368px;
+                            font-size: 32px;
+
+                            margin-bottom: 8px;
+                            transition: transform 0.4s ease;
+                            font-family: var(--Fonts-Family-ff-h1, "American Grotesk Condensed");
+                            font-style: normal;
+                            font-weight: 900;
+                            line-height: var(--Line-height-lh-h2, 32px);
+                            letter-spacing: var(--Fonts-Letter-spacing-ls-h2, 2px);
+                            text-transform: uppercase;
+
+                        }
+
+                        p {
+                            width: 357px;
+                            opacity: 0;
+                            transform: translateY(10px);
+                            transition: all 0.4s ease;
+                            font-family: var(--Fonts-Family-ff-body, Inter);
+                            font-size: var(--Font-size-fs-body, 16px);
+                        }
+
+                        .button-container {
+                            opacity: 0;
+                            transform: translateY(10px);
+                            transition: all 0.4s ease 0.1s;
+
+                            a {
+                                position: relative;
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: -2px; 
+                                    width: 0%;
+                                    height: 2px;
+                                    background: #F5F8DE;
+                                    transition: width 0.3s ease;
+                                }
+
+                                &:hover::after {
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            height: 150px; // expand height smoothly on hover
+
+                            h1 {
+                                transform: translateY(-10px);
+                            }
+
+                            p {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+
+                            .button-container {
+                                opacity: 1;
+                                transform: translateY(0);
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            .cards-card-image {
+                line-height: 0;
+            }
+        }
+    }
+}
+
