@@ -16,7 +16,21 @@
   flex-wrap: wrap;
 
   @include mobile {
-    padding: 36px 16px 48px 16px;
+    padding: 24px 16px;
+
+    &:has(img) {
+      padding-top: 44px;
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &:has(img) {
+      font-weight: 600;
+    }
   }
 
   span {

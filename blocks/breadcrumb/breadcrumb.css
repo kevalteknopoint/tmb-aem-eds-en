@@ -13,6 +13,16 @@
   width:100%;
 }
 
+.breadcrumb a{
+  align-items:center;
+  display:flex;
+  gap:8px;
+}
+
+.breadcrumb a:has(img){
+  font-weight:600;
+}
+
 .breadcrumb span{
   display:block;
   margin:0 8px 0 4px;
@@ -20,6 +30,10 @@
 
 @media screen and (max-width: 767px){
   .breadcrumb{
-    padding:36px 16px 48px;
+    padding:24px 16px;
+  }
+
+  .breadcrumb:has(img){
+    padding-top:44px;
   }
 }

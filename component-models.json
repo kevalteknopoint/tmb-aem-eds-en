@@ -134,6 +134,22 @@
         "label": "Style",
         "options": [
           {
+            "name": "Top Spacing",
+            "value": "top-margin"
+          },
+          {
+            "name": "Bottom Spacing",
+            "value": "bottom-margin"
+          },
+          {
+            "name": "Top Inner Spacing",
+            "value": "top-padding"
+          },
+          {
+            "name": "Bottom Inner Spacing",
+            "value": "bottom-padding"
+          },
+          {
             "name": "secfirst",
             "value": "secfirst"
           },
@@ -214,16 +230,24 @@
             "value": "faq-question"
           },
           {
-            "name": "Faq Frequently Question",
+            "name": "FAQ List",
             "value": "faq-frequently-question"
           },
           {
-            "name": "Faq Frequently Question Title",
+            "name": "FAQ Title",
             "value": "faq-frequently-question-title"
           },
           {
-            "name": "Faq Frequently Question List",
+            "name": "FAQ Category List",
             "value": "faq-frequently-question-list"
+          },
+          {
+            "name": "Faq-cant-find-looking-for",
+            "value": "faq-cant-find-looking-for"
+          },
+          {
+            "name": "Section Wrapper",
+            "value": "section-wrapper"
           }
         ]
       }
@@ -504,15 +528,38 @@
         "component": "richtext",
         "name": "text",
         "value": "",
-        "label": "Text",
+        "label": "FAQ Content",
         "valueType": "string"
       },
       {
         "component": "aem-tag",
-        "label": "AEM Tag Picker",
+        "label": "FAQ Tag",
         "name": "aem",
         "valueType": "string"
       },
+      {
+        "component": "number",
+        "name": "number",
+        "label": "Number of FAQs to be rendered",
+        "valueType": "number",
+        "value": 0
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "With Pagination",
+            "value": "enable-pagination"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aem-content-fragment",
+    "fields": [
       {
         "component": "aem-content-fragment",
         "name": "picker",
@@ -522,17 +569,6 @@
         "validation": {
           "rootPath": "/content/dam/tmb/content-fragments"
         }
-      },
-      {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Style",
-        "options": [
-          {
-            "name": "faq-category",
-            "value": "faq-category"
-          }
-        ]
       }
     ]
   },
