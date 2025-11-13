@@ -95,7 +95,7 @@
           .cards-card-body {
             margin: 0;
 
-            h2 {
+            h1, h2, h3, h4, h5, h6 {
               color: $heading-default;
               font-size: 40px;
               font-style: normal;
@@ -401,37 +401,5 @@
 
   picture {
     height: 100%;
-  }
-}
-
-#online-bankinghelp {
-  white-space: nowrap;
-
-  br {
-    display: none;
-  }
-
-  @media (min-width: 766px) and (max-width: 820px) {
-    white-space: nowrap;
-
-    br {
-      display: none;
-    }
-  }
-
-  @media (min-width: 766px) and (max-width: 980px) {
-    white-space: nowrap;
-
-    br {
-      display: none;
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-    white-space: nowrap;
-
-    br {
-      display: none;
-    }
   }
 }
