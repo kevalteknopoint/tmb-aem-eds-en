@@ -355,11 +355,10 @@ h1, h2, h3, h4, h5, h6{
   flex-direction:column;
   justify-content:center;
   line-height:1;
-  margin-left:0.3em;
 }
 .momentum-saver-section .momentum-columns .momentum-content .rate-percent{
   color:var(--heading-default);
-  font-size:2rem;
+  font-size:32px;
   font-size:80px;
   font-style:normal;
   font-weight:700;
@@ -411,8 +410,9 @@ h1, h2, h3, h4, h5, h6{
   border-radius:24px;
   display:inline-flex;
   margin-bottom:unset;
-  padding:8px 24px;
-  width:150px;
+  padding:8px 28.5px;
+  width:-moz-fit-content;
+  width:fit-content;
 }
 .momentum-saver-section .momentum-columns .momentum-second-content a{
   color:var(--stroke-reverse);
