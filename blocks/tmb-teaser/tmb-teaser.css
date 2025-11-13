@@ -345,7 +345,7 @@
 .momentum-saver-section .columns-wrapper{
   margin-left:auto;
   margin-right:auto;
-  max-width:1440px;
+  max-width:calc(1440px - 0px);
   padding-inline:64px;
   width:100%;
 }
@@ -475,7 +475,7 @@
 .momentum-saver-section.momentum-image-saver .columns-wrapper{
   margin-left:auto;
   margin-right:auto;
-  max-width:1440px;
+  max-width:calc(1440px - 0px);
   padding-inline:64px;
   width:100%;
 }

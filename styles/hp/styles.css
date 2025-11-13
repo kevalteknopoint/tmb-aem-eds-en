@@ -114,6 +114,11 @@ h1, h2, h3, h4, h5, h6{
   --primary-font:"Inter", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
   --secondary-font:"Roboto", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
   --gradient-1:#d4eefc;
+  --radius-button:24px;
+  --radius-card:24px;
+  --radius-menu-link:0px;
+  --radius-footer-card:12px;
+  --radius-article-thumb:10px;
   --bg-accent:#f7c0b3;
   --bg-default:#ffffff;
   --bg-light-2:#d4eefc;
