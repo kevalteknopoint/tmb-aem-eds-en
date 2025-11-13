@@ -501,7 +501,8 @@
 }
 
 .banking-goods .cards-wrapper .cards > ul > li:nth-child(1) .cards-card-body:nth-child(2) > h2{
-  color:var(--heading, #00525B);
+  color:var(--surface-highlight);
+  font-family:var(--secondary-font);
   font-size:30px;
   font-style:normal;
   font-weight:900;
@@ -509,15 +510,16 @@
 }
 
 .banking-goods .cards-wrapper .cards > ul > li:nth-child(1) .cards-card-body:nth-child(2) > p{
-  color:var(--body, #0B231F);
-  font-family:var(--font-family-body, Inter);
-  font-size:var(--font-size-body, 16px);
+  color:var(--surface-prim-active-cta);
+  font-family:var(--primary-font);
+  font-size:16px;
   font-style:normal;
   font-weight:400;
+  letter-spacing:0;
+  line-height:24px;
 }
 
 .banking-goods .cards-wrapper .cards > ul > li:not(:first-child){
-  background-color:var(--background-color);
   border:1px solid #dadada;
   border-radius:24px;
   height:500px;
@@ -536,9 +538,9 @@
 .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body{
   backdrop-filter:blur(5px);
   background:var(--color-card-delete-surface, rgb(0 82 91 / 90%));
-  border-radius:0 0 var(--radius-card, 24px) var(--radius-card, 24px);
+  border-radius:0 0 24px 24px;
   bottom:0;
-  color:#F5F8DE;
+  color:var(--text-light);
   height:80px;
   overflow:hidden;
   padding:24px;
@@ -548,9 +550,12 @@
 }
 
 .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h1{
+  font-family:var(--secondary-font);
   font-size:32px;
   font-style:normal;
   font-weight:900;
+  letter-spacing:2px;
+  line-height:32px;
   margin-bottom:8px;
   text-transform:uppercase;
   transition:transform 0.4s ease;
@@ -558,6 +563,8 @@
 }
 
 .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body p{
+  font-family:var(--primary-font);
+  font-size:16px;
   opacity:0;
   transform:translateY(10px);
   transition:all 0.4s ease;
@@ -575,7 +582,7 @@
 }
 
 .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container a::after{
-  background:#F5F8DE;
+  background:var(--text-light);
   bottom:-2px;
   content:"";
   height:2px;
@@ -995,5 +1002,9 @@
 
   .banking-goods{
     padding-inline:16px;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul{
+    display:flex;
   }
 }

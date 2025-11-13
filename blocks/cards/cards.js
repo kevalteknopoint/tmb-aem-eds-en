@@ -3,6 +3,22 @@ import { moveInstrumentation } from "../../scripts/scripts.js";
 import expandableTiles from "./expandable-tiles.js";
 
 export default function decorate(block) {
+  // if (block.classList.contains("banking-goods")) {
+  //   const list = document.querySelector(".banking-goods ul");
+  //   const items = list.querySelectorAll("li");
+  //   items[0].style.display = "block";
+  //   const flexContainer = document.createElement("div");
+  //   flexContainer.style.display = "flex";
+  //   flexContainer.style.gap = "10px"; // optional
+
+  //   // Move remaining lis into the flex container
+  //   for (let i = 1; i < items.length; i++) {
+  //     flexContainer.appendChild(items[i]);
+  //   }
+
+  //   // Append flex container back into the ul
+  //   list.appendChild(flexContainer);
+  // }
   if (block.classList.contains("expandable-tiles")) {
     expandableTiles(block);
   } else {
@@ -66,13 +82,4 @@ export default function decorate(block) {
       });
     // online banking help js end
   }
-
-  // if (block.classList.contains("banking-goods")) {
-  //   const classestoli = Array.from(block.children);
-  //   classestoli.forEach((e) => {
-  //     // debugger
-  //     const test = e.children[1];
-  //     test.classList.add("first-div");
-  //   });
-  // }
 }
