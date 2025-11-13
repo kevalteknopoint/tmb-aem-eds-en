@@ -10,7 +10,7 @@ footer {
 }
 
 .section.tmb-footer {
-  background-color:$bg-reverse;
+  background-color: $bg-reverse;
   border: 1px solid$bg-reverse;
   /* max-width: 1328px; */
   // margin: 0 auto;
@@ -31,7 +31,10 @@ footer {
       align-items: center;
       padding: 64px 0px 0px;
       margin-bottom: 24px;
-
+      img{
+        width: 164px;
+        max-width: 100%;
+      }
       @media (max-width: 767px) {
         padding: 20px 10px;
 
@@ -88,12 +91,16 @@ footer {
 
     .ul-1 {
       background: #fff;
-      padding: 5px;
+      // padding: 5px;
       border-radius: 10px;
       display: block; // Desktop default
 
       &.active {
         display: none;
+      }
+
+      li:nth-child(2){
+        padding-bottom: 5px;
       }
     }
 
@@ -105,14 +112,14 @@ footer {
       display: flex;
       flex-direction: column;
       gap: 40px;
-      padding: 0;
+      padding: 24px;
     }
 
     .ul-4 {
       display: flex;
-      gap: 60px;
+      gap: 64px;
       justify-content: space-between;
-      padding: 24px;
+      // padding: 24px 24px 0 24px;
 
       li {
         width: 271px;
@@ -161,7 +168,7 @@ footer {
     .ul-9 {
       display: flex;
       justify-content: space-between;
-      padding: 0px 27px 40px;
+      // padding: 0px 27px 40px;
       margin-top: 0;
 
       li {
@@ -254,7 +261,7 @@ footer {
         line-height: 100%;
         letter-spacing: -1%;
         vertical-align: bottom;
-        color:$bg-reverse;
+        color: $bg-reverse;
       }
     }
 
@@ -283,9 +290,9 @@ footer {
       display: flex;
       justify-content: space-between;
       margin: 5px;
-      background:$bg-reverse;
+      background: $bg-reverse;
       border-radius: 10px;
-      padding: 32px 27px;
+      padding: 24px;
 
       @media (max-width: 1024px) {
         display: flex;
@@ -424,26 +431,27 @@ footer {
     .ul-17 {
       padding: 0;
       display: flex;
-      border-radius: 20px;
+      border-radius: 24px;
       background-color: white;
       width: fit-content;
 
       a {
-        color:$bg-reverse;
+        color: $bg-reverse;
       }
 
       li {
         display: flex;
         align-items: center;
-        flex-direction: row;
+        flex-direction: row-reverse;
         font-size: 16px;
+        gap: 8px;
 
         a:first-child {
-          padding: 8px 0px 8px 16px;
+          padding: 8px 16px 8px 0px;
         }
 
         a:last-child {
-          padding: 8px 16px 8px 0px;
+          padding: 8px 0px 8px 16px;
         }
 
         img {
@@ -526,8 +534,9 @@ footer {
   .tmb-sub-footer-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 24px;
     @include responsive-container();
+
     @media screen and (max-width: 767px) {
       padding: 40px 12px;
     }
@@ -569,6 +578,7 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 40px;
 
         @media screen and (max-width: 767px) {
           padding: unset;
@@ -592,6 +602,7 @@ footer {
           list-style-type: none;
           margin: 0;
           padding: 0;
+          gap: 40px;
 
           @media screen and (max-width: 767px) {
             flex-direction: column;
@@ -608,7 +619,7 @@ footer {
             vertical-align: bottom;
             text-decoration: underline;
             text-decoration-style: solid;
-            color: #565659;
+            color: #FFFFFF;
           }
         }
       }
