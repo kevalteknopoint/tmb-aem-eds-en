@@ -1,166 +1,263 @@
 @use './../../styles/base' as *;
 
 .banking-goods {
-    @include responsive-container;
+  @include responsive-container;
 
-    .cards-wrapper {
-        padding: 80px 0;
+  .cards-wrapper {
 
-        .cards {
-            >ul {
-                @include mobile {
-                    display: flex;
-                }
+    .banking-goods-mb {
+      margin-bottom: 40px;
 
-                list-style: none;
-                margin: 0;
-                padding: 0;
-                display: grid;
-                height: 1080px;
-                gap: 24px;
-                align-self: stretch;
-                grid-template-rows: repeat(2, minmax(0, 1fr));
-                grid-template-columns: repeat(3, minmax(0, 1fr));
+      h1, h2, h3, h4, h5, h6 {
+        color: $heading-default;
+        text-transform: uppercase;
+        font-family: $secondary-font;
+        letter-spacing: 2px;
+        font-size: 38px;
+        line-height: 38px;
+        margin-bottom: 16px;
+      }
 
-                >li:nth-child(1) {
-                    position: relative;
-                    border-radius: 24px;
-                    height: 500px;
-
-                    .cards-card-body {
-                        background: none;
-                        backdrop-filter: none;
-                    }
-
-                    .cards-card-body:nth-child(2) {
-                        display: flex;
-                        flex-direction: column;
-                        position: absolute;
-                        top: 182px;
-
-                        >h2 {
-                            color: $surface-highlight;
-                            text-transform: uppercase;
-                            font-family: $secondary-font;
-                            font-size: 30px;
-                            font-style: normal;
-                            font-weight: 900;
-                        }
-
-                        >p {
-                            color: $surface-prim-active-cta;
-                            font-family: $primary-font;
-                            font-size: 16px;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: 24px;
-                            letter-spacing: 0;
-                        }
-                    }
-                }
-
-                >li:not(:first-child) {
-                    border: 1px solid #dadada;
-                    // background-color: var(--background-color);
-                    position: relative;
-                    border-radius: 24px;
-                    height: 500px;
-
-                    img {
-                        width: 100%;
-                        aspect-ratio: 4 / 3;
-                        object-fit: cover;
-                        height: 500px;
-                        border-radius: 24px;
-                    }
-
-                    /* Hover animation only for other cards */
-                    .cards-card-body {
-                        width: 100%;
-                        padding: 24px;
-                        position: absolute;
-                        bottom: 0;
-                        border-radius: 0 0 24px 24px;
-                        background: var(--color-card-delete-surface, rgba(0, 82, 91, 0.90));
-                        backdrop-filter: blur(5px);
-                        overflow: hidden;
-                        transition: all 0.4s ease;
-                        height: 80px; //// only h1 is visible
-                        color: $text-light ;
-
-                        h1 {
-                            width: 368px;
-                            font-size: 32px;
-                            margin-bottom: 8px;
-                            transition: transform 0.4s ease;
-                            font-family: $secondary-font ;
-                            font-style: normal;
-                            font-weight: 900;
-                            line-height: 32px;
-                            letter-spacing: 2px;
-                            text-transform: uppercase;
-
-                        }
-
-                        p {
-                            width: 357px;
-                            opacity: 0;
-                            transform: translateY(10px);
-                            transition: all 0.4s ease;
-                            font-family: $primary-font ;
-                            font-size: 16px;
-                        }
-
-                        .button-container {
-                            opacity: 0;
-                            transform: translateY(10px);
-                            transition: all 0.4s ease 0.1s;
-
-                            a {
-                                position: relative;
-
-                                &::after {
-                                    content: "";
-                                    position: absolute;
-                                    left: 0;
-                                    bottom: -2px;
-                                    width: 0%;
-                                    height: 2px;
-                                    background: $text-light;
-                                    transition: width 0.3s ease;
-                                }
-
-                                &:hover::after {
-                                    width: 100%;
-                                }
-                            }
-                        }
-
-                        &:hover {
-                            height: 150px; // expand height smoothly on hover
-
-                            h1 {
-                                transform: translateY(-10px);
-                            }
-
-                            p {
-                                opacity: 1;
-                                transform: translateY(0);
-                            }
-
-                            .button-container {
-                                opacity: 1;
-                                transform: translateY(0);
-
-                            }
-                        }
-                    }
-                }
-            }
-
-            .cards-card-image {
-                line-height: 0;
-            }
-        }
+      p {
+        color: $body-default;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0;
+      }
     }
+
+    .cards {
+      @include mobile {
+        overflow: auto;
+      }
+
+      > ul {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+
+        @include tablet {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        @include mobile {
+          display: flex;
+          justify-content: flex-start;
+
+          li {
+            width: fit-content;
+            min-width: 335px;
+          }
+        }
+
+        >li:first-child {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border-radius: 24px;
+          height: 100%;
+
+          @include mobile {
+            display: none;
+          }
+
+          .cards-card-body {
+            display: none;
+            background: none;
+            backdrop-filter: none;
+          }
+
+          .cards-card-body:last-child {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+
+            > h1, h2, h3, h4, h5, h6 {
+              color: $heading-default;
+              text-transform: uppercase;
+              font-family: $secondary-font;
+              letter-spacing: 2px;
+              font-size: 40px;
+              line-height: 40px;
+            }
+
+            > p {
+              color: $body-default;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              letter-spacing: 0;
+            }
+          }
+        }
+
+        >li:not(:first-child) {
+          position: relative;
+          border-radius: 24px;
+          height: 528px;
+
+          @include mobile {
+            height: 500px;
+          }
+
+          .cards-card-image {
+            height: 100%;
+          }
+
+          picture, img {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            height: 100%;
+            border-radius: 24px;
+          }
+
+          /* Hover animation only for other cards */
+          .cards-card-body {
+            width: 100%;
+            padding: 24px;
+            position: absolute;
+            bottom: 0;
+            border-radius: 0 0 24px 24px;
+            backdrop-filter: blur(5px);
+            overflow: hidden;
+            transition: all ease-in-out;
+            transition-duration: 700ms;
+            color: $body-reverse-2;
+            display: flex;
+            flex-direction: column; 
+            gap: 16px;
+            max-height: fit-content;
+
+            @include mobile {
+              backdrop-filter: unset;
+              background: linear-gradient(180deg, rgba(11, 35, 31, 0.00) 0.01%, rgba(11, 35, 31, 0.14) 34.14%, rgba(11, 35, 31, 0.80) 99.98%);
+              min-height: 335px;
+              justify-content: flex-end;
+            }
+
+            &.active {
+              height: 100% !important;
+
+              p {
+                opacity: 1;
+              }
+            }
+
+            &::after {
+              content: '';
+              width: 100%;
+              height: 100%;
+              display: block;
+              background: $bg-reverse;
+              opacity: 0.9;
+              position: absolute;
+              left: 0;
+              top: 0;
+              z-index: -1;
+
+              @include mobile {
+                content: unset;
+              }
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+              font-size: 40px;
+              transition: transform 0.4s ease;
+              font-family: $secondary-font ;
+              font-style: normal;
+              font-weight: 900;
+              line-height: 40px;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              color: $heading-reverse-2;
+
+              @include mobile {
+                font-size: 32px;
+                line-height: 32px;
+              }
+            }
+
+            p {
+              transition: all 0.4s ease-in-out;
+              font-size: 16px;
+              line-height: 24px;
+              font-weight: 400;
+              color: $body-reverse-2;
+              opacity: 0;
+
+              @include mobile {
+                opacity: 1;
+
+                &:not(.button-container) {
+                  display: none;
+                }
+              }
+            }
+
+            .button-container {
+              transition: all 0.4s ease-in-out;
+              padding: 6px 0;
+              opacity: 0;
+
+              @include mobile {
+                opacity: 1;
+                padding: 0;
+              }
+
+              a {
+                position: relative;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 14px;
+                line-height: 21px;
+                width: fit-content;
+                color: $link-reverse-2;
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  bottom: -2px;
+                  width: 0%;
+                  height: 2px;
+                  background: $link-reverse-2;
+                  transition: width 0.3s ease;
+                }
+
+                &:hover::before {
+                  width: 100%;
+                }
+
+                &::after {
+                  content: unset;
+                  display: block;
+                  background-image: url('/icons/chevron-right-off-white.svg');
+                  background-repeat: no-repeat;
+                  background-size: 100%;
+                  height: 12px;
+                  width: 7.2px;
+
+                  @include mobile {
+                    content: '';
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .cards-card-image {
+        line-height: 0;
+      }
+    }
+  }
 }

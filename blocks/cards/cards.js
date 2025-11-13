@@ -1,24 +1,10 @@
 import { createOptimizedPicture } from "../../scripts/aem.js";
 import { moveInstrumentation } from "../../scripts/scripts.js";
+import decorateBankingGoods from "./banking-goods.js";
 import expandableTiles from "./expandable-tiles.js";
+import decorateOnlineBanking from "./online-banking.js";
 
 export default function decorate(block) {
-  // if (block.classList.contains("banking-goods")) {
-  //   const list = document.querySelector(".banking-goods ul");
-  //   const items = list.querySelectorAll("li");
-  //   items[0].style.display = "block";
-  //   const flexContainer = document.createElement("div");
-  //   flexContainer.style.display = "flex";
-  //   flexContainer.style.gap = "10px"; // optional
-
-  //   // Move remaining lis into the flex container
-  //   for (let i = 1; i < items.length; i++) {
-  //     flexContainer.appendChild(items[i]);
-  //   }
-
-  //   // Append flex container back into the ul
-  //   list.appendChild(flexContainer);
-  // }
   if (block.classList.contains("expandable-tiles")) {
     expandableTiles(block);
   } else {
@@ -29,8 +15,7 @@ export default function decorate(block) {
       moveInstrumentation(row, li);
       while (row.firstElementChild) li.append(row.firstElementChild);
       [...li.children].forEach((div) => {
-        if (div.children.length === 1 && div.querySelector("picture"))
-          div.className = "cards-card-image";
+        if (div.children.length === 1 && div.querySelector("picture")) div.className = "cards-card-image";
         else div.className = "cards-card-body";
       });
       ul.append(li);
@@ -44,42 +29,13 @@ export default function decorate(block) {
     });
     block.textContent = "";
     block.append(ul);
-    // online banking help js starts
-    const cardsUl = block.querySelector(
-      ".online-banking .cards-wrapper .cards ul"
-    );
-    cardsUl.classList.add("banking-cards-ul");
-    block.querySelectorAll(".banking-cards-ul > li").forEach((li, idx) => {
-      li.classList.add(`banking-li-${idx + 1}`);
+
+    setTimeout(() => {
+      if (block.closest('.online-banking')) {
+        decorateOnlineBanking(block);
+      } else if (block.closest('.banking-goods')) {
+        decorateBankingGoods(block);
+      }
     });
-    block
-      .querySelectorAll(
-        ".online-banking .cards-wrapper .cards ul li:nth-child(2) .cards-card-body ul"
-      )
-      .forEach((blockUl, idx) => {
-        blockUl.classList.add(`card-bottom-${idx + 1}`);
-      });
-    block
-      .querySelectorAll(
-        ".online-banking .cards-wrapper .cards ul li:nth-child(2) .cards-card-body li"
-      )
-      .forEach((li, idx) => {
-        li.classList.add(`banking-desc-${idx + 1}`);
-      });
-    block
-      .querySelectorAll(
-        ".online-banking .cards-wrapper .cards ul li:nth-child(3) .cards-card-body ul"
-      )
-      .forEach((blockUl, idx) => {
-        blockUl.classList.add(`card-bottom-${idx + 1}`);
-      });
-    block
-      .querySelectorAll(
-        ".online-banking .cards-wrapper .cards ul li:nth-child(3) .cards-card-body li"
-      )
-      .forEach((li, idx) => {
-        li.classList.add(`banking-desc-${idx + 1}`);
-      });
-    // online banking help js end
   }
 }
