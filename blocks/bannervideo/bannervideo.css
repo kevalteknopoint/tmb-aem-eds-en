@@ -36,12 +36,14 @@
 }
 
 .inner-section1 > h1{
-  color:#00525B;
-  font-family:sans-serif;
-  font-size:40px;
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
+  font-size:42px;
   font-style:normal;
-  font-weight:900;
-  line-height:48px;
+  font-weight:400;
+  letter-spacing:-2px;
+  line-height:44px;
+  text-transform:uppercase;
 }
 
 .inner-section1 > p{
@@ -50,13 +52,17 @@
 
 .inner-section2 .video-banner .swiper-wrapper .swiper-slide > div > .button-container > a{
   background-color:unset;
-  color:#00525B;
-  font-size:16px;
+  color:var(--heading-default);
+  font-size:14px;
   font-style:normal;
-  font-weight:700;
-  line-height:24px;
+  font-weight:400;
+  line-height:21px;
   margin:0;
   padding:0;
+  text-decoration:underline;
+  text-decoration-color:var(--link-accent);
+  text-decoration-thickness:2px;
+  text-underline-offset:4px;
 }
 
 .inner-section2 .video-banner .swiper-wrapper .swiper-slide > div > picture > img{
@@ -82,15 +88,17 @@
   display:flex;
   flex:1 0 0;
   flex-direction:column;
+  gap:16px;
   justify-content:space-between;
   width:68%;
 }
 
 .inner-section2 .video-banner .swiper-wrapper .swiper-slide > div:nth-child(2) > p{
-  color:#000;
+  color:var(--heading-default);
+  font-family:var(--primary-font);
   font-size:20px;
   font-style:normal;
-  font-weight:700;
+  font-weight:500;
   line-height:24px;
   margin:0;
   padding:0;
@@ -249,12 +257,14 @@
 .secsecond .swiper-wrapper .swiper-slide{
   background:#FFF;
   border:1px solid rgb(0 0 0 / 20%);
-  border-radius:24px;
+  border-radius:var(--radius-card);
   display:flex;
   gap:19px;
+  height:181px;
   justify-content:flex-start;
+  margin-right:24px;
   padding:20px;
-  width:436px !important;
+  width:388px !important;
 }
 
 .secsecond .bannervedio-wrapper{
@@ -340,12 +350,12 @@
 
 @media screen and (max-width: 1023px){
   .bannervideo-container .bannervideo-wrapper .mob-swiper{
-    align-items:center;
+    align-items:start;
     background:#fff;
     border:1px solid rgb(0 0 0 / 15%);
     border-radius:12px;
-    gap:8px;
-    padding:12px;
+    gap:16px;
+    padding:20px;
     width:100%;
   }
 
@@ -359,24 +369,33 @@
   }
 
   .bannervideo-container .bannervideo-wrapper .mob-swiper p{
-    color:#000;
-    font-size:14px;
+    color:var(--heading-default);
+    font-family:var(--primary-font);
+    font-size:20px;
     font-style:normal;
-    font-weight:700;
-    line-height:18px;
+    font-weight:500;
+    line-height:24px;
     margin:0 0 20px;
     padding:0;
   }
 
   .bannervideo-container .bannervideo-wrapper .mob-swiper p > a{
     background-color:transparent;
-    color:#00525B;
-    font-size:16px;
+    color:var(--heading-default);
+    font-size:14px;
     font-style:normal;
-    font-weight:700;
-    line-height:24px;
+    font-weight:400;
+    line-height:21px;
     margin:0;
     padding:0;
+    text-decoration:underline;
+    text-decoration-color:var(--link-accent);
+    text-decoration-thickness:2px;
+    text-underline-offset:4px;
+  }
+
+  .bannervideo-container .bannervideo-wrapper .mob-swiper p.button-container{
+    margin-bottom:0;
   }
 
   .bannervideo-container .bannervideo-wrapper .mob-swiper > div > picture > img{
@@ -420,7 +439,11 @@
 
   .secsecond .default-content-wrapper{
     flex-wrap:wrap;
-    margin-bottom:12px;
+    margin-bottom:24px;
+  }
+
+  .secsecond .swiper-wrapper{
+    padding:0;
   }
 
   .swiperinnerdiv > div:nth-child(1){
@@ -447,25 +470,26 @@
   }
 
   .mob-noswiper-child1 > h1{
-    color:#00525B;
-    font-size:24px;
+    color:var(--heading-default);
+    font-size:36px;
     font-style:normal;
-    font-weight:700;
-    letter-spacing:-0.24px;
-    line-height:32px;
+    font-weight:400;
+    letter-spacing:-2px;
+    line-height:38px;
   }
 
   .mob-noswiper-child1 > .button-container > a{
     background-color:unset;
-    color:#00525B;
+    color:var(--heading-default);
     display:block;
-    font-size:16px;
+    font-size:14px;
     font-style:normal;
-    font-weight:700;
-    line-height:24px;
+    font-weight:400;
+    line-height:21px;
     margin:0;
     padding:0;
     text-decoration:underline;
+    text-underline-offset:4px;
   }
 
   .mob-noswiper-child2 > div{
@@ -478,6 +502,10 @@
 }
 
 @media screen and (max-width: 767px){
+  .inner-section2 .video-banner .swiper-wrapper .swiper-slide > div:nth-child(2){
+    gap:20px;
+  }
+
   .mob-pbanner img{
     border-radius:0 0 20px 20px;
     height:585px;
