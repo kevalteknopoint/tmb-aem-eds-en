@@ -264,6 +264,10 @@
           {
             "name": "Section Wrapper",
             "value": "section-wrapper"
+          },
+          {
+            "name": "Banking Good",
+            "value": "banking-goods"
           }
         ]
       }
@@ -674,52 +678,6 @@
         "component": "text",
         "name": "action-link",
         "label": "Enter action link"
-      }
-    ]
-  },
-  {
-    "id": "tmb-teaser",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-      {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Style",
-        "options": [
-          {
-            "name": "momentum-block",
-            "value": "momentum-block"
-          },
-          {
-            "name": "momentum-saver-section",
-            "value": "momentum-saver-section"
-          },
-          {
-            "name": "background-color-teal",
-            "value": "background-color-teal"
-          },
-          {
-            "name": "bg-image-saver",
-            "value": "bg-image-saver"
-          },
-          {
-            "name": "momentum-image-saver",
-            "value": "momentum-image-saver"
-          }
-        ]
       }
     ]
   }

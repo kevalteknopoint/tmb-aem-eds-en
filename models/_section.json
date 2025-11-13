@@ -161,6 +161,10 @@
             {
               "name": "Section Wrapper",
               "value": "section-wrapper"
+            },
+            {
+              "name": "Banking Good",
+              "value": "banking-goods"
             }
           ]
         }
