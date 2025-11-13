@@ -1,3 +1,4 @@
+import decorateMomentumSaver from '../components/momentum-saver/momentum-saver.js';
 import {
   loadHeader,
   loadFooter,
@@ -146,6 +147,7 @@ function loadDelayed() {
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
+  decorateMomentumSaver();
   loadDelayed();
 }
 
