@@ -369,6 +369,7 @@ footer .footer > div{
   justify-content:flex-start;
   list-style-type:none;
   margin:0;
+  padding-bottom:64px;
   padding-left:0;
 }
 
