@@ -288,7 +288,7 @@
   width:100%;
 }
 
-.swiperinnerdiv > div:nth-child(1) > h1{
+.swiperinnerdiv > div:nth-child(1) > h1, .swiperinnerdiv > div:nth-child(1) h2, .swiperinnerdiv > div:nth-child(1) h3, .swiperinnerdiv > div:nth-child(1) h4, .swiperinnerdiv > div:nth-child(1) h5, .swiperinnerdiv > div:nth-child(1) h6{
   color:var(--heading-default);
   font-family:var(--secondary-font);
   font-size:60px;
@@ -453,6 +453,11 @@
     gap:16px;
     justify-content:center;
     width:100%;
+  }
+
+  .swiperinnerdiv > div:nth-child(1) > h1, .swiperinnerdiv > div:nth-child(1) h2, .swiperinnerdiv > div:nth-child(1) h3, .swiperinnerdiv > div:nth-child(1) h4, .swiperinnerdiv > div:nth-child(1) h5, .swiperinnerdiv > div:nth-child(1) h6{
+    font-size:40px;
+    line-height:32px;
   }
 
   .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container > a{

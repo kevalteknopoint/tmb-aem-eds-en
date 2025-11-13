@@ -180,10 +180,6 @@
   .columns-wrapper {
     @include responsive-container();
 
-    @include mobile {
-      padding-inline: 0;
-    }
-
     .momentum-columns {
       padding: 0;
 

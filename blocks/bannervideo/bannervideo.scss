@@ -449,7 +449,7 @@
       width: 100%;
     }
 
-    & > h1 {
+    & > h1, h2, h3, h4, h5, h6 {
       color: $heading-default;
       font-family: $secondary-font;
       font-size: 60px;
@@ -458,6 +458,11 @@
       line-height: 52px;
       max-width: 560px;
       text-transform: uppercase;
+
+      @include tablet {
+        font-size: 40px;
+        line-height: 32px;
+      }
     }
 
     & > p {
