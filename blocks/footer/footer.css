@@ -108,6 +108,7 @@ footer .footer > div{
 
 .section.tmb-footer .tmb-footer-wrapper .ul-9{
   display:flex;
+  gap:64px;
   justify-content:space-between;
   margin-top:0;
 }
