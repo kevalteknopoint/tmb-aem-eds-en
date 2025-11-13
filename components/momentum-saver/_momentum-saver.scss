@@ -39,14 +39,12 @@
         color: $heading-default;
         font-size: 140px;
         font-style: normal;
-        font-weight: 900;
         line-height: 120px;
         text-transform: capitalize;
 
         @include mobile {
           font-size: 120px;
           font-style: normal;
-          font-weight: 900;
           line-height: 120px;
           /* 100% */
           text-transform: capitalize;
@@ -73,13 +71,11 @@
         color: $heading-default;
         font-size: 80px;
         font-style: normal;
-        font-weight: 900;
         line-height: 72px;
 
         @include mobile {
           font-size: 78px;
           font-style: normal;
-          font-weight: 900;
           line-height: 72px;
         }
       }
@@ -118,7 +114,6 @@
         font-family: $secondary-font;
         font-size: 40px;
         font-style: normal;
-        font-weight: 900;
         line-height: 40px;
         text-transform: uppercase;
         margin-bottom: 16px;

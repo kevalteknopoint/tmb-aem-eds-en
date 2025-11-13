@@ -235,7 +235,6 @@ h1, h2, h3, h4, h5, h6{
   font-family:var(--secondary-font);
   font-size:40px;
   font-style:normal;
-  font-weight:900;
   letter-spacing:0;
   line-height:44px;
   text-align:center;
@@ -347,7 +346,6 @@ h1, h2, h3, h4, h5, h6{
   font-family:var(--secondary-font);
   font-size:140px;
   font-style:normal;
-  font-weight:900;
   line-height:120px;
   text-transform:capitalize;
 }
@@ -365,7 +363,6 @@ h1, h2, h3, h4, h5, h6{
   font-size:80px;
   font-style:normal;
   font-weight:700;
-  font-weight:900;
   line-height:72px;
 }
 .momentum-saver-section .momentum-columns .momentum-content .rate-pa{
@@ -389,7 +386,6 @@ h1, h2, h3, h4, h5, h6{
   font-family:var(--secondary-font);
   font-size:40px;
   font-style:normal;
-  font-weight:900;
   line-height:40px;
   margin-bottom:16px;
   text-transform:uppercase;
@@ -572,14 +568,12 @@ h1, h2, h3, h4, h5, h6{
   .momentum-saver-section .momentum-columns .momentum-content h2{
     font-size:120px;
     font-style:normal;
-    font-weight:900;
     line-height:120px;
     text-transform:capitalize;
   }
   .momentum-saver-section .momentum-columns .momentum-content .rate-percent{
     font-size:78px;
     font-style:normal;
-    font-weight:900;
     line-height:72px;
   }
   .momentum-saver-section .momentum-columns .momentum-content p{

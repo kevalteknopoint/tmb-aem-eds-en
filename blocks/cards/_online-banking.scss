@@ -99,7 +99,6 @@
               color: $heading-default;
               font-size: 40px;
               font-style: normal;
-              font-weight: 900;
               line-height: 40px;
               margin: 0;
               text-transform: uppercase;
@@ -114,7 +113,6 @@
 
               @media screen and (max-width: 767px) {
                 font-size: 38px;
-                font-weight: 900;
                 line-height: 38px;
               }
             }
