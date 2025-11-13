@@ -15,12 +15,12 @@
       display: flex;
 
       @include tablet {
-        align-items: center;
+        align-items: start;
         background: #fff;
         border: 1px solid rgb(0 0 0 / 15%);
         border-radius: 12px;
-        gap: 8px;
-        padding: 12px;
+        gap: 16px;
+        padding: 20px;
         width: 100%;
 
         & > div:first-child img {
@@ -31,24 +31,33 @@
         }
 
         p {
-          color: #000;
-          font-size: 14px;
+          color: $heading-default;
+          font-size: 20px;
           font-style: normal;
-          font-weight: 700;
-          line-height: 18px;
+          font-weight: 500;
+          line-height: 24px;
           margin: 0 0 20px;
           padding: 0;
+          font-family: $primary-font;
+
 
           & > a {
             background-color: transparent;
-            color: #00525B;
-            font-size: 16px;
+            color: $heading-default;
+            font-size: 14px;
             font-style: normal;
-            font-weight: 700;
-            line-height: 24px;
+            font-weight: 400;
+            line-height: 21px;
             margin: 0;
             padding: 0;
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-decoration-color: $link-accent;
+            text-underline-offset: 4px;
           }
+        }
+        & p.button-container{
+          margin-bottom: 0;
         }
 
         & > div {
@@ -98,12 +107,14 @@
   position: relative;
 
   & > h1 {
-    color: #00525B;
-    font-family: sans-serif;
-    font-size: 40px;
+    color: $heading-default;
+    font-family: $secondary-font;
+    font-size: 42px;
     font-style: normal;
-    font-weight: 900;
-    line-height: 48px;
+    font-weight: 400;
+    line-height: 44px;
+    text-transform: uppercase;
+    letter-spacing: -2px;
   }
 
   & > p {
@@ -119,13 +130,17 @@
           & > .button-container {
             & > a {
               background-color: unset;
-              color: #00525B;
-              font-size: 16px;
+              color: $heading-default;
+              font-size: 14px;
               font-style: normal;
-              font-weight: 700;
-              line-height: 24px;
+              font-weight: 400;
+              line-height: 21px;
               margin: 0;
               padding: 0;
+              text-decoration: underline;
+              text-decoration-thickness: 2px;
+              text-underline-offset: 4px;
+              text-decoration-color: $link-accent;            
             }
           }
 
@@ -156,13 +171,20 @@
           flex: 1 0 0;
           flex-direction: column;
           justify-content: space-between;
+          gap: 16px;
           width: 68%;
 
+          @include mobile{
+            gap: 20px;
+          }
+
           & > p {
-            color: #000;
+            // color: #000;
+            color: $heading-default;
+            font-family: $primary-font;
             font-size: 20px;
             font-style: normal;
-            font-weight: 700;
+            font-weight: 500;
             line-height: 24px;
             margin: 0;
             padding: 0;
@@ -357,7 +379,7 @@
 
     @include tablet {
       flex-wrap: wrap;
-      margin-bottom: 12px;
+      margin-bottom: 24px;
     }
   }
 
@@ -368,15 +390,22 @@
     gap: 0;
     padding: 30px 0 0;
 
+      @include tablet {
+        padding: 0;
+      }
+
     .swiper-slide {
       background: #FFF;
       border: 1px solid rgb(0 0 0 / 20%);
-      border-radius: 24px;
+      // border-radius: 24px;
+      border-radius: $radius-card;
       display: flex;
       gap: 19px;
       justify-content: flex-start;
       padding: 20px;
-      width: 436px !important;
+      width: 388px !important;
+      height: 181px;
+      margin-right: 24px;
     }
 
     // .swiper-button-next:disabled,
@@ -478,26 +507,27 @@
     justify-content: space-between;
 
     & > h1 {
-      color: #00525B;
-      font-size: 24px;
+      color: $heading-default;
+      font-size: 36px;
       font-style: normal;
-      font-weight: 700;
-      letter-spacing: -0.24px;
-      line-height: 32px;
+      font-weight: 400;
+      letter-spacing: -2px;
+      line-height: 38px;
     }
 
     & > .button-container {
       & > a {
         background-color: unset;
-        color: #00525B;
+        color: $heading-default;
         display: block;
-        font-size: 16px;
+        font-size: 14px;
         font-style: normal;
-        font-weight: 700;
-        line-height: 24px;
+        font-weight: 400;
+        line-height: 21px;
         margin: 0;
         padding: 0;
         text-decoration: underline;
+        text-underline-offset: 4px;
       }
     }
   }
