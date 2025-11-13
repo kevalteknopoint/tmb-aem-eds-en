@@ -1,0 +1,278 @@
+@use '../../styles/base' as *;
+
+.momentum-saver-section {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 80px;
+  justify-content: space-between;
+
+  .columns-wrapper {
+    @include responsive-container();
+  }
+
+  .momentum-columns {
+    display: flex;
+    padding: 64px;
+    border-radius: 24px;
+
+    @include mobile {
+      padding: 40px 16px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    >div {
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    .momentum-content {
+      display: grid;
+      max-width: 350px;
+      width: 100%;
+      grid-template-columns: 1fr 3fr;
+
+      h2 {
+        font-family: $secondary-font;
+        color: $heading-default;
+        font-size: 140px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 120px;
+        text-transform: capitalize;
+
+        @include mobile {
+          font-size: 120px;
+          font-style: normal;
+          font-weight: 900;
+          line-height: 120px;
+          /* 100% */
+          text-transform: capitalize;
+        }
+      }
+
+      .rate-unit {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* Stack % above P.A. */
+        align-items: center;
+        margin-left: 0.3em;
+        line-height: 1;
+
+        @include tablet {
+          align-items: unset;
+        }
+      }
+
+      .rate-percent {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $heading-default;
+        font-size: 80px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 72px;
+
+        @include mobile {
+          font-size: 78px;
+          font-style: normal;
+          font-weight: 900;
+          line-height: 72px;
+        }
+      }
+
+      .rate-pa {
+        color: $heading-default;
+        text-align: center;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 28px;
+      }
+
+      p {
+        color: $body-default;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        width: 100%;
+
+        @include mobile {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          width: 121%;
+        }
+      }
+    }
+
+    .momentum-second-content {
+
+      h2 {
+        color: $heading-default;
+        font-family: $secondary-font;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 40px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+
+      }
+
+
+      h3 {
+        color: $heading-default;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 36px;
+        margin-bottom: 4px;
+        ;
+      }
+
+      p {
+        color: $body-default;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 24px;
+      }
+
+      .button-container {
+        margin-bottom: unset;
+        width: 150px;
+        background-color: $heading-default;
+        border-radius: 24px;
+        display: inline-flex;
+        padding: 8px 24px;
+      }
+
+      a {
+        color: $stroke-reverse;
+        // text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+//updated end
+
+//variant for section bg
+
+.momentum-saver-section.background-color-teal {
+  background-color: $bg-reverse;
+
+  .momentum-columns.background-color-white {
+    background-color: $bg-default;
+  }
+}
+
+
+//image variant 
+
+.momentum-saver-section.momentum-image-saver {
+  .columns-wrapper {
+    @include responsive-container();
+
+    @include mobile {
+      padding-inline: 0;
+    }
+
+    .momentum-columns {
+      padding: 0;
+
+      div {
+        gap: 24px;
+        align-items: center;
+
+        .columns-img-col {
+          width: 100%;
+          max-width: 519.5px;
+
+          img {
+            border-radius: 24px;
+          }
+        }
+
+        .momentum-second-content {
+          @include tablet {
+            display: block;
+          }
+
+          h2 {
+            font-family: $primary-font;
+            font-weight: 500;
+            text-transform: capitalize;
+
+            @include mobile {
+              font-size: 38px;
+            }
+
+            @include tablet {
+              font-size: 38px;
+              // width: 121px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // .momentum-columns{
+  //   div{
+  //     gap: 24px;
+  //     .columns-img-col{
+  //       img {
+  //         border-radius: 24px;
+  //       }
+  //     }
+  //     .momentum-second-content{
+  //       font-family: $primary-font;
+  //       font-weight: 500;
+  //       @include tablet{
+  //         display: block;
+  //       }
+  //       h2{
+  //         @include tablet{
+  //           font-size: 38px;
+  //           width: 121px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+
+//bg variant
+.momentum-image-saver.bg-image-saver {
+  background-color: $heading-default;
+
+  .momentum-second-content {
+
+    h2,
+    h3,
+    p {
+      color: $body-reverse;
+    }
+
+    .button-container {
+      background-color: #F5F8DE;
+
+      a {
+        color: $stroke-default;
+      }
+    }
+  }
+}
