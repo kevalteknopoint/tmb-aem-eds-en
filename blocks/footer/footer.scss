@@ -101,6 +101,9 @@ footer {
 
       li:nth-child(2){
         padding-bottom: 5px;
+        @include tablet{
+          padding: 0px 4px 4px;
+        }
       }
     }
 
@@ -307,7 +310,7 @@ footer {
       }
 
       @media (max-width: 1024px) and (min-width: 768px) {
-        margin: 5px 0px;
+        margin: 5px 0 0;
         gap: 32px;
         display: flex;
         flex-wrap: wrap;

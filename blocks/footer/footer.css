@@ -583,7 +583,7 @@ footer .footer > div{
     flex-wrap:wrap;
     gap:20px;
     justify-content:space-between;
-    margin:5px 0;
+    margin:5px 0 0;
   }
 
   .section.tmb-footer .tmb-footer-wrapper .ul-14 > li:first-child{
@@ -661,6 +661,12 @@ footer .footer > div{
 
   .section.tmb-sub-footer .tmb-sub-footer-wrapper .ul-5{
     text-align:center;
+  }
+}
+
+@media screen and (max-width: 1023px){
+  .section.tmb-footer .tmb-footer-wrapper .ul-1 li:nth-child(2){
+    padding:0 4px 4px;
   }
 }
 
