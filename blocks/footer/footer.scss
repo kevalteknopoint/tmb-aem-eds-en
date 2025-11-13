@@ -4,32 +4,33 @@
 footer {
   font-size: var(--body-font-size-xs);
 
-  .footer > div {
+  .footer>div {
     margin: auto;
   }
 }
 
 .section.tmb-footer {
-  background-color: #00525B;
-  border: 1px solid #00525B;
+  background-color:$bg-reverse;
+  border: 1px solid$bg-reverse;
   /* max-width: 1328px; */
-  margin: 0 auto;
-  padding-bottom: 70px;
+  // margin: 0 auto;
+  // padding-bottom: 70px;
 
   @media (max-width: 767px) {
     padding: 20px;
   }
 
   .tmb-footer-wrapper {
-    max-width: 1328px;
-    margin: 0 auto;
+    // max-width: 1328px;
+    // margin: 0 auto;
+    @include responsive-container();
 
     .para-1 {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 32px;
-      margin-bottom: 10px;
+      padding: 64px 0px 0px;
+      margin-bottom: 24px;
 
       @media (max-width: 767px) {
         padding: 20px 10px;
@@ -70,6 +71,7 @@ footer {
       list-style-type: none;
 
       @media (max-width: 767px) {
+
         // Specific mobile overrides for general ULs
         &.ul-2,
         &.ul-3 {
@@ -102,7 +104,7 @@ footer {
     .ul-3 {
       display: flex;
       flex-direction: column;
-      gap: 60px;
+      gap: 40px;
       padding: 0;
     }
 
@@ -110,7 +112,7 @@ footer {
       display: flex;
       gap: 60px;
       justify-content: space-between;
-      padding: 30px 27px 0;
+      padding: 24px;
 
       li {
         width: 271px;
@@ -122,7 +124,7 @@ footer {
         justify-content: space-between;
         gap: 32px;
 
-        & > li {
+        &>li {
           flex: 1 1 calc(50% - 16px);
           min-width: 280px;
         }
@@ -133,7 +135,7 @@ footer {
         flex-direction: column;
         gap: 20px;
 
-        & > li {
+        &>li {
           flex: 1 1 100%;
         }
       }
@@ -148,7 +150,6 @@ footer {
       li a {
         text-decoration: none;
         font-weight: 400;
-        font-style: Regular;
         font-size: 16px;
         line-height: 100%;
         letter-spacing: -1%;
@@ -176,7 +177,7 @@ footer {
         border-top: 1px solid rgb(255 255 255 / 20%);
         padding-top: 20px;
 
-        & > li {
+        &>li {
           flex: 1 1 calc(50% - 12px);
           font-size: 15px;
           font-weight: 600;
@@ -200,7 +201,7 @@ footer {
         border-top: 1px solid rgb(255 255 255 / 20%);
         padding-top: 20px;
 
-        & > li {
+        &>li {
           font-size: 15px;
           font-weight: 600;
         }
@@ -227,6 +228,7 @@ footer {
       margin: 4px auto;
 
       li {
+
         // Shared styles for direct li children of ul-11, ul-12, ul-13
         &,
         .icon-chat-comment,
@@ -252,7 +254,7 @@ footer {
         line-height: 100%;
         letter-spacing: -1%;
         vertical-align: bottom;
-        color: #00525B;
+        color:$bg-reverse;
       }
     }
 
@@ -281,7 +283,7 @@ footer {
       display: flex;
       justify-content: space-between;
       margin: 5px;
-      background: #00525B;
+      background:$bg-reverse;
       border-radius: 10px;
       padding: 32px 27px;
 
@@ -305,18 +307,18 @@ footer {
         justify-content: space-between;
         gap: 20px;
 
-        & > li:first-child {
+        &>li:first-child {
           flex: 1 1 100%;
         }
 
-        & > li:not(:first-child) {
+        &>li:not(:first-child) {
           display: flex;
           justify-content: center;
           align-items: center;
           gap: 12px;
         }
 
-        & > li:not(:first-child) ul li {
+        &>li:not(:first-child) ul li {
           display: flex;
           gap: 8px;
         }
@@ -397,6 +399,7 @@ footer {
         margin: 0;
 
         li .icon {
+
           &.icon-linkedin,
           &.icon-fb,
           &.icon-insta,
@@ -426,7 +429,7 @@ footer {
       width: fit-content;
 
       a {
-        color: #00525B;
+        color:$bg-reverse;
       }
 
       li {
@@ -508,7 +511,7 @@ footer {
 }
 
 .section.tmb-sub-footer {
-  background: #F4F4F5;
+  background: $bg-reverse;
 
   @media screen and (max-width: 767px) {
     margin: unset;
@@ -524,10 +527,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 40px 26px;
-    margin: 0px auto;
-    max-width: 1308px;
-
+    @include responsive-container();
     @media screen and (max-width: 767px) {
       padding: 40px 12px;
     }
@@ -559,7 +559,7 @@ footer {
 
     .ul-1 {
       list-style-type: none;
-      padding-left: 0;
+      padding: 24px;
 
       @media screen and (max-width: 767px) {
         padding-left: 32px;
@@ -569,8 +569,6 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-left: 32px;
-        padding-right: 10px;
 
         @media screen and (max-width: 767px) {
           padding: unset;
@@ -583,7 +581,7 @@ footer {
           font-size: 12px;
           line-height: 100%;
           vertical-align: bottom;
-          color: #737373;
+          color: #FFFFFF;
           margin: 0;
         }
 
@@ -682,7 +680,7 @@ footer {
         font-size: 12px;
         letter-spacing: 0%;
         vertical-align: bottom;
-        color: #737373;
+        color: #FFFFFF;
 
         @media screen and (max-width: 767px) {
           text-align: center;
@@ -704,7 +702,7 @@ footer {
         font-size: 12px;
         line-height: 100%;
         vertical-align: bottom;
-        color: #737373;
+        color: #FFFFFF;
 
         @media screen and (max-width: 767px) {
           font-weight: 600;
@@ -721,9 +719,9 @@ footer {
         font-size: 12px;
         line-height: normal;
         vertical-align: bottom;
-        color: #737373;
+        color: #FFFFFF;
         text-decoration: underline;
-        text-decoration-color: #737373;
+        text-decoration-color: #FFFFFF;
       }
 
       li:nth-child(2) {
@@ -731,7 +729,7 @@ footer {
         font-size: 12px;
         line-height: normal;
         vertical-align: bottom;
-        color: #737373;
+        color: #FFFFFF;
 
         @media screen and (max-width: 767px) {
           font-weight: 400;
