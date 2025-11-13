@@ -20,7 +20,6 @@
 }
 
 .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details p{
-  font-family:var(--primary-font);
   font-size:16px;
   font-weight:500;
   line-height:24px;
@@ -28,7 +27,7 @@
 }
 
 .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-label{
-  color:#00525B;
+  color:var(--heading-default);
   cursor:pointer;
   font-size:24px;
   font-weight:700;
@@ -39,10 +38,6 @@
   position:relative;
   transition:background-color 0.2s;
   vertical-align:bottom;
-}
-
-.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-label:focus, .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-label:hover{
-  background-color:#EDEDED;
 }
 
 .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-label::-webkit-details-marker{
@@ -68,8 +63,7 @@
 }
 
 .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body p{
-  color:#0B231F;
-  font-family:var(--primary-font);
+  color:var(--body-default);
   font-size:16px;
   font-weight:400;
   line-height:24px;
