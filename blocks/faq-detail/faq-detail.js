@@ -39,33 +39,34 @@ export default async function decorate(block) {
     let rightSection = false;
 
     // ========== Build Sections + Right Nav ==========
-    faq.faqContentReference.forEach((content, i) => {
-      const id = content.sectionTitle.toLowerCase().replace(/\s+/g, "-");
-
-      // Right nav item
-      ulEl.append(
-        li(
-          span(`[${i + 1}]`),
-          a({ href: `#${id}` }, content.sectionTitle),
-        )
-      );
+    let numCount = 0;
+    faq.faqContentReference.forEach((content) => {
+      const id = content.sectionTitle?.toLowerCase().replace(/\s+/g, "-");
 
       if (content.sectionTitle) {
         rightSection = true;
+        numCount += 1;
+        ulEl.append(
+          li(
+            span(`[${numCount}]`),
+            a({ href: `#${id}` }, content.sectionTitle),
+          )
+        );
       }
 
       function htmlToElement(htmlString) {
+        if (!htmlString) return document.createElement('div');
         const template = document.createElement('template');
-        template.innerHTML = htmlString.trim();
+        template.innerHTML = htmlString?.trim();
         return template.content.firstChild;
       }
 
-      const paraEle = htmlToElement(content.sectionContent.html);
+      const paraEle = htmlToElement(content.sectionContent?.html);
 
       const subSection = div(
         { class: "sub-section-wrapper" },
-        h3({ id }, content.sectionTitle),
-        paraEle,
+        content.sectionTitle ? h3({ id }, content.sectionTitle) : '',
+        paraEle || '',
         (content.sectionImages && content.sectionImages.length > 0) ? div(
           { class: `img-${content.sectionImages.length}-grid` },
           ...content.sectionImages.map((imgData) =>
