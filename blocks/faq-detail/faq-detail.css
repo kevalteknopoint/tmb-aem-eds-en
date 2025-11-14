@@ -68,7 +68,7 @@ html{
   padding:0 0 30px;
 }
 
-.section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h1, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) p, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h2, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h4, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h5, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h6{
+.section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h1, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) p, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h2, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h4, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h5, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h6, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) li{
   color:var(--surface-prim-active-cta);
   font-family:var(--primary-font);
   font-size:16px;
@@ -76,6 +76,26 @@ html{
   font-weight:400;
   line-height:24px;
   padding-bottom:32px;
+}
+
+.section-wrapper .sub-section-wrapper:not(.right-section-wrapper) ul{
+  list-style-position:inside;
+  list-style-type:disc;
+  padding-bottom:32px;
+}
+
+.section-wrapper .sub-section-wrapper:not(.right-section-wrapper) ul li{
+  padding:0;
+}
+
+.section-wrapper .sub-section-wrapper:not(.right-section-wrapper) ol{
+  list-style-position:inside;
+  list-style-type:decimal;
+  padding-bottom:32px;
+}
+
+.section-wrapper .sub-section-wrapper:not(.right-section-wrapper) ol li{
+  padding:0;
 }
 
 .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) a{

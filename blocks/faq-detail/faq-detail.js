@@ -55,18 +55,18 @@ export default async function decorate(block) {
       }
 
       function htmlToElement(htmlString) {
-        if (!htmlString) return document.createElement('div');
+        if (!htmlString) return [document.createElement('div')];
         const template = document.createElement('template');
         template.innerHTML = htmlString?.trim();
-        return template.content.firstChild;
+        return Array.from(template.content.children);
       }
 
-      const paraEle = htmlToElement(content.sectionContent?.html);
+      const htmlElements = htmlToElement(content.sectionContent?.html);
 
       const subSection = div(
         { class: "sub-section-wrapper" },
         content.sectionTitle ? h3({ id }, content.sectionTitle) : '',
-        paraEle || '',
+        ...htmlElements || '',
         (content.sectionImages && content.sectionImages.length > 0) ? div(
           { class: `img-${content.sectionImages.length}-grid` },
           ...content.sectionImages.map((imgData) =>

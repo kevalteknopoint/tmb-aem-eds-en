@@ -464,6 +464,17 @@
         "value": "",
         "label": "Breadcrumb Text",
         "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Static Breadcrumb",
+            "value": "static-breadcrumb"
+          }
+        ]
       }
     ]
   },
