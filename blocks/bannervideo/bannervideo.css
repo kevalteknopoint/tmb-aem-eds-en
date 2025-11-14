@@ -41,7 +41,7 @@
   font-size:42px;
   font-style:normal;
   font-weight:400;
-  letter-spacing:-2px;
+  letter-spacing:2px;
   line-height:44px;
   text-transform:uppercase;
 }
@@ -89,7 +89,7 @@
   flex:1 0 0;
   flex-direction:column;
   gap:16px;
-  justify-content:space-between;
+  justify-content:flex-start;
   width:68%;
 }
 
@@ -189,7 +189,7 @@
   align-items:center;
   backdrop-filter:blur(18px);
   background:var(--bg-default);
-  border-radius:30px;
+  border-radius:var(--radius-button);
   display:flex;
   gap:10px;
   height:35px;
@@ -247,7 +247,7 @@
 }
 
 .secsecond .swiper-wrapper{
-  align-items:flex-start;
+  align-items:stretch;
   align-self:stretch;
   display:flex;
   gap:0;
@@ -260,7 +260,7 @@
   border-radius:var(--radius-card);
   display:flex;
   gap:19px;
-  height:181px;
+  height:auto;
   justify-content:flex-start;
   margin-right:24px;
   padding:20px;
@@ -310,7 +310,7 @@
 
 .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container > a{
   background-color:var(--bg-reverse);
-  border-radius:20px;
+  border-radius:var(--radius-button);
   color:var(--link-reverse);
   display:flex;
   font-size:16px;

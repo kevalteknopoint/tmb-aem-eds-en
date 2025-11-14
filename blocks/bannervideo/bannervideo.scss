@@ -114,7 +114,7 @@
     font-weight: 400;
     line-height: 44px;
     text-transform: uppercase;
-    letter-spacing: -2px;
+    letter-spacing: 2px;
   }
 
   & > p {
@@ -170,7 +170,7 @@
           display: flex;
           flex: 1 0 0;
           flex-direction: column;
-          justify-content: space-between;
+          justify-content: flex-start;
           gap: 16px;
           width: 68%;
 
@@ -311,7 +311,7 @@
           -webkit-backdrop-filter: blur(18px);
           align-items: center;
           background: $bg-default;
-          border-radius: 30px;
+          border-radius: $radius-button;
           display: flex;
           gap: 10px;
           height: 35px;
@@ -384,7 +384,7 @@
   }
 
   .swiper-wrapper {
-    align-items: flex-start;
+    align-items: stretch;
     align-self: stretch;
     display: flex;
     gap: 0;
@@ -404,7 +404,7 @@
       justify-content: flex-start;
       padding: 20px;
       width: 388px !important;
-      height: 181px;
+      height: auto;
       margin-right: 24px;
     }
 
@@ -479,7 +479,7 @@
 
         & > a {
           background-color: $bg-reverse;
-          border-radius: 20px;
+          border-radius: $radius-button;
           color: $link-reverse;
           display: flex;
           font-size: 16px;

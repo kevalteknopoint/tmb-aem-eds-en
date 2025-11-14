@@ -60,7 +60,7 @@
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile::after{
   background:#000;
-  border-radius:20px;
+  border-radius:var(--radius-card);
   content:"";
   height:100%;
   opacity:0.2;
@@ -89,7 +89,7 @@
 }
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-image{
-  border-radius:20px;
+  border-radius:var(--radius-card);
   cursor:pointer;
   font-size:0;
   height:500px;
@@ -98,7 +98,7 @@
 }
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-image img{
-  border-radius:20px;
+  border-radius:var(--radius-card);
   height:500px;
   -o-object-fit:cover;
      object-fit:cover;
@@ -111,7 +111,7 @@
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content{
   background-color:var(--bg-default);
-  border-radius:20px;
+  border-radius:var(--radius-card);
   bottom:0;
   display:block;
   margin:0 32px 32px;
@@ -148,7 +148,7 @@
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta .cta-link{
   background-color:var(--bg-reverse);
-  border-radius:50%;
+  border-radius:var(--radius-button);
   display:block;
   height:-moz-fit-content;
   height:fit-content;

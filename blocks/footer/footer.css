@@ -233,7 +233,7 @@ footer .footer > div{
 
 .section.tmb-footer .tmb-footer-wrapper .ul-17{
   background-color:white;
-  border-radius:24px;
+  border-radius:var(--radius-button);
   display:flex;
   padding:0;
   width:-moz-fit-content;
