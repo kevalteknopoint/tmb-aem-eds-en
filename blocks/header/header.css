@@ -168,7 +168,7 @@
 
 .header-actions-wrap .login-btn-wrap .login-btn{
   background-color:var(--bg-light-2);
-  border-radius:20px;
+  border-radius:var(--radius-button);
   color:var(--link-default);
   display:block;
   font-size:16px;
