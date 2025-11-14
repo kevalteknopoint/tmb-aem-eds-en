@@ -92,7 +92,7 @@ footer {
     .ul-1 {
       background: #fff;
       // padding: 5px;
-      border-radius: 10px;
+      border-radius: $radius-article-thumb;
       display: block; // Desktop default
 
       &.active {
@@ -295,7 +295,7 @@ footer {
       justify-content: space-between;
       margin: 5px;
       background: $bg-reverse;
-      border-radius: 10px;
+      border-radius: $radius-article-thumb;
       padding: 24px;
 
       @media (max-width: 1024px) {

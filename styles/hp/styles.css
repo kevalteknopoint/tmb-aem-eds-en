@@ -327,7 +327,7 @@ h1, h2, h3, h4, h5, h6{
   width:100%;
 }
 .momentum-saver-section .momentum-columns{
-  border-radius:24px;
+  border-radius:var(--radius-card);
   display:flex;
   padding:64px;
 }
@@ -407,7 +407,7 @@ h1, h2, h3, h4, h5, h6{
 }
 .momentum-saver-section .momentum-columns .momentum-second-content .button-container{
   background-color:var(--heading-default);
-  border-radius:24px;
+  border-radius:var(--radius-card);
   display:inline-flex;
   margin-bottom:unset;
   padding:8px 28.5px;
@@ -448,7 +448,7 @@ h1, h2, h3, h4, h5, h6{
   width:100%;
 }
 .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .columns-img-col img{
-  border-radius:24px;
+  border-radius:var(--radius-card);
 }
 .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2{
   font-family:var(--primary-font);
