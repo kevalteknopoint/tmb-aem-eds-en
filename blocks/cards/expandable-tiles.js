@@ -3,6 +3,7 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
 function htmlToElement(htmlString) {
+  if (!htmlString) return document.createElement('div');
   const template = document.createElement('template');
   template.innerHTML = htmlString.trim();
   return template.content.firstChild;
