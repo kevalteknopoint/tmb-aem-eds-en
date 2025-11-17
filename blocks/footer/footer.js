@@ -28,12 +28,12 @@ export default async function decorate(block) {
 
   const content = document.querySelectorAll('.tmb-footer .default-content-wrapper p');
   content.forEach((e, index) => {
-    e.classList.add(`para-${index + 1}`);
+    e.classList.add(`para-${index + 2}`);
   });
 
   const subcontent = document.querySelectorAll('.tmb-footer .tmb-footer-wrapper.default-content-wrapper p');
   subcontent.forEach((e, index) => {
-    e.classList.add(`para-${index + 1}`);
+    e.classList.add(`para-${index + 2}`);
   });
 
   const ul = document.querySelectorAll('.tmb-footer .tmb-footer-wrapper ul');

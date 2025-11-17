@@ -11,14 +11,7 @@ footer {
 
 .section.tmb-footer {
   background-color: $bg-reverse;
-  border: 1px solid$bg-reverse;
-  /* max-width: 1328px; */
-  // margin: 0 auto;
-  // padding-bottom: 70px;
-
-  @media (max-width: 767px) {
-    padding: 20px;
-  }
+  border: 1px solid $bg-reverse;
 
   .tmb-footer-wrapper {
     // max-width: 1328px;
@@ -518,6 +511,53 @@ footer {
   .para-9 {
     @media (max-width: 767px) {
       margin: unset;
+    }
+  }
+
+  .columns.block > div {    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 64px 0 24px;
+    flex-direction: row;
+
+    @include mobile {
+      padding-top: 32px
+    }
+
+    @include responsive-container();
+
+    & > div {
+      flex: unset;
+      width: fit-content;
+    }
+
+    .columns-img-col {
+      img {
+        height: 43px;
+        width: auto;
+      }
+    }
+
+    .button-container {
+      width: fit-content;
+
+      a {
+        display: flex;
+        gap: 8px;
+        background-color: $bg-default;
+        color: $link-default;
+        padding: 8px 16px;
+        font-size: 16px;
+        line-height: 24px;
+        width: fit-content;
+        border-radius: $radius-button;
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
     }
   }
 }
