@@ -266,6 +266,11 @@
     padding:0 16px 24px;
   }
 
+  .faq-frequently-question.faq-category-container .faq-category-wrapper ul{
+    margin-right:0;
+    padding:0;
+  }
+
   .faq-frequently-question.faq-category-container .faq-category-wrapper{
     width:100%;
   }
@@ -306,11 +311,6 @@
 
   .faq-frequently-question.faq-category-container .faq-category-wrapper{
     margin-right:0;
-  }
-
-  .faq-frequently-question.faq-category-container .faq-category-wrapper ul{
-    margin-right:0;
-    padding:0;
   }
 
   .faq-frequently-question-list .faq-category-wrapper .faq-category h1, .faq-frequently-question-list .faq-category-wrapper .faq-category h2, .faq-frequently-question-list .faq-category-wrapper .faq-category h3, .faq-frequently-question-list .faq-category-wrapper .faq-category h4, .faq-frequently-question-list .faq-category-wrapper .faq-category h5, .faq-frequently-question-list .faq-category-wrapper .faq-category h6{

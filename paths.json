@@ -2,7 +2,8 @@
   "mappings": [
     "/content/tmb/:/",
     "/content/tmb/configuration:/.helix/config.json",
-    "/content/tmb/metadata:/metadata.json"
+    "/content/tmb/metadata:/metadata.json",
+    "/content/tmb/placeholders:/placeholders.json"
   ],
   "includes": [
     "/content/tmb/"

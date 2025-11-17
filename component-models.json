@@ -657,12 +657,12 @@
       {
         "component": "text",
         "name": "css-link",
-        "label": "Css link"
+        "label": "Enter CSS Path"
       },
       {
         "component": "text",
         "name": "js-link",
-        "label": "JS link"
+        "label": "Enter JavaScript Path"
       },
       {
         "component": "text",
@@ -672,12 +672,57 @@
       {
         "component": "text",
         "name": "form-key",
-        "label": "Enter Form Key"
+        "label": "Enter Form API Key"
       },
       {
         "component": "text",
         "name": "action-link",
-        "label": "Enter action link"
+        "label": "Enter Action Link"
+      },
+      {
+        "name": "branch",
+        "component": "select",
+        "type": "select",
+        "label": "Select environment branch",
+        "options": [
+          {
+            "name": "Staging",
+            "value": "Staging"
+          },
+          {
+            "name": "Live",
+            "value": "Live"
+          }
+        ]
+      },
+      {
+        "name": "channel",
+        "component": "select",
+        "type": "select",
+        "label": "Select channel",
+        "options": [
+          {
+            "name": "TeacherTeachers Mutual Bank",
+            "value": "tmb"
+          },
+          {
+            "name": "Health Professionals Bank",
+            "value": "hpb"
+          },
+          {
+            "name": "Firefighters Mutual Bank",
+            "value": "fmb"
+          },
+          {
+            "name": "UniBank",
+            "value": "ub"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "config",
+        "label": "Enter Form Config"
       }
     ]
   }

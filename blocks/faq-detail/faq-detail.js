@@ -2,12 +2,15 @@ import {
   div, h1, h2, h3, p, a, ul, li, span,
   img,
 } from '../../scripts/dom-helpers.js';
+import { fetchPlaceholders } from '../../scripts/placeholders.js';
 
 export default async function decorate(block) {
   const secwrapper = document?.querySelector(".section-wrapper");
   if (!secwrapper) return;
 
-  const graphqlUrl = "https://publish-p162853-e1744823.adobeaemcloud.com/graphql/execute.json/tmb/faqDetailByPath;path=";
+  const placeholders = await fetchPlaceholders();
+
+  const graphqlUrl = `${placeholders.graphqlurl}faqDetailByPath;path=`;
 
   try {
     const fragUrl = block?.querySelector("a")?.getAttribute("href");
@@ -30,27 +33,40 @@ export default async function decorate(block) {
       p("On this page:"),
       ul({ class: "right-ul" })
     );
+
     const ulEl = subsectionAndRightSection.querySelector("ul");
 
+    let rightSection = false;
+
     // ========== Build Sections + Right Nav ==========
-    faq.faqContentReference.forEach((content, i) => {
-      const id = content.sectionTitle.toLowerCase().replace(/\s+/g, "-");
+    let numCount = 0;
+    faq.faqContentReference.forEach((content) => {
+      const id = content.sectionTitle?.toLowerCase().replace(/\s+/g, "-");
 
-      // Right nav item
-      ulEl.append(
-        li(
-          span(`[${i + 1}]`),
-          a({ href: `#${id}` }, content.sectionTitle),
-        )
-      );
+      if (content.sectionTitle) {
+        rightSection = true;
+        numCount += 1;
+        ulEl.append(
+          li(
+            span(`[${numCount}]`),
+            a({ href: `#${id}` }, content.sectionTitle),
+          )
+        );
+      }
 
-      const paraEle = p();
-      paraEle.innerHTML = content.sectionContent.plaintext?.replaceAll("\n", "<br>");
+      function htmlToElement(htmlString) {
+        if (!htmlString) return document.createElement('div');
+        const template = document.createElement('template');
+        template.innerHTML = htmlString?.trim();
+        return template.content.firstChild;
+      }
+
+      const paraEle = htmlToElement(content.sectionContent?.html);
 
       const subSection = div(
         { class: "sub-section-wrapper" },
-        h3({ id }, content.sectionTitle),
-        paraEle,
+        content.sectionTitle ? h3({ id }, content.sectionTitle) : '',
+        paraEle || '',
         (content.sectionImages && content.sectionImages.length > 0) ? div(
           { class: `img-${content.sectionImages.length}-grid` },
           ...content.sectionImages.map((imgData) =>
@@ -74,7 +90,11 @@ export default async function decorate(block) {
     });
 
     // Append right nav
-    secwrapper?.querySelector('.faq-detail-wrapper')?.replaceWith(subsectionAndRightSection);
+    if (rightSection) {
+      secwrapper?.querySelector('.faq-detail-wrapper')?.replaceWith(subsectionAndRightSection);
+    } else {
+      secwrapper?.querySelector('.faq-detail-wrapper')?.remove();
+    }
 
     setTimeout(() => {
       // ========== Smooth Scroll ==========

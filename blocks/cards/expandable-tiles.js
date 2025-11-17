@@ -4,6 +4,7 @@ import { button, div, img } from '../../scripts/dom-helpers.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
 function htmlToElement(htmlString) {
+  if (!htmlString) return document.createElement('div');
   const template = document.createElement('template');
   template.innerHTML = htmlString.trim();
   return template.content.firstChild;
