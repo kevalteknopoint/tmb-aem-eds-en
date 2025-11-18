@@ -1,3 +1,4 @@
+import { getMetadata } from "../../scripts/aem.js";
 import { img } from "../../scripts/dom-helpers.js";
 
 function htmlToElement(htmlString) {
@@ -32,8 +33,9 @@ function extractTitleFromHtml(rawHtml, pagePath) {
 
 async function getBreadcrumbName(pagePath, isCurrent) {
   // pagePath should be the full internal path, e.g., '/products/category-name'
+  const basePath = getMetadata('base-path');
   try {
-    const response = await fetch(`/au/en${pagePath}`);
+    const response = await fetch(`${basePath}${pagePath}`);
 
     if (!response.ok) {
       // Handle HTTP errors (e.g., 404)
@@ -46,7 +48,7 @@ async function getBreadcrumbName(pagePath, isCurrent) {
     const title = extractTitleFromHtml(rawHtml, pagePath, isCurrent);
 
     if (isCurrent) return title;
-    return `<a href="/au/en${pagePath}">${title}</a>`;
+    return `<a href="${basePath}${pagePath}">${title}</a>`;
   } catch (error) {
     console.error(`Error fetching or parsing ${pagePath}:`, error);
     // Fallback title derived from URL segment
@@ -69,9 +71,10 @@ export default async function decorate(block) {
     return;
   }
 
-  const urlPathArr = window.location.pathname.split("/").slice(3);
+  const basePath = getMetadata('base-path');
+  const urlPathArr = window.location.pathname.split("/").slice(4);
   const promiseArr = urlPathArr.map((_, index) => {
-    const path = window.location.pathname.split("/").slice(3, ((urlPathArr.length + 3) - index));
+    const path = window.location.pathname.split("/").slice(4, ((urlPathArr.length + 4) - index));
     return getBreadcrumbName(`/${path.join('/')}`, index === 0);
   });
   const resolvedPromises = await Promise.all(promiseArr);
@@ -82,6 +85,6 @@ export default async function decorate(block) {
     block.innerHTML = '';
     block.appendChild(lastBtn);
   } else {
-    block.innerHTML = `<a href="/au/en/">Home</a><span>/</span>${reversedArray.join("<span>/</span>")}`;
+    block.innerHTML = `<a href="${basePath}/">Home</a><span>/</span>${reversedArray.join("<span>/</span>")}`;
   }
 }
