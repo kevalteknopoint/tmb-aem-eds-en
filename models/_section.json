@@ -75,6 +75,10 @@
               "value": "momentum-image-saver"
             },
             {
+              "name": "Image Swapping",
+              "value": "image-swapping"
+            },
+            {
               "name": "Background Color Teal",
               "value": "background-color-teal"
             },
