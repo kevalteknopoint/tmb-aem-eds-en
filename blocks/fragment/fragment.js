@@ -51,7 +51,7 @@ export default async function decorate(block) {
     const fragmentSection = fragment.querySelector(':scope .section');
     if (fragmentSection) {
       block.classList.add(...fragmentSection.classList);
-      block.classList.remove('section');
+      // block.classList.remove('section');
       block.replaceChildren(...fragmentSection.childNodes);
     }
   }

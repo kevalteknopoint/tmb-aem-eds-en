@@ -1,10 +1,10 @@
 @use '../../styles/base' as *;
 
 .breadcrumb {
-  max-width: 1328px;
-  padding: 64px 32px 32px 32px;
-  width: 100%;
-  margin: 0 auto;
+  @include responsive-container();
+
+  padding-top: 64px;
+  padding-bottom: 32px;
   font-size: 14px;
   line-height: 24px;
   color: $text-primary;
@@ -13,9 +13,11 @@
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
+  text-transform: capitalize;
 
   @include mobile {
-    padding: 24px 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
 
     &:has(img) {
       padding-top: 44px;
