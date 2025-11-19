@@ -1,79 +1,12 @@
-@use '../reset';
+@forward './base-old';
 @import '../../libs/aos/aos.min.css';
 
 :root {
-  /* ---------- BORDER VARIABLES ---------- */
-
-  --border-primary: #222; /* from "border-primary" */
-  --border-brand: #003764;   /* from "border-brand" */
-  --border-error: #fff;   /* from "border-error" */
-
-  /* ---------- BORDER VARIABLES ---------- */
-
-
-  /* ---------- TEXT VARIABLES ---------- */
-
-  --text-primary: #222; /* from "text-primary" */
-  --text-secondary: #f7c0b3; /* from "text-secondary" */
-  --text-inverse: #f7c0b3; /* from "text-inverse" */
-  --text-light: #f7c0b3; /* from "text-light" */
-  --text-brand: #003764; /* from "text-brand" */
-  --text-brand-secondary: #fff; /* from "text-brand secondary" */
-
-  /* -------------------- */
-  --text-primary-cta: #fafafa; /* from "text-primarycta" */
-  --text-secondary-cta: #fafafa; /* from "text-secondarycta" */
-  --text-accent-cta: #fafafa; /* from "text-accentcta" */
-  --text-disabled: #d9dadb; /* from "text-disabled" */
-  --text-error: #fff; /* from "text-error" */
-
-  /* -------------------- */
-  --text-ghost-default: #fff; /* from "text -ghost default" */
-  --text-ghost-hover: #fff; /* from "text -ghost hover" */
-  --text-ghost-focused: #fff; /* from "text -ghost focused" */
-  --text-ghost-disabled: #fff; /* from "text -ghost disabled" */
-  --text-ghost-active: #fff; /* from "text -ghost active" */
-
-  /* ---------- TEXT VARIABLES ---------- */
-
-
-  /* ---------- SURFACE VARIABLES ---------- */
-  
-  --surface-primary: #f4f4f5; /* from "surface-primary" */
-  --surface-secondary: #d9dadb; /* from "surface-secondary" */
-  --surface-overlay: #565659; /* from "surface-overlay" */
-  --surface-brand: #172983; /* from "surface-brand" */
-  --surface-light: #fff; /* from "surface-light" */
-  --surface-login-cta: #f7c0b3; /* from "surface-login cta" */
-
-  /* -------------------- */
-  --surface-primary-cta: #a2daf3; /* from "surface-primary cta" */
-  --surface-prim-hover-cta: #f7c0b3; /* from "surface-primhover cta" */
-  --surface-prim-active-cta: #172983; /* from "surface-primactive cta" */
-
-  /* -------------------- */
-  --surface-secondary-cta: #a2daf3; /* from "surface-secondary cta" */
-  --surface-sec-hover-cta: #f7c0b3; /* from "surface-sechover cta" */
-
-  /* -------------------- */
-  --surface-accent-cta: #172983; /* from "surface-accent cta" */
-  --surface-accent-hover-cta: #f7c0b3; /* from "surface-accenthover cta" */
-  --surface-accent-active-cta: #f7c0b3; /* from "surface-accentactive cta" */
-
-  /* -------------------- */
-  --surface-disabled-cta: #efefef; /* from "surface-disabledcta" */
-  --surface-highlight: #efefef; /* from "surface-highlight" */
-
-  /* ---------- SURFACE VARIABLES ---------- */
-
-
   /* ---------- FONTS VARIABLES ---------- */
-
   --primary-font: 'Inter', system-ui, -apple-system, 'BlinkMacSystemFont', "Segoe UI", 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  --secondary-font: 'Roboto', system-ui, -apple-system, 'BlinkMacSystemFont', "Segoe UI", 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  
-  /* ---------- FONT FAMILY VARIABLES ---------- */
-  
+  --secondary-font: 'Roboto', system-ui, -apple-system, 'BlinkMacSystemFont', "Segoe UI", 'Roboto', 'Helvetica', 'Arial', sans-serif;  
+
+  /* ---------- CUSTOM VARIABLES ---------- */
   --gradient-1: #d4eefc;
   --radius-button: 24px;
   --radius-card: 24px;
@@ -82,74 +15,272 @@
   --radius-article-thumb: 10px;
 
   /* ---------- OTHER VARIABLES ---------- */
-  --bg-accent: #f7c0b3;
-  --bg-default: #ffffff;
-  --bg-light-2: #d4eefc;
-  --bg-light-3: #a2daf3;
-  --bg-light: #f7f7f7;
-  --bg-reverse-2: #172983;
-  --bg-reverse: #172983;
-  --body-accent: #525257;
-  --body-default: #525257;
-  --body-light-2: #525257;
-  --body-light-3: #525257;
-  --body-light: #525257;
-  --body-reverse-2: #d4eefc;
-  --body-reverse: #ffffff;
-  --burst-accent: #172983;
-  --burst-default: #f7c0b3;
-  --burst-light-2: #f7c0b3;
-  --burst-light-3: #f7c0b3;
-  --burst-light: #f7c0b3;
-  --burst-reverse-2: #f7c0b3;
-  --burst-reverse: #f7c0b3;
-  --heading-accent: #172983;
-  --heading-default: #172983;
-  --heading-light-2: #172983;
-  --heading-light-3: #172983;
-  --heading-light: #172983;
-  --heading-reverse-2: #d4eefc;
-  --heading-reverse: #ffffff;
-  --icon-2-accent: #172983;
-  --icon-2-default: #172983;
-  --icon-2-light-2: #172983;
-  --icon-2-light-3: #172983;
-  --icon-2-light: #172983;
-  --icon-2-reverse-2: #d4eefc;
-  --icon-2-reverse: #ffffff;
-  --icon-accent: #f7c0b3;
-  --icon-bg-accent: #172983;
-  --icon-bg-default: #172983;
-  --icon-bg-light-2: #ffffff;
-  --icon-bg-light-3: #ffffff;
-  --icon-bg-light: #ffffff;
-  --icon-bg-reverse-2: #d4eefc;
-  --icon-bg-reverse: #ffffff;
-  --icon-default: #ffffff;
-  --icon-light-2: #172983;
-  --icon-light-3: #172983;
-  --icon-light: #172983;
-  --icon-reverse-2: #172983;
-  --icon-reverse: #172983;
-  --line-accent: #00000033;
-  --line-default: #00000033;
-  --line-light-2: #00000033;
-  --line-light-3: #00000033;
-  --line-light: #00000033;
-  --line-reverse-2: #ffffff1a;
-  --line-reverse: #ffffff1a;
-  --link-accent: #172983;
-  --link-default: #172983;
-  --link-light-2: #172983;
-  --link-light-3: #172983;
-  --link-light: #172983;
-  --link-reverse-2: #d4eefc;
-  --link-reverse: #ffffff;
-  --stroke-accent: #f7c0b3;
-  --stroke-default: #172983;
-  --stroke-light-2: #172983;
-  --stroke-light-3: #172983;
-  --stroke-light: #172983;
-  --stroke-reverse-2: #ffffff;
-  --stroke-reverse: #ffffff;
+  --color-button-outlined-default: #ffffff03; /* from "color/button/outlined/default" */
+  --color-button-outlined-hover: #1729831a; /* from "color/button/outlined/hover" */
+  --color-button-outlined-press: #17298333; /* from "color/button/outlined/press" */
+  --color-button-outlined-reverse-default: #ffffff03; /* from "color/button/outlined-reverse/default" */
+  --color-button-outlined-reverse-hover: #0000000d; /* from "color/button/outlined-reverse/hover" */
+  --color-button-outlined-reverse-press: #0000001a; /* from "color/button/outlined-reverse/press" */
+  --color-button-primary-default: #172983; /* from "color/button/primary/default" */
+  --color-button-primary-hover: #162573; /* from "color/button/primary/hover" */
+  --color-button-primary-press: #101b55; /* from "color/button/primary/press" */
+  --color-button-secondary-default: #a2daf3; /* from "color/button/secondary/default" */
+  --color-button-secondary-hover: #7ccaed; /* from "color/button/secondary/hover" */
+  --color-button-secondary-press: #57bbe8; /* from "color/button/secondary/press" */
+  --color-button-text-stroke-default: #172983; /* from "color/button/text-stroke/default" */
+  --color-button-text-stroke-hover: #162573; /* from "color/button/text-stroke/hover" */
+  --color-button-text-stroke-press: #101b55; /* from "color/button/text-stroke/press" */
+  --color-button-text-stroke-reverse: #ffffff; /* from "color/button/text-stroke/reverse" */
+  --color-button-white-default: #ffffff; /* from "color/button/white/default" */
+  --color-button-white-hover: #d4eefc; /* from "color/button/white/hover" */
+  --color-button-white-press: #d4eefc; /* from "color/button/white/press" */
+  --color-focus-default: #00589e; /* from "color/focus/default" */
+  --color-focus-reversed: #ffffff; /* from "color/focus/reversed" */
+  --color-footer-info: #17298312; /* from "color/footer/info" */
+  --color-header-frame: #f7f7f7; /* from "color/header/frame" */
+  --color-header-icon-2: #172983; /* from "color/header/icon-2" */
+  --color-header-icon: #003764; /* from "color/header/icon" */
+  --color-header-light: #d4eefc; /* from "color/header/light" */
+  --color-header-nav-primary: #172983; /* from "color/header/nav/primary" */
+  --color-header-nav-secondary: #172983; /* from "color/header/nav/secondary" */
+  --color-header-nav: #ffffff; /* from "color/header/nav" */
+  --color-header-search: #f7f7f7; /* from "color/header/search" */
+  --color-pagination-secondary-nav: #f7f7f7; /* from "color/pagination/secondary-nav" */
+  --color-pagination-selected: #172983; /* from "color/pagination/selected" */
+  --color-pagination-surface: #ffffff; /* from "color/pagination/surface" */
+  --color-pagination-unselected: #17298399; /* from "color/pagination/unselected" */
+  --color-placeholder-default: #17298399; /* from "color/placeholder/default" */
+  --color-placeholder-reverse-2: #ffffff4d; /* from "color/placeholder/reverse-2" */
+  --color-placeholder-reverse: #ffffff99; /* from "color/placeholder/reverse" */
+  --color-variants-bg-accent: #f7c0b3; /* from "color/variants/bg/accent" */
+  --color-variants-bg-default: #ffffff; /* from "color/variants/bg/default" */
+  --color-variants-bg-light-1: #f7f7f7; /* from "color/variants/bg/light-1" */
+  --color-variants-bg-light-2: #d4eefc; /* from "color/variants/bg/light-2" */
+  --color-variants-bg-light-3: #a2daf3; /* from "color/variants/bg/light-3" */
+  --color-variants-bg-promo: #172983; /* from "color/variants/bg/promo" */
+  --color-variants-bg-reverse: #172983; /* from "color/variants/bg/reverse" */
+  --color-variants-body-default: #525257; /* from "color/variants/body/default" */
+  --color-variants-body-reverse-2: #d4eefc; /* from "color/variants/body/reverse-2" */
+  --color-variants-body-reverse: #ffffff; /* from "color/variants/body/reverse" */
+  --color-variants-burst-default: #f7c0b3; /* from "color/variants/burst/default" */
+  --color-variants-burst-reverse: #172983; /* from "color/variants/burst/reverse" */
+  --color-variants-heading-default: #172983; /* from "color/variants/heading/default" */
+  --color-variants-heading-reverse-2: #d4eefc; /* from "color/variants/heading/reverse-2" */
+  --color-variants-heading-reverse: #ffffff; /* from "color/variants/heading/reverse" */
+  --color-variants-icon-accent: #f7c0b3; /* from "color/variants/icon/accent" */
+  --color-variants-icon-default: #172983; /* from "color/variants/icon/default" */
+  --color-variants-icon-reverse-2: #d4eefc; /* from "color/variants/icon/reverse-2" */
+  --color-variants-icon-reverse: #ffffff; /* from "color/variants/icon/reverse" */
+  --color-variants-line-default: #00000033; /* from "color/variants/line/default" */
+  --color-variants-line-reverse: #ffffff1a; /* from "color/variants/line/reverse" */
+  --color-variants-link-default: #172983; /* from "color/variants/link/default" */
+  --color-variants-link-reverse-2: #d4eefc; /* from "color/variants/link/reverse-2" */
+  --color-variants-link-reverse: #ffffff; /* from "color/variants/link/reverse" */
+  --color-variants-stroke-accent: #f7c0b3; /* from "color/variants/stroke/accent" */
+  --color-variants-stroke-primary: #172983; /* from "color/variants/stroke/primary" */
+  --color-variants-stroke-reversed-2: #ffffff; /* from "color/variants/stroke/reversed-2" */
+  --color-variants-stroke-reversed: #ffffff; /* from "color/variants/stroke/reversed" */
+  --color-variants-stroke-secondary: #525257; /* from "color/variants/stroke/secondary" */
+  --font-d-height-body: 24px; /* from "font/--D/height/body" */
+  --font-d-height-disc: 18px; /* from "font/--D/height/disc" */
+  --font-d-height-h1-std: 44px; /* from "font/--D/height/h1-std" */
+  --font-d-height-h1: 44px; /* from "font/--D/height/h1" */
+  --font-d-height-h2-std: 39px; /* from "font/--D/height/h2-std" */
+  --font-d-height-h2: 36px; /* from "font/--D/height/h2" */
+  --font-d-height-h3: 29px; /* from "font/--D/height/h3" */
+  --font-d-height-h4: 24px; /* from "font/--D/height/h4" */
+  --font-d-height-h5: 24px; /* from "font/--D/height/h5" */
+  --font-d-height-intro: 36px; /* from "font/--D/height/intro" */
+  --font-d-height-lg: 64px; /* from "font/--D/height/lg" */
+  --font-d-height-sm-body: 21px; /* from "font/--D/height/sm-body" */
+  --font-d-size-body: 16px; /* from "font/--D/size/body" */
+  --font-d-size-disc: 12px; /* from "font/--D/size/disc" */
+  --font-d-size-h1-std: 40px; /* from "font/--D/size/h1-std" */
+  --font-d-size-h1: 40px; /* from "font/--D/size/h1" */
+  --font-d-size-h2-std: 32px; /* from "font/--D/size/h2-std" */
+  --font-d-size-h2: 32px; /* from "font/--D/size/h2" */
+  --font-d-size-h3: 24px; /* from "font/--D/size/h3" */
+  --font-d-size-h4: 20px; /* from "font/--D/size/h4" */
+  --font-d-size-h5: 16px; /* from "font/--D/size/h5" */
+  --font-d-size-intro: 24px; /* from "font/--D/size/intro" */
+  --font-d-size-lg: 60px; /* from "font/--D/size/lg" */
+  --font-d-size-sm-body: 14px; /* from "font/--D/size/sm-body" */
+  --font-family-body-bold: Inter; /* from "font/family/body-bold" */
+  --font-family-body: Inter; /* from "font/family/body" */
+  --font-family-disc: Inter; /* from "font/family/disc" */
+  --font-family-h1-std: Roboto; /* from "font/family/h1-std" */
+  --font-family-h1: Roboto; /* from "font/family/h1" */
+  --font-family-h2-std: Roboto; /* from "font/family/h2-std" */
+  --font-family-h2: Roboto; /* from "font/family/h2" */
+  --font-family-h3: Inter; /* from "font/family/h3" */
+  --font-family-h4: Inter; /* from "font/family/h4" */
+  --font-family-h5: Inter; /* from "font/family/h5" */
+  --font-family-intro: Inter; /* from "font/family/intro" */
+  --font-family-lg: Roboto; /* from "font/family/lg" */
+  --font-family-sm-body: Inter; /* from "font/family/sm-body" */
+  --font-letter-spacing-body: 0px; /* from "font/letter-spacing/body" */
+  --font-letter-spacing-disc: 0px; /* from "font/letter-spacing/disc" */
+  --font-letter-spacing-h1-std: -1px; /* from "font/letter-spacing/h1-std" */
+  --font-letter-spacing-h1: -1px; /* from "font/letter-spacing/h1" */
+  --font-letter-spacing-h2-std: 0px; /* from "font/letter-spacing/h2-std" */
+  --font-letter-spacing-h2: -1px; /* from "font/letter-spacing/h2" */
+  --font-letter-spacing-h3: 0px; /* from "font/letter-spacing/h3" */
+  --font-letter-spacing-h4: 0px; /* from "font/letter-spacing/h4" */
+  --font-letter-spacing-h5: 0px; /* from "font/letter-spacing/h5" */
+  --font-letter-spacing-intro: 0px; /* from "font/letter-spacing/intro" */
+  --font-letter-spacing-lg: -1px; /* from "font/letter-spacing/lg" */
+  --font-letter-spacing-sm-body: 0px; /* from "font/letter-spacing/sm-body" */
+  --font-m-height-body: 24px; /* from "font/--M/height/body" */
+  --font-m-height-disc: 18px; /* from "font/--M/height/disc" */
+  --font-m-height-h1-std: 38px; /* from "font/--M/height/h1-std" */
+  --font-m-height-h1: 38px; /* from "font/--M/height/h1" */
+  --font-m-height-h2-std: 38px; /* from "font/--M/height/h2-std" */
+  --font-m-height-h2: 32px; /* from "font/--M/height/h2" */
+  --font-m-height-h3: 29px; /* from "font/--M/height/h3" */
+  --font-m-height-h4: 24px; /* from "font/--M/height/h4" */
+  --font-m-height-h5: 24px; /* from "font/--M/height/h5" */
+  --font-m-height-intro: 36px; /* from "font/--M/height/intro" */
+  --font-m-height-lg: 53px; /* from "font/--M/height/lg" */
+  --font-m-height-sm-body: 21px; /* from "font/--M/height/sm-body" */
+  --font-m-size-body: 16px; /* from "font/--M/size/body" */
+  --font-m-size-disc: 12px; /* from "font/--M/size/disc" */
+  --font-m-size-h1-std: 38px; /* from "font/--M/size/h1-std" */
+  --font-m-size-h1: 38px; /* from "font/--M/size/h1" */
+  --font-m-size-h2-std: 32px; /* from "font/--M/size/h2-std" */
+  --font-m-size-h2: 32px; /* from "font/--M/size/h2" */
+  --font-m-size-h3: 24px; /* from "font/--M/size/h3" */
+  --font-m-size-h4: 20px; /* from "font/--M/size/h4" */
+  --font-m-size-h5: 16px; /* from "font/--M/size/h5" */
+  --font-m-size-intro: 24px; /* from "font/--M/size/intro" */
+  --font-m-size-lg: 44px; /* from "font/--M/size/lg" */
+  --font-m-size-sm-body: 14px; /* from "font/--M/size/sm-body" */
+  --font-t-height-body: 24px; /* from "font/--T/height/body" */
+  --font-t-height-disc: 18px; /* from "font/--T/height/disc" */
+  --font-t-height-h1-std: 44px; /* from "font/--T/height/h1-std" */
+  --font-t-height-h1: 44px; /* from "font/--T/height/h1" */
+  --font-t-height-h2-std: 39px; /* from "font/--T/height/h2-std" */
+  --font-t-height-h2: 39px; /* from "font/--T/height/h2" */
+  --font-t-height-h3: 29px; /* from "font/--T/height/h3" */
+  --font-t-height-h4: 24px; /* from "font/--T/height/h4" */
+  --font-t-height-h5: 24px; /* from "font/--T/height/h5" */
+  --font-t-height-intro: 36px; /* from "font/--T/height/intro" */
+  --font-t-height-lg: 62px; /* from "font/--T/height/lg" */
+  --font-t-height-sm-body: 21px; /* from "font/--T/height/sm-body" */
+  --font-t-size-body: 16px; /* from "font/--T/size/body" */
+  --font-t-size-disc: 12px; /* from "font/--T/size/disc" */
+  --font-t-size-h1-std: 40px; /* from "font/--T/size/h1-std" */
+  --font-t-size-h1: 40px; /* from "font/--T/size/h1" */
+  --font-t-size-h2-std: 32px; /* from "font/--T/size/h2-std" */
+  --font-t-size-h2: 32px; /* from "font/--T/size/h2" */
+  --font-t-size-h3: 24px; /* from "font/--T/size/h3" */
+  --font-t-size-h4: 20px; /* from "font/--T/size/h4" */
+  --font-t-size-h5: 16px; /* from "font/--T/size/h5" */
+  --font-t-size-intro: 24px; /* from "font/--T/size/intro" */
+  --font-t-size-lg: 52px; /* from "font/--T/size/lg" */
+  --font-t-size-sm-body: 14px; /* from "font/--T/size/sm-body" */
+  --font-weight-body-bold: 'Semi Bold'; /* from "font/weight/body-bold" */
+  --font-weight-body: Regular; /* from "font/weight/body" */
+  --font-weight-disc: Regular; /* from "font/weight/disc" */
+  --font-weight-h1-std: Medium; /* from "font/weight/h1-std" */
+  --font-weight-h1: Medium; /* from "font/weight/h1" */
+  --font-weight-h2-std: Medium; /* from "font/weight/h2-std" */
+  --font-weight-h2: Medium; /* from "font/weight/h2" */
+  --font-weight-h3: Medium; /* from "font/weight/h3" */
+  --font-weight-h4: Medium; /* from "font/weight/h4" */
+  --font-weight-h5: Medium; /* from "font/weight/h5" */
+  --font-weight-intro: Regular; /* from "font/weight/intro" */
+  --font-weight-lg: Medium; /* from "font/weight/lg" */
+  --font-weight-sm-body: Regular; /* from "font/weight/sm-body" */
+  --lg-rate: 150px; /* from "lg-rate" */
+  --radius-article-thumb: 10px; /* from "radius/article-thumb" */
+  --radius-button: 24px; /* from "radius/button" */
+  --radius-card: 24px; /* from "radius/card" */
+  --radius-footer-card: 12px; /* from "radius/footer-card" */
+  --radius-hero: 40px; /* from "radius/hero" */
+  --radius-menu-link: 0px; /* from "radius/menu-link" */
+  --stroke-button: 2px; /* from "stroke/button" */
+  --width-logo-lg: 150px; /* from "width/logo/lg" */
+  --width-logo-sm: 100px; /* from "width/logo/sm" */
+
+  /* --- VARIANTS (Mapped) --- */
+  --bg-accent: var(--color-variants-bg-accent);
+  --bg-default: var(--color-variants-bg-default);
+  --bg-light-2: var(--color-variants-bg-light-2);
+  --bg-light-3: var(--color-variants-bg-light-3);
+  --bg-light: var(--color-variants-bg-light-1);
+  --bg-reverse-2: var(--color-variants-bg-reverse);
+  --bg-reverse: var(--color-variants-bg-reverse);
+  --bg-transparent: var(--color-variants-bg-accent);
+  --body-accent: var(--color-variants-body-default);
+  --body-default: var(--color-variants-body-default);
+  --body-light-2: var(--color-variants-body-default);
+  --body-light-3: var(--color-variants-body-default);
+  --body-light: var(--color-variants-body-default);
+  --body-reverse-2: var(--color-variants-body-reverse-2);
+  --body-reverse: var(--color-variants-body-reverse);
+  --body-transparent: var(--color-variants-body-default);
+  --burst-accent: var(--color-variants-burst-reverse);
+  --burst-default: var(--color-variants-burst-default);
+  --burst-light-2: var(--color-variants-burst-default);
+  --burst-light-3: var(--color-variants-burst-default);
+  --burst-light: var(--color-variants-burst-default);
+  --burst-reverse-2: var(--color-variants-burst-default);
+  --burst-reverse: var(--color-variants-burst-default);
+  --burst-transparent: var(--color-variants-burst-reverse);
+  --heading-accent: var(--color-variants-heading-default);
+  --heading-default: var(--color-variants-heading-default);
+  --heading-light-2: var(--color-variants-heading-default);
+  --heading-light-3: var(--color-variants-heading-default);
+  --heading-light: var(--color-variants-heading-default);
+  --heading-reverse-2: var(--color-variants-heading-reverse-2);
+  --heading-reverse: var(--color-variants-heading-reverse);
+  --heading-transparent: var(--color-variants-heading-default);
+  --icon-2-accent: var(--color-variants-heading-default);
+  --icon-2-default: var(--color-variants-icon-default);
+  --icon-2-light-2: var(--color-variants-icon-default);
+  --icon-2-light-3: var(--color-variants-icon-default);
+  --icon-2-light: var(--color-variants-icon-default);
+  --icon-2-reverse-2: var(--color-variants-icon-reverse-2);
+  --icon-2-reverse: var(--color-variants-icon-reverse);
+  --icon-2-transparent: var(--color-variants-heading-default);
+  --icon-accent: var(--color-variants-icon-accent);
+  --icon-bg-accent: var(--color-variants-bg-reverse);
+  --icon-bg-default: var(--color-variants-bg-reverse);
+  --icon-bg-light-2: var(--color-variants-bg-default);
+  --icon-bg-light-3: var(--color-variants-bg-default);
+  --icon-bg-light: var(--color-variants-bg-default);
+  --icon-bg-reverse-2: var(--color-variants-bg-light-2);
+  --icon-bg-reverse: var(--color-variants-bg-default);
+  --icon-bg-transparent: var(--color-variants-bg-reverse);
+  --icon-default: var(--color-variants-icon-reverse);
+  --icon-light-2: var(--color-variants-icon-default);
+  --icon-light-3: var(--color-variants-icon-default);
+  --icon-light: var(--color-variants-icon-default);
+  --icon-reverse-2: var(--color-variants-icon-default);
+  --icon-reverse: var(--color-variants-icon-default);
+  --icon-transparent: var(--color-variants-icon-accent);
+  --line-accent: var(--color-variants-line-default);
+  --line-default: var(--color-variants-line-default);
+  --line-light-2: var(--color-variants-line-default);
+  --line-light-3: var(--color-variants-line-default);
+  --line-light: var(--color-variants-line-default);
+  --line-reverse-2: var(--color-variants-line-reverse);
+  --line-reverse: var(--color-variants-line-reverse);
+  --line-transparent: var(--color-variants-line-default);
+  --link-accent: var(--color-variants-link-default);
+  --link-default: var(--color-variants-link-default);
+  --link-light-2: var(--color-variants-link-default);
+  --link-light-3: var(--color-variants-link-default);
+  --link-light: var(--color-variants-link-default);
+  --link-reverse-2: var(--color-variants-link-reverse-2);
+  --link-reverse: var(--color-variants-link-reverse);
+  --link-transparent: var(--color-variants-link-default);
+  --stroke-accent: var(--color-variants-stroke-accent);
+  --stroke-default: var(--color-variants-stroke-primary);
+  --stroke-light-2: var(--color-variants-stroke-primary);
+  --stroke-light-3: var(--color-variants-stroke-primary);
+  --stroke-light: var(--color-variants-stroke-primary);
+  --stroke-reverse-2: var(--color-variants-stroke-reversed-2);
+  --stroke-reverse: var(--color-variants-stroke-reversed);
+  --stroke-transparent: var(--color-variants-stroke-accent);
 }

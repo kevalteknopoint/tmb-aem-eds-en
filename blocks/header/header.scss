@@ -2,10 +2,15 @@
 
 .header.block {
   width: 100%;
+  min-height: 141px;
   height: fit-content;
   display: flex;
   flex-direction: column;
   background-color: $bg-default;
+
+  @include mobile {
+    min-height: 60px;
+  }
 }
 
 .secondary-header-wrap {

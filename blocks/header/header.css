@@ -4,6 +4,7 @@
   flex-direction:column;
   height:-moz-fit-content;
   height:fit-content;
+  min-height:141px;
   width:100%;
 }
 
@@ -234,6 +235,10 @@
 }
 
 @media screen and (max-width: 767px){
+  .header.block{
+    min-height:60px;
+  }
+
   .secondary-header-wrap{
     display:none;
     padding-inline:16px;
