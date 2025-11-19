@@ -267,3 +267,11 @@
     }
   }
 }
+.image-swapping.momentum-saver-section .momentum-columns > div {
+  flex-direction: row-reverse;
+  gap: 80px;
+  @include mobile{
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
+}
