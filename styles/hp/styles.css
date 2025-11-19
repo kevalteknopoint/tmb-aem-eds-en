@@ -466,6 +466,10 @@ h1, h2, h3, h4, h5, h6{
   --stroke-transparent:var(--color-variants-stroke-accent);
 }
 
+header{
+  min-height:141px;
+}
+
 .d-none{
   display:none !important;
 }
@@ -786,6 +790,9 @@ h1, h2, h3, h4, h5, h6{
   }
 }
 @media screen and (max-width: 767px){
+  header{
+    min-height:60px;
+  }
   .spacer-bottom{
     margin-bottom:40px;
   }

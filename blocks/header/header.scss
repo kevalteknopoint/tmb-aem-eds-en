@@ -1,13 +1,5 @@
 @use '../../styles/base' as *;
 
-header {
-  min-height: 141px;
-
-  @include mobile {
-    min-height: 60px;
-  }
-}
-
 .header.block {
   width: 100%;
   height: fit-content;

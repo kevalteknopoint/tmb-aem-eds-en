@@ -1,5 +1,13 @@
 @use './mixins' as *;
 
+header {
+  min-height: 141px;
+
+  @include mobile {
+    min-height: 60px;
+  }
+}
+
 .d-none {
   display: none !important;
 }
