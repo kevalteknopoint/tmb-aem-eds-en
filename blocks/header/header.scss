@@ -1,16 +1,19 @@
 @use '../../styles/base' as *;
 
-.header.block {
-  width: 100%;
+header {
   min-height: 141px;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  background-color: $bg-default;
 
   @include mobile {
     min-height: 60px;
   }
+}
+
+.header.block {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background-color: $bg-default;
 }
 
 .secondary-header-wrap {

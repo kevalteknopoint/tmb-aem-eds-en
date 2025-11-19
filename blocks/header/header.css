@@ -1,10 +1,13 @@
+header{
+  min-height:141px;
+}
+
 .header.block{
   background-color:var(--bg-default);
   display:flex;
   flex-direction:column;
   height:-moz-fit-content;
   height:fit-content;
-  min-height:141px;
   width:100%;
 }
 
@@ -235,7 +238,7 @@
 }
 
 @media screen and (max-width: 767px){
-  .header.block{
+  header{
     min-height:60px;
   }
 
