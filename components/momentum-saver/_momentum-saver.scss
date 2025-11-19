@@ -267,11 +267,20 @@
     }
   }
 }
-.image-swapping.momentum-saver-section .momentum-columns > div {
-  flex-direction: row-reverse;
-  gap: 80px;
-  @include mobile{
-    flex-direction: column-reverse;
-    gap: 32px;
+
+.momentum-saver-section.momentum-image-saver.image-swapping {
+  .columns-wrapper {
+    .momentum-columns {
+
+      div {
+        flex-direction: row-reverse;
+        gap: 80px;
+
+        @include mobile {
+          flex-direction: column-reverse;
+          gap: 32px;
+        }
+      }
+    }
   }
 }

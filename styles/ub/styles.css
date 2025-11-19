@@ -472,7 +472,7 @@ h1, h2, h3, h4, h5, h6{
   color:var(--stroke-default);
 }
 
-.image-swapping.momentum-saver-section .momentum-columns > div{
+.momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div{
   flex-direction:row-reverse;
   gap:80px;
 }
@@ -598,7 +598,7 @@ h1, h2, h3, h4, h5, h6{
   .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2{
     font-size:38px;
   }
-  .image-swapping.momentum-saver-section .momentum-columns > div{
+  .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div{
     flex-direction:column-reverse;
     gap:32px;
   }
