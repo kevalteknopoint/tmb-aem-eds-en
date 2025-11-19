@@ -470,6 +470,12 @@ h1, h2, h3, h4, h5, h6{
 .momentum-image-saver.bg-image-saver .momentum-second-content .button-container a{
   color:var(--stroke-default);
 }
+
+.image-swapping .momentum-columns > div{
+  flex-direction:row-reverse;
+  gap:80px;
+}
+
 @media screen and (max-width: 1279px){
   .top-margin{
     margin-top:64px;
@@ -490,6 +496,7 @@ h1, h2, h3, h4, h5, h6{
     padding-inline:24px;
   }
 }
+
 @media screen and (max-width: 1023px){
   .spacer-bottom{
     margin-bottom:60px;
@@ -510,6 +517,7 @@ h1, h2, h3, h4, h5, h6{
     font-size:38px;
   }
 }
+
 @media screen and (max-width: 767px){
   .spacer-bottom{
     margin-bottom:40px;
@@ -589,7 +597,11 @@ h1, h2, h3, h4, h5, h6{
   .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2{
     font-size:38px;
   }
+  .image-swapping .momentum-columns > div{
+    flex-direction:column-reverse;
+  }
 }
+
 @media (prefers-reduced-motion: reduce){
   *{
     animation-duration:0.01ms !important;
