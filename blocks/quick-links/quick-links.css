@@ -10,7 +10,7 @@
   width:100%;
 }
 
-.quick-links-container .quick-links-wrapper > .quick-links > div > div > p{
+.quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)), .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a{
   align-items:center;
   color:var(--heading-default);
   display:flex;
@@ -23,29 +23,52 @@
   text-transform:capitalize;
 }
 
-.quick-links-container .quick-links-wrapper > .quick-links > div > div > p::after{
-  background-image:url("/icons/quick-link-icon.svg");
-  background-repeat:no-repeat;
-  background-size:cover;
-  content:"";
-  height:19px;
-  margin-left:8px;
-  width:11px;
+.quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)):hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a:hover .quick-link-text::after{
+  left:0;
+  right:unset;
+  width:100%;
 }
 
-.quick-links-container .quick-links-wrapper > .quick-links > div > div > p > .icon{
-  align-items:center;
-  display:flex;
+.quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)):hover > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a:hover > .icon:last-child svg{
+  margin-left:48px;
 }
 
-.quick-links-container .quick-links-wrapper > .quick-links > div > div > p > .icon:first-child{
+.quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)) .quick-link-text, .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a .quick-link-text{
   display:block;
+  padding-bottom:4px;
+  position:relative;
+}
+
+.quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)) .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a .quick-link-text::after{
+  background:var(--burst-default);
+  bottom:0;
+  content:"";
+  height:2px;
+  position:absolute;
+  right:0;
+  transition:all 0.2s ease-in-out;
+  width:0;
+}
+
+.quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)) > .icon:first-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a > .icon:first-child{
   padding:6.5px 0;
 }
 
-.quick-links-container .quick-links-wrapper > .quick-links > div > div > p > .icon:first-child img{
+.quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)) > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a > .icon:first-child svg{
+  display:block;
   height:48px;
-  width:auto;
+  min-width:48px;
+  width:48px;
+}
+
+.quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)) > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a > .icon:last-child svg{
+  display:block;
+  height:19px;
+  margin-left:8px;
+  transition:all 0.3s ease-in-out;
+  width:-moz-fit-content;
+  width:fit-content;
+  width:19px;
 }
 
 .quick-links-container .quick-links-wrapper > .quick-links > div > div{
@@ -61,7 +84,7 @@
   display:flex;
   justify-content:space-between;
   letter-spacing:0;
-  padding:6px 0 5px;
+  padding:6px 0 2px;
   vertical-align:bottom;
   width:-moz-fit-content;
   width:fit-content;
@@ -74,13 +97,27 @@
   font-weight:400;
   justify-content:space-between;
   line-height:21px;
+  padding-bottom:2px;
+  position:relative;
   text-decoration:none;
   width:100%;
 }
 
-.quick-links-container .quick-links-wrapper > div > div > div > ul > li > a .icon.icon-flyout-menu-icon img{
-  height:24px;
-  width:24px;
+.quick-links-container .quick-links-wrapper > div > div > div > ul > li > a:hover::after{
+  left:0;
+  right:unset;
+  width:100%;
+}
+
+.quick-links-container .quick-links-wrapper > div > div > div > ul > li > a::after{
+  background:var(--burst-default);
+  bottom:0;
+  content:"";
+  height:1px;
+  position:absolute;
+  right:0;
+  transition:all 0.2s ease-in-out;
+  width:0;
 }
 
 .quick-links .icon.icon-flyout-menu-icon img{
@@ -127,12 +164,12 @@
     padding:unset;
   }
 
-  .quick-links-container .quick-links-wrapper > .quick-links > div > div > p{
+  .quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)), .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a{
     font-size:20px;
     line-height:45px;
   }
 
-  .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > .icon:last-child{
+  .quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)) > .icon:last-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a > .icon:last-child{
     display:block;
   }
 

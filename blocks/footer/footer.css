@@ -448,6 +448,62 @@ footer .footer > div{
   vertical-align:bottom;
 }
 
+.section.tmb-sub-footer .columns-wrapper{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
+}
+
+.section.tmb-sub-footer .columns.block{
+  background:var(--bg-default);
+  border-radius:12px;
+  margin-bottom:24px;
+  padding:24px;
+}
+
+.section.tmb-sub-footer .columns.block > div{
+  display:flex;
+  gap:64px;
+}
+
+.section.tmb-sub-footer .columns.block > div div:first-child{
+  display:flex;
+  flex:unset;
+  gap:8px;
+}
+
+.section.tmb-sub-footer .columns.block > div div:first-child img{
+  height:auto;
+  min-width:48px;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
+.section.tmb-sub-footer .columns.block > div div:first-child p{
+  color:var(--body-default);
+  font-size:12px;
+  font-weight:400;
+  line-height:18px;
+}
+
+.section.tmb-sub-footer .columns.block > div div:last-child{
+  display:flex;
+  flex:unset;
+  gap:32px;
+  justify-content:flex-end;
+  min-width:-moz-fit-content;
+  min-width:fit-content;
+}
+
+.section.tmb-sub-footer .columns.block > div div:last-child img{
+  height:80px;
+  min-width:-moz-fit-content;
+  min-width:fit-content;
+  width:auto;
+}
+
 .icon.icon-tmb-logo{
   height:80px;
   width:195px;
@@ -551,6 +607,10 @@ footer .footer > div{
   }
 
   .section.tmb-sub-footer .tmb-sub-footer-wrapper{
+    padding-inline:24px;
+  }
+
+  .section.tmb-sub-footer .columns-wrapper{
     padding-inline:24px;
   }
 }
@@ -718,6 +778,19 @@ footer .footer > div{
 @media screen and (max-width: 1023px){
   .section.tmb-footer .tmb-footer-wrapper .ul-1 li:nth-child(2){
     padding:0 4px 4px;
+  }
+
+  .section.tmb-sub-footer .columns.block > div{
+    flex-direction:column;
+    gap:32px;
+  }
+
+  .section.tmb-sub-footer .columns.block > div div:last-child{
+    justify-content:center;
+  }
+
+  .section.tmb-sub-footer .columns.block > div div:last-child img{
+    height:60px;
   }
 }
 
@@ -984,6 +1057,28 @@ footer .footer > div{
     text-decoration-style:solid;
     text-decoration-thickness:0%;
     vertical-align:bottom;
+  }
+
+  .section.tmb-sub-footer .columns-wrapper{
+    padding-inline:16px;
+  }
+
+  .section.tmb-sub-footer .columns.block{
+    margin-bottom:0;
+    padding:24px 8px;
+  }
+
+  .section.tmb-sub-footer .columns.block > div div:first-child{
+    align-items:center;
+    gap:20px;
+  }
+
+  .section.tmb-sub-footer .columns.block > div div:first-child img{
+    min-width:36px;
+  }
+
+  .section.tmb-sub-footer .columns.block > div div:last-child{
+    gap:16px;
   }
 }
 
