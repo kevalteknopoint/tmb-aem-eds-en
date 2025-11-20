@@ -247,6 +247,7 @@
 }
 
 .momentum-saver-section.momentum-image-saver.image-swapping {
+
   .columns-wrapper {
     .momentum-columns {
 
@@ -254,7 +255,7 @@
         flex-direction: row-reverse;
         gap: 80px;
 
-        @include mobile {
+        @include tablet {
           flex-direction: column-reverse;
           gap: 32px;
         }

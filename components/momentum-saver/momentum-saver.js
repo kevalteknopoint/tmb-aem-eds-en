@@ -20,7 +20,7 @@ export default function decorateMomentumSaver() {
   const momentumWrapperImgSwap = document.querySelector(".image-swapping .columns");
   momentumWrapperImgSwap?.classList?.add("momentum-columns");
 
-  const momentumWrapperdiv = document.querySelector(".momentum-saver-section .momentum-columns > div > div");
+  const momentumWrapperdiv = document.querySelector(".momentum-saver-section.left-percentage-section .momentum-columns > div > div");
   momentumWrapperdiv?.classList?.add("momentum-content");
 
   const momentumWrapperseconddiv = document.querySelector(".momentum-saver-section .momentum-columns > div > .momentum-content + div");

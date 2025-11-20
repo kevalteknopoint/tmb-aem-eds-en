@@ -503,6 +503,10 @@
   width:fit-content;
 }
 
+.section.rates-saver{
+  border-bottom:1px solid var(--line-default);
+}
+
 .section.rates-saver .cards-wrapper .cards ul{
   grid-template-columns:1fr 1fr 1fr;
 }

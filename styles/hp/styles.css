@@ -802,6 +802,10 @@ header{
   .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2{
     font-size:38px;
   }
+  .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div{
+    flex-direction:column-reverse;
+    gap:32px;
+  }
   .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content p{
     margin-bottom:32px;
   }
@@ -887,10 +891,6 @@ header{
   }
   .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2{
     font-size:38px;
-  }
-  .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div{
-    flex-direction:column-reverse;
-    gap:32px;
   }
 }
 @media (prefers-reduced-motion: reduce){
