@@ -1,4 +1,5 @@
 import Swiperblock from "../../libs/swiper/swiper-bundle.min.js";
+import { injectIcon } from "../../scripts/aem.js";
 import appendclasses from "../../scripts/constatnt-classes.js";
 
 function createSwiper(block) {
@@ -34,10 +35,7 @@ function createSwiper(block) {
     swiperpaginationouter.classList.add("outer-pagination-div"); // for play btn
     const playbtn = document.createElement("button");
     playbtn.classList.add("play-btn");
-    const iconp = document.createElement("img");
-    iconp.src = "/icons/play-icon.svg";
-    iconp.alt = "play Icon";
-    playbtn.appendChild(iconp);
+    injectIcon('play', playbtn);
     swiperpaginationouter.append(swiperpagination);
     swiperpaginationouter.append(playbtn);
     block.append(swiperpaginationouter);
@@ -166,11 +164,13 @@ export default function decorate(block) {
       if (!isPlaying) {
         swiper.autoplay.start();
         isPlaying = true;
-        playBtn.querySelector("img").src = "/icons/pause-icon.svg"; // change icon
+        playBtn?.lastElementChild?.remove();
+        injectIcon('pause', playBtn);
       } else {
         swiper.autoplay.stop();
         isPlaying = false;
-        playBtn.querySelector("img").src = "/icons/play-icon.svg"; // change back to play
+        playBtn?.lastElementChild?.remove();
+        injectIcon('play', playBtn);
       }
     });
   }

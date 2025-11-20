@@ -165,7 +165,8 @@
   width:fit-content;
 }
 
-.section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta img{
+.section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta svg{
+  color:var(--heading-reverse-2);
   display:block;
   height:24px;
   width:24px;
@@ -186,15 +187,21 @@
 }
 
 .section.expandable-tiles-section .autoplay-btn-wrapper .autoplay-btn{
-  display:block;
+  background-color:var(--bg-default);
+  border-radius:var(--radius-button);
+  display:grid;
   font-size:0;
   height:35px;
+  place-items:center;
   width:35px;
 }
 
-.section.expandable-tiles-section .autoplay-btn-wrapper .autoplay-btn img{
-  height:100%;
-  width:100%;
+.section.expandable-tiles-section .autoplay-btn-wrapper .autoplay-btn svg{
+  color:var(--color-pagination-selected);
+  display:block;
+  filter:drop-shadow(0 1px 3px rgb(0 0 0 / 40%));
+  height:24px;
+  width:24px;
 }
 
 .section.online-banking{
@@ -261,24 +268,24 @@
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li{
-  align-items:center;
-  display:flex;
-  justify-content:space-between;
   padding:0;
   width:400px;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li a{
+  align-items:center;
   color:var(--body-accent);
+  display:flex;
   font-size:16px;
   font-style:normal;
   font-weight:400;
+  justify-content:space-between;
   line-height:24px;
   text-decoration:none;
 }
 
-.section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li a span{
-  display:block;
+.section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li a svg{
+  height:24px;
   width:12px;
 }
 
@@ -374,14 +381,9 @@
   width:max-content;
 }
 
-.section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .banking-desc-3 a::after{
-  background:url("../../icons/weui_arrow-filled.svg") no-repeat center;
-  background-size:contain;
-  content:"";
-  display:inline-block;
-  height:24px;
-  transition:transform 0.2s ease;
-  width:12px;
+.section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .banking-desc-3 a svg{
+  height:18px;
+  width:18px;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .card-bottom-2{
@@ -397,6 +399,11 @@
   display:flex;
   flex-wrap:wrap;
   gap:10px;
+}
+
+.section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .banking-desc-3 svg{
+  height:42px;
+  width:143px;
 }
 
 .cards-card-image{
@@ -995,11 +1002,6 @@
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .banking-desc-3 a{
     line-height:13.5px;
     padding:0;
-  }
-
-  .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .banking-desc-3 a::after{
-    height:13.5px;
-    width:6.75px;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body{

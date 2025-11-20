@@ -1,3 +1,5 @@
+import { injectIcon } from "../../scripts/aem.js";
+
 export default function decorate(block) {
   if (window.location.href.includes("author")) return;
 
@@ -8,6 +10,7 @@ export default function decorate(block) {
     const summary = document.createElement("summary");
     summary.className = "accordion-item-label";
     summary.append(...label.childNodes);
+    injectIcon('chevron-up-round', summary);
 
     const body = row.children[1];
     body.className = "accordion-item-body";

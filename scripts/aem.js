@@ -452,7 +452,7 @@ function decorateIcon(span) {
     .substring(5);
 
   span.innerHTML = `
-    <svg class="icon">
+    <svg class="icon-svg">
       <use href="#${iconName}"></use>
     </svg>
   `;

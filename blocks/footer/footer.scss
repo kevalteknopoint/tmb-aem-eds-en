@@ -242,7 +242,7 @@ footer {
           margin-left: 0;
           height: auto;
 
-          img {
+          svg {
             max-width: unset;
             width: 24px;
             height: 24px;
@@ -335,6 +335,11 @@ footer {
         margin: 0;
         padding: 16px 8px;
       }
+
+      li {
+        height: fit-content;
+        padding-bottom: 0 !important;
+      }
     }
 
     .ul-15 {
@@ -344,16 +349,21 @@ footer {
       li {
         color: #FFFFFF;
         display: flex;
+        gap: 8px;
         align-items: center;
 
-        .icon-phone {
-          padding-right: 12px;
+        .icon {
           width: 40px;
           height: 40px;
-          margin-right: 12px;
+          display: grid;
+          place-items: center;
+          background: $bg-default;
+          color: $heading-default;
+          border-radius: 50%;
 
-          img {
-            min-width: 40px;
+          svg {
+            width: 24px;
+            height: 24px;
           }
         }
 
@@ -365,10 +375,6 @@ footer {
           font-style: Regular;
           font-size: 14px;
           line-height: 24px;
-
-          .icon.icon-phone {
-            padding-right: unset;
-          }
         }
 
         @media (max-width: 767px) {
@@ -385,12 +391,15 @@ footer {
       gap: 24px;
 
       .icon {
+        display: grid;
+        place-items: center;
         width: 40px;
         height: 40px;
-        display: block;
+        color: $icon-default;
 
-        img {
-          width: 100%;
+        svg {
+          width: 24px;
+          height: 24px;
         }
       }
 
@@ -456,17 +465,10 @@ footer {
           margin-left: 8px;
         }
 
-        .icon-office {
+        svg {
           width: 24px;
           height: 24px;
           display: block;
-          margin-left: 8px;
-
-          img {
-            width: 100%;
-            height: auto;
-            margin: 0;
-          }
         }
       }
 
@@ -553,7 +555,7 @@ footer {
         width: fit-content;
         border-radius: $radius-button;
 
-        img {
+        svg {
           width: 24px;
           height: 24px;
         }
@@ -878,75 +880,6 @@ footer {
           }
         }
       }
-    }
-  }
-}
-
-// Global Icon Styles
-.icon {
-  &.icon-tmb-logo {
-    width: 195px;
-    height: 80px;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  &.icon-tmb-btn {
-    display: none;
-  }
-
-  &.icon-jump-to-top {
-    width: 156px;
-    height: 40px;
-    cursor: pointer;
-
-    img {
-      width: 100%;
-      transition: transform 0.3s ease;
-      transform-origin: center;
-    }
-  }
-
-  &.icon-image-8,
-  &.icon-image-4 {
-    width: 80px;
-    height: 80px;
-    display: block;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  &.icon-updated-certificated {
-    width: 54px;
-    height: 80px;
-    display: block;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  &.icon-image-6 {
-    width: 93px;
-    height: 80px;
-    display: block;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  &.icon-image-7 {
-    width: 36px;
-    height: 36px;
-    display: block;
-
-    img {
-      width: 100%;
     }
   }
 }

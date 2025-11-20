@@ -1,6 +1,6 @@
 // import Swiper from '../../libs/swiper/swiper-bundle.min.js';
-import { createOptimizedPicture } from '../../scripts/aem.js';
-import { button, div, img } from '../../scripts/dom-helpers.js';
+import { createOptimizedPicture, injectIcon } from '../../scripts/aem.js';
+import { button, div } from '../../scripts/dom-helpers.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
 function htmlToElement(htmlString) {
@@ -137,20 +137,22 @@ export default function expandableTiles(block) {
     //   },
     // });
   } else {
-    const btnImg = img({ src: '/icons/pause-icon.svg' });
-    const autoplayBtn = button({ class: 'autoplay-btn' }, btnImg);
+    const autoplayBtn = button({ class: 'autoplay-btn' });
+    injectIcon('pause', autoplayBtn);
     block?.parentElement?.insertAdjacentElement('afterend', div({ class: 'autoplay-btn-wrapper' }, autoplayBtn));
     autoplay();
     autoplayBtn?.addEventListener('click', (e) => {
       e.preventDefault();
 
       if (autoplayBtn?.classList.contains('paused')) {
-        btnImg.src = '/icons/pause-icon.svg';
+        autoplayBtn.lastElementChild.remove();
+        injectIcon('pause', autoplayBtn);
         autoplayBtn?.classList.remove('paused');
         autoplay();
       } else {
+        autoplayBtn.lastElementChild.remove();
+        injectIcon('play', autoplayBtn);
         autoplayBtn?.classList.add('paused');
-        btnImg.src = '/icons/play-icon.svg';
         clearInterval(autoplayTimeoutId);
       }
     });
