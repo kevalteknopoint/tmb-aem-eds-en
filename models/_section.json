@@ -79,6 +79,10 @@
               "value": "image-swapping"
             },
             {
+              "name": "Left Percentage Section",
+              "value": "left-percentage-section"
+            },
+            {
               "name": "Background Color Teal",
               "value": "background-color-teal"
             },
