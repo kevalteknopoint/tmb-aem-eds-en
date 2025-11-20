@@ -272,6 +272,10 @@
           {
             "name": "Banking Good",
             "value": "banking-goods"
+          },
+          {
+            "name": "Rates Saver",
+            "value": "rates-saver"
           }
         ]
       }

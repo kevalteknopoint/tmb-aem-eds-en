@@ -503,6 +503,15 @@
   width:fit-content;
 }
 
+.section.rates-saver .cards-wrapper .cards ul{
+  grid-template-columns:1fr 1fr 1fr;
+}
+
+.section.rates-saver .cards-wrapper .cards ul li .cards-card-body h3{
+  font-size:24px;
+  line-height:29px;
+}
+
 .banking-goods{
   margin-left:auto;
   margin-right:auto;

@@ -676,7 +676,15 @@ header{
   flex-direction:row-reverse;
   gap:80px;
 }
-
+.momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content h2{
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
+  font-size:40px;
+  font-style:normal;
+  font-weight:900;
+  line-height:40px;
+  width:74%;
+}
 @media screen and (max-width: 1279px){
   .top-margin{
     margin-top:64px;
@@ -697,7 +705,6 @@ header{
     padding-inline:24px;
   }
 }
-
 @media screen and (max-width: 1023px){
   .spacer-bottom{
     margin-bottom:60px;
@@ -717,8 +724,10 @@ header{
   .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2{
     font-size:38px;
   }
+  .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content p{
+    margin-bottom:32px;
+  }
 }
-
 @media screen and (max-width: 767px){
   header{
     min-height:60px;
@@ -806,7 +815,6 @@ header{
     gap:32px;
   }
 }
-
 @media (prefers-reduced-motion: reduce){
   *{
     animation-duration:0.01ms !important;
