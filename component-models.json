@@ -190,6 +190,10 @@
             "value": "bg-image-saver"
           },
           {
+            "name": "Image Swapping",
+            "value": "image-swapping"
+          },
+          {
             "name": "online-banking",
             "value": "online-banking"
           },
