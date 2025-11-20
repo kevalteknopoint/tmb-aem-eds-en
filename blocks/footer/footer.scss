@@ -829,12 +829,12 @@ footer {
 
       div:first-child {
         display: flex;
+        align-items: center;
         flex: unset;
         gap: 8px;
 
         @include mobile {
           gap: 20px;
-          align-items: center;
         }
 
         img {

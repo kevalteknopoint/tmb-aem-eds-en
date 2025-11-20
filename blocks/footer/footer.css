@@ -476,6 +476,7 @@ footer .footer > div{
 }
 
 .section.tmb-sub-footer .columns.block > div div:first-child{
+  align-items:center;
   display:flex;
   flex:unset;
   gap:8px;
@@ -1007,7 +1008,6 @@ footer .footer > div{
   }
 
   .section.tmb-sub-footer .columns.block > div div:first-child{
-    align-items:center;
     gap:20px;
   }
 
