@@ -625,6 +625,7 @@ header{
   font-family:var(--secondary-font);
   font-size:140px;
   font-style:normal;
+  font-weight:900;
   line-height:120px;
   text-transform:capitalize;
 }

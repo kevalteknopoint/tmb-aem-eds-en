@@ -5,6 +5,10 @@
 .section.expandable-tiles-section {
   background: $gradient-1;
 
+  @include tablet {
+    padding-right: 16px;
+  }
+
   .default-content-wrapper {
     box-sizing: border-box;
     margin-bottom: 40px;
@@ -48,8 +52,11 @@
 
     @include mobile {
       margin-bottom: 0;
+      scrollbar-width: none;
     }
-
+    @include tablet {
+      scrollbar-width: none;
+    }
     .cards.expandable-tiles.block {
       display: flex;
       justify-content: center;
@@ -155,10 +162,10 @@
           position: absolute;
           bottom: 0;
           display: block;
-          width: calc(100% - 64px);
+          width: calc(100% - 32px);
           opacity: 0;
           padding: 24px;
-          margin: 0 32px 32px;
+          margin: 0 16px 16px;
           text-decoration: none;
           background-color: $bg-default;
           border-radius: $radius-card;

@@ -114,14 +114,14 @@
   border-radius:var(--radius-card);
   bottom:0;
   display:block;
-  margin:0 32px 32px;
+  margin:0 16px 16px;
   opacity:0;
   padding:24px;
   pointer-events:none;
   position:absolute;
   text-decoration:none;
   transition:all 1s ease-in-out;
-  width:calc(100% - 64px);
+  width:calc(100% - 32px);
 }
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-title{
@@ -832,8 +832,16 @@
 }
 
 @media screen and (max-width: 1023px){
+  .section.expandable-tiles-section{
+    padding-right:16px;
+  }
+
   .section.expandable-tiles-section .default-content-wrapper h1, .section.expandable-tiles-section .default-content-wrapper h2, .section.expandable-tiles-section .default-content-wrapper h3, .section.expandable-tiles-section .default-content-wrapper h4, .section.expandable-tiles-section .default-content-wrapper h5, .section.expandable-tiles-section .default-content-wrapper h6{
     text-align:center;
+  }
+
+  .section.expandable-tiles-section .cards-wrapper{
+    scrollbar-width:none;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul{
@@ -863,6 +871,7 @@
   .section.expandable-tiles-section .cards-wrapper{
     margin-bottom:0;
     padding-inline:16px;
+    scrollbar-width:none;
   }
 
   .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block{
