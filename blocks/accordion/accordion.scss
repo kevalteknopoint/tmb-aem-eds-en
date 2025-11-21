@@ -36,7 +36,6 @@
 
       .accordion-item-label {
         position: relative;
-        padding-right: 48px;
         cursor: pointer;
         list-style: none;
         overflow: auto;
@@ -46,22 +45,20 @@
         vertical-align: bottom;
         color: $heading-default;
         transition: background-color 0.2s;
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        overflow: hidden;
 
         &::-webkit-details-marker {
           display: none;
         }
 
-        &::after {
-          content: '';
-          position: absolute;
-          top: 50%;
-          right: 8px;
-          transform: translateY(-50%) rotate(135deg);
-          width: 8px;
-          height: 8px;
-          border: 2px solid;
-          border-width: 2px 2px 0 0;
-          transition: transform 0.2s;
+        svg {
+          width: 24px;
+          height: 24px;
+          transition: all 0.3s ease-in-out;
+          transform: rotate(180deg);
         }
       }
 
@@ -86,8 +83,8 @@
       &[open] {
         summary {
 
-          &::after {
-            transform: translateY(-50%) rotate(-45deg);
+          svg {
+            transform: rotate(0deg);
           }
         }
 

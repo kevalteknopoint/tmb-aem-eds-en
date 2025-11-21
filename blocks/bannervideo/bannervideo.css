@@ -221,11 +221,20 @@
 }
 
 .secfirst .bannervideo-wrapper .bannervideo .outer-pagination-div .play-btn{
-  backdrop-filter:blur(18px);
-  border-radius:100%;
-  display:block;
+  background-color:var(--bg-default);
+  border-radius:var(--radius-button);
+  display:grid;
   height:35px;
+  place-items:center;
   width:35px;
+}
+
+.secfirst .bannervideo-wrapper .bannervideo .outer-pagination-div .play-btn svg{
+  color:var(--color-pagination-selected);
+  display:block;
+  filter:drop-shadow(0 1px 3px rgb(0 0 0 / 40%));
+  height:24px;
+  width:24px;
 }
 
 .secfirst .swiper-wrapper{

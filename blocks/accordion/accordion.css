@@ -29,12 +29,15 @@
 .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-label{
   color:var(--heading-default);
   cursor:pointer;
+  display:flex;
   font-size:24px;
   font-weight:700;
+  gap:16px;
+  justify-content:space-between;
   line-height:32px;
   list-style:none;
   overflow:auto;
-  padding-right:48px;
+  overflow:hidden;
   position:relative;
   transition:background-color 0.2s;
   vertical-align:bottom;
@@ -44,17 +47,11 @@
   display:none;
 }
 
-.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-label::after{
-  border:2px solid;
-  border-width:2px 2px 0 0;
-  content:"";
-  height:8px;
-  position:absolute;
-  right:8px;
-  top:50%;
-  transform:translateY(-50%) rotate(135deg);
-  transition:transform 0.2s;
-  width:8px;
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-label svg{
+  height:24px;
+  transform:rotate(180deg);
+  transition:all 0.3s ease-in-out;
+  width:24px;
 }
 
 .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body{
@@ -70,8 +67,8 @@
   margin:0;
 }
 
-.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details[open] summary::after{
-  transform:translateY(-50%) rotate(-45deg);
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details[open] summary svg{
+  transform:rotate(0deg);
 }
 
 .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details[open] .accordion-item-body{
