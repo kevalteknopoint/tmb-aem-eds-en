@@ -12,7 +12,7 @@
 
 .quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)), .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a{
   align-items:center;
-  color:var(--heading-default);
+  color:var(--link-default);
   display:flex;
   font-size:24px;
   font-weight:500;

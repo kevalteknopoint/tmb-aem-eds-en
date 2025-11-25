@@ -82,16 +82,15 @@
 
       .rate-pa {
         color: $heading-default;
-        text-align: center;
+        text-align: left;
         font-size: 40px;
         font-style: normal;
-        font-weight: 300;
+        font-weight: 400;
         line-height: 28px;
-        font-family: $secondary-font;
       }
 
       p {
-        color: $body-default;
+        color: $heading-default;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -118,6 +117,11 @@
         line-height: 40px;
         text-transform: uppercase;
         margin-bottom: 16px;
+
+        @include mobile {
+          font-size: 38px;
+          line-height: 38px;
+        }
 
       }
 

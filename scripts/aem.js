@@ -465,7 +465,7 @@ function decorateIcon(span) {
  * @param {string} [position] position to where the icon needs to be injected (default is before the end of the element)
  */
 function injectIcon(id, ele, position = 'beforeend') {
-  ele.insertAdjacentHTML(position, `
+  ele?.insertAdjacentHTML(position, `
     <svg class="icon">
       <use href="#${id}"></use>
     </svg>

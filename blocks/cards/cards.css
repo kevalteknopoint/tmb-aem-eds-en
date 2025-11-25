@@ -331,7 +331,7 @@
   color:var(--heading-default);
   font-size:24px;
   font-style:normal;
-  font-weight:700;
+  font-weight:500;
   line-height:32px;
 }
 
@@ -718,12 +718,8 @@
   width:100%;
 }
 
-.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container a::after{
-  background-image:url("/icons/chevron-right-off-white.svg");
-  background-repeat:no-repeat;
-  background-size:100%;
-  content:unset;
-  display:block;
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container a svg{
+  display:none;
   height:12px;
   width:7.2px;
 }
@@ -775,7 +771,6 @@
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 .banking-desc-1,
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .card-bottom-1 .banking-desc-1{
     font-size:15px;
-    font-weight:500;
     line-height:20px;
   }
 
@@ -880,8 +875,61 @@
     padding:6px 18px 6px 0;
   }
 
+  .banking-goods .cards-wrapper .cards{
+    overflow:auto;
+    scrollbar-width:none;
+  }
+
   .banking-goods .cards-wrapper .cards > ul{
-    grid-template-columns:1fr 1fr;
+    display:flex;
+    justify-content:flex-start;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul li{
+    min-width:335px;
+    width:-moz-fit-content;
+    width:fit-content;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:first-child{
+    display:none;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child){
+    height:500px;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body{
+    backdrop-filter:unset;
+    background:linear-gradient(180deg, rgb(11 35 31 / 0%) 0.01%, rgb(11 35 31 / 14%) 34.14%, rgb(11 35 31 / 80%) 99.98%);
+    justify-content:flex-end;
+    min-height:335px;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body::after{
+    content:unset;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h1, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h2, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h3, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h4, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h5, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h6{
+    font-size:32px;
+    line-height:32px;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body p{
+    opacity:1;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body p:not(.button-container){
+    display:none;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container{
+    opacity:1;
+    padding:0;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container a svg{
+    display:block;
   }
 }
 
@@ -1009,7 +1057,6 @@
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 .banking-desc-1,
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .card-bottom-1 .banking-desc-1{
     font-size:20px;
-    font-weight:800;
     line-height:24px;
   }
 
@@ -1079,62 +1126,5 @@
 
   .banking-goods{
     padding-inline:16px;
-  }
-
-  .banking-goods .cards-wrapper .cards{
-    overflow:auto;
-    scrollbar-width:none;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul{
-    display:flex;
-    justify-content:flex-start;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul li{
-    min-width:335px;
-    width:-moz-fit-content;
-    width:fit-content;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul > li:first-child{
-    display:none;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child){
-    height:500px;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body{
-    backdrop-filter:unset;
-    background:linear-gradient(180deg, rgb(11 35 31 / 0%) 0.01%, rgb(11 35 31 / 14%) 34.14%, rgb(11 35 31 / 80%) 99.98%);
-    justify-content:flex-end;
-    min-height:335px;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body::after{
-    content:unset;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h1, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h2, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h3, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h4, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h5, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h6{
-    font-size:32px;
-    line-height:32px;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body p{
-    opacity:1;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body p:not(.button-container){
-    display:none;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container{
-    opacity:1;
-    padding:0;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container a::after{
-    content:"";
   }
 }

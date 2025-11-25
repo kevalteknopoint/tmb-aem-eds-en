@@ -1,3 +1,4 @@
+import { injectIcon } from "../../scripts/aem.js";
 import { div } from "../../scripts/dom-helpers.js";
 
 export default function decorateBankingGoods(block) {
@@ -11,6 +12,9 @@ export default function decorateBankingGoods(block) {
       item.innerHTML = '';
     }
 
+    const cardBtn = item?.querySelector('.button-container a');
+    injectIcon('chevron-right-links', cardBtn);
+
     if (window.innerWidth <= 767 || index === 0) return;
 
     const cardBody = item?.querySelector('.cards-card-body');
@@ -21,18 +25,12 @@ export default function decorateBankingGoods(block) {
 
     cardBody.style.height = `${height}px`;
 
-    if (window.innerWidth <= 1279) {
-      item.addEventListener('click', () => {
-        cardBody?.classList.toggle('active');
-      });
-    } else {
-      item.addEventListener('mouseover', () => {
-        cardBody?.classList.add('active');
-      });
+    item.addEventListener('mouseover', () => {
+      cardBody?.classList.add('active');
+    });
 
-      item.addEventListener('mouseout', () => {
-        cardBody?.classList.remove('active');
-      });
-    }
+    item.addEventListener('mouseout', () => {
+      cardBody?.classList.remove('active');
+    });
   });
 }

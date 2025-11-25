@@ -29,7 +29,7 @@
     }
 
     .cards {
-      @include mobile {
+      @include tablet {
         overflow: auto;
         scrollbar-width: none;
       }
@@ -42,10 +42,6 @@
         gap: 24px;
 
         @include tablet {
-          grid-template-columns: 1fr 1fr;
-        }
-
-        @include mobile {
           display: flex;
           justify-content: flex-start;
 
@@ -64,7 +60,7 @@
           border-radius: $radius-card;
           height: 100%;
 
-          @include mobile {
+          @include tablet {
             display: none;
           }
 
@@ -104,7 +100,7 @@
           border-radius: $radius-card;
           height: 528px;
 
-          @include mobile {
+          @include tablet {
             height: 500px;
           }
 
@@ -137,7 +133,7 @@
             gap: 16px;
             max-height: fit-content;
 
-            @include mobile {
+            @include tablet {
               backdrop-filter: unset;
               background: linear-gradient(180deg, rgba(11, 35, 31, 0.00) 0.01%, rgba(11, 35, 31, 0.14) 34.14%, rgba(11, 35, 31, 0.80) 99.98%);
               min-height: 335px;
@@ -164,7 +160,7 @@
               top: 0;
               z-index: -1;
 
-              @include mobile {
+              @include tablet {
                 content: unset;
               }
             }
@@ -179,7 +175,7 @@
               text-transform: uppercase;
               color: $heading-reverse-2;
 
-              @include mobile {
+              @include tablet {
                 font-size: 32px;
                 line-height: 32px;
               }
@@ -193,7 +189,7 @@
               color: $body-reverse-2;
               opacity: 0;
 
-              @include mobile {
+              @include tablet {
                 opacity: 1;
 
                 &:not(.button-container) {
@@ -207,7 +203,7 @@
               padding: 6px 0;
               opacity: 0;
 
-              @include mobile {
+              @include tablet {
                 opacity: 1;
                 padding: 0;
               }
@@ -237,17 +233,13 @@
                   width: 100%;
                 }
 
-                &::after {
-                  content: unset;
-                  display: block;
-                  background-image: url('/icons/chevron-right-off-white.svg');
-                  background-repeat: no-repeat;
-                  background-size: 100%;
+                svg {
+                  display: none;
                   height: 12px;
                   width: 7.2px;
-
-                  @include mobile {
-                    content: '';
+                  
+                  @include tablet {
+                    display: block;
                   }
                 }
               }

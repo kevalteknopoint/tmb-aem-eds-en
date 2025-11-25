@@ -646,15 +646,14 @@ header{
 }
 .momentum-saver-section .momentum-columns .momentum-content .rate-pa{
   color:var(--heading-default);
-  font-family:var(--secondary-font);
   font-size:40px;
   font-style:normal;
-  font-weight:300;
+  font-weight:400;
   line-height:28px;
-  text-align:center;
+  text-align:left;
 }
 .momentum-saver-section .momentum-columns .momentum-content p{
-  color:var(--body-default);
+  color:var(--heading-default);
   font-size:16px;
   font-style:normal;
   font-weight:400;
@@ -866,6 +865,10 @@ header{
     font-weight:400;
     line-height:24px;
     width:121%;
+  }
+  .momentum-saver-section .momentum-columns .momentum-second-content h2{
+    font-size:38px;
+    line-height:38px;
   }
   .momentum-saver-section.momentum-image-saver .columns-wrapper{
     padding-inline:16px;
