@@ -31,6 +31,7 @@
     .cards {
       @include mobile {
         overflow: auto;
+        scrollbar-width: none;
       }
 
       > ul {

@@ -28,6 +28,8 @@
 
         @media (min-width: 766px) and (max-width: 1220px) {
           gap: 20px;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
         }
 
         @media screen and (max-width: 1023px) {
@@ -86,10 +88,12 @@
 
           @media (min-width: 766px) and (max-width: 1220px) {
             padding: 20px;
+            border-radius: $radius-card;
           }
 
           @media screen and (max-width: 767px) {
             padding: 24px;
+            border-radius: $radius-card;
           }
 
           .cards-card-body {
@@ -136,12 +140,13 @@
 
                 @media (min-width: 766px) and (max-width: 1220px) {
                   align-items: center;
-                  width: 250px;
+                  min-width: 250px;
                 }
 
                 @media (min-width: 766px) and (max-width: 980px) {
-                  max-width: 300px;
-                  width: 100% !important;
+                  // max-width: 300px;
+                  max-width: unset;
+                  width: 300px;
                 }
 
                 @media screen and (max-width: 767px) {
@@ -162,7 +167,6 @@
 
                   @media (min-width: 766px) and (max-width: 1220px) {
                     font-size: 13px;
-                    line-height: 5px;
                   }
 
                   svg {
@@ -183,19 +187,22 @@
           min-height: 100%;
           overflow: hidden;
           width: 100%;
+          border-top-left-radius: $radius-card;
+          border-top-right-radius:  $radius-card;
 
           @media (min-width: 766px) and (max-width: 1220px) {
-            max-width: 300px;
+            // max-width: 300px;
+            max-width: unset;
             width: 100%;
           }
 
           @media (min-width: 766px) and (max-width: 980px) {
-            width: 246px !important;
+            width: unset;
           }
 
           @media screen and (max-width: 767px) {
-            border-top-left-radius: 35px;
-            border-top-right-radius: 35px;
+            // border-top-left-radius: $radius-card;
+            // border-top-right-radius:  $radius-card;
             display: flex;
             flex-direction: column;
             margin: 0 auto;
@@ -290,7 +297,7 @@
               padding: 0;
 
               @media (min-width: 766px) and (max-width: 980px) {
-                margin-top: 10px;
+                margin-top: auto;
               }
 
               @media screen and (max-width: 767px) {
@@ -320,7 +327,7 @@
                 width: max-content;
 
                 @media screen and (max-width: 1023px) {
-                  padding: 6px 18px;
+                  padding: 6px 18px 6px 0;
                 }
 
                 @media screen and (max-width: 767px) {
