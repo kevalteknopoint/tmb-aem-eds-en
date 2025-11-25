@@ -643,6 +643,16 @@
     ]
   },
   {
+    "id": "teachers-calculator-block",
+    "fields": [
+      {
+        "component": "text",
+        "name": "i-frame link",
+        "label": "Enter calculator iframe link"
+      }
+    ]
+  },
+  {
     "id": "teachers-form-block",
     "fields": [
       {
