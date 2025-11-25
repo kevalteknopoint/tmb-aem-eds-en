@@ -165,6 +165,10 @@
             {
               "name": "Banking Good",
               "value": "banking-goods"
+            },
+            {
+              "name": "Who can apply",
+              "value": "who-can-apply-section"
             }
           ]
         }
