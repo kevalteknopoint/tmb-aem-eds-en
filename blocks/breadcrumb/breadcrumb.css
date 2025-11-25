@@ -1,6 +1,6 @@
 .breadcrumb{
   align-items:center;
-  color:var(--text-primary);
+  color:var(--body-default);
   display:flex;
   flex-wrap:wrap;
   font-size:14px;
