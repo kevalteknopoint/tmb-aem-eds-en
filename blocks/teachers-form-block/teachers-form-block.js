@@ -25,8 +25,8 @@ export default function decorate(block) {
     key: formApiKey,
     action: formAction,
     envt: formBranchEnvt,
-    channel:formChannel,
-    config:formConfig
+    channel: formChannel,
+    config: formConfig
   };
 
   block.innerHTML = "";
