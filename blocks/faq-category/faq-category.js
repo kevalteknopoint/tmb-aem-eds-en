@@ -1,5 +1,5 @@
-
-import { a, img, li, span, ul, div, button } from "../../scripts/dom-helpers.js";
+import { injectIcon } from "../../scripts/aem.js";
+import { a, li, span, ul, div, button } from "../../scripts/dom-helpers.js";
 import { fetchPlaceholders } from "../../scripts/placeholders.js";
 
 // Fetch Paginated FAQs from GraphQL
@@ -45,20 +45,20 @@ export default async function decorate(block) {
 
   // NON-PAGINATION MODE — USE original API call
   if (!block?.classList.contains('enable-pagination')) {
-    const faqs = await fetchFaqs(tagValue, limitValue ? parseInt(limitValue) : 10, 0);
+    const faqs = await fetchFaqs(tagValue, limitValue ? parseInt(limitValue, 10) : 10, 0);
 
     const faqList = ul({ class: "faq-items-list" });
     faqs.forEach((item) => {
+      const icon = span({ class: "faq-link-icon" });
+      injectIcon('chevron-right-links-default', icon);
+
       faqList.append(
         li(
           { class: "faq-item" },
           a(
             { class: "faq-link", href: item?.faqPageUrl?._path?.replace(/\/content\/[A-Za-z]+\//, '/') || "#" },
             item.question,
-            span(
-              { class: "faq-link-icon" },
-              img({ src: "/icons/faq-link-icon.svg", alt: "FAQ Link Icon" })
-            )
+            icon
           )
         )
       );
@@ -108,60 +108,6 @@ export default async function decorate(block) {
     rangeIndicator.textContent = `${start} - ${end} of ${total}`;
   }
 
-  function renderPagination() {
-    paginationContainer.innerHTML = "";
-
-    const isMobile = window.innerWidth <= 768;
-    const maxMobileBtns = 5; // Show 5 page numbers for mobile
-
-    // Previous button
-    const prevBtn = button({ class: "faq-page-btn prev" }, img({ src: "/icons/page-left.svg", alt: "Previous" }));
-    prevBtn.disabled = currentPage === 1;
-    prevBtn.addEventListener("click", () => {
-      if (currentPage > 1) {
-        currentPage -= 1;
-        if (isMobile && currentPage < mobilePageWindowStart) {
-          mobilePageWindowStart = Math.max(1, mobilePageWindowStart - maxMobileBtns);
-        }
-        renderPage(currentPage);
-      }
-    });
-    paginationContainer.append(prevBtn);
-
-    // Page numbers
-    let startPage = 1;
-    let endPage = totalPages;
-    if (isMobile) {
-      startPage = mobilePageWindowStart;
-      endPage = Math.min(totalPages, mobilePageWindowStart + maxMobileBtns - 1);
-    }
-
-    for (let i = startPage; i <= endPage; i++) {
-      const btn = button({ class: `faq-page-btn number ${i === currentPage ? "active" : ""}` }, i);
-      btn.addEventListener("click", () => {
-        if (currentPage !== i) {
-          currentPage = i;
-          renderPage(currentPage);
-        }
-      });
-      paginationContainer.append(btn);
-    }
-
-    // Next button
-    const nextBtn = button({ class: "faq-page-btn next" }, img({ src: "/icons/page-right.svg", alt: "Next" }));
-    nextBtn.disabled = currentPage === totalPages;
-    nextBtn.addEventListener("click", () => {
-      if (currentPage < totalPages) {
-        currentPage += 1;
-        if (isMobile && currentPage > endPage) {
-          mobilePageWindowStart += maxMobileBtns;
-        }
-        renderPage(currentPage);
-      }
-    });
-    paginationContainer.append(nextBtn);
-  }
-
   function renderPage(page) {
     currentPage = page;
     const start = (page - 1) * itemsPerPage;
@@ -176,23 +122,87 @@ export default async function decorate(block) {
     }
 
     faqs.forEach((item) => {
+      const icon = span({ class: "faq-link-icon" });
+      injectIcon('chevron-right-links-default', icon);
+
       faqList.append(
         li(
           { class: "faq-item" },
           a(
             { class: "faq-link", href: item?.faqPageUrl?._path?.replace(/\/content\/[A-Za-z]+\//, '/') || "#" },
             item.question,
-            span(
-              { class: "faq-link-icon" },
-              img({ src: "/icons/faq-link-icon.svg", alt: "FAQ Link Icon" })
-            )
+            icon
           )
         )
       );
     });
 
     renderRangeIndicator(start + 1, end, totalItems); // Always show start-end
+
+    // eslint-disable-next-line
     renderPagination();
+  }
+
+  function renderPagination() {
+    paginationContainer.innerHTML = "";
+
+    const isMobile = window.innerWidth <= 768;
+    const maxMobileBtns = 5; // Show 5 page numbers for mobile
+
+    // Previous button
+    const prevBtn = button({ class: "faq-page-btn prev" });
+    injectIcon('chevron-left-default', prevBtn);
+    prevBtn.disabled = currentPage === 1;
+    prevBtn.addEventListener("click", () => {
+      if (currentPage > 1) {
+        currentPage -= 1;
+        if (isMobile && currentPage < mobilePageWindowStart) {
+          mobilePageWindowStart = Math.max(1, mobilePageWindowStart - maxMobileBtns);
+        }
+
+        renderPage(currentPage);
+      }
+    });
+    paginationContainer.append(prevBtn);
+
+    // Page numbers
+    let startPage = 1;
+    let endPage = totalPages;
+    if (isMobile) {
+      startPage = mobilePageWindowStart;
+      endPage = Math.min(totalPages, mobilePageWindowStart + maxMobileBtns - 1);
+    }
+
+    function paginationBtnListener(index) {
+      return () => {
+        if (currentPage !== index) {
+          currentPage = index;
+          renderPage(currentPage);
+        }
+      };
+    }
+
+    for (let i = startPage; i <= endPage; i += 1) {
+      const btn = button({ class: `faq-page-btn number ${i === currentPage ? "active" : ""}` }, i);
+      btn.addEventListener("click", paginationBtnListener(i));
+      paginationContainer.append(btn);
+    }
+
+    // Next button
+    const nextBtn = button({ class: "faq-page-btn next" });
+    injectIcon('chevron-right-links-default', nextBtn);
+    nextBtn.disabled = currentPage === totalPages;
+    nextBtn.addEventListener("click", () => {
+      if (currentPage < totalPages) {
+        currentPage += 1;
+        if (isMobile && currentPage > endPage) {
+          mobilePageWindowStart += maxMobileBtns;
+        }
+
+        renderPage(currentPage);
+      }
+    });
+    paginationContainer.append(nextBtn);
   }
 
   window.addEventListener("resize", () => {

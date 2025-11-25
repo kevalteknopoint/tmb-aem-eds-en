@@ -1,6 +1,6 @@
 .faq-landing-banner{
   align-items:center;
-  background:linear-gradient(86.93deg, #59FFA0 0.12%, #1BE7FF 100%);
+  background:var(--gradient-1);
   border-radius:0 0 40px 40px;
   display:flex;
   flex-direction:column;
@@ -10,14 +10,15 @@
 }
 
 .faq-landing-banner .columns-wrapper{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
   width:100%;
 }
 
 .faq-landing-banner .columns.block{
-  margin:0 auto;
-  max-width:1328px;
-  padding:56px;
-  width:100%;
+  padding:24px;
 }
 
 .faq-landing-banner .columns.block .faq-banner-wrap{
@@ -29,7 +30,7 @@
 }
 
 .faq-landing-banner .faq-banner-content h1, .faq-landing-banner .faq-banner-content h2, .faq-landing-banner .faq-banner-content h3, .faq-landing-banner .faq-banner-content h4, .faq-landing-banner .faq-banner-content h5, .faq-landing-banner .faq-banner-content h6{
-  color:var(--text-brand);
+  color:var(--heading-default);
   font-family:var(--secondary-font);
   font-size:60px;
   letter-spacing:2px;
@@ -38,7 +39,7 @@
 }
 
 .faq-landing-banner .faq-banner-content p{
-  color:var(--text-brand);
+  color:var(--heading-default);
   font-size:16px;
   font-weight:500;
   line-height:24px;
@@ -46,23 +47,31 @@
 
 .faq-landing-banner .faq-banner-search{
   align-items:center;
-  background-color:#f7f7f7;
-  border-radius:44px;
+  background-color:var(--bg-default);
+  border-radius:var(--radius-card);
   display:flex;
   gap:16px;
   padding:4px;
   width:100%;
 }
 
-.faq-landing-banner .faq-banner-search img{
-  background-color:var(--surface-brand);
-  border-radius:50%;
+.faq-landing-banner .faq-banner-search picture{
+  align-items:center;
+  background-color:var(--bg-reverse);
+  border-radius:var(--radius-button);
+  display:flex;
   height:36px;
+  justify-content:center;
   width:36px;
 }
 
+.faq-landing-banner .faq-banner-search img{
+  height:24px;
+  width:24px;
+}
+
 .faq-landing-banner .faq-banner-search .faq-search-input{
-  color:var(--text-primary);
+  color:var(--body-default);
   font-size:14px;
   font-weight:400;
   line-height:24px;
@@ -103,6 +112,12 @@
   }
 }
 
+@media screen and (max-width: 1279px){
+  .faq-landing-banner .columns-wrapper{
+    padding-inline:24px;
+  }
+}
+
 @media screen and (max-width: 767px){
   .faq-landing-banner{
     justify-content:flex-end;
@@ -110,8 +125,12 @@
     min-height:400px;
   }
 
+  .faq-landing-banner .columns-wrapper{
+    padding-inline:16px;
+  }
+
   .faq-landing-banner .columns.block{
-    padding:16px;
+    padding:0;
   }
 
   .faq-landing-banner .columns.block .faq-banner-wrap{

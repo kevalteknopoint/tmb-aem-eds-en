@@ -424,13 +424,21 @@
 }
 
 .section.faq-cant-find-looking-for{
-  margin:0 auto;
-  max-width:1328px;
-  padding:32px;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-block:32px;
+  padding-inline:64px;
+  width:100%;
 }
 
-.section.faq-cant-find-looking-for .default-content-wrapper h1, .section.faq-cant-find-looking-for .default-content-wrapper h2, .section.faq-cant-find-looking-for .default-content-wrapper h3, .section.faq-cant-find-looking-for .default-content-wrapper h4, .section.faq-cant-find-looking-for .default-content-wrapper h5, .section.faq-cant-find-looking-for .default-content-wrapper h6{
-  color:#00525B;
+.section.faq-cant-find-looking-for .default-content-wrapper h1,
+.section.faq-cant-find-looking-for .default-content-wrapper h2,
+.section.faq-cant-find-looking-for .default-content-wrapper h3,
+.section.faq-cant-find-looking-for .default-content-wrapper h4,
+.section.faq-cant-find-looking-for .default-content-wrapper h5,
+.section.faq-cant-find-looking-for .default-content-wrapper h6{
+  color:var(--heading-default);
   font-family:var(--secondary-font);
   font-size:40px;
   font-style:normal;
@@ -471,8 +479,13 @@
   flex-grow:1;
 }
 
-.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h3{
-  color:#00525B;
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h1,
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h2,
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h3,
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h4,
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h5,
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h6{
+  color:var(--heading-default);
   font-family:var(--primary-font);
   font-size:20px;
   font-style:normal;
@@ -482,7 +495,7 @@
 }
 
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p{
-  color:#0B231F;
+  color:var(--body-default);
   font-family:var(--primary-font);
   font-size:16px;
   font-style:normal;
@@ -498,9 +511,9 @@
 }
 
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container a{
-  border:1px solid #00525B;
-  border-radius:20px;
-  color:#00525B;
+  border:1px solid var(--color-button-text-stroke-default);
+  border-radius:var(--radius-button);
+  color:var(--link-default);
   cursor:pointer;
   display:block;
   font-family:var(--primary-font);
@@ -841,6 +854,10 @@
     padding-inline:24px;
   }
 
+  .section.faq-cant-find-looking-for{
+    padding-inline:24px;
+  }
+
   .banking-goods{
     padding-inline:24px;
   }
@@ -1030,7 +1047,8 @@
   }
 
   .section.faq-cant-find-looking-for{
-    padding:24px;
+    padding-block:24px;
+    padding-inline:16px;
   }
 
   .section.faq-cant-find-looking-for .default-content-wrapper{

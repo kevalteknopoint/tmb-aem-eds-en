@@ -1,5 +1,5 @@
 .tmb-acc-sec.accordion-container{
-  background:rgb(0 82 91 / 7%);
+  background:var(--color-footer-info);
   padding:32px 0;
 }
 
