@@ -39,6 +39,7 @@
   max-width:calc(1440px - 0px);
   overflow:auto;
   padding-inline:64px;
+  scrollbar-width:none;
   width:100%;
 }
 

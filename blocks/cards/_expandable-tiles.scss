@@ -47,6 +47,7 @@
     box-sizing: border-box;
     margin-bottom: 40px;
     overflow: auto;
+    scrollbar-width: none;
 
     @include responsive-container();
 
