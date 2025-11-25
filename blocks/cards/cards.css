@@ -723,6 +723,7 @@
     display:grid;
     gap:20px;
     grid-template-columns:1fr 1fr 1fr;
+    min-height:480px;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .cards-card-body .icon-badge-app-store-1,
@@ -818,7 +819,7 @@
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .card-bottom-2{
-    margin-top:10px;
+    margin-top:auto;
   }
 }
 
@@ -855,10 +856,6 @@
 
   .section.expandable-tiles-section .cards-wrapper{
     scrollbar-width:none;
-  }
-
-  .section.online-banking .cards-wrapper .cards .banking-cards-ul{
-    min-height:unset;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .banking-desc-3 a{

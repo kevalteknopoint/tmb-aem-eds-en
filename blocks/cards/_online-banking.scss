@@ -30,11 +30,12 @@
           gap: 20px;
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
+          min-height: 480px;
         }
 
-        @media screen and (max-width: 1023px) {
-          min-height: unset;
-        }
+        // @media screen and (max-width: 1023px) {
+        //   min-height: unset;
+        // }
 
         @media screen and (max-width: 767px) {
           gap: 18px;
@@ -361,7 +362,7 @@
             padding: 0;
 
             @media (min-width: 766px) and (max-width: 980px) {
-              margin-top: 10px;
+              margin-top: auto;
             }
 
             @media screen and (max-width: 767px) {
