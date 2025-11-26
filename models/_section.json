@@ -118,6 +118,10 @@
               "name": "Interest Rate Section",
               "value": "interest-rates-section"
             },
+                        {
+              "name": "Interest Rate Border",
+              "value": "interest-rate-border"
+            },
             {
               "name": "Bottom Spacer",
               "value": "spacer-bottom"

@@ -1,9 +1,12 @@
 import decorateFaqBanner from "./faq-banner.js";
+import decorateInterestRates from "./interest-rates.js";
 
 export default function decorate(block) {
   if (block.closest('.faq-landing-banner')) {
     decorateFaqBanner(block);
-  } else {
+  } else if(block.closest('.interest-rates-section')){
+      decorateInterestRates(block);
+  }else {
     const cols = [...block.firstElementChild.children];
     block.classList.add(`columns-${cols.length}-cols`);
 

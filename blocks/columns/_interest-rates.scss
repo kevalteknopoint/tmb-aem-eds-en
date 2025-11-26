@@ -1,5 +1,60 @@
 @use '../../styles/base' as *;
 
-.interest-rates-section{
-    
+.interest-rates-section {
+    @include responsive-container();
+
+    .interest-rates-wrapper {
+
+        h1,
+        h2,
+        h3 {
+            font-family: $secondary-font;
+            font-size: 40px;
+            font-weight: 900;
+            line-height: 40px;
+            color: $heading-default;
+
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 29px;
+            color: $heading-default;
+            border-bottom: 2px solid $heading-default;
+            padding-bottom: 16px;
+            margin-top: 40px;
+        }
+    }
+
+    .interest-rates-columns {
+        .interest-rates-list {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+
+            /* FIGMA TOKEN MISSING */
+            @include tablet {
+                // padding-top: 16px;
+                gap: 16px;
+                flex-direction: row;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                color: $body-default;
+                gap: 16px;
+                padding: 16px 0;
+            }
+        }
+
+    }
+}
+
+.interest-rate-border {
+    .interest-rates-columns {
+        & .interest-rates-list:last-child {
+            border-bottom: none;
+        }
+    }
 }

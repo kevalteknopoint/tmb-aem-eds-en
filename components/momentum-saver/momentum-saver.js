@@ -31,7 +31,7 @@ export default function decorateMomentumSaver() {
     varText?.classList?.add("background-color-white");
   }
 
-  // 🔹 Add "% p.a" to all h2 elements inside momentum-content
+  //  Add "% p.a" to all h2 elements inside momentum-content
   // Add a separate "% p.a" element after each h2 inside .momentum-content
   document.querySelectorAll(".momentum-content h2").forEach((heading) => {
     // Prevent duplication
