@@ -272,6 +272,10 @@
           {
             "name": "Who can apply",
             "value": "who-can-apply-section"
+          },
+          {
+            "name": "Customer",
+            "value": "customer"
           }
         ]
       }

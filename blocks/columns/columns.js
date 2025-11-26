@@ -1,8 +1,11 @@
 import decorateFaqBanner from "./faq-banner.js";
+import decorateWhoCanApply from "./who-can-apply.js";
 
 export default function decorate(block) {
   if (block.closest('.faq-landing-banner')) {
     decorateFaqBanner(block);
+  } else if (block.closest('.who-can-apply-section')) {
+    decorateWhoCanApply(block)
   } else {
     const cols = [...block.firstElementChild.children];
     block.classList.add(`columns-${cols.length}-cols`);
