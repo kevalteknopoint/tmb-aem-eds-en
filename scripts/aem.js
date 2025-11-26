@@ -700,6 +700,13 @@ async function loadSections(element) {
   }
 }
 
+const isMobileS = () => window.matchMedia('screen and (max-width: 480px)').matches;
+const isMobile = () => window.matchMedia('screen and (max-width: 767px)').matches;
+const isTablet = () => window.matchMedia('screen and (max-width: 1023px)').matches;
+const isTabletLg = () => window.matchMedia('screen and (max-width: 1279px)').matches;
+const isDesktop = () => window.matchMedia('screen and (max-width: 1439px)').matches;
+const isDesktopLg = () => window.matchMedia('screen and (min-width: 1440px)').matches;
+
 init();
 
 export {
@@ -727,4 +734,10 @@ export {
   toClassName,
   waitForFirstImage,
   wrapTextNodes,
+  isMobileS,
+  isMobile,
+  isTablet,
+  isTabletLg,
+  isDesktop,
+  isDesktopLg,
 };
