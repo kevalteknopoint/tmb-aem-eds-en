@@ -11,7 +11,7 @@ html{
 }
 
 .faq-heading-section h1, .faq-heading-section h2, .faq-heading-section h3, .faq-heading-section h4, .faq-heading-section h5, .faq-heading-section h6{
-  color:var(--surface-highlight);
+  color:var(--heading-default);
   font-family:var(--primary-font);
   font-size:40px;
   font-style:normal;

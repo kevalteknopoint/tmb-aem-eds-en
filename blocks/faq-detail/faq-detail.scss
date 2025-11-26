@@ -8,7 +8,7 @@ html {
   @include responsive-container();
 
   h1, h2, h3, h4, h5, h6 {
-    color: $surface-highlight;
+    color: $heading-default;
     font-family: $primary-font;
     font-size: 40px;
     font-style: normal;
