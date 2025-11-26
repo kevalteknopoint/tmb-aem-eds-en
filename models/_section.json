@@ -173,6 +173,10 @@
             {
               "name": "Customer",
               "value": "customer"
+            },
+            {
+              "name": "FAQ Accordion",
+              "value": "faq-accordion"
             }
           ]
         }
