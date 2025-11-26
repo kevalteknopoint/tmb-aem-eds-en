@@ -115,6 +115,10 @@
               "value": "tmb-sub-footer"
             },
             {
+              "name": "Interest Rate Section",
+              "value": "interest-rates-section"
+            },
+            {
               "name": "Bottom Spacer",
               "value": "spacer-bottom"
             },
