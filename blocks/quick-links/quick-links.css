@@ -100,7 +100,8 @@
   padding-bottom:2px;
   position:relative;
   text-decoration:none;
-  width:100%;
+  width:-moz-fit-content;
+  width:fit-content;
 }
 
 .quick-links-container .quick-links-wrapper > div > div > div > ul > li > a:hover::after{
