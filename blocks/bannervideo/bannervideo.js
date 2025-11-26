@@ -116,6 +116,7 @@ export default function decorate(block) {
     const swiper = new Swiperblock(block, {
       slidesPerView: 1,
       spaceBetween: 2,
+      loop: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -124,6 +125,7 @@ export default function decorate(block) {
         delay: 1000,
         disableOnInteraction: false,
       },
+      
     });
 
     swiper.on("slideChange", () => {

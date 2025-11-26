@@ -15,7 +15,7 @@
       justify-content: flex-start;
       gap: 16px;
       align-items: center;
-      color: $heading-default;
+      color: $link-default;
       font-size: 24px;
       font-weight: 500;
       line-height: 29px;
@@ -94,7 +94,7 @@
           position: relative;
           display: flex;
           justify-content: space-between;
-          width: 100%;
+          width: fit-content;
           color: $link-default;
           font-size: 14px;
           font-weight: 400;

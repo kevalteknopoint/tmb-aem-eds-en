@@ -1,6 +1,7 @@
 @use '../../styles/base' as *;
-@use '../../styles/variables';
-@use '../../styles/mixins';
+@use 'banner';
+@use 'news';
+
 @import '../../libs/swiper/swiper-bundle.min.css';
 
 .bannervideo-container {
@@ -23,7 +24,7 @@
         padding: 20px;
         width: 100%;
 
-        & > div:first-child img {
+        &>div:first-child img {
           height: 115px;
           min-width: 125px;
           object-fit: contain;
@@ -41,7 +42,7 @@
           font-family: $primary-font;
 
 
-          & > a {
+          &>a {
             background-color: transparent;
             color: $heading-default;
             font-size: 14px;
@@ -56,13 +57,14 @@
             text-underline-offset: 4px;
           }
         }
-        & p.button-container{
+
+        & p.button-container {
           margin-bottom: 0;
         }
 
-        & > div {
-          & > picture {
-            & > img {
+        &>div {
+          &>picture {
+            &>img {
               border-radius: 5px;
               height: 115px;
               max-width: none;
@@ -106,7 +108,7 @@
 .inner-section1 {
   position: relative;
 
-  & > h1 {
+  &>h1 {
     color: $heading-default;
     font-family: $secondary-font;
     font-size: 42px;
@@ -117,7 +119,7 @@
     letter-spacing: 2px;
   }
 
-  & > p {
+  &>p {
     display: none;
   }
 }
@@ -126,9 +128,9 @@
   .video-banner {
     .swiper-wrapper {
       .swiper-slide {
-        & > div {
-          & > .button-container {
-            & > a {
+        &>div {
+          &>.button-container {
+            &>a {
               background-color: unset;
               color: $heading-default;
               font-size: 14px;
@@ -140,18 +142,18 @@
               text-decoration: underline;
               text-decoration-thickness: 2px;
               text-underline-offset: 4px;
-              text-decoration-color: $link-accent;            
+              text-decoration-color: $link-accent;
             }
           }
 
-          & > picture {
-            & > img {
+          &>picture {
+            &>img {
               height: auto;
               width: 100%;
             }
           }
 
-          & > div {
+          &>div {
             display: flex;
             flex: 1 0 0;
             flex-direction: column;
@@ -160,11 +162,11 @@
           }
         }
 
-        & > div:nth-child(1) {
+        &>div:nth-child(1) {
           width: 25%;
         }
 
-        & > div:nth-child(2) {
+        &>div:nth-child(2) {
           align-items: flex-start;
           align-self: stretch;
           display: flex;
@@ -174,11 +176,11 @@
           gap: 16px;
           width: 68%;
 
-          @include mobile{
+          @include mobile {
             gap: 20px;
           }
 
-          & > p {
+          &>p {
             // color: #000;
             color: $heading-default;
             font-family: $primary-font;
@@ -204,7 +206,7 @@
 
   @include tablet {
     display: block;
-    
+
     img {
       width: 100%;
     }
@@ -266,174 +268,8 @@
   }
 }
 
-.secfirst {
-  .bannervideo-wrapper {
-    margin: 0 auto;
-    max-width: 100%;
-    padding: 0;
-
-    .bannervideo {
-      .swiper-slide {
-        margin-right: 2px;
-        position: relative;
-      }
-
-      .outer-pagination-div {
-        display: flex;
-        justify-content: flex-end;
-        gap: 4px;
-        position: absolute;
-        left: 25%;
-        right: 0;
-        top: unset;
-        width: 100%;
-        z-index: 1;
-        bottom: 64px;
-
-        @include responsive-container(25%);
-
-        @include desktop {
-          left: unset;
-          width: fit-content;
-          margin-left: auto;
-          margin-right: 0;
-        }
-
-        @include tablet {
-          position: absolute;
-          right: 0;
-          bottom: 16px;
-        }
-
-        .swiper-pagination {
-          position: static;
-          backdrop-filter: blur(18px);
-          -webkit-backdrop-filter: blur(18px);
-          align-items: center;
-          background: $bg-default;
-          border-radius: $radius-button;
-          display: flex;
-          gap: 10px;
-          height: 35px;
-          justify-content: center;
-          padding: 0 12px;
-          width: fit-content;
-
-          .swiper-pagination-bullet {
-            aspect-ratio: 1 / 1;
-            background: $bg-reverse;
-            border-radius: 40px;
-            box-shadow: 0 1px 4px 0 rgb(0 0 0 / 15%);
-            height: 4px;
-            opacity: 0.6;
-            width: 4px;
-            margin: 0;
-          }
-
-          .swiper-pagination-bullet-active {
-            opacity: 1;
-            aspect-ratio: 1 / 1;
-            border-radius: 40px;
-            box-shadow: 0 1px 4px 0 rgb(0 0 0 / 15%);
-            height: 8px;
-            width: 8px;
-          }
-        }
-
-        .play-btn {
-          display: grid;
-          place-items: center;
-          width: 35px;
-          height: 35px;
-          border-radius: $radius-button;
-          background-color: $bg-default;
-
-          svg {
-            display: block;
-            width: 24px;
-            height: 24px;
-            color: $color-pagination-selected;
-            filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.40));
-          }
-
-          @include tablet {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-
-  .swiper-wrapper {
-    height: 600px;
-    z-index: unset;
-
-    @include tablet {
-      height: auto;
-    }
-  }
-}
-
-.secsecond {
-  @include responsive-container();
-  // margin-left: auto;
-  // margin-right: auto;
-  // max-width: 1452px;
-  // padding: 0 40px;
-
-  .default-content-wrapper {
-    display: flex;
-    justify-content: space-between;
-
-    @include tablet {
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
-  }
-
-  .swiper-wrapper {
-    align-items: stretch;
-    align-self: stretch;
-    display: flex;
-    gap: 0;
-    padding: 30px 0 0;
-
-      @include tablet {
-        padding: 0;
-      }
-
-    .swiper-slide {
-      background: #FFF;
-      border: 1px solid rgb(0 0 0 / 20%);
-      // border-radius: 24px;
-      border-radius: $radius-card;
-      display: flex;
-      gap: 19px;
-      justify-content: flex-start;
-      padding: 20px;
-      width: 388px !important;
-      height: auto;
-      margin-right: 24px;
-    }
-
-    // .swiper-button-next:disabled,
-    // .swiper-button-prev:disabled {
-    //   opacity: 0.8;
-    //   pointer-events: none;
-    // }
-  }
-
-  .bannervedio-wrapper {
-    padding: 40px;
-  }
-
-  @include mobile {
-    padding: 0 20px;
-  }
-}
-
 .swiperinnerdiv {
-  & > div:nth-child(1) {
+  &>div:nth-child(1) {
     align-items: flex-start;
     background: transparent;
     display: flex;
@@ -457,7 +293,12 @@
       width: 100%;
     }
 
-    & > h1, h2, h3, h4, h5, h6 {
+    &>h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       color: $heading-default;
       font-family: $secondary-font;
       font-size: 60px;
@@ -473,43 +314,27 @@
       }
     }
 
-    & > p {
+    &>p {
       color: $body-default;
       font-size: 16px;
       font-style: normal;
-      font-weight: 400;
+      font-weight: 500;
       line-height: 24px;
       max-width: 560px;
     }
 
     &:nth-child(1) {
-      & > p.button-container {
+      &>p.button-container {
 
-        & > a {
-          background-color: $bg-reverse;
-          border-radius: $radius-button;
-          color: $link-reverse;
-          display: flex;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 500;
-          gap: 8px;
-          line-height: 24px;
-          padding: 8px 24px;
-          width: fit-content;
-
-          @include tablet {
-            font-size: 14px;
-            text-align: center;
-            padding: 6px 16px;
-          }
+        &>a {
+          @include button('primary');
         }
       }
     }
   }
 }
 
-// Media Query Only Selectors (Moved/Eliminated)
+// Media Query Only Selectors
 
 .mob-noswiper-child1 {
   @include tablet {
@@ -518,7 +343,7 @@
     display: flex;
     justify-content: space-between;
 
-    & > h1 {
+    &>h1 {
       color: $heading-default;
       font-size: 36px;
       font-style: normal;
@@ -527,8 +352,8 @@
       line-height: 38px;
     }
 
-    & > .button-container {
-      & > a {
+    &>.button-container {
+      &>a {
         background-color: unset;
         color: $heading-default;
         display: block;
@@ -547,7 +372,7 @@
 
 .mob-noswiper-child2 {
   @include tablet {
-    & > div {
+    &>div {
       align-items: flex-start;
       align-self: stretch;
       display: flex;

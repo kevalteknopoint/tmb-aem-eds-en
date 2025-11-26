@@ -1,5 +1,27 @@
 @import "../../libs/swiper/swiper-bundle.min.css";
 
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container a{
+  align-items:center;
+  background-color:var(--color-button-outlined-default);
+  border:none;
+  border:var(--stroke-button) solid var(--color-button-text-stroke-default);
+  border-radius:var(--radius-button);
+  color:var(--color-button-text-stroke-default);
+  cursor:pointer;
+  display:flex;
+  font-size:16px;
+  font-weight:500;
+  gap:16px;
+  justify-content:center;
+  line-height:24px;
+  min-width:150px;
+  padding:8px 24px;
+  text-align:center;
+  transition:all 0.3s ease-in-out;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
 .section.expandable-tiles-section{
   background:var(--gradient-1);
 }
@@ -39,6 +61,7 @@
   max-width:calc(1440px - 0px);
   overflow:auto;
   padding-inline:64px;
+  scrollbar-width:none;
   width:100%;
 }
 
@@ -330,7 +353,7 @@
   color:var(--heading-default);
   font-size:24px;
   font-style:normal;
-  font-weight:700;
+  font-weight:500;
   line-height:32px;
 }
 
@@ -423,13 +446,21 @@
 }
 
 .section.faq-cant-find-looking-for{
-  margin:0 auto;
-  max-width:1328px;
-  padding:32px;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-block:32px;
+  padding-inline:64px;
+  width:100%;
 }
 
-.section.faq-cant-find-looking-for .default-content-wrapper h1, .section.faq-cant-find-looking-for .default-content-wrapper h2, .section.faq-cant-find-looking-for .default-content-wrapper h3, .section.faq-cant-find-looking-for .default-content-wrapper h4, .section.faq-cant-find-looking-for .default-content-wrapper h5, .section.faq-cant-find-looking-for .default-content-wrapper h6{
-  color:#00525B;
+.section.faq-cant-find-looking-for .default-content-wrapper h1,
+.section.faq-cant-find-looking-for .default-content-wrapper h2,
+.section.faq-cant-find-looking-for .default-content-wrapper h3,
+.section.faq-cant-find-looking-for .default-content-wrapper h4,
+.section.faq-cant-find-looking-for .default-content-wrapper h5,
+.section.faq-cant-find-looking-for .default-content-wrapper h6{
+  color:var(--heading-default);
   font-family:var(--secondary-font);
   font-size:40px;
   font-style:normal;
@@ -470,8 +501,13 @@
   flex-grow:1;
 }
 
-.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h3{
-  color:#00525B;
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h1,
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h2,
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h3,
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h4,
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h5,
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h6{
+  color:var(--heading-default);
   font-family:var(--primary-font);
   font-size:20px;
   font-style:normal;
@@ -481,7 +517,7 @@
 }
 
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p{
-  color:#0B231F;
+  color:var(--body-default);
   font-family:var(--primary-font);
   font-size:16px;
   font-style:normal;
@@ -492,26 +528,27 @@
 }
 
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container{
+  align-items:center;
+  display:flex;
+  justify-content:center;
   margin-top:auto;
-  text-align:center;
 }
 
-.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container a{
-  border:1px solid #00525B;
-  border-radius:20px;
-  color:#00525B;
-  cursor:pointer;
-  display:block;
-  font-family:var(--primary-font);
-  font-size:16px;
-  font-style:normal;
-  font-weight:500;
-  line-height:24px;
-  margin:0 auto;
-  padding:8px 16px;
-  text-decoration:none;
-  width:-moz-fit-content;
-  width:fit-content;
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container a:hover{
+  background-color:var(--color-button-outlined-hover);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-hover);
+  color:var(--color-button-text-stroke-hover);
+}
+
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container a:active{
+  background-color:var(--color-button-outlined-press);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-press);
+  color:var(--color-button-text-stroke-press);
+}
+
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container a:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
 }
 
 .banking-goods{
@@ -704,12 +741,8 @@
   width:100%;
 }
 
-.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container a::after{
-  background-image:url("/icons/chevron-right-off-white.svg");
-  background-repeat:no-repeat;
-  background-size:100%;
-  content:unset;
-  display:block;
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container a svg{
+  display:none;
   height:12px;
   width:7.2px;
 }
@@ -761,7 +794,6 @@
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 .banking-desc-1,
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .card-bottom-1 .banking-desc-1{
     font-size:15px;
-    font-weight:500;
     line-height:20px;
   }
 
@@ -840,6 +872,10 @@
     padding-inline:24px;
   }
 
+  .section.faq-cant-find-looking-for{
+    padding-inline:24px;
+  }
+
   .banking-goods{
     padding-inline:24px;
   }
@@ -862,8 +898,61 @@
     padding:6px 18px 6px 0;
   }
 
+  .banking-goods .cards-wrapper .cards{
+    overflow:auto;
+    scrollbar-width:none;
+  }
+
   .banking-goods .cards-wrapper .cards > ul{
-    grid-template-columns:1fr 1fr;
+    display:flex;
+    justify-content:flex-start;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul li{
+    min-width:335px;
+    width:-moz-fit-content;
+    width:fit-content;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:first-child{
+    display:none;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child){
+    height:500px;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body{
+    backdrop-filter:unset;
+    background:linear-gradient(180deg, rgb(11 35 31 / 0%) 0.01%, rgb(11 35 31 / 14%) 34.14%, rgb(11 35 31 / 80%) 99.98%);
+    justify-content:flex-end;
+    min-height:335px;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body::after{
+    content:unset;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h1, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h2, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h3, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h4, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h5, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h6{
+    font-size:32px;
+    line-height:32px;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body p{
+    opacity:1;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body p:not(.button-container){
+    display:none;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container{
+    opacity:1;
+    padding:0;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container a svg{
+    display:block;
   }
 }
 
@@ -991,7 +1080,6 @@
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 .banking-desc-1,
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .card-bottom-1 .banking-desc-1{
     font-size:20px;
-    font-weight:800;
     line-height:24px;
   }
 
@@ -1029,7 +1117,8 @@
   }
 
   .section.faq-cant-find-looking-for{
-    padding:24px;
+    padding-block:24px;
+    padding-inline:16px;
   }
 
   .section.faq-cant-find-looking-for .default-content-wrapper{
@@ -1060,62 +1149,5 @@
 
   .banking-goods{
     padding-inline:16px;
-  }
-
-  .banking-goods .cards-wrapper .cards{
-    overflow:auto;
-    scrollbar-width:none;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul{
-    display:flex;
-    justify-content:flex-start;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul li{
-    min-width:335px;
-    width:-moz-fit-content;
-    width:fit-content;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul > li:first-child{
-    display:none;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child){
-    height:500px;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body{
-    backdrop-filter:unset;
-    background:linear-gradient(180deg, rgb(11 35 31 / 0%) 0.01%, rgb(11 35 31 / 14%) 34.14%, rgb(11 35 31 / 80%) 99.98%);
-    justify-content:flex-end;
-    min-height:335px;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body::after{
-    content:unset;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h1, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h2, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h3, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h4, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h5, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h6{
-    font-size:32px;
-    line-height:32px;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body p{
-    opacity:1;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body p:not(.button-container){
-    display:none;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container{
-    opacity:1;
-    padding:0;
-  }
-
-  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container a::after{
-    content:"";
   }
 }
