@@ -3,6 +3,7 @@
 @use "sass:math" as *;
 @use "sass:color" as *;
 @use "sass:meta" as *;
+@use 'sass:map' as map;
 
 /* ---------- MEDIA MIXINS ----------
 @mixin mobile {
@@ -184,31 +185,31 @@ $btn-variants: (
   line-height: $line-height;
   min-width: $min-width;
 
-  @if not map-has-key($btn-variants, $variant) {
+  @if not map.has-key($btn-variants, $variant) {
     @debug "Variant '#{$variant}' not found. Falling back to 'primary'.";
     $variant: 'primary';
   }
 
-  $theme: map-get($btn-variants, $variant);
+  $theme: map.get($btn-variants, $variant);
 
-  border: map-get($theme, 'border');
-  background-color: map-get($theme, 'bg');
-  color: map-get($theme, 'color');
+  border: map.get($theme, 'border');
+  background-color: map.get($theme, 'bg');
+  color: map.get($theme, 'color');
 
   &:hover {
-    border: map-get($theme, 'border-hover');
-    background-color: map-get($theme, 'bg-hover');
-    color: map-get($theme, 'color-hover');
+    border: map.get($theme, 'border-hover');
+    background-color: map.get($theme, 'bg-hover');
+    color: map.get($theme, 'color-hover');
   }
 
   &:active {
-    border: map-get($theme, 'border-active');
-    background-color: map-get($theme, 'bg-active');
-    color: map-get($theme, 'color-active');
+    border: map.get($theme, 'border-active');
+    background-color: map.get($theme, 'bg-active');
+    color: map.get($theme, 'color-active');
   }
 
   &:focus-visible {
     outline: none;
-    box-shadow: map-get($theme, 'focus-visible');
+    box-shadow: map.get($theme, 'focus-visible');
   }
 }
