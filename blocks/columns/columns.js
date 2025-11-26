@@ -4,9 +4,12 @@ import decorateInterestRates from "./interest-rates.js";
 export default function decorate(block) {
   if (block.closest('.faq-landing-banner')) {
     decorateFaqBanner(block);
-  } else if(block.closest('.interest-rates-section')){
-      decorateInterestRates(block);
-  }else {
+  } else if (
+  block.closest('.interest-rates-section') ||
+  block.closest('.interest-rate-border')
+) {
+    decorateInterestRates(block);
+}else {
     const cols = [...block.firstElementChild.children];
     block.classList.add(`columns-${cols.length}-cols`);
 

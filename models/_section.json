@@ -118,7 +118,11 @@
               "name": "Interest Rate Section",
               "value": "interest-rates-section"
             },
-                        {
+            {
+              "name": "Account Fees Section",
+              "value": "account-fees-section"
+            },
+            {
               "name": "Interest Rate Border",
               "value": "interest-rate-border"
             },

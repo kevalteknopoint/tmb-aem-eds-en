@@ -44,6 +44,9 @@ export default function decorateInterestRates() {
 
       const ratesList = section.querySelectorAll(".columns.block > div");
       ratesList.forEach(el => el.classList.add("interest-rates-list"));
+
+    //   const rate = section.querySelectorAll(".columns.block > div:nth-child(2)");
+    //   rate.classList.add("interest-rates-list-2");
     }
   }, 50);
 }
