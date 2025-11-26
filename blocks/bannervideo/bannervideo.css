@@ -1,5 +1,26 @@
 @import '../../libs/swiper/swiper-bundle.min.css';
 
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container > a{
+  align-items:center;
+  background-color:var(--color-button-primary-default);
+  border:none;
+  border-radius:var(--radius-button);
+  color:var(--color-button-text-stroke-reverse);
+  cursor:pointer;
+  display:flex;
+  font-size:16px;
+  font-weight:500;
+  gap:16px;
+  justify-content:center;
+  line-height:24px;
+  min-width:150px;
+  padding:8px 24px;
+  text-align:center;
+  transition:all 0.3s ease-in-out;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
 .bannervideo-container{
   position:relative;
 }
@@ -317,19 +338,21 @@
   max-width:560px;
 }
 
-.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container > a{
-  background-color:var(--bg-reverse);
-  border-radius:var(--radius-button);
-  color:var(--link-reverse);
-  display:flex;
-  font-size:16px;
-  font-style:normal;
-  font-weight:500;
-  gap:8px;
-  line-height:24px;
-  padding:8px 24px;
-  width:-moz-fit-content;
-  width:fit-content;
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container > a:hover{
+  background-color:var(--color-button-primary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container > a:active{
+  background-color:var(--color-button-primary-press);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container > a:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
 }
 
 @media screen and (max-width: 1439px){
@@ -467,12 +490,6 @@
   .swiperinnerdiv > div:nth-child(1) > h1, .swiperinnerdiv > div:nth-child(1) h2, .swiperinnerdiv > div:nth-child(1) h3, .swiperinnerdiv > div:nth-child(1) h4, .swiperinnerdiv > div:nth-child(1) h5, .swiperinnerdiv > div:nth-child(1) h6{
     font-size:40px;
     line-height:32px;
-  }
-
-  .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container > a{
-    font-size:14px;
-    padding:6px 16px;
-    text-align:center;
   }
 
   .mob-noswiper-child1{

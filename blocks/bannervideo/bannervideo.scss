@@ -486,23 +486,7 @@
       & > p.button-container {
 
         & > a {
-          background-color: $bg-reverse;
-          border-radius: $radius-button;
-          color: $link-reverse;
-          display: flex;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 500;
-          gap: 8px;
-          line-height: 24px;
-          padding: 8px 24px;
-          width: fit-content;
-
-          @include tablet {
-            font-size: 14px;
-            text-align: center;
-            padding: 6px 16px;
-          }
+          @include button('primary');
         }
       }
     }

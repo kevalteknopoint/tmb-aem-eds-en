@@ -147,22 +147,12 @@
 
       .button-container {
         margin-bottom: unset;
-        // min-width: 150px;
-        width: fit-content;
-        background-color: $heading-default;
-        border-radius: $radius-card;
-        display: inline-flex;
-        padding: 8px 28.5px;
+        
+        a {
+          @include button('primary');
+        }
       }
 
-      a {
-        color: $stroke-reverse;
-        // text-align: center;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 24px;
-      }
     }
   }
 }
@@ -265,10 +255,9 @@
     }
 
     .button-container {
-      background-color: #F5F8DE;
 
       a {
-        color: $stroke-default;
+        @include button('secondary')
       }
     }
   }

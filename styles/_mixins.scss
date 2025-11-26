@@ -1,3 +1,4 @@
+@use './variables' as *;
 @use "sass:string" as *;
 @use "sass:math" as *;
 @use "sass:color" as *;
@@ -94,5 +95,120 @@
 
   @include mobile() {
     padding-inline: 16px;
+  }
+}
+
+/* ---------- BUTTON MIXINS ---------- */
+%button-shared-layout {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 24px;
+  text-align: center;
+  font-weight: 500;
+  gap: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: $radius-button;
+  transition: all 0.3s ease-in-out;
+}
+
+$btn-variants: (
+  'primary': (
+    'border': none,
+    'border-hover': none,
+    'border-active': none,
+    'bg': $color-button-primary-default,
+    'color': $color-button-text-stroke-reverse,
+    'bg-hover': $color-button-primary-hover,
+    'color-hover': $color-button-text-stroke-reverse,
+    'bg-active': $color-button-primary-press,
+    'color-active': $color-button-text-stroke-reverse,
+    'focus-visible': (0 0 0 1px $color-focus-reversed, 0 0 0 3px $color-focus-default)
+  ),
+  'secondary': (
+    'border': none,
+    'border-hover': none,
+    'border-active': none,
+    'bg': $color-button-secondary-default,
+    'color': $color-button-text-stroke-default,
+    'bg-hover': $color-button-secondary-hover,
+    'color-hover': $color-button-text-stroke-hover,
+    'bg-active': $color-button-secondary-press,
+    'color-active': $color-button-text-stroke-press,
+    'focus-visible': (0 0 0 1px $color-focus-reversed, 0 0 0 3px $color-focus-default)
+  ),
+  'outlined': (
+    'border': $stroke-button solid $color-button-text-stroke-default,
+    'border-hover': $stroke-button solid $color-button-text-stroke-hover,
+    'border-active': $stroke-button solid $color-button-text-stroke-press,
+    'bg': $color-button-outlined-default,
+    'color': $color-button-text-stroke-default,
+    'bg-hover': $color-button-outlined-hover,
+    'color-hover': $color-button-text-stroke-hover,
+    'bg-active': $color-button-outlined-press,
+    'color-active': $color-button-text-stroke-press,
+    'focus-visible': (0 0 0 1px $color-focus-reversed, 0 0 0 3px $color-focus-default)
+  ),
+  'outlined-reverse': (
+    'border': $stroke-button solid $color-button-text-stroke-reverse,
+    'border-hover': $stroke-button solid $color-button-text-stroke-reverse,
+    'border-active': $stroke-button solid $color-button-text-stroke-reverse,
+    'bg': $color-button-outlined-reverse-default,
+    'color': $color-button-text-stroke-reverse,
+    'bg-hover': $color-button-outlined-reverse-hover,
+    'color-hover': $color-button-text-stroke-reverse,
+    'bg-active': $color-button-outlined-reverse-press,
+    'color-active': $color-button-text-stroke-reverse,
+    'focus-visible': (0 0 0 2px $color-focus-default, 0 0 0 3px $color-focus-reversed)
+  ),
+  'white': (
+    'border': none,
+    'border-hover': none,
+    'border-active': none,
+    'bg': $color-button-white-default,
+    'color': $color-button-text-stroke-default,
+    'bg-hover': $color-button-white-hover,
+    'color-hover': $color-button-text-stroke-hover,
+    'bg-active': $color-button-white-press,
+    'color-active': $color-button-text-stroke-press,
+    'focus-visible': (0 0 0 2px $color-focus-default, 0 0 0 3px $color-focus-reversed)
+  ),
+);
+
+@mixin button($variant: 'primary', $font-size: 16px, $line-height: 24px, $min-width: 150px) {
+  @extend %button-shared-layout;
+
+  font-size: $font-size;
+  line-height: $line-height;
+  min-width: $min-width;
+
+  @if not map-has-key($btn-variants, $variant) {
+    @debug "Variant '#{$variant}' not found. Falling back to 'primary'.";
+    $variant: 'primary';
+  }
+
+  $theme: map-get($btn-variants, $variant);
+
+  border: map-get($theme, 'border');
+  background-color: map-get($theme, 'bg');
+  color: map-get($theme, 'color');
+
+  &:hover {
+    border: map-get($theme, 'border-hover');
+    background-color: map-get($theme, 'bg-hover');
+    color: map-get($theme, 'color-hover');
+  }
+
+  &:active {
+    border: map-get($theme, 'border-active');
+    background-color: map-get($theme, 'bg-active');
+    color: map-get($theme, 'color-active');
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: map-get($theme, 'focus-visible');
   }
 }

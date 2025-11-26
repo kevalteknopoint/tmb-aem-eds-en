@@ -1,4 +1,20 @@
 @import '../../libs/aos/aos.min.css';
+.momentum-saver-section .momentum-columns .momentum-second-content .button-container a, .momentum-image-saver.bg-image-saver .momentum-second-content .button-container a{
+  align-items:center;
+  border:none;
+  border-radius:var(--radius-button);
+  cursor:pointer;
+  display:flex;
+  font-weight:500;
+  gap:16px;
+  justify-content:center;
+  padding:8px 24px;
+  text-align:center;
+  transition:all 0.3s ease-in-out;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
 *, *::before, *::after{
   box-sizing:border-box;
 }
@@ -608,20 +624,29 @@ header{
   margin-bottom:24px;
 }
 .momentum-saver-section .momentum-columns .momentum-second-content .button-container{
-  background-color:var(--heading-default);
-  border-radius:var(--radius-card);
-  display:inline-flex;
   margin-bottom:unset;
-  padding:8px 28.5px;
-  width:-moz-fit-content;
-  width:fit-content;
 }
-.momentum-saver-section .momentum-columns .momentum-second-content a{
-  color:var(--stroke-reverse);
+.momentum-saver-section .momentum-columns .momentum-second-content .button-container a{
+  background-color:var(--color-button-primary-default);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
   font-size:16px;
-  font-style:normal;
-  font-weight:500;
   line-height:24px;
+  min-width:150px;
+}
+.momentum-saver-section .momentum-columns .momentum-second-content .button-container a:hover{
+  background-color:var(--color-button-primary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+.momentum-saver-section .momentum-columns .momentum-second-content .button-container a:active{
+  background-color:var(--color-button-primary-press);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+.momentum-saver-section .momentum-columns .momentum-second-content .button-container a:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
 }
 
 .momentum-saver-section.background-color-teal{
@@ -666,11 +691,27 @@ header{
 .momentum-image-saver.bg-image-saver .momentum-second-content p{
   color:var(--body-reverse);
 }
-.momentum-image-saver.bg-image-saver .momentum-second-content .button-container{
-  background-color:#F5F8DE;
-}
 .momentum-image-saver.bg-image-saver .momentum-second-content .button-container a{
-  color:var(--stroke-default);
+  background-color:var(--color-button-secondary-default);
+  border:none;
+  color:var(--color-button-text-stroke-default);
+  font-size:16px;
+  line-height:24px;
+  min-width:150px;
+}
+.momentum-image-saver.bg-image-saver .momentum-second-content .button-container a:hover{
+  background-color:var(--color-button-secondary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-hover);
+}
+.momentum-image-saver.bg-image-saver .momentum-second-content .button-container a:active{
+  background-color:var(--color-button-secondary-press);
+  border:none;
+  color:var(--color-button-text-stroke-press);
+}
+.momentum-image-saver.bg-image-saver .momentum-second-content .button-container a:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
 }
 @media screen and (max-width: 1279px){
   .top-margin{
