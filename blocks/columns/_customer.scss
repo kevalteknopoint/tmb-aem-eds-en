@@ -1,96 +1,98 @@
-@use '../../styles/base' as *;
+@use "../../styles/base" as *;
 
-.customer{
-    background: $gradient-1;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+.customer {
+  background: $gradient-1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 
-    .columns-wrapper{
-        @include responsive-container;
+  .columns-wrapper {
+    @include responsive-container;
 
-        .block{
-            .columns-container{
-                gap: 32px;
-                align-items: stretch;
+    .block {
+      .columns-container {
+        gap: 32px;
+        align-items: stretch;
 
-                div{
-                    background: $bg-default;
-                    border-radius: $radius-card;
-                    padding: 40px 24px;
-                    display: flex;
-                    flex-direction: column;
+        div {
+          background: $bg-default;
+          border-radius: $radius-card;
+          padding: 40px 24px;
+          display: flex;
+          flex-direction: column;
 
-                    h1,h2,h3{
-                        color: $heading-default;
-                        text-align: center;
-                        font-family: $secondary-font;
-                        font-size: 40px;
-                        font-style: normal;
-                        // font-weight: 900;
-                        line-height: 40px; 
-                        letter-spacing: 2px;
-                        text-transform: uppercase;
-                    }
-                    p{
-                        color: $body-default;
-                        text-align: center;
-                        font-size: 16px;
-                        font-weight: 400;
-                        line-height: 24px;
-                        margin: 16px 0 32px;
-                    }
-                    p.button-container{
-                        border-radius: $radius-button;
-                        background: $color-button-primary-default;
-                        border: $stroke-button solid $color-button-text-stroke-default;
-                        // background: $color-button-outlined-default;
-                        min-width: 150px;
-                        width: fit-content;
-                        padding: 8px 34.5px;
-                        display: block;
-                        margin: auto auto 0;
-
-                        a{
-                            color: $color-button-text-stroke-reverse;
-                            text-align: center;
-                            font-size: 16px;
-                            font-weight: 500;
-                            line-height: 24px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .content-container{
-        .para-0{
-            color: var(--body, #0B231F);
+          h1,
+          h2,
+          h3 {
+            color: $heading-default;
+            text-align: center;
+            font-family: $secondary-font;
+            font-size: 40px;
+            font-style: normal;
+            // font-weight: 900;
+            line-height: 40px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+          }
+          p {
+            color: $body-default;
             text-align: center;
             font-size: 16px;
             font-weight: 400;
             line-height: 24px;
+            margin: 16px 0 32px;
+          }
+          p.button-container {
+            border-radius: $radius-button;
+            background: $color-button-primary-default;
+            border: $stroke-button solid $color-button-text-stroke-default;
+            // background: $color-button-outlined-default;
+            min-width: 150px;
+            width: fit-content;
+            padding: 8px 34.5px;
+            display: block;
+            margin: auto auto 0;
 
-            a{
-                color: $link-default;
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 24px;
-                text-decoration-line: underline;
-                text-decoration-style: solid;
-                text-decoration-skip-ink: auto;
-                text-decoration-thickness: auto;
-                text-underline-offset: auto;
-                text-underline-position: from-font;
+            a {
+              color: $color-button-text-stroke-reverse;
+              text-align: center;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 24px;
             }
+          }
         }
-        .para-1{
-            margin-top: 16px;
-            color: $body-default;
-            text-align: center;
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 18px;
-        }
+      }
     }
+  }
+  .content-container {
+    .para-0 {
+      color: var(--body, #0b231f);
+      text-align: center;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+
+      a {
+        color: $link-default;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+      }
+    }
+    .para-1 {
+      margin-top: 16px;
+      color: $body-default;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
 }
