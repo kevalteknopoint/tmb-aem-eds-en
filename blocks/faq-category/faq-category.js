@@ -1,4 +1,4 @@
-import { injectIcon } from "../../scripts/aem.js";
+import { getMetadata, injectIcon } from "../../scripts/aem.js";
 import { a, li, span, ul, div, button } from "../../scripts/dom-helpers.js";
 import { fetchPlaceholders } from "../../scripts/placeholders.js";
 
@@ -33,6 +33,8 @@ async function fetchAllFaqsByTag(tagValue) {
 }
 
 export default async function decorate(block) {
+  const basePath = getMetadata('base-path');
+
   const dynamicTextWrap = block.querySelector("pre");
 
   const tagWrap = block.querySelector("div:nth-child(2)")?.querySelector('p');
@@ -51,12 +53,18 @@ export default async function decorate(block) {
     faqs.forEach((item) => {
       const icon = span({ class: "faq-link-icon" });
       injectIcon('chevron-right-links-default', icon);
+      let faqUrl = item?.faqPageUrl?._path?.replace(/\/content\/[A-Za-z]+\//, '/');
+      if (faqUrl?.split('/')?.[1] !== basePath?.split('/')?.[1]) {
+        const splitUrl = faqUrl?.split('/');
+        if (splitUrl && splitUrl[1]) splitUrl[1] = basePath?.split('/')?.[1];
+        faqUrl = splitUrl?.join('/') || '#';
+      }
 
       faqList.append(
         li(
           { class: "faq-item" },
           a(
-            { class: "faq-link", href: item?.faqPageUrl?._path?.replace(/\/content\/[A-Za-z]+\//, '/') || "#" },
+            { class: "faq-link", href: faqUrl },
             item.question,
             icon
           )
@@ -124,12 +132,18 @@ export default async function decorate(block) {
     faqs.forEach((item) => {
       const icon = span({ class: "faq-link-icon" });
       injectIcon('chevron-right-links-default', icon);
+      let faqUrl = item?.faqPageUrl?._path?.replace(/\/content\/[A-Za-z]+\//, '/');
+      if (faqUrl?.split('/')?.[1] !== basePath?.split('/')?.[1]) {
+        const splitUrl = faqUrl?.split('/');
+        if (splitUrl && splitUrl[1]) splitUrl[1] = basePath?.split('/')?.[1];
+        faqUrl = splitUrl?.join('/') || '#';
+      }
 
       faqList.append(
         li(
           { class: "faq-item" },
           a(
-            { class: "faq-link", href: item?.faqPageUrl?._path?.replace(/\/content\/[A-Za-z]+\//, '/') || "#" },
+            { class: "faq-link", href: faqUrl },
             item.question,
             icon
           )
