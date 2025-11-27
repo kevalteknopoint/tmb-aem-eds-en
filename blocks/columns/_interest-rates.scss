@@ -49,12 +49,136 @@
         }
 
     }
+
+    .interest-rates-columns-2 {
+        .interest-rates-list {
+            border-bottom: none;
+        }
+    }
+
+    .interest-rates-columns-3 {
+        .columns {
+            .interest-rates-list-6 {
+                border-bottom: 2px solid $heading-default;
+
+                p {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
 }
 
 .interest-rate-border {
     .interest-rates-columns {
         & .interest-rates-list:last-child {
             border-bottom: none;
+        }
+    }
+}
+
+
+// .account-fees-section {
+//     @include responsive-container();
+
+
+//     .interest-rates-columns {
+
+//         .interest-rates-list {
+//             display: grid;
+//             grid-template-columns: 1fr 1fr;
+//             align-items: center;
+//             padding: 16px 0;
+//             border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+
+//             p {
+//                 margin: 0;
+//                 padding: 0;
+//                 font-size: 16px;
+//                 font-weight: 400;
+//                 line-height: 24px;
+//                 color: $heading-default;
+//             }
+//             &:first-child {
+//                 border-bottom: 3px solid $heading-default; 
+//                 font-weight: 700;
+
+//                 p {
+//                     font-weight: 700;
+//                 }
+//             }
+//         }
+
+//         &:last-of-type {
+//             .interest-rates-list {
+//                 grid-template-columns: 1fr;
+//                 padding: 20px 0 0;
+//                 border-bottom: none;
+
+//                 p {
+//                     font-size: 14px;
+//                     line-height: 20px;
+//                     color: $body-default;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+.account-fees-section {
+    @include responsive-container();
+
+    .interest-rates-columns {
+        .interest-rates-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            // padding: 16px 0;
+            // padding-bottom: 16px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+
+            p {
+                gap: 16px;
+                // padding: 16px 0;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                color: $body-default;
+            }
+
+            &:first-child {
+                p {
+                    color: $heading-default;
+                    font-weight: 700;
+                }
+            }
+
+            &.account-fees-note {
+                grid-template-columns: 1fr;
+                // padding-top: 20px;
+                border-bottom: none;
+
+                p {
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: $body-default;
+                }
+            }
+        }
+    }
+
+    .interest-rates-columns-3 {
+        .columns {
+            .interest-rates-list-6 {
+                border-bottom: 2px solid $heading-default;
+
+                .fee-type-content {
+                    p {
+                        margin-top: 40px;
+                        padding: 0;
+                    }
+                }
+            }
         }
     }
 }

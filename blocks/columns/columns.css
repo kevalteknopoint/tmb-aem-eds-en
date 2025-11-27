@@ -119,8 +119,68 @@
   padding:16px 0;
 }
 
+.interest-rates-section .interest-rates-columns-2 .interest-rates-list{
+  border-bottom:none;
+}
+
+.interest-rates-section .interest-rates-columns-3 .columns .interest-rates-list-6{
+  border-bottom:2px solid var(--heading-default);
+}
+
+.interest-rates-section .interest-rates-columns-3 .columns .interest-rates-list-6 p{
+  margin-top:40px;
+}
+
 .interest-rate-border .interest-rates-columns .interest-rates-list:last-child{
   border-bottom:none;
+}
+
+.account-fees-section{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
+}
+
+.account-fees-section .interest-rates-columns .interest-rates-list{
+  align-items:center;
+  border-bottom:1px solid rgb(0 0 0 / 20%);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+
+.account-fees-section .interest-rates-columns .interest-rates-list p{
+  color:var(--body-default);
+  font-size:16px;
+  font-weight:400;
+  gap:16px;
+  line-height:24px;
+}
+
+.account-fees-section .interest-rates-columns .interest-rates-list:first-child p{
+  color:var(--heading-default);
+  font-weight:700;
+}
+
+.account-fees-section .interest-rates-columns .interest-rates-list.account-fees-note{
+  border-bottom:none;
+  grid-template-columns:1fr;
+}
+
+.account-fees-section .interest-rates-columns .interest-rates-list.account-fees-note p{
+  color:var(--body-default);
+  font-size:14px;
+  line-height:20px;
+}
+
+.account-fees-section .interest-rates-columns-3 .columns .interest-rates-list-6{
+  border-bottom:2px solid var(--heading-default);
+}
+
+.account-fees-section .interest-rates-columns-3 .columns .interest-rates-list-6 .fee-type-content p{
+  margin-top:40px;
+  padding:0;
 }
 
 .columns img{
@@ -165,6 +225,10 @@
   .interest-rates-section{
     padding-inline:24px;
   }
+
+  .account-fees-section{
+    padding-inline:24px;
+  }
 }
 
 @media screen and (max-width: 1023px){
@@ -205,6 +269,10 @@
   }
 
   .interest-rates-section{
+    padding-inline:16px;
+  }
+
+  .account-fees-section{
     padding-inline:16px;
   }
 }
