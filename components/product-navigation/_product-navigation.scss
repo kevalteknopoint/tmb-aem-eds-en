@@ -1,0 +1,116 @@
+@use '../../styles/base' as *;
+
+.product-navigation {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  @include responsive-container();
+
+  @include tablet {
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.09);
+  }
+
+  .default-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    background: $color-pagination-secondary-nav;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.09);
+    border-radius: $radius-card;
+    padding: 20px 24px;
+
+    @include tablet {
+      box-shadow: none;
+      border-radius: 0;
+      padding: 20px 0;
+    }
+
+    @include mobile {
+      overflow-x: auto;
+      padding: 11.5px 0;
+    }
+
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 16px;
+      overflow-x: auto;
+      position: relative;
+
+      &:has(li:first-child a:focus-visible) {
+        padding-left: 4px;
+      }
+
+      &:has(li:last-child a:focus-visible) {
+        padding-right: 4px;
+      }
+
+      /* @include tablet {
+        &::after {
+          content: '';
+          pointer-events: none;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 74.2px;
+          height: 100%;
+          background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+        }
+      } */
+
+      @include mobile {
+        overflow-x: unset;
+      }
+
+      li {
+        padding: 4px 0;
+        border-radius: $radius-menu-link;
+
+        &:has(a:focus-visible) {
+          margin: 4px 0;
+          box-shadow: 0 0 0 1px $color-focus-reversed, 0 0 0 3px $color-focus-default;
+        }
+
+        a {
+          display: block;
+          min-width: max-content;
+          position: relative;
+          padding: 4px 0;
+          color: $color-header-nav-primary;
+
+          &:focus-visible {
+            outline: none;
+          }
+
+          &:hover::after, &.active::after {
+            left: 0;
+            right: unset;
+            width: 100%;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            width: 0;
+            transition: all 0.2s ease-in-out;
+            background: $color-header-nav-primary;
+          }
+        }
+      }
+    }
+
+    .button-container {
+      min-width: fit-content;
+
+      a {
+        @include button('primary');
+      }
+    }
+  }
+}
