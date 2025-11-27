@@ -81,7 +81,7 @@
   width:100%;
 }
 
-.who-can-apply-section .default-content-wrapper p{
+.who-can-apply-section .default-content-wrapper h2{
   color:var(--heading-default);
   font-family:var(--secondary-font);
   font-size:40px;
@@ -128,7 +128,6 @@
 }
 
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-label{
-  align-items:center;
   align-items:flex-start;
   display:flex;
   justify-content:space-between;
@@ -194,9 +193,7 @@
   padding:40px 24px;
 }
 
-.customer .columns-wrapper .block .columns-container div h1,
-.customer .columns-wrapper .block .columns-container div h2,
-.customer .columns-wrapper .block .columns-container div h3{
+.customer .columns-wrapper .block .columns-container div h1, .customer .columns-wrapper .block .columns-container div h2, .customer .columns-wrapper .block .columns-container div h3{
   color:var(--heading-default);
   font-family:var(--secondary-font);
   font-size:40px;
@@ -236,8 +233,17 @@
   text-align:center;
 }
 
+.customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container{
+  background:var(--color-button-outlined-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-default);
+}
+
+.customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a{
+  color:var(--color-button-text-stroke-default);
+}
+
 .customer .content-container .para-0{
-  color:var(--body, #0b231f);
+  color:var(--body, #0B231F);
   font-size:16px;
   font-weight:400;
   line-height:24px;

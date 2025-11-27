@@ -1,9 +1,7 @@
 export default async function decorateCustomer(block) {
-  // console.log("object");
   const columns = block.querySelector(".columns-wrapper div");
   columns.classList.add("columns-container");
-  const customerLinkContent = block.querySelector(".default-content-wrapper");
-
+  const customerLinkContent = document.querySelector(".customer .default-content-wrapper");
   customerLinkContent.classList.add("content-container");
 
   if (customerLinkContent) {
