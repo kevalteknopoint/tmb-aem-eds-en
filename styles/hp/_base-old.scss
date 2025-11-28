@@ -1,0 +1,152 @@
+:root {
+  /* ---------- BORDER VARIABLES ---------- */
+
+  --border-primary: #222; /* from "border-primary" */
+  --border-brand: #003764;   /* from "border-brand" */
+  --border-error: #fff;   /* from "border-error" */
+
+  /* ---------- BORDER VARIABLES ---------- */
+
+
+  /* ---------- TEXT VARIABLES ---------- */
+
+  --text-primary: #222; /* from "text-primary" */
+  --text-secondary: #f7c0b3; /* from "text-secondary" */
+  --text-inverse: #f7c0b3; /* from "text-inverse" */
+  --text-light: #f7c0b3; /* from "text-light" */
+  --text-brand: #003764; /* from "text-brand" */
+  --text-brand-secondary: #fff; /* from "text-brand secondary" */
+
+  /* -------------------- */
+  --text-primary-cta: #fafafa; /* from "text-primarycta" */
+  --text-secondary-cta: #fafafa; /* from "text-secondarycta" */
+  --text-accent-cta: #fafafa; /* from "text-accentcta" */
+  --text-disabled: #d9dadb; /* from "text-disabled" */
+  --text-error: #fff; /* from "text-error" */
+
+  /* -------------------- */
+  --text-ghost-default: #fff; /* from "text -ghost default" */
+  --text-ghost-hover: #fff; /* from "text -ghost hover" */
+  --text-ghost-focused: #fff; /* from "text -ghost focused" */
+  --text-ghost-disabled: #fff; /* from "text -ghost disabled" */
+  --text-ghost-active: #fff; /* from "text -ghost active" */
+
+  /* ---------- TEXT VARIABLES ---------- */
+
+
+  /* ---------- SURFACE VARIABLES ---------- */
+  
+  --surface-primary: #f4f4f5; /* from "surface-primary" */
+  --surface-secondary: #d9dadb; /* from "surface-secondary" */
+  --surface-overlay: #565659; /* from "surface-overlay" */
+  --surface-brand: #172983; /* from "surface-brand" */
+  --surface-light: #fff; /* from "surface-light" */
+  --surface-login-cta: #f7c0b3; /* from "surface-login cta" */
+
+  /* -------------------- */
+  --surface-primary-cta: #a2daf3; /* from "surface-primary cta" */
+  --surface-prim-hover-cta: #f7c0b3; /* from "surface-primhover cta" */
+  --surface-prim-active-cta: #172983; /* from "surface-primactive cta" */
+
+  /* -------------------- */
+  --surface-secondary-cta: #a2daf3; /* from "surface-secondary cta" */
+  --surface-sec-hover-cta: #f7c0b3; /* from "surface-sechover cta" */
+
+  /* -------------------- */
+  --surface-accent-cta: #172983; /* from "surface-accent cta" */
+  --surface-accent-hover-cta: #f7c0b3; /* from "surface-accenthover cta" */
+  --surface-accent-active-cta: #f7c0b3; /* from "surface-accentactive cta" */
+
+  /* -------------------- */
+  --surface-disabled-cta: #efefef; /* from "surface-disabledcta" */
+  --surface-highlight: #efefef; /* from "surface-highlight" */
+
+  /* ---------- SURFACE VARIABLES ---------- */
+
+
+  /* ---------- FONTS VARIABLES ---------- */
+
+  --primary-font: 'Inter', system-ui, -apple-system, 'BlinkMacSystemFont', "Segoe UI", 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  --secondary-font: 'Roboto', system-ui, -apple-system, 'BlinkMacSystemFont', "Segoe UI", 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  
+  /* ---------- FONT FAMILY VARIABLES ---------- */
+  
+  --gradient-1: #d4eefc;
+  --radius-button: 24px;
+  --radius-card: 24px;
+  --radius-menu-link: 0px;
+  --radius-footer-card: 12px;
+  --radius-article-thumb: 10px;
+
+  /* ---------- OTHER VARIABLES ---------- */
+  --bg-accent: #f7c0b3;
+  --bg-default: #ffffff;
+  --bg-light-2: #d4eefc;
+  --bg-light-3: #a2daf3;
+  --bg-light: #f7f7f7;
+  --bg-reverse-2: #172983;
+  --bg-reverse: #172983;
+  --body-accent: #525257;
+  --body-default: #525257;
+  --body-light-2: #525257;
+  --body-light-3: #525257;
+  --body-light: #525257;
+  --body-reverse-2: #d4eefc;
+  --body-reverse: #ffffff;
+  --burst-accent: #172983;
+  --burst-default: #f7c0b3;
+  --burst-light-2: #f7c0b3;
+  --burst-light-3: #f7c0b3;
+  --burst-light: #f7c0b3;
+  --burst-reverse-2: #f7c0b3;
+  --burst-reverse: #f7c0b3;
+  --heading-accent: #172983;
+  --heading-default: #172983;
+  --heading-light-2: #172983;
+  --heading-light-3: #172983;
+  --heading-light: #172983;
+  --heading-reverse-2: #d4eefc;
+  --heading-reverse: #ffffff;
+  --icon-2-accent: #172983;
+  --icon-2-default: #172983;
+  --icon-2-light-2: #172983;
+  --icon-2-light-3: #172983;
+  --icon-2-light: #172983;
+  --icon-2-reverse-2: #d4eefc;
+  --icon-2-reverse: #ffffff;
+  --icon-accent: #f7c0b3;
+  --icon-bg-accent: #172983;
+  --icon-bg-default: #172983;
+  --icon-bg-light-2: #ffffff;
+  --icon-bg-light-3: #ffffff;
+  --icon-bg-light: #ffffff;
+  --icon-bg-reverse-2: #d4eefc;
+  --icon-bg-reverse: #ffffff;
+  --icon-default: #ffffff;
+  --icon-light-2: #172983;
+  --icon-light-3: #172983;
+  --icon-light: #172983;
+  --icon-reverse-2: #172983;
+  --icon-reverse: #172983;
+  --line-accent: #00000033;
+  --line-default: #00000033;
+  --line-light-2: #00000033;
+  --line-light-3: #00000033;
+  --line-light: #00000033;
+  --line-reverse-2: #ffffff1a;
+  --line-reverse: #ffffff1a;
+  --link-accent: #172983;
+  --link-default: #172983;
+  --link-light-2: #172983;
+  --link-light-3: #172983;
+  --link-light: #172983;
+  --link-reverse-2: #d4eefc;
+  --link-reverse: #ffffff;
+  --stroke-accent: #f7c0b3;
+  --stroke-default: #172983;
+  --stroke-light-2: #172983;
+  --stroke-light-3: #172983;
+  --stroke-light: #172983;
+  --stroke-reverse-2: #ffffff;
+  --stroke-reverse: #ffffff;
+}

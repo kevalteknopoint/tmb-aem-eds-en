@@ -441,23 +441,35 @@ function decorateButtons(element) {
 }
 
 /**
- * Add <img> for icon, prefixed with codeBasePath and optional prefix.
+ * Add <svg> for icon.
  * @param {Element} [span] span element with icon classes
  * @param {string} [prefix] prefix to be added to icon src
  * @param {string} [alt] alt text to be added to icon
  */
-function decorateIcon(span, prefix = '', alt = '') {
+function decorateIcon(span) {
   const iconName = Array.from(span.classList)
     .find((c) => c.startsWith('icon-'))
     .substring(5);
-  const img = document.createElement('img');
-  img.dataset.iconName = iconName;
-  img.src = `${window.hlx.codeBasePath}${prefix}/icons/${iconName}.svg`;
-  img.alt = alt;
-  img.loading = 'lazy';
-  img.width = 16;
-  img.height = 16;
-  span.append(img);
+
+  span.innerHTML = `
+    <svg class="icon-svg">
+      <use href="#${iconName}"></use>
+    </svg>
+  `;
+}
+
+/**
+ * Inject an svg icon via javascript.
+ * @param {string} [id] id of the icon present in the icon-sprite.svg file
+ * @param {Element} [ele] element where inside the icon will be injected
+ * @param {string} [position] position to where the icon needs to be injected (default is before the end of the element)
+ */
+function injectIcon(id, ele, position = 'beforeend') {
+  ele?.insertAdjacentHTML(position, `
+    <svg class="icon">
+      <use href="#${id}"></use>
+    </svg>
+  `);
 }
 
 /**
@@ -688,6 +700,13 @@ async function loadSections(element) {
   }
 }
 
+const isMobileS = () => window.matchMedia('screen and (max-width: 480px)').matches;
+const isMobile = () => window.matchMedia('screen and (max-width: 767px)').matches;
+const isTablet = () => window.matchMedia('screen and (max-width: 1023px)').matches;
+const isTabletLg = () => window.matchMedia('screen and (max-width: 1279px)').matches;
+const isDesktop = () => window.matchMedia('screen and (max-width: 1439px)').matches;
+const isDesktopLg = () => window.matchMedia('screen and (min-width: 1440px)').matches;
+
 init();
 
 export {
@@ -697,6 +716,7 @@ export {
   decorateBlocks,
   decorateButtons,
   decorateIcons,
+  injectIcon,
   decorateSections,
   decorateTemplateAndTheme,
   getMetadata,
@@ -714,4 +734,10 @@ export {
   toClassName,
   waitForFirstImage,
   wrapTextNodes,
+  isMobileS,
+  isMobile,
+  isTablet,
+  isTabletLg,
+  isDesktop,
+  isDesktopLg,
 };

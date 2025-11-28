@@ -1,4 +1,5 @@
 import Swiperblock from "../../libs/swiper/swiper-bundle.min.js";
+import { injectIcon } from "../../scripts/aem.js";
 import appendclasses from "../../scripts/constatnt-classes.js";
 
 function createSwiper(block) {
@@ -31,13 +32,10 @@ function createSwiper(block) {
     const swiperpagination = document.createElement("div");
     swiperpagination.classList.add("swiper-pagination");
     const swiperpaginationouter = document.createElement("div");
-    swiperpaginationouter.classList.add("outer-pegination-div"); // for play btn
+    swiperpaginationouter.classList.add("outer-pagination-div"); // for play btn
     const playbtn = document.createElement("button");
     playbtn.classList.add("play-btn");
-    const iconp = document.createElement("img");
-    iconp.src = "../../icons/Vector.svg";
-    iconp.alt = "play Icon";
-    playbtn.appendChild(iconp);
+    injectIcon('play', playbtn);
     swiperpaginationouter.append(swiperpagination);
     swiperpaginationouter.append(playbtn);
     block.append(swiperpaginationouter);
@@ -118,6 +116,7 @@ export default function decorate(block) {
     const swiper = new Swiperblock(block, {
       slidesPerView: 1,
       spaceBetween: 2,
+      loop: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -166,11 +165,13 @@ export default function decorate(block) {
       if (!isPlaying) {
         swiper.autoplay.start();
         isPlaying = true;
-        playBtn.querySelector("img").src = "../../icons/pause.svg"; // change icon
+        playBtn?.lastElementChild?.remove();
+        injectIcon('pause', playBtn);
       } else {
         swiper.autoplay.stop();
         isPlaying = false;
-        playBtn.querySelector("img").src = "../../icons/Vector.svg"; // change back to play
+        playBtn?.lastElementChild?.remove();
+        injectIcon('play', playBtn);
       }
     });
   }

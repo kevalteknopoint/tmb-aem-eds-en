@@ -1,4 +1,4 @@
-@use 'variables' as *;
+@use 'base' as *;
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -10,6 +10,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   font-size: 100%;
 }

@@ -1,12 +1,11 @@
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
+@use '../../styles/base' as *;
 
 .header.block {
   width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
-  background-color: $surface-light;
+  background-color: $bg-default;
 }
 
 .secondary-header-wrap {
@@ -38,12 +37,12 @@
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0;
-    color: $text-brand;
+    color: $link-default;
   }
 }
 
 .primary-header {
-  background-color: $surface-brand;
+  background-color: $bg-reverse;
 
   .primary-header-wrap {
     display: flex;
@@ -137,7 +136,7 @@
       position: absolute;
       border-style: solid;
       border-width: 2px 2px 0 0;
-      border-color: $text-inverse;
+      border-color: $link-reverse;
       display: inline-block;
       height: 8.5px;
       width: 8.5px;
@@ -156,7 +155,7 @@
 
   .primary-nav-link {
     display: block;
-    color: $text-inverse;
+    color: $link-reverse;
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
@@ -207,14 +206,14 @@
       display: block;
       text-align: center;
       padding: 5.5px 16px;
-      background-color: $surface-login-cta;
-      color: $text-brand;
+      background-color: $bg-light-2;
+      color: $link-default;
       font-size: 16px;
       line-height: 24px;
       font-weight: 500;
       min-width: 100px;
       width: fit-content;
-      border-radius: 20px;
+      border-radius: $radius-button;
       transition: all 0.3s ease-in-out;
 
       &:hover {

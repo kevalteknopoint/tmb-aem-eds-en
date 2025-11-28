@@ -1,50 +1,73 @@
 @import "../../libs/swiper/swiper-bundle.min.css";
 
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container a{
+  align-items:center;
+  background-color:var(--color-button-outlined-default);
+  border:none;
+  border:var(--stroke-button) solid var(--color-button-text-stroke-default);
+  border-radius:var(--radius-button);
+  color:var(--color-button-text-stroke-default);
+  cursor:pointer;
+  display:flex;
+  font-size:16px;
+  font-weight:500;
+  gap:16px;
+  justify-content:center;
+  line-height:24px;
+  min-width:150px;
+  padding:8px 24px;
+  text-align:center;
+  transition:all 0.3s ease-in-out;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
 .section.expandable-tiles-section{
-  background:linear-gradient(46.23deg, #59ffa0 1.03%, #1be7ff 98.97%);
-  padding:100px 0;
+  background:var(--gradient-1);
 }
 
 .section.expandable-tiles-section .default-content-wrapper{
   box-sizing:border-box;
-  margin:0 auto 40px;
-  max-width:832px;
-  padding:0;
+  margin-bottom:40px;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
 }
 
-.section.expandable-tiles-section .default-content-wrapper h1,
-.section.expandable-tiles-section .default-content-wrapper h2,
-.section.expandable-tiles-section .default-content-wrapper h3,
-.section.expandable-tiles-section .default-content-wrapper h4,
-.section.expandable-tiles-section .default-content-wrapper h5,
-.section.expandable-tiles-section .default-content-wrapper h6{
-  color:var(--text-brand);
-  font-size:32px;
-  font-weight:900;
-  line-height:30px;
-  margin:0 0 20px;
+.section.expandable-tiles-section .default-content-wrapper h1, .section.expandable-tiles-section .default-content-wrapper h2, .section.expandable-tiles-section .default-content-wrapper h3, .section.expandable-tiles-section .default-content-wrapper h4, .section.expandable-tiles-section .default-content-wrapper h5, .section.expandable-tiles-section .default-content-wrapper h6{
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
+  font-size:40px;
+  line-height:40px;
+  margin:0 0 16px;
   text-align:left;
 }
 
 .section.expandable-tiles-section .default-content-wrapper p{
-  color:rgb(0 82 91 / 80%);
+  color:var(--body-default);
   font-size:16px;
   font-weight:400;
-  line-height:19px;
-  margin:0;
+  line-height:24px;
   text-align:left;
 }
 
 .section.expandable-tiles-section .cards-wrapper{
   box-sizing:border-box;
-  margin:0 auto;
-  max-width:1452px;
-  padding:0 40px;
+  margin-bottom:40px;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  overflow:auto;
+  padding-inline:64px;
+  scrollbar-width:none;
+  width:100%;
 }
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block{
   display:flex;
-  gap:24px;
+  gap:10px;
   justify-content:center;
 }
 
@@ -53,16 +76,35 @@
   flex:1;
   flex-direction:column;
   gap:20px;
+  position:relative;
   transition:all 1.7s;
   transition-timing-function:cubic-bezier(0.11, 0.45, 0.4, 1);
 }
 
+.section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile::after{
+  background:#000;
+  border-radius:var(--radius-card);
+  content:"";
+  height:100%;
+  opacity:0.2;
+  pointer-events:none;
+  position:absolute;
+  transition:all 0.7s ease-in-out;
+  width:100%;
+  z-index:1;
+}
+
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile.active{
-  flex:3.85;
+  flex:3.0951;
+}
+
+.section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile.active::after{
+  opacity:0;
 }
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile.active .tile-content{
   opacity:1;
+  pointer-events:all;
 }
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile.active .tile-image img{
@@ -70,17 +112,17 @@
 }
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-image{
-  border-radius:20px;
+  border-radius:var(--radius-card);
   cursor:pointer;
   font-size:0;
-  height:555px;
+  height:500px;
   overflow:hidden;
   width:auto;
 }
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-image img{
-  border-radius:20px;
-  height:555px;
+  border-radius:var(--radius-card);
+  height:500px;
   -o-object-fit:cover;
      object-fit:cover;
   -o-object-position:center;
@@ -91,45 +133,51 @@
 }
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content{
+  background-color:var(--bg-default);
+  border-radius:var(--radius-card);
+  bottom:0;
   display:block;
-  min-width:-moz-fit-content;
-  min-width:fit-content;
+  margin:0 16px 16px;
   opacity:0;
-  position:relative;
+  padding:24px;
+  pointer-events:none;
+  position:absolute;
   text-decoration:none;
   transition:all 1s ease-in-out;
+  width:calc(100% - 32px);
 }
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-title{
-  color:var(--text-brand);
-  font-size:16px;
-  font-weight:600;
-  line-height:19px;
-  margin:0 0 10px;
-  max-width:90%;
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
+  font-size:40px;
+  line-height:40px;
+  margin-bottom:16px;
 }
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-description{
-  color:var(--text-brand);
-  font-size:14px;
-  line-height:17px;
-  margin:0;
-  max-width:90%;
+  color:var(--body-default);
+  font-size:16px;
+  font-weight:400;
+  line-height:24px;
+  margin-bottom:16px;
 }
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta{
   align-items:center;
   display:flex;
   gap:12px;
-  position:absolute;
-  right:0;
-  top:0;
 }
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta .cta-link{
-  color:var(--text-brand);
-  font-size:0;
-  line-height:19px;
+  background-color:var(--bg-reverse);
+  border-radius:var(--radius-button);
+  display:block;
+  height:-moz-fit-content;
+  height:fit-content;
+  padding:8px;
+  width:-moz-fit-content;
+  width:fit-content;
 }
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta .icon{
@@ -140,9 +188,10 @@
   width:fit-content;
 }
 
-.section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta img{
+.section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta svg{
+  color:var(--heading-reverse-2);
   display:block;
-  height:auto;
+  height:24px;
   width:24px;
 }
 
@@ -150,16 +199,45 @@
   text-decoration:none;
 }
 
+.section.expandable-tiles-section .autoplay-btn-wrapper{
+  display:flex;
+  justify-content:flex-end;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
+}
+
+.section.expandable-tiles-section .autoplay-btn-wrapper .autoplay-btn{
+  background-color:var(--bg-default);
+  border-radius:var(--radius-button);
+  display:grid;
+  font-size:0;
+  height:35px;
+  place-items:center;
+  width:35px;
+}
+
+.section.expandable-tiles-section .autoplay-btn-wrapper .autoplay-btn svg{
+  color:var(--color-pagination-selected);
+  display:block;
+  filter:drop-shadow(0 1px 3px rgb(0 0 0 / 40%));
+  height:24px;
+  width:24px;
+}
+
 .section.online-banking{
   margin-left:auto;
   margin-right:auto;
-  max-width:1452px;
-  padding:0 40px;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul{
   display:flex;
-  gap:32px;
+  gap:24px;
   justify-content:space-between;
   list-style-type:none;
   min-height:520px;
@@ -183,24 +261,25 @@
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1{
-  background-color:#f5f8de;
-  border-radius:20px;
+  background-color:var(--bg-light-2);
+  border-radius:var(--radius-card);
   min-height:100%;
-  padding:32px;
+  padding:24px;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body{
   margin:0;
 }
 
-.section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h2{
-  color:var(--text-brand);
+.section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h1, .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h2, .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h3, .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h4, .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h5, .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h6{
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
   font-size:40px;
   font-style:normal;
-  font-weight:900;
-  line-height:48px;
+  letter-spacing:2px;
+  line-height:40px;
   margin:0;
-  text-transform:capitalize;
+  text-transform:uppercase;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul{
@@ -212,23 +291,33 @@
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li{
-  display:flex;
-  justify-content:space-between;
   padding:0;
   width:400px;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li a{
-  color:var(--text-primary);
+  align-items:center;
+  color:var(--body-accent);
+  display:flex;
   font-size:16px;
   font-style:normal;
   font-weight:400;
+  gap:10px;
+  justify-content:space-between;
   line-height:24px;
   text-decoration:none;
 }
 
+.section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li a svg{
+  height:24px;
+  min-width:12px;
+  width:12px;
+}
+
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2,
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3{
+  border-top-left-radius:var(--radius-card);
+  border-top-right-radius:var(--radius-card);
   display:flex;
   flex-direction:column;
   max-width:420px;
@@ -240,7 +329,7 @@
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body,
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body{
   border:1px solid rgb(0 0 0 / 20%);
-  border-radius:0 0 20px 20px;
+  border-radius:0 0 var(--radius-card) var(--radius-card);
   border-top:0;
   display:flex;
   flex-direction:column;
@@ -253,7 +342,7 @@
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .card-bottom-1{
   display:flex;
   flex-direction:column;
-  gap:8px;
+  gap:16px;
   list-style-type:none;
   margin:0;
   padding:0;
@@ -261,17 +350,16 @@
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 .banking-desc-1,
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .card-bottom-1 .banking-desc-1{
-  color:var(--text-brand);
+  color:var(--heading-default);
   font-size:24px;
   font-style:normal;
-  font-weight:700;
+  font-weight:500;
   line-height:32px;
-  text-transform:capitalize;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 .banking-desc-2,
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .card-bottom-1 .banking-desc-2{
-  color:var(--text-primary);
+  color:var(--body-accent);
   font-size:16px;
   font-style:normal;
   font-weight:400;
@@ -280,8 +368,8 @@
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-image img,
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-image img{
-  border-top-left-radius:20px;
-  border-top-right-radius:20px;
+  border-top-left-radius:var(--radius-card);
+  border-top-right-radius:var(--radius-card);
   height:100%;
   max-width:unset;
   -o-object-fit:cover;
@@ -308,30 +396,21 @@
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .banking-desc-3 a{
   align-items:center;
   background:transparent;
-  border:1px solid #00525b;
-  border-radius:20px;
-  color:var(--text-brand);
+  color:var(--link-accent);
   display:flex;
   font-size:16px;
   font-style:normal;
-  font-weight:700;
-  gap:4px;
+  font-weight:500;
+  gap:8px;
   line-height:24px;
-  padding:8px 24px;
   text-decoration:none;
   width:-moz-max-content;
   width:max-content;
 }
 
-.section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .banking-desc-3 a::after{
-  background:url("../../icons/weui_arrow-filled.svg") no-repeat center;
-  background-size:contain;
-  content:"";
-  display:inline-block;
-  height:24px;
-  margin-left:6px;
-  transition:transform 0.2s ease;
-  width:12px;
+.section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .banking-desc-3 a svg{
+  height:18px;
+  width:18px;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .card-bottom-2{
@@ -349,6 +428,11 @@
   gap:10px;
 }
 
+.section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .banking-desc-3 svg{
+  height:42px;
+  width:143px;
+}
+
 .cards-card-image{
   height:-moz-fit-content;
   height:fit-content;
@@ -357,26 +441,29 @@
   position:relative;
 }
 
-#online-bankinghelp{
-  white-space:nowrap;
-}
-
-#online-bankinghelp br{
-  display:none;
+.cards-card-image picture{
+  height:100%;
 }
 
 .section.faq-cant-find-looking-for{
-  margin:0 auto;
-  max-width:1328px;
-  padding:32px;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-block:32px;
+  padding-inline:64px;
+  width:100%;
 }
 
-.section.faq-cant-find-looking-for .default-content-wrapper h1, .section.faq-cant-find-looking-for .default-content-wrapper h2, .section.faq-cant-find-looking-for .default-content-wrapper h3, .section.faq-cant-find-looking-for .default-content-wrapper h4, .section.faq-cant-find-looking-for .default-content-wrapper h5, .section.faq-cant-find-looking-for .default-content-wrapper h6{
-  color:#00525B;
+.section.faq-cant-find-looking-for .default-content-wrapper h1,
+.section.faq-cant-find-looking-for .default-content-wrapper h2,
+.section.faq-cant-find-looking-for .default-content-wrapper h3,
+.section.faq-cant-find-looking-for .default-content-wrapper h4,
+.section.faq-cant-find-looking-for .default-content-wrapper h5,
+.section.faq-cant-find-looking-for .default-content-wrapper h6{
+  color:var(--heading-default);
   font-family:var(--secondary-font);
   font-size:40px;
   font-style:normal;
-  font-weight:900;
   line-height:44px;
   text-align:center;
 }
@@ -414,8 +501,13 @@
   flex-grow:1;
 }
 
-.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h3{
-  color:#00525B;
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h1,
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h2,
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h3,
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h4,
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h5,
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h6{
+  color:var(--heading-default);
   font-family:var(--primary-font);
   font-size:20px;
   font-style:normal;
@@ -425,7 +517,7 @@
 }
 
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p{
-  color:#0B231F;
+  color:var(--body-default);
   font-family:var(--primary-font);
   font-size:16px;
   font-style:normal;
@@ -436,31 +528,235 @@
 }
 
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container{
+  align-items:center;
+  display:flex;
+  justify-content:center;
   margin-top:auto;
-  text-align:center;
 }
 
-.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container a{
-  border:1px solid #00525B;
-  border-radius:20px;
-  color:#00525B;
-  cursor:pointer;
-  display:block;
-  font-family:var(--primary-font);
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container a:hover{
+  background-color:var(--color-button-outlined-hover);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-hover);
+  color:var(--color-button-text-stroke-hover);
+}
+
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container a:active{
+  background-color:var(--color-button-outlined-press);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-press);
+  color:var(--color-button-text-stroke-press);
+}
+
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container a:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.banking-goods{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
+}
+
+.banking-goods .cards-wrapper .banking-goods-mb{
+  margin-bottom:40px;
+}
+
+.banking-goods .cards-wrapper .banking-goods-mb h1, .banking-goods .cards-wrapper .banking-goods-mb h2, .banking-goods .cards-wrapper .banking-goods-mb h3, .banking-goods .cards-wrapper .banking-goods-mb h4, .banking-goods .cards-wrapper .banking-goods-mb h5, .banking-goods .cards-wrapper .banking-goods-mb h6{
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
+  font-size:38px;
+  letter-spacing:2px;
+  line-height:38px;
+  margin-bottom:16px;
+  text-transform:uppercase;
+}
+
+.banking-goods .cards-wrapper .banking-goods-mb p{
+  color:var(--body-default);
   font-size:16px;
-  font-style:normal;
-  font-weight:500;
+  font-weight:400;
+  letter-spacing:0;
   line-height:24px;
-  margin:0 auto;
-  padding:8px 16px;
-  text-decoration:none;
+}
+
+.banking-goods .cards-wrapper .cards > ul{
+  align-items:center;
+  display:grid;
+  gap:24px;
+  grid-template-columns:1fr 1fr 1fr;
+  justify-content:center;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:first-child{
+  align-items:center;
+  border-radius:var(--radius-card);
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  justify-content:center;
+  position:relative;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:first-child .cards-card-body{
+  backdrop-filter:none;
+  background:none;
+  display:none;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:first-child .cards-card-body:last-child{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  justify-content:center;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:first-child .cards-card-body:last-child > h1, .banking-goods .cards-wrapper .cards > ul > li:first-child .cards-card-body:last-child h2, .banking-goods .cards-wrapper .cards > ul > li:first-child .cards-card-body:last-child h3, .banking-goods .cards-wrapper .cards > ul > li:first-child .cards-card-body:last-child h4, .banking-goods .cards-wrapper .cards > ul > li:first-child .cards-card-body:last-child h5, .banking-goods .cards-wrapper .cards > ul > li:first-child .cards-card-body:last-child h6{
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
+  font-size:40px;
+  letter-spacing:2px;
+  line-height:40px;
+  text-transform:uppercase;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:first-child .cards-card-body:last-child > p{
+  color:var(--body-default);
+  font-size:16px;
+  font-weight:400;
+  letter-spacing:0;
+  line-height:24px;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child){
+  border-radius:var(--radius-card);
+  height:528px;
+  position:relative;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-image{
+  height:100%;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) picture, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) img{
+  border-radius:var(--radius-card);
+  height:100%;
+  -o-object-fit:cover;
+     object-fit:cover;
+  -o-object-position:center;
+     object-position:center;
+  width:100%;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body{
+  backdrop-filter:blur(5px);
+  border-radius:0 0 var(--radius-card) var(--radius-card);
+  bottom:0;
+  color:var(--body-reverse-2);
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  max-height:-moz-fit-content;
+  max-height:fit-content;
+  overflow:hidden;
+  padding:24px;
+  position:absolute;
+  transition:all ease-in-out;
+  transition-duration:700ms;
+  width:100%;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body.active{
+  height:100% !important;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body.active p{
+  opacity:1;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body::after{
+  background:var(--bg-reverse);
+  content:"";
+  display:block;
+  height:100%;
+  left:0;
+  opacity:0.9;
+  position:absolute;
+  top:0;
+  width:100%;
+  z-index:-1;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h1, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h2, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h3, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h4, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h5, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h6{
+  color:var(--heading-reverse-2);
+  font-family:var(--secondary-font);
+  font-size:40px;
+  font-style:normal;
+  letter-spacing:2px;
+  line-height:40px;
+  text-transform:uppercase;
+  transition:transform 0.4s ease;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body p{
+  color:var(--body-reverse-2);
+  font-size:16px;
+  font-weight:400;
+  line-height:24px;
+  opacity:0;
+  transition:all 0.4s ease-in-out;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container{
+  opacity:0;
+  padding:6px 0;
+  transition:all 0.4s ease-in-out;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container a{
+  align-items:center;
+  color:var(--link-reverse-2);
+  display:flex;
+  font-size:14px;
+  gap:8px;
+  line-height:21px;
+  position:relative;
   width:-moz-fit-content;
   width:fit-content;
 }
 
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container a::before{
+  background:var(--link-reverse-2);
+  bottom:-2px;
+  content:"";
+  height:2px;
+  left:0;
+  position:absolute;
+  transition:width 0.3s ease;
+  width:0%;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container a:hover::before{
+  width:100%;
+}
+
+.banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container a svg{
+  display:none;
+  height:12px;
+  width:7.2px;
+}
+
+.banking-goods .cards-wrapper .cards .cards-card-image{
+  line-height:0;
+}
+
 @media (min-width: 766px) and (max-width: 1220px){
   .section.online-banking .cards-wrapper .cards .banking-cards-ul{
+    display:grid;
     gap:20px;
+    grid-template-columns:1fr 1fr 1fr;
+    min-height:480px;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .cards-card-body .icon-badge-app-store-1,
@@ -470,10 +766,11 @@
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1{
+    border-radius:var(--radius-card);
     padding:20px;
   }
 
-  .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h2{
+  .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h1, .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h2, .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h3, .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h4, .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h5, .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h6{
     font-size:24px;
     font-weight:700;
     line-height:35px;
@@ -481,24 +778,22 @@
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li{
     align-items:center;
-    width:250px;
+    min-width:250px;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li a{
     font-size:13px;
-    line-height:5px;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2,
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3{
-    max-width:300px;
+    max-width:unset;
     width:100%;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 .banking-desc-1,
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .card-bottom-1 .banking-desc-1{
     font-size:15px;
-    font-weight:500;
     line-height:20px;
   }
 
@@ -527,14 +822,6 @@
     height:auto;
     width:75px;
   }
-
-  #online-bankinghelp{
-    white-space:nowrap;
-  }
-
-  #online-bankinghelp br{
-    display:none;
-  }
 }
 
 @media (min-width: 766px) and (max-width: 980px){
@@ -550,101 +837,152 @@
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li{
-    max-width:300px;
-    width:100% !important;
+    max-width:unset;
+    width:300px;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2,
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3{
-    width:246px !important;
+    width:unset;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-2{
-    margin-top:10px;
+    margin-top:auto;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .card-bottom-2{
-    margin-top:10px;
+    margin-top:auto;
+  }
+}
+
+@media screen and (max-width: 1279px){
+  .section.expandable-tiles-section .default-content-wrapper{
+    padding-inline:24px;
   }
 
-  #online-bankinghelp{
-    white-space:nowrap;
+  .section.expandable-tiles-section .cards-wrapper{
+    padding-inline:24px;
   }
 
-  #online-bankinghelp br{
-    display:none;
+  .section.expandable-tiles-section .autoplay-btn-wrapper{
+    padding-inline:24px;
+  }
+
+  .section.online-banking{
+    padding-inline:24px;
+  }
+
+  .section.faq-cant-find-looking-for{
+    padding-inline:24px;
+  }
+
+  .banking-goods{
+    padding-inline:24px;
   }
 }
 
 @media screen and (max-width: 1023px){
   .section.expandable-tiles-section{
-    padding-bottom:0;
+    padding-right:16px;
   }
 
-  .section.expandable-tiles-section .default-content-wrapper h1,
-  .section.expandable-tiles-section .default-content-wrapper h2,
-  .section.expandable-tiles-section .default-content-wrapper h3,
-  .section.expandable-tiles-section .default-content-wrapper h4,
-  .section.expandable-tiles-section .default-content-wrapper h5,
-  .section.expandable-tiles-section .default-content-wrapper h6{
+  .section.expandable-tiles-section .default-content-wrapper h1, .section.expandable-tiles-section .default-content-wrapper h2, .section.expandable-tiles-section .default-content-wrapper h3, .section.expandable-tiles-section .default-content-wrapper h4, .section.expandable-tiles-section .default-content-wrapper h5, .section.expandable-tiles-section .default-content-wrapper h6{
     text-align:center;
   }
 
-  .section.expandable-tiles-section .default-content-wrapper p{
-    text-align:center;
-  }
-
-  .section.online-banking .cards-wrapper .cards .banking-cards-ul{
-    min-height:unset;
+  .section.expandable-tiles-section .cards-wrapper{
+    scrollbar-width:none;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .banking-desc-3 a{
-    padding:6px 18px;
+    padding:6px 18px 6px 0;
+  }
+
+  .banking-goods .cards-wrapper .cards{
+    overflow:auto;
+    scrollbar-width:none;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul{
+    display:flex;
+    justify-content:flex-start;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul li{
+    min-width:335px;
+    width:-moz-fit-content;
+    width:fit-content;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:first-child{
+    display:none;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child){
+    height:500px;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body{
+    backdrop-filter:unset;
+    background:linear-gradient(180deg, rgb(11 35 31 / 0%) 0.01%, rgb(11 35 31 / 14%) 34.14%, rgb(11 35 31 / 80%) 99.98%);
+    justify-content:flex-end;
+    min-height:335px;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body::after{
+    content:unset;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h1, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h2, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h3, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h4, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h5, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h6{
+    font-size:32px;
+    line-height:32px;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body p{
+    opacity:1;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body p:not(.button-container){
+    display:none;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container{
+    opacity:1;
+    padding:0;
+  }
+
+  .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container a svg{
+    display:block;
   }
 }
 
 @media screen and (max-width: 767px){
-  .section.expandable-tiles-section{
-    padding:40px 0;
-  }
-
-  .section.expandable-tiles-section .default-content-wrapper h1,
-  .section.expandable-tiles-section .default-content-wrapper h2,
-  .section.expandable-tiles-section .default-content-wrapper h3,
-  .section.expandable-tiles-section .default-content-wrapper h4,
-  .section.expandable-tiles-section .default-content-wrapper h5,
-  .section.expandable-tiles-section .default-content-wrapper h6{
-    font-size:24px;
-    line-height:32px;
-    margin:0 0 15px;
-    text-align:center;
-  }
-
-  .section.expandable-tiles-section .default-content-wrapper p{
-    line-height:18px;
-    text-align:center;
-  }
-
   .section.expandable-tiles-section .default-content-wrapper{
-    margin-bottom:30px;
-    padding:0 20px;
+    padding-inline:16px;
+  }
+
+  .section.expandable-tiles-section .default-content-wrapper h1, .section.expandable-tiles-section .default-content-wrapper h2, .section.expandable-tiles-section .default-content-wrapper h3, .section.expandable-tiles-section .default-content-wrapper h4, .section.expandable-tiles-section .default-content-wrapper h5, .section.expandable-tiles-section .default-content-wrapper h6{
+    font-size:38px;
+    line-height:38px;
+    text-align:left;
   }
 
   .section.expandable-tiles-section .cards-wrapper{
-    padding:0 20px;
+    margin-bottom:0;
+    padding-inline:16px;
+    scrollbar-width:none;
   }
 
   .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block{
     --swiper-pagination-bottom:0;
     --swiper-pagination-bullet-horizontal-gap:2px;
 
-    gap:unset;
+    gap:20px;
     justify-content:unset;
-    padding-bottom:30px;
   }
 
   .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .swiper-pagination-bullet{
-    background-color:#fff;
+    background-color:var(--bg-default);
     border-radius:30px;
     height:7px;
     opacity:1;
@@ -653,7 +991,16 @@
   }
 
   .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .swiper-pagination-bullet.swiper-pagination-bullet-active{
-    background-color:var(--surface-brand);
+    background-color:var(--bg-reverse);
+  }
+
+  .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile::after{
+    content:unset;
+  }
+
+  .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile{
+    flex:none;
+    max-width:335px;
   }
 
   .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-image{
@@ -666,46 +1013,27 @@
   }
 
   .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content{
+    margin:16px;
     opacity:1;
+    pointer-events:all;
+    width:calc(100% - 32px);
   }
 
   .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-title{
-    font-size:20px;
-    font-weight:800;
-    line-height:24px;
-    margin:0 0 8px;
-    max-width:100%;
+    font-size:38px;
+    line-height:38px;
   }
 
-  .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-description{
-    font-size:16px;
-    line-height:18px;
-    max-width:100%;
-  }
-
-  .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta .cta-link{
-    font-size:16px;
-  }
-
-  .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta img{
-    width:18px;
-  }
-
-  .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta{
-    gap:12px;
-    margin-top:8px;
-    padding:8px 0;
-    position:static;
-  }
-
-  .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile{
-    flex:none;
+  .section.expandable-tiles-section .autoplay-btn-wrapper{
+    display:none;
+    padding-inline:16px;
   }
 
   .section.online-banking{
     margin-left:auto;
     margin-right:auto;
-    padding:0 20px;
+    padding:0 16px;
+    padding-inline:16px;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul{
@@ -720,29 +1048,28 @@
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1{
-    padding:20px;
+    border-radius:var(--radius-card);
+    padding:24px;
   }
 
-  .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h2{
-    font-size:20px;
-    font-weight:800;
-    line-height:24px;
+  .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h1, .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h2, .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h3, .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h4, .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h5, .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h6{
+    font-size:38px;
+    line-height:38px;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul{
     flex-direction:column;
-    gap:16px;
-    margin-top:18px;
+    gap:unset;
+    margin-top:24px;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li{
+    padding:10px 0;
     width:auto;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2,
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3{
-    border-top-left-radius:35px;
-    border-top-right-radius:35px;
     display:flex;
     flex-direction:column;
     margin:0 auto;
@@ -753,7 +1080,6 @@
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 .banking-desc-1,
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .card-bottom-1 .banking-desc-1{
     font-size:20px;
-    font-weight:800;
     line-height:24px;
   }
 
@@ -769,18 +1095,12 @@
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-2{
-    margin-top:13.5px;
+    margin-top:24px;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .banking-desc-3 a{
-    border-radius:11.25px;
     line-height:13.5px;
-    padding:7.5px 13.5px;
-  }
-
-  .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .banking-desc-3 a::after{
-    height:13.5px;
-    width:6.75px;
+    padding:0;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body{
@@ -788,7 +1108,7 @@
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .card-bottom-2{
-    margin-top:13.5px;
+    margin-top:24px;
   }
 
   .cards-card-image{
@@ -796,16 +1116,9 @@
     min-height:unset;
   }
 
-  #online-bankinghelp{
-    white-space:nowrap;
-  }
-
-  #online-bankinghelp br{
-    display:none;
-  }
-
   .section.faq-cant-find-looking-for{
-    padding:24px;
+    padding-block:24px;
+    padding-inline:16px;
   }
 
   .section.faq-cant-find-looking-for .default-content-wrapper{
@@ -832,5 +1145,9 @@
 
   .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container{
     margin-bottom:unset;
+  }
+
+  .banking-goods{
+    padding-inline:16px;
   }
 }

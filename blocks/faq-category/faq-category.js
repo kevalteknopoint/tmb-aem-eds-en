@@ -1,4 +1,5 @@
-import { a, img, li, span, ul, div, button } from "../../scripts/dom-helpers.js";
+import { getMetadata, injectIcon } from "../../scripts/aem.js";
+import { a, li, span, ul, div, button } from "../../scripts/dom-helpers.js";
 import { fetchPlaceholders } from "../../scripts/placeholders.js";
 
 // Fetch Paginated FAQs from GraphQL
@@ -32,6 +33,8 @@ async function fetchAllFaqsByTag(tagValue) {
 }
 
 export default async function decorate(block) {
+  const basePath = getMetadata('base-path');
+
   const dynamicTextWrap = block.querySelector("pre");
 
   const tagWrap = block.querySelector("div:nth-child(2)")?.querySelector('p');
@@ -48,16 +51,22 @@ export default async function decorate(block) {
 
     const faqList = ul({ class: "faq-items-list" });
     faqs.forEach((item) => {
+      const icon = span({ class: "faq-link-icon" });
+      injectIcon('chevron-right-links-default', icon);
+      let faqUrl = item?.faqPageUrl?._path?.replace(/\/content\/[A-Za-z]+\//, '/');
+      if (faqUrl?.split('/')?.[1] !== basePath?.split('/')?.[1]) {
+        const splitUrl = faqUrl?.split('/');
+        if (splitUrl && splitUrl[1]) splitUrl[1] = basePath?.split('/')?.[1];
+        faqUrl = splitUrl?.join('/') || '#';
+      }
+
       faqList.append(
         li(
           { class: "faq-item" },
           a(
-            { class: "faq-link", href: item?.faqPageUrl?._path?.replace(/\/content\/[A-Za-z]+\//, '/') || "#" },
+            { class: "faq-link", href: faqUrl },
             item.question,
-            span(
-              { class: "faq-link-icon" },
-              img({ src: "/icons/faq-link-icon.svg", alt: "FAQ Link Icon" })
-            )
+            icon
           )
         )
       );
@@ -121,16 +130,22 @@ export default async function decorate(block) {
     }
 
     faqs.forEach((item) => {
+      const icon = span({ class: "faq-link-icon" });
+      injectIcon('chevron-right-links-default', icon);
+      let faqUrl = item?.faqPageUrl?._path?.replace(/\/content\/[A-Za-z]+\//, '/');
+      if (faqUrl?.split('/')?.[1] !== basePath?.split('/')?.[1]) {
+        const splitUrl = faqUrl?.split('/');
+        if (splitUrl && splitUrl[1]) splitUrl[1] = basePath?.split('/')?.[1];
+        faqUrl = splitUrl?.join('/') || '#';
+      }
+
       faqList.append(
         li(
           { class: "faq-item" },
           a(
-            { class: "faq-link", href: item?.faqPageUrl?._path?.replace(/\/content\/[A-Za-z]+\//, '/') || "#" },
+            { class: "faq-link", href: faqUrl },
             item.question,
-            span(
-              { class: "faq-link-icon" },
-              img({ src: "/icons/faq-link-icon.svg", alt: "FAQ Link Icon" })
-            )
+            icon
           )
         )
       );
@@ -149,7 +164,8 @@ export default async function decorate(block) {
     const maxMobileBtns = 5; // Show 5 page numbers for mobile
 
     // Previous button
-    const prevBtn = button({ class: "faq-page-btn prev" }, img({ src: "/icons/page-left.svg", alt: "Previous" }));
+    const prevBtn = button({ class: "faq-page-btn prev" });
+    injectIcon('chevron-left-default', prevBtn);
     prevBtn.disabled = currentPage === 1;
     prevBtn.addEventListener("click", () => {
       if (currentPage > 1) {
@@ -187,7 +203,8 @@ export default async function decorate(block) {
     }
 
     // Next button
-    const nextBtn = button({ class: "faq-page-btn next" }, img({ src: "/icons/page-right.svg", alt: "Next" }));
+    const nextBtn = button({ class: "faq-page-btn next" });
+    injectIcon('chevron-right-links-default', nextBtn);
     nextBtn.disabled = currentPage === totalPages;
     nextBtn.addEventListener("click", () => {
       if (currentPage < totalPages) {

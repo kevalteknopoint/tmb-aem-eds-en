@@ -1,95 +1,98 @@
 .tmb-acc-sec.accordion-container{
-  background:#EDEDED;
-  padding:80px 0;
+  background:var(--color-footer-info);
+  padding:32px 0;
 }
 
-.tmb-acc-sec.accordion-container .accordion{
-  margin:0 auto;
-  max-width:1452px;
-  padding:0 40px;
+.tmb-acc-sec.accordion-container .accordion-wrapper{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
 }
 
-.tmb-acc-sec.accordion-container .accordion details{
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details{
   border:none;
 }
 
-.tmb-acc-sec.accordion-container .accordion details + details{
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details + details{
   margin-top:24px;
 }
 
-.tmb-acc-sec.accordion-container .accordion details p{
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details p{
+  font-size:16px;
+  font-weight:500;
+  line-height:24px;
   margin:0;
 }
 
-.tmb-acc-sec.accordion-container .accordion details .accordion-item-label{
-  color:#00525B;
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-label{
+  color:var(--heading-default);
   cursor:pointer;
+  display:flex;
   font-size:24px;
   font-weight:700;
+  gap:16px;
+  justify-content:space-between;
   line-height:32px;
   list-style:none;
   overflow:auto;
-  padding:0 16px;
-  padding-right:46px;
+  overflow:hidden;
   position:relative;
   transition:background-color 0.2s;
   vertical-align:bottom;
 }
 
-.tmb-acc-sec.accordion-container .accordion details .accordion-item-label:focus, .tmb-acc-sec.accordion-container .accordion details .accordion-item-label:hover{
-  background-color:#EDEDED;
-}
-
-.tmb-acc-sec.accordion-container .accordion details .accordion-item-label::-webkit-details-marker{
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-label::-webkit-details-marker{
   display:none;
 }
 
-.tmb-acc-sec.accordion-container .accordion details .accordion-item-label::after{
-  border:2px solid;
-  border-width:2px 2px 0 0;
-  content:"";
-  height:6px;
-  position:absolute;
-  right:18px;
-  top:50%;
-  transform:translateY(-50%) rotate(135deg);
-  transition:transform 0.2s;
-  width:6px;
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-label svg{
+  height:24px;
+  transform:rotate(180deg);
+  transition:all 0.3s ease-in-out;
+  width:24px;
 }
 
-.tmb-acc-sec.accordion-container .accordion details .accordion-item-body{
-  margin-top:32px;
-  padding:0 16px;
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body{
+  margin-top:16px;
+  padding-right:48px;
 }
 
-.tmb-acc-sec.accordion-container .accordion details .accordion-item-body p{
-  color:#333;
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body p{
+  color:var(--body-default);
   font-size:16px;
   font-weight:400;
   line-height:24px;
-  margin:32px 0 0;
+  margin:0;
 }
 
-.tmb-acc-sec.accordion-container .accordion details[open] summary{
-  background-color:#EDEDED;
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details[open] summary svg{
+  transform:rotate(0deg);
 }
 
-.tmb-acc-sec.accordion-container .accordion details[open] summary::after{
-  transform:translateY(-50%) rotate(-45deg);
-}
-
-.tmb-acc-sec.accordion-container .accordion details[open] .accordion-item-body{
-  background-color:#EDEDED;
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details[open] .accordion-item-body{
   border-top:none;
 }
 
+@media screen and (max-width: 1279px){
+  .tmb-acc-sec.accordion-container .accordion-wrapper{
+    padding-inline:24px;
+  }
+}
+
 @media screen and (max-width: 767px){
-  .tmb-acc-sec.accordion-container .accordion{
-    padding:0 20px;
+  .tmb-acc-sec.accordion-container .accordion-wrapper{
+    padding-inline:16px;
   }
 
-  .tmb-acc-sec.accordion-container .accordion details .accordion-item-body{
+  .tmb-acc-sec.accordion-container .accordion-wrapper .accordion{
+    padding:0;
+  }
+
+  .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body{
     margin-top:18px;
+    padding-right:24px;
   }
 }
 
