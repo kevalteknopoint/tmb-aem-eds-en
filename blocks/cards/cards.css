@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "../../libs/swiper/swiper-bundle.min.css";
 
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container a{
@@ -551,6 +552,115 @@
   outline:none;
 }
 
+.section.faq-cant-find-looking-for-variant{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-block:32px;
+  padding-inline:64px;
+  width:100%;
+}
+
+.section.faq-cant-find-looking-for-variant .default-content-wrapper{
+  text-align:center;
+}
+
+.section.faq-cant-find-looking-for-variant .default-content-wrapper h2{
+  color:var(--heading-default);
+  display:inline-block;
+  font-family:var(--secondary-font);
+  font-size:32px;
+  font-weight:900;
+  line-height:38px;
+  padding-bottom:12px;
+  position:relative;
+}
+
+.section.faq-cant-find-looking-for-variant .cards-wrapper{
+  margin-top:48px;
+  padding:32px 0;
+}
+
+.section.faq-cant-find-looking-for-variant .cards-wrapper .cards ul{
+  display:grid;
+  gap:32px;
+  grid-template-columns:repeat(4, 1fr);
+}
+
+.section.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li{
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+}
+
+.section.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-image{
+  display:flex;
+  justify-content:center;
+  margin-bottom:24px;
+}
+
+.section.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-image img{
+  height:60px;
+  width:60px;
+}
+
+.section.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-body{
+  display:flex;
+  flex-direction:column;
+  flex-grow:1;
+}
+
+.section.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-body h3{
+  color:var(--heading-default);
+  font-family:var(--primary-font);
+  font-size:20px;
+  font-weight:600;
+  margin-bottom:8px;
+}
+
+.section.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-body h3::after{
+  background:var(--heading-default);
+  content:"";
+  display:block;
+  height:2px;
+  margin:12px auto 0;
+  max-width:210px;
+  width:100%;
+}
+
+.section.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-body p{
+  color:var(--body-default);
+  font-size:16px;
+  line-height:24px;
+  margin:0 0 24px;
+}
+
+.section.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-body p a{
+  text-decoration:underline;
+  text-decoration-color:var(--heading-default) !important;
+  text-decoration-thickness:1px;
+  text-underline-offset:4px;
+}
+
+.section.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-body p.button-container{
+  margin-top:auto;
+}
+
+.section.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-body p.button-container a.button{
+  background:transparent !important;
+  border:none !important;
+  color:var(--heading-default) !important;
+  cursor:pointer;
+  font-size:20px;
+  font-weight:600;
+  padding:0;
+  text-decoration:underline;
+}
+
+.section.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-body p.button-container a.button:hover{
+  opacity:0.7;
+}
+
 .banking-goods{
   margin-left:auto;
   margin-right:auto;
@@ -876,6 +986,10 @@
     padding-inline:24px;
   }
 
+  .section.faq-cant-find-looking-for-variant{
+    padding-inline:24px;
+  }
+
   .banking-goods{
     padding-inline:24px;
   }
@@ -1145,6 +1259,21 @@
 
   .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container{
     margin-bottom:unset;
+  }
+
+  .section.faq-cant-find-looking-for-variant{
+    padding-block:24px;
+    padding-inline:16px;
+  }
+
+  .section.faq-cant-find-looking-for-variant .cards-wrapper{
+    margin-top:32px;
+    padding:0;
+  }
+
+  .section.faq-cant-find-looking-for-variant .cards-wrapper .cards ul{
+    gap:48px;
+    grid-template-columns:1fr;
   }
 
   .banking-goods{
