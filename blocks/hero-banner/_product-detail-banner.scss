@@ -1,0 +1,52 @@
+@use '../../styles/base' as *;
+
+.product-detail-banner {
+  max-width: 1728px;
+  margin: 0 auto;
+  border-radius: $radius-hero;
+
+  @include tablet {
+    border-radius: 0;
+  }
+
+  &:has(.mobile-media) {
+    @include mobile {
+      .desktop-media {
+        display: none;
+      }
+    }
+  }
+
+  .desktop-media {
+    img {
+      border-radius: $radius-hero;
+
+      @include tablet {
+        border-radius: 0;
+      }
+    }
+  }
+
+  .mobile-media {
+    display: none;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  .hero-banner-main {
+    position: relative;
+  }
+
+  .hero-banner-content-wrap {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include responsive-container();
+  }
+}
