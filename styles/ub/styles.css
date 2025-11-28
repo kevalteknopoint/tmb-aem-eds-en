@@ -622,6 +622,11 @@ header{
   outline:none;
 }
 
+.image-swapping .momentum-columns > div{
+  flex-direction:row-reverse;
+  gap:80px;
+}
+
 .product-navigation{
   margin-left:auto;
   margin-right:auto;
@@ -821,6 +826,9 @@ header{
   }
   .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2{
     font-size:38px;
+  }
+  .image-swapping .momentum-columns > div{
+    flex-direction:column-reverse;
   }
   .product-navigation{
     padding-inline:16px;
