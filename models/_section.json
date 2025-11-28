@@ -26,6 +26,15 @@
           "description": "The label shown for this section in the Content Tree"
         },
         {
+          "component": "text",
+          "name": "id",
+          "label": "Section ID",
+          "description": "Unique identifier for this section (HTML ID)",
+          "validation": {
+            "regex": "^[a-zA-Z][\\w:.-]*$"
+          }
+        },
+        {
           "component": "multiselect",
           "name": "style",
           "label": "Style",
@@ -165,6 +174,10 @@
             {
               "name": "Banking Good",
               "value": "banking-goods"
+            },
+            {
+              "name": "Product Navigation",
+              "value": "product-navigation"
             }
           ]
         }
@@ -191,7 +204,8 @@
         "teachers-form-block",
         "breadcrumb",
         "faq-category",
-        "faq-detail"
+        "faq-detail",
+        "hero-banner"
       ]
     }
   ]
