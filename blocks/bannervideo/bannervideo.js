@@ -125,7 +125,6 @@ export default function decorate(block) {
         delay: 1000,
         disableOnInteraction: false,
       },
-      
     });
 
     swiper.on("slideChange", () => {
