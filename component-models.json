@@ -182,6 +182,10 @@
             "value": "background-color-teal"
           },
           {
+            "name": "News Info Variant",
+            "value": "news-info-variant"
+          },
+          {
             "name": "Bg Image Saver",
             "value": "bg-image-saver"
           },
