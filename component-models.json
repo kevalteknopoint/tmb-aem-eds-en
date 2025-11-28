@@ -767,6 +767,29 @@
     ]
   },
   {
+    "id": "interest-table",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "interest-table",
+            "value": "interest-table"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "teachers-form-block",
     "fields": [
       {
