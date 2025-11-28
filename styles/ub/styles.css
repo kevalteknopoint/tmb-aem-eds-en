@@ -840,6 +840,17 @@ header{
     font-size:38px;
   }
 }
+@media screen and (max-width: 400px){
+  .momentum-saver-section .momentum-columns .momentum-content h2{
+    font-size:108px;
+  }
+  .momentum-saver-section .momentum-columns .momentum-content .rate-percent{
+    font-size:70px;
+  }
+  .momentum-saver-section .momentum-columns .momentum-content .rate-pa{
+    font-size:32px;
+  }
+}
 @media (prefers-reduced-motion: reduce){
   *{
     animation-duration:0.01ms !important;
