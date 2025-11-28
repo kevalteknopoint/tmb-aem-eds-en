@@ -185,6 +185,18 @@
             {
               "name": "Rates Saver",
               "value": "rates-saver"
+            },
+            {
+              "name": "Who can apply",
+              "value": "who-can-apply-section"
+            },
+            {
+              "name": "Customer",
+              "value": "customer"
+            },
+            {
+              "name": "FAQ Accordion",
+              "value": "faq-accordion"
             }
           ]
         }
@@ -211,7 +223,8 @@
         "teachers-form-block",
         "breadcrumb",
         "faq-category",
-        "faq-detail"
+        "faq-detail",
+        "content-fragment"
       ]
     }
   ]

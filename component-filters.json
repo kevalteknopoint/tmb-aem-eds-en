@@ -24,7 +24,8 @@
       "teachers-form-block",
       "breadcrumb",
       "faq-category",
-      "faq-detail"
+      "faq-detail",
+      "content-fragment"
     ]
   },
   {
@@ -61,7 +62,8 @@
       "text",
       "image",
       "button",
-      "title"
+      "title",
+      "content-fragment"
     ]
   }
 ]
