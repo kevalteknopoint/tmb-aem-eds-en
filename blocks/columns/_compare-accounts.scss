@@ -1,10 +1,46 @@
 @use '../../styles/base' as *;
 
-.compare-accounts.columns-container {
+.section.compare-accounts {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include mobile {
+    gap: 24px
+  }
+
+  @include responsive-container;
+
+  .default-content-wrapper {
+    h1, h2, h3, h4, h5, h6 {
+      display: block;
+      margin-bottom: 16px;
+      font-size: $font-size-h1;
+      line-height: $font-height-h1;
+      color: $heading-default;
+      font-family: $secondary-font;
+    }
+
+    p {
+      font-size: $font-size-body;
+      line-height: $font-height-body;
+      color: $heading-default;
+
+      a {
+        color: $heading-default;
+        text-decoration: underline;
+      }
+    }
+
+    &:last-child {
+      p {
+        color: $body-default;
+      }
+    }
+  }
+
   .columns.block {
     overflow-x: auto;
-
-    @include responsive-container;
 
     .compare-accounts-cards {
       align-items: stretch;

@@ -1,5 +1,12 @@
 @use '../../styles/base' as *;
 
+body:has(.product-detail-banner) {
+  .breadcrumb.block {
+    color: $link-default;
+    padding-block: 16px;
+  }
+}
+
 .product-detail-banner {
   max-width: 1728px;
   margin: 0 auto;
