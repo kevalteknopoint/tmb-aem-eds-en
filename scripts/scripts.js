@@ -1,4 +1,5 @@
-import decorateMomentumSaver from '../blocks/momentum-saver/momentum-saver.js';
+// import decorateMomentumSaver from '../blocks/momentum-saver/momentum-saver.js';
+
 import {
   loadHeader,
   loadFooter,
@@ -201,7 +202,7 @@ async function loadPage() {
   } catch (error) {
     console.error('Error loading SVG:', error);
   }
-  decorateMomentumSaver();
+  // decorateMomentumSaver();
   loadDelayed();
 }
 
