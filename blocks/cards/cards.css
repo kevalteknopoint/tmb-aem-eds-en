@@ -685,7 +685,6 @@
   position:absolute;
   top:0;
   width:100%;
-  z-index:-1;
 }
 
 .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h1, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h2, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h3, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h4, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h5, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h6{
@@ -697,6 +696,7 @@
   line-height:40px;
   text-transform:uppercase;
   transition:transform 0.4s ease;
+  z-index:1;
 }
 
 .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body p{
@@ -706,12 +706,14 @@
   line-height:24px;
   opacity:0;
   transition:all 0.4s ease-in-out;
+  z-index:1;
 }
 
 .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container{
   opacity:0;
   padding:6px 0;
   transition:all 0.4s ease-in-out;
+  z-index:1;
 }
 
 .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container a{
