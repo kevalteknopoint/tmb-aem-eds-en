@@ -32,7 +32,7 @@ export default function decorate(block) {
 
     setTimeout(() => {
       if (block.closest('.online-banking')) {
-        decorateOnlineBanking(block);
+        // decorateOnlineBanking(block);
       } else if (block.closest('.banking-goods')) {
         decorateBankingGoods(block);
       }
