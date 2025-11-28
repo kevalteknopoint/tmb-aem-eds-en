@@ -126,6 +126,288 @@
 
 }
 
-.faq-cant-find-looking-for-variant{
+// .section.faq-cant-find-looking-for-variant {
+//   padding-block: 32px;
+//   @include responsive-container();
 
+//   @include mobile {
+//     padding-block: 24px;
+//   }
+
+//   /* Center Heading + Teal underline */
+//   .default-content-wrapper {
+//     text-align: center;
+
+//     h2 {
+//       color: $heading-default; // teal title
+//       font-family: $secondary-font;
+//       font-size: 32px;
+//       font-weight: 900;
+//       line-height: 38px;
+//       position: relative;
+//       display: inline-block;
+//       padding-bottom: 12px;
+
+//       /* teal underline */
+//       &::after {
+//         content: '';
+//         display: block;
+//         width: 80px;
+//         height: 3px;
+//         background: $heading-default;
+//         margin: 12px auto 0;
+//       }
+//     }
+//   }
+
+//   .cards-wrapper {
+//     margin-top: 48px;
+//     padding: 32px 0;
+
+//     @include mobile {
+//       margin-top: 32px;
+//       padding: 0;
+//     }
+
+//     .cards {
+//       ul {
+//         display: grid;
+//         grid-template-columns: repeat(4, 1fr);
+//         gap: 32px;
+
+//         @include mobile {
+//           grid-template-columns: 1fr;
+//           gap: 48px;
+//         }
+
+//         li {
+//           text-align: center;
+//           display: flex;
+//           flex-direction: column;
+
+//           .cards-card-image {
+//             display: flex;
+//             justify-content: center;
+//             margin-bottom: 24px;
+
+//             img {
+//               width: 60px;
+//               height: 60px;
+//             }
+//           }
+
+//           .cards-card-body {
+//             display: flex;
+//             flex-direction: column;
+//             flex-grow: 1;
+
+//             /* Title under icon */
+//             h3 {
+//               font-size: 20px;
+//               font-family: $primary-font;
+//               font-weight: 600;
+//               color: $heading-default; // teal
+//               margin-bottom: 8px;
+//             }
+
+//             /* Description */
+//             p {
+//               font-size: 16px;
+//               color: $body-default;
+//               line-height: 24px;
+//               margin: 0 0 24px;
+//             }
+
+//             /* Teal underline button (Call us on...) */
+//             p.button-container {
+//               margin-top: auto;
+
+//               a.button {
+//                 background: transparent !important;
+//                 border: none !important;
+//                 color: $heading-default !important; // teal
+//                 font-size: 20px;
+//                 font-weight: 600;
+//                 text-decoration: underline;
+//                 padding: 0;
+//                 cursor: pointer;
+
+//                 &:hover {
+//                   opacity: 0.7;
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .section.faq-cant-find-looking-for-variant {
+//   @extend .faq-cant-find-looking-for; // reuse all base styles
+
+//   /* --- VARIANT OVERRIDES ONLY --- */
+
+//   /* Centered teal heading + underline */
+//   .default-content-wrapper h2 {
+//     color: $heading-default;
+//     font-weight: 900;
+//     position: relative;
+//     display: inline-block;
+//     padding-bottom: 12px;
+
+
+//   }
+
+//   /* Card title under icons (teal) */
+//   .cards-card-body h3 {
+//     color: $heading-default;
+//     font-weight: 600;
+//         &::after {
+//       content: '';
+//       display: block;
+//       width: 80px;
+//       height: 3px;
+//       background: $heading-default;
+//       margin: 12px auto 0;
+//     }
+//   }
+
+//   /* The “Call us on…” teal underline link */
+//   .cards-card-body p.button-container a.button {
+//     background: transparent !important;
+//     border: none !important;
+//     color: $heading-default !important;
+//     font-size: 20px;
+//     font-weight: 600;
+//     text-decoration: underline;
+//     padding: 0;
+//   }
+// }
+
+.section.faq-cant-find-looking-for-variant {
+  padding-block: 32px;
+
+  @include responsive-container();
+
+  @include mobile {
+    padding-block: 24px;
+  }
+
+  /* Center heading + teal underline */
+  .default-content-wrapper {
+    text-align: center;
+
+    h2 {
+      color: $heading-default;
+      font-family: $secondary-font;
+      font-size: 32px;
+      font-weight: 900;
+      line-height: 38px;
+      display: inline-block;
+      position: relative;
+      padding-bottom: 12px;
+
+    }
+  }
+
+  /* Cards section */
+  .cards-wrapper {
+    margin-top: 48px;
+    padding: 32px 0;
+
+    @include mobile {
+      margin-top: 32px;
+      padding: 0;
+    }
+
+    .cards {
+      ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+
+        @include mobile {
+          grid-template-columns: 1fr;
+          gap: 48px;
+        }
+
+        li {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+
+          .cards-card-image {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 24px;
+
+            img {
+              width: 60px;
+              height: 60px;
+            }
+          }
+
+          .cards-card-body {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+
+            h3 {
+              color: $heading-default;
+              font-family: $primary-font;
+              font-size: 20px;
+              font-weight: 600;
+              margin-bottom: 8px;
+
+              &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                max-width: 210px;
+                height: 2px;
+                background: $heading-default;
+                margin: 12px auto 0;
+              }
+            }
+
+            p {
+              font-size: 16px;
+              color: $body-default;
+              line-height: 24px;
+              margin: 0 0 24px;
+
+              a {
+                text-decoration-color: $heading-default !important;
+                text-decoration: underline;
+                text-decoration-thickness: 1px;
+                text-underline-offset: 4px;
+              }
+            }
+
+            /* Underline CTA (e.g., “Call us on…”) */
+            p.button-container {
+              margin-top: auto;
+
+              a.button {
+                background: transparent !important;
+                border: none !important;
+                color: $heading-default !important;
+                font-size: 20px;
+                font-weight: 600;
+                text-decoration: underline;
+                padding: 0;
+                cursor: pointer;
+
+                &:hover {
+                  opacity: 0.7;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
