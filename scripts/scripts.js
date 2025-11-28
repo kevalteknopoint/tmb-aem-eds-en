@@ -1,4 +1,4 @@
-import decorateMomentumSaver from '../components/momentum-saver/momentum-saver.js';
+import decorateMomentumSaver from '../blocks/momentum-saver/momentum-saver.js';
 import {
   loadHeader,
   loadFooter,
