@@ -281,7 +281,7 @@
     bottom: 64px;
     width: 100%;
 
-    @include responsive-container();
+    @include responsive-container;
 
     @include tablet {
       gap: 16px;

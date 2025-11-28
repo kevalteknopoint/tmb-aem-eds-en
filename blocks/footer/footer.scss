@@ -16,7 +16,7 @@ footer {
   .tmb-footer-wrapper {
     // max-width: 1328px;
     // margin: 0 auto;
-    @include responsive-container();
+    @include responsive-container;
 
     .para-1 {
       display: flex;
@@ -527,7 +527,7 @@ footer {
       padding-top: 32px
     }
 
-    @include responsive-container();
+    @include responsive-container;
 
     & > div {
       flex: unset;
@@ -581,7 +581,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    @include responsive-container();
+    @include responsive-container;
 
     @media screen and (max-width: 767px) {
       padding: 40px 12px;
@@ -804,7 +804,7 @@ footer {
   }
 
   .columns-wrapper {
-    @include responsive-container();
+    @include responsive-container;
   }
 
   .columns.block {

@@ -684,6 +684,9 @@ header{
   line-height:40px;
   width:74%;
 }
+.momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content p{
+  margin-bottom:0;
+}
 
 .product-navigation{
   margin-left:auto;
@@ -850,9 +853,6 @@ header{
   .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div{
     flex-direction:column-reverse;
     gap:32px;
-  }
-  .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content p{
-    margin-bottom:32px;
   }
   .product-navigation{
     box-shadow:0 2px 3px 0 rgba(0, 0, 0, 0.09);

@@ -9,7 +9,7 @@
   justify-content: space-between;
 
   .columns-wrapper {
-    @include responsive-container();
+    @include responsive-container;
   }
 
   .momentum-columns {
@@ -186,7 +186,7 @@
 
 .momentum-saver-section.momentum-image-saver {
   .columns-wrapper {
-    @include responsive-container();
+    @include responsive-container;
 
     .momentum-columns {
       padding: 0;
@@ -277,10 +277,8 @@
             line-height:  40px;
             width: 74%;
           }
-          p{
-            @include tablet{
-              margin-bottom: 32px;
-            }
+          p {
+            margin-bottom: 0;
           }
         }
       }

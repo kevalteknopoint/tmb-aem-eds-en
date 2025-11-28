@@ -3,7 +3,7 @@
 @use '../../styles/mixins';
 
 .section.online-banking {
-  @include responsive-container();
+  @include responsive-container;
 
   @media (min-width: 766px) and (max-width: 980px) {
     margin-left: auto;

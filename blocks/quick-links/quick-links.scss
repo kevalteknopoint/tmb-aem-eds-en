@@ -6,7 +6,7 @@
   justify-content: space-between;
   gap: 40px;
 
-  @include responsive-container();
+  @include responsive-container;
 
   .quick-links-wrapper {
 
