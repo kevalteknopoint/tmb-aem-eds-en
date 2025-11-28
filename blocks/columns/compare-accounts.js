@@ -10,6 +10,7 @@ export default function decorateCompareAccounts(block) {
     card.classList.add('compare-accounts-card');
     if (card.querySelector('pre') && card.querySelector('pre')?.innerHTML?.includes('active')) {
       card?.classList.add('active');
+      card.querySelector('pre').remove();
     }
   });
 }

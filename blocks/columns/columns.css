@@ -110,11 +110,13 @@
 }
 
 .compare-accounts.columns-container .columns.block .compare-accounts-cards{
+  align-items:stretch;
   gap:0;
 }
 
 .compare-accounts.columns-container .columns.block .compare-accounts-cards .compare-accounts-card{
   border-radius:var(--radius-card);
+  min-height:100%;
   min-width:304px;
 }
 
@@ -122,7 +124,7 @@
   background-color:var(--bg-reverse);
 }
 
-.compare-accounts.columns-container .columns.block .compare-accounts-cards .compare-accounts-card.active h3, .compare-accounts.columns-container .columns.block .compare-accounts-cards .compare-accounts-card.active h5, .compare-accounts.columns-container .columns.block .compare-accounts-cards .compare-accounts-card.active p:has(.interest-rate){
+.compare-accounts.columns-container .columns.block .compare-accounts-cards .compare-accounts-card.active h3, .compare-accounts.columns-container .columns.block .compare-accounts-cards .compare-accounts-card.active h5, .compare-accounts.columns-container .columns.block .compare-accounts-cards .compare-accounts-card.active p:has(.interest-rate), .compare-accounts.columns-container .columns.block .compare-accounts-cards .compare-accounts-card.active .interest-rate{
   color:var(--heading-reverse);
 }
 
@@ -149,7 +151,8 @@
 
 .compare-accounts.columns-container .columns.block h3{
   border-bottom:5px solid var(--heading-default);
-  font-size:var(--font-family-h3);
+  color:var(--heading-default);
+  font-size:var(--font-size-h3);
   font-weight:500;
   line-height:var(--font-height-h3);
   padding:32px 24px 8px;
