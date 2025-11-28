@@ -50,6 +50,10 @@
           /* 100% */
           text-transform: capitalize;
         }
+
+        @media screen and (max-width: 400px) {
+          font-size: 108px;
+        }
       }
 
       .rate-unit {
@@ -78,6 +82,10 @@
           font-style: normal;
           line-height: 72px;
         }
+
+        @media screen and (max-width: 400px) {
+          font-size: 70px;
+        }
       }
 
       .rate-pa {
@@ -87,6 +95,10 @@
         font-style: normal;
         font-weight: 400;
         line-height: 28px;
+
+        @media screen and (max-width: 400px) {
+          font-size: 32px;
+        }
       }
 
       p {
