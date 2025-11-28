@@ -262,6 +262,10 @@
             "value": "faq-cant-find-looking-for"
           },
           {
+            "name": "News Info Variant",
+            "value": "news-info-variant"
+          },
+          {
             "name": "Section Wrapper",
             "value": "section-wrapper"
           },
