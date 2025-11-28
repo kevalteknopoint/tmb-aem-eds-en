@@ -178,12 +178,24 @@
             "value": "momentum-image-saver"
           },
           {
+            "name": "Image Swapping",
+            "value": "image-swapping"
+          },
+          {
+            "name": "Left Percentage Section",
+            "value": "left-percentage-section"
+          },
+          {
             "name": "Background Color Teal",
             "value": "background-color-teal"
           },
           {
             "name": "Bg Image Saver",
             "value": "bg-image-saver"
+          },
+          {
+            "name": "Image Swapping",
+            "value": "image-swapping"
           },
           {
             "name": "online-banking",
@@ -268,6 +280,10 @@
           {
             "name": "Banking Good",
             "value": "banking-goods"
+          },
+          {
+            "name": "Rates Saver",
+            "value": "rates-saver"
           }
         ]
       }

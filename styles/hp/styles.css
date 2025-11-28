@@ -791,6 +791,20 @@ header{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
 }
+
+.momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div{
+  flex-direction:row-reverse;
+  gap:80px;
+}
+.momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content h2{
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
+  font-size:40px;
+  font-style:normal;
+  font-weight:900;
+  line-height:40px;
+  width:74%;
+}
 @media screen and (max-width: 1279px){
   .top-margin{
     margin-top:64px;
@@ -829,6 +843,13 @@ header{
   }
   .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2{
     font-size:38px;
+  }
+  .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div{
+    flex-direction:column-reverse;
+    gap:32px;
+  }
+  .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content p{
+    margin-bottom:32px;
   }
 }
 @media screen and (max-width: 767px){
