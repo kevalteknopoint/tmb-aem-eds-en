@@ -107,16 +107,48 @@
 }
 
 .interest-rates-section .interest-rates-columns .interest-rates-list{
-  border-bottom:1px solid rgb(0 0 0 / 20%);
+  align-items:end;
+  display:grid;
+  gap:0;
+  grid-template-columns:1fr 1fr;
+  margin-top:40px;
+  padding-bottom:16px;
 }
 
-.interest-rates-section .interest-rates-columns .interest-rates-list p{
-  color:var(--body-default);
-  font-size:16px;
-  font-weight:400;
-  gap:16px;
-  line-height:24px;
-  padding:16px 0;
+.interest-rates-section .interest-rates-columns .interest-rates-list div h3{
+  color:var(--heading-default);
+  font-size:24px;
+  font-style:normal;
+  font-weight:500;
+  line-height:29px;
+  padding:16px 8px 16px 0;
+}
+
+.interest-rates-section .interest-rates-columns .interest-rates-list div ul{
+  border-top:4px solid var(--heading-default);
+}
+
+.interest-rates-section .interest-rates-columns .interest-rates-list div ul li{
+  border-bottom:1px solid rgb(0 0 0 / 20%);
+  padding:16px 8px 16px 0;
+}
+
+.interest-rates-section .interest-rates-columns .interest-rates-list div ul li:nth-child(2){
+  padding:16px 8px;
+}
+
+.interest-rates-section .interest-rates-columns .interest-rates-list-2 div h3{
+  border-bottom:4px solid var(--heading-default);
+  color:var(--heading-default);
+  font-size:24px;
+  font-style:normal;
+  font-weight:500;
+  line-height:29px;
+  padding:16px 8px 16px 0;
+}
+
+.interest-rates-section .interest-rates-columns .interest-rates-list-2 div p{
+  padding-top:16px;
 }
 
 .interest-rates-section .interest-rates-columns-2 .interest-rates-list{
@@ -143,35 +175,8 @@
   width:100%;
 }
 
-.account-fees-section .interest-rates-columns .interest-rates-list{
-  align-items:center;
-  border-bottom:1px solid rgb(0 0 0 / 20%);
-  display:grid;
-  grid-template-columns:1fr 1fr;
-}
-
-.account-fees-section .interest-rates-columns .interest-rates-list p{
-  color:var(--body-default);
-  font-size:16px;
-  font-weight:400;
-  gap:16px;
-  line-height:24px;
-}
-
-.account-fees-section .interest-rates-columns .interest-rates-list:first-child p{
-  color:var(--heading-default);
-  font-weight:700;
-}
-
-.account-fees-section .interest-rates-columns .interest-rates-list.account-fees-note{
-  border-bottom:none;
-  grid-template-columns:1fr;
-}
-
-.account-fees-section .interest-rates-columns .interest-rates-list.account-fees-note p{
-  color:var(--body-default);
-  font-size:14px;
-  line-height:20px;
+.account-fees-section .interest-rates-list-2{
+  display:block;
 }
 
 .account-fees-section .interest-rates-columns-3 .columns .interest-rates-list-6{

@@ -28,8 +28,15 @@
     }
 
     .interest-rates-columns {
-        .interest-rates-list {
-            border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+        .interest-rates-list{
+            // border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+            gap: 0;
+            // trial for 
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: end;
+            padding-bottom: 16px;
+            margin-top: 40px;
 
             /* FIGMA TOKEN MISSING */
             @include tablet {
@@ -38,14 +45,65 @@
                 flex-direction: row;
             }
 
-            p {
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 24px;
-                color: $body-default;
-                gap: 16px;
-                padding: 16px 0;
+            div{
+                h3{
+                    color: $heading-default;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 29px;
+                    padding: 16px 8px 16px 0;
+                }
+                ul{
+                    border-top: 4px solid $heading-default;
+                    li{
+                        padding: 16px 8px 16px 0;
+                        // border-bottom: 1px solid $body-default;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+
+
+                    &:nth-child(2){
+                        padding: 16px 8px 16px 8px;
+                    }
+                    }
+                }
             }
+
+            // p {
+            //     font-size: 16px;
+            //     font-weight: 400;
+            //     line-height: 24px;
+            //     color: $body-default;
+            //     gap: 16px;
+            //     padding: 16px 0;
+            // }
+        }
+        .interest-rates-list-2{
+
+            div{
+                h3{
+                    color: $heading-default;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 29px;
+                    padding: 16px 8px 16px 0;
+                    border-bottom: 4px solid $heading-default;
+                }
+                p{
+                    padding-top: 16px;
+                }
+            }
+
+            // p {
+            //     font-size: 16px;
+            //     font-weight: 400;
+            //     line-height: 24px;
+            //     color: $body-default;
+            //     gap: 16px;
+            //     padding: 16px 0;
+            // }
         }
 
     }
@@ -128,43 +186,46 @@
 .account-fees-section {
     @include responsive-container();
 
-    .interest-rates-columns {
-        .interest-rates-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            // padding: 16px 0;
-            // padding-bottom: 16px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+    // .interest-rates-columns {
+    //     .interest-rates-list {
+    //         display: grid;
+    //         grid-template-columns: 1fr 1fr;
+    //         align-items: center;
+    //         // padding: 16px 0;
+    //         // padding-bottom: 16px;
+    //         // border-bottom: 1px solid rgba(0, 0, 0, 0.20);
 
-            p {
-                gap: 16px;
-                // padding: 16px 0;
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 24px;
-                color: $body-default;
-            }
+    //         p {
+    //             gap: 16px;
+    //             // padding: 16px 0;
+    //             font-size: 16px;
+    //             font-weight: 400;
+    //             line-height: 24px;
+    //             color: $body-default;
+    //         }
 
-            &:first-child {
-                p {
-                    color: $heading-default;
-                    font-weight: 700;
-                }
-            }
+    //         &:first-child {
+    //             p {
+    //                 color: $heading-default;
+    //                 font-weight: 700;
+    //             }
+    //         }
 
-            &.account-fees-note {
-                grid-template-columns: 1fr;
-                // padding-top: 20px;
-                border-bottom: none;
+    //         &.account-fees-note {
+    //             grid-template-columns: 1fr;
+    //             // padding-top: 20px;
+    //             border-bottom: none;
 
-                p {
-                    font-size: 14px;
-                    line-height: 20px;
-                    color: $body-default;
-                }
-            }
-        }
+    //             p {
+    //                 font-size: 14px;
+    //                 line-height: 20px;
+    //                 color: $body-default;
+    //             }
+    //         }
+    //     }
+    // }
+    .interest-rates-list-2{
+        display: block;
     }
 
     .interest-rates-columns-3 {

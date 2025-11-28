@@ -56,16 +56,16 @@ export default function decorateInterestRates(block) {
       wrappers.forEach(el => el.classList.add("interest-rates-wrapper"));
 
       document.querySelectorAll('.interest-rates-wrapper').forEach((el, index) => {
-            el.classList.add(`interest-rates-wrapper-${index + 1}`);
-        });
+        el.classList.add(`interest-rates-wrapper-${index + 1}`);
+      });
 
       // Add columns classes
       const columns = section.querySelectorAll(".columns-wrapper");
       columns.forEach(el => el.classList.add("interest-rates-columns"));
 
-       document.querySelectorAll('.interest-rates-columns').forEach((el, index) => {
-            el.classList.add(`interest-rates-columns-${index + 1}`);
-        });
+      document.querySelectorAll('.interest-rates-columns').forEach((el, index) => {
+        el.classList.add(`interest-rates-columns-${index + 1}`);
+      });
 
 
 
@@ -73,11 +73,14 @@ export default function decorateInterestRates(block) {
       const lists = section.querySelectorAll(".columns.block > div");
       lists.forEach(el => el.classList.add("interest-rates-list"));
 
-               document.querySelectorAll('.interest-rates-list').forEach((el, index) => {
-            el.classList.add(`interest-rates-list-${index + 1}`);
-        });
-          const accountFees = document.querySelector(".account-fees-section .interest-rates-list-6 > div");
-        accountFees?.classList?.add("fee-type-content");
+      document.querySelectorAll('.interest-rates-list').forEach((el, index) => {
+        el.classList.add(`interest-rates-list-${index + 1}`);
+      });
+      const accountFees = document.querySelector(".account-fees-section .interest-rates-list-6 > div");
+      accountFees?.classList?.add("fee-type-content");
+      // const ratesList = document.querySelector(".interest-rates-section .interest-rates-columns .interest-rates-list-1 div");
+      // ratesList?.classList?.add("left-content-div");
+
 
       // Optional: handle last block note differently for account-fees-section
       if (section.classList.contains('account-fees-section')) {
@@ -86,7 +89,7 @@ export default function decorateInterestRates(block) {
       }
     }
   }, 50);
-  
+
 }
 
 
