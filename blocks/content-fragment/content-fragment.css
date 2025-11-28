@@ -1,83 +1,4 @@
-.faq-landing-banner{
-  align-items:center;
-  background:var(--gradient-1);
-  border-radius:0 0 40px 40px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  min-height:368px;
-  width:100%;
-}
-
-.faq-landing-banner .columns-wrapper{
-  margin-left:auto;
-  margin-right:auto;
-  max-width:calc(1440px - 0px);
-  padding-inline:64px;
-  width:100%;
-}
-
-.faq-landing-banner .columns.block{
-  padding:24px;
-}
-
-.faq-landing-banner .columns.block .faq-banner-wrap{
-  align-items:flex-start;
-  display:flex;
-  flex-direction:column;
-  gap:24px;
-  width:100%;
-}
-
-.faq-landing-banner .faq-banner-content h1, .faq-landing-banner .faq-banner-content h2, .faq-landing-banner .faq-banner-content h3, .faq-landing-banner .faq-banner-content h4, .faq-landing-banner .faq-banner-content h5, .faq-landing-banner .faq-banner-content h6{
-  color:var(--heading-default);
-  font-family:var(--secondary-font);
-  font-size:60px;
-  letter-spacing:2px;
-  line-height:52px;
-  margin-bottom:24px;
-}
-
-.faq-landing-banner .faq-banner-content p{
-  color:var(--heading-default);
-  font-size:16px;
-  font-weight:500;
-  line-height:24px;
-}
-
-.faq-landing-banner .faq-banner-search{
-  align-items:center;
-  background-color:var(--bg-default);
-  border-radius:var(--radius-card);
-  display:flex;
-  gap:16px;
-  padding:4px;
-  width:100%;
-}
-
-.faq-landing-banner .faq-banner-search picture{
-  align-items:center;
-  background-color:var(--bg-reverse);
-  border-radius:var(--radius-button);
-  display:flex;
-  height:36px;
-  justify-content:center;
-  width:36px;
-}
-
-.faq-landing-banner .faq-banner-search img{
-  height:24px;
-  width:24px;
-}
-
-.faq-landing-banner .faq-banner-search .faq-search-input{
-  color:var(--body-default);
-  font-size:14px;
-  font-weight:400;
-  line-height:24px;
-  outline:none;
-}
-
+/* stylelint-disable no-empty-source */
 .who-can-apply-section{
   display:flex;
   flex-direction:column;
@@ -282,135 +203,12 @@
   text-align:center;
 }
 
-.faq-accordion{
-  display:flex;
-  gap:32px;
-  margin-left:auto;
-  margin-right:auto;
-  max-width:calc(1440px - 0px);
-  padding-inline:64px;
-  width:100%;
-}
-
-.faq-accordion .default-content-wrapper{
-  min-width:417px;
-}
-
-.faq-accordion .default-content-wrapper h1, .faq-accordion .default-content-wrapper h2, .faq-accordion .default-content-wrapper h3, .faq-accordion .default-content-wrapper h4, .faq-accordion .default-content-wrapper h5, .faq-accordion .default-content-wrapper h6{
-  color:var(--heading-default);
-  font-family:var(--secondary-font);
-  font-size:40px;
-  font-weight:900;
-  letter-spacing:2px;
-  line-height:40px;
-  text-transform:uppercase;
-}
-
-.faq-accordion .accordion-wrapper{
-  width:100%;
-}
-
-.faq-accordion .accordion-wrapper .block .accordion-item{
-  border-bottom:1px solid var(--line-default);
-  border-top:1px solid var(--line-default);
-  padding:16px 0;
-}
-
-.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label{
-  align-items:flex-start;
-  display:flex;
-  justify-content:space-between;
-  list-style:none;
-}
-
-.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label p{
-  color:var(--color-button-primary-default);
-  font-size:24px;
-  font-weight:500;
-  line-height:29px;
-  margin-top:4px;
-}
-
-.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label svg{
-  background:var(--bg-light);
-  border-radius:44px;
-  cursor:pointer;
-  height:40px;
-  margin-left:32px;
-  padding:8px;
-  transform:rotate(180deg);
-  width:40px;
-}
-
-.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body{
-  margin-top:8px;
-}
-
-.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body p{
-  font-size:16px;
-  line-height:24px;
-}
-
-.faq-accordion .accordion-wrapper .block .accordion-item[open] summary svg{
-  transform:rotate(0deg);
-}
-
-.faq-accordion .accordion-wrapper .block .accordion-item.accordion-item:first-child{
-  border-top:none;
-}
-
-.faq-accordion .accordion-wrapper .block .accordion-item.accordion-item:last-child{
-  border-bottom:none;
-}
-
-.columns img{
-  width:100%;
-}
-
-.columns > div{
-  display:flex;
-  flex-direction:column;
-}
-
-.columns > div > div{
-  order:1;
-}
-
-.columns > div > .columns-img-col{
-  order:0;
-}
-
-.columns > div > .columns-img-col img{
-  display:block;
-}
-
-@media (width >= 900px){
-  .columns > div{
-    align-items:center;
-    flex-direction:unset;
-    gap:24px;
-  }
-
-  .columns > div > div{
-    flex:1;
-    order:unset;
-  }
-}
-
 @media screen and (max-width: 1279px){
-  .faq-landing-banner .columns-wrapper{
-    padding-inline:24px;
-  }
-
   .who-can-apply-section{
     padding-inline:24px;
   }
 
   .customer .columns-wrapper{
-    padding-inline:24px;
-  }
-
-  .faq-accordion{
     padding-inline:24px;
   }
 }
@@ -424,42 +222,9 @@
     gap:32px;
     grid-template-columns:1fr;
   }
-
-  .faq-accordion{
-    flex-direction:column;
-  }
 }
 
 @media screen and (max-width: 767px){
-  .faq-landing-banner{
-    justify-content:flex-end;
-    margin-bottom:12px;
-    min-height:400px;
-  }
-
-  .faq-landing-banner .columns-wrapper{
-    padding-inline:16px;
-  }
-
-  .faq-landing-banner .columns.block{
-    padding:0;
-  }
-
-  .faq-landing-banner .columns.block .faq-banner-wrap{
-    gap:16px;
-  }
-
-  .faq-landing-banner .faq-banner-content h1, .faq-landing-banner .faq-banner-content h2, .faq-landing-banner .faq-banner-content h3, .faq-landing-banner .faq-banner-content h4, .faq-landing-banner .faq-banner-content h5, .faq-landing-banner .faq-banner-content h6{
-    font-size:40px;
-    line-height:32px;
-    margin-bottom:16px;
-  }
-
-  .faq-landing-banner .faq-banner-content p{
-    font-size:14px;
-    line-height:18px;
-  }
-
   .who-can-apply-section{
     gap:24px;
     padding-inline:16px;
@@ -472,19 +237,5 @@
 
   .customer .columns-wrapper{
     padding-inline:16px;
-  }
-
-  .faq-accordion{
-    flex-direction:column;
-    padding-inline:16px;
-  }
-
-  .faq-accordion .default-content-wrapper{
-    min-width:unset;
-  }
-
-  .faq-accordion .default-content-wrapper h1, .faq-accordion .default-content-wrapper h2, .faq-accordion .default-content-wrapper h3, .faq-accordion .default-content-wrapper h4, .faq-accordion .default-content-wrapper h5, .faq-accordion .default-content-wrapper h6{
-    font-size:38px;
-    line-height:38px;
   }
 }

@@ -1,0 +1,94 @@
+@use '../../styles/base' as *;
+
+.faq-accordion{
+    @include responsive-container;
+    display: flex;
+    gap: 32px;
+
+    @include mobile{
+        flex-direction: column;
+    }
+    @include tablet{
+        flex-direction: column;
+    }
+
+    .default-content-wrapper{
+        min-width: 417px;
+
+        @include mobile{
+            min-width: unset;
+        }
+
+        h1,h2,h3,h4,h5,h6{
+            color: $heading-default;
+            font-family: $secondary-font;
+            font-size: 40px;
+            font-weight: 900;
+            line-height: 40px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            @include mobile{
+                font-size: 38px;
+                line-height: 38px;
+            }
+        }
+    }
+    .accordion-wrapper{
+        width: 100%;
+
+        .block{
+            .accordion-item{
+                border-bottom: 1px solid var(--line-default);
+                border-top: 1px solid var(--line-default);
+                padding: 16px 0;
+
+                .accordion-item-label{
+                    list-style: none;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+
+                    p{
+                        color: $color-button-primary-default;
+                        font-size: 24px;
+                        font-weight: 500;
+                        line-height: 29px;
+                        margin-top: 4px;
+                    }
+                    svg{
+                        width: 40px;
+                        height: 40px;
+                        padding: 8px;
+                        border-radius: 44px;
+                        background: $bg-light;
+                        cursor: pointer;
+                        margin-left: 32px;
+                        transform: rotate(180deg);
+                    }
+                }
+                .accordion-item-body{
+                    margin-top: 8px;
+
+                    p{
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                }  
+                &[open] {
+                    summary {
+                        svg {
+                            transform: rotate(0deg);
+                        }              
+                    }
+                }
+                &.accordion-item:first-child{
+                    border-top: none;
+                }
+                &.accordion-item:last-child{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}

@@ -25,7 +25,8 @@
       "breadcrumb",
       "faq-category",
       "faq-detail",
-      "hero-banner"
+      "hero-banner",
+      "content-fragment"
     ]
   },
   {
@@ -62,7 +63,8 @@
       "text",
       "image",
       "button",
-      "title"
+      "title",
+      "content-fragment"
     ]
   },
   {

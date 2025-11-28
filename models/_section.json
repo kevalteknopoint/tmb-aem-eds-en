@@ -182,6 +182,18 @@
             {
               "name": "Product Navigation",
               "value": "product-navigation"
+            },
+            {
+              "name": "Who can apply",
+              "value": "who-can-apply-section"
+            },
+            {
+              "name": "Customer",
+              "value": "customer"
+            },
+            {
+              "name": "FAQ Accordion",
+              "value": "faq-accordion"
             }
           ]
         }
@@ -209,7 +221,8 @@
         "breadcrumb",
         "faq-category",
         "faq-detail",
-        "hero-banner"
+        "hero-banner",
+        "content-fragment"
       ]
     }
   ]

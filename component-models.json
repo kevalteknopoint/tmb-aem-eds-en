@@ -285,6 +285,18 @@
           {
             "name": "Product Navigation",
             "value": "product-navigation"
+          },
+          {
+            "name": "Who can apply",
+            "value": "who-can-apply-section"
+          },
+          {
+            "name": "Customer",
+            "value": "customer"
+          },
+          {
+            "name": "FAQ Accordion",
+            "value": "faq-accordion"
           }
         ]
       }
@@ -566,6 +578,21 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
+      }
+    ]
+  },
+  {
+    "id": "aem-content-fragment",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "picker",
+        "label": "Content Fragment Picker",
+        "valueType": "string",
+        "variationName": "contentFragmentVariation",
+        "validation": {
+          "rootPath": "/content/dam/tmb/content-fragments"
+        }
       }
     ]
   },
