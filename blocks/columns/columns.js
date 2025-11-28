@@ -1,8 +1,11 @@
+import decorateCompareAccounts from "./compare-accounts.js";
 import decorateFaqBanner from "./faq-banner.js";
 
 export default function decorate(block) {
   if (block.closest('.faq-landing-banner')) {
     decorateFaqBanner(block);
+  } else if (block.closest('.compare-accounts')) {
+    decorateCompareAccounts(block);
   } else {
     const cols = [...block.firstElementChild.children];
     block.classList.add(`columns-${cols.length}-cols`);

@@ -178,6 +178,10 @@
             {
               "name": "Product Navigation",
               "value": "product-navigation"
+            },
+            {
+              "name": "Compare Accounts Cards",
+              "value": "compare-accounts"
             }
           ]
         }

@@ -1,3 +1,25 @@
+.compare-accounts.columns-container .columns.block .compare-accounts-cards .compare-accounts-card.active a{
+  align-items:center;
+  background-color:var(--color-button-outlined-reverse-default);
+  border:none;
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  border-radius:var(--radius-button);
+  color:var(--color-button-text-stroke-reverse);
+  cursor:pointer;
+  display:flex;
+  font-size:16px;
+  font-weight:500;
+  gap:16px;
+  justify-content:center;
+  line-height:24px;
+  min-width:150px;
+  padding:8px 24px;
+  text-align:center;
+  transition:all 0.3s ease-in-out;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
 .faq-landing-banner{
   align-items:center;
   background:var(--gradient-1);
@@ -78,6 +100,115 @@
   outline:none;
 }
 
+.compare-accounts.columns-container .columns.block{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  overflow-x:auto;
+  padding-inline:64px;
+  width:100%;
+}
+
+.compare-accounts.columns-container .columns.block .compare-accounts-cards{
+  gap:0;
+}
+
+.compare-accounts.columns-container .columns.block .compare-accounts-cards .compare-accounts-card{
+  border-radius:var(--radius-card);
+  min-width:304px;
+}
+
+.compare-accounts.columns-container .columns.block .compare-accounts-cards .compare-accounts-card.active{
+  background-color:var(--bg-reverse);
+}
+
+.compare-accounts.columns-container .columns.block .compare-accounts-cards .compare-accounts-card.active h3, .compare-accounts.columns-container .columns.block .compare-accounts-cards .compare-accounts-card.active h5, .compare-accounts.columns-container .columns.block .compare-accounts-cards .compare-accounts-card.active p:has(.interest-rate){
+  color:var(--heading-reverse);
+}
+
+.compare-accounts.columns-container .columns.block .compare-accounts-cards .compare-accounts-card.active h4, .compare-accounts.columns-container .columns.block .compare-accounts-cards .compare-accounts-card.active p{
+  color:var(--body-reverse);
+}
+
+.compare-accounts.columns-container .columns.block .compare-accounts-cards .compare-accounts-card.active a:hover{
+  background-color:var(--color-button-outlined-reverse-hover);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.compare-accounts.columns-container .columns.block .compare-accounts-cards .compare-accounts-card.active a:active{
+  background-color:var(--color-button-outlined-reverse-press);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.compare-accounts.columns-container .columns.block .compare-accounts-cards .compare-accounts-card.active a:focus-visible{
+  box-shadow:0 0 0 2px var(--color-focus-default), 0 0 0 3px var(--color-focus-reversed);
+  outline:none;
+}
+
+.compare-accounts.columns-container .columns.block h3{
+  border-bottom:5px solid var(--heading-default);
+  font-size:var(--font-family-h3);
+  font-weight:500;
+  line-height:var(--font-height-h3);
+  padding:32px 24px 8px;
+}
+
+.compare-accounts.columns-container .columns.block h4{
+  font-size:var(--font-size-body);
+  font-weight:400;
+  line-height:var(--font-height-body);
+  padding:16px 24px 0;
+}
+
+.compare-accounts.columns-container .columns.block h5{
+  color:var(--heading-default);
+  font-size:var(--font-size-disclaimer);
+  line-height:var(--font-height-disclaimer);
+  padding:16px 24px 0;
+}
+
+.compare-accounts.columns-container .columns.block .interest-rate{
+  color:var(--heading-default);
+  display:block;
+  font-size:var(--font-size-h1-std);
+  font-weight:500;
+  line-height:var(--font-height-h1-std);
+}
+
+.compare-accounts.columns-container .columns.block .interest-rate .rate-pa{
+  font-size:var(--font-size-body);
+  font-weight:400;
+  line-height:var(--font-height-body);
+}
+
+.compare-accounts.columns-container .columns.block p{
+  color:var(--body-default);
+  font-size:var(--font-size-disclaimer);
+  line-height:var(--font-height-disclaimer);
+  padding:16px 24px 0;
+}
+
+.compare-accounts.columns-container .columns.block p:has(.interest-rate){
+  padding:4px 24px;
+}
+
+.compare-accounts.columns-container .columns.block p:has(a){
+  padding-bottom:32px;
+}
+
+.compare-accounts.columns-container .columns.block a{
+  border-bottom:1px solid var(--heading-default);
+  color:var(--heading-default);
+  display:block;
+  font-size:var(--font-size-sm-body);
+  line-height:var(--font-height-sm-body);
+  padding-bottom:2px;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
 .columns img{
   width:100%;
 }
@@ -116,6 +247,16 @@
   .faq-landing-banner .columns-wrapper{
     padding-inline:24px;
   }
+
+  .compare-accounts.columns-container .columns.block{
+    padding-inline:24px;
+  }
+}
+
+@media screen and (max-width: 1023px){
+  .compare-accounts.columns-container .columns.block .compare-accounts-cards{
+    flex-direction:row;
+  }
 }
 
 @media screen and (max-width: 767px){
@@ -146,5 +287,9 @@
   .faq-landing-banner .faq-banner-content p{
     font-size:14px;
     line-height:18px;
+  }
+
+  .compare-accounts.columns-container .columns.block{
+    padding-inline:16px;
   }
 }
