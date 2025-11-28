@@ -25,7 +25,8 @@
       "breadcrumb",
       "faq-category",
       "faq-detail",
-      "content-fragment"
+      "content-fragment",
+      "hero-banner"
     ]
   },
   {
@@ -64,6 +65,12 @@
       "button",
       "title",
       "content-fragment"
+    ]
+  },
+  {
+    "id": "hero-banner",
+    "components": [
+      "banner"
     ]
   }
 ]

@@ -129,6 +129,15 @@
         "description": "The label shown for this section in the Content Tree"
       },
       {
+        "component": "text",
+        "name": "id",
+        "label": "Section ID",
+        "description": "Unique identifier for this section (HTML ID)",
+        "validation": {
+          "regex": "^[a-zA-Z][\\w:.-]*$"
+        }
+      },
+      {
         "component": "multiselect",
         "name": "style",
         "label": "Style",
@@ -300,6 +309,14 @@
           {
             "name": "FAQ Accordion",
             "value": "faq-accordion"
+          },
+          {
+            "name": "Product Navigation",
+            "value": "product-navigation"
+          },
+          {
+            "name": "Compare Accounts Cards",
+            "value": "compare-accounts"
           }
         ]
       }
@@ -657,6 +674,62 @@
         "component": "aem-content",
         "name": "reference",
         "label": "Reference"
+      }
+    ]
+  },
+  {
+    "id": "hero-banner",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Product Detail Banner",
+            "value": "product-detail-banner"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "banner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "dt-media",
+        "label": "Desktop Media (Image/Video)",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "dt-alt",
+        "label": "Desktop Image Alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "mb-media",
+        "label": "Mobile Media (Image/Video)",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "mb-alt",
+        "label": "Mobile Image Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Content",
+        "value": ""
       }
     ]
   },

@@ -1,4 +1,4 @@
-import decorateMomentumSaver from '../components/momentum-saver/momentum-saver.js';
+import decorateMomentumSaver from '../blocks/momentum-saver/momentum-saver.js';
 import {
   loadHeader,
   loadFooter,
@@ -12,6 +12,7 @@ import {
   loadSections,
   loadCSS,
 } from './aem.js';
+import { fetchPlaceholders } from './placeholders.js';
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -156,7 +157,25 @@ function loadDelayed() {
   // load anything that can be postponed to the latest here
 }
 
+function camelToKebab(str) {
+  return str.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+}
+
+function loadPlaceholders() {
+  if (window.placeholders?.default && Object.keys(window.placeholders?.default)?.length) {
+    Object.keys(window.placeholders.default).forEach((key) => {
+      let value = window.placeholders.default[key];
+      if (/(\d+(?:\.\d+)?)(%)(p\.a\.)/g.test(value)) {
+        value = value.replaceAll(/(\d+(?:\.\d+)?)(%)(p\.a\.)/g, `<span class="rate-num">$1</span><span class="rate-percent">$2</span><span class="rate-pa">$3</span>`);
+      }
+      document.body.innerHTML = document.body.innerHTML.replaceAll(`~${key}~`, `<span class="${camelToKebab(key)}">${value}</span>`);
+    });
+  }
+}
+
 async function loadPage() {
+  await fetchPlaceholders();
+  loadPlaceholders();
   await loadEager(document);
   await loadLazy(document);
   try {
