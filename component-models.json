@@ -301,6 +301,10 @@
           {
             "name": "FAQ Accordion",
             "value": "faq-accordion"
+          },
+          {
+            "name": "Interest Table",
+            "value": "interest-table-section"
           }
         ]
       }
