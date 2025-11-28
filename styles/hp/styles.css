@@ -752,6 +752,7 @@ header{
 .product-navigation{
   margin-left:auto;
   margin-right:auto;
+  margin-top:-40px;
   max-width:calc(1440px - 0px);
   padding-inline:64px;
   position:sticky;
@@ -912,6 +913,7 @@ header{
   }
   .product-navigation{
     box-shadow:0 2px 3px 0 rgba(0, 0, 0, 0.09);
+    margin-top:-20px;
   }
   .product-navigation .default-content-wrapper{
     border-radius:0;
@@ -997,6 +999,7 @@ header{
     font-size:38px;
   }
   .product-navigation{
+    margin-top:unset;
     padding-inline:16px;
     top:0;
   }

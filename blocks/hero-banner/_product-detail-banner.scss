@@ -19,9 +19,13 @@
 
   .desktop-media {
     img {
+      min-height: 524px;
+      height: fit-content;
+      object-fit: cover;
       border-radius: $radius-hero;
 
       @include tablet {
+        min-height: 500px;
         border-radius: 0;
       }
     }
@@ -29,6 +33,10 @@
 
   .mobile-media {
     display: none;
+
+    img {
+      width: 100%;
+    }
 
     @include mobile {
       display: block;
@@ -48,6 +56,16 @@
     justify-content: center;
 
     @include responsive-container;
+
+    @include tablet {
+      top: unset;
+      justify-content: flex-end;
+      bottom: 64px;
+    }
+
+    @include mobile {
+      bottom: 40px;
+    }
 
     .hero-banner-content {
       max-width: 640px;
@@ -69,6 +87,10 @@
       padding-bottom: 16px;
       margin-bottom: 24px;
       text-transform: uppercase;
+
+      @include tablet {
+        margin-bottom: 0;
+      }
     }
 
     p:has(.interest-rate) {
