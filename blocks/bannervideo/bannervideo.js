@@ -185,7 +185,7 @@ export default function decorate(block) {
 
         // eslint-disable-next-line no-new
         new Swiperblock(eachBlock, {
-          slidesPerView: "auto",
+          slidesPerView: 4.5,
           spaceBetween: 32,
           loop: false,
           // autoplay: {
