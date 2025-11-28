@@ -861,6 +861,10 @@
   line-height:0;
 }
 
+.section.rates-saver.faq-cant-find-looking-for .cards-wrapper .cards ul{
+  grid-template-columns:1fr 1fr 1fr;
+}
+
 @media (min-width: 766px) and (max-width: 1220px){
   .section.online-banking .cards-wrapper .cards .banking-cards-ul{
     display:grid;
