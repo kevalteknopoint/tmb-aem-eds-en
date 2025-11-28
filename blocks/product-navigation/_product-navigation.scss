@@ -2,8 +2,12 @@
 
 .product-navigation {
   position: sticky;
-  top: 0;
+  top: 16px;
   z-index: 1;
+
+  @include mobile {
+    top: 0
+  }
 
   @include responsive-container();
 
