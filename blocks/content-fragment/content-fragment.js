@@ -7,7 +7,7 @@ export default async function decorate(block) {
 
   try {
     const fragUrl = block?.querySelector("a")?.getAttribute("href");
-    
+
     if (!fragUrl) return;
 
     const res = await fetch(`${graphqlUrl}${fragUrl}`);
@@ -17,7 +17,6 @@ export default async function decorate(block) {
     if (!cf) return;
 
     const htmlContent = cf.blockContent.html;
-    debugger;
     block.innerHTML = htmlContent;
   } catch (err) {
     console.error("Error loading PDP Customer:", err);
