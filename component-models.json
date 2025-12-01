@@ -187,6 +187,14 @@
             "value": "momentum-image-saver"
           },
           {
+            "name": "Image Swapping",
+            "value": "image-swapping"
+          },
+          {
+            "name": "Left Percentage Section",
+            "value": "left-percentage-section"
+          },
+          {
             "name": "Background Color Teal",
             "value": "background-color-teal"
           },
@@ -291,6 +299,10 @@
             "value": "product-navigation"
           },
           {
+            "name": "Rates Saver",
+            "value": "rates-saver"
+          },
+          {
             "name": "Who can apply",
             "value": "who-can-apply-section"
           },
@@ -305,6 +317,14 @@
           {
             "name": "Interest Table",
             "value": "interest-table-section"
+          },
+          {
+            "name": "Product Navigation",
+            "value": "product-navigation"
+          },
+          {
+            "name": "Compare Accounts Cards",
+            "value": "compare-accounts"
           }
         ]
       }

@@ -1,3 +1,4 @@
+import decorateCompareAccounts from "./compare-accounts.js";
 import decorateFaqBanner from "./faq-banner.js";
 import decorateWhoCanApply from "./who-can-apply.js";
 import decorateCustomer from "./customer.js";
@@ -7,11 +8,13 @@ export default function decorate(block) {
   if (block.closest('.faq-landing-banner')) {
     decorateFaqBanner(block);
   } else if (block.closest('.who-can-apply-section')) {
-    decorateWhoCanApply(block)
+    decorateWhoCanApply(block);
   } else if (block.closest('.customer')) {
-    decorateCustomer(block)
+    decorateCustomer(block);
   } else if (block.closest('.faq-accord')) {
-    decorateFaqAccord(block)
+    decorateFaqAccord(block);
+  } else if (block.closest('.compare-accounts')) {
+    decorateCompareAccounts(block);
   } else {
     const cols = [...block.firstElementChild.children];
     block.classList.add(`columns-${cols.length}-cols`);

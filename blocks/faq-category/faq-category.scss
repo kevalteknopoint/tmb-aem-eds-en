@@ -2,7 +2,7 @@
 @import '../../libs/swiper/swiper-bundle.min.css';
 
 .faq-question {
-  @include responsive-container();
+  @include responsive-container;
 
   .default-content-wrapper {
     display: flex;
@@ -39,7 +39,7 @@
   flex-direction: column;
   padding-bottom: 32px;
   
-  @include responsive-container();
+  @include responsive-container;
 
   @include tablet {
     padding-bottom: 0;
@@ -91,7 +91,7 @@
 }
 
 .faq-frequently-question-title {
-  @include responsive-container();
+  @include responsive-container;
   padding-top: 32px;
 
   @include tablet {

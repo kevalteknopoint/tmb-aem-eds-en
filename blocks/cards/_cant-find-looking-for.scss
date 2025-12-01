@@ -1,19 +1,9 @@
 @use '../../styles/base' as *;
 
 .section.faq-cant-find-looking-for {
-  padding-block: 32px;
-
-  @include responsive-container();
-
-  @include mobile {
-    padding-block: 24px;
-  }
+  @include responsive-container;
 
   .default-content-wrapper {
-    @include mobile {
-      margin: 0 8px;
-    }
-
     h1,
     h2,
     h3,
@@ -26,27 +16,27 @@
       font-size: 40px;
       font-style: normal;
       line-height: 44px;
+      margin-bottom: 40px;
+
+      @include mobile {
+        margin-bottom: 24px;
+      }
     }
   }
 
   .cards-wrapper {
-    margin-top: 48px;
-    padding: 32px 0;
-
-    @include mobile {
-      margin-top: 32px;
-      padding: 0;
-    }
-
     .cards {
       ul {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 32px;
 
+        @include tablet {
+          grid-template-columns: 1fr 1fr;
+        }
+
         @include mobile {
           grid-template-columns: 1fr;
-          gap: 48px;
         }
 
         li {
@@ -55,6 +45,10 @@
           height: 100%;
           display: flex;
           flex-direction: column;
+
+          @include mobile {
+            padding: 8px 0;
+          }
 
           .cards-card-image {
             display: flex;
@@ -66,13 +60,11 @@
             @include mobile {
               margin-bottom: 20px;
             }
-
           }
 
           .cards-card-body {
             display: flex;
             flex-direction: column;
-            flex-grow: 1;
 
             h1,
             h2,
@@ -87,6 +79,7 @@
               font-style: normal;
               font-weight: 500;
               line-height: 24px;
+              margin-bottom: 8px;
             }
 
             p {
@@ -97,10 +90,11 @@
               font-style: normal;
               font-weight: 400;
               line-height: 24px;
-              margin: 8px 0 38px;
+              padding-bottom: 14px;
+              margin-bottom: 24px;
 
               @include mobile {
-                margin-bottom: 20px;
+                padding-bottom: 0;
               }
             }
 
@@ -108,10 +102,12 @@
               display: flex;
               align-items: center;
               justify-content: center;
+              padding-top: 24px;
               margin-top: auto;
+              margin-bottom: 0;
 
               @include mobile {
-                margin-bottom: unset;
+                margin-bottom: 0;
               }
 
               a {
@@ -124,286 +120,118 @@
     }
   }
 
-}
+  &.rates-saver {
+    .cards-wrapper .cards ul {
+      grid-template-columns: 1fr 1fr 1fr;
 
-// .section.faq-cant-find-looking-for-variant {
-//   padding-block: 32px;
-//   @include responsive-container();
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
 
-//   @include mobile {
-//     padding-block: 24px;
-//   }
-
-//   /* Center Heading + Teal underline */
-//   .default-content-wrapper {
-//     text-align: center;
-
-//     h2 {
-//       color: $heading-default; // teal title
-//       font-family: $secondary-font;
-//       font-size: 32px;
-//       font-weight: 900;
-//       line-height: 38px;
-//       position: relative;
-//       display: inline-block;
-//       padding-bottom: 12px;
-
-//       /* teal underline */
-//       &::after {
-//         content: '';
-//         display: block;
-//         width: 80px;
-//         height: 3px;
-//         background: $heading-default;
-//         margin: 12px auto 0;
-//       }
-//     }
-//   }
-
-//   .cards-wrapper {
-//     margin-top: 48px;
-//     padding: 32px 0;
-
-//     @include mobile {
-//       margin-top: 32px;
-//       padding: 0;
-//     }
-
-//     .cards {
-//       ul {
-//         display: grid;
-//         grid-template-columns: repeat(4, 1fr);
-//         gap: 32px;
-
-//         @include mobile {
-//           grid-template-columns: 1fr;
-//           gap: 48px;
-//         }
-
-//         li {
-//           text-align: center;
-//           display: flex;
-//           flex-direction: column;
-
-//           .cards-card-image {
-//             display: flex;
-//             justify-content: center;
-//             margin-bottom: 24px;
-
-//             img {
-//               width: 60px;
-//               height: 60px;
-//             }
-//           }
-
-//           .cards-card-body {
-//             display: flex;
-//             flex-direction: column;
-//             flex-grow: 1;
-
-//             /* Title under icon */
-//             h3 {
-//               font-size: 20px;
-//               font-family: $primary-font;
-//               font-weight: 600;
-//               color: $heading-default; // teal
-//               margin-bottom: 8px;
-//             }
-
-//             /* Description */
-//             p {
-//               font-size: 16px;
-//               color: $body-default;
-//               line-height: 24px;
-//               margin: 0 0 24px;
-//             }
-
-//             /* Teal underline button (Call us on...) */
-//             p.button-container {
-//               margin-top: auto;
-
-//               a.button {
-//                 background: transparent !important;
-//                 border: none !important;
-//                 color: $heading-default !important; // teal
-//                 font-size: 20px;
-//                 font-weight: 600;
-//                 text-decoration: underline;
-//                 padding: 0;
-//                 cursor: pointer;
-
-//                 &:hover {
-//                   opacity: 0.7;
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// .section.faq-cant-find-looking-for-variant {
-//   @extend .faq-cant-find-looking-for; // reuse all base styles
-
-//   /* --- VARIANT OVERRIDES ONLY --- */
-
-//   /* Centered teal heading + underline */
-//   .default-content-wrapper h2 {
-//     color: $heading-default;
-//     font-weight: 900;
-//     position: relative;
-//     display: inline-block;
-//     padding-bottom: 12px;
-
-
-//   }
-
-//   /* Card title under icons (teal) */
-//   .cards-card-body h3 {
-//     color: $heading-default;
-//     font-weight: 600;
-//         &::after {
-//       content: '';
-//       display: block;
-//       width: 80px;
-//       height: 3px;
-//       background: $heading-default;
-//       margin: 12px auto 0;
-//     }
-//   }
-
-//   /* The “Call us on…” teal underline link */
-//   .cards-card-body p.button-container a.button {
-//     background: transparent !important;
-//     border: none !important;
-//     color: $heading-default !important;
-//     font-size: 20px;
-//     font-weight: 600;
-//     text-decoration: underline;
-//     padding: 0;
-//   }
-// }
-
-.section.faq-cant-find-looking-for-variant {
-  padding-block: 32px;
-
-  @include responsive-container();
-
-  @include mobile {
-    padding-block: 24px;
-  }
-
-  /* Center heading + teal underline */
-  .default-content-wrapper {
-    text-align: center;
-
-    h2 {
-      color: $heading-default;
-      font-family: $secondary-font;
-      font-size: 32px;
-      font-weight: 900;
-      line-height: 38px;
-      display: inline-block;
-      position: relative;
-      padding-bottom: 12px;
-
-    }
-  }
-
-  /* Cards section */
-  .cards-wrapper {
-    margin-top: 48px;
-    padding: 32px 0;
-
-    @include mobile {
-      margin-top: 32px;
-      padding: 0;
-    }
-
-    .cards {
-      ul {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 32px;
-
+      li {
         @include mobile {
-          grid-template-columns: 1fr;
-          gap: 48px;
+          padding: 0;
         }
 
-        li {
-          text-align: center;
-          display: flex;
-          flex-direction: column;
+        .cards-card-image {
+          margin-bottom: 16px;
+        }
 
-          .cards-card-image {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 24px;
+        .cards-card-body {
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            font-size: $font-size-h3;
+            line-height: $font-height-h3;
+            margin-bottom: 16px;
+          }
+
+          p {
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.faq-cant-find-looking-for-variant {
+    .default-content-wrapper {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        @include tablet {
+          text-align: left;
+        }
+      }
+    }
+
+    .cards-wrapper .cards ul {
+      li {
+        @include tablet {
+          flex-direction: row;
+          gap: 16px;
+        }
+
+        @include mobile {
+          padding: 0;
+        }
+
+        .cards-card-image {
+          margin-bottom: 16px;
+
+          @include tablet {
+            margin-bottom: 0;
 
             img {
-              width: 60px;
-              height: 60px;
+              width: 48px;
+              height: 48px;
+            }
+          }
+        }
+
+        .cards-card-body {
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            font-size: $font-size-h3;
+            line-height: $font-height-h3;
+            width: fit-content;
+            margin: 0 auto 16px;
+            padding: 10px 0 6px;
+            border-bottom: 2px solid $heading-default;
+
+            @include tablet {
+              margin: 0 0 16px;
+              text-align: left;
             }
           }
 
-          .cards-card-body {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
+          p {
+            padding: 0;
+            margin-bottom: 16px;
 
-            h3 {
-              color: $heading-default;
-              font-family: $primary-font;
-              font-size: 20px;
-              font-weight: 600;
-              margin-bottom: 8px;
-
-              &::after {
-                content: '';
-                display: block;
-                width: 100%;
-                max-width: 210px;
-                height: 2px;
-                background: $heading-default;
-                margin: 12px auto 0;
-              }
+            &:last-child {
+              margin-bottom: 0;
             }
 
-            p {
-              font-size: 16px;
-              color: $body-default;
-              line-height: 24px;
-              margin: 0 0 24px;
-
-              a {
-                text-decoration-color: $heading-default !important;
-                text-decoration: underline;
-                text-decoration-thickness: 1px;
-                text-underline-offset: 4px;
-              }
+            @include tablet {
+              text-align: left;
             }
 
-            /* Underline CTA (e.g., “Call us on…”) */
-            p.button-container {
-              margin-top: auto;
-
-              a.button {
-                background: transparent !important;
-                border: none !important;
-                color: $heading-default !important;
-                font-size: 20px;
-                font-weight: 600;
-                text-decoration: underline;
-                padding: 0;
-                cursor: pointer;
-
-                &:hover {
-                  opacity: 0.7;
-                }
-              }
+            a {
+              color: $link-default;
+              text-decoration: underline;
+              text-underline-offset: 3px;
             }
           }
         }

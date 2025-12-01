@@ -9,7 +9,7 @@
   justify-content: space-between;
 
   .columns-wrapper {
-    @include responsive-container();
+    @include responsive-container;
   }
 
   .momentum-columns {
@@ -50,6 +50,10 @@
           /* 100% */
           text-transform: capitalize;
         }
+
+        @media screen and (max-width: 400px) {
+          font-size: 108px;
+        }
       }
 
       .rate-unit {
@@ -78,6 +82,10 @@
           font-style: normal;
           line-height: 72px;
         }
+
+        @media screen and (max-width: 400px) {
+          font-size: 70px;
+        }
       }
 
       .rate-pa {
@@ -87,6 +95,10 @@
         font-style: normal;
         font-weight: 400;
         line-height: 28px;
+
+        @media screen and (max-width: 400px) {
+          font-size: 32px;
+        }
       }
 
       p {
@@ -174,7 +186,7 @@
 
 .momentum-saver-section.momentum-image-saver {
   .columns-wrapper {
-    @include responsive-container();
+    @include responsive-container;
 
     .momentum-columns {
       padding: 0;
@@ -216,29 +228,7 @@
     }
   }
 
-  // .momentum-columns{
-  //   div{
-  //     gap: 24px;
-  //     .columns-img-col{
-  //       img {
-  //         border-radius: 24px;
-  //       }
-  //     }
-  //     .momentum-second-content{
-  //       font-family: $primary-font;
-  //       font-weight: 500;
-  //       @include tablet{
-  //         display: block;
-  //       }
-  //       h2{
-  //         @include tablet{
-  //           font-size: 38px;
-  //           width: 121px;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
+
 }
 
 
@@ -263,12 +253,35 @@
   }
 }
 
-.image-swapping{
-  .momentum-columns > div {
-    flex-direction: row-reverse;
-    gap: 80px;
-    @include mobile{
-      flex-direction: column-reverse;
+.momentum-saver-section.momentum-image-saver.image-swapping {
+
+  .columns-wrapper {
+    .momentum-columns {
+
+      div {
+        flex-direction: row-reverse;
+        gap: 80px;
+
+        @include tablet {
+          flex-direction: column-reverse;
+          gap: 32px;
+        }
+
+        .momentum-second-content {
+          h2 {
+            color: $heading-default;
+            font-family: $secondary-font;
+            font-size:  40px;
+            font-style: normal;
+            font-weight: 900;
+            line-height:  40px;
+            width: 74%;
+          }
+          p {
+            margin-bottom: 0;
+          }
+        }
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 @use '../../styles/base' as *;
 
 .breadcrumb {
-  @include responsive-container();
+  @include responsive-container;
 
   padding-top: 64px;
   padding-bottom: 32px;

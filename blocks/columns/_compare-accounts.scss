@@ -1,0 +1,139 @@
+@use '../../styles/base' as *;
+
+.section.compare-accounts {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include mobile {
+    gap: 24px
+  }
+
+  @include responsive-container;
+
+  .default-content-wrapper {
+    h1, h2, h3, h4, h5, h6 {
+      display: block;
+      margin-bottom: 16px;
+      font-size: $font-size-h1;
+      line-height: $font-height-h1;
+      color: $heading-default;
+      font-family: $secondary-font;
+    }
+
+    p {
+      font-size: $font-size-body;
+      line-height: $font-height-body;
+      color: $heading-default;
+
+      a {
+        color: $heading-default;
+        text-decoration: underline;
+      }
+    }
+
+    &:last-child {
+      p {
+        color: $body-default;
+      }
+    }
+  }
+
+  .columns.block {
+    overflow-x: auto;
+
+    .compare-accounts-cards {
+      align-items: stretch;
+      gap: 0;
+
+      @include tablet {
+        flex-direction: row;
+      }
+
+      .compare-accounts-card {
+        min-width: 304px;
+        border-radius: $radius-card;
+        min-height: 100%;
+
+        &.active {
+          background-color: $bg-reverse;
+          
+
+          h3, h5, p:has(.interest-rate), .interest-rate {
+            color: $heading-reverse;
+          }
+
+          h4, p {
+            color: $body-reverse;
+          }
+
+          a {
+            @include button('outlined-reverse')
+          }
+        }
+      }
+    }
+
+    h3 {
+      padding: 32px 24px 8px;
+      border-bottom: 5px solid $heading-default;
+      font-size: $font-size-h3;
+      line-height: $font-height-h3;
+      font-weight: 500;
+      color: $heading-default;
+    }
+
+    h4 {
+      padding: 16px 24px 0;
+      font-size: $font-size-body;
+      line-height: $font-height-body;
+      font-weight: 400;
+    }
+
+    h5 {
+      padding: 16px 24px 0;
+      font-size: $font-size-disclaimer;
+      line-height: $font-height-disclaimer;
+      color: $heading-default;
+    }
+
+    .interest-rate {
+      display: block;
+      font-size: $font-size-h1-std;
+      line-height: $font-height-h1-std;
+      font-weight: 500;
+      color: $heading-default;
+
+      .rate-pa {
+        font-weight: 400;
+        font-size: $font-size-body;
+        line-height: $font-height-body;
+      }
+    }
+
+    p {
+      padding: 16px 24px 0;
+      font-size: $font-size-disclaimer;
+      line-height: $font-height-disclaimer;
+      color: $body-default;
+
+      &:has(.interest-rate) {
+        padding: 4px 24px;
+      }
+
+      &:has(a) {
+        padding-bottom: 32px;
+      }
+    }
+
+    a {
+      display: block;
+      color: $heading-default;
+      font-size: $font-size-sm-body;
+      line-height: $font-height-sm-body;
+      padding-bottom: 2px;
+      border-bottom: 1px solid $heading-default;
+      width: fit-content;
+    }
+  }
+}

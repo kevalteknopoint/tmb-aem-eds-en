@@ -2,13 +2,23 @@
 
 .product-navigation {
   position: sticky;
-  top: 0;
-  z-index: 1;
-
-  @include responsive-container();
+  top: 16px;
+  z-index: 2;
+  margin-top: -40px;
 
   @include tablet {
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.09);
+    margin-top: -20px;
+  }
+
+  @include mobile {
+    margin-top: unset;
+    top: 0
+  }
+
+  @include responsive-container;
+
+  @include tablet {
+    box-shadow: 0 2px 3px 0 rgb(0 0 0 / 9%);
   }
 
   .default-content-wrapper {
@@ -17,7 +27,7 @@
     align-items: center;
     gap: 16px;
     background: $color-pagination-secondary-nav;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.09);
+    box-shadow: 0 2px 3px 0 rgb(0 0 0 / 9%);
     border-radius: $radius-card;
     padding: 20px 24px;
 
