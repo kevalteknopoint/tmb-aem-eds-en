@@ -59,7 +59,8 @@
     .swiper-slide {
       width: 304px !important;
       padding: 24px;
-          gap: 16px;
+      gap: 16px;
+      flex-direction: column;
     }
   }
 
@@ -69,15 +70,16 @@
         .swiper-slide>div:nth-child(2) {
           gap: 20px;
           width: 100%;
-          p{
+
+          p {
             color: var(--heading, #00525B);
-    font-family: var(--font-family-body, Inter);
-    font-size: var(--font-size-body, 16px);
-    font-style: normal;
-    font-weight: 400;
-    line-height: var(--font-height-body, 24px);
-    letter-spacing: var(--font-letter-spacing-body, 0);
-    width: 100%;
+            font-family: var(--font-family-body, Inter);
+            font-size: var(--font-size-body, 16px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: var(--font-height-body, 24px);
+            letter-spacing: var(--font-letter-spacing-body, 0);
+            width: 100%;
           }
         }
       }

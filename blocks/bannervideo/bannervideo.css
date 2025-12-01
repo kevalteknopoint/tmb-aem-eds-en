@@ -145,6 +145,7 @@
 }
 
 .news-info-variant .swiper-wrapper .swiper-slide{
+  flex-direction:column;
   gap:16px;
   padding:24px;
   width:304px !important;
