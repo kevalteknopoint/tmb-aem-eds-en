@@ -8,7 +8,7 @@
   font-weight:500;
   gap:16px;
   justify-content:center;
-  padding:8px 24px;
+  padding-inline:24px;
   text-align:center;
   transition:all 0.3s ease-in-out;
   width:-moz-fit-content;
@@ -668,6 +668,7 @@ header{
   font-size:16px;
   line-height:24px;
   min-width:150px;
+  padding-block:8px;
 }
 .momentum-saver-section .momentum-columns .momentum-second-content .button-container a:hover{
   background-color:var(--color-button-primary-hover);
@@ -733,6 +734,7 @@ header{
   font-size:16px;
   line-height:24px;
   min-width:150px;
+  padding-block:8px;
 }
 .momentum-image-saver.bg-image-saver .momentum-second-content .button-container a:hover{
   background-color:var(--color-button-secondary-hover);
@@ -846,6 +848,7 @@ header{
   font-size:16px;
   line-height:24px;
   min-width:150px;
+  padding-block:8px;
 }
 .product-navigation .default-content-wrapper .button-container a:hover{
   background-color:var(--color-button-primary-hover);
