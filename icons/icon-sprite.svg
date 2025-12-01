@@ -313,6 +313,15 @@
       fill="currentColor" />
   </symbol>
 
+  <symbol id="search-default" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M16.0649 14.2773L19.7519 17.9643C20.2139 18.4263 20.2139 19.1823 19.7519 19.6473L19.6439 19.7553C19.1819 20.2173 18.4259 20.2173 17.9609 19.7553L14.2739 16.0683"
+      stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" />
+    <path
+      d="M15.3012 15.0274C17.8015 12.375 17.6783 8.19794 15.0259 5.69761C12.3736 3.19729 8.19651 3.32053 5.69618 5.97288C3.19586 8.62523 3.3191 12.8023 5.97146 15.3026C8.62381 17.803 12.8009 17.6797 15.3012 15.0274Z"
+      stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" />
+  </symbol>
+
 
   <!-- TO BE REMOVED -->
   <symbol id="google-play-badge" viewBox="0 0 143 43">
