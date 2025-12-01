@@ -455,6 +455,8 @@
 
 .section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card{
   border-radius:var(--radius-card);
+  display:flex;
+  flex-direction:column;
   min-height:100%;
   min-width:304px;
 }
@@ -543,10 +545,11 @@
 }
 
 .section.compare-accounts .columns.block p:has(.interest-rate){
-  padding:4px 24px;
+  padding:4px 24px 0;
 }
 
 .section.compare-accounts .columns.block p:has(a){
+  margin-top:auto;
   padding-bottom:32px;
 }
 
