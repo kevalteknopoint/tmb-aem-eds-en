@@ -483,12 +483,17 @@
   text-align:center;
 }
 
-.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-image{
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-image, .section.faq-cant-find-looking-for .cards-wrapper .cards ul li svg{
   align-items:center;
   display:flex;
   justify-content:center;
   margin-bottom:32px;
   min-height:unset;
+}
+
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li svg{
+  height:64px;
+  width:64px;
 }
 
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body{
@@ -554,7 +559,7 @@
   grid-template-columns:1fr 1fr 1fr;
 }
 
-.section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-image{
+.section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-image, .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li svg{
   margin-bottom:16px;
 }
 
@@ -574,7 +579,7 @@
   padding:0;
 }
 
-.section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-image{
+.section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-image, .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li svg{
   margin-bottom:16px;
 }
 
@@ -975,11 +980,16 @@
     gap:16px;
   }
 
-  .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-image{
+  .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-image, .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li svg{
     margin-bottom:0;
   }
 
-  .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-image img{
+  .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-image img, .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li svg img{
+    height:48px;
+    width:48px;
+  }
+
+  .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li svg{
     height:48px;
     width:48px;
   }
@@ -1237,7 +1247,7 @@
     padding:8px 0;
   }
 
-  .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-image{
+  .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-image, .section.faq-cant-find-looking-for .cards-wrapper .cards ul li svg{
     margin-bottom:20px;
   }
 
