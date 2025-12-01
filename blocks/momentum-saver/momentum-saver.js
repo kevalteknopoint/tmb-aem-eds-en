@@ -40,31 +40,13 @@ export default function decorateMomentumSaver() {
 
   // 🔹 Add "% p.a" to all h2 elements inside momentum-content
   // Add a separate "% p.a" element after each h2 inside .momentum-content
-  document.querySelectorAll(".momentum-content h2").forEach((heading) => {
-    // Prevent duplication
-    if (heading.nextElementSibling && heading.nextElementSibling?.classList?.contains("rate-unit")) {
-      return;
-    }
+  const interestRateWrap = document.querySelector('p:has(.interest-rate)');
+  if (!interestRateWrap) return;
 
-    // Create the wrapper for % and P.A.
-    const unitWrapper = document.createElement("div");
-    if (unitWrapper) unitWrapper.className = "rate-unit";
+  const interestRate = interestRateWrap?.querySelector('.interest-rate');
 
-    // Create the % span
-    const percentSpan = document.createElement("span");
-    if (percentSpan) percentSpan.className = "rate-percent";
-    if (percentSpan) percentSpan.textContent = "%";
+  if (!interestRate) return;
 
-    // Create the P.A. span
-    const paSpan = document.createElement("span");
-    if (paSpan) paSpan.className = "rate-pa";
-    if (paSpan) paSpan.textContent = "p.a.";
-
-    // Append spans into the wrapper
-    unitWrapper?.appendChild(percentSpan);
-    unitWrapper?.appendChild(paSpan);
-
-    // Insert wrapper after the <h2>
-    heading?.insertAdjacentElement("afterend", unitWrapper);
-  });
+  interestRateWrap.insertAdjacentHTML('afterend', interestRate.innerHTML);
+  interestRateWrap.remove();
 }

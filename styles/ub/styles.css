@@ -515,7 +515,7 @@ header{
   max-width:350px;
   width:100%;
 }
-.momentum-saver-section .momentum-columns .momentum-content h2{
+.momentum-saver-section .momentum-columns .momentum-content .rate-num{
   color:var(--heading-default);
   font-family:var(--secondary-font);
   font-size:140px;
@@ -990,7 +990,7 @@ header{
     flex-direction:column;
     padding:40px 16px;
   }
-  .momentum-saver-section .momentum-columns .momentum-content h2{
+  .momentum-saver-section .momentum-columns .momentum-content .rate-num{
     font-size:120px;
     font-style:normal;
     line-height:120px;
@@ -1095,7 +1095,7 @@ header{
   }
 }
 @media screen and (max-width: 400px){
-  .momentum-saver-section .momentum-columns .momentum-content h2{
+  .momentum-saver-section .momentum-columns .momentum-content .rate-num{
     font-size:108px;
   }
   .momentum-saver-section .momentum-columns .momentum-content .rate-percent{
