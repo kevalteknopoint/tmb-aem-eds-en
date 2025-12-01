@@ -2,12 +2,14 @@
 
 .faq-accordion{
     @include responsive-container;
+
     display: flex;
     gap: 32px;
 
     @include mobile{
         flex-direction: column;
     }
+
     @include tablet{
         flex-direction: column;
     }
@@ -34,6 +36,7 @@
             }
         }
     }
+
     .accordion-wrapper{
         width: 100%;
 
@@ -56,6 +59,7 @@
                         line-height: 29px;
                         margin-top: 4px;
                     }
+
                     svg{
                         width: 40px;
                         height: 40px;
@@ -67,6 +71,7 @@
                         transform: rotate(180deg);
                     }
                 }
+
                 .accordion-item-body{
                     margin-top: 8px;
 
@@ -75,6 +80,7 @@
                         line-height: 24px;
                     }
                 }  
+
                 &[open] {
                     summary {
                         svg {
@@ -82,9 +88,12 @@
                         }              
                     }
                 }
+
                 &.accordion-item:first-child{
                     border-top: none;
+                    padding-top: 0;
                 }
+
                 &.accordion-item:last-child{
                     border-bottom: none;
                 }

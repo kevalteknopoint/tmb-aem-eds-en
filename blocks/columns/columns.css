@@ -403,6 +403,7 @@
 
 .faq-accordion .accordion-wrapper .block .accordion-item.accordion-item:first-child{
   border-top:none;
+  padding-top:0;
 }
 
 .faq-accordion .accordion-wrapper .block .accordion-item.accordion-item:last-child{
