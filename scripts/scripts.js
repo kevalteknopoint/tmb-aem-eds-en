@@ -12,6 +12,7 @@ import {
   loadSections,
   loadCSS,
 } from './aem.js';
+import { pageIntialization } from './analytics/exports.js';
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -157,6 +158,7 @@ function loadDelayed() {
 }
 
 async function loadPage() {
+  pageIntialization();
   await loadEager(document);
   await loadLazy(document);
   try {
