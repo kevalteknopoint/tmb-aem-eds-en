@@ -50,7 +50,8 @@
             padding: 8px 0;
           }
 
-          .cards-card-image {
+          .cards-card-image,
+          svg {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -60,6 +61,18 @@
             @include mobile {
               margin-bottom: 20px;
             }
+          }
+
+          .icon {
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+          }
+
+          svg {
+            width: 64px;
+            height: 64px;
+            color: $icon-bg-default;
           }
 
           .cards-card-body {
@@ -82,7 +95,7 @@
               margin-bottom: 8px;
             }
 
-            p {
+            p:not(p:has(.icon)) {
               color: $body-default;
               text-align: center;
               font-family: $primary-font;
@@ -133,7 +146,8 @@
           padding: 0;
         }
 
-        .cards-card-image {
+        .cards-card-image,
+        svg {
           margin-bottom: 16px;
         }
 
@@ -149,7 +163,7 @@
             margin-bottom: 16px;
           }
 
-          p {
+          p:not(p:has(.icon)) {
             padding: 0;
             margin: 0;
           }
@@ -183,7 +197,8 @@
           padding: 0;
         }
 
-        .cards-card-image {
+        .cards-card-image,
+        svg {
           margin-bottom: 16px;
 
           @include tablet {
@@ -196,7 +211,30 @@
           }
         }
 
+        @include tablet {
+          svg {
+            width: 48px;
+            height: 48px;
+          }
+        }
+
         .cards-card-body {
+          @include tablet {
+            &:has(svg) {
+              display: grid;
+              grid-template-columns: auto 2fr;
+              column-gap: 16px;
+            }
+
+            &:first-child {
+              display: none;
+            }
+
+            p:has(svg) {
+              grid-row: 1 / 10;
+            }
+          }
+
           h1,
           h2,
           h3,
@@ -216,7 +254,7 @@
             }
           }
 
-          p {
+          p:not(p:has(.icon)) {
             padding: 0;
             margin-bottom: 16px;
 

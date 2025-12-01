@@ -44,34 +44,17 @@
                     }
 
                     p.button-container{
-                        border-radius: $radius-button;
-                        background: $color-button-primary-default;
-                        border: $stroke-button solid $color-button-text-stroke-default;
+                      display: flex;
+                      justify-content: center;
 
-                        // background: $color-button-outlined-default;
-                        min-width: 150px;
-                        width: fit-content;
-                        padding: 8px 34.5px;
-                        display: block;
-                        margin: auto auto 0;
-
-                        a{
-                            color: $color-button-text-stroke-reverse;
-                            text-align: center;
-                            font-size: 16px;
-                            font-weight: 500;
-                            line-height: 24px;
-                        }
+                      a {
+                        @include button('primary');
+                      }
                     }
 
                     &:nth-child(2){
-                      p.button-container{
-                        background: $color-button-outlined-default;
-                        border: $stroke-button solid $color-button-text-stroke-default;
-
-                        a{
-                          color: $color-button-text-stroke-default;
-                        }
+                      p.button-container a {
+                        @include button('outlined');
                       }
                     }
                 }

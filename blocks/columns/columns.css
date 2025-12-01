@@ -1,19 +1,13 @@
-.section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active a{
+.section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active a, .customer .columns-wrapper .block .columns-container div p.button-container a, .customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a{
   align-items:center;
-  background-color:var(--color-button-outlined-reverse-default);
   border:none;
-  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
   border-radius:var(--radius-button);
-  color:var(--color-button-text-stroke-reverse);
   cursor:pointer;
   display:flex;
-  font-size:16px;
   font-weight:500;
   gap:16px;
   justify-content:center;
-  line-height:24px;
-  min-width:150px;
-  padding:8px 24px;
+  padding-inline:24px;
   text-align:center;
   transition:all 0.3s ease-in-out;
   width:-moz-fit-content;
@@ -245,32 +239,62 @@
 }
 
 .customer .columns-wrapper .block .columns-container div p.button-container{
-  background:var(--color-button-primary-default);
-  border:var(--stroke-button) solid var(--color-button-text-stroke-default);
-  border-radius:var(--radius-button);
-  display:block;
-  margin:auto auto 0;
-  min-width:150px;
-  padding:8px 34.5px;
-  width:-moz-fit-content;
-  width:fit-content;
+  display:flex;
+  justify-content:center;
 }
 
 .customer .columns-wrapper .block .columns-container div p.button-container a{
+  background-color:var(--color-button-primary-default);
+  border:none;
   color:var(--color-button-text-stroke-reverse);
   font-size:16px;
-  font-weight:500;
   line-height:24px;
-  text-align:center;
+  min-width:150px;
+  padding-block:8px;
 }
 
-.customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container{
-  background:var(--color-button-outlined-default);
-  border:var(--stroke-button) solid var(--color-button-text-stroke-default);
+.customer .columns-wrapper .block .columns-container div p.button-container a:hover{
+  background-color:var(--color-button-primary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.customer .columns-wrapper .block .columns-container div p.button-container a:active{
+  background-color:var(--color-button-primary-press);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.customer .columns-wrapper .block .columns-container div p.button-container a:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
 }
 
 .customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a{
+  background-color:var(--color-button-outlined-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-default);
   color:var(--color-button-text-stroke-default);
+  font-size:16px;
+  line-height:24px;
+  min-width:150px;
+  padding-block:6px;
+}
+
+.customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a:hover{
+  background-color:var(--color-button-outlined-hover);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-hover);
+  color:var(--color-button-text-stroke-hover);
+}
+
+.customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a:active{
+  background-color:var(--color-button-outlined-press);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-press);
+  color:var(--color-button-text-stroke-press);
+}
+
+.customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
 }
 
 .customer .content-container .para-0{
@@ -431,6 +455,8 @@
 
 .section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card{
   border-radius:var(--radius-card);
+  display:flex;
+  flex-direction:column;
   min-height:100%;
   min-width:304px;
 }
@@ -445,6 +471,16 @@
 
 .section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active h4, .section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active p{
   color:var(--body-reverse);
+}
+
+.section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active a{
+  background-color:var(--color-button-outlined-reverse-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+  font-size:16px;
+  line-height:24px;
+  min-width:150px;
+  padding-block:6px;
 }
 
 .section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active a:hover{
@@ -509,10 +545,11 @@
 }
 
 .section.compare-accounts .columns.block p:has(.interest-rate){
-  padding:4px 24px;
+  padding:4px 24px 0;
 }
 
 .section.compare-accounts .columns.block p:has(a){
+  margin-top:auto;
   padding-bottom:32px;
 }
 

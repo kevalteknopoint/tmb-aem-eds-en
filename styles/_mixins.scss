@@ -105,7 +105,7 @@
   width: fit-content;
   align-items: center;
   justify-content: center;
-  padding: 8px 24px;
+  padding-inline: 24px;
   text-align: center;
   font-weight: 500;
   gap: 16px;
@@ -117,6 +117,7 @@
 
 $btn-variants: (
   'primary': (
+    'pb': 8px,
     'border': none,
     'border-hover': none,
     'border-active': none,
@@ -129,6 +130,7 @@ $btn-variants: (
     'focus-visible': (0 0 0 1px $color-focus-reversed, 0 0 0 3px $color-focus-default)
   ),
   'secondary': (
+    'pb': 8px,
     'border': none,
     'border-hover': none,
     'border-active': none,
@@ -141,6 +143,7 @@ $btn-variants: (
     'focus-visible': (0 0 0 1px $color-focus-reversed, 0 0 0 3px $color-focus-default)
   ),
   'outlined': (
+    'pb': 6px,
     'border': $stroke-button solid $color-button-text-stroke-default,
     'border-hover': $stroke-button solid $color-button-text-stroke-hover,
     'border-active': $stroke-button solid $color-button-text-stroke-press,
@@ -153,6 +156,7 @@ $btn-variants: (
     'focus-visible': (0 0 0 1px $color-focus-reversed, 0 0 0 3px $color-focus-default)
   ),
   'outlined-reverse': (
+    'pb': 6px,
     'border': $stroke-button solid $color-button-text-stroke-reverse,
     'border-hover': $stroke-button solid $color-button-text-stroke-reverse,
     'border-active': $stroke-button solid $color-button-text-stroke-reverse,
@@ -165,6 +169,7 @@ $btn-variants: (
     'focus-visible': (0 0 0 2px $color-focus-default, 0 0 0 3px $color-focus-reversed)
   ),
   'white': (
+    'pb': 8px,
     'border': none,
     'border-hover': none,
     'border-active': none,
@@ -195,6 +200,7 @@ $btn-variants: (
   border: map.get($theme, 'border');
   background-color: map.get($theme, 'bg');
   color: map.get($theme, 'color');
+  padding-block: map.get($theme, 'pb');
 
   &:hover {
     border: map.get($theme, 'border-hover');

@@ -313,6 +313,25 @@
       fill="currentColor" />
   </symbol>
 
+  <symbol id="phone-circle-filled" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M32 64C49.6731 64 64 49.6731 64 32C64 14.3269 49.6731 0 32 0C14.3269 0 0 14.3269 0 32C0 49.6731 14.3269 64 32 64Z"
+      fill="currentColor" />
+    <path d="M21.5885 18.877C23.5575 21.77 26.104 25.0755 28.106 27.116" stroke="white" stroke-width="1.5"
+      stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M36.8785 35.9434C39.513 38.2424 42.7745 40.8164 45.2275 42.2794L36.8785 35.9434Z" fill="white" />
+    <path d="M36.8785 35.9434C39.513 38.2424 42.7745 40.8164 45.2275 42.2794" stroke="white" stroke-width="1.5"
+      stroke-linecap="round" stroke-linejoin="round" />
+    <path
+      d="M30.2345 33.766C25.8345 29.366 26.7915 28.4695 27.479 27.782L28.7055 26.5555C29.371 25.89 29.492 25.131 28.953 24.46C27.633 22.8045 25.752 20.3295 24.4485 18.6575C23.64 17.6235 21.6545 18.289 20.12 19.8235C18.712 21.2315 17.678 23.921 18.382 26.132C19.3005 29.003 22.892 34.096 26.3955 37.5995C29.899 41.103 34.9975 44.6945 37.863 45.613C40.074 46.3225 42.7635 45.283 44.1715 43.875C45.706 42.3405 46.3715 40.355 45.3375 39.5465C43.6655 38.243 41.1905 36.362 39.535 35.042C38.864 34.5085 38.105 34.624 37.4395 35.2895C37.0985 35.6305 36.6255 36.1035 36.213 36.516C35.5255 37.2035 34.629 38.1605 30.229 33.7605L30.2345 33.766Z"
+      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+
+  <symbol id="chevron-right-circle-filled" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="40" height="40" rx="20" fill="none" />
+    <path d="M18 14L24 19.5L18 25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+
 
   <!-- TO BE REMOVED -->
   <symbol id="google-play-badge" viewBox="0 0 143 43">

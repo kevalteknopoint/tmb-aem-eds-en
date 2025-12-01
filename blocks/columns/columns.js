@@ -2,7 +2,6 @@ import decorateCompareAccounts from "./compare-accounts.js";
 import decorateFaqBanner from "./faq-banner.js";
 import decorateWhoCanApply from "./who-can-apply.js";
 import decorateCustomer from "./customer.js";
-import decorateFaqAccord from "./faq-accord.js";
 
 export default function decorate(block) {
   if (block.closest('.faq-landing-banner')) {
@@ -11,8 +10,6 @@ export default function decorate(block) {
     decorateWhoCanApply(block);
   } else if (block.closest('.customer')) {
     decorateCustomer(block);
-  } else if (block.closest('.faq-accord')) {
-    decorateFaqAccord(block);
   } else if (block.closest('.compare-accounts')) {
     decorateCompareAccounts(block);
   } else {
