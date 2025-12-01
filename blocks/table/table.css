@@ -1,3 +1,97 @@
-.section{
-  margin:auto;
+.interest-table-section{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
+}
+
+.interest-table-section .default-content-wrapper h1, .interest-table-section .default-content-wrapper h2{
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
+  font-size:40px;
+  font-weight:900;
+  letter-spacing:2px;
+  line-height:40px;
+  text-transform:uppercase;
+}
+
+.interest-table-section .default-content-wrapper .ul-0{
+  border-bottom:4px solid var(--heading-default);
+  display:flex;
+  justify-content:flex-start;
+}
+
+.interest-table-section .default-content-wrapper .ul-0 li{
+  color:var(--heading-default);
+  font-size:24px;
+  font-weight:500;
+  line-height:29px;
+  margin:40px 0 16px;
+  text-decoration:none;
+  width:50%;
+}
+
+.interest-table-section .default-content-wrapper .ul-1{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+
+.interest-table-section .default-content-wrapper .ul-1 li ul{
+  display:flex;
+  justify-content:flex-start;
+}
+
+.interest-table-section .default-content-wrapper .ul-1 li ul li{
+  border-bottom:1px solid rgb(0 0 0 / 20%);
+  color:var(--body-default);
+  font-size:16px;
+  font-weight:400;
+  line-height:24px;
+  list-style:none;
+  padding:16px 8px 16px 0;
+  width:50%;
+}
+
+.interest-table-section .default-content-wrapper .ul-1 li ul li:nth-child(odd){
+  padding:16px 8px 16px 0;
+}
+
+.interest-table-section .default-content-wrapper .ul-1 li ul li:nth-child(even){
+  padding:16px 16px 16px 8px;
+}
+
+.interest-table-section .default-content-wrapper h3, .interest-table-section .default-content-wrapper h4{
+  border-bottom:4px solid var(--heading-default);
+  color:var(--heading-default);
+  font-size:24px;
+  font-weight:500;
+  line-height:29px;
+  padding:40px 0 16px;
+}
+
+.interest-table-section .default-content-wrapper p{
+  color:var(--body-default);
+  font-size:16px;
+  font-weight:400;
+  line-height:24px;
+  padding:16px 0;
+}
+
+@media screen and (max-width: 1279px){
+  .interest-table-section{
+    padding-inline:24px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .interest-table-section{
+    padding-inline:16px;
+  }
+
+  .interest-table-section .default-content-wrapper h1, .interest-table-section .default-content-wrapper h2{
+    font-size:38px;
+    line-height:38px;
+  }
 }

@@ -1,5 +1,6 @@
 import decorateMomentumSaver from '../blocks/momentum-saver/momentum-saver.js';
 import decorateProductNavigation from '../blocks/product-navigation/product-navigation.js';
+import decorateTable from '../blocks/table/table.js';
 import {
   loadHeader,
   loadFooter,
@@ -204,6 +205,7 @@ async function loadPage() {
   }
   decorateMomentumSaver();
   decorateProductNavigation();
+  decorateTable();
   loadDelayed();
 }
 

@@ -1,3 +1,88 @@
-.section{
-    margin: auto;
+@use '../../styles/base' as *;
+
+.interest-table-section{
+    @include responsive-container;
+
+    .default-content-wrapper{
+        h1,h2{
+            color: $heading-default;
+            font-family: $secondary-font;
+            font-size: 40px;
+            font-weight: 900;
+            line-height: 40px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            @include mobile{
+                font-size: 38px;
+                line-height: 38px;
+            }
+        }
+
+        .ul-0{
+            display: flex;
+            justify-content: flex-start;
+            border-bottom: 4px solid $heading-default;
+
+            li{
+                width: 50%;
+                text-decoration: none;
+                color: $heading-default;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 29px;
+                margin: 40px 0 16px;
+            }
+        }
+
+        .ul-1{
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            li{
+                ul{
+                    display: flex;
+                    justify-content: flex-start;
+
+                    li{
+                        list-style: none;
+                        width: 50%;
+                        padding: 16px 8px 16px 0;
+                        color: $body-default;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.20); // FIGMA TOKEN MISSING
+                    }
+                    
+                    li:nth-child(odd) {
+                        padding: 16px 8px 16px 0;
+                    }
+
+                    li:nth-child(even) {
+                        padding: 16px 16px 16px 8px;
+                    }
+                }
+                
+            }
+        }
+
+        h3,h4{
+            color: $heading-default;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 29px;
+            padding: 40px 0 16px;
+            border-bottom: 4px solid $heading-default;
+        }
+
+        p{
+            color: $body-default;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            padding: 16px 0;
+        }
+    }
 }
