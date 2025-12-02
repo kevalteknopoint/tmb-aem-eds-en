@@ -826,6 +826,10 @@
   line-height:0;
 }
 
+.news-helpful{
+  background-color:green;
+}
+
 @media (min-width: 766px) and (max-width: 1220px){
   .section.online-banking .cards-wrapper .cards .banking-cards-ul{
     display:grid;

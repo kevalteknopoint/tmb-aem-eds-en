@@ -110,7 +110,7 @@ function mobileviewswiper(block) {
   });
 }
 export default function decorate(block) {
-  console.log(block);
+  // console.log(block);
   if (!block.closest(".secsecond")) {
     createSwiper(block);
     const swiper = new Swiperblock(block, {
@@ -174,39 +174,5 @@ export default function decorate(block) {
         injectIcon('play', playBtn);
       }
     });
-  }
-  /// ///second block//////////////
-
-  document
-    .querySelectorAll(".secsecond.bannervideo-container .video-banner")
-    .forEach((eachBlock) => {
-      if (window.matchMedia("(min-width: 1024px)").matches) {
-        createSwiper2(eachBlock);
-
-        // eslint-disable-next-line no-new
-        new Swiperblock(eachBlock, {
-          slidesPerView: "auto",
-          spaceBetween: 32,
-          loop: false,
-          // autoplay: {
-          //   delay: 1000,
-          //   disableOnInteraction: false,
-          // },
-          navigation: {
-            nextEl: eachBlock.querySelector(".swiper-button-next"),
-            prevEl: eachBlock.querySelector(".swiper-button-prev"),
-          },
-        });
-        const navbtn = eachBlock.querySelector(".nav-buttons");
-        const sec = eachBlock.closest(".section");
-        appendclasses.CLASS_PREFIXES = ["inner-section"]; /// classes add to section div
-        appendclasses.addIndexed(sec);
-        if (navbtn !== null) {
-          const def = sec.querySelector(".default-content-wrapper");
-          def.append(navbtn);
-        }
-      } else {
-        mobileviewswiper(eachBlock);
-      }
-    });
+  }   
 }
