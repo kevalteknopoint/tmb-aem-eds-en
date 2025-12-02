@@ -8,7 +8,7 @@ import newsHelpful from "./news-helpful.js";
 export default function decorate(block) {
   if (block.classList.contains("expandable-tiles")) {
     expandableTiles(block);
-  }else if (block.closest(".news-helpful")) { 
+  } else if (block.closest(".news-helpful")) {
     newsHelpful(block);
   } else {
     /* change to ul, li */

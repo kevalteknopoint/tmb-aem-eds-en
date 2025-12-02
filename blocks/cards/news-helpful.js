@@ -2,26 +2,23 @@ import Swiper from "../../libs/swiper/swiper-bundle.min.js";
 import { div } from "../../scripts/dom-helpers.js";
 
 export default function cardCarousel(block) {
-  Array.from(block.children).forEach((el) => {
+  const slides = Array.from(block.children);
+  slides.forEach((el) => {
     el.classList.add("swiper-slide");
   });
-  const innerWrap = div({ class: "cards block swiper" }, ...block.children);
+
   const swiperWrapper = div(
-    { class: "news-help-wrapper swiper-wrapper" },
-    innerWrap
+    { class: "swiper-wrapper" },
+    ...slides
   );
-  block.replaceWith(swiperWrapper);
-  new Swiper('.news-help-wrapper .swiper', {
-    effect: "fade",
-    loop: true,
-    fadeEffect: {
-      crossFade: true,
-    },
-    autoplay: {
-      delay: 3000,
-    },
-    slidersPerView: 1,
-    centeredSlides: true,
-    spaceBetween: 24,
-  });
+
+  const container = div(
+    { class: "news-help-wrapper cards block swiper" },
+    swiperWrapper
+  );
+
+  block.replaceWith(container);
+
+  // eslint-disable-next-line
+  new Swiper(container);
 }
