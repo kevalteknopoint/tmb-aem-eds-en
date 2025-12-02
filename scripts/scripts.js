@@ -158,7 +158,10 @@ function loadDelayed() {
 }
 
 async function loadPage() {
-  pageIntialization();
+  window.adobeDataLayer = window.adobeDataLayer || [];
+
+  pageIntialization(document.title, getMetadata('page-type'), getMetadata('site-section'), '', 'english', '', getMetadata('brand'), getMetadata('web-type'), '', '', '', getMetadata('campaign-userjourney'), getMetadata('persona'), getMetadata('product'));
+
   await loadEager(document);
   await loadLazy(document);
   try {

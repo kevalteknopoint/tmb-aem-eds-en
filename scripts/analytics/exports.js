@@ -1,3 +1,9 @@
+export function minifyText(str) {
+  if (!str) return '';
+
+  return str?.trim()?.toLowerCase();
+}
+
 export function pageIntialization(
   pageName,
   pageType,

@@ -1,0 +1,24 @@
+import { menuInteraction, minifyText } from "../../scripts/analytics/exports.js";
+
+document.addEventListener('click', (e) => {
+  if (e.target.closest('.ul-4') || e.target.closest('.ul-9')) {
+    const anchor = e.target.closest('a');
+    if (!anchor) return;
+
+    const closestLi = anchor?.closest('ul')?.closest('li');
+
+    let text = "";
+
+    closestLi.childNodes.forEach((node) => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        text += minifyText(node.textContent);
+      }
+    });
+
+    if (!text && closestLi?.querySelector('& > p')) {
+      text = minifyText(closestLi?.querySelector('& > p')?.textContent);
+    }
+
+    menuInteraction('', minifyText(text), minifyText(anchor.textContent), '', 'global footer', '', '');
+  }
+});
