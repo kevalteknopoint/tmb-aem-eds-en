@@ -1,7 +1,6 @@
 @use '../../styles/base' as *;
 @use 'banner';
 @use 'news';
-
 @import '../../libs/swiper/swiper-bundle.min.css';
 
 .bannervideo-container {
@@ -325,7 +324,6 @@
 
     &:nth-child(1) {
       &>p.button-container {
-
         &>a {
           @include button('primary');
         }

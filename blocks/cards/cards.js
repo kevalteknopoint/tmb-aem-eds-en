@@ -3,10 +3,13 @@ import { moveInstrumentation } from "../../scripts/scripts.js";
 import decorateBankingGoods from "./banking-goods.js";
 import expandableTiles from "./expandable-tiles.js";
 import decorateOnlineBanking from "./online-banking.js";
+import newsHelpful from "./news-helpful.js";
 
 export default function decorate(block) {
   if (block.classList.contains("expandable-tiles")) {
     expandableTiles(block);
+  } else if (block.closest(".news-helpful")) {
+    newsHelpful(block);
   } else {
     /* change to ul, li */
     const ul = document.createElement("ul");

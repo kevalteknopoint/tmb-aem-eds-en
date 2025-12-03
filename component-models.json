@@ -325,6 +325,10 @@
           {
             "name": "Compare Accounts Cards",
             "value": "compare-accounts"
+          },
+          {
+            "name": "News helpful",
+            "value": "news-helpful"
           }
         ]
       }
@@ -785,29 +789,6 @@
           {
             "name": "quick-links-block",
             "value": "quick-links-block"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "interest-table",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-      {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Style",
-        "options": [
-          {
-            "name": "interest-table",
-            "value": "interest-table"
           }
         ]
       }

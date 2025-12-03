@@ -110,7 +110,7 @@ function mobileviewswiper(block) {
   });
 }
 export default function decorate(block) {
-  console.log(block);
+  // console.log(block);
   if (!block.closest(".secsecond")) {
     createSwiper(block);
     const swiper = new Swiperblock(block, {

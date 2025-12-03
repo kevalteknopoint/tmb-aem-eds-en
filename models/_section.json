@@ -222,6 +222,10 @@
             {
               "name": "Compare Accounts Cards",
               "value": "compare-accounts"
+            },
+            {
+              "name": "News helpful",
+              "value": "news-helpful"
             }
           ]
         }

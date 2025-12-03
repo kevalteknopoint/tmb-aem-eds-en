@@ -826,6 +826,92 @@
   line-height:0;
 }
 
+.news-helpful{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  position:relative;
+  width:100%;
+}
+
+.news-helpful .default-content-wrapper p{
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
+  font-size:40px;
+  font-weight:900;
+  letter-spacing:2px;
+  line-height:40px;
+  text-transform:uppercase;
+}
+
+.news-helpful .cards-wrapper{
+  padding:40px 0 0;
+}
+
+.news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper{
+  gap:32px;
+  margin-bottom:96px;
+}
+
+.news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper .swiper-slide{
+  background:var(--bg-default);
+  border:1px solid var(--line-default);
+  border-radius:var(--radius-card);
+  margin-right:0 !important;
+  padding:24px;
+}
+
+.news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper .swiper-slide div picture img{
+  border-radius:var(--radius-article-thumb);
+}
+
+.news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper .swiper-slide div:last-child p{
+  color:var(--heading-default);
+  font-size:16px;
+  font-weight:400;
+  line-height:24px;
+  padding:16px 0 20px;
+}
+
+.news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper .swiper-slide div:last-child p.button-container{
+  padding:unset;
+}
+
+.news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper .swiper-slide div:last-child p.button-container a{
+  border-bottom:2px solid var(--link-accent);
+  color:var(--heading, #00525B);
+  font-size:14px;
+  font-weight:400;
+  line-height:21px;
+  text-underline-offset:2px;
+}
+
+.news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper .swiper-slide.swiper-slide-active{
+  margin-right:0;
+}
+
+.news-helpful .cards-wrapper .news-help-wrapper .nav-wrapper{
+  bottom:5%;
+  margin-right:64px;
+  position:absolute;
+  right:0;
+}
+
+.news-helpful .cards-wrapper .news-help-wrapper .nav-wrapper .swiper-button-next{
+  background:var(--color-variants-bg-light-1);
+  border-radius:44px;
+  color:var(--color-variants-link-default);
+}
+
+.news-helpful .cards-wrapper .news-help-wrapper .nav-wrapper .swiper-button-prev{
+  background:var(--color-variants-bg-light-1);
+  border-radius:44px;
+  color:var(--color-variants-link-default);
+  left:var(--swiper-navigation-sides-offset, -100px);
+  transform:rotate(180deg);
+}
+
 @media (min-width: 766px) and (max-width: 1220px){
   .section.online-banking .cards-wrapper .cards .banking-cards-ul{
     display:grid;
@@ -952,6 +1038,10 @@
   }
 
   .banking-goods{
+    padding-inline:24px;
+  }
+
+  .news-helpful{
     padding-inline:24px;
   }
 }
@@ -1091,6 +1181,14 @@
 
   .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body .button-container a svg{
     display:block;
+  }
+
+  .news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper{
+    gap:24px;
+  }
+
+  .news-helpful .cards-wrapper .news-help-wrapper .nav-wrapper{
+    margin-right:24px;
   }
 }
 
@@ -1302,5 +1400,23 @@
 
   .banking-goods{
     padding-inline:16px;
+  }
+
+  .news-helpful{
+    padding-inline:16px;
+  }
+
+  .news-helpful .default-content-wrapper p{
+    font-size:38px;
+    line-height:38px;
+  }
+
+  .news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper{
+    gap:8px;
+    margin-bottom:80px;
+  }
+
+  .news-helpful .cards-wrapper .news-help-wrapper .nav-wrapper{
+    margin-right:16px;
   }
 }
