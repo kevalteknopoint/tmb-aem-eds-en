@@ -327,11 +327,103 @@
       stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
   </symbol>
 
+  <symbol id="enquiry-circle-filled" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M32 64C49.6731 64 64 49.6731 64 32C64 14.3269 49.6731 0 32 0C14.3269 0 0 14.3269 0 32C0 49.6731 14.3269 64 32 64Z"
+      fill="currentColor" />
+    <path d="M32 27.1417C32 23.9625 32.9922 20.6685 36.05 19.7167C39.0403 18.7852 41.45 16.3687 41.45 12.9667V10.2667"
+      stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+    <path
+      d="M48.5376 27.162H15.4626C14.1578 27.162 13.1001 28.2197 13.1001 29.5245V40.9995C13.1001 42.3043 14.1578 43.362 15.4626 43.362H48.5376C49.8424 43.362 50.9001 42.3043 50.9001 40.9995V29.5245C50.9001 28.2197 49.8424 27.162 48.5376 27.162Z"
+      stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+    <path d="M17.8251 30.5167H16.4751V31.8667H17.8251V30.5167Z" fill="white" />
+    <path d="M20.5248 30.5167H19.1748V31.8667H20.5248V30.5167Z" fill="white" />
+    <path d="M23.225 30.5167H21.875V31.8667H23.225V30.5167Z" fill="white" />
+    <path d="M25.9252 30.5167H24.5752V31.8667H25.9252V30.5167Z" fill="white" />
+    <path d="M28.6249 30.5167H27.2749V31.8667H28.6249V30.5167Z" fill="white" />
+    <path d="M31.3251 30.5167H29.9751V31.8667H31.3251V30.5167Z" fill="white" />
+    <path d="M34.0248 30.5167H32.6748V31.8667H34.0248V30.5167Z" fill="white" />
+    <path d="M36.725 30.5167H35.375V31.8667H36.725V30.5167Z" fill="white" />
+    <path d="M39.4252 30.5167H38.0752V31.8667H39.4252V30.5167Z" fill="white" />
+    <path d="M42.1249 30.5167H40.7749V31.8667H42.1249V30.5167Z" fill="white" />
+    <path d="M44.8251 30.5167H43.4751V31.8667H44.8251V30.5167Z" fill="white" />
+    <path d="M47.5248 30.5167H46.1748V31.8667H47.5248V30.5167Z" fill="white" />
+    <path d="M17.8251 33.2168H16.4751V34.5668H17.8251V33.2168Z" fill="white" />
+    <path d="M20.5248 33.2168H19.1748V34.5668H20.5248V33.2168Z" fill="white" />
+    <path d="M23.225 33.2168H21.875V34.5668H23.225V33.2168Z" fill="white" />
+    <path d="M25.9252 33.2168H24.5752V34.5668H25.9252V33.2168Z" fill="white" />
+    <path d="M28.6249 33.2168H27.2749V34.5668H28.6249V33.2168Z" fill="white" />
+    <path d="M31.3251 33.2168H29.9751V34.5668H31.3251V33.2168Z" fill="white" />
+    <path d="M34.0248 33.2168H32.6748V34.5668H34.0248V33.2168Z" fill="white" />
+    <path d="M36.725 33.2168H35.375V34.5668H36.725V33.2168Z" fill="white" />
+    <path d="M39.4252 33.2168H38.0752V34.5668H39.4252V33.2168Z" fill="white" />
+    <path d="M42.1249 33.2168H40.7749V34.5668H42.1249V33.2168Z" fill="white" />
+    <path d="M44.8251 33.2168H43.4751V34.5668H44.8251V33.2168Z" fill="white" />
+    <path d="M47.5248 33.2168H46.1748V34.5668H47.5248V33.2168Z" fill="white" />
+    <path d="M17.8251 35.9167H16.4751V37.2667H17.8251V35.9167Z" fill="white" />
+    <path d="M20.5248 35.9167H19.1748V37.2667H20.5248V35.9167Z" fill="white" />
+    <path d="M23.225 35.9167H21.875V37.2667H23.225V35.9167Z" fill="white" />
+    <path d="M25.9252 35.9167H24.5752V37.2667H25.9252V35.9167Z" fill="white" />
+    <path d="M28.6249 35.9167H27.2749V37.2667H28.6249V35.9167Z" fill="white" />
+    <path d="M31.3251 35.9167H29.9751V37.2667H31.3251V35.9167Z" fill="white" />
+    <path d="M34.0248 35.9167H32.6748V37.2667H34.0248V35.9167Z" fill="white" />
+    <path d="M36.725 35.9167H35.375V37.2667H36.725V35.9167Z" fill="white" />
+    <path d="M39.4252 35.9167H38.0752V37.2667H39.4252V35.9167Z" fill="white" />
+    <path d="M42.1249 35.9167H40.7749V37.2667H42.1249V35.9167Z" fill="white" />
+    <path d="M44.8251 35.9167H43.4751V37.2667H44.8251V35.9167Z" fill="white" />
+    <path d="M47.5248 35.9167H46.1748V37.2667H47.5248V35.9167Z" fill="white" />
+    <path d="M17.8251 38.6167H16.4751V39.9667H17.8251V38.6167Z" fill="white" />
+    <path d="M20.5248 38.6167H19.1748V39.9667H20.5248V38.6167Z" fill="white" />
+    <path d="M23.225 38.6167H21.875V39.9667H23.225V38.6167Z" fill="white" />
+    <path d="M39.4252 38.6167H24.5752V39.9667H39.4252V38.6167Z" fill="white" />
+    <path d="M42.1249 38.6167H40.7749V39.9667H42.1249V38.6167Z" fill="white" />
+    <path d="M44.8251 38.6167H43.4751V39.9667H44.8251V38.6167Z" fill="white" />
+    <path d="M47.5248 38.6167H46.1748V39.9667H47.5248V38.6167Z" fill="white" />
+  </symbol>
+
+  <symbol id="location-circle-filled" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_7003_2759)">
+      <path
+        d="M32 64C49.6731 64 64 49.6731 64 32C64 14.3269 49.6731 0 32 0C14.3269 0 0 14.3269 0 32C0 49.6731 14.3269 64 32 64Z"
+        fill="currentColor" />
+      <path
+        d="M31.6989 33.7006C34.7732 33.7006 37.2654 31.2084 37.2654 28.134C37.2654 25.0596 34.7732 22.5674 31.6989 22.5674C28.6246 22.5674 26.1323 25.0596 26.1323 28.134C26.1323 31.2084 28.6246 33.7006 31.6989 33.7006Z"
+        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path
+        d="M31.7005 47.9256C36.1352 43.7754 42.8336 35.1595 42.8336 28.1332C42.8336 21.9852 37.8485 17 31.7005 17C25.5525 17 20.5674 21.9852 20.5674 28.1332C20.5674 35.1595 27.2658 43.7754 31.7005 47.9256Z"
+        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path
+        d="M39.1592 43.1815C39.4622 43.4969 39.7653 43.7938 40.0498 44.0598C43.3774 40.9486 48.3997 34.4852 48.3997 29.2154C48.3997 25.9126 46.4761 23.0674 43.6928 21.7129"
+        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path
+        d="M19.7068 21.7129C16.9236 23.0674 15 25.9126 15 29.2154C15 34.4852 20.0223 40.9486 23.3498 44.0598C23.6344 43.7938 23.9374 43.4907 24.2405 43.1815"
+        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <defs>
+      <clipPath id="clip0_7003_2759">
+        <rect width="64" height="64" fill="white" />
+      </clipPath>
+    </defs>
+  </symbol>
+
+  <symbol id="message-circle-filled" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M32 64C49.6731 64 64 49.6731 64 32C64 14.3269 49.6731 0 32 0C14.3269 0 0 14.3269 0 32C0 49.6731 14.3269 64 32 64Z"
+      fill="currentColor" />
+    <path d="M22.5898 38.22L31.4598 29.87L35.6248 34.035L44.5048 25.5" stroke="white" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M41.5049 25.5H44.5049V28.5L41.5049 25.5Z" fill="white" stroke="white" stroke-width="1.5"
+      stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M44.4951 43.5H19.4951V20.5" stroke="white" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round" />
+  </symbol>
+
   <symbol id="chevron-right-circle-filled" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect width="40" height="40" rx="20" fill="none" />
-    <path d="M18 14L24 19.5L18 25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M18 14L24 19.5L18 25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+      stroke-linejoin="round" />
   </symbol>
-  
+
   <symbol id="search-default" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M16.0649 14.2773L19.7519 17.9643C20.2139 18.4263 20.2139 19.1823 19.7519 19.6473L19.6439 19.7553C19.1819 20.2173 18.4259 20.2173 17.9609 19.7553L14.2739 16.0683"
