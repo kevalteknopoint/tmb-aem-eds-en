@@ -40,7 +40,7 @@ export default function decorateMomentumSaver() {
 
   // 🔹 Add "% p.a" to all h2 elements inside momentum-content
   // Add a separate "% p.a" element after each h2 inside .momentum-content
-  const interestRateWrap = document.querySelector('p:has(.interest-rate)');
+  const interestRateWrap = document.querySelector('.momentum-saver-section p:has(.interest-rate)');
   if (!interestRateWrap) return;
 
   const interestRate = interestRateWrap?.querySelector('.interest-rate');
