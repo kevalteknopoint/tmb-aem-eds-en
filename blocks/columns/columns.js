@@ -2,7 +2,7 @@ import decorateCompareAccounts from "./compare-accounts.js";
 import decorateFaqBanner from "./faq-banner.js";
 import decorateWhoCanApply from "./who-can-apply.js";
 import decorateCustomer from "./customer.js";
-
+import decorateMoneyOverseas from "./money-overseas.js";
 export default function decorate(block) {
   if (block.closest('.faq-landing-banner')) {
     decorateFaqBanner(block);
@@ -12,7 +12,11 @@ export default function decorate(block) {
     decorateCustomer(block);
   } else if (block.closest('.compare-accounts')) {
     decorateCompareAccounts(block);
-  } else {
+   
+  }  else if (block.closest('.money-overseas')) {
+    decorateMoneyOverseas(block);
+  }
+  else {
     const cols = [...block.firstElementChild.children];
     block.classList.add(`columns-${cols.length}-cols`);
 

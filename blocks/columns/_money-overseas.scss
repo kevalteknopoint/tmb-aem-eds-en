@@ -1,5 +1,160 @@
 @use '../../styles/base' as *;
 
-.money-overseas{
-    
+.money-overseas {
+    @include responsive-container;
+
+    .overseas-wrapper {
+        // @include responsive-container;
+
+        h1,
+        h2,
+        h3 {
+            color: $heading-default;
+            font-family: $secondary-font;
+            font-size: 40px;
+            font-weight: 900;
+            line-height: 40px;
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: $body-default;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    .overseas-columns-wrapper {
+        padding-top: 80px;
+        border-bottom: 1px solid $line-default;
+        gap: 80px;
+        display: flex;
+        align-items: baseline;
+        padding-bottom: 40px;
+
+        @include tablet-lg {
+            padding-top: 40px;
+            gap: 16px;
+        }
+
+        div {
+            flex: unset;
+            flex-direction: column;
+            width: 32%;
+
+            @include mobile {
+                width: unset;
+            }
+
+            h1,
+            h2,
+            h3 {
+                color: $heading-default;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 29px;
+                white-space: normal;
+                overflow-wrap: break-word;
+                max-width: 370px;
+                width: fit-content;
+            }
+        }
+
+        div {
+            &:nth-child(2) {
+                width: 100%;
+            }
+        }
+
+        /* -------------------------------------
+       Ordered List Styling (Numbered Circles)
+       ------------------------------------- */
+        ol {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 32px;
+            counter-reset: step-counter;
+
+        }
+
+        ol li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 16px;
+            color: $body-default;
+            counter-increment: step-counter;
+        }
+
+        ol li::before {
+            content: counter(step-counter);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 1px solid $heading-default;
+            color: $heading-default;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        ul {
+            padding: 16px;
+            background: var(--info-well, rgba(27, 231, 255, 0.07)); //Figma token missing
+            margin-bottom: 32px;
+            border-radius: 8px;
+
+            li {
+                .overseas-columns-wrapper-ul {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 16px;
+                    align-self: stretch;
+                    padding: 0;
+                    background: unset;
+                    margin-bottom: unset;
+
+
+                    li {
+                        color: $body-default;
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 21px;
+                        min-width: 130px;
+                        width: fit-content;
+
+                        &:nth-child(2) {
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 24px;
+                        }
+
+                        a {
+                            text-decoration: underline;
+                            text-underline-offset: 3px;
+                            color: $heading-default;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .button-container {
+            @include button('primary');
+        }
+    }
+
+    // .overseas-columns-sec {
+    //     padding-top: 80px;
+    //     gap: 80px;
+    //     display: flex;
+    //     align-items: baseline;
+    //     margin-bottom: 40px;
+
+    // }
 }
