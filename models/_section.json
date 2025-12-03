@@ -226,6 +226,10 @@
             {
               "name": "News helpful",
               "value": "news-helpful"
+            },
+            {
+              "name": "Money Overseas",
+              "value": "money-overseas"
             }
           ]
         }

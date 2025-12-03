@@ -1,4 +1,4 @@
-.section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active a, .customer .columns-wrapper .block .columns-container div p.button-container a, .customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a{
+.money-overseas .overseas-columns-wrapper .button-container, .section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active a, .customer .columns-wrapper .block .columns-container div p.button-container a, .customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a{
   align-items:center;
   border:none;
   border-radius:var(--radius-button);
@@ -565,6 +565,174 @@
   width:fit-content;
 }
 
+.money-overseas{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
+}
+
+.money-overseas .overseas-wrapper h1,
+.money-overseas .overseas-wrapper h2,
+.money-overseas .overseas-wrapper h3{
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
+  font-size:40px;
+  font-weight:900;
+  line-height:40px;
+  margin-bottom:16px;
+}
+
+.money-overseas .overseas-wrapper p{
+  color:var(--body-default);
+  font-size:16px;
+  font-weight:400;
+  line-height:24px;
+  max-width:800px;
+}
+
+.money-overseas .overseas-columns{
+  border-bottom:1px solid var(--line-default);
+}
+
+.money-overseas .overseas-columns:last-child{
+  border-bottom:0;
+}
+
+.money-overseas .overseas-columns:last-child .overseas-columns-wrapper{
+  padding-bottom:0;
+}
+
+.money-overseas .overseas-columns-wrapper{
+  align-items:baseline;
+  display:flex;
+  gap:80px;
+  padding:40px 0;
+  padding-bottom:40px;
+}
+
+.money-overseas .overseas-columns-wrapper div{
+  flex:unset;
+  flex-direction:column;
+  width:32%;
+}
+
+.money-overseas .overseas-columns-wrapper div:nth-child(2){
+  width:100%;
+}
+
+.money-overseas .overseas-columns-wrapper div h1,
+.money-overseas .overseas-columns-wrapper div h2,
+.money-overseas .overseas-columns-wrapper div h3{
+  color:var(--heading-default);
+  font-size:24px;
+  font-weight:500;
+  line-height:29px;
+  max-width:370px;
+  overflow-wrap:break-word;
+  white-space:normal;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
+.money-overseas .overseas-columns-wrapper ol{
+  counter-reset:step-counter;
+  list-style:none;
+  margin-bottom:32px;
+  padding:0;
+}
+
+.money-overseas .overseas-columns-wrapper ol li{
+  align-items:center;
+  color:var(--body-default);
+  counter-increment:step-counter;
+  display:flex;
+  font-size:16px;
+  gap:12px;
+  margin-bottom:16px;
+}
+
+.money-overseas .overseas-columns-wrapper ol li::before{
+  align-items:center;
+  border:1px solid var(--heading-default);
+  border-radius:50%;
+  color:var(--heading-default);
+  content:counter(step-counter);
+  display:flex;
+  font-size:14px;
+  font-weight:500;
+  height:28px;
+  justify-content:center;
+  width:28px;
+}
+
+.money-overseas .overseas-columns-wrapper ul{
+  background:var(--info-well, rgb(27 231 255 / 7%));
+  border-radius:8px;
+  margin-bottom:32px;
+  padding:16px;
+}
+
+.money-overseas .overseas-columns-wrapper ul li .overseas-columns-wrapper-ul{
+  align-items:flex-start;
+  align-self:stretch;
+  background:unset;
+  display:flex;
+  gap:16px;
+  margin-bottom:unset;
+  padding:0;
+}
+
+.money-overseas .overseas-columns-wrapper ul li .overseas-columns-wrapper-ul li{
+  color:var(--body-default);
+  font-size:14px;
+  font-weight:600;
+  line-height:21px;
+  min-width:130px;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
+.money-overseas .overseas-columns-wrapper ul li .overseas-columns-wrapper-ul li:nth-child(2){
+  font-size:16px;
+  font-weight:400;
+  line-height:24px;
+}
+
+.money-overseas .overseas-columns-wrapper ul li .overseas-columns-wrapper-ul li a{
+  color:var(--heading-default);
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+.money-overseas .overseas-columns-wrapper .button-container{
+  background-color:var(--color-button-primary-default);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+  font-size:16px;
+  line-height:24px;
+  min-width:150px;
+  padding-block:8px;
+}
+
+.money-overseas .overseas-columns-wrapper .button-container:hover{
+  background-color:var(--color-button-primary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.money-overseas .overseas-columns-wrapper .button-container:active{
+  background-color:var(--color-button-primary-press);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.money-overseas .overseas-columns-wrapper .button-container:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
 .columns img{
   width:100%;
 }
@@ -618,6 +786,15 @@
 
   .section.compare-accounts{
     padding-inline:24px;
+  }
+
+  .money-overseas{
+    padding-inline:24px;
+  }
+
+  .money-overseas .overseas-columns-wrapper{
+    gap:16px;
+    padding:24px 0;
   }
 }
 
@@ -701,5 +878,13 @@
   .section.compare-accounts{
     gap:24px;
     padding-inline:16px;
+  }
+
+  .money-overseas{
+    padding-inline:16px;
+  }
+
+  .money-overseas .overseas-columns-wrapper div{
+    width:unset;
   }
 }
