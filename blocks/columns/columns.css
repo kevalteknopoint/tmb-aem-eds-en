@@ -589,21 +589,37 @@
   font-size:16px;
   font-weight:400;
   line-height:24px;
+  max-width:800px;
+}
+
+.money-overseas .overseas-columns{
+  border-bottom:1px solid var(--line-default);
+}
+
+.money-overseas .overseas-columns:last-child{
+  border-bottom:0;
+}
+
+.money-overseas .overseas-columns:last-child .overseas-columns-wrapper{
+  padding-bottom:0;
 }
 
 .money-overseas .overseas-columns-wrapper{
   align-items:baseline;
-  border-bottom:1px solid var(--line-default);
   display:flex;
   gap:80px;
+  padding:40px 0;
   padding-bottom:40px;
-  padding-top:80px;
 }
 
 .money-overseas .overseas-columns-wrapper div{
   flex:unset;
   flex-direction:column;
   width:32%;
+}
+
+.money-overseas .overseas-columns-wrapper div:nth-child(2){
+  width:100%;
 }
 
 .money-overseas .overseas-columns-wrapper div h1,
@@ -618,10 +634,6 @@
   white-space:normal;
   width:-moz-fit-content;
   width:fit-content;
-}
-
-.money-overseas .overseas-columns-wrapper div:nth-child(2){
-  width:100%;
 }
 
 .money-overseas .overseas-columns-wrapper ol{
@@ -782,7 +794,7 @@
 
   .money-overseas .overseas-columns-wrapper{
     gap:16px;
-    padding-top:40px;
+    padding:24px 0;
   }
 }
 
