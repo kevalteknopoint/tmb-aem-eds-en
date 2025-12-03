@@ -329,6 +329,10 @@
           {
             "name": "News helpful",
             "value": "news-helpful"
+          },
+          {
+            "name": "News helpful homepage",
+            "value": "news-helpful-homepage"
           }
         ]
       }
