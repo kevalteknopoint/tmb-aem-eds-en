@@ -13,7 +13,7 @@ export default function cardCarousel(block) {
     ...slides
   );
 
-  const nextBtn  = button({ class: "swiper-button-next" });
+  const nextBtn = button({ class: "swiper-button-next" });
   const prevBtn = button({ class: "swiper-button-prev" });
 
   injectIcon('chevron-right-circle-filled', nextBtn);
@@ -34,9 +34,6 @@ export default function cardCarousel(block) {
   block.replaceWith(container);
 
   // eslint-disable-next-line
-    // ---------------------------
-  // ✅ Initialize Swiper with BREAKPOINTS
-  // ---------------------------
   const swiper = new Swiper(container, {
     slidesPerView: 1,
     // spaceBetween: 16,
@@ -45,18 +42,18 @@ export default function cardCarousel(block) {
       prevEl: prevBtn,
     },
     breakpoints: {
-      400: {  
+      400: {
         slidesPerView: 1.5,
         spaceBetween: 8
       },
-      640: {    
+      640: {
         slidesPerView: 2,
         spaceBetween: 8
       },
       834: {
         slidesPerView: 3,
       },
-      1024: { 
+      1024: {
         slidesPerView: 3.5,
       },
       1400: {
@@ -64,5 +61,4 @@ export default function cardCarousel(block) {
       }
     }
   });
-
 }
