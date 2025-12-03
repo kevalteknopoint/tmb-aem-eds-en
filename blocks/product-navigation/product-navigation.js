@@ -1,5 +1,16 @@
+function isElementOutOfView(container, element) {
+  const containerRect = container.getBoundingClientRect();
+  const elemRect = element.getBoundingClientRect();
+
+  // Check left or right overflow
+  return (
+    elemRect.right < containerRect.left || elemRect.left > containerRect.right
+  );
+}
+
 export default function decorateProductNavigation() {
   const productNav = document.querySelector('.product-navigation');
+  const scrollWrapper = productNav?.querySelector('.default-content-wrapper');
 
   if (!productNav) return;
 
@@ -33,6 +44,12 @@ export default function decorateProductNavigation() {
         const entryLink = document.querySelector(`a[href="#${entryId}"]`);
 
         entryLink?.classList.add('active');
+        if (isElementOutOfView(scrollWrapper, entryLink)) {
+          scrollWrapper?.scrollTo({
+            left: (entryLink?.getBoundingClientRect().left || 0) - 24,
+            behavior: 'smooth'
+          });
+        }
       }
     });
   }, {
