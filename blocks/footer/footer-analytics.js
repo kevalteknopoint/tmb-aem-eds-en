@@ -1,4 +1,4 @@
-import { menuInteraction, minifyText } from "../../scripts/analytics/exports.js";
+import { ctaInteraction, menuInteraction, minifyText, socialmediaClick } from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
   if (e.target.closest('.ul-4') || e.target.closest('.ul-9')) {
@@ -20,5 +20,23 @@ document.addEventListener('click', (e) => {
     }
 
     menuInteraction('', minifyText(text), minifyText(anchor.textContent), '', 'global footer', '', '');
+  }
+
+  if (e.target.closest('.ul-16')) {
+    const anchor = e.target.closest('a');
+    if (!anchor) return;
+
+    const icon = anchor.querySelector('.icon');
+    const iconClassString = icon.classList.toString();
+    const iconName = iconClassString?.replaceAll('icon-', '')?.replaceAll('icon', '')?.replaceAll(' ', '');
+
+    socialmediaClick('', minifyText(iconName), 'global footer', '', '');
+  }
+
+  if (e.target.closest('.ul-17')) {
+    const anchor = e.target.closest('a');
+    if (!anchor) return;
+    const anchorLi = anchor?.closest('li');
+    ctaInteraction('', minifyText(anchorLi?.textContent), '', '', 'global footer', '', '');
   }
 });

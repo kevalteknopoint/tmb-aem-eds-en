@@ -1,5 +1,5 @@
 export function minifyText(str) {
-  if (!str) return '';
+  if (!str) return "";
 
   return str?.trim()?.toLowerCase();
 }
@@ -64,6 +64,69 @@ export function menuInteraction(
       leveloneMenu,
       leveltwoMenu,
       levelthreeMenu,
+      componentName,
+      componentType,
+      componentIndex,
+    },
+  });
+}
+
+export function faqInteraction(
+  pageRegion,
+  faqTitle,
+  ctaSource,
+  componentName,
+  componentType,
+  componentIndex
+) {
+  window.adobeDataLayer.push({
+    event: "faqInteraction",
+    data: {
+      pageRegion,
+      faqTitle,
+      ctaSource,
+      componentName,
+      componentType,
+      componentIndex,
+    },
+  });
+}
+
+export function ctaInteraction(
+  pageRegion,
+  ctaText,
+  ctaTitle,
+  ctaSource,
+  componentName,
+  componentType,
+  componentIndex
+) {
+  window.adobeDataLayer.push({
+    event: "ctaInteraction",
+    data: {
+      pageRegion,
+      ctaText,
+      ctaTitle,
+      ctaSource,
+      componentName,
+      componentType,
+      componentIndex,
+    },
+  });
+}
+
+export function socialmediaClick(
+  pageRegion,
+  iconName,
+  componentName,
+  componentType,
+  componentIndex
+) {
+  window.adobeDataLayer.push({
+    event: "socialmediaClick",
+    data: {
+      pageRegion,
+      iconName,
       componentName,
       componentType,
       componentIndex,
