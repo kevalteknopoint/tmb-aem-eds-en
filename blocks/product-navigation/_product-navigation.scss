@@ -51,6 +51,15 @@
       overflow-x: auto;
       position: relative;
 
+      &.show-fade {
+        mask-image: linear-gradient(to right,
+        black calc(100% - 74.249px),
+        transparent 100%);
+        -webkit-mask-image: linear-gradient(to right,
+        black calc(100% - 74.249px),
+        transparent 100%);
+      }
+
       &:has(li:first-child a:focus-visible) {
         padding-left: 4px;
       }
