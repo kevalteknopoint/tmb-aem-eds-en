@@ -665,7 +665,9 @@
   font-weight:500;
   height:28px;
   justify-content:center;
-  width:28px;
+  min-width:28px;
+  width:-moz-fit-content;
+  width:fit-content;
 }
 
 .money-overseas .overseas-columns-wrapper ul{
