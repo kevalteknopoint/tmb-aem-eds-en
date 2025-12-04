@@ -47,38 +47,44 @@
 }
 
 /* ---------- MEDIA MIXINS UPDATED ---------- */
-@mixin mobile-s {
-  @media screen and (max-width: 480px) {
+@mixin respond($breakpoint, $mode: max) {
+  @media screen and (#{$mode}-width: #{$breakpoint}px) {
     @content;
   }
 }
 
-@mixin mobile {
-  @media screen and (max-width: 767px) {
+@mixin mobile-s($mode: max) {
+  @include respond(480, $mode) {
     @content;
   }
 }
 
-@mixin tablet {
-  @media screen and (max-width: 1023px) {
+@mixin mobile($mode: max) {
+  @include respond(767, $mode) {
     @content;
   }
 }
 
-@mixin tablet-lg {
-  @media screen and (max-width: 1279px) {
+@mixin tablet($mode: max) {
+  @include respond(1023, $mode) {
     @content;
   }
 }
 
-@mixin desktop {
-  @media screen and (max-width: 1439px) {
+@mixin tablet-lg($mode: max) {
+  @include respond(1279, $mode) {
     @content;
   }
 }
 
-@mixin desktop-lg {
-  @media screen and (min-width: 1440px) {
+@mixin desktop($mode: max) {
+  @include respond(1439, $mode) {
+    @content;
+  }
+}
+
+@mixin desktop-lg($mode: min) {
+  @include respond(1440, $mode) {
     @content;
   }
 }

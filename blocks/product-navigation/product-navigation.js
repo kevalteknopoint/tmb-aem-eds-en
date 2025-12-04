@@ -1,11 +1,18 @@
-function isElementOutOfView(container, element) {
+import { isMobile, isTablet } from "../../scripts/aem.js";
+
+function isElementInView(container, element, percentVisible = 1) {
   const containerRect = container.getBoundingClientRect();
   const elemRect = element.getBoundingClientRect();
 
-  // Check left or right overflow
-  return (
-    elemRect.right < containerRect.left || elemRect.left > containerRect.right
-  );
+  const visibleWidth = Math.min(elemRect.right, containerRect.right) - Math.max(elemRect.left, containerRect.left);
+
+  const elementWidth = elemRect.width;
+
+  if (visibleWidth <= 0) return false;
+
+  const visiblePercent = (visibleWidth / elementWidth) * 100;
+
+  return visiblePercent >= percentVisible;
 }
 
 export default function decorateProductNavigation() {
@@ -14,17 +21,25 @@ export default function decorateProductNavigation() {
 
   if (!productNav) return;
 
+  // eslint-disable-next-line
+  const offsetSub = isMobile() ? 60 : isTablet() ? 90 : 95;
+
   const allLinks = productNav?.querySelectorAll('ul a');
   const allContainers = Array.from(allLinks).map((link) => {
     if (!link.getAttribute('href').startsWith('#')) return document.createElement('div');
 
     const linkedContainer = document.querySelector(`${link.getAttribute('href')}-scroll`);
 
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
+    link.addEventListener('click', () => {
+      if (!isElementInView(scrollWrapper, link, 100)) {
+        link.scrollIntoView({
+          behavior: "smooth",
+          inline: "center"
+        });
+      }
 
       window.scrollTo({
-        top: (linkedContainer.offsetTop - 120),
+        top: (linkedContainer.offsetTop - offsetSub),
         behavior: 'smooth'
       });
     });
@@ -44,10 +59,10 @@ export default function decorateProductNavigation() {
         const entryLink = document.querySelector(`a[href="#${entryId}"]`);
 
         entryLink?.classList.add('active');
-        if (isElementOutOfView(scrollWrapper, entryLink)) {
-          scrollWrapper?.scrollTo({
-            left: (entryLink?.getBoundingClientRect().left || 0) - 24,
-            behavior: 'smooth'
+        if (!isElementInView(scrollWrapper, entryLink, 100)) {
+          entryLink.scrollIntoView({
+            behavior: "smooth",
+            inline: "center"
           });
         }
       }
@@ -58,4 +73,12 @@ export default function decorateProductNavigation() {
   });
 
   allContainers.forEach((con) => observer.observe(con));
+
+  const linkedContainer = document.querySelector(`${window.location.hash}-scroll`);
+  if (linkedContainer) {
+    window.scrollTo({
+      top: (linkedContainer.offsetTop - offsetSub),
+      behavior: 'smooth'
+    });
+  }
 }

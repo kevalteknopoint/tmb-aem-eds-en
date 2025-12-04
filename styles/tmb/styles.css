@@ -744,7 +744,7 @@ header{
 .product-navigation .default-content-wrapper ul li a:focus-visible{
   outline:none;
 }
-.product-navigation .default-content-wrapper ul li a:hover::after, .product-navigation .default-content-wrapper ul li a.active::after{
+.product-navigation .default-content-wrapper ul li a.active::after{
   left:0;
   right:unset;
   width:100%;
@@ -856,6 +856,13 @@ header{
   font-weight:400;
   line-height:24px;
   padding-top:16px;
+}
+@media screen and (min-width: 1279px){
+  .product-navigation .default-content-wrapper ul li a:hover::after{
+    left:0;
+    right:unset;
+    width:100%;
+  }
 }
 @media screen and (min-width: 1440px){
   :root{
