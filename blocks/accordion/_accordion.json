@@ -42,10 +42,6 @@
           "label": "Style",
           "options": [
             {
-              "name": "accordion-open",
-              "value": "accordion-open"
-            },
-            {
               "name": "Single Item Expansion",
               "value": "single-expansion"
             }
