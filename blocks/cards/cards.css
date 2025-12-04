@@ -850,15 +850,13 @@
 }
 
 .news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper{
-  gap:32px;
-  margin-bottom:96px;
+  margin-bottom:40px;
 }
 
 .news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper .swiper-slide{
   background:var(--bg-default);
   border:1px solid var(--line-default);
   border-radius:var(--radius-card);
-  margin-right:0 !important;
   padding:24px;
 }
 
@@ -892,16 +890,18 @@
 }
 
 .news-helpful .cards-wrapper .news-help-wrapper .nav-wrapper{
-  bottom:5%;
-  margin-right:64px;
-  position:absolute;
-  right:0;
+  display:flex;
+  gap:16px;
+  justify-content:flex-end;
+  position:static;
 }
 
 .news-helpful .cards-wrapper .news-help-wrapper .nav-wrapper .swiper-button-next{
   background:var(--color-variants-bg-light-1);
   border-radius:44px;
   color:var(--color-variants-link-default);
+  margin-top:unset;
+  position:static;
 }
 
 .news-helpful .cards-wrapper .news-help-wrapper .nav-wrapper .swiper-button-prev{
@@ -909,6 +909,8 @@
   border-radius:44px;
   color:var(--color-variants-link-default);
   left:var(--swiper-navigation-sides-offset, -100px);
+  margin-top:unset;
+  position:static;
   transform:rotate(180deg);
 }
 
@@ -1183,10 +1185,6 @@
     display:block;
   }
 
-  .news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper{
-    gap:24px;
-  }
-
   .news-helpful .cards-wrapper .news-help-wrapper .nav-wrapper{
     margin-right:24px;
   }
@@ -1412,8 +1410,7 @@
   }
 
   .news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper{
-    gap:8px;
-    margin-bottom:80px;
+    margin-bottom:24px;
   }
 
   .news-helpful .cards-wrapper .news-help-wrapper .nav-wrapper{

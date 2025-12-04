@@ -36,7 +36,7 @@ export default function cardCarousel(block) {
   // eslint-disable-next-line
   const swiper = new Swiper(container, {
     slidesPerView: 1,
-    // spaceBetween: 16,
+    spaceBetween: 16,
     navigation: {
       nextEl: nextBtn,
       prevEl: prevBtn,
@@ -44,20 +44,21 @@ export default function cardCarousel(block) {
     breakpoints: {
       400: {
         slidesPerView: 1.5,
-        spaceBetween: 8
       },
       640: {
         slidesPerView: 2,
-        spaceBetween: 8
+        spaceBetween: 24
       },
       834: {
         slidesPerView: 3,
       },
       1024: {
         slidesPerView: 3.5,
+        spaceBetween: 32
       },
       1400: {
-        slidesPerView: 4.5,
+        slidesPerView: 4,
+        spaceBetween: 32
       }
     }
   });
