@@ -241,6 +241,7 @@
 .customer .columns-wrapper .block .columns-container div p.button-container{
   display:flex;
   justify-content:center;
+  margin:0;
 }
 
 .customer .columns-wrapper .block .columns-container div p.button-container a{

@@ -46,6 +46,7 @@
                     p.button-container{
                       display: flex;
                       justify-content: center;
+                      margin: 0;
 
                       a {
                         @include button('primary');
