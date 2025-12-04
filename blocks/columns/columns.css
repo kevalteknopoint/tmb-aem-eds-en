@@ -160,8 +160,9 @@
 }
 
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-label p{
-  color:var(--heading-default);
+  color:var(--body-default);
   font-size:24px;
+  font-weight:500;
   line-height:29px;
   margin-top:4px;
 }
@@ -169,9 +170,11 @@
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-label svg{
   background:var(--bg-light);
   border-radius:44px;
+  color:var(--color-button-primary-default);
   cursor:pointer;
   height:40px;
   margin-left:32px;
+  min-width:40px;
   padding:8px;
   transform:rotate(180deg);
   width:40px;
@@ -298,6 +301,14 @@
   outline:none;
 }
 
+.customer .content-container{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
+}
+
 .customer .content-container .para-0{
   color:var(--body, #0B231F);
   font-size:16px;
@@ -381,9 +392,11 @@
 .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label svg{
   background:var(--bg-light);
   border-radius:44px;
+  color:var(--color-button-primary-default);
   cursor:pointer;
   height:40px;
   margin-left:32px;
+  min-width:40px;
   padding:8px;
   transform:rotate(180deg);
   width:40px;
@@ -656,7 +669,7 @@
 
 .money-overseas .overseas-columns-wrapper ol li::before{
   align-items:center;
-  border:1px solid var(--heading-default);
+  border:1px solid rgb(0 82 91 / 10%);
   border-radius:50%;
   color:var(--heading-default);
   content:counter(step-counter);
@@ -783,6 +796,10 @@
     padding-inline:24px;
   }
 
+  .customer .content-container{
+    padding-inline:24px;
+  }
+
   .faq-accordion{
     padding-inline:24px;
   }
@@ -817,6 +834,12 @@
 
   .section.compare-accounts .columns.block .compare-accounts-cards{
     flex-direction:row;
+  }
+
+  .money-overseas .overseas-columns-wrapper div h1,
+  .money-overseas .overseas-columns-wrapper div h2,
+  .money-overseas .overseas-columns-wrapper div h3{
+    max-width:unset;
   }
 }
 
@@ -861,6 +884,10 @@
   }
 
   .customer .columns-wrapper{
+    padding-inline:16px;
+  }
+
+  .customer .content-container{
     padding-inline:16px;
   }
 

@@ -4,6 +4,7 @@ export default function decorate(block) {
   if (window.location.href.includes("author")) return;
 
   const shouldBeOpen = block.classList.contains("accordion-open");
+  const singleExpansion = block.classList.contains("single-expansion");
 
   [...block.children].forEach((row) => {
     const label = row.children[0];
@@ -24,4 +25,16 @@ export default function decorate(block) {
     details.append(summary, body);
     row.replaceWith(details);
   });
+
+  if (singleExpansion) {
+    block.querySelectorAll('.accordion-item').forEach((item) => {
+      item.addEventListener('toggle', () => {
+        if (item.open) {
+          document.querySelectorAll('.accordion-item').forEach((other) => {
+            if (other !== item) other.removeAttribute('open');
+          });
+        }
+      });
+    });
+  }
 }

@@ -349,6 +349,10 @@
           {
             "name": "accordion-open",
             "value": "accordion-open"
+          },
+          {
+            "name": "Single Item Expansion",
+            "value": "single-expansion"
           }
         ]
       }
@@ -370,6 +374,17 @@
         "name": "content",
         "value": "",
         "label": "Body"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Default Open",
+            "value": "accordion-open"
+          }
+        ]
       }
     ]
   },

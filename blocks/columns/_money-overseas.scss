@@ -74,6 +74,10 @@
         overflow-wrap: break-word;
         max-width: 370px;
         width: fit-content;
+
+        @include tablet {
+          max-width: unset;
+        }
       }
     }
 
@@ -103,7 +107,7 @@
       width: fit-content;
       height: 28px;
       border-radius: 50%;
-      border: 1px solid $heading-default;
+      border: 1px solid rgb(0 82 91 / 10%);
       color: $heading-default;
       font-size: 14px;
       font-weight: 500;

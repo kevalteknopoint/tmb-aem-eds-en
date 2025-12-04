@@ -84,14 +84,17 @@
                     justify-content: space-between;
                     align-items: flex-start;
 
-                    p{
-                        color: $heading-default;
+                    p {
+                        color: $body-default;
+                        font-weight: 500;
                         font-size: 24px;
                         line-height: 29px;
                         margin-top: 4px;
                     }
 
                     svg{
+                        color: $color-button-primary-default;
+                        min-width: 40px;
                         width: 40px;
                         height: 40px;
                         padding: 8px;

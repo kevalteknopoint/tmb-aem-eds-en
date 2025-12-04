@@ -60,7 +60,9 @@
                         margin-top: 4px;
                     }
 
-                    svg{
+                    svg {
+                        color: $color-button-primary-default;
+                        min-width: 40px;
                         width: 40px;
                         height: 40px;
                         padding: 8px;

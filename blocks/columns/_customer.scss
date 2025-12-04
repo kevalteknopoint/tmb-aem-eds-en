@@ -64,6 +64,8 @@
     }
 
     .content-container{
+        @include responsive-container;
+        
         .para-0{
             color: var(--body, #0B231F);
             text-align: center;

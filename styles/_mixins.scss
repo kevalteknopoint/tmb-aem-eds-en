@@ -1,8 +1,8 @@
 @use './variables' as *;
-@use "sass:string" as *;
+@use "sass:string";
 @use "sass:math" as *;
 @use "sass:color" as *;
-@use "sass:meta" as *;
+@use "sass:meta";
 @use 'sass:map' as map;
 
 /* ---------- MEDIA MIXINS ----------
@@ -29,11 +29,12 @@
   @if $opacity > 1 {
     $opacity: $opacity / 100;
   }
-  @return unquote("rgb(var(#{$var}) / #{$opacity * 100}%)");
+
+  @return string.unquote("rgb(var(#{$var}) / #{$opacity * 100}%)");
 }
 
 @function to-rgb($hex) {
-  @if type-of($hex) != "color" {
+  @if meta.type-of($hex) != "color" {
     @warn "⚠️ to-rgb(): expected a color, got `#{$hex}`. Returning as-is.";
     @return $hex;
   }
@@ -90,11 +91,11 @@
   margin-left: auto;
   margin-right: auto;
 
-  @include tablet-lg() {
+  @include tablet-lg {
     padding-inline: 24px;
   }
 
-  @include mobile() {
+  @include mobile {
     padding-inline: 16px;
   }
 }
@@ -192,6 +193,7 @@ $btn-variants: (
 
   @if not map.has-key($btn-variants, $variant) {
     @debug "Variant '#{$variant}' not found. Falling back to 'primary'.";
+
     $variant: 'primary';
   }
 

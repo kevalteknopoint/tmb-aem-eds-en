@@ -134,10 +134,32 @@
   }
 
   &.rates-saver {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: calc(100% - 128px);
+      margin: 0 auto;
+      height: 1px;
+      background: $line-default;
+
+      @include tablet-lg {
+        width: calc(100% - 48px);
+      }
+
+      @include mobile {
+        width: calc(100% - 32px);
+      }
+    }
+
     .cards-wrapper .cards ul {
       grid-template-columns: 1fr 1fr 1fr;
 
-      @include mobile {
+      @include tablet {
         grid-template-columns: 1fr;
       }
 
@@ -187,6 +209,10 @@
     }
 
     .cards-wrapper .cards ul {
+      @include tablet {
+        grid-template-columns: 1fr;
+      }
+      
       li {
         @include tablet {
           flex-direction: row;

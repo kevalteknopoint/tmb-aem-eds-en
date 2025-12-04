@@ -564,6 +564,22 @@
   outline:none;
 }
 
+.section.faq-cant-find-looking-for.rates-saver{
+  position:relative;
+}
+
+.section.faq-cant-find-looking-for.rates-saver::after{
+  background:var(--line-default);
+  bottom:0;
+  content:"";
+  height:1px;
+  left:0;
+  margin:0 auto;
+  position:absolute;
+  right:0;
+  width:calc(100% - 128px);
+}
+
 .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul{
   grid-template-columns:1fr 1fr 1fr;
 }
@@ -1039,6 +1055,10 @@
     padding-inline:24px;
   }
 
+  .section.faq-cant-find-looking-for.rates-saver::after{
+    width:calc(100% - 48px);
+  }
+
   .banking-goods{
     padding-inline:24px;
   }
@@ -1069,6 +1089,10 @@
     grid-template-columns:1fr 1fr;
   }
 
+  .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul{
+    grid-template-columns:1fr;
+  }
+
   .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .default-content-wrapper h1,
   .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .default-content-wrapper h2,
   .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .default-content-wrapper h3,
@@ -1076,6 +1100,10 @@
   .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .default-content-wrapper h5,
   .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .default-content-wrapper h6{
     text-align:left;
+  }
+
+  .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .cards-wrapper .cards ul{
+    grid-template-columns:1fr;
   }
 
   .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li{
@@ -1384,8 +1412,8 @@
     margin-bottom:0;
   }
 
-  .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul{
-    grid-template-columns:1fr;
+  .section.faq-cant-find-looking-for.rates-saver::after{
+    width:calc(100% - 32px);
   }
 
   .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li{

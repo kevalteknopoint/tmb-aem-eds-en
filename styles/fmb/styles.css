@@ -931,6 +931,9 @@ header{
     flex-direction:column-reverse;
     gap:32px;
   }
+  .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .columns-img-col{
+    max-width:unset;
+  }
   .product-navigation{
     background:var(--color-pagination-secondary-nav);
     box-shadow:0 2px 3px 0 rgba(0, 0, 0, 0.09);
@@ -1018,6 +1021,9 @@ header{
   }
   .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2{
     font-size:38px;
+  }
+  .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content h2{
+    width:unset;
   }
   .product-navigation{
     margin-top:unset;

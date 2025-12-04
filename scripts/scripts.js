@@ -167,10 +167,11 @@ function loadPlaceholders() {
   if (window.placeholders?.default && Object.keys(window.placeholders?.default)?.length) {
     Object.keys(window.placeholders.default).forEach((key) => {
       let value = window.placeholders.default[key];
-      if (/(\d+(?:\.\d+)?)(%)(p\.a\.)/g.test(value)) {
+      const isInterestRate = /(\d+(?:\.\d+)?)(%)(p\.a\.)/g.test(value);
+      if (isInterestRate) {
         value = value.replaceAll(/(\d+(?:\.\d+)?)(%)(p\.a\.)/g, `<span class="rate-num">$1</span><span class="rate-unit"><span class="rate-percent">$2</span><span class="rate-pa">$3</span></span>`);
       }
-      document.body.innerHTML = document.body.innerHTML.replaceAll(`~${key}~`, `<span class="${camelToKebab(key)}">${value}</span>`);
+      document.body.innerHTML = document.body.innerHTML.replaceAll(`~${key}~`, `<span class="${camelToKebab(key)}${isInterestRate ? ' interest-rate' : ''}">${value}</span>`);
     });
   }
 }
