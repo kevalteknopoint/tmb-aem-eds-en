@@ -2,3 +2,79 @@
 @use '../../styles/variables';
 @use '../../styles/mixins';
 
+.news-helpful-homepage{
+    .cards-wrapper{
+        .block{
+            .swiper-wrapper{
+                .swiper-slide{
+                    display: flex;
+
+                    // align-items: flex-start;
+
+                    gap: 19px;
+                    background: #FFF;
+                    border: 1px solid rgb(0 0 0 / 20%); // Figma token missing
+                    border-radius: $radius-card;
+                    height: auto;
+                    justify-content: flex-start;
+                    margin-right: 24px;
+                    padding: 20px;
+                    width: 388px !important;
+
+                    div{
+                        width: 25%;
+
+                        picture{
+                                // max-width: 100px;
+                                // width: 100px;
+
+                                img{
+                                        height: auto;
+                                        width: 100%;
+                                }
+                        }
+
+                        &:last-child{
+                            width: 75%;
+
+                            p{
+                                    color: $heading-default;
+                                    font-size: 20px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 24px;
+                                    margin: 0;
+                                    padding: 0;
+                            }
+
+                            p.button-container{
+                                padding: unset;
+                                margin-top: 16px;
+
+                                a{
+                                        color: $heading-default;
+                                        font-size: 14px;
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        line-height: 21px;
+                                        margin: 0;
+                                        padding: 0;
+                                        text-decoration: underline;
+                                        text-decoration-color: $link-accent;
+                                        text-decoration-thickness: 2px;
+                                        text-underline-offset: 4px;
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav-wrapper{
+            position: absolute;
+            right: 4%;
+            top: 13%;
+        }
+    }
+}
