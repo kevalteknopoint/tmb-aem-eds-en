@@ -310,7 +310,7 @@
 }
 
 .customer .content-container .para-0{
-  color:var(--body, #0B231F);
+  color:var(--body-default);
   font-size:16px;
   font-weight:400;
   line-height:24px;
@@ -525,6 +525,7 @@
 }
 
 .section.compare-accounts .columns.block h4{
+  color:var(--color-variants-body-default);
   font-size:var(--font-size-body);
   font-weight:400;
   line-height:var(--font-height-body);

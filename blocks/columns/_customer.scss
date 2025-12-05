@@ -67,7 +67,7 @@
         @include responsive-container;
         
         .para-0{
-            color: var(--body, #0B231F);
+            color: $body-default;
             text-align: center;
             font-size: 16px;
             font-weight: 400;
