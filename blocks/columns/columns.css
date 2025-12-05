@@ -836,6 +836,10 @@
     flex-direction:row;
   }
 
+  .money-overseas .overseas-columns-wrapper div{
+    width:unset;
+  }
+
   .money-overseas .overseas-columns-wrapper div h1,
   .money-overseas .overseas-columns-wrapper div h2,
   .money-overseas .overseas-columns-wrapper div h3{
@@ -912,9 +916,5 @@
 
   .money-overseas{
     padding-inline:16px;
-  }
-
-  .money-overseas .overseas-columns-wrapper div{
-    width:unset;
   }
 }

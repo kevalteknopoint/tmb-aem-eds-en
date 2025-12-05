@@ -55,7 +55,7 @@
       flex-direction: column;
       width: 32%;
 
-      @include mobile {
+      @include tablet {
         width: unset;
       }
 
