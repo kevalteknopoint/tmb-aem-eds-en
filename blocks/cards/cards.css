@@ -1263,7 +1263,7 @@
   }
 
   .news-helpful-homepage .cards-wrapper .nav-wrapper .view-all-wrapper{
-    display:block;
+    display:none;
   }
 }
 
@@ -1506,6 +1506,11 @@
 
   .news-helpful-homepage .cards-wrapper .block .swiper-wrapper .swiper-slide.show{
     display:flex !important;
+  }
+
+  .news-helpful-homepage .cards-wrapper .nav-wrapper .swiper-button-next,
+  .news-helpful-homepage .cards-wrapper .nav-wrapper .swiper-button-prev{
+    display:none;
   }
 
   .news-helpful-homepage .cards-wrapper .nav-wrapper .view-all-wrapper{

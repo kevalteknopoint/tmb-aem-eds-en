@@ -92,11 +92,18 @@
         }
 
         .nav-wrapper{
+            .swiper-button-next,
+            .swiper-button-prev{
+                @include mobile{
+                    display: none;
+                }
+            }
+            
             .view-all-wrapper{
                 display: none;
 
                 @include tablet{
-                    display: block;
+                    display: none;
                 }
 
                 @include mobile{   
