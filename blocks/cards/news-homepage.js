@@ -1,75 +1,40 @@
-// import Swiper from "../../libs/swiper/swiper-bundle.min.js";
-// import { injectIcon } from "../../scripts/aem.js";
-// import { button, div } from "../../scripts/dom-helpers.js";
-
-// export default function cardCarouselHomepage(block) {
-//     console.log("-dkjak");
-
-//   const slides = Array.from(block.children);
-//   slides.forEach((el) => {
-//     el.classList.add("swiper-slide");
-//   });
-
-//   const swiperWrapper = div(
-//     { class: "swiper-wrapper" },
-//     ...slides
-//   );
-
-//   const nextBtn  = button({ class: "swiper-button-next" });
-//   const prevBtn = button({ class: "swiper-button-prev" });
-
-//   injectIcon('chevron-right-circle-filled', nextBtn);
-//   injectIcon('chevron-right-circle-filled', prevBtn);
-
-//   const navWrapper = div(
-//     { class: "nav-wrapper" },
-//     prevBtn,
-//     nextBtn
-//   );
-
-//   const container = div(
-//     { class: "news-help-wrapper cards block swiper" },
-//     swiperWrapper,
-//     navWrapper
-//   );
-
-//   block.replaceWith(container);
-
-
-// const swiper = new Swiper(container, {
-//     slidesPerView: 1,
-//     // spaceBetween: 16,
-//     navigation: {
-//       nextEl: nextBtn,
-//       prevEl: prevBtn,
-//     },
-//     breakpoints: {
-//       400: {  
-//         slidesPerView: 1,
-//         spaceBetween: 8
-//       },
-//       640: {    
-//         slidesPerView: 2,
-//         spaceBetween: 8
-//       },
-//       834: {
-//         slidesPerView: 2.5,
-//       },
-//       1024: { 
-//         slidesPerView: 3,
-//       },
-//       1400: {
-//         slidesPerView: 3.5,
-//       }
-//     }
-//   });
-// };
-
-
-
 import Swiper from "../../libs/swiper/swiper-bundle.min.js";
 import { injectIcon } from "../../scripts/aem.js";
 import { button, div } from "../../scripts/dom-helpers.js";
+
+
+function setMobileView(block) {
+  const cards = block.querySelectorAll(".swiper-wrapper .swiper-slide");
+  const navWrapper = block.querySelector(".nav-wrapper"); // use querySelector
+
+  // Create <p> only for mobile
+  const viewAllPara = document.createElement("p");
+  viewAllPara.textContent = "View all articles";
+  viewAllPara.classList.add("view-all");
+
+  const viewAllDiv = div(
+    { class: "view-all-wrapper" },
+    viewAllPara
+  );
+
+  // Append the div inside navWrapper
+  if (navWrapper) {
+    navWrapper.appendChild(viewAllDiv);
+  }
+
+  // Show only first 3 slides initially
+  cards.forEach((card, index) => {
+    if (index < 3) {
+      card.classList.add("show");
+    }
+  });
+
+  viewAllPara.addEventListener("click", () => {
+    cards.forEach(card => card.classList.add("show")); // show all
+    viewAllDiv.remove(); // hide the "View All" button
+  });
+}
+
 
 export default function cardCarouselHomepage(block) {
   const slides = Array.from(block.children);
@@ -102,36 +67,6 @@ export default function cardCarouselHomepage(block) {
 
   block.replaceWith(container);
 
-  // eslint-disable-next-line
-//   const swiper = new Swiper(container, {
-//     slidesPerView: 1,
-//     spaceBetween: 16,
-//     navigation: {
-//       nextEl: nextBtn,
-//       prevEl: prevBtn,
-//     },
-//     breakpoints: {
-//       400: {
-//         slidesPerView: 1.5,
-//       },
-//       640: {
-//         slidesPerView: 2,
-//         spaceBetween: 24
-//       },
-//       834: {
-//         slidesPerView: 3,
-//       },
-//       1024: {
-//         slidesPerView: 3.5,
-//         spaceBetween: 32
-//       },
-//       1400: {
-//         slidesPerView: 4,
-//         spaceBetween: 32
-//       }
-//     }
-//   });
-
 const swiper = new Swiper(container, {
     slidesPerView: 1,
     // spaceBetween: 16,
@@ -141,26 +76,34 @@ const swiper = new Swiper(container, {
     },
     breakpoints: {
       400: {  
+        enabled: false,
         slidesPerView: 1,
-        spaceBetween: 16
+        spaceBetween: 8
       },
       640: {    
+        enabled: false,
         slidesPerView: 2,
+        spaceBetween: 16
+      },
+      768:{
+        slidesPerView: 2.5,
         spaceBetween: 16
       },
       834: {
         slidesPerView: 2.5,
-        spaceBetween: 24
+        spaceBetween: 16
       },
       1024: { 
         slidesPerView: 3,
-        spaceBetween: 24
+        spaceBetween: 20
       },
       1400: {
         slidesPerView: 3.5,
-        spaceBetween: 32
+        spaceBetween: 20
       }
     }
   });
-
+  if(window.innerWidth < 767){
+        setMobileView(container);
+  }
 }

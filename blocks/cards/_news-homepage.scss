@@ -3,14 +3,28 @@
 @use '../../styles/mixins';
 
 .news-helpful-homepage{
+    .default-content-wrapper{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        p:last-child{
+            display: none;
+        }
+    }
+
     .cards-wrapper{
         .block{
+            position: unset;
+
             .swiper-wrapper{
+                @include mobile{
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
                 .swiper-slide{
                     display: flex;
-
-                    // align-items: flex-start;
-
                     gap: 19px;
                     background: #FFF;
                     border: 1px solid rgb(0 0 0 / 20%); // Figma token missing
@@ -21,13 +35,19 @@
                     padding: 20px;
                     width: 388px !important;
 
+                    @include mobile{
+                        width: 100% !important;
+                        display: none;
+
+                        &.show {
+                        display: flex !important;
+                        }
+                    }
+
                     div{
                         width: 25%;
 
                         picture{
-                                // max-width: 100px;
-                                // width: 100px;
-
                                 img{
                                         height: auto;
                                         width: 100%;
@@ -72,9 +92,24 @@
         }
 
         .nav-wrapper{
-            position: absolute;
-            right: 4%;
-            top: 13%;
+            .view-all-wrapper{
+                display: none;
+
+                @include tablet{
+                    display: block;
+                }
+
+                @include mobile{   
+                    display: block;
+                    margin: 30px 0 40px;
+                    padding-bottom: 4px;
+                    border-bottom: 2px solid $line-default;
+                    color: $link-default;
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 29px;
+                }
+            }
         }
     }
 }
