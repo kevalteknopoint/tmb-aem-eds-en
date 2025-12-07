@@ -57,10 +57,12 @@ body:has(.product-detail-banner) {
   .hero-banner-content-wrap {
     position: absolute;
     inset: 0;
+    top: unset;
+    bottom: 80px;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
 
     @include responsive-container;
 
