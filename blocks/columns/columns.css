@@ -707,6 +707,10 @@
   padding:16px;
 }
 
+.money-overseas .overseas-columns-wrapper ul:last-child{
+  margin-bottom:0;
+}
+
 .money-overseas .overseas-columns-wrapper ul li .overseas-columns-wrapper-ul{
   align-items:flex-start;
   align-self:stretch;

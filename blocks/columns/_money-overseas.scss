@@ -135,6 +135,10 @@
       margin-bottom: 32px;
       border-radius: 8px;
 
+      &:last-child {
+        margin-bottom: 0;
+      }
+
       li {
         .overseas-columns-wrapper-ul {
           display: flex;
