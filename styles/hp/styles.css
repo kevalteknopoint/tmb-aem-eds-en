@@ -887,7 +887,6 @@ header{
   letter-spacing:2px;
   line-height:40px;
   margin-bottom:40px;
-  text-transform:uppercase;
 }
 .interest-table-section .default-content-wrapper .ul-0{
   border-bottom:4px solid var(--heading-default);
