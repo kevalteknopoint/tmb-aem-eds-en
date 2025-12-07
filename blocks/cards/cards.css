@@ -842,12 +842,20 @@
   line-height:0;
 }
 
+html{
+  overflow-x:hidden;
+}
+
 .news-helpful{
+  position:relative;
+}
+
+.news-helpful .default-content-wrapper{
+  margin-bottom:40px;
   margin-left:auto;
   margin-right:auto;
   max-width:calc(1440px - 0px);
   padding-inline:64px;
-  position:relative;
   width:100%;
 }
 
@@ -862,7 +870,11 @@
 }
 
 .news-helpful .cards-wrapper{
-  padding:40px 0 0;
+  padding-left:calc((100% - 1440px) / 2 + 64px);
+}
+
+.news-helpful .cards-wrapper .news-help-wrapper{
+  overflow:visible;
 }
 
 .news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper{
@@ -874,6 +886,7 @@
   border:1px solid var(--line-default);
   border-radius:var(--radius-card);
   padding:24px;
+  width:304px;
 }
 
 .news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper .swiper-slide div picture img{
@@ -909,6 +922,9 @@
   display:flex;
   gap:16px;
   justify-content:flex-end;
+  margin-right:auto;
+  max-width:1440px;
+  padding-right:128px;
   position:static;
 }
 
@@ -1034,6 +1050,17 @@
   }
 }
 
+@media (max-width: 1440px){
+  .news-helpful .cards-wrapper{
+    padding-left:0;
+  }
+
+  .news-helpful .cards-wrapper .news-help-wrapper{
+    overflow:hidden;
+    padding-inline:64px;
+  }
+}
+
 @media screen and (max-width: 1279px){
   .section.expandable-tiles-section .default-content-wrapper{
     padding-inline:24px;
@@ -1063,8 +1090,21 @@
     padding-inline:24px;
   }
 
-  .news-helpful{
+  html{
+    overflow-x:unset;
+  }
+
+  .news-helpful .default-content-wrapper{
     padding-inline:24px;
+  }
+
+  .news-helpful .cards-wrapper .news-help-wrapper{
+    padding-inline:24px;
+  }
+
+  .news-helpful .cards-wrapper .news-help-wrapper .nav-wrapper{
+    margin-right:24px;
+    padding-right:48px;
   }
 }
 
@@ -1213,8 +1253,8 @@
     display:block;
   }
 
-  .news-helpful .cards-wrapper .news-help-wrapper .nav-wrapper{
-    margin-right:24px;
+  .news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper .swiper-slide{
+    width:264px;
   }
 }
 
@@ -1428,7 +1468,8 @@
     padding-inline:16px;
   }
 
-  .news-helpful{
+  .news-helpful .default-content-wrapper{
+    margin-bottom:24px;
     padding-inline:16px;
   }
 
@@ -1437,11 +1478,20 @@
     line-height:38px;
   }
 
+  .news-helpful .cards-wrapper .news-help-wrapper{
+    padding-inline:16px;
+  }
+
   .news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper{
     margin-bottom:24px;
   }
 
+  .news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper .swiper-slide{
+    width:300px;
+  }
+
   .news-helpful .cards-wrapper .news-help-wrapper .nav-wrapper{
     margin-right:16px;
+    padding-right:32px;
   }
 }

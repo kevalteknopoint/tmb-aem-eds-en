@@ -1,11 +1,25 @@
 @use '../../styles/base' as *;
 
-.news-helpful{
-    @include responsive-container;
+html {
+  overflow-x: hidden;
 
+  @include tablet-lg {
+    overflow-x: unset;
+  }
+}
+
+.news-helpful{
     position: relative;
 
     .default-content-wrapper{
+      margin-bottom: 40px;
+
+      @include responsive-container;
+
+      @include mobile {
+        margin-bottom: 24px;
+      }
+
         p{
             color: $heading-default;
             font-family: $secondary-font;
@@ -23,14 +37,33 @@
     }
 
     .cards-wrapper{
-        padding: 40px 0 0;
+        padding-left: calc((100% - #{$container-width}) / 2 + #{$padding-desktop});
+
+        @media (max-width: #{$container-width}) {
+          padding-left: 0;
+        }
 
         .news-help-wrapper{
+          overflow: visible;
+
+          @media (max-width: #{$container-width}) {
+            overflow: hidden;
+            padding-inline: $padding-desktop;
+          }
+
+          @include tablet-lg {
+            padding-inline: $padding-tablet;
+          }
+
+          @include mobile {
+            padding-inline: $padding-mobile;
+          }
+
             .swiper-wrapper{
                 margin-bottom: 40px;
 
                 @include mobile{
-                    margin-bottom: 24px;
+                  margin-bottom: 24px;
                 }
 
                 .swiper-slide{
@@ -38,6 +71,15 @@
                     border: 1px solid $line-default;
                     border-radius: $radius-card;
                     background: $bg-default;
+                    width: 304px;
+
+                    @include tablet {
+                      width: 264px;
+                    }
+
+                    @include mobile {
+                      width: 300px;
+                    }
 
                     div{
                         picture{
@@ -81,13 +123,18 @@
                 display: flex;
                 justify-content: flex-end;
                 gap: 16px;
-
-                @include tablet{
-                    margin-right: 24px;
+                max-width: $container-width;
+                margin-right: auto;
+                padding-right: calc($padding-desktop * 2);
+                
+                @include tablet-lg{
+                  margin-right: 24px;
+                  padding-right: calc($padding-tablet * 2);
                 }
-
+                
                 @include mobile{
-                    margin-right: 16px;
+                  margin-right: 16px;
+                  padding-right: calc($padding-mobile * 2);
                 }
 
                 .swiper-button-next{

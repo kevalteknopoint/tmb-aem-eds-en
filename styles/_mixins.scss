@@ -5,6 +5,11 @@
 @use "sass:meta";
 @use 'sass:map' as map;
 
+$container-width: 1440px;
+$padding-desktop: 64px;
+$padding-tablet: 24px;
+$padding-mobile: 16px;
+
 /* ---------- MEDIA MIXINS ----------
 @mixin mobile {
   @media screen and (max-width: 768px) {
@@ -92,17 +97,17 @@
 /* ---------- LAYOUT MIXINS ---------- */
 @mixin responsive-container($calculated: 0px) {
   width: 100%;
-  max-width: calc(1440px - #{$calculated});
-  padding-inline: 64px;
+  max-width: calc($container-width - #{$calculated});
+  padding-inline: $padding-desktop;
   margin-left: auto;
   margin-right: auto;
 
   @include tablet-lg {
-    padding-inline: 24px;
+    padding-inline: $padding-tablet;
   }
 
   @include mobile {
-    padding-inline: 16px;
+    padding-inline: $padding-mobile;
   }
 }
 

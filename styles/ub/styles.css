@@ -808,6 +808,7 @@ header{
   font-weight:900;
   letter-spacing:2px;
   line-height:40px;
+  margin-bottom:40px;
   text-transform:uppercase;
 }
 .interest-table-section .default-content-wrapper .ul-0{
@@ -820,7 +821,7 @@ header{
   font-size:24px;
   font-weight:500;
   line-height:29px;
-  margin:40px 0 16px;
+  margin:0 0 16px;
   text-decoration:none;
   width:50%;
 }
@@ -952,11 +953,13 @@ header{
     background:var(--color-pagination-secondary-nav);
     box-shadow:0 2px 3px 0 rgba(0, 0, 0, 0.09);
     margin-top:-20px;
+    padding-inline:0;
+    top:0;
   }
   .product-navigation .default-content-wrapper{
     border-radius:0;
     box-shadow:none;
-    padding:20px 0;
+    padding:20px 24px;
   }
   :root{
     --carousel-card-fix:264px;
@@ -1042,11 +1045,10 @@ header{
   .product-navigation{
     margin-top:unset;
     padding-inline:16px;
-    top:0;
   }
   .product-navigation .default-content-wrapper{
     overflow-x:auto;
-    padding:11.5px 0;
+    padding:11.5px 16px;
   }
   .product-navigation .default-content-wrapper ul{
     overflow-x:unset;
@@ -1057,6 +1059,7 @@ header{
   .interest-table-section .default-content-wrapper h1, .interest-table-section .default-content-wrapper h2{
     font-size:38px;
     line-height:38px;
+    margin-bottom:24px;
   }
   :root{
     --carousel-card-fix:300px;

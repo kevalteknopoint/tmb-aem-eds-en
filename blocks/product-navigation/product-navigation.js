@@ -38,6 +38,7 @@ export default function decorateProductNavigation() {
         link.scrollIntoView({
           behavior: "smooth",
           inline: "center",
+          block: "nearest"
         });
       }
 
@@ -69,6 +70,7 @@ export default function decorateProductNavigation() {
             entryLink.scrollIntoView({
               behavior: "smooth",
               inline: "center",
+              block: "nearest"
             });
           }
         }

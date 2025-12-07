@@ -61,7 +61,6 @@ body:has(.product-detail-banner) .breadcrumb.block{
   font-family:var(--secondary-font);
   font-size:var(--font-size-lg);
   line-height:var(--font-height-lg);
-  margin-bottom:24px;
   padding-bottom:16px;
   text-transform:uppercase;
 }
@@ -71,11 +70,8 @@ body:has(.product-detail-banner) .breadcrumb.block{
   width:fit-content;
 }
 
-.product-detail-banner .hero-banner-content-wrap p{
+.product-detail-banner .hero-banner-content-wrap p:has(.interest-rate) + p{
   color:var(--heading-default);
-  font-size:var(--font-size-body);
-  font-weight:400;
-  line-height:var(--font-height-body);
 }
 
 .product-detail-banner .hero-banner-content-wrap .interest-rate{
@@ -84,6 +80,7 @@ body:has(.product-detail-banner) .breadcrumb.block{
   display:grid;
   grid-template-columns:1fr 1fr;
   margin-bottom:8px;
+  margin-top:24px;
   padding-top:16px;
   width:-moz-fit-content;
   width:fit-content;
@@ -121,6 +118,13 @@ body:has(.product-detail-banner) .breadcrumb.block{
   width:fit-content;
 }
 
+.product-detail-banner .hero-banner-content-wrap p{
+  color:var(--body-default);
+  font-size:var(--font-size-body);
+  font-weight:400;
+  line-height:var(--font-height-body);
+}
+
 @media screen and (max-width: 1279px){
   .product-detail-banner .hero-banner-content-wrap{
     padding-inline:24px;
@@ -143,8 +147,8 @@ body:has(.product-detail-banner) .breadcrumb.block{
     top:unset;
   }
 
-  .product-detail-banner .hero-banner-content-wrap h1, .product-detail-banner .hero-banner-content-wrap h2, .product-detail-banner .hero-banner-content-wrap h3{
-    margin-bottom:0;
+  .product-detail-banner .hero-banner-content-wrap .interest-rate{
+    margin-top:0;
   }
 
   .product-detail-banner .hero-banner-content-wrap .interest-rate .rate-num{
