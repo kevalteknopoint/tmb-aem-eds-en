@@ -34,12 +34,12 @@
         {
           "component": "text",
           "name": "form-id",
-          "label": "Enter Form ID"
+          "label": "Enter Form API key"
         },
         {
           "component": "text",
           "name": "form-key",
-          "label": "Enter Form API Key"
+          "label": "Enter Form Id"
         },
         {
           "component": "text",
