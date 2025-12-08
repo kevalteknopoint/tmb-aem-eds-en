@@ -831,8 +831,8 @@
   max-width:370px;
   overflow-wrap:break-word;
   white-space:normal;
-  width:-moz-fit-content;
-  width:fit-content;
+  width:-moz-max-content;
+  width:max-content;
 }
 
 .overseas-variant .overseas-columns .overseas-columns-wrapper div p{
