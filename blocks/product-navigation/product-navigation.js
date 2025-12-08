@@ -34,7 +34,7 @@ export default function decorateProductNavigation() {
     );
 
     link.addEventListener("click", () => {
-      if (!isElementInView(scrollWrapper, link, 100)) {
+      if (!isElementInView(scrollWrapper, link, 105)) {
         link.scrollIntoView({
           behavior: "smooth",
           inline: "center",
@@ -66,7 +66,7 @@ export default function decorateProductNavigation() {
           const entryLink = document.querySelector(`a[href="#${entryId}"]`);
 
           entryLink?.classList.add("active");
-          if (!isElementInView(scrollWrapper, entryLink, 100)) {
+          if (!isElementInView(scrollWrapper, entryLink, 105)) {
             entryLink.scrollIntoView({
               behavior: "smooth",
               inline: "center",
