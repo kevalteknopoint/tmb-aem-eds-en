@@ -673,7 +673,7 @@
     ]
   },
   {
-    "id": "teachers-form-block",
+    "id": "transformd-form",
     "fields": [
       {
         "component": "text",
@@ -723,7 +723,7 @@
         "label": "Select environment branch",
         "options": [
           {
-            "name": "TeacherTeachers Mutual Bank",
+            "name": "Teachers Mutual Bank",
             "value": "tmb"
           },
           {

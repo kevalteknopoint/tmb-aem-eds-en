@@ -1,0 +1,103 @@
+{
+  "definitions": [
+    {
+      "title": "Transformd form",
+      "id": "transformd-form",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Transformd form",
+              "filter": "transformd-form",
+              "model": "transformd-form"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "transformd-form",
+      "fields": [
+        {
+          "component": "text",
+          "name": "css-link",
+          "label": "Enter CSS Path"
+        },
+        {
+          "component": "text",
+          "name": "js-link",
+          "label": "Enter JavaScript Path"
+        },
+        {
+          "component": "text",
+          "name": "form-id",
+          "label": "Enter Form API key"
+        },
+        {
+          "component": "text",
+          "name": "form-key",
+          "label": "Enter Form Id"
+        },
+        {
+          "component": "text",
+          "name": "action-link",
+          "label": "Enter Action Link"
+        },
+        {
+          "name": "branch",
+          "component": "select",
+          "type": "select",
+          "label": "Select channel",
+          "options": [
+            {
+              "name": "Staging",
+              "value": "Staging"
+            },
+            {
+              "name": "Live",
+              "value": "Live"
+            }
+          ]
+        },
+        {
+          "name": "channel",
+          "component": "select",
+          "type": "select",
+          "label": "Select environment branch",
+          "options": [
+            {
+              "name": "Teachers Mutual Bank",
+              "value": "tmb"
+            },
+            {
+              "name": "Health Professionals Bank",
+              "value": "hpb"
+            },
+            {
+              "name" : "Firefighters Mutual Bank",
+              "value" : "fmb"
+            },
+            {
+              "name" : "UniBank",
+              "value" : "ub"
+            }
+          ]
+        },
+        {
+          "component": "text",
+          "name": "config",
+          "label": "Enter Form Config"
+        },
+        {
+          "component": "text",
+          "name": "container",
+          "label": "Enter Form Container"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}
