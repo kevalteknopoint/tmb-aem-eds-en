@@ -527,6 +527,13 @@
     <path d="M32 29.2109V31.5044" stroke="white" stroke-miterlimit="10" stroke-linecap="round" />
   </symbol>
 
+  <symbol id="checkmark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M27.9993 9.33312L11.9993 25.3331L4.66602 17.9998L6.54602 16.1198L11.9993 21.5598L26.1194 7.45312L27.9993 9.33312Z"
+      fill="currentColor" />
+  </symbol>
+
+
   <defs>
     <linearGradient id="paint0_linear_1365_7052" x1="21.799" y1="32.0035" x2="1.95302" y2="26.7183"
       gradientUnits="userSpaceOnUse">
@@ -559,8 +566,7 @@
     </linearGradient>
   </defs>
 
-  <symbol id="google-play-badge" viewBox="0 0 135 40" fill="none"
-    xmlns="http://www.w3.org/2000/svg">
+  <symbol id="google-play-badge" viewBox="0 0 135 40" fill="none" xmlns="http://www.w3.org/2000/svg">
     <mask id="mask0_1365_7052" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="135"
       height="40">
       <path d="M135 0H0V40H135V0Z" fill="white" />
