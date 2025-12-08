@@ -84,7 +84,7 @@
               "value": "momentum-image-saver"
             },
             {
-              "name": "Image Swapping",
+              "name": "Product Detail Variant",
               "value": "image-swapping"
             },
             {
@@ -98,10 +98,6 @@
             {
               "name": "Bg Image Saver",
               "value": "bg-image-saver"
-            },
-            {
-              "name": "Image Swapping",
-              "value": "image-swapping"
             },
             {
               "name": "online-banking",
