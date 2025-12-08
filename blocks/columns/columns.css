@@ -774,6 +774,10 @@
   outline:none;
 }
 
+.money-overseas-variant{
+  background-color:var(--bg-light-3);
+}
+
 .columns img{
   width:100%;
 }

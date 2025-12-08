@@ -230,6 +230,10 @@
             {
               "name": "Money Overseas",
               "value": "money-overseas"
+            },
+            {
+              "name": "Money Overseas Variant",
+              "value": "money-overseas-variant"
             }
           ]
         }
