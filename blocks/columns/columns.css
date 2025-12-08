@@ -666,7 +666,7 @@
   background:transparent;
   display:block;
   list-style:disc;
-  margin:16px 0 0;
+  margin:10px 0 0;
   padding:0 0 0 68px;
 }
 
@@ -677,14 +677,17 @@
 }
 
 .money-overseas .overseas-columns-wrapper ol > li p{
+  margin-bottom:0;
+}
+
+.money-overseas .overseas-columns-wrapper ol > li:not(.money-overseas .overseas-columns-wrapper ol > li:has(p)), .money-overseas .overseas-columns-wrapper ol > li:has(p) p{
   align-items:center;
   counter-increment:step-counter;
   display:flex;
   gap:12px;
-  margin-bottom:0;
 }
 
-.money-overseas .overseas-columns-wrapper ol > li p::before{
+.money-overseas .overseas-columns-wrapper ol > li:not(.money-overseas .overseas-columns-wrapper ol > li:has(p))::before, .money-overseas .overseas-columns-wrapper ol > li:has(p) p::before{
   align-items:center;
   border:1px solid rgb(0 82 91 / 10%);
   border-radius:50%;
