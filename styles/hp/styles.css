@@ -611,7 +611,6 @@ header{
 }
 .momentum-saver-section .momentum-columns .momentum-content .rate-percent{
   color:var(--heading-default);
-  font-size:32px;
   font-size:80px;
   font-style:normal;
   font-weight:700;
@@ -657,6 +656,23 @@ header{
   font-weight:400;
   line-height:24px;
   margin-bottom:24px;
+}
+.momentum-saver-section .momentum-columns .momentum-second-content p:has(a){
+  display:flex;
+  gap:8px;
+}
+.momentum-saver-section .momentum-columns .momentum-second-content p:has(a) a{
+  display:block;
+}
+.momentum-saver-section .momentum-columns .momentum-second-content p:has(a) a span{
+  display:block;
+}
+.momentum-saver-section .momentum-columns .momentum-second-content p:has(a) a svg{
+  display:flex;
+  height:40px;
+  justify-content:flex-start;
+  margin-top:32px;
+  width:135px;
 }
 .momentum-saver-section .momentum-columns .momentum-second-content .button-container{
   margin-bottom:unset;
@@ -752,8 +768,11 @@ header{
 }
 
 .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div{
-  flex-direction:row-reverse;
   gap:80px;
+}
+.momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .columns-img-col{
+  max-width:unset;
+  width:50%;
 }
 .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content h2{
   color:var(--heading-default);
@@ -762,7 +781,6 @@ header{
   font-style:normal;
   font-weight:900;
   line-height:40px;
-  width:74%;
 }
 .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content p{
   margin-bottom:0;
@@ -1020,11 +1038,11 @@ header{
     font-size:38px;
   }
   .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div{
-    flex-direction:column-reverse;
     gap:32px;
   }
   .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .columns-img-col{
     max-width:unset;
+    width:100%;
   }
   .product-navigation{
     background:var(--color-pagination-secondary-nav);

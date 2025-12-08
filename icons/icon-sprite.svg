@@ -559,7 +559,7 @@
     </linearGradient>
   </defs>
 
-  <symbol id="google-play-badge" width="135" height="40" viewBox="0 0 135 40" fill="none"
+  <symbol id="google-play-badge" viewBox="0 0 135 40" fill="none"
     xmlns="http://www.w3.org/2000/svg">
     <mask id="mask0_1365_7052" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="135"
       height="40">

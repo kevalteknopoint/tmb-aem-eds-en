@@ -1,52 +1,42 @@
 export default function decorateMomentumSaver() {
-  // const teaserContent = document.querySelector(".momentum-section .default-content-wrapper");
-  // teaserContent?.classList?.add("momentum-teaser-wrapper");
+  const allMomentumSections = document.querySelectorAll('.momentum-saver-section');
 
-  // const ulClassname = document.querySelector(".momentum-teaser-wrapper ul");
-  // ulClassname?.classList?.add("momentum-listing-wrapper");
+  allMomentumSections?.forEach((momentumSection) => {
+    const momentumWrapper = momentumSection?.querySelector("& .columns");
+    momentumWrapper?.classList?.add("momentum-columns");
 
-  // const tmbTeaser = document.querySelector(".momentum-block div");
-  // tmbTeaser?.classList?.add("tmb-teaser-content");
+    const momentumWrapperImg = momentumSection?.querySelector(".momentum-image-saver .columns");
+    momentumWrapperImg?.classList?.add("momentum-columns");
 
-  // const teaserCont = document.querySelector(".momentum-block div:nth-child(2)");
-  // teaserCont?.classList?.add("teaser-content");
+    const momentumWrapperImgSwap = momentumSection?.querySelector(".image-swapping .columns");
+    momentumWrapperImgSwap?.classList?.add("momentum-columns");
 
-  const momentumWrapper = document.querySelector(".momentum-saver-section .columns");
-  momentumWrapper?.classList?.add("momentum-columns");
+    const momentumWrapperdiv = momentumSection?.querySelector("&.left-percentage-section .momentum-columns > div > div");
+    momentumWrapperdiv?.classList?.add("momentum-content");
 
-  const momentumWrapperImg = document.querySelector(".momentum-image-saver .columns");
-  momentumWrapperImg?.classList?.add("momentum-columns");
+    const momentumWrapperseconddiv = momentumSection?.querySelector("& .momentum-columns > div > .momentum-content + div");
+    momentumWrapperseconddiv?.classList?.add("momentum-second-content");
 
-  const momentumWrapperImgSwap = document.querySelector(".image-swapping .columns");
-  momentumWrapperImgSwap?.classList?.add("momentum-columns");
+    const momentumWrapperSecondDivSaver = momentumSection?.querySelector("&.momentum-image-saver > .columns-wrapper > .momentum-columns > div > div:nth-child(2)");
+    momentumWrapperSecondDivSaver?.classList?.add("momentum-second-content");
 
-  const momentumWrapperdiv = document.querySelector(".momentum-saver-section.left-percentage-section .momentum-columns > div > div");
-  momentumWrapperdiv?.classList?.add("momentum-content");
+    const momentumWrapperSecondDivSaverSwap = momentumSection?.querySelector("&.momentum-image-saver.image-swapping > .columns-wrapper > .momentum-columns > div > div:nth-child(2)");
+    momentumWrapperSecondDivSaverSwap?.classList?.add("momentum-second-content");
 
-  const momentumWrapperseconddiv = document.querySelector(".momentum-saver-section .momentum-columns > div > .momentum-content + div");
-  momentumWrapperseconddiv?.classList?.add("momentum-second-content");
+    const variantText = momentumSection?.querySelector("&.background-color-teal");
+    if (variantText) {
+      const varText = momentumSection?.querySelector("&.background-color-teal > .columns-wrapper > .momentum-columns");
+      varText?.classList?.add("background-color-white");
+    }
 
-  const momentumWrapperSecondDivSaver = document.querySelector(".momentum-saver-section.momentum-image-saver > .columns-wrapper > .momentum-columns > div > div:nth-child(2)");
-  momentumWrapperSecondDivSaver?.classList?.add("momentum-second-content");
+    const interestRateWrap = momentumSection?.querySelector('& p:has(.interest-rate)');
+    if (!interestRateWrap) return;
 
-  const momentumWrapperSecondDivSaverSwap = document.querySelector(".momentum-saver-section.momentum-image-saver.image-swapping > .columns-wrapper > .momentum-columns > div > div:nth-child(2)");
-  momentumWrapperSecondDivSaverSwap?.classList?.add("momentum-second-content");
+    const interestRate = interestRateWrap?.querySelector('.interest-rate');
 
-  const variantText = document.querySelector(".momentum-saver-section.background-color-teal");
-  if (variantText) {
-    const varText = document.querySelector(".momentum-saver-section.background-color-teal > .columns-wrapper > .momentum-columns");
-    varText?.classList?.add("background-color-white");
-  }
+    if (!interestRate) return;
 
-  // 🔹 Add "% p.a" to all h2 elements inside momentum-content
-  // Add a separate "% p.a" element after each h2 inside .momentum-content
-  const interestRateWrap = document.querySelector('.momentum-saver-section p:has(.interest-rate)');
-  if (!interestRateWrap) return;
-
-  const interestRate = interestRateWrap?.querySelector('.interest-rate');
-
-  if (!interestRate) return;
-
-  interestRateWrap.insertAdjacentHTML('afterend', interestRate.innerHTML);
-  interestRateWrap.remove();
+    interestRateWrap.insertAdjacentHTML('afterend', interestRate.innerHTML);
+    interestRateWrap.remove();
+  });
 }
