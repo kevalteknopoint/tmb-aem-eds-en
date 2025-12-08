@@ -15,7 +15,10 @@ export default function decorate(block) {
     decorateCompareAccounts(block);
   } else if (block.closest('.money-overseas')) {
     decorateMoneyOverseas(block);
-  } else {
+  }else if (block.closest('.money-overseas-variant')) {
+    decorateMoneyOverseas(block);
+  }
+   else {
     const cols = [...block.firstElementChild.children];
     block.classList.add(`columns-${cols.length}-cols`);
 
