@@ -1,8 +1,8 @@
-@use '../../styles/mixins' as *;
+@use '../../styles/base' as *;
 
 .tmb-acc-sec.accordion-container {
-  background: #EDEDED;
-  padding: 80px 0;
+  background: $color-footer-info;
+  padding: 32px 0;
 
   @media (max-width: 720px) {
     padding: 40px 0px;
@@ -12,14 +12,13 @@
     padding: 40px 0px;
   }
 
-  .accordion {
-    margin: 0 auto;
-    max-width: 1452px;
-    padding: 0 40px;
+  .accordion-wrapper{
+    @include responsive-container();
+    .accordion {
 
-    @include mobile {
-      padding: 0 20px;
-    }
+      @include mobile {
+        padding: 0;
+      }
 
     details {
       border: none;
@@ -30,12 +29,13 @@
 
       p {
         margin: 0px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
       }
 
       .accordion-item-label {
         position: relative;
-        padding: 0 16px;
-        padding-right: 46px;
         cursor: pointer;
         list-style: none;
         overflow: auto;
@@ -43,63 +43,57 @@
         font-size: 24px;
         line-height: 32px;
         vertical-align: bottom;
-        color: #00525B;
+        color: $heading-default;
         transition: background-color 0.2s;
-
-        &:focus,
-        &:hover {
-          background-color: #EDEDED;
-        }
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        overflow: hidden;
 
         &::-webkit-details-marker {
           display: none;
         }
 
-        &::after {
-          content: '';
-          position: absolute;
-          top: 50%;
-          right: 18px;
-          transform: translateY(-50%) rotate(135deg);
-          width: 6px;
-          height: 6px;
-          border: 2px solid;
-          border-width: 2px 2px 0 0;
-          transition: transform 0.2s;
+        svg {
+          width: 24px;
+          height: 24px;
+          transition: all 0.3s ease-in-out;
+          transform: rotate(180deg);
         }
       }
 
       .accordion-item-body {
-        margin-top: 32px;
-        padding: 0 16px;
+        margin-top: 16px;
+        padding-right: 48px;
 
         @include mobile {
           margin-top: 18px;
+          padding-right: 24px;
         }
         
         p {
           font-weight: 400;
           font-size: 16px;
           line-height: 24px;
-          margin: 32px 0 0 0;
-          color: #333333;
+          margin: 0;
+          color: $body-default;
         }
       }
 
       &[open] {
         summary {
-          background-color: #EDEDED;
 
-          &::after {
-            transform: translateY(-50%) rotate(-45deg);
+          svg {
+            transform: rotate(0deg);
           }
         }
 
         .accordion-item-body {
           border-top: none;
-          background-color: #EDEDED;
         }
       }
     }
   }
+  }
+  
 }

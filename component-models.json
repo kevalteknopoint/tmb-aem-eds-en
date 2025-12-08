@@ -170,6 +170,22 @@
             "value": "momentum-section"
           },
           {
+            "name": "momentum-saver-section",
+            "value": "momentum-saver-section"
+          },
+          {
+            "name": "Momentum Image Saver",
+            "value": "momentum-image-saver"
+          },
+          {
+            "name": "Background Color Teal",
+            "value": "background-color-teal"
+          },
+          {
+            "name": "Bg Image Saver",
+            "value": "bg-image-saver"
+          },
+          {
             "name": "online-banking",
             "value": "online-banking"
           },
@@ -248,6 +264,10 @@
           {
             "name": "Section Wrapper",
             "value": "section-wrapper"
+          },
+          {
+            "name": "Banking Good",
+            "value": "banking-goods"
           }
         ]
       }
@@ -729,36 +749,6 @@
         "component": "text",
         "name": "container",
         "label": "Enter Form Container"
-      }
-    ]
-  },
-  {
-    "id": "tmb-teaser",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-      {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Style",
-        "options": [
-          {
-            "name": "momentum-block",
-            "value": "momentum-block"
-          }
-        ]
       }
     ]
   }

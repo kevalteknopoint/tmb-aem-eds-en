@@ -1,24 +1,15 @@
 export default async function decorate(block) {
-  const items = block.querySelectorAll('.quick-links > div > div');
+  const wrapperNode = block.querySelector('p');
+  let mainNode = wrapperNode;
 
-  items.forEach((item) => {
-    const heading = item.querySelector('p');
-    const ul = item.querySelector('ul');
+  if (wrapperNode?.querySelector('a')) mainNode = wrapperNode?.querySelector('a');
 
-    if (!heading || !ul) return;
-
-    heading.addEventListener('click', () => {
-      const isActive = ul.classList.contains('active');
-      items.forEach((other) => {
-        const otherUl = other.querySelector('ul');
-        if (otherUl) otherUl.classList.remove('active');
-      });
-
-      if (!isActive) {
-        const allLists = block?.closest('.quick-links-container').querySelectorAll('ul');
-        allLists.forEach((listItem) => listItem.classList.remove('active'));
-        ul.classList.add('active');
-      }
-    });
+  mainNode?.childNodes?.forEach((node) => {
+    if (node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0) {
+      const newSpan = document.createElement('span');
+      newSpan.className = 'quick-link-text';
+      newSpan.textContent = node.textContent;
+      node.replaceWith(newSpan);
+    }
   });
 }

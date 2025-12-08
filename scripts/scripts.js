@@ -1,3 +1,4 @@
+import decorateMomentumSaver from '../components/momentum-saver/momentum-saver.js';
 import {
   loadHeader,
   loadFooter,
@@ -47,10 +48,22 @@ export function moveInstrumentation(from, to) {
 }
 
 /**
+ * Get specific metadata value from the document.
+ * @param {string} name of the metadata tag.
+ */
+export function getMetadata(name) {
+  const attr = name && name.includes(":") ? "property" : "name";
+  const meta = [...document.head.querySelectorAll(`meta[${attr}="${name}"]`)]
+    .map((m) => m.content)
+    .join(", ");
+  return meta || "";
+}
+
+/**
  * load fonts.css and set a session storage flag
  */
 async function loadFonts() {
-  await loadCSS(`${window.hlx.codeBasePath}/styles/fonts.css`);
+  await loadCSS(`${window.hlx.codeBasePath}/styles/${getMetadata('theme')}/fonts.css`);
   try {
     if (!window.location.hostname.includes('localhost')) sessionStorage.setItem('fonts-loaded', 'true');
   } catch (e) {
@@ -146,6 +159,30 @@ function loadDelayed() {
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
+  try {
+    // 1. Fetch the SVG file from the server
+    const response = await fetch(`/icons/icon-sprite.svg`);
+
+    // 2. Check if the request was successful
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    // 3. Get the raw SVG text
+    const svgText = await response.text();
+
+    // 4. Use DOMParser to safely parse the text into a real SVG element
+    // This is safer than using .innerHTML as it avoids XSS risks
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(svgText, 'image/svg+xml');
+    const svgElement = doc.documentElement;
+
+    // 5. Add the SVG element to the container
+    document.body.appendChild(svgElement);
+  } catch (error) {
+    console.error('Error loading SVG:', error);
+  }
+  decorateMomentumSaver();
   loadDelayed();
 }
 

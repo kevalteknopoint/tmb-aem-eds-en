@@ -1,23 +1,21 @@
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
+@use '../../styles/base' as *;
 
 html {
   scroll-behavior: smooth;
 }
 
 .faq-heading-section {
-  max-width: 1328px;
-  margin: 0 auto;
+  @include responsive-container();
 
-  h1 {
-    color: $surface-highlight;
+  h1, h2, h3, h4, h5, h6 {
+    color: $heading-default;
     font-family: $primary-font;
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
     line-height: 44px;
     letter-spacing: 0;
-    padding: 32px;
+    padding: 32px 0;
     max-width: 1440px;
     transition: opacity 0.4s ease, transform 0.4s ease;
     opacity: 1;
@@ -26,7 +24,7 @@ html {
     @include tablet {
       font-size: 32px;
       line-height: 40px;
-      padding: 24px 16px 0;
+      padding: 24px 0 0;
     }
 
     &[style*="none"] {
@@ -37,16 +35,13 @@ html {
 }
 
 .section-wrapper {
-  max-width: 1328px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   column-gap: 74px;
   row-gap: 32px;
-  font-family: "Open Sans", sans-serif;
   position: relative;
   align-items: start;
-  padding: 32px;
+  padding-block: 32px;
 
   &:has(.right-section-wrapper) {
     grid-template-columns: 1fr 392px; // Left | Right
@@ -56,8 +51,10 @@ html {
     display: none;
   }
 
+  @include responsive-container();
+
   @include tablet {
-    padding: 24px 16px;
+    padding-block: 24px;
   }
 
   .sub-section-wrapper h3[id] {
@@ -69,8 +66,7 @@ html {
     grid-row: auto;
 
     h3 {
-      color: #0B231F;
-      font-family: $primary-font;
+      color: $body-default;
       font-size: 20px;
       font-style: normal;
       font-weight: 500;
@@ -80,8 +76,7 @@ html {
     }
 
     h1, p, h2, h4, h5, h6, li {
-      color: $surface-prim-active-cta;
-      font-family: $primary-font;
+      color: $body-default;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
@@ -110,9 +105,9 @@ html {
     }
 
     a {
-      color: $text-brand;
+      color: $link-default;
       text-decoration: underline;
-      text-decoration-color: $text-brand;
+      text-decoration-color: $link-default;
     }
 
     iframe {
@@ -134,16 +129,15 @@ html {
     height: max-content;
     width: 326px;
 
-    h2 {
-      color: $text-secondary-cta;
-      font-family: $primary-font;
+    h1, h2, h3, h4, h5, h6 {
+      color: $heading-default;
       font-size: 32px;
       font-style: normal;
       font-weight: 600;
       line-height: 36px;
       letter-spacing: -1px;
       padding: 12px 0;
-      border-bottom: 1px solid rgba(0, 82, 91, 0.20);
+      border-bottom: 1px solid #00525b33; /* FIGMA TOKEN MISSING */
       overflow: hidden;
       transition: all 0.3s ease-in-out;
 
@@ -153,8 +147,7 @@ html {
     }
 
     p {
-      color: $text-secondary;
-      font-family: $primary-font;
+      color: #565659; /* FIGMA TOKEN MISSING */
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
@@ -169,7 +162,7 @@ html {
       gap: 4px;
       flex: 1 0 0;
       padding-bottom: 24px;
-      border-bottom: 1px solid rgba(0, 82, 91, 0.20);
+      border-bottom: 1px solid #00525b33; /* FIGMA TOKEN MISSING */
 
       .faq-number {
         display: block;
@@ -179,7 +172,7 @@ html {
 
       a {
         padding: 5px;
-        color: $surface-prim-active-cta;
+        color: $body-default;
         text-decoration: none;
         transition: color 0.3s;
         width: 100%;
@@ -190,7 +183,7 @@ html {
       }
 
       a.active {
-        background-color: #00525B12;
+        background-color: $color-footer-info;
         transition: 0.3s;
       }
 
@@ -198,8 +191,7 @@ html {
         display: flex;
         align-items: center;
         gap: 6px;
-        color: #0B231F;
-        font-family: $primary-font;
+        color: $body-default;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
