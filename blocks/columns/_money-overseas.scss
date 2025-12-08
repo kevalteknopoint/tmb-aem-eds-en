@@ -100,7 +100,7 @@
       }
     }
 
-    ol > li {
+    ol>li {
       margin-bottom: 10px;
       font-size: 16px;
       color: $body-default;
@@ -108,8 +108,9 @@
       p {
         margin-bottom: 0;
       }
-      
-      &:not(&:has(p)), &:has(p) p {
+
+      &:not(&:has(p)),
+      &:has(p) p {
         counter-increment: step-counter;
         display: flex;
         gap: 12px;
@@ -179,7 +180,7 @@
 
     .button-container {
       margin-bottom: 0;
-      
+
       @include button('primary');
     }
   }
@@ -193,6 +194,34 @@
 
   // }
 }
-.money-overseas-variant{
-  background-color: $bg-light-3;
+
+.money-overseas-variant {
+  background: var(--bg, rgba(89, 255, 160, 0.10));
+
+  .overseas-columns {
+    .overseas-columns-wrapper {
+      div {
+
+        h1,
+        h2,
+        h3 {
+          color: $heading-default;
+          font-size: 40px;
+          font-weight: 900;
+          line-height: 40px;
+          white-space: normal;
+          overflow-wrap: break-word;
+          max-width: 370px;
+          width: fit-content;
+          font-family: $secondary-font;
+
+        }
+
+      }
+        .button-container {
+          @include button('outlined');
+        }
+    }
+  }
+
 }
