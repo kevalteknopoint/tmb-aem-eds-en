@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Teachers form Block",
+      "title": "Transformd form",
       "id": "teachers-form-block",
       "plugins": {
         "xwalk": {
