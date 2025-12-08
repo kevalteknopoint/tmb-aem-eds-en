@@ -820,6 +820,33 @@
   outline:none;
 }
 
+.overseas-variant .overseas-columns .overseas-columns-wrapper div h1,
+.overseas-variant .overseas-columns .overseas-columns-wrapper div h2,
+.overseas-variant .overseas-columns .overseas-columns-wrapper div h3{
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
+  font-size:40px;
+  font-weight:900;
+  line-height:40px;
+  max-width:370px;
+  overflow-wrap:break-word;
+  white-space:normal;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
+.overseas-variant .overseas-columns .overseas-columns-wrapper div p{
+  display:flex;
+  gap:16px;
+}
+
+.overseas-variant .overseas-columns .overseas-columns-wrapper div p .icon-svg{
+  aspect-ratio:1/1;
+  color:var(--heading-default);
+  height:32px;
+  width:32px;
+}
+
 .columns img{
   width:100%;
 }

@@ -216,12 +216,46 @@
           font-family: $secondary-font;
 
         }
-
       }
-        .button-container {
-          @include button('outlined');
-        }
+
+      .button-container {
+        @include button('outlined');
+      }
     }
   }
 
+}
+
+.overseas-variant {
+  .overseas-columns {
+    .overseas-columns-wrapper {
+      div {
+         h1,
+        h2,
+        h3 {
+          color: $heading-default;
+          font-size: 40px;
+          font-weight: 900;
+          line-height: 40px;
+          white-space: normal;
+          overflow-wrap: break-word;
+          max-width: 370px;
+          width: fit-content;
+          font-family: $secondary-font;
+
+        }
+        p {
+          display: flex;
+          gap: 16px;
+
+          .icon-svg {
+            width: 32px;
+            height: 32px;
+            aspect-ratio: 1 / 1;
+            color: $heading-default;
+          }
+        }
+      }
+    }
+  }
 }

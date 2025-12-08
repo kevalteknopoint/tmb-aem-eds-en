@@ -224,6 +224,10 @@
               "value": "news-helpful"
             },
             {
+              "name": "Overseas Variant",
+              "value": "overseas-variant"
+            },
+            {
               "name": "Money Overseas",
               "value": "money-overseas"
             },
