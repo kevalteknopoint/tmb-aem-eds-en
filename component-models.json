@@ -684,7 +684,7 @@
         "name": "branch",
         "component": "select",
         "type": "select",
-        "label": "Select environment branch",
+        "label": "Select channel",
         "options": [
           {
             "name": "Staging",
@@ -700,7 +700,7 @@
         "name": "channel",
         "component": "select",
         "type": "select",
-        "label": "Select channel",
+        "label": "Select environment branch",
         "options": [
           {
             "name": "TeacherTeachers Mutual Bank",
@@ -724,6 +724,11 @@
         "component": "text",
         "name": "config",
         "label": "Enter Form Config"
+      },
+      {
+        "component": "text",
+        "name": "container",
+        "label": "Enter Form Container"
       }
     ]
   },

@@ -91,6 +91,7 @@ export default function decorate(block) {
       envt: getTextContent(block, '.form-item6 .form-inner-item1'),
       channel: getTextContent(block, '.form-item7 .form-inner-item1'),
       config: getTextContent(block, '.form-item8 .form-inner-item1'),
+      container: getTextContent(block, '.form-item9 .form-inner-item1'),
     };
 
     // Validate required fields
@@ -102,7 +103,7 @@ export default function decorate(block) {
 
     // Generate unique form ID to avoid conflicts
     formInstanceCounter += 1;
-    const formContainerId = `formcorp-form-${formInstanceCounter}`;
+    const formContainerId = `${cfg.container}-${formInstanceCounter}`;
 
     block.innerHTML = "";
 
