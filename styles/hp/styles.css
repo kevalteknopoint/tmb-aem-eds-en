@@ -1056,6 +1056,9 @@ header{
     box-shadow:none;
     padding:20px 24px;
   }
+  .interest-table-section .default-content-wrapper .ul-1 li ul li:nth-child(even){
+    text-align:right;
+  }
   :root{
     --carousel-card-fix:264px;
     --carousel-fix-x:24px;
@@ -1155,6 +1158,9 @@ header{
     font-size:38px;
     line-height:38px;
     margin-bottom:24px;
+  }
+  .interest-table-section .default-content-wrapper .ul-1 li ul li:nth-child(even){
+    text-align:left;
   }
   :root{
     --carousel-card-fix:300px;

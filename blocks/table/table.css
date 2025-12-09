@@ -85,6 +85,12 @@
   }
 }
 
+@media screen and (max-width: 1023px){
+  .interest-table-section .default-content-wrapper .ul-1 li ul li:nth-child(even){
+    text-align:right;
+  }
+}
+
 @media screen and (max-width: 767px){
   .interest-table-section{
     padding-inline:16px;
@@ -94,5 +100,9 @@
     font-size:38px;
     line-height:38px;
     margin-bottom:24px;
+  }
+
+  .interest-table-section .default-content-wrapper .ul-1 li ul li:nth-child(even){
+    text-align:left;
   }
 }

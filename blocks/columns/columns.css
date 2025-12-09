@@ -714,6 +714,10 @@
   margin-bottom:0;
 }
 
+.money-overseas .overseas-columns-wrapper ul li{
+  margin-bottom:8px;
+}
+
 .money-overseas .overseas-columns-wrapper ul li .overseas-columns-wrapper-ul{
   align-items:flex-start;
   align-self:stretch;
@@ -729,6 +733,7 @@
   font-size:14px;
   font-weight:600;
   line-height:21px;
+  margin-bottom:0;
   min-width:130px;
   width:-moz-fit-content;
   width:fit-content;

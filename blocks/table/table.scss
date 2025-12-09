@@ -63,6 +63,14 @@
 
                     li:nth-child(even) {
                         padding: 16px 16px 16px 8px;
+                        
+                        @include tablet {
+                          text-align: right;
+                        }
+
+                        @include mobile {
+                          text-align: left;
+                        }
                     }
                 }
                 
