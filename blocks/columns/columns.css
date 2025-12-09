@@ -1,4 +1,4 @@
-.money-overseas .overseas-columns-wrapper .button-container, .money-overseas-variant .overseas-columns .overseas-columns-wrapper .button-container, .section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active a, .customer .columns-wrapper .block .columns-container div p.button-container a, .customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a{
+.money-overseas .overseas-columns-wrapper .button-container, .money-overseas-variant .overseas-columns .overseas-columns-wrapper .button-container a, .section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active a, .customer .columns-wrapper .block .columns-container div p.button-container a, .customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a{
   align-items:center;
   border:none;
   border-radius:var(--radius-button);
@@ -793,7 +793,7 @@
   width:fit-content;
 }
 
-.money-overseas-variant .overseas-columns .overseas-columns-wrapper .button-container{
+.money-overseas-variant .overseas-columns .overseas-columns-wrapper .button-container a{
   background-color:var(--color-button-outlined-default);
   border:var(--stroke-button) solid var(--color-button-text-stroke-default);
   color:var(--color-button-text-stroke-default);
@@ -803,19 +803,19 @@
   padding-block:6px;
 }
 
-.money-overseas-variant .overseas-columns .overseas-columns-wrapper .button-container:hover{
+.money-overseas-variant .overseas-columns .overseas-columns-wrapper .button-container a:hover{
   background-color:var(--color-button-outlined-hover);
   border:var(--stroke-button) solid var(--color-button-text-stroke-hover);
   color:var(--color-button-text-stroke-hover);
 }
 
-.money-overseas-variant .overseas-columns .overseas-columns-wrapper .button-container:active{
+.money-overseas-variant .overseas-columns .overseas-columns-wrapper .button-container a:active{
   background-color:var(--color-button-outlined-press);
   border:var(--stroke-button) solid var(--color-button-text-stroke-press);
   color:var(--color-button-text-stroke-press);
 }
 
-.money-overseas-variant .overseas-columns .overseas-columns-wrapper .button-container:focus-visible{
+.money-overseas-variant .overseas-columns .overseas-columns-wrapper .button-container a:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
 }
@@ -837,14 +837,25 @@
 
 .overseas-variant .overseas-columns .overseas-columns-wrapper div p{
   display:flex;
-  gap:16px;
+  margin-bottom:10px;
 }
 
-.overseas-variant .overseas-columns .overseas-columns-wrapper div p .icon-svg{
+.overseas-variant .overseas-columns .overseas-columns-wrapper div p .icon-checkmark{
+  margin-right:16px;
+}
+
+.overseas-variant .overseas-columns .overseas-columns-wrapper div p .icon-checkmark .icon-svg{
   aspect-ratio:1/1;
   color:var(--heading-default);
   height:32px;
+  max-width:unset;
   width:32px;
+}
+
+.overseas-variant .overseas-columns .overseas-columns-wrapper div p:not(.button-container) a{
+  color:var(--link-default);
+  text-decoration:underline;
+  text-underline-offset:3px;
 }
 
 .columns img{

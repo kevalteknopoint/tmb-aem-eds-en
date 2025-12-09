@@ -218,7 +218,7 @@
         }
       }
 
-      .button-container {
+      .button-container a {
         @include button('outlined');
       }
     }
@@ -230,7 +230,8 @@
   .overseas-columns {
     .overseas-columns-wrapper {
       div {
-         h1,
+
+        h1,
         h2,
         h3 {
           color: $heading-default;
@@ -244,18 +245,37 @@
           font-family: $secondary-font;
 
         }
+
         p {
           display: flex;
-          gap: 16px;
+          
+          margin-bottom: 10px;
 
-          .icon-svg {
-            width: 32px;
-            height: 32px;
-            aspect-ratio: 1 / 1;
-            color: $heading-default;
+          .icon-checkmark {
+            margin-right: 16px;
+            .icon-svg {
+              width: 32px;
+              height: 32px;
+              aspect-ratio: 1 / 1;
+              max-width: unset;
+              color: $heading-default;
+            }
           }
+          &:not(.button-container) a{
+              color: var(--link-default);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+          }
+        }
+
+        .overseas-para:not(p:has(.icon)) {
+          a {
+            
+          }
+
+
+
         }
       }
     }
-  }
-}
+  }}
