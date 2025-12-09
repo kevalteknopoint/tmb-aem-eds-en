@@ -95,19 +95,19 @@
   --font-d-size-intro: 24px; /* from "font/--D/size/intro" */
   --font-d-size-lg: 60px; /* from "font/--D/size/lg" */
   --font-d-size-sm-body: 14px; /* from "font/--D/size/sm-body" */
-  --font-family-body-bold: Inter; /* from "font/family/body-bold" */
-  --font-family-body: Inter; /* from "font/family/body" */
-  --font-family-disc: Inter; /* from "font/family/disc" */
-  --font-family-h1-std: 'Avenir LT Std'; /* from "font/family/h1-std" */
-  --font-family-h1: 'Avenir LT Std'; /* from "font/family/h1" */
-  --font-family-h2-std: 'Avenir LT Std'; /* from "font/family/h2-std" */
-  --font-family-h2: 'Avenir LT Std'; /* from "font/family/h2" */
-  --font-family-h3: Inter; /* from "font/family/h3" */
-  --font-family-h4: Inter; /* from "font/family/h4" */
-  --font-family-h5: Inter; /* from "font/family/h5" */
-  --font-family-intro: Inter; /* from "font/family/intro" */
-  --font-family-lg: 'Avenir LT Std'; /* from "font/family/lg" */
-  --font-family-sm-body: Inter; /* from "font/family/sm-body" */
+  --font-family-body-bold: var(--primary-font); /* from "font/family/body-bold" */
+  --font-family-body: var(--primary-font); /* from "font/family/body" */
+  --font-family-disc: var(--primary-font); /* from "font/family/disc" */
+  --font-family-h1-std: var(--secondary-font); /* from "font/family/h1-std" */
+  --font-family-h1: var(--secondary-font); /* from "font/family/h1" */
+  --font-family-h2-std: var(--secondary-font); /* from "font/family/h2-std" */
+  --font-family-h2: var(--secondary-font); /* from "font/family/h2" */
+  --font-family-h3: var(--primary-font); /* from "font/family/h3" */
+  --font-family-h4: var(--primary-font); /* from "font/family/h4" */
+  --font-family-h5: var(--primary-font); /* from "font/family/h5" */
+  --font-family-intro: var(--primary-font); /* from "font/family/intro" */
+  --font-family-lg: var(--secondary-font); /* from "font/family/lg" */
+  --font-family-sm-body: var(--primary-font); /* from "font/family/sm-body" */
   --font-letter-spacing-body: 0px; /* from "font/letter-spacing/body" */
   --font-letter-spacing-disc: 0px; /* from "font/letter-spacing/disc" */
   --font-letter-spacing-h1-std: -1px; /* from "font/letter-spacing/h1-std" */
@@ -168,21 +168,21 @@
   --font-t-size-intro: 24px; /* from "font/--T/size/intro" */
   --font-t-size-lg: 52px; /* from "font/--T/size/lg" */
   --font-t-size-sm-body: 14px; /* from "font/--T/size/sm-body" */
-  --font-weight-body-bold: 'Semi Bold'; /* from "font/weight/body-bold" */
-  --font-weight-body: Regular; /* from "font/weight/body" */
-  --font-weight-disc: Regular; /* from "font/weight/disc" */
-  --font-weight-h1-std: '95 Black'; /* from "font/weight/h1-std" */
-  --font-weight-h1: '95 Black'; /* from "font/weight/h1" */
-  --font-weight-h2-std: '95 Black'; /* from "font/weight/h2-std" */
-  --font-weight-h2: '95 Black'; /* from "font/weight/h2" */
-  --font-weight-h3: Medium; /* from "font/weight/h3" */
-  --font-weight-h4: Medium; /* from "font/weight/h4" */
-  --font-weight-h5: Medium; /* from "font/weight/h5" */
-  --font-weight-intro: Regular; /* from "font/weight/intro" */
-  --font-weight-lg: '95 Black'; /* from "font/weight/lg" */
-  --font-weight-rate-p-a: '55 Roman'; /* from "font/weight/rate-p-a" */
-  --font-weight-rate: '95 Black'; /* from "font/weight/rate" */
-  --font-weight-sm-body: Regular; /* from "font/weight/sm-body" */
+  --font-weight-body-bold: 600; /* from "font/weight/body-bold" */
+  --font-weight-body: 400; /* from "font/weight/body" */
+  --font-weight-disc: 400; /* from "font/weight/disc" */
+  --font-weight-h1-std: 900; /* from "font/weight/h1-std" */
+  --font-weight-h1: 900; /* from "font/weight/h1" */
+  --font-weight-h2-std: 900; /* from "font/weight/h2-std" */
+  --font-weight-h2: 900; /* from "font/weight/h2" */
+  --font-weight-h3: 500; /* from "font/weight/h3" */
+  --font-weight-h4: 500; /* from "font/weight/h4" */
+  --font-weight-h5: 500; /* from "font/weight/h5" */
+  --font-weight-intro: 400; /* from "font/weight/intro" */
+  --font-weight-lg: 900; /* from "font/weight/lg" */
+  --font-weight-rate-p-a: 500; /* from "font/weight/rate-p-a" */
+  --font-weight-rate: 900; /* from "font/weight/rate" */
+  --font-weight-sm-body: 400; /* from "font/weight/sm-body" */
   --lg-rate: 150px; /* from "lg-rate" */
   --radius-article-thumb: 0px; /* from "radius/article-thumb" */
   --radius-button: 2px; /* from "radius/button" */

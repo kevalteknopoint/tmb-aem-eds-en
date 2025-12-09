@@ -11,7 +11,7 @@
 
 @font-face{
   font-display:swap;
-  font-family:'Roboto';
+  font-family:Roboto;
   font-style:normal;
   font-weight:500;
   src:url('../../fonts/roboto.woff2') format('woff2');
