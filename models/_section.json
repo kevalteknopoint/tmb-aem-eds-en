@@ -56,6 +56,10 @@
               "value": "bottom-padding"
             },
             {
+              "name": "Bottom Partition",
+              "value": "bottom-partition"
+            },
+            {
               "name": "secfirst",
               "value": "secfirst"
             },

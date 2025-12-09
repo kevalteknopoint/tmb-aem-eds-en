@@ -462,6 +462,21 @@ header{
   padding-bottom:80px;
 }
 
+.bottom-partition{
+  position:relative;
+}
+.bottom-partition::after{
+  background:var(--line-default);
+  bottom:0;
+  content:"";
+  height:1px;
+  left:0;
+  margin:0 auto;
+  position:absolute;
+  right:0;
+  width:calc(100% - 128px);
+}
+
 .momentum-saver-section{
   align-items:center;
   background-color:#fff;
@@ -887,6 +902,9 @@ header{
   .bottom-padding{
     padding-bottom:64px;
   }
+  .bottom-partition::after{
+    width:calc(100% - 48px);
+  }
   .momentum-saver-section .columns-wrapper{
     padding-inline:24px;
   }
@@ -999,6 +1017,9 @@ header{
   }
   .bottom-padding{
     padding-bottom:40px;
+  }
+  .bottom-partition::after{
+    width:calc(100% - 32px);
   }
   .momentum-saver-section .columns-wrapper{
     padding-inline:16px;

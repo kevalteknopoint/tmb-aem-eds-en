@@ -568,18 +568,6 @@
   position:relative;
 }
 
-.section.faq-cant-find-looking-for.rates-saver::after{
-  background:var(--line-default);
-  bottom:0;
-  content:"";
-  height:1px;
-  left:0;
-  margin:0 auto;
-  position:absolute;
-  right:0;
-  width:calc(100% - 128px);
-}
-
 .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul{
   grid-template-columns:1fr 1fr 1fr;
 }
@@ -1082,10 +1070,6 @@ html{
     padding-inline:24px;
   }
 
-  .section.faq-cant-find-looking-for.rates-saver::after{
-    width:calc(100% - 48px);
-  }
-
   .banking-goods{
     padding-inline:24px;
   }
@@ -1450,10 +1434,6 @@ html{
 
   .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container{
     margin-bottom:0;
-  }
-
-  .section.faq-cant-find-looking-for.rates-saver::after{
-    width:calc(100% - 32px);
   }
 
   .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li{
