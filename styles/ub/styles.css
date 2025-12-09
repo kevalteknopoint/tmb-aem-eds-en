@@ -94,8 +94,8 @@ h1, h2, h3, h4, h5, h6{
 }
 :root{
   --primary-font:"Inter", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
-  --secondary-font:"American Grotesk", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
-  --gradient-1:linear-gradient(46.23deg, #59ffa0 1.03%, #1be7ff 98.97%);
+  --secondary-font:"DIN Next W1G", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
+  --gradient-1:#e6f7fe;
   --color-button-outlined-default:#ffffff03;
   --color-button-outlined-hover:#00aeef1a;
   --color-button-outlined-press:#00aeef33;
