@@ -100,7 +100,7 @@
       }
     }
 
-    ol > li {
+    ol>li {
       margin-bottom: 10px;
       font-size: 16px;
       color: $body-default;
@@ -108,8 +108,9 @@
       p {
         margin-bottom: 0;
       }
-      
-      &:not(&:has(p)), &:has(p) p {
+
+      &:not(&:has(p)),
+      &:has(p) p {
         counter-increment: step-counter;
         display: flex;
         gap: 12px;
@@ -182,7 +183,7 @@
 
     .button-container {
       margin-bottom: 0;
-      
+
       @include button('primary');
     }
   }
@@ -196,3 +197,88 @@
 
   // }
 }
+
+.money-overseas-variant {
+  background: var(--bg, rgba(89, 255, 160, 0.10));
+
+  .overseas-columns {
+    .overseas-columns-wrapper {
+      div {
+
+        h1,
+        h2,
+        h3 {
+          color: $heading-default;
+          font-size: 40px;
+          font-weight: 900;
+          line-height: 40px;
+          white-space: normal;
+          overflow-wrap: break-word;
+          max-width: 370px;
+          width: fit-content;
+          font-family: $secondary-font;
+
+        }
+      }
+
+      .button-container a {
+        @include button('outlined');
+      }
+    }
+  }
+
+}
+
+.overseas-variant {
+  .overseas-columns {
+    .overseas-columns-wrapper {
+      div {
+
+        h1,
+        h2,
+        h3 {
+          color: $heading-default;
+          font-size: 40px;
+          font-weight: 900;
+          line-height: 40px;
+          white-space: normal;
+          overflow-wrap: break-word;
+          max-width: 370px;
+          width: max-content;
+          font-family: $secondary-font;
+
+        }
+
+        p {
+          display: flex;
+          
+          margin-bottom: 10px;
+
+          .icon-checkmark {
+            margin-right: 16px;
+            .icon-svg {
+              width: 32px;
+              height: 32px;
+              aspect-ratio: 1 / 1;
+              max-width: unset;
+              color: $heading-default;
+            }
+          }
+          &:not(.button-container) a{
+              color: var(--link-default);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+          }
+        }
+
+        .overseas-para:not(p:has(.icon)) {
+          a {
+            
+          }
+
+
+
+        }
+      }
+    }
+  }}

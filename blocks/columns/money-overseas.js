@@ -19,4 +19,5 @@ export default function decorateMoneyOverseas() {
   document
     .querySelectorAll(".money-overseas .overseas-columns  ul li ul")
     .forEach((el) => el.classList.add("overseas-columns-wrapper-ul"));
+
 }
