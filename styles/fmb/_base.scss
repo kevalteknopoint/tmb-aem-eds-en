@@ -1,15 +1,7 @@
-@forward './base-old';
+@forward './base-custom';
 @import '../../libs/aos/aos.min.css';
 
 :root {
-  /* ---------- FONTS VARIABLES ---------- */
-  --primary-font: 'Inter', system-ui, -apple-system, 'BlinkMacSystemFont', "Segoe UI", 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  --secondary-font: 'Avenir LT Std', system-ui, -apple-system, 'BlinkMacSystemFont', "Segoe UI", 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  
-  /* ---------- CUSTOM VARIABLES ---------- */
-  --gradient-1: #ecf8fd;
-  
-  /* ---------- OTHER VARIABLES ---------- */
   --color-button-outlined-default: #ffffff03; /* from "color/button/outlined/default" */
   --color-button-outlined-hover: #0037641a; /* from "color/button/outlined/hover" */
   --color-button-outlined-press: #00376433; /* from "color/button/outlined/press" */
@@ -52,6 +44,7 @@
   --color-variants-bg-light-1: #f7f7f7; /* from "color/variants/bg/light-1" */
   --color-variants-bg-light-2: #ecf8fd; /* from "color/variants/bg/light-2" */
   --color-variants-bg-light-3: #a2daf3; /* from "color/variants/bg/light-3" */
+  --color-variants-bg-light-4: #a2daf333; /* from "color/variants/bg/light-4" */
   --color-variants-bg-promo: #003764; /* from "color/variants/bg/promo" */
   --color-variants-bg-reverse: #003764; /* from "color/variants/bg/reverse" */
   --color-variants-body-default: #565659; /* from "color/variants/body/default" */
@@ -71,6 +64,8 @@
   --color-variants-link-default: #003764; /* from "color/variants/link/default" */
   --color-variants-link-reverse-2: #a2daf3; /* from "color/variants/link/reverse-2" */
   --color-variants-link-reverse: #ffffff; /* from "color/variants/link/reverse" */
+  --color-variants-number-list-default: #0037641a; /* from "color/variants/number-list/default" */
+  --color-variants-number-list-reverse: #ffffff1a; /* from "color/variants/number-list/reverse" */
   --color-variants-stroke-accent: #c8e1e4; /* from "color/variants/stroke/accent" */
   --color-variants-stroke-primary: #003764; /* from "color/variants/stroke/primary" */
   --color-variants-stroke-reversed-2: #ffffff; /* from "color/variants/stroke/reversed-2" */
@@ -185,6 +180,8 @@
   --font-weight-h5: Medium; /* from "font/weight/h5" */
   --font-weight-intro: Regular; /* from "font/weight/intro" */
   --font-weight-lg: '95 Black'; /* from "font/weight/lg" */
+  --font-weight-rate-p-a: '55 Roman'; /* from "font/weight/rate-p-a" */
+  --font-weight-rate: '95 Black'; /* from "font/weight/rate" */
   --font-weight-sm-body: Regular; /* from "font/weight/sm-body" */
   --lg-rate: 150px; /* from "lg-rate" */
   --radius-article-thumb: 0px; /* from "radius/article-thumb" */
@@ -192,6 +189,7 @@
   --radius-card: 0px; /* from "radius/card" */
   --radius-footer-card: 0px; /* from "radius/footer-card" */
   --radius-hero: 0px; /* from "radius/hero" */
+  --radius-info-well: 0px; /* from "radius/info-well" */
   --radius-menu-link: 0px; /* from "radius/menu-link" */
   --stroke-button: 2px; /* from "stroke/button" */
   --width-logo-lg: 150px; /* from "width/logo/lg" */
@@ -254,6 +252,14 @@
   --icon-reverse-2: var(--color-variants-icon-default);
   --icon-reverse: var(--color-variants-icon-default);
   --icon-transparent: var(--color-variants-icon-accent);
+  --info-well-accent: #ffffff1a;
+  --info-well-default: var(--color-variants-bg-light-4);
+  --info-well-light-2: #ffffff4d;
+  --info-well-light-3: #ffffff1a;
+  --info-well-light: #ffffff;
+  --info-well-reverse-2: #ffffff1a;
+  --info-well-reverse: #ffffff1a;
+  --info-well-transparent: var(--color-variants-bg-light-4);
   --line-accent: var(--color-variants-line-default);
   --line-default: var(--color-variants-line-default);
   --line-light-2: var(--color-variants-line-default);
@@ -270,6 +276,14 @@
   --link-reverse-2: var(--color-variants-link-reverse-2);
   --link-reverse: var(--color-variants-link-reverse);
   --link-transparent: var(--color-variants-link-default);
+  --number-list-accent: var(--color-variants-number-list-reverse);
+  --number-list-default: var(--color-variants-number-list-default);
+  --number-list-light-2: var(--color-variants-number-list-default);
+  --number-list-light-3: var(--color-variants-number-list-default);
+  --number-list-light: var(--color-variants-number-list-default);
+  --number-list-reverse-2: var(--color-variants-number-list-reverse);
+  --number-list-reverse: var(--color-variants-number-list-reverse);
+  --number-list-transparent: var(--color-variants-number-list-default);
   --stroke-accent: var(--color-variants-stroke-accent);
   --stroke-default: var(--color-variants-stroke-primary);
   --stroke-light-2: var(--color-variants-stroke-primary);

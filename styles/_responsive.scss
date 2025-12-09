@@ -1,20 +1,6 @@
 @use 'mixins' as *;
 
 :root {
-  /* ------ SPACING ------ */
-  --layout-container-max-hero: 1728px;
-  --layout-container-max: 1440px;
-  --space-2xl: 80px;
-  --space-2xs: 8px;
-  --space-3xl: 96px;
-  --space-3xs: 4px;
-  --space-lg: 40px;
-  --space-md: 32px;
-  --space-sm: 24px;
-  --space-xl: 64px;
-  --space-xs: 16px;
-
-  /* ------ OTHERS ------ */
   --carousel-card-fix: 304px;
   --carousel-fix-x: 64px;
   --col-1-2-2: 640px;
@@ -51,6 +37,7 @@
   --guide-gutter: 32px;
   --guide-width: 72px;
   --jump-menu-fix: 40px;
+  --padding-jump-container-x: 24px;
   --padding-main-container-x: 64px;
   --padding-section-y: 80px;
   --radius-hero: 0px;
@@ -136,6 +123,7 @@
     --jump-menu-fix: 64px;
     --mobile-tablet-visible: true;
     --mobile-visible: true;
+    --padding-jump-container-x: 16px;
     --padding-main-container-x: 16px;
     --padding-section-y: 40px;
     --spacer: 0px;
@@ -166,6 +154,7 @@
     --jump-menu-fix: 64px;
     --mobile-tablet-visible: true;
     --mobile-visible: true;
+    --padding-jump-container-x: 16px;
     --padding-main-container-x: 16px;
     --padding-section-y: 40px;
     --spacer: 0px;
@@ -173,4 +162,3 @@
     --width-thumbnail: 175px;
   }
 }
-
