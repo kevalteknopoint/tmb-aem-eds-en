@@ -183,28 +183,20 @@
 
     .button-container {
       margin-bottom: 0;
-
-      @include button('primary');
+      
+      a {
+        @include button('primary');
+      }
     }
   }
-
-  // .overseas-columns-sec {
-  //     padding-top: 80px;
-  //     gap: 80px;
-  //     display: flex;
-  //     align-items: baseline;
-  //     margin-bottom: 40px;
-
-  // }
 }
 
 .money-overseas-variant {
-  background: var(--bg, rgba(89, 255, 160, 0.10));
+  background: $bg-light-3;
 
   .overseas-columns {
     .overseas-columns-wrapper {
       div {
-
         h1,
         h2,
         h3 {
@@ -233,7 +225,6 @@
   .overseas-columns {
     .overseas-columns-wrapper {
       div {
-
         h1,
         h2,
         h3 {
@@ -251,11 +242,11 @@
 
         p {
           display: flex;
-          
           margin-bottom: 10px;
 
           .icon-checkmark {
             margin-right: 16px;
+
             .icon-svg {
               width: 32px;
               height: 32px;
@@ -264,20 +255,12 @@
               color: $heading-default;
             }
           }
+
           &:not(.button-container) a{
-              color: var(--link-default);
+            color: var(--link-default);
             text-decoration: underline;
             text-underline-offset: 3px;
           }
-        }
-
-        .overseas-para:not(p:has(.icon)) {
-          a {
-            
-          }
-
-
-
         }
       }
     }
