@@ -18,12 +18,15 @@
 
     .default-content-wrapper{
         h2{
+            @include typo-heading1;
+
             color: $heading-default;
             font-family: $secondary-font;
-            font-size: 40px;
-            line-height: 40px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+
+            // font-size: 40px;
+            // line-height: 40px;
+            // letter-spacing: 2px;
+            // text-transform: uppercase;
             text-align: left;
         }
     }
@@ -49,21 +52,27 @@
                 div{
                     display: block; // later removed once class added
                         p{
+                            @include typo-heading3;
+
                             color: $heading-default;
-                            font-size: 24px;
-                            font-weight: 500;
-                            line-height: 29px
+
+                            // font-size: 24px;
+                            // font-weight: 500;
+                            // line-height: 29px
                         }
 
                         ul{
                             margin-top: 16px;
 
                             li{
+                                @include typo-body;
+
                                 margin-left: 25px;
                                 list-style: disc;
                                 color: $body-default;
-                                font-size: 16px;
-                                line-height: 24px;
+
+                                // font-size: 16px;
+                                // line-height: 24px;
                             }
                         }
                     }
@@ -85,11 +94,14 @@
                     align-items: flex-start;
 
                     p {
+                        @include typo-heading3;
+
                         color: $body-default;
-                        font-weight: 500;
-                        font-size: 24px;
-                        line-height: 29px;
                         margin-top: 4px;
+
+                        // font-weight: 500;
+                        // font-size: 24px;
+                        // line-height: 29px;
                     }
 
                     svg{
@@ -110,8 +122,10 @@
                     margin-top: 8px;
 
                     p{
-                        font-size: 16px;
-                        line-height: 24px;
+                        @include typo-body;
+                        
+                        // font-size: 16px;
+                        // line-height: 24px;
                     }
                 }
 

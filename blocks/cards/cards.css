@@ -462,12 +462,15 @@
 .section.faq-cant-find-looking-for .default-content-wrapper h5,
 .section.faq-cant-find-looking-for .default-content-wrapper h6{
   color:var(--heading-default);
-  font-family:var(--secondary-font);
-  font-size:40px;
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
   font-style:normal;
-  line-height:44px;
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
   margin-bottom:40px;
   text-align:center;
+  text-transform:initial;
 }
 
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul{
@@ -584,9 +587,13 @@
 .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-body h4,
 .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-body h5,
 .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-body h6{
+  font-family:var(--font-family-h3);
   font-size:var(--font-size-h3);
+  font-weight:var(--font-weight-h3);
+  letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
   margin-bottom:16px;
+  text-transform:initial;
 }
 
 .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-body p:not(p:has(.icon)){
