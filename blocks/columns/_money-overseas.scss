@@ -1,10 +1,34 @@
 @use '../../styles/base' as *;
 
 .money-overseas {
-  @include responsive-container;
+  .overseas-columns {
+    @include responsive-container;
+
+    border-bottom: 1px solid $line-default;
+
+    &:first-child {
+      .overseas-columns-wrapper {
+        padding-top: 0;
+      }
+    }
+
+    &:last-child {
+      border-bottom: 0;
+
+      .overseas-columns-wrapper {
+        padding-bottom: 0;
+      }
+    }
+  }
 
   .overseas-wrapper {
-    // @include responsive-container;
+    @include responsive-container;
+
+    margin-bottom: 40px;
+
+    @include mobile {
+      margin-bottom: 24px;
+    }
 
     h1,
     h2,
@@ -26,18 +50,6 @@
     }
   }
 
-  .overseas-columns {
-    border-bottom: 1px solid $line-default;
-
-    &:last-child {
-      border-bottom: 0;
-
-      .overseas-columns-wrapper {
-        padding-bottom: 0;
-      }
-    }
-  }
-
   .overseas-columns-wrapper {
     padding: 40px 0;
     gap: 80px;
@@ -53,14 +65,15 @@
     div {
       flex: unset;
       flex-direction: column;
-      width: 32%;
+      max-width: 370px;
+      width: 100%;
 
       @include tablet {
-        width: unset;
+        max-width: unset;
       }
 
       &:nth-child(2) {
-        width: 100%;
+        max-width: 100%;
       }
 
       h1,
@@ -72,12 +85,7 @@
         line-height: 29px;
         white-space: normal;
         overflow-wrap: break-word;
-        max-width: 370px;
-        width: fit-content;
-
-        @include tablet {
-          max-width: unset;
-        }
+        width: 100%;
       }
     }
 
@@ -188,7 +196,7 @@
         @include button('primary');
       }
     }
-  }
+  }  
 }
 
 .money-overseas-variant {
