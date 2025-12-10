@@ -96,7 +96,7 @@ html {
                                 padding: unset;
 
                                 a {
-                                    color: var(--heading, #00525B);
+                                    color: $heading-default;
                                     border-bottom: 2px solid $link-accent;
                                     text-underline-offset: 2px;
 

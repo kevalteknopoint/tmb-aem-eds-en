@@ -943,7 +943,7 @@ html{
 
 .news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper .swiper-slide div:last-child p.button-container a{
   border-bottom:2px solid var(--link-accent);
-  color:var(--heading, #00525B);
+  color:var(--heading-default);
   font-family:var(--font-family-sm-body);
   font-size:var(--font-size-sm-body);
   font-weight:var(--font-weight-sm-body);
