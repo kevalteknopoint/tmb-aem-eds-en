@@ -1,3 +1,4 @@
+@use './variables-custom' as *;
 @use './variables' as *;
 @use "sass:string";
 @use "sass:math" as *;
@@ -119,7 +120,8 @@ $padding-mobile: 16px;
   justify-content: center;
   padding-inline: 24px;
   text-align: center;
-  font-weight: 500;
+  font-family: $font-family-h5;
+  font-weight: $font-weight-h5;
   gap: 16px;
   cursor: pointer;
   border: none;
@@ -195,7 +197,7 @@ $btn-variants: (
   ),
 );
 
-@mixin button($variant: 'primary', $font-size: 16px, $line-height: 24px, $min-width: 150px) {
+@mixin button($variant: 'primary', $font-size: $font-size-h5, $line-height: $font-height-h5, $min-width: 150px) {
   @extend %button-shared-layout;
 
   font-size: $font-size;
@@ -231,4 +233,210 @@ $btn-variants: (
     outline: none;
     box-shadow: map.get($theme, 'focus-visible');
   }
+}
+
+$text-styles: (
+  'large-heading': (
+    'family': $font-family-lg,
+    'size': $font-size-lg,
+    'weight': $font-weight-lg,
+    'height': $font-height-lg,
+    'spacing': $font-letter-spacing-lg,
+    'case': initial
+  ),
+  'heading1': (
+    'family': $font-family-h1,
+    'size': $font-size-h1,
+    'weight': $font-weight-h1,
+    'height': $font-height-h1,
+    'spacing': $font-letter-spacing-h1,
+    'case': initial
+  ),
+  'heading1-std': (
+    'family': $font-family-h1-std,
+    'size': $font-size-h1-std,
+    'weight': $font-weight-h1-std,
+    'height': $font-height-h1-std,
+    'spacing': $font-letter-spacing-h1-std,
+    'case': initial
+  ),
+  'heading2': (
+    'family': $font-family-h2,
+    'size': $font-size-h2,
+    'weight': $font-weight-h2,
+    'height': $font-height-h2,
+    'spacing': $font-letter-spacing-h2,
+    'case': initial
+  ),
+  'heading2-std': (
+    'family': $font-family-h2-std,
+    'size': $font-size-h2-std,
+    'weight': $font-weight-h2-std,
+    'height': $font-height-h2-std,
+    'spacing': $font-letter-spacing-h2-std,
+    'case': initial
+  ),
+  'heading3': (
+    'family': $font-family-h3,
+    'size': $font-size-h3,
+    'weight': $font-weight-h3,
+    'height': $font-height-h3,
+    'spacing': $font-letter-spacing-h3,
+    'case': initial
+  ),
+  'intro': (
+    'family': $font-family-intro,
+    'size': $font-size-intro,
+    'weight': $font-weight-intro,
+    'height': $font-height-intro,
+    'spacing': $font-letter-spacing-intro,
+    'case': initial
+  ),
+  'heading4': (
+    'family': $font-family-h4,
+    'size': $font-size-h4,
+    'weight': $font-weight-h4,
+    'height': $font-height-h4,
+    'spacing': $font-letter-spacing-h4,
+    'case': initial
+  ),
+  'heading5': (
+    'family': $font-family-h5,
+    'size': $font-size-h5,
+    'weight': $font-weight-h5,
+    'height': $font-height-h5,
+    'spacing': $font-letter-spacing-h5,
+    'case': initial
+  ),
+  'body': (
+    'family': $font-family-body,
+    'size': $font-size-body,
+    'weight': $font-weight-body,
+    'height': $font-height-body,
+    'spacing': $font-letter-spacing-body,
+    'case': initial
+  ),
+  'body-bold': (
+    'family': $font-family-body,
+    'size': $font-size-body,
+    'weight': $font-weight-body-bold,
+    'height': $font-height-body,
+    'spacing': $font-letter-spacing-body,
+    'case': initial
+  ),
+  'sm-body': (
+    'family': $font-family-sm-body,
+    'size': $font-size-sm-body,
+    'weight': $font-weight-sm-body,
+    'height': $font-height-sm-body,
+    'spacing': $font-letter-spacing-sm-body,
+    'case': initial
+  ),
+  'sm-body-bold': (
+    'family': $font-family-sm-body,
+    'size': $font-size-sm-body,
+    'weight': $font-weight-body-bold,
+    'height': $font-height-sm-body,
+    'spacing': $font-letter-spacing-sm-body,
+    'case': initial
+  ),
+  'disclaimer': (
+    'family': $font-family-disc,
+    'size': $font-size-disclaimer,
+    'weight': $font-weight-disc,
+    'height': $font-height-disclaimer,
+    'spacing': $font-letter-spacing-disc,
+    'case': initial
+  ),
+);
+
+@mixin typography(
+    $variant: 'body-regular', 
+    $family: null,
+    $size: null,
+    $weight: null,
+    $height: null,
+    $spacing: null,
+    $case: null,
+) {
+  @if not map.has-key($text-styles, $variant) {
+    @debug "Typography variant '#{$variant}' not found. Falling back to 'body-regular'.";
+
+    $variant: 'body-regular';
+  }
+
+  $style: map.get($text-styles, $variant);
+
+  font-family: if($family, $family, map.get($style, 'family'));
+  font-size: if($size, $size, map.get($style, 'size'));
+  font-weight: if($weight, $weight, map.get($style, 'weight'));
+  line-height: if($height, $height, map.get($style, 'height'));
+  letter-spacing: if($spacing, $spacing, map.get($style, 'spacing'));
+  text-transform: if($case, $case, map.get($style, 'case'));
+}
+
+// Large Heading Styles
+@mixin typo-large-heading {
+    @include typography('large-heading');
+}
+
+// Heading 1 Styles
+@mixin typo-heading1 {
+    @include typography('heading1');
+}
+
+@mixin typo-heading1-std {
+    @include typography('heading1-std');
+}
+
+// Heading 2 Styles
+@mixin typo-heading2 {
+    @include typography('heading2');
+}
+
+@mixin typo-heading2-std {
+    @include typography('heading2-std');
+}
+
+// Heading 3 Style
+@mixin typo-heading3 {
+    @include typography('heading3');
+}
+
+// Intro Style
+@mixin typo-intro {
+    @include typography('intro');
+}
+
+// Heading 4 Style
+@mixin typo-heading4 {
+    @include typography('heading4');
+}
+
+// Heading 5 Style
+@mixin typo-heading5 {
+    @include typography('heading5');
+}
+
+// Body Styles
+@mixin typo-body {
+    @include typography('body');
+}
+
+@mixin typo-body-bold {
+    @include typography('body-bold');
+}
+
+// Small Body Styles
+@mixin typo-sm-body {
+    @include typography('sm-body');
+}
+
+@mixin typo-sm-body-bold {
+    @include typography('sm-body-bold');
+}
+
+// Disclaimer Style
+@mixin typo-disclaimer {
+    @include typography('disclaimer');
 }

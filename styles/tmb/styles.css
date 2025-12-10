@@ -5,7 +5,8 @@
   border-radius:var(--radius-button);
   cursor:pointer;
   display:flex;
-  font-weight:500;
+  font-family:var(--font-family-h5);
+  font-weight:var(--font-weight-h5);
   gap:16px;
   justify-content:center;
   padding-inline:24px;
@@ -595,8 +596,8 @@ header{
   background-color:var(--color-button-primary-default);
   border:none;
   color:var(--color-button-text-stroke-reverse);
-  font-size:16px;
-  line-height:24px;
+  font-size:var(--font-size-h5);
+  line-height:var(--font-height-h5);
   min-width:150px;
   padding-block:8px;
 }
@@ -661,8 +662,8 @@ header{
   background-color:var(--color-button-secondary-default);
   border:none;
   color:var(--color-button-text-stroke-default);
-  font-size:16px;
-  line-height:24px;
+  font-size:var(--font-size-h5);
+  line-height:var(--font-height-h5);
   min-width:150px;
   padding-block:8px;
 }
@@ -784,8 +785,8 @@ header{
   background-color:var(--color-button-primary-default);
   border:none;
   color:var(--color-button-text-stroke-reverse);
-  font-size:16px;
-  line-height:24px;
+  font-size:var(--font-size-h5);
+  line-height:var(--font-height-h5);
   min-width:150px;
   padding-block:8px;
 }
@@ -813,11 +814,11 @@ header{
 }
 .interest-table-section .default-content-wrapper h1, .interest-table-section .default-content-wrapper h2{
   color:var(--heading-default);
-  font-family:var(--secondary-font);
-  font-size:40px;
-  font-weight:900;
-  letter-spacing:2px;
-  line-height:40px;
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
   margin-bottom:40px;
 }
 .interest-table-section .default-content-wrapper .ul-0{
@@ -827,9 +828,11 @@ header{
 }
 .interest-table-section .default-content-wrapper .ul-0 li{
   color:var(--heading-default);
-  font-size:24px;
-  font-weight:500;
-  line-height:29px;
+  font-family:var(--font-family-h3);
+  font-size:var(--font-size-h3);
+  font-weight:var(--font-weight-h3);
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
   margin:0 0 16px;
   text-decoration:none;
   width:50%;
@@ -1075,8 +1078,6 @@ header{
     padding-inline:16px;
   }
   .interest-table-section .default-content-wrapper h1, .interest-table-section .default-content-wrapper h2{
-    font-size:38px;
-    line-height:38px;
     margin-bottom:24px;
   }
   .interest-table-section .default-content-wrapper .ul-1 li ul li:nth-child(even){
