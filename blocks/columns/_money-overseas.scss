@@ -30,6 +30,12 @@
       margin-bottom: 24px;
     }
 
+    & + .overseas-columns {
+      .overseas-columns-wrapper {
+        padding-top: 0;
+      }
+    }
+
     h1,
     h2,
     h3 {

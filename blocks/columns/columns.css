@@ -683,6 +683,10 @@
   width:100%;
 }
 
+.money-overseas .overseas-wrapper + .overseas-columns .overseas-columns-wrapper{
+  padding-top:0;
+}
+
 .money-overseas .overseas-wrapper h1,
 .money-overseas .overseas-wrapper h2,
 .money-overseas .overseas-wrapper h3{
