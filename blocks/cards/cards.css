@@ -651,19 +651,22 @@
 .banking-goods .cards-wrapper .banking-goods-mb h1, .banking-goods .cards-wrapper .banking-goods-mb h2, .banking-goods .cards-wrapper .banking-goods-mb h3, .banking-goods .cards-wrapper .banking-goods-mb h4, .banking-goods .cards-wrapper .banking-goods-mb h5, .banking-goods .cards-wrapper .banking-goods-mb h6{
   color:var(--heading-default);
   font-family:var(--secondary-font);
-  font-size:38px;
-  letter-spacing:2px;
-  line-height:38px;
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
   margin-bottom:16px;
-  text-transform:uppercase;
+  text-transform:initial;
 }
 
 .banking-goods .cards-wrapper .banking-goods-mb p{
   color:var(--body-default);
-  font-size:16px;
-  font-weight:400;
-  letter-spacing:0;
-  line-height:24px;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-transform:initial;
 }
 
 .banking-goods .cards-wrapper .cards > ul{
@@ -699,19 +702,22 @@
 
 .banking-goods .cards-wrapper .cards > ul > li:first-child .cards-card-body:last-child > h1, .banking-goods .cards-wrapper .cards > ul > li:first-child .cards-card-body:last-child h2, .banking-goods .cards-wrapper .cards > ul > li:first-child .cards-card-body:last-child h3, .banking-goods .cards-wrapper .cards > ul > li:first-child .cards-card-body:last-child h4, .banking-goods .cards-wrapper .cards > ul > li:first-child .cards-card-body:last-child h5, .banking-goods .cards-wrapper .cards > ul > li:first-child .cards-card-body:last-child h6{
   color:var(--heading-default);
-  font-family:var(--secondary-font);
-  font-size:40px;
-  letter-spacing:2px;
-  line-height:40px;
-  text-transform:uppercase;
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  text-transform:initial;
 }
 
 .banking-goods .cards-wrapper .cards > ul > li:first-child .cards-card-body:last-child > p{
   color:var(--body-default);
-  font-size:16px;
-  font-weight:400;
-  letter-spacing:0;
-  line-height:24px;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-transform:initial;
 }
 
 .banking-goods .cards-wrapper .cards > ul > li:not(:first-child){
@@ -775,21 +781,25 @@
 .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h1, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h2, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h3, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h4, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h5, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h6{
   color:var(--heading-reverse-2);
   font-family:var(--secondary-font);
-  font-size:40px;
+  font-size:var(--font-size-h1);
   font-style:normal;
-  letter-spacing:2px;
-  line-height:40px;
-  text-transform:uppercase;
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  text-transform:initial;
   transition:transform 0.4s ease;
   z-index:1;
 }
 
 .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body p{
   color:var(--body-reverse-2);
-  font-size:16px;
-  font-weight:400;
-  line-height:24px;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
   opacity:0;
+  text-transform:initial;
   transition:all 0.4s ease-in-out;
   z-index:1;
 }
@@ -805,10 +815,14 @@
   align-items:center;
   color:var(--link-reverse-2);
   display:flex;
-  font-size:14px;
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-weight:var(--font-weight-sm-body);
   gap:8px;
-  line-height:21px;
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
   position:relative;
+  text-transform:initial;
   width:-moz-fit-content;
   width:fit-content;
 }
@@ -1224,8 +1238,12 @@ html{
   }
 
   .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h1, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h2, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h3, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h4, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h5, .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body h6{
-    font-size:32px;
-    line-height:32px;
+    font-family:var(--font-family-h1);
+    font-size:var(--font-size-h1);
+    font-weight:var(--font-weight-h1);
+    letter-spacing:var(--font-letter-spacing-h1);
+    line-height:var(--font-height-h1);
+    text-transform:initial;
   }
 
   .banking-goods .cards-wrapper .cards > ul > li:not(:first-child) .cards-card-body p{
