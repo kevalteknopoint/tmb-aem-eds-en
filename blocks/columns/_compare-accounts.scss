@@ -21,12 +21,9 @@
     }
 
     p {
-      font-size: $font-size-body;
-      line-height: $font-height-body;
-      font-weight: $font-weight-body;
-      letter-spacing: $font-letter-spacing-body;
-      font-family: $font-family-body;
       color: $heading-default;
+
+      @include typo-body;
 
       a {
         color: $heading-default;
@@ -81,60 +78,41 @@
     h3 {
       padding: 32px 24px 8px;
       border-bottom: 5px solid $heading-default;
-      font-size: $font-size-h3;
-      font-family: $font-family-h3;
-      line-height: $font-height-h3;
       color: $heading-default;
-      font-weight: $font-weight-h3;
-      letter-spacing: $font-weight-h3;
+
+      @include typo-heading3;
     }
 
     h4 {
       padding: 16px 24px 0;
-      font-size: $font-size-body;
-      font-family: $font-family-body;
-      line-height: $font-height-body;
-      font-weight: $font-weight-body;
-      letter-spacing: $font-letter-spacing-body;
-      color: $color-variants-body-default;
+      color: $body-default;
+
+      @include typo-body;
     }
 
     h5 {
       padding: 16px 24px 0;
-      font-family: $font-family-disc;
-      font-size: $font-size-disclaimer;
-      line-height: $font-height-disclaimer;
-      font-weight: $font-weight-disc;
-      letter-spacing: $font-letter-spacing-disc;
       color: $heading-default;
+
+      @include typo-disclaimer;
     }
 
     .interest-rate {
       display: block;
-      font-size: $font-size-h1-std;
-      line-height: $font-height-h1-std;
-      font-family: $font-family-h1-std;
-      font-weight: $font-weight-h1-std;
-      letter-spacing: $font-letter-spacing-h1-std;
       color: $heading-default;
 
+      @include typo-heading1-std;
+
       .rate-pa {
-        font-family: $font-family-body;
-        font-weight: $font-weight-body;
-        letter-spacing: $font-letter-spacing-body;
-        font-size: $font-size-body;
-        line-height: $font-height-body;
+        @include typo-body;
       }
     }
 
     p {
       padding: 16px 24px 0;
-      font-size: $font-size-disclaimer;
-      line-height: $font-height-disclaimer;
-      font-family: $font-family-disc;
-      font-weight: $font-weight-disc;
-      letter-spacing: $font-letter-spacing-disc;
       color: $body-default;
+
+      @include typo-disclaimer;
 
       &:has(.interest-rate) {
         padding: 4px 24px 0;
@@ -149,14 +127,11 @@
     a {
       display: block;
       color: $heading-default;
-      font-family: $font-family-sm-body;
-      font-weight: $font-weight-sm-body;
-      letter-spacing: $font-letter-spacing-sm-body;
-      font-size: $font-size-sm-body;
-      line-height: $font-height-sm-body;
       padding-bottom: 2px;
       border-bottom: 1px solid $heading-default;
       width: fit-content;
+
+      @include typo-sm-body;
     }
   }
 }

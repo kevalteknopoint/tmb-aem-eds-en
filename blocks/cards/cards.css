@@ -462,12 +462,14 @@
 .section.faq-cant-find-looking-for .default-content-wrapper h5,
 .section.faq-cant-find-looking-for .default-content-wrapper h6{
   color:var(--heading-default);
-  font-family:var(--secondary-font);
-  font-size:40px;
-  font-style:normal;
-  line-height:44px;
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
   margin-bottom:40px;
   text-align:center;
+  text-transform:initial;
 }
 
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul{
@@ -518,25 +520,27 @@
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h5,
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h6{
   color:var(--heading-default);
-  font-family:var(--primary-font);
-  font-size:20px;
-  font-style:normal;
-  font-weight:500;
-  line-height:24px;
+  font-family:var(--font-family-h4);
+  font-size:var(--font-size-h4);
+  font-weight:var(--font-weight-h4);
+  letter-spacing:var(--font-letter-spacing-h4);
+  line-height:var(--font-height-h4);
   margin-bottom:8px;
   text-align:center;
+  text-transform:initial;
 }
 
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p:not(p:has(.icon)){
   color:var(--body-default);
-  font-family:var(--primary-font);
-  font-size:16px;
-  font-style:normal;
-  font-weight:400;
-  line-height:24px;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
   margin-bottom:24px;
   padding-bottom:14px;
   text-align:center;
+  text-transform:initial;
 }
 
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container{
@@ -584,9 +588,13 @@
 .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-body h4,
 .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-body h5,
 .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-body h6{
+  font-family:var(--font-family-h3);
   font-size:var(--font-size-h3);
+  font-weight:var(--font-weight-h3);
+  letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
   margin-bottom:16px;
+  text-transform:initial;
 }
 
 .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-body p:not(p:has(.icon)){
@@ -606,10 +614,14 @@
 .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-body h5,
 .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-body h6{
   border-bottom:2px solid var(--heading-default);
+  font-family:var(--font-family-h3);
   font-size:var(--font-size-h3);
+  font-weight:var(--font-weight-h3);
+  letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
   margin:0 auto 16px;
   padding:10px 0 6px;
+  text-transform:initial;
   width:-moz-fit-content;
   width:fit-content;
 }
@@ -848,14 +860,14 @@ html{
   width:100%;
 }
 
-.news-helpful .default-content-wrapper p{
+.news-helpful .default-content-wrapper h1, .news-helpful .default-content-wrapper h2, .news-helpful .default-content-wrapper h3, .news-helpful .default-content-wrapper h4, .news-helpful .default-content-wrapper h5, .news-helpful .default-content-wrapper h6, .news-helpful .default-content-wrapper p{
   color:var(--heading-default);
-  font-family:var(--secondary-font);
-  font-size:40px;
-  font-weight:900;
-  letter-spacing:2px;
-  line-height:40px;
-  text-transform:uppercase;
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  text-transform:initial;
 }
 
 .news-helpful .cards-wrapper{
@@ -884,10 +896,13 @@ html{
 
 .news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper .swiper-slide div:last-child p{
   color:var(--heading-default);
-  font-size:16px;
-  font-weight:400;
-  line-height:24px;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
   padding:16px 0 20px;
+  text-transform:initial;
 }
 
 .news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper .swiper-slide div:last-child p.button-container{
@@ -897,9 +912,12 @@ html{
 .news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper .swiper-slide div:last-child p.button-container a{
   border-bottom:2px solid var(--link-accent);
   color:var(--heading, #00525B);
-  font-size:14px;
-  font-weight:400;
-  line-height:21px;
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-weight:var(--font-weight-sm-body);
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
+  text-transform:initial;
   text-underline-offset:2px;
 }
 
@@ -1454,7 +1472,7 @@ html{
     padding-inline:16px;
   }
 
-  .news-helpful .default-content-wrapper p{
+  .news-helpful .default-content-wrapper h1, .news-helpful .default-content-wrapper h2, .news-helpful .default-content-wrapper h3, .news-helpful .default-content-wrapper h4, .news-helpful .default-content-wrapper h5, .news-helpful .default-content-wrapper h6, .news-helpful .default-content-wrapper p{
     font-size:38px;
     line-height:38px;
   }

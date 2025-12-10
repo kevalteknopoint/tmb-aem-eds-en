@@ -20,14 +20,10 @@ html {
         margin-bottom: 24px;
       }
 
-        p{
+        h1, h2, h3, h4, h5, h6, p {
             color: $heading-default;
-            font-family: $secondary-font;
-            font-size: 40px;
-            font-weight: 900;
-            line-height: 40px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+
+            @include typo-heading1;
 
             @include mobile{
                 font-size: 38px;
@@ -91,22 +87,20 @@ html {
                         &:last-child{
                             p{
                                 color: $heading-default;
-                                font-size: 16px;
-                                font-weight: 400;
-                                line-height: 24px;
                                 padding: 16px 0 20px;
+
+                                @include typo-body;
                             }
 
                             p.button-container{
                                 padding: unset;
 
-                                a{
+                                a {
                                     color: var(--heading, #00525B);
-                                    font-size: 14px;
-                                    font-weight: 400;
-                                    line-height: 21px;
                                     border-bottom: 2px solid $link-accent;
                                     text-underline-offset: 2px;
+
+                                    @include typo-sm-body;
                                 } 
                             }
                         }
