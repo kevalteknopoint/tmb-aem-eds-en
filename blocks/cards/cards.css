@@ -275,13 +275,12 @@
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h1, .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h2, .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h3, .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h4, .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h5, .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h6{
   color:var(--heading-default);
-  font-family:var(--secondary-font);
-  font-size:40px;
-  font-style:normal;
-  letter-spacing:2px;
-  line-height:40px;
-  margin:0;
-  text-transform:uppercase;
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  text-transform:initial;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul{
@@ -301,13 +300,15 @@
   align-items:center;
   color:var(--body-accent);
   display:flex;
-  font-size:16px;
-  font-style:normal;
-  font-weight:400;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
   gap:10px;
   justify-content:space-between;
-  line-height:24px;
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
   text-decoration:none;
+  text-transform:initial;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li a svg{
@@ -353,19 +354,23 @@
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 .banking-desc-1,
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .card-bottom-1 .banking-desc-1{
   color:var(--heading-default);
-  font-size:24px;
-  font-style:normal;
-  font-weight:500;
-  line-height:32px;
+  font-family:var(--font-family-h3);
+  font-size:var(--font-size-h3);
+  font-weight:var(--font-weight-h3);
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
+  text-transform:initial;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 .banking-desc-2,
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body .card-bottom-1 .banking-desc-2{
   color:var(--body-accent);
-  font-size:16px;
-  font-style:normal;
-  font-weight:400;
-  line-height:24px;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-transform:initial;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-image img,
@@ -400,12 +405,14 @@
   background:transparent;
   color:var(--link-accent);
   display:flex;
-  font-size:16px;
-  font-style:normal;
-  font-weight:500;
+  font-family:var(--font-family-h5);
+  font-size:var(--font-size-h5);
+  font-weight:var(--font-weight-h5);
   gap:8px;
-  line-height:24px;
+  letter-spacing:var(--font-letter-spacing-h5);
+  line-height:var(--font-height-h5);
   text-decoration:none;
+  text-transform:initial;
   width:-moz-max-content;
   width:max-content;
 }

@@ -121,12 +121,13 @@
     .momentum-second-content {
       h2 {
         color: $heading-default;
-        font-family: $secondary-font;
-        font-size: 40px;
-        font-style: normal;
-        line-height: 40px;
-        text-transform: uppercase;
-        margin-bottom: 16px;
+        // font-family: $secondary-font;
+        // font-size: 40px;
+        // font-style: normal;
+        // line-height: 40px;
+        // text-transform: uppercase;
+        // margin-bottom: 16px;
+        @include typo-heading1;
 
         @include mobile {
           font-size: 38px;
@@ -230,9 +231,10 @@
           }
 
           h2 {
-            font-family: $secondary-font;
-            font-weight: 500;
-            text-transform: capitalize;
+            @include typo-heading1;
+            // font-family: $secondary-font;
+            // font-weight: 500;
+            // text-transform: capitalize;
 
             @include mobile {
               font-size: 38px;
@@ -292,12 +294,13 @@
 
         .momentum-second-content {
           h2 {
+            @include typo-heading1;
             color: $heading-default;
-            font-family: $secondary-font;
-            font-size:  40px;
-            font-style: normal;
-            font-weight: 900;
-            line-height:  40px;
+            // font-family: $secondary-font;
+            // font-size:  40px;
+            // font-style: normal;
+            // font-weight: 900;
+            // line-height:  40px;
 
             @include mobile {
               width: unset;
