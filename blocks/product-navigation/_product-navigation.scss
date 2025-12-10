@@ -80,13 +80,16 @@
         }
 
         a {
+          @include typo-sm-body;
+
           display: block;
           min-width: max-content;
           position: relative;
           padding: 4px 0;
-          font-size: 14px;
-          line-height: 21px;
-          font-weight: 400;
+          
+          // font-size: 14px;
+          // line-height: 21px;
+          // font-weight: 400;
           color: $color-header-nav-primary;
 
           &:focus-visible {

@@ -551,9 +551,11 @@ header{
   color:var(--heading-default);
   font-family:var(--font-family-h1);
   font-size:var(--font-size-h1);
+  font-style:normal;
   font-weight:var(--font-weight-h1);
   letter-spacing:var(--font-letter-spacing-h1);
   line-height:var(--font-height-h1);
+  margin-bottom:16px;
   text-transform:initial;
 }
 .momentum-saver-section .momentum-columns .momentum-second-content h3{
@@ -566,11 +568,14 @@ header{
 }
 .momentum-saver-section .momentum-columns .momentum-second-content p{
   color:var(--body-default);
-  font-size:16px;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
   font-style:normal;
-  font-weight:400;
-  line-height:24px;
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
   margin-bottom:24px;
+  text-transform:initial;
 }
 .momentum-saver-section .momentum-columns .momentum-second-content p:has(a){
   display:flex;
@@ -755,13 +760,16 @@ header{
 .product-navigation .default-content-wrapper ul li a{
   color:var(--color-header-nav-primary);
   display:block;
-  font-size:14px;
-  font-weight:400;
-  line-height:21px;
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-weight:var(--font-weight-sm-body);
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
   min-width:-moz-max-content;
   min-width:max-content;
   padding:4px 0;
   position:relative;
+  text-transform:initial;
 }
 .product-navigation .default-content-wrapper ul li a:focus-visible{
   outline:none;
@@ -1074,10 +1082,6 @@ header{
     font-weight:400;
     line-height:24px;
     width:121%;
-  }
-  .momentum-saver-section .momentum-columns .momentum-second-content h2{
-    font-size:38px;
-    line-height:38px;
   }
   .momentum-saver-section.momentum-image-saver .columns-wrapper{
     padding-inline:16px;
