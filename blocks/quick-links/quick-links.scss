@@ -16,11 +16,12 @@
       gap: 16px;
       align-items: center;
       color: $link-default;
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 29px;
-      margin-bottom: 8px;
-      text-transform: capitalize;
+      // font-size: 24px;
+      // font-weight: 500;
+      // line-height: 29px;
+      // margin-bottom: 8px;
+      // text-transform: capitalize;
+      @include typo-heading3;
 
       &:hover {
         .quick-link-text::after {
@@ -96,11 +97,12 @@
           justify-content: space-between;
           width: fit-content;
           color: $link-default;
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 21px;
+          // font-size: 14px;
+          // font-weight: 400;
+          // line-height: 21px;
           text-decoration: none;
           padding-bottom: 2px;
+          @include typo-sm-body;
 
           &:hover::after {
             left: 0;
