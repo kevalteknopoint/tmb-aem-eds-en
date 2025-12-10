@@ -510,12 +510,10 @@ header{
 }
 .momentum-saver-section .momentum-columns .momentum-content .rate-num{
   color:var(--heading-default);
-  font-family:var(--secondary-font);
+  font-family:var(--font-family-lg);
   font-size:140px;
-  font-style:normal;
-  font-weight:900;
+  font-weight:var(--font-weight-rate);
   line-height:120px;
-  text-transform:capitalize;
 }
 .momentum-saver-section .momentum-columns .momentum-content .rate-unit{
   align-items:center;
@@ -526,16 +524,16 @@ header{
 }
 .momentum-saver-section .momentum-columns .momentum-content .rate-percent{
   color:var(--heading-default);
+  font-family:var(--font-family-lg);
   font-size:80px;
-  font-style:normal;
-  font-weight:700;
+  font-weight:var(--font-weight-rate);
   line-height:72px;
 }
 .momentum-saver-section .momentum-columns .momentum-content .rate-pa{
   color:var(--heading-default);
+  font-family:var(--font-family-h1-std);
   font-size:40px;
-  font-style:normal;
-  font-weight:400;
+  font-weight:var(--font-weight-rate-p-a);
   line-height:28px;
   text-align:left;
 }
@@ -1069,11 +1067,9 @@ header{
     font-size:120px;
     font-style:normal;
     line-height:120px;
-    text-transform:capitalize;
   }
   .momentum-saver-section .momentum-columns .momentum-content .rate-percent{
     font-size:78px;
-    font-style:normal;
     line-height:72px;
   }
   .momentum-saver-section .momentum-columns .momentum-content p{

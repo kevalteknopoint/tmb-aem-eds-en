@@ -148,7 +148,6 @@ body:has(.product-detail-banner) {
         line-height: 72px;
         font-weight: $font-weight-rate;
         width: fit-content;
-        font-weight: $font-weight-lg;
 
         @include tablet {
           font-size: 62px;

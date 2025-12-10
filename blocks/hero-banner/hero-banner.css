@@ -110,7 +110,7 @@ body:has(.product-detail-banner) .breadcrumb.block{
   display:block;
   font-family:var(--font-family-lg);
   font-size:86px;
-  font-weight:var(--font-weight-lg);
+  font-weight:var(--font-weight-rate);
   line-height:72px;
   width:-moz-fit-content;
   width:fit-content;
