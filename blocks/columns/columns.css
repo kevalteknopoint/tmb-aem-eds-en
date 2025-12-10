@@ -357,12 +357,12 @@
 
 .faq-accordion .default-content-wrapper h1, .faq-accordion .default-content-wrapper h2, .faq-accordion .default-content-wrapper h3, .faq-accordion .default-content-wrapper h4, .faq-accordion .default-content-wrapper h5, .faq-accordion .default-content-wrapper h6{
   color:var(--heading-default);
-  font-family:var(--secondary-font);
-  font-size:40px;
-  font-weight:900;
-  letter-spacing:2px;
-  line-height:40px;
-  text-transform:uppercase;
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  text-transform:initial;
 }
 
 .faq-accordion .accordion-wrapper{
@@ -384,10 +384,13 @@
 
 .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label p{
   color:var(--color-button-primary-default);
-  font-size:24px;
-  font-weight:500;
-  line-height:29px;
+  font-family:var(--font-family-h3);
+  font-size:var(--font-size-h3);
+  font-weight:var(--font-weight-h3);
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
   margin-top:4px;
+  text-transform:initial;
 }
 
 .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label svg{
@@ -408,8 +411,13 @@
 }
 
 .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body p{
-  font-size:16px;
-  line-height:24px;
+  color:var(--body-default);
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-transform:initial;
 }
 
 .faq-accordion .accordion-wrapper .block .accordion-item[open] summary svg{
@@ -455,6 +463,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
+  text-transform:initial;
 }
 
 .section.compare-accounts .default-content-wrapper p a{
@@ -528,19 +537,21 @@
   font-family:var(--font-family-h3);
   font-size:var(--font-size-h3);
   font-weight:var(--font-weight-h3);
-  letter-spacing:var(--font-weight-h3);
+  letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
   padding:32px 24px 8px;
+  text-transform:initial;
 }
 
 .section.compare-accounts .columns.block h4{
-  color:var(--color-variants-body-default);
+  color:var(--body-default);
   font-family:var(--font-family-body);
   font-size:var(--font-size-body);
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   padding:16px 24px 0;
+  text-transform:initial;
 }
 
 .section.compare-accounts .columns.block h5{
@@ -551,6 +562,7 @@
   letter-spacing:var(--font-letter-spacing-disc);
   line-height:var(--font-height-disclaimer);
   padding:16px 24px 0;
+  text-transform:initial;
 }
 
 .section.compare-accounts .columns.block .interest-rate{
@@ -561,6 +573,7 @@
   font-weight:var(--font-weight-h1-std);
   letter-spacing:var(--font-letter-spacing-h1-std);
   line-height:var(--font-height-h1-std);
+  text-transform:initial;
 }
 
 .section.compare-accounts .columns.block .interest-rate .rate-pa{
@@ -569,6 +582,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
+  text-transform:initial;
 }
 
 .section.compare-accounts .columns.block p{
@@ -579,6 +593,7 @@
   letter-spacing:var(--font-letter-spacing-disc);
   line-height:var(--font-height-disclaimer);
   padding:16px 24px 0;
+  text-transform:initial;
 }
 
 .section.compare-accounts .columns.block p:has(.interest-rate){
@@ -600,6 +615,7 @@
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
   padding-bottom:2px;
+  text-transform:initial;
   width:-moz-fit-content;
   width:fit-content;
 }
@@ -1043,11 +1059,6 @@
 
   .faq-accordion .default-content-wrapper{
     min-width:unset;
-  }
-
-  .faq-accordion .default-content-wrapper h1, .faq-accordion .default-content-wrapper h2, .faq-accordion .default-content-wrapper h3, .faq-accordion .default-content-wrapper h4, .faq-accordion .default-content-wrapper h5, .faq-accordion .default-content-wrapper h6{
-    font-size:38px;
-    line-height:38px;
   }
 
   .section.compare-accounts{
