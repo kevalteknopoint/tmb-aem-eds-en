@@ -96,19 +96,9 @@
 
       p {
         color: $heading-default;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
         width: 100%;
 
-        @include mobile {
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 24px;
-          width: 121%;
-        }
+        @include typo-body;
       }
     }
 
@@ -121,27 +111,18 @@
         margin-bottom: 16px;
       }
 
-
       h3 {
         color: $heading-default;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 36px;
         margin-bottom: 4px;
-        ;
+        
+        @include typo-intro;
       }
 
       p {
-        @include typo-body;
-
         color: $body-default;
-        font-style: normal;
-        
-        // font-size: 16px;
-        // font-weight: 400;
-        // line-height: 24px;
         margin-bottom: 24px;
+        
+        @include typo-body;
       }
 
       p:has(a) {
@@ -178,10 +159,7 @@
   }
 }
 
-// updated end
-
 // variant for section bg
-
 .momentum-saver-section.background-color-teal {
   background-color: $bg-reverse;
 
@@ -192,7 +170,6 @@
 
 
 // image variant 
-
 .momentum-saver-section.momentum-image-saver {
   .columns-wrapper {
     @include responsive-container;
@@ -218,16 +195,8 @@
             display: block;
           }
 
-          h2 {
+          h1, h2, h3, h4, h5, h6 {
             @include typo-heading1;
-
-            @include mobile {
-              font-size: 38px;
-            }
-
-            @include tablet {
-              font-size: 38px;
-            }
           }
         }
       }
@@ -243,9 +212,7 @@
   background-color: $heading-default;
 
   .momentum-second-content {
-    h2,
-    h3,
-    p {
+    h1, h2, h3, h4, h5, h6, p {
       color: $body-reverse;
     }
 
@@ -278,16 +245,6 @@
         }
 
         .momentum-second-content {
-          h2 {
-            @include typo-heading1;
-            
-            color: $heading-default;
-
-            @include mobile {
-              width: unset;
-            }
-          }
-
           p {
             margin-bottom: 0;
           }

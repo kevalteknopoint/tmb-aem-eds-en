@@ -540,10 +540,12 @@ header{
 }
 .momentum-saver-section .momentum-columns .momentum-content p{
   color:var(--heading-default);
-  font-size:16px;
-  font-style:normal;
-  font-weight:400;
-  line-height:24px;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-transform:initial;
   width:100%;
 }
 .momentum-saver-section .momentum-columns .momentum-second-content h2{
@@ -559,17 +561,18 @@ header{
 }
 .momentum-saver-section .momentum-columns .momentum-second-content h3{
   color:var(--heading-default);
-  font-size:24px;
-  font-style:normal;
-  font-weight:400;
-  line-height:36px;
+  font-family:var(--font-family-intro);
+  font-size:var(--font-size-intro);
+  font-weight:var(--font-weight-intro);
+  letter-spacing:var(--font-letter-spacing-intro);
+  line-height:var(--font-height-intro);
   margin-bottom:4px;
+  text-transform:initial;
 }
 .momentum-saver-section .momentum-columns .momentum-second-content p{
   color:var(--body-default);
   font-family:var(--font-family-body);
   font-size:var(--font-size-body);
-  font-style:normal;
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
@@ -648,7 +651,7 @@ header{
 .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .columns-img-col img{
   border-radius:var(--radius-card);
 }
-.momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2{
+.momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h1, .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2, .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h3, .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h4, .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h5, .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h6{
   font-family:var(--font-family-h1);
   font-size:var(--font-size-h1);
   font-weight:var(--font-weight-h1);
@@ -660,9 +663,7 @@ header{
 .momentum-image-saver.bg-image-saver{
   background-color:var(--heading-default);
 }
-.momentum-image-saver.bg-image-saver .momentum-second-content h2,
-.momentum-image-saver.bg-image-saver .momentum-second-content h3,
-.momentum-image-saver.bg-image-saver .momentum-second-content p{
+.momentum-image-saver.bg-image-saver .momentum-second-content h1, .momentum-image-saver.bg-image-saver .momentum-second-content h2, .momentum-image-saver.bg-image-saver .momentum-second-content h3, .momentum-image-saver.bg-image-saver .momentum-second-content h4, .momentum-image-saver.bg-image-saver .momentum-second-content h5, .momentum-image-saver.bg-image-saver .momentum-second-content h6, .momentum-image-saver.bg-image-saver .momentum-second-content p{
   color:var(--body-reverse);
 }
 .momentum-image-saver.bg-image-saver .momentum-second-content .button-container a{
@@ -695,15 +696,6 @@ header{
 .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .columns-img-col{
   max-width:unset;
   width:50%;
-}
-.momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content h2{
-  color:var(--heading-default);
-  font-family:var(--font-family-h1);
-  font-size:var(--font-size-h1);
-  font-weight:var(--font-weight-h1);
-  letter-spacing:var(--font-letter-spacing-h1);
-  line-height:var(--font-height-h1);
-  text-transform:initial;
 }
 .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content p{
   margin-bottom:0;
@@ -998,9 +990,6 @@ header{
   .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content{
     display:block;
   }
-  .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2{
-    font-size:38px;
-  }
   .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div{
     gap:32px;
   }
@@ -1085,21 +1074,8 @@ header{
     font-size:78px;
     line-height:72px;
   }
-  .momentum-saver-section .momentum-columns .momentum-content p{
-    font-size:16px;
-    font-style:normal;
-    font-weight:400;
-    line-height:24px;
-    width:121%;
-  }
   .momentum-saver-section.momentum-image-saver .columns-wrapper{
     padding-inline:16px;
-  }
-  .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2{
-    font-size:38px;
-  }
-  .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content h2{
-    width:unset;
   }
   .product-navigation{
     margin-top:unset;
