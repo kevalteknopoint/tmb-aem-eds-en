@@ -211,7 +211,6 @@
       align-items: flex-start;
 
       div {
-
         h1,
         h2,
         h3 {
@@ -254,41 +253,34 @@
 
           @include typo-heading1;
         }
-
-        // p {
-        //   display: flex;
-        //   margin-bottom: 10px;
-
-        //   .icon-checkmark {
-        //     margin-right: 16px;
-
-        //     .icon-svg {
-        //       width: 32px;
-        //       height: 32px;
-        //       aspect-ratio: 1 / 1;
-        //       max-width: unset;
-        //       color: $heading-default;
-        //     }
-        //   }
-
-        //   &:not(.button-container) a{
-        //     color: var(--link-default);
-        //     text-decoration: underline;
-        //     text-underline-offset: 3px;
-        //   }
-        // }
       }
 
       .content-with-icon {
         display: flex;
         flex-direction: row;
+        align-items: flex-start;
+        gap: 16px;
         width: 100%;
         max-width: unset;
+        margin-bottom: 10px;
+
+        p {
+          padding: 4px 0;
+          margin-bottom: 0;
+
+          @include typo-body;
+        }
+
+        a {
+          text-decoration: underline;
+          text-underline-offset: 3px;
+          color: $heading-default;
+        }
       }
 
       .icon-checkmark {
         .icon-svg {
-          margin-right: 16px;
+          min-width: 32px;
           width: 32px;
           height: 32px;
           color: $heading-default;

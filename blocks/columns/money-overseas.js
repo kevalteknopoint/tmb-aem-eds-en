@@ -1,4 +1,4 @@
-import { div, p } from "../../scripts/dom-helpers.js";
+import { div } from "../../scripts/dom-helpers.js";
 
 export default function decorateMoneyOverseas() {
   // Add .overseas-wrapper to the content wrapper
@@ -38,9 +38,10 @@ export default function decorateMoneyOverseas() {
       const newDiv = div(
         { class: "content-with-icon" },
         innerSpan,
-        p(...pTag.children)
+        pTag.cloneNode(true)
       );
-      pTag.replaceWith(newDiv);
+      pTag.insertAdjacentElement('afterend', newDiv);
+      pTag.remove();
     });
   });
 }
