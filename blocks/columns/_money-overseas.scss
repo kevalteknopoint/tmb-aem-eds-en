@@ -57,7 +57,7 @@
     padding: 40px 0;
     gap: 80px;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-start;;
     padding-bottom: 40px;
 
     @include tablet-lg {
@@ -130,7 +130,7 @@
         counter-increment: step-counter;
         display: flex;
         gap: 12px;
-        align-items: center;
+        align-items: baseline;
 
         &::before {
           content: counter(step-counter);
@@ -208,6 +208,8 @@
 
   .overseas-columns {
     .overseas-columns-wrapper {
+      align-items: flex-start;
+
       div {
         h1,
         h2,
@@ -219,6 +221,10 @@
           width: fit-content;
 
           @include typo-heading1;
+            
+          @include tablet{
+            max-width: unset;
+          }
         }
       }
 
@@ -249,6 +255,7 @@
         p {
           display: flex;
           margin-bottom: 10px;
+          color: $body-default;
 
           .icon-checkmark {
             margin-right: 16px;
