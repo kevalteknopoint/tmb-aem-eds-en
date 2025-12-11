@@ -861,6 +861,10 @@
   outline:none;
 }
 
+.overseas-variant .overseas-columns .overseas-columns-wrapper{
+  align-items:flex-start;
+}
+
 .overseas-variant .overseas-columns .overseas-columns-wrapper div h1,
 .overseas-variant .overseas-columns .overseas-columns-wrapper div h2,
 .overseas-variant .overseas-columns .overseas-columns-wrapper div h3{
@@ -876,29 +880,18 @@
   width:max-content;
 }
 
-.overseas-variant .overseas-columns .overseas-columns-wrapper div p{
+.overseas-variant .overseas-columns .overseas-columns-wrapper .content-with-icon{
   display:flex;
-  flex-wrap:nowrap;
-  margin-bottom:10px;
-  white-space:nowrap;
+  flex-direction:row;
+  max-width:unset;
+  width:100%;
 }
 
-.overseas-variant .overseas-columns .overseas-columns-wrapper div p .icon-checkmark{
-  margin-right:16px;
-}
-
-.overseas-variant .overseas-columns .overseas-columns-wrapper div p .icon-checkmark .icon-svg{
-  aspect-ratio:1/1;
+.overseas-variant .overseas-columns .overseas-columns-wrapper .icon-checkmark .icon-svg{
   color:var(--heading-default);
   height:32px;
-  max-width:unset;
+  margin-right:16px;
   width:32px;
-}
-
-.overseas-variant .overseas-columns .overseas-columns-wrapper div p:not(.button-container) a{
-  color:var(--link-default);
-  text-decoration:underline;
-  text-underline-offset:3px;
 }
 
 .columns img{

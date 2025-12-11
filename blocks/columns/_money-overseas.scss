@@ -153,7 +153,7 @@
 
       li {
         margin-bottom: 8px;
-        
+
         .overseas-columns-wrapper-ul {
           display: flex;
           align-items: flex-start;
@@ -191,12 +191,12 @@
 
     .button-container {
       margin-bottom: 0;
-      
+
       a {
         @include button('primary');
       }
     }
-  }  
+  }
 }
 
 .money-overseas-variant {
@@ -205,6 +205,7 @@
   .overseas-columns {
     .overseas-columns-wrapper {
       div {
+
         h1,
         h2,
         h3 {
@@ -232,7 +233,10 @@
 .overseas-variant {
   .overseas-columns {
     .overseas-columns-wrapper {
+      align-items: flex-start;
+
       div {
+
         h1,
         h2,
         h3 {
@@ -248,30 +252,45 @@
 
         }
 
-        p {
-          display: flex;
-          margin-bottom: 10px;
-           white-space: nowrap;
-            flex-wrap: nowrap;
+        // p {
+        //   display: flex;
+        //   margin-bottom: 10px;
 
-          .icon-checkmark {
-            margin-right: 16px;
+        //   .icon-checkmark {
+        //     margin-right: 16px;
 
-            .icon-svg {
-              width: 32px;
-              height: 32px;
-              aspect-ratio: 1 / 1;
-              max-width: unset;
-              color: $heading-default;
-            }
-          }
+        //     .icon-svg {
+        //       width: 32px;
+        //       height: 32px;
+        //       aspect-ratio: 1 / 1;
+        //       max-width: unset;
+        //       color: $heading-default;
+        //     }
+        //   }
 
-          &:not(.button-container) a{
-            color: var(--link-default);
-            text-decoration: underline;
-            text-underline-offset: 3px;
-          }
+        //   &:not(.button-container) a{
+        //     color: var(--link-default);
+        //     text-decoration: underline;
+        //     text-underline-offset: 3px;
+        //   }
+        // }
+      }
+
+      .content-with-icon {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: unset;
+      }
+
+      .icon-checkmark {
+        .icon-svg {
+          margin-right: 16px;
+          width: 32px;
+          height: 32px;
+          color: $heading-default;
         }
       }
     }
-  }}
+  }
+}
