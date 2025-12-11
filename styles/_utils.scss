@@ -93,17 +93,18 @@ header {
     bottom: 0;
     left: 0;
     right: 0;
-    width: calc(100% - 128px);
+    max-width: calc($container-width - 128px);
+    width: 100%;
     margin: 0 auto;
     height: 1px;
     background: $line-default;
 
     @include tablet-lg {
-      width: calc(100% - 48px);
+      max-width: calc(100% - 48px);
     }
 
     @include mobile {
-      width: calc(100% - 32px);
+      max-width: calc(100% - 32px);
     }
   }
 }
