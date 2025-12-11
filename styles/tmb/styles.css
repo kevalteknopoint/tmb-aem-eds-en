@@ -977,7 +977,7 @@ header{
     padding:20px 24px;
   }
   .interest-table-section .default-content-wrapper .ul-1 li ul li:nth-child(even){
-    text-align:right;
+    text-align:left;
   }
   :root{
     --carousel-card-fix:264px;

@@ -654,7 +654,7 @@
 }
 
 .money-overseas .overseas-columns-wrapper{
-  align-items:baseline;
+  align-items:flex-start;
   display:flex;
   gap:80px;
   padding:40px 0;
@@ -714,7 +714,7 @@
 }
 
 .money-overseas .overseas-columns-wrapper ol > li:not(.money-overseas .overseas-columns-wrapper ol > li:has(p)), .money-overseas .overseas-columns-wrapper ol > li:has(p) p{
-  align-items:center;
+  align-items:baseline;
   counter-increment:step-counter;
   display:flex;
   gap:12px;
@@ -819,6 +819,10 @@
   background:var(--bg-light-3);
 }
 
+.money-overseas-variant .overseas-columns .overseas-columns-wrapper{
+  align-items:flex-start;
+}
+
 .money-overseas-variant .overseas-columns .overseas-columns-wrapper div h1,
 .money-overseas-variant .overseas-columns .overseas-columns-wrapper div h2,
 .money-overseas-variant .overseas-columns .overseas-columns-wrapper div h3{
@@ -877,6 +881,7 @@
 }
 
 .overseas-variant .overseas-columns .overseas-columns-wrapper div p{
+  color:var(--body-default);
   display:flex;
   margin-bottom:10px;
 }
@@ -991,6 +996,12 @@
   }
 
   .money-overseas .overseas-columns-wrapper div{
+    max-width:unset;
+  }
+
+  .money-overseas-variant .overseas-columns .overseas-columns-wrapper div h1,
+  .money-overseas-variant .overseas-columns .overseas-columns-wrapper div h2,
+  .money-overseas-variant .overseas-columns .overseas-columns-wrapper div h3{
     max-width:unset;
   }
 }
