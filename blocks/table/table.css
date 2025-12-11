@@ -69,6 +69,10 @@
   padding:16px 16px 16px 8px;
 }
 
+.interest-table-section .default-content-wrapper .ul-1:last-child > li:last-child li{
+  border-bottom:0;
+}
+
 .interest-table-section .default-content-wrapper h3, .interest-table-section .default-content-wrapper h4{
   border-bottom:4px solid var(--heading-default);
   color:var(--heading-default);

@@ -30,7 +30,7 @@
             }
         }
 
-        .ul-1{
+        .ul-1 {
             display: flex;
             justify-content: flex-start;
             flex-direction: column;
@@ -67,6 +67,14 @@
                     }
                 }
                 
+            }
+
+            &:last-child {
+              & > li:last-child {
+                li {
+                  border-bottom: 0;
+                }
+              }
             }
         }
 
