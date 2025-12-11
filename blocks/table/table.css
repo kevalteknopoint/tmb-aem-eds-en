@@ -92,6 +92,18 @@
   text-transform:initial;
 }
 
+.interest-table-section .default-content-wrapper h5{
+  color:var(--body-default);
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-style:normal;
+  font-weight:var(--font-weight-sm-body);
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
+  padding-top:16px;
+  text-transform:initial;
+}
+
 .interest-table-section .default-content-wrapper h6{
   color:var(--body-default);
   font-family:var(--font-family-disc);
@@ -100,6 +112,7 @@
   font-weight:var(--font-weight-disc);
   letter-spacing:var(--font-letter-spacing-disc);
   line-height:var(--font-height-disclaimer);
+  padding-top:16px;
   text-transform:initial;
 }
 

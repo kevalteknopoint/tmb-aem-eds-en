@@ -85,9 +85,18 @@
             @include typo-body;
         }
 
+        h5 {
+          font-style: normal;
+          color: $body-default;
+          padding-top: 16px;
+
+          @include typo-sm-body;
+        }
+
         h6 {
           font-style: normal;
           color: $body-default;
+          padding-top: 16px;
 
           @include typo-disclaimer;
         }
