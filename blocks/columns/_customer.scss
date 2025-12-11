@@ -22,25 +22,30 @@
                     flex-direction: column;
 
                     h1,h2,h3{
+                        @include typo-heading1;
+
                         color: $heading-default;
                         text-align: center;
                         font-family: $secondary-font;
-                        font-size: 40px;
                         font-style: normal;
-
+                        
+                        // font-size: 40px;
                         // font-weight: 900;
-                        line-height: 40px; 
+                        // line-height: 40px; 
+                        // text-transform: uppercase;
                         letter-spacing: 2px;
-                        text-transform: uppercase;
                     }
 
                     p{
+                        @include typo-body;
+
                         color: $body-default;
                         text-align: center;
-                        font-size: 16px;
-                        font-weight: 400;
-                        line-height: 24px;
                         margin: 16px 0 32px;
+
+                        // font-size: 16px;
+                        // font-weight: 400;
+                        // line-height: 24px;
                     }
 
                     p.button-container{
@@ -50,6 +55,7 @@
 
                       a {
                         @include button('primary');
+                        @include typo-heading5;
                       }
                     }
 
@@ -67,17 +73,22 @@
         @include responsive-container;
         
         .para-0{
+            @include typo-body;
+
             color: $body-default;
             text-align: center;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
+
+            // font-size: 16px;
+            // font-weight: 400;
+            // line-height: 24px;
 
             a{
+                @include typo-body;
+
+                // font-size: 16px;
+                // font-weight: 400;
+                // line-height: 24px;
                 color: $link-default;
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 24px;
                 text-decoration-line: underline;
                 text-decoration-style: solid;
                 text-decoration-skip-ink: auto;
@@ -88,12 +99,14 @@
         }
 
         .para-1{
+            @include typo-disclaimer;
+
+            // font-size: 12px;
+            // font-weight: 400;
+            // line-height: 18px;
             margin-top: 16px;
             color: $body-default;
             text-align: center;
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 18px;
         }
     }
 }

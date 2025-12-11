@@ -1,4 +1,4 @@
-import { isMobile, isTablet } from "../../scripts/aem.js";
+import { isMobile } from "../../scripts/aem.js";
 
 function isElementInView(container, element, percentVisible = 1) {
   const containerRect = container.getBoundingClientRect();
@@ -20,10 +20,10 @@ export default function decorateProductNavigation() {
   const scrollWrapper = productNav?.querySelector(".default-content-wrapper");
   const scrollContainer = productNav?.querySelector(".default-content-wrapper ul");
 
-  if (!productNav) return;
+  if (!productNav || window.location.href?.includes('author')) return;
 
   // eslint-disable-next-line
-  const offsetSub = isMobile() ? 60 : isTablet() ? 90 : 95;
+  const offsetSub = isMobile() ? 60 : 90;
 
   const allLinks = productNav?.querySelectorAll("ul a");
   const allContainers = Array.from(allLinks).map((link) => {

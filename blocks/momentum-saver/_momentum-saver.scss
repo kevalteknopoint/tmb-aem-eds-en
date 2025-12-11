@@ -23,7 +23,8 @@
       align-items: flex-start;
     }
 
-    >div {
+    > div {
+      order: unset;
       gap: 40px;
       align-items: flex-start;
     }
@@ -35,20 +36,16 @@
       grid-template-columns: 1fr 3fr;
 
       .rate-num {
-        font-family: $secondary-font;
+        font-family: $font-family-lg;
         color: $heading-default;
         font-size: 140px;
-        font-weight: 900;
-        font-style: normal;
+        font-weight: $font-weight-rate;
         line-height: 120px;
-        text-transform: capitalize;
 
         @include mobile {
           font-size: 120px;
           font-style: normal;
           line-height: 120px;
-          /* 100% */
-          text-transform: capitalize;
         }
 
         @media screen and (max-width: 400px) {
@@ -60,7 +57,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* Stack % above P.A. */
         align-items: center;
         line-height: 1;
 
@@ -70,15 +66,14 @@
       }
 
       .rate-percent {
-        font-weight: 700;
         color: $heading-default;
+        font-family: $font-family-lg;
         font-size: 80px;
-        font-style: normal;
         line-height: 72px;
+        font-weight: $font-weight-rate;
 
         @include mobile {
           font-size: 78px;
-          font-style: normal;
           line-height: 72px;
         }
 
@@ -91,8 +86,8 @@
         color: $heading-default;
         text-align: left;
         font-size: 40px;
-        font-style: normal;
-        font-weight: 400;
+        font-family: $font-family-h1-std;
+        font-weight: $font-weight-rate-p-a;
         line-height: 28px;
 
         @media screen and (max-width: 400px) {
@@ -102,57 +97,33 @@
 
       p {
         color: $heading-default;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
         width: 100%;
 
-        @include mobile {
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 24px;
-          width: 121%;
-        }
+        @include typo-body;
       }
     }
 
     .momentum-second-content {
-      h2 {
+      h1, h2, h3 {
+        @include typo-heading1;
+
         color: $heading-default;
-        font-family: $secondary-font;
-        font-size: 40px;
         font-style: normal;
-        line-height: 40px;
-        text-transform: uppercase;
         margin-bottom: 16px;
-
-        @include mobile {
-          font-size: 38px;
-          line-height: 38px;
-        }
-
       }
 
-
-      h3 {
+      h4, h5, h6 {
         color: $heading-default;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 36px;
         margin-bottom: 4px;
-        ;
+        
+        @include typo-intro;
       }
 
       p {
         color: $body-default;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
         margin-bottom: 24px;
+        
+        @include typo-body;
       }
 
       p:has(a) {
@@ -189,10 +160,7 @@
   }
 }
 
-// updated end
-
 // variant for section bg
-
 .momentum-saver-section.background-color-teal {
   background-color: $bg-reverse;
 
@@ -203,7 +171,6 @@
 
 
 // image variant 
-
 .momentum-saver-section.momentum-image-saver {
   .columns-wrapper {
     @include responsive-container;
@@ -229,18 +196,8 @@
             display: block;
           }
 
-          h2 {
-            font-family: $secondary-font;
-            font-weight: 500;
-            text-transform: capitalize;
-
-            @include mobile {
-              font-size: 38px;
-            }
-
-            @include tablet {
-              font-size: 38px;
-            }
+          h1, h2, h3 {
+            @include typo-heading1;
           }
         }
       }
@@ -256,9 +213,7 @@
   background-color: $heading-default;
 
   .momentum-second-content {
-    h2,
-    h3,
-    p {
+    h1, h2, h3, h4, h5, h6, p {
       color: $body-reverse;
     }
 
@@ -291,19 +246,6 @@
         }
 
         .momentum-second-content {
-          h2 {
-            color: $heading-default;
-            font-family: $secondary-font;
-            font-size:  40px;
-            font-style: normal;
-            font-weight: 900;
-            line-height:  40px;
-
-            @include mobile {
-              width: unset;
-            }
-          }
-
           p {
             margin-bottom: 0;
           }

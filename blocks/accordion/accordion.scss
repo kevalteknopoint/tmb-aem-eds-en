@@ -29,19 +29,21 @@
 
       p {
         margin: 0px;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 24px;
+        // font-size: 16px;
+        // font-weight: 500;
+        // line-height: 24px;
+        @include typo-heading5;
       }
 
       .accordion-item-label {
+        @include typo-heading5;
+        // font-weight: 700;
+        // font-size: 24px;
+        // line-height: 32px;
         position: relative;
         cursor: pointer;
         list-style: none;
         overflow: auto;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 32px;
         vertical-align: bottom;
         color: $heading-default;
         transition: background-color 0.2s;
@@ -72,9 +74,10 @@
         }
         
         p {
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 24px;
+          @include typo-body;
+          // font-weight: 400;
+          // font-size: 16px;
+          // line-height: 24px;
           margin: 0;
           color: $body-default;
         }
