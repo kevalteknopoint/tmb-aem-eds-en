@@ -20,7 +20,7 @@ export default function decorateProductNavigation() {
   const scrollWrapper = productNav?.querySelector(".default-content-wrapper");
   const scrollContainer = productNav?.querySelector(".default-content-wrapper ul");
 
-  if (!productNav) return;
+  if (!productNav || window.location.href?.includes('author')) return;
 
   // eslint-disable-next-line
   const offsetSub = isMobile() ? 60 : isTablet() ? 90 : 95;
