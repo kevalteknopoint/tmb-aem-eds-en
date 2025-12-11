@@ -878,7 +878,9 @@
 
 .overseas-variant .overseas-columns .overseas-columns-wrapper div p{
   display:flex;
+  flex-wrap:nowrap;
   margin-bottom:10px;
+  white-space:nowrap;
 }
 
 .overseas-variant .overseas-columns .overseas-columns-wrapper div p .icon-checkmark{

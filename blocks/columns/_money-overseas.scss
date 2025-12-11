@@ -251,6 +251,8 @@
         p {
           display: flex;
           margin-bottom: 10px;
+           white-space: nowrap;
+            flex-wrap: nowrap;
 
           .icon-checkmark {
             margin-right: 16px;
