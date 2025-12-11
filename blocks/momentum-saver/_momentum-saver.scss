@@ -23,7 +23,8 @@
       align-items: flex-start;
     }
 
-    >div {
+    > div {
+      order: unset;
       gap: 40px;
       align-items: flex-start;
     }
@@ -103,7 +104,7 @@
     }
 
     .momentum-second-content {
-      h2 {
+      h1, h2, h3 {
         @include typo-heading1;
 
         color: $heading-default;
@@ -111,7 +112,7 @@
         margin-bottom: 16px;
       }
 
-      h3 {
+      h4, h5, h6 {
         color: $heading-default;
         margin-bottom: 4px;
         
@@ -195,7 +196,7 @@
             display: block;
           }
 
-          h1, h2, h3, h4, h5, h6 {
+          h1, h2, h3 {
             @include typo-heading1;
           }
         }

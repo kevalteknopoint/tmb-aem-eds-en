@@ -20,11 +20,11 @@ export default function decorateMomentumSaver() {
     momentumWrapperseconddiv?.classList?.add("momentum-second-content");
 
     if (momentumSection?.classList?.contains("momentum-image-saver")) {
-      const momentumWrapperSecondDivSaver = momentumSection.querySelector(".columns-wrapper > .momentum-columns > div > div:nth-child(2)");
+      const momentumWrapperSecondDivSaver = momentumSection.querySelector(".columns-wrapper > .momentum-columns > div > div:not(.columns-img-col)");
       momentumWrapperSecondDivSaver?.classList?.add("momentum-second-content");
 
       if (momentumSection?.classList?.contains("image-swapping")) {
-        const momentumWrapperSecondDivSaverSwap = momentumSection.querySelector(".columns-wrapper > .momentum-columns > div > div:nth-child(2)");
+        const momentumWrapperSecondDivSaverSwap = momentumSection.querySelector(".columns-wrapper > .momentum-columns > div > div:not(.columns-img-col)");
         momentumWrapperSecondDivSaverSwap?.classList?.add("momentum-second-content");
       }
     }

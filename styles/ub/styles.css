@@ -502,6 +502,7 @@ header{
 .momentum-saver-section .momentum-columns > div{
   align-items:flex-start;
   gap:40px;
+  order:unset;
 }
 .momentum-saver-section .momentum-columns .momentum-content{
   display:grid;
@@ -548,7 +549,7 @@ header{
   text-transform:initial;
   width:100%;
 }
-.momentum-saver-section .momentum-columns .momentum-second-content h2{
+.momentum-saver-section .momentum-columns .momentum-second-content h1, .momentum-saver-section .momentum-columns .momentum-second-content h2, .momentum-saver-section .momentum-columns .momentum-second-content h3{
   color:var(--heading-default);
   font-family:var(--font-family-h1);
   font-size:var(--font-size-h1);
@@ -559,7 +560,7 @@ header{
   margin-bottom:16px;
   text-transform:initial;
 }
-.momentum-saver-section .momentum-columns .momentum-second-content h3{
+.momentum-saver-section .momentum-columns .momentum-second-content h4, .momentum-saver-section .momentum-columns .momentum-second-content h5, .momentum-saver-section .momentum-columns .momentum-second-content h6{
   color:var(--heading-default);
   font-family:var(--font-family-intro);
   font-size:var(--font-size-intro);
@@ -651,7 +652,7 @@ header{
 .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .columns-img-col img{
   border-radius:var(--radius-card);
 }
-.momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h1, .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2, .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h3, .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h4, .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h5, .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h6{
+.momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h1, .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2, .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h3{
   font-family:var(--font-family-h1);
   font-size:var(--font-size-h1);
   font-weight:var(--font-weight-h1);
