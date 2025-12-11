@@ -30,23 +30,26 @@
       margin-bottom: 24px;
     }
 
+    & + .overseas-columns {
+      .overseas-columns-wrapper {
+        padding-top: 0;
+      }
+    }
+
     h1,
     h2,
     h3 {
       color: $heading-default;
-      font-family: $secondary-font;
-      font-size: 40px;
-      font-weight: 900;
-      line-height: 40px;
       margin-bottom: 16px;
+
+      @include typo-heading1;
     }
 
     p {
       color: $body-default;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
       max-width: 800px;
+
+      @include typo-body;
     }
   }
 
@@ -80,12 +83,16 @@
       h2,
       h3 {
         color: $heading-default;
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 29px;
         white-space: normal;
         overflow-wrap: break-word;
-        width: 100%;
+        max-width: 370px;
+        width: fit-content;
+
+        @include typo-heading3;
+
+        @include tablet {
+          max-width: unset;
+        }
       }
     }
 
@@ -110,8 +117,9 @@
 
     ol>li {
       margin-bottom: 10px;
-      font-size: 16px;
       color: $body-default;
+
+      @include typo-body;
 
       p {
         margin-bottom: 0;
@@ -163,20 +171,16 @@
           background: unset;
           margin-bottom: unset;
 
-
           li {
             color: $body-default;
-            font-size: 14px;
-            font-weight: 600;
-            line-height: 21px;
             min-width: 130px;
             width: fit-content;
             margin-bottom: 0;
 
+            @include typo-sm-body-bold;
+
             &:nth-child(2) {
-              font-size: 16px;
-              font-weight: 400;
-              line-height: 24px;
+              @include typo-body;
             }
 
             a {
@@ -209,15 +213,12 @@
         h2,
         h3 {
           color: $heading-default;
-          font-size: 40px;
-          font-weight: 900;
-          line-height: 40px;
           white-space: normal;
           overflow-wrap: break-word;
           max-width: 370px;
           width: fit-content;
-          font-family: $secondary-font;
 
+          @include typo-heading1;
         }
       }
 
@@ -237,15 +238,12 @@
         h2,
         h3 {
           color: $heading-default;
-          font-size: 40px;
-          font-weight: 900;
-          line-height: 40px;
           white-space: normal;
           overflow-wrap: break-word;
           max-width: 370px;
           width: max-content;
-          font-family: $secondary-font;
 
+          @include typo-heading1;
         }
 
         p {

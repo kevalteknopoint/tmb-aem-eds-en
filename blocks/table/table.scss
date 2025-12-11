@@ -6,12 +6,9 @@
     .default-content-wrapper{
         h1,h2{
             color: $heading-default;
-            font-family: $font-family-h1;
-            font-size: $font-size-h1;
-            font-weight: $font-weight-h1;
-            line-height: $font-height-h1;
-            letter-spacing: $font-letter-spacing-h1;
             margin-bottom: 40px;
+
+            @include typo-heading1;
 
             @include mobile {
                 margin-bottom: 24px;
@@ -27,12 +24,9 @@
                 width: 50%;
                 text-decoration: none;
                 color: $heading-default;
-                font-family: $font-family-h3;
-                font-size: $font-size-h3;
-                font-weight: $font-weight-h3;
-                line-height: $font-height-h3;
-                letter-spacing: $font-letter-spacing-h3;
                 margin: 0 0 16px;
+
+                @include typo-heading3;
             }
         }
 
@@ -51,10 +45,9 @@
                         width: 50%;
                         padding: 16px 8px 16px 0;
                         color: $body-default;
-                        font-size: 16px;
-                        font-weight: 400;
-                        line-height: 24px;
                         border-bottom: 1px solid rgb(0 0 0 / 20%); // FIGMA TOKEN MISSING
+
+                        @include typo-body;
                     }
                     
                     li:nth-child(odd) {
@@ -77,21 +70,35 @@
             }
         }
 
-        h3,h4{
+        h3, h4{
             color: $heading-default;
-            font-size: 24px;
-            font-weight: 500;
-            line-height: 29px;
             padding: 40px 0 16px;
             border-bottom: 4px solid $heading-default;
+
+            @include typo-heading3;
         }
 
-        p{
+        p {
             color: $body-default;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
             padding-top: 16px;
+
+            @include typo-body;
+        }
+
+        h5 {
+          font-style: normal;
+          color: $body-default;
+          padding-top: 16px;
+
+          @include typo-sm-body;
+        }
+
+        h6 {
+          font-style: normal;
+          color: $body-default;
+          padding-top: 16px;
+
+          @include typo-disclaimer;
         }
     }
 }

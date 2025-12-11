@@ -110,11 +110,12 @@
 .who-can-apply-section .default-content-wrapper h2{
   color:var(--heading-default);
   font-family:var(--secondary-font);
-  font-size:40px;
-  letter-spacing:2px;
-  line-height:40px;
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
   text-align:left;
-  text-transform:uppercase;
+  text-transform:initial;
 }
 
 .who-can-apply-section .columns-wrapper .block .column-container{
@@ -130,9 +131,12 @@
 
 .who-can-apply-section .columns-wrapper .block .column-container div p{
   color:var(--heading-default);
-  font-size:24px;
-  font-weight:500;
-  line-height:29px;
+  font-family:var(--font-family-h3);
+  font-size:var(--font-size-h3);
+  font-weight:var(--font-weight-h3);
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
+  text-transform:initial;
 }
 
 .who-can-apply-section .columns-wrapper .block .column-container div ul{
@@ -141,10 +145,14 @@
 
 .who-can-apply-section .columns-wrapper .block .column-container div ul li{
   color:var(--body-default);
-  font-size:16px;
-  line-height:24px;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
   list-style:disc;
   margin-left:25px;
+  text-transform:initial;
 }
 
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item{
@@ -162,10 +170,13 @@
 
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-label p{
   color:var(--body-default);
-  font-size:24px;
-  font-weight:500;
-  line-height:29px;
+  font-family:var(--font-family-h3);
+  font-size:var(--font-size-h3);
+  font-weight:var(--font-weight-h3);
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
   margin-top:4px;
+  text-transform:initial;
 }
 
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-label svg{
@@ -186,8 +197,12 @@
 }
 
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body p{
-  font-size:16px;
-  line-height:24px;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-transform:initial;
 }
 
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item[open] summary svg{
@@ -225,21 +240,26 @@
 .customer .columns-wrapper .block .columns-container div h1, .customer .columns-wrapper .block .columns-container div h2, .customer .columns-wrapper .block .columns-container div h3{
   color:var(--heading-default);
   font-family:var(--secondary-font);
-  font-size:40px;
+  font-size:var(--font-size-h1);
   font-style:normal;
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
   letter-spacing:2px;
-  line-height:40px;
+  line-height:var(--font-height-h1);
   text-align:center;
-  text-transform:uppercase;
+  text-transform:initial;
 }
 
 .customer .columns-wrapper .block .columns-container div p{
   color:var(--body-default);
-  font-size:16px;
-  font-weight:400;
-  line-height:24px;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
   margin:16px 0 32px;
   text-align:center;
+  text-transform:initial;
 }
 
 .customer .columns-wrapper .block .columns-container div p.button-container{
@@ -252,10 +272,14 @@
   background-color:var(--color-button-primary-default);
   border:none;
   color:var(--color-button-text-stroke-reverse);
+  font-family:var(--font-family-h5);
   font-size:var(--font-size-h5);
+  font-weight:var(--font-weight-h5);
+  letter-spacing:var(--font-letter-spacing-h5);
   line-height:var(--font-height-h5);
   min-width:150px;
   padding-block:8px;
+  text-transform:initial;
 }
 
 .customer .columns-wrapper .block .columns-container div p.button-container a:hover{
@@ -312,33 +336,42 @@
 
 .customer .content-container .para-0{
   color:var(--body-default);
-  font-size:16px;
-  font-weight:400;
-  line-height:24px;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
   text-align:center;
+  text-transform:initial;
 }
 
 .customer .content-container .para-0 a{
   color:var(--link-default);
-  font-size:16px;
-  font-weight:400;
-  line-height:24px;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
   text-decoration-line:underline;
   -webkit-text-decoration-skip:ink;
           text-decoration-skip-ink:auto;
   text-decoration-style:solid;
   text-decoration-thickness:auto;
+  text-transform:initial;
   text-underline-offset:auto;
   text-underline-position:from-font;
 }
 
 .customer .content-container .para-1{
   color:var(--body-default);
-  font-size:12px;
-  font-weight:400;
-  line-height:18px;
+  font-family:var(--font-family-disc);
+  font-size:var(--font-size-disclaimer);
+  font-weight:var(--font-weight-disc);
+  letter-spacing:var(--font-letter-spacing-disc);
+  line-height:var(--font-height-disclaimer);
   margin-top:16px;
   text-align:center;
+  text-transform:initial;
 }
 
 .faq-accordion{
@@ -357,12 +390,12 @@
 
 .faq-accordion .default-content-wrapper h1, .faq-accordion .default-content-wrapper h2, .faq-accordion .default-content-wrapper h3, .faq-accordion .default-content-wrapper h4, .faq-accordion .default-content-wrapper h5, .faq-accordion .default-content-wrapper h6{
   color:var(--heading-default);
-  font-family:var(--secondary-font);
-  font-size:40px;
-  font-weight:900;
-  letter-spacing:2px;
-  line-height:40px;
-  text-transform:uppercase;
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  text-transform:initial;
 }
 
 .faq-accordion .accordion-wrapper{
@@ -384,10 +417,13 @@
 
 .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label p{
   color:var(--color-button-primary-default);
-  font-size:24px;
-  font-weight:500;
-  line-height:29px;
+  font-family:var(--font-family-h3);
+  font-size:var(--font-size-h3);
+  font-weight:var(--font-weight-h3);
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
   margin-top:4px;
+  text-transform:initial;
 }
 
 .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label svg{
@@ -408,8 +444,13 @@
 }
 
 .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body p{
-  font-size:16px;
-  line-height:24px;
+  color:var(--body-default);
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-transform:initial;
 }
 
 .faq-accordion .accordion-wrapper .block .accordion-item[open] summary svg{
@@ -455,6 +496,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
+  text-transform:initial;
 }
 
 .section.compare-accounts .default-content-wrapper p a{
@@ -528,19 +570,21 @@
   font-family:var(--font-family-h3);
   font-size:var(--font-size-h3);
   font-weight:var(--font-weight-h3);
-  letter-spacing:var(--font-weight-h3);
+  letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
   padding:32px 24px 8px;
+  text-transform:initial;
 }
 
 .section.compare-accounts .columns.block h4{
-  color:var(--color-variants-body-default);
+  color:var(--body-default);
   font-family:var(--font-family-body);
   font-size:var(--font-size-body);
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   padding:16px 24px 0;
+  text-transform:initial;
 }
 
 .section.compare-accounts .columns.block h5{
@@ -551,6 +595,7 @@
   letter-spacing:var(--font-letter-spacing-disc);
   line-height:var(--font-height-disclaimer);
   padding:16px 24px 0;
+  text-transform:initial;
 }
 
 .section.compare-accounts .columns.block .interest-rate{
@@ -561,6 +606,7 @@
   font-weight:var(--font-weight-h1-std);
   letter-spacing:var(--font-letter-spacing-h1-std);
   line-height:var(--font-height-h1-std);
+  text-transform:initial;
 }
 
 .section.compare-accounts .columns.block .interest-rate .rate-pa{
@@ -569,6 +615,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
+  text-transform:initial;
 }
 
 .section.compare-accounts .columns.block p{
@@ -579,6 +626,7 @@
   letter-spacing:var(--font-letter-spacing-disc);
   line-height:var(--font-height-disclaimer);
   padding:16px 24px 0;
+  text-transform:initial;
 }
 
 .section.compare-accounts .columns.block p:has(.interest-rate){
@@ -600,6 +648,7 @@
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
   padding-bottom:2px;
+  text-transform:initial;
   width:-moz-fit-content;
   width:fit-content;
 }
@@ -634,23 +683,32 @@
   width:100%;
 }
 
+.money-overseas .overseas-wrapper + .overseas-columns .overseas-columns-wrapper{
+  padding-top:0;
+}
+
 .money-overseas .overseas-wrapper h1,
 .money-overseas .overseas-wrapper h2,
 .money-overseas .overseas-wrapper h3{
   color:var(--heading-default);
-  font-family:var(--secondary-font);
-  font-size:40px;
-  font-weight:900;
-  line-height:40px;
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
   margin-bottom:16px;
+  text-transform:initial;
 }
 
 .money-overseas .overseas-wrapper p{
   color:var(--body-default);
-  font-size:16px;
-  font-weight:400;
-  line-height:24px;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
   max-width:800px;
+  text-transform:initial;
 }
 
 .money-overseas .overseas-columns-wrapper{
@@ -676,12 +734,17 @@
 .money-overseas .overseas-columns-wrapper div h2,
 .money-overseas .overseas-columns-wrapper div h3{
   color:var(--heading-default);
-  font-size:24px;
-  font-weight:500;
-  line-height:29px;
+  font-family:var(--font-family-h3);
+  font-size:var(--font-size-h3);
+  font-weight:var(--font-weight-h3);
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
+  max-width:370px;
   overflow-wrap:break-word;
+  text-transform:initial;
   white-space:normal;
-  width:100%;
+  width:-moz-fit-content;
+  width:fit-content;
 }
 
 .money-overseas .overseas-columns-wrapper p{
@@ -705,8 +768,13 @@
 
 .money-overseas .overseas-columns-wrapper ol > li{
   color:var(--body-default);
-  font-size:16px;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
   margin-bottom:10px;
+  text-transform:initial;
 }
 
 .money-overseas .overseas-columns-wrapper ol > li p{
@@ -763,19 +831,25 @@
 
 .money-overseas .overseas-columns-wrapper ul li .overseas-columns-wrapper-ul li{
   color:var(--body-default);
-  font-size:14px;
-  font-weight:600;
-  line-height:21px;
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-weight:var(--font-weight-body-bold);
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
   margin-bottom:0;
   min-width:130px;
+  text-transform:initial;
   width:-moz-fit-content;
   width:fit-content;
 }
 
 .money-overseas .overseas-columns-wrapper ul li .overseas-columns-wrapper-ul li:nth-child(2){
-  font-size:16px;
-  font-weight:400;
-  line-height:24px;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-transform:initial;
 }
 
 .money-overseas .overseas-columns-wrapper ul li .overseas-columns-wrapper-ul li a{
@@ -823,12 +897,14 @@
 .money-overseas-variant .overseas-columns .overseas-columns-wrapper div h2,
 .money-overseas-variant .overseas-columns .overseas-columns-wrapper div h3{
   color:var(--heading-default);
-  font-family:var(--secondary-font);
-  font-size:40px;
-  font-weight:900;
-  line-height:40px;
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
   max-width:370px;
   overflow-wrap:break-word;
+  text-transform:initial;
   white-space:normal;
   width:-moz-fit-content;
   width:fit-content;
@@ -865,12 +941,14 @@
 .overseas-variant .overseas-columns .overseas-columns-wrapper div h2,
 .overseas-variant .overseas-columns .overseas-columns-wrapper div h3{
   color:var(--heading-default);
-  font-family:var(--secondary-font);
-  font-size:40px;
-  font-weight:900;
-  line-height:40px;
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
   max-width:370px;
   overflow-wrap:break-word;
+  text-transform:initial;
   white-space:normal;
   width:-moz-max-content;
   width:max-content;
@@ -993,6 +1071,12 @@
   .money-overseas .overseas-columns-wrapper div{
     max-width:unset;
   }
+
+  .money-overseas .overseas-columns-wrapper div h1,
+  .money-overseas .overseas-columns-wrapper div h2,
+  .money-overseas .overseas-columns-wrapper div h3{
+    max-width:unset;
+  }
 }
 
 @media screen and (max-width: 767px){
@@ -1050,11 +1134,6 @@
 
   .faq-accordion .default-content-wrapper{
     min-width:unset;
-  }
-
-  .faq-accordion .default-content-wrapper h1, .faq-accordion .default-content-wrapper h2, .faq-accordion .default-content-wrapper h3, .faq-accordion .default-content-wrapper h4, .faq-accordion .default-content-wrapper h5, .faq-accordion .default-content-wrapper h6{
-    font-size:38px;
-    line-height:38px;
   }
 
   .section.compare-accounts{

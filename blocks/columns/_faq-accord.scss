@@ -23,17 +23,8 @@
 
         h1,h2,h3,h4,h5,h6{
             color: $heading-default;
-            font-family: $secondary-font;
-            font-size: 40px;
-            font-weight: 900;
-            line-height: 40px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
 
-            @include mobile{
-                font-size: 38px;
-                line-height: 38px;
-            }
+            @include typo-heading1;
         }
     }
 
@@ -46,18 +37,17 @@
                 border-top: 1px solid var(--line-default);
                 padding: 16px 0;
 
-                .accordion-item-label{
+                .accordion-item-label {
                     list-style: none;
                     display: flex;
                     justify-content: space-between;
                     align-items: flex-start;
 
-                    p{
+                    p {
                         color: $color-button-primary-default;
-                        font-size: 24px;
-                        font-weight: 500;
-                        line-height: 29px;
                         margin-top: 4px;
+
+                        @include typo-heading3
                     }
 
                     svg {
@@ -77,9 +67,10 @@
                 .accordion-item-body{
                     margin-top: 8px;
 
-                    p{
-                        font-size: 16px;
-                        line-height: 24px;
+                    p {
+                      color: $body-default;  
+
+                      @include typo-body;
                     }
                 }  
 
