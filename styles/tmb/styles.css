@@ -549,7 +549,9 @@ header{
   text-transform:initial;
   width:100%;
 }
-.momentum-saver-section .momentum-columns .momentum-second-content h1, .momentum-saver-section .momentum-columns .momentum-second-content h2, .momentum-saver-section .momentum-columns .momentum-second-content h3{
+.momentum-saver-section .momentum-columns .momentum-second-content h1,
+.momentum-saver-section .momentum-columns .momentum-second-content h2,
+.momentum-saver-section .momentum-columns .momentum-second-content h3{
   color:var(--heading-default);
   font-family:var(--font-family-h1);
   font-size:var(--font-size-h1);
@@ -560,7 +562,9 @@ header{
   margin-bottom:16px;
   text-transform:initial;
 }
-.momentum-saver-section .momentum-columns .momentum-second-content h4, .momentum-saver-section .momentum-columns .momentum-second-content h5, .momentum-saver-section .momentum-columns .momentum-second-content h6{
+.momentum-saver-section .momentum-columns .momentum-second-content h4,
+.momentum-saver-section .momentum-columns .momentum-second-content h5,
+.momentum-saver-section .momentum-columns .momentum-second-content h6{
   color:var(--heading-default);
   font-family:var(--font-family-intro);
   font-size:var(--font-size-intro);
@@ -652,7 +656,9 @@ header{
 .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .columns-img-col img{
   border-radius:var(--radius-card);
 }
-.momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h1, .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2, .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h3{
+.momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h1,
+.momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2,
+.momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h3{
   font-family:var(--font-family-h1);
   font-size:var(--font-size-h1);
   font-weight:var(--font-weight-h1);
@@ -664,7 +670,13 @@ header{
 .momentum-image-saver.bg-image-saver{
   background-color:var(--heading-default);
 }
-.momentum-image-saver.bg-image-saver .momentum-second-content h1, .momentum-image-saver.bg-image-saver .momentum-second-content h2, .momentum-image-saver.bg-image-saver .momentum-second-content h3, .momentum-image-saver.bg-image-saver .momentum-second-content h4, .momentum-image-saver.bg-image-saver .momentum-second-content h5, .momentum-image-saver.bg-image-saver .momentum-second-content h6, .momentum-image-saver.bg-image-saver .momentum-second-content p{
+.momentum-image-saver.bg-image-saver .momentum-second-content h1,
+.momentum-image-saver.bg-image-saver .momentum-second-content h2,
+.momentum-image-saver.bg-image-saver .momentum-second-content h3,
+.momentum-image-saver.bg-image-saver .momentum-second-content h4,
+.momentum-image-saver.bg-image-saver .momentum-second-content h5,
+.momentum-image-saver.bg-image-saver .momentum-second-content h6,
+.momentum-image-saver.bg-image-saver .momentum-second-content p{
   color:var(--body-reverse);
 }
 .momentum-image-saver.bg-image-saver .momentum-second-content .button-container a{
@@ -700,6 +712,25 @@ header{
 }
 .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content p{
   margin-bottom:0;
+}
+.momentum-direct-variant .momentum-columns div .momentum-second-content ul{
+  align-items:flex-start;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  margin-bottom:10px;
+  max-width:unset;
+  width:100%;
+}
+.momentum-direct-variant .momentum-columns div .momentum-second-content ul li{
+  display:flex;
+  flex-direction:row;
+}
+.momentum-direct-variant .momentum-columns div .momentum-second-content ul .icon-checkmark .icon-svg{
+  color:var(--heading-default);
+  height:32px;
+  margin-right:16px;
+  width:32px;
 }
 
 .product-navigation{
@@ -953,6 +984,9 @@ header{
   }
   .momentum-saver-section.momentum-image-saver .columns-wrapper{
     padding-inline:24px;
+  }
+  .momentum-direct-variant .momentum-columns div{
+    flex-direction:column-reverse;
   }
   .product-navigation{
     padding-inline:24px;
