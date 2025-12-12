@@ -4,13 +4,27 @@ import decorateBankingGoods from "./banking-goods.js";
 import expandableTiles from "./expandable-tiles.js";
 import decorateOnlineBanking from "./online-banking.js";
 import newsHelpful from "./news-helpful.js";
+import newsHomepage from "./news-homepage.js";
 
 export default function decorate(block) {
   if (block.classList.contains("expandable-tiles")) {
     expandableTiles(block);
-  } else if (block.closest(".news-helpful")) {
-    newsHelpful(block);
-  } else {
+  } else if (block.closest(".news-helpful-homepage")) {
+    newsHomepage(block);
+  }else if (block.closest(".news-helpful")) {
+    console.log(block.closest(".news-helpful-homepage"));
+      // newsHomepage(block);
+    newsHelpful(block);                                                                       
+//     if (block.closest(".news-helpful-homepage")) {
+//       console.log('inside');
+//       newsHomepage(block);
+//     }
+//     const homepageWrapper = block.closest('.news-helpful');
+//     console.log("Homepage wrapper?", homepageWrapper);
+//     console.log("Block:", block);
+// console.log("Has .news-helpful-homepage?", block.closest(".news-helpful-homepage"));
+// console.log("Parent HTML:", block.parentElement?.outerHTML);
+  }else {
     /* change to ul, li */
     const ul = document.createElement("ul");
     [...block.children].forEach((row) => {
@@ -41,4 +55,9 @@ export default function decorate(block) {
       }
     });
   }
+  if (block.closest(".news-helpful-homepage")) {
+      console.log('inside');
+      newsHomepage(block);
+    }
+
 }

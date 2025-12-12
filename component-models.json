@@ -341,6 +341,10 @@
           {
             "name": "Money Overseas Variant",
             "value": "money-overseas-variant"
+          },
+          {
+            "name": "News helpful homepage",
+            "value": "news-helpful-homepage"
           }
         ]
       }
