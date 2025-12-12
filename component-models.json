@@ -341,6 +341,10 @@
           {
             "name": "Money Overseas Variant",
             "value": "money-overseas-variant"
+          },
+          {
+            "name": "Momentum Direct Variant",
+            "value": "momentum-direct-variant"
           }
         ]
       }
