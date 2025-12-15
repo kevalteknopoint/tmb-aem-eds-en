@@ -409,6 +409,76 @@
         "value": "",
         "label": "context-model",
         "valueType": "string"
+      },
+      {
+        "component": "container",
+        "label": "Button",
+        "name": "container",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text-input",
+            "label": "Button Text",
+            "name": "btn-text",
+            "valueType": "string"
+          },
+          {
+            "component": "aem-content",
+            "name": "btn-link",
+            "value": "",
+            "label": "Button Link",
+            "valueType": "string"
+          },
+          {
+            "component": "multiselect",
+            "name": "btn-target",
+            "label": "Button Target",
+            "valueType": "string",
+            "options": [
+              {
+                "name": "New",
+                "value": "_blank"
+              },
+              {
+                "name": "Parent",
+                "value": "_parent"
+              },
+              {
+                "name": "Top",
+                "value": "_top"
+              }
+            ]
+          },
+          {
+            "component": "multiselect",
+            "name": "btn-style",
+            "label": "Button Style",
+            "valueType": "string",
+            "options": [
+              {
+                "name": "Primary",
+                "value": "primary-btn"
+              },
+              {
+                "name": "Secondary",
+                "value": "secondary-btn"
+              },
+              {
+                "name": "Outlined",
+                "value": "outlined-btn"
+              },
+              {
+                "name": "Outlined Reverse",
+                "value": "outlined-reverse-btn"
+              },
+              {
+                "name": "White",
+                "value": "white-btn"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
