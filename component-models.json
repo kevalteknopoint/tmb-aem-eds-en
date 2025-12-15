@@ -532,25 +532,74 @@
         "valueType": "string"
       },
       {
+        "component": "multifield",
+        "name": "buttons",
+        "label": "Buttons",
+        "field": {
+          "component": "container",
+          "items": [
+            {
+              "component": "text",
+              "name": "label",
+              "label": "Button Label"
+            },
+            {
+              "component": "text",
+              "name": "href",
+              "label": "Button Link"
+            },
+            {
+              "component": "select",
+              "name": "type",
+              "label": "Button Type",
+              "options": [
+                {
+                  "name": "Default",
+                  "value": ""
+                },
+                {
+                  "name": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "name": "Secondary",
+                  "value": "secondary"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "button",
+    "fields": [
+      {
         "component": "text",
-        "name": "linkText",
-        "label": "Title"
+        "name": "label",
+        "label": "Button Label"
+      },
+      {
+        "component": "text",
+        "name": "href",
+        "label": "Button Link"
       },
       {
         "component": "select",
-        "name": "linkType",
-        "label": "Type",
+        "name": "type",
+        "label": "Button Type",
         "options": [
           {
-            "name": "default",
+            "name": "Default",
             "value": ""
           },
           {
-            "name": "primary",
+            "name": "Primary",
             "value": "primary"
           },
           {
-            "name": "secondary",
+            "name": "Secondary",
             "value": "secondary"
           }
         ]
