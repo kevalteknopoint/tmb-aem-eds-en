@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Transformd form",
+      "title": "Transformd form demo",
       "id": "transformd-form",
       "plugins": {
         "xwalk": {
