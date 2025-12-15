@@ -985,6 +985,97 @@ html{
   transform:rotate(180deg);
 }
 
+.looking-for-another-way{
+  align-items:flex-start;
+  display:flex;
+  flex:1 0 0;
+  flex-direction:column;
+  gap:40px;
+  justify-content:center;
+  max-width:1440px;
+  padding:0 64px;
+}
+
+.looking-for-another-way h2{
+  color:#00525B;
+  font-family:var(--font-family-h1, "American Grotesk Condensed");
+  font-size:40px;
+  font-style:normal;
+  font-weight:900;
+  letter-spacing:2px;
+  line-height:40px;
+  text-transform:uppercase;
+}
+
+.looking-for-another-way .cards-wrapper ul{
+  align-items:flex-start;
+  display:flex;
+  flex:1 0 0;
+  gap:32px;
+}
+
+.looking-for-another-way .cards-wrapper li{
+  align-items:flex-start;
+  align-self:stretch;
+  background:var(--bg, #FFF);
+  border:1px solid black;
+  border-radius:24px;
+  display:flex;
+  flex:1 0 0;
+  flex-direction:column;
+  gap:16px;
+  padding:40px 24px;
+}
+
+.looking-for-another-way .cards-wrapper li .cards-card-body{
+  align-items:center;
+  align-self:stretch;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.looking-for-another-way .cards-wrapper li .cards-card-body h3{
+  color:var(--heading, #00525B);
+  font-family:var(--font-family-h3, Inter);
+  font-size:24px;
+  font-style:normal;
+  font-weight:500;
+  letter-spacing:0;
+  line-height:29px;
+  text-align:center;
+}
+
+.looking-for-another-way .cards-wrapper li .cards-card-body .card-button{
+  background:var(--color-button-outlined-default, rgb(255 255 255 / 1%));
+  border:2px solid var(--color-button-text-stroke-default, #00525B);
+  border-radius:24px;
+  gap:12px;
+  padding:8px 24px;
+}
+
+.looking-for-another-way .cards-wrapper li .cards-card-body .card-button a{
+  color:var(--color-button-text-stroke-default, #00525B);
+  font-family:var(--font-family-h5, Inter);
+  font-size:16px;
+  font-style:normal;
+  font-weight:500;
+  letter-spacing:0;
+  line-height:24px;
+  text-align:center;
+}
+
+.looking-for-another-way .cards-wrapper li .cards-card-body .card-text{
+  color:var(--body, #0B231F);
+  font-family:var(--font-family-body, Inter);
+  font-size:16px;
+  font-style:normal;
+  font-weight:400;
+  letter-spacing:0;
+  line-height:24px;
+  text-align:center;
+}
+
 @media (min-width: 766px) and (max-width: 1220px){
   .section.online-banking .cards-wrapper .cards .banking-cards-ul{
     display:grid;
