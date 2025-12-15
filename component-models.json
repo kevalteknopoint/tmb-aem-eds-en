@@ -533,7 +533,7 @@
       },
       {
         "component": "text",
-        "name": "linkTitle",
+        "name": "linkText",
         "label": "Title"
       },
       {
