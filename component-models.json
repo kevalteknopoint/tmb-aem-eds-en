@@ -416,6 +416,7 @@
         "name": "container",
         "valueType": "string",
         "collapsible": true,
+        "multi": true,
         "fields": [
           {
             "component": "text-input",
@@ -434,8 +435,13 @@
             "component": "multiselect",
             "name": "btn-target",
             "label": "Button Target",
+            "value": "_self",
             "valueType": "string",
             "options": [
+              {
+                "name": "Same",
+                "value": "_self"
+              },
               {
                 "name": "New",
                 "value": "_blank"
@@ -455,6 +461,7 @@
             "name": "btn-style",
             "label": "Button Style",
             "valueType": "string",
+            "value": "primary-btn",
             "options": [
               {
                 "name": "Primary",
