@@ -15,6 +15,7 @@ import {
   loadCSS,
 } from './aem.js';
 import { fetchPlaceholders } from './placeholders.js';
+import decorateIconLibrary from '../blocks/icon-library/icon-library.js';
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -207,6 +208,7 @@ async function loadPage() {
   decorateMomentumSaver();
   decorateProductNavigation();
   decorateTable();
+  decorateIconLibrary();
   loadDelayed();
 }
 

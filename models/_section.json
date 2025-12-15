@@ -242,6 +242,10 @@
             {
               "name": "News helpful homepage",
               "value": "news-helpful-homepage"
+            },
+            {
+              "name": "Icon library",
+              "value": "icon-library"
             }
           ]
         }
@@ -271,7 +275,8 @@
         "faq-detail",
         "hero-banner",
         "content-fragment",
-        "interest-table"
+        "interest-table",
+        "icon-library"
       ]
     }
   ]
