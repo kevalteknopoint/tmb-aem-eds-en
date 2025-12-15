@@ -67,74 +67,69 @@
           "valueType": "string"
         },
         {
-          "component": "multifield",
-          "name": "buttons",
-          "label": "Buttons",
-          "field": {
-            "component": "container",
-            "items": [
-              {
-                "component": "text",
-                "name": "label",
-                "label": "Button Label"
-              },
-              {
-                "component": "text",
-                "name": "href",
-                "label": "Button Link"
-              },
-              {
-                "component": "select",
-                "name": "type",
-                "label": "Button Type",
-                "options": [
-                  {
-                    "name": "Default",
-                    "value": ""
-                  },
-                  {
-                    "name": "Primary",
-                    "value": "primary"
-                  },
-                  {
-                    "name": "Secondary",
-                    "value": "secondary"
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "button",
-      "fields": [
-        {
-          "component": "text",
-          "name": "label",
-          "label": "Button Label"
-        },
-        {
-          "component": "text",
-          "name": "href",
+          "component": "aem-content",
+          "name": "link",
           "label": "Button Link"
         },
         {
+          "component": "text",
+          "name": "linkText",
+          "label": "Button Text 1"
+        },
+        {
+          "component": "text",
+          "name": "linkTitle",
+          "label": "Button Title"
+        },
+        {
           "component": "select",
-          "name": "type",
+          "name": "linkType",
           "label": "Button Type",
           "options": [
             {
-              "name": "Default",
+              "name": "default button",
               "value": ""
             },
             {
-              "name": "Primary",
+              "name": "primary button",
               "value": "primary"
             },
             {
-              "name": "Secondary",
+              "name": "secondary button",
+              "value": "secondary"
+            }
+          ]
+        },
+        {
+          "component": "aem-content",
+          "name": "link",
+          "label": "Button Link 2"
+        },
+        {
+          "component": "text",
+          "name": "linkText",
+          "label": "Button Text 2"
+        },
+        {
+          "component": "text",
+          "name": "linkTitle",
+          "label": "Button Title 2"
+        },
+        {
+          "component": "select",
+          "name": "linkType",
+          "label": "Button Type",
+          "options": [
+            {
+              "name": "default button",
+              "value": ""
+            },
+            {
+              "name": "primary button",
+              "value": "primary"
+            },
+            {
+              "name": "secondary button",
               "value": "secondary"
             }
           ]
