@@ -343,7 +343,7 @@
           }
         },
         {
-          "title": "Transformd form demo",
+          "title": "Transformd form",
           "id": "transformd-form",
           "plugins": {
             "xwalk": {
