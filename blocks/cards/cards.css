@@ -1090,10 +1090,15 @@ html{
   text-transform:initial;
 }
 
+.looking-for-another-way .cards-wrapper{
+  width:100%;
+}
+
 .looking-for-another-way .cards-wrapper ul{
   align-items:stretch;
-  display:flex;
+  display:grid;
   gap:32px;
+  grid-template-columns:repeat(auto-fit, minmax(80px, 1fr));
   justify-content:center;
 }
 
@@ -1493,7 +1498,7 @@ html{
   }
 
   .looking-for-another-way .cards-wrapper ul{
-    flex-direction:column;
+    grid-template-columns:1fr;
   }
 }
 
