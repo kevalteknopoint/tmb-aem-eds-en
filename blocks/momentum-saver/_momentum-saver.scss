@@ -23,7 +23,7 @@
       align-items: flex-start;
     }
 
-    > div {
+    >div {
       order: unset;
       gap: 40px;
       align-items: flex-start;
@@ -104,7 +104,10 @@
     }
 
     .momentum-second-content {
-      h1, h2, h3 {
+
+      h1,
+      h2,
+      h3 {
         @include typo-heading1;
 
         color: $heading-default;
@@ -112,17 +115,19 @@
         margin-bottom: 16px;
       }
 
-      h4, h5, h6 {
+      h4,
+      h5,
+      h6 {
         color: $heading-default;
         margin-bottom: 4px;
-        
+
         @include typo-intro;
       }
 
       p {
         color: $body-default;
         margin-bottom: 24px;
-        
+
         @include typo-body;
       }
 
@@ -150,7 +155,7 @@
 
       .button-container {
         margin-bottom: unset;
-        
+
         a {
           @include button('primary');
         }
@@ -196,7 +201,9 @@
             display: block;
           }
 
-          h1, h2, h3 {
+          h1,
+          h2,
+          h3 {
             @include typo-heading1;
           }
         }
@@ -213,7 +220,14 @@
   background-color: $heading-default;
 
   .momentum-second-content {
-    h1, h2, h3, h4, h5, h6, p {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
       color: $body-reverse;
     }
 
@@ -252,5 +266,44 @@
         }
       }
     }
+  }
+}
+
+
+//Everyday Direct account
+.momentum-direct-variant {
+  .momentum-columns {
+    div {
+      @include tablet-lg {
+        flex-direction: column-reverse;
+      }
+
+      .momentum-second-content {
+        ul {
+          align-items: flex-start;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          margin-bottom: 10px;
+          max-width: unset;
+          width: 100%;
+
+          li {
+            display: flex;
+            flex-direction: row;
+          }
+
+          .icon-checkmark {
+            .icon-svg {
+              width: 32px;
+              height: 32px;
+              margin-right: 16px;
+              color: $heading-default;
+            }
+          }
+        }
+      }
+    }
+
   }
 }
