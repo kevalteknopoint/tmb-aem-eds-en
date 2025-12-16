@@ -923,9 +923,19 @@ header{
 }
 
 .icon-library{
-  display:inline;
+  background-color:#86a796;
 }
-
+.icon-library .default-content-wrapper{
+  align-items:center;
+  display:grid;
+  grid-auto-flow:row;
+  grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+}
+.icon-library .default-content-wrapper p{
+  align-items:center;
+  display:flex;
+  flex-direction:column;
+}
 @media screen and (min-width: 1279px){
   .product-navigation .default-content-wrapper ul li a:hover::after{
     left:0;
@@ -933,7 +943,6 @@ header{
     width:100%;
   }
 }
-
 @media screen and (min-width: 1440px){
   :root{
     --carousel-fix-x:244px;
@@ -942,7 +951,6 @@ header{
     --radius-hero:40px;
   }
 }
-
 @media screen and (max-width: 1279px){
   .top-margin{
     margin-top:64px;
@@ -992,7 +1000,6 @@ header{
     --width-thumbnail:175px;
   }
 }
-
 @media screen and (max-width: 1023px){
   .spacer-bottom{
     margin-bottom:60px;
@@ -1048,7 +1055,6 @@ header{
     --width-thumbnail:175px;
   }
 }
-
 @media screen and (max-width: 767px){
   header{
     min-height:60px;
@@ -1143,7 +1149,6 @@ header{
     --width-thumbnail:175px;
   }
 }
-
 @media screen and (max-width: 480px){
   :root{
     --carousel-card-fix:300px;
@@ -1174,7 +1179,6 @@ header{
     --width-thumbnail:175px;
   }
 }
-
 @media screen and (max-width: 400px){
   .momentum-saver-section .momentum-columns .momentum-content .rate-num{
     font-size:108px;
@@ -1186,7 +1190,6 @@ header{
     font-size:32px;
   }
 }
-
 @media (prefers-reduced-motion: reduce){
   *{
     animation-duration:0.01ms !important;

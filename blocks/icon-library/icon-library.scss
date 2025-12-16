@@ -1,5 +1,18 @@
 @use '../../styles/base' as *;
 
 .icon-library {
-    display: inline;
+    background-color: #86a796;
+
+    .default-content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        align-items: center;
+        grid-auto-flow: row;
+
+        p {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 }

@@ -1,3 +1,16 @@
 .icon-library{
-  display:inline;
+  background-color:#86a796;
+}
+
+.icon-library .default-content-wrapper{
+  align-items:center;
+  display:grid;
+  grid-auto-flow:row;
+  grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+}
+
+.icon-library .default-content-wrapper p{
+  align-items:center;
+  display:flex;
+  flex-direction:column;
 }
