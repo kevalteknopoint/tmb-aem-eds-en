@@ -936,6 +936,10 @@ header{
   display:flex;
   flex-direction:column;
 }
+.icon-library .default-content-wrapper p svg{
+  height:100px;
+  width:100px;
+}
 @media screen and (min-width: 1279px){
   .product-navigation .default-content-wrapper ul li a:hover::after{
     left:0;
