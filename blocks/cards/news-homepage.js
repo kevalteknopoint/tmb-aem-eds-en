@@ -2,7 +2,6 @@ import Swiper from "../../libs/swiper/swiper-bundle.min.js";
 import { injectIcon } from "../../scripts/aem.js";
 import { button, div } from "../../scripts/dom-helpers.js";
 
-
 function setMobileView(block) {
   const cards = block.querySelectorAll(".swiper-wrapper .swiper-slide");
   const navWrapper = block.querySelector(".nav-wrapper"); // use querySelector
@@ -30,11 +29,10 @@ function setMobileView(block) {
   });
 
   viewAllPara.addEventListener("click", () => {
-    cards.forEach(card => card.classList.add("show")); // show all
+    cards.forEach((card) => card.classList.add("show")); // show all
     viewAllDiv.remove(); // hide the "View All" button
   });
 }
-
 
 export default function cardCarouselHomepage(block) {
   const slides = Array.from(block.children);
@@ -67,7 +65,8 @@ export default function cardCarouselHomepage(block) {
 
   block.replaceWith(container);
 
-const swiper = new Swiper(container, {
+  // eslint-disable-next-line
+  new Swiper(container, {
     slidesPerView: 1,
     // spaceBetween: 16,
     navigation: {
@@ -75,17 +74,17 @@ const swiper = new Swiper(container, {
       prevEl: prevBtn,
     },
     breakpoints: {
-      400: {  
+      400: {
         enabled: false,
         slidesPerView: 1,
         spaceBetween: 8
       },
-      640: {    
+      640: {
         enabled: false,
         slidesPerView: 2,
         spaceBetween: 16
       },
-      768:{
+      768: {
         slidesPerView: 2.5,
         spaceBetween: 16
       },
@@ -93,7 +92,7 @@ const swiper = new Swiper(container, {
         slidesPerView: 2.5,
         spaceBetween: 16
       },
-      1024: { 
+      1024: {
         slidesPerView: 3,
         spaceBetween: 20
       },
@@ -103,7 +102,8 @@ const swiper = new Swiper(container, {
       }
     }
   });
-  if(window.innerWidth < 767){
-        setMobileView(container);
+
+  if (window.innerWidth < 767) {
+    setMobileView(container);
   }
 }
