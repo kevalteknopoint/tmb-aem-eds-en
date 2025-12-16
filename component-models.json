@@ -345,6 +345,10 @@
           {
             "name": "News helpful homepage",
             "value": "news-helpful-homepage"
+          },
+          {
+            "name": "Icon library",
+            "value": "icon-library"
           }
         ]
       }
