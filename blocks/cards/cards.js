@@ -5,26 +5,17 @@ import expandableTiles from "./expandable-tiles.js";
 import decorateOnlineBanking from "./online-banking.js";
 import newsHelpful from "./news-helpful.js";
 import newsHomepage from "./news-homepage.js";
+import decorateLookingAnotherway from "./looing-for-anotherway.js";
 
 export default function decorate(block) {
   if (block.classList.contains("expandable-tiles")) {
     expandableTiles(block);
   } else if (block.closest(".news-helpful-homepage")) {
     newsHomepage(block);
-  }else if (block.closest(".news-helpful")) {
+  } else if (block.closest(".news-helpful")) {
     console.log(block.closest(".news-helpful-homepage"));
-      // newsHomepage(block);
-    newsHelpful(block);                                                                       
-//     if (block.closest(".news-helpful-homepage")) {
-//       console.log('inside');
-//       newsHomepage(block);
-//     }
-//     const homepageWrapper = block.closest('.news-helpful');
-//     console.log("Homepage wrapper?", homepageWrapper);
-//     console.log("Block:", block);
-// console.log("Has .news-helpful-homepage?", block.closest(".news-helpful-homepage"));
-// console.log("Parent HTML:", block.parentElement?.outerHTML);
-  }else {
+    newsHelpful(block);
+  } else {
     /* change to ul, li */
     const ul = document.createElement("ul");
     [...block.children].forEach((row) => {
@@ -52,12 +43,13 @@ export default function decorate(block) {
         decorateOnlineBanking(block);
       } else if (block.closest('.banking-goods')) {
         decorateBankingGoods(block);
+      } else if (block.closest('.looking-for-another-way')) {
+        decorateLookingAnotherway(block);
       }
     });
   }
   if (block.closest(".news-helpful-homepage")) {
-      console.log('inside');
-      newsHomepage(block);
-    }
-
+    console.log('inside');
+    newsHomepage(block);
+  }
 }
