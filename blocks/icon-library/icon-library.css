@@ -1,3 +1,103 @@
 .icon-library{
-  display:inline;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
+}
+
+.icon-library .default-content-wrapper{
+  display:grid;
+  gap:24px;
+  grid-template-columns:repeat(auto-fit, minmax(80px, 1fr));
+}
+
+.icon-library .icon-lib-wrap{
+  align-items:center;
+  display:flex;
+  gap:40px;
+  grid-column:1/-1;
+  margin-bottom:40px;
+}
+
+.icon-library .icon-lib-wrap h1{
+  color:var(--heading-default);
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  text-transform:initial;
+  text-transform:uppercase;
+}
+
+.icon-library .icon-lib-wrap .search-inp-wrap{
+  align-items:center;
+  background-color:transparent;
+  border:1px solid var(--line-default);
+  border-radius:var(--radius-card);
+  display:flex;
+  flex-direction:row-reverse;
+  gap:16px;
+  padding:4px;
+}
+
+.icon-library .icon-lib-wrap .search-inp-wrap svg{
+  background-color:var(--icon-bg-default);
+  border-radius:50%;
+  color:var(--icon-default);
+  display:block;
+  height:32px;
+  padding:6px;
+  width:32px;
+}
+
+.icon-library .icon-lib-wrap .search-inp-wrap input{
+  background-color:transparent;
+  border-radius:var(--radius-card);
+  color:var(--body-default);
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-weight:var(--font-weight-sm-body);
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
+  outline:none;
+  padding:4px;
+  text-transform:initial;
+}
+
+.icon-library p{
+  align-items:center;
+  border-radius:16px;
+  box-shadow:rgb(0 0 0 / 10%) 0 4px 12px;
+  cursor:pointer;
+  display:flex;
+  flex-direction:column-reverse;
+  font-family:var(--font-family-disc);
+  font-size:var(--font-size-disclaimer);
+  font-weight:var(--font-weight-disc);
+  gap:8px;
+  justify-content:center;
+  letter-spacing:var(--font-letter-spacing-disc);
+  line-height:var(--font-height-disclaimer);
+  padding:24px;
+  text-transform:initial;
+}
+
+.icon-library p svg{
+  color:var(--icon-reverse);
+  height:40px;
+  width:40px;
+}
+
+@media screen and (max-width: 1279px){
+  .icon-library{
+    padding-inline:24px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .icon-library{
+    padding-inline:16px;
+  }
 }
