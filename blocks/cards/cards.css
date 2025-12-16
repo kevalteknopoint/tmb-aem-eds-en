@@ -1391,6 +1391,17 @@ html{
   .news-helpful .cards-wrapper .news-help-wrapper .swiper-wrapper .swiper-slide{
     width:264px;
   }
+
+  .looking-for-another-way{
+    gap:24px;
+    padding:0 16px;
+  }
+
+  .looking-for-another-way .cards-wrapper ul{
+    align-self:stretch;
+    flex-direction:column;
+    gap:16px;
+  }
 }
 
 @media screen and (max-width: 767px){

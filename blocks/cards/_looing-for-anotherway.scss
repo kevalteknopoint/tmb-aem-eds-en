@@ -12,6 +12,11 @@
     gap: 40px;
     flex: 1 0 0;
 
+    @include tablet{
+        padding: 0 16px;
+        gap: 24px;
+    }
+
     h2 {
         color: #00525B;
 
@@ -24,6 +29,12 @@
             align-items: flex-start;
             gap: 32px;
             flex: 1 0 0;
+
+            @include tablet {
+                flex-direction: column;
+                gap: 16px;
+                align-self: stretch;
+            }
         }
 
         li {
@@ -74,4 +85,6 @@
             }
         }
     }
+
+
 }
