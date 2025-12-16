@@ -937,6 +937,7 @@ header{
 .icon-library .icon-lib-wrap{
   align-items:center;
   display:flex;
+  flex-wrap:wrap;
   gap:40px;
   grid-column:1/-1;
   margin-bottom:40px;
