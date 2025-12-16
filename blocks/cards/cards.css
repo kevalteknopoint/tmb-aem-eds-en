@@ -1468,6 +1468,17 @@ html{
   .news-helpful-homepage .cards-wrapper .nav-wrapper .view-all-wrapper{
     display:none;
   }
+
+  .looking-for-another-way{
+    gap:24px;
+    padding:0 16px;
+  }
+
+  .looking-for-another-way .cards-wrapper ul{
+    align-self:stretch;
+    flex-direction:column;
+    gap:16px;
+  }
 }
 
 @media screen and (max-width: 767px){
