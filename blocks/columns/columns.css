@@ -958,8 +958,7 @@
   overflow-wrap:break-word;
   text-transform:initial;
   white-space:normal;
-  width:-moz-max-content;
-  width:max-content;
+  width:100%;
 }
 
 .overseas-variant .overseas-columns .overseas-columns-wrapper .content-with-icon{
