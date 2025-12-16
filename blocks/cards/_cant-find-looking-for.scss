@@ -129,7 +129,7 @@
     position: relative;
 
     .cards-wrapper .cards ul {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
 
       @include tablet {
         grid-template-columns: 1fr;

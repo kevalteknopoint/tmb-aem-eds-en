@@ -595,7 +595,7 @@
 }
 
 .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul{
-  grid-template-columns:1fr 1fr 1fr;
+  grid-template-columns:repeat(auto-fit, minmax(80px, 1fr));
 }
 
 .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-image,
