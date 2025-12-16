@@ -5,7 +5,7 @@ import expandableTiles from "./expandable-tiles.js";
 import decorateOnlineBanking from "./online-banking.js";
 import newsHelpful from "./news-helpful.js";
 import newsHomepage from "./news-homepage.js";
-import decorateLookingAnotherway from "./looing-for-anotherway.js";
+import decorateLookingAnotherway from "./looking-for-anotherway.js";
 
 export default function decorate(block) {
   if (block.classList.contains("expandable-tiles")) {
