@@ -100,7 +100,9 @@ sup, sub{
 :root{
   --primary-font:"Inter", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
   --secondary-font:"Roboto", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
-  --gradient-1:#d4eefc;
+  --gradient-1:var(--bg-light-2);
+  --gradient-2:var(--bg-light-2);
+  --gradient-after:linear-gradient(var(--bg-light-2), var(--bg-light-2));
   --color-button-outlined-default:#ffffff03;
   --color-button-outlined-hover:#1729831a;
   --color-button-outlined-press:#17298333;
