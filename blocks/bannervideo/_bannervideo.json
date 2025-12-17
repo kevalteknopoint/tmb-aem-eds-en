@@ -197,28 +197,28 @@
       },
         {
           "component": "container",
-          "name": "tabbody-button",
+          "name": "banner-button",
           "label": "Button",
           "collapsible": false,
           "fields": [
             {
               "component": "aem-content",
-              "name": "col3_tabbody-link",
-              "label": "Tab Body Button Link"
+              "name": "col3_banner-link",
+              "label": "Button Link"
             },
             {
               "component": "text",
-              "name": "col3_tabbody-linkText",
-              "label": "Tab Body Button Text"
+              "name": "col3_banner-linkText",
+              "label": "Button Text"
             },
             {
               "component": "text",
-              "name": "col3_tabbody-linkTitle",
-              "label": "Tab Body Button Title"
+              "name": "col3_banner-linkTitle",
+              "label": "Button Title"
             },
             {
               "component": "select",
-              "name": "col3_tabbody-linkType",
+              "name": "col3_banner-linkType",
               "label": "Button Classes",
               "options": [
                 {

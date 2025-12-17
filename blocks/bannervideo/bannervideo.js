@@ -11,18 +11,23 @@ function createSwiper(block) {
     rows.forEach((row) => {
       const towrapdeskandmob = document.createElement("div");
       towrapdeskandmob.classList.add("mob-desk-wrapper");
-      row.lastElementChild?.setAttribute("data-aos", "fade-up");
-      row.lastElementChild?.setAttribute("data-aos-duration", "2000");
 
       const desktopDiv = row.children[0];
       const mobDiv = row.children[1];
       const richtextdiv = row.children[2];
+      const buttonDiv = row.children[3];
       row.classList.add("swiper-slide");
       row.classList.add(`swiperinnerdiv`); // ${i + 1}
       swiperWrapper.append(row);
       desktopDiv.classList.add("desktop-banner");
       mobDiv.classList.add("mob-pbanner");
       richtextdiv.classList.add("richtext-class");
+      if (buttonDiv && buttonDiv.firstElementChild) {
+        richtextdiv.appendChild(buttonDiv.firstElementChild);
+      }
+
+      row.lastElementChild?.setAttribute("data-aos", "fade-up");
+      row.lastElementChild?.setAttribute("data-aos-duration", "2000");
 
       towrapdeskandmob.appendChild(desktopDiv);
       towrapdeskandmob.appendChild(mobDiv);
