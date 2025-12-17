@@ -661,11 +661,11 @@ header{
 .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h1,
 .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2,
 .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h3{
-  font-family:var(--font-family-h1);
-  font-size:var(--font-size-h1);
-  font-weight:var(--font-weight-h1);
-  letter-spacing:var(--font-letter-spacing-h1);
-  line-height:var(--font-height-h1);
+  font-family:var(--font-family-h1-std);
+  font-size:var(--font-size-h1-std);
+  font-weight:var(--font-weight-h1-std);
+  letter-spacing:var(--font-letter-spacing-h1-std);
+  line-height:var(--font-height-h1-std);
   text-transform:initial;
 }
 
@@ -711,6 +711,14 @@ header{
 .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .columns-img-col{
   max-width:unset;
   width:50%;
+}
+.momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content h1, .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content h2, .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content h3{
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  text-transform:initial;
 }
 .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content p{
   margin-bottom:0;

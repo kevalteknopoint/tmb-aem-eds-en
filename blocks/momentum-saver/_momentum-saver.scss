@@ -203,7 +203,7 @@
           h1,
           h2,
           h3 {
-            @include typo-heading1;
+            @include typo-heading1-std;
           }
         }
       }
@@ -258,6 +258,10 @@
         }
 
         .momentum-second-content {
+          h1, h2, h3 {
+            @include typo-heading1;
+          }
+
           p {
             margin-bottom: 0;
           }
