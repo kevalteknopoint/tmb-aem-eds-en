@@ -4,13 +4,13 @@ body:has(.product-detail-banner) .breadcrumb.block{
 }
 
 .product-detail-banner{
-  border-radius:var(--radius-hero);
+  border-radius:var(--radius-hero-var);
   margin:0 auto;
   max-width:1728px;
 }
 
 .product-detail-banner .desktop-media img{
-  border-radius:var(--radius-hero);
+  border-radius:var(--radius-hero-var);
   height:-moz-fit-content;
   height:fit-content;
   min-height:524px;

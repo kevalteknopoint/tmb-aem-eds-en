@@ -39,7 +39,7 @@
   --padding-jump-container-x: var(--space-sm);
   --padding-main-container-x: var(--space-xl);
   --padding-section-y: var(--space-2xl);
-  --radius-hero: var(--radius-hero);
+  --radius-hero-var: var(--radius-hero);
   --spacer: var(--space-sm);
   --width-logo: var(--width-logo-lg);
   --width-thumbnail: 250px;
@@ -50,7 +50,7 @@
     --carousel-fix-x: 64px;
     --device-width: 1344px;
     --guide-width: 72px;
-    --radius-hero: 0px;
+    --radius-hero-var: 0px;
   }
 }
 
@@ -91,7 +91,7 @@
     --jump-menu-fix: 64px;
     --padding-main-container-x: var(--space-sm);
     --padding-section-y: var(--space-xl);
-    --radius-hero: 0px;
+    --radius-hero-var: 0px;
     --spacer: 0px;
     --width-thumbnail: 175px;
   }
@@ -134,7 +134,7 @@
     --jump-menu-fix: 64px;
     --padding-main-container-x: var(--space-sm);
     --padding-section-y: var(--space-xl);
-    --radius-hero: 0px;
+    --radius-hero-var: 0px;
     --spacer: 0px;
     --width-thumbnail: 175px;
   }
@@ -180,7 +180,7 @@
     --padding-jump-container-x: var(--space-xs);
     --padding-main-container-x: var(--space-xs);
     --padding-section-y: var(--space-lg);
-    --radius-hero: 0px;
+    --radius-hero-var: 0px;
     --spacer: 0px;
     --width-logo: var(--width-logo-sm);
     --width-thumbnail: 175px;
@@ -226,7 +226,7 @@
     --padding-jump-container-x: var(--space-xs);
     --padding-main-container-x: var(--space-xs);
     --padding-section-y: var(--space-lg);
-    --radius-hero: 0px;
+    --radius-hero-var: 0px;
     --spacer: 0px;
     --width-logo: var(--width-logo-sm);
     --width-thumbnail: 175px;
