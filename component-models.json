@@ -540,6 +540,48 @@
             ]
           }
         ]
+      },
+      {
+        "component": "container",
+        "name": "banner-button-2",
+        "label": "Button-2",
+        "collapsible": false,
+        "fields": [
+          {
+            "component": "aem-content",
+            "name": "col3_banner-link-2",
+            "label": "Button 2 Link"
+          },
+          {
+            "component": "text",
+            "name": "col3_banner-linkText-2",
+            "label": "Button 2 Text"
+          },
+          {
+            "component": "text",
+            "name": "col3_banner-linkTitle-2",
+            "label": "Button 2 Title"
+          },
+          {
+            "component": "select",
+            "name": "col3_banner-linkType-2",
+            "label": "Button 2 Classes",
+            "options": [
+              {
+                "name": "default",
+                "value": ""
+              },
+              {
+                "name": "primary",
+                "value": "primary"
+              },
+              {
+                "name": "secondary",
+                "value": "secondary"
+              }
+            ]
+          }
+        ]
       }
     ]
   },

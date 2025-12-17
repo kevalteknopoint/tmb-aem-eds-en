@@ -325,9 +325,32 @@
 
     &:nth-child(1) {
       &>p.button-container {
+        strong, em {
+          font-style: normal;
+        }
 
-        &>a {
+        .button {
           @include button('primary');
+        }
+
+        .button.primary {
+          @include button('primary');
+        }
+
+        .button.secondary {
+          @include button('secondary');
+        }
+
+        .button.outlined {
+          @include button('outlined');
+        }
+
+        .button.outlined-reverse {
+          @include button('outlined-reverse');
+        }
+
+        .button.white {
+          @include button('white');
         }
       }
     }

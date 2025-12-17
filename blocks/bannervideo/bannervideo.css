@@ -1,19 +1,14 @@
 @import '../../libs/swiper/swiper-bundle.min.css';
 
-.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container > a{
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button, .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.primary, .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.secondary, .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.outlined, .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.outlined-reverse, .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.white{
   align-items:center;
-  background-color:var(--color-button-primary-default);
   border:none;
   border-radius:var(--radius-button);
-  color:var(--color-button-text-stroke-reverse);
   cursor:pointer;
   display:flex;
-  font-size:16px;
   font-weight:500;
   gap:16px;
   justify-content:center;
-  line-height:24px;
-  min-width:150px;
   padding:8px 24px;
   text-align:center;
   transition:all 0.3s ease-in-out;
@@ -343,20 +338,163 @@
   max-width:560px;
 }
 
-.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container > a:hover{
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container strong, .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container em{
+  font-style:normal;
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button{
+  background-color:var(--color-button-primary-default);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+  font-size:16px;
+  line-height:24px;
+  min-width:150px;
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button:hover{
   background-color:var(--color-button-primary-hover);
   border:none;
   color:var(--color-button-text-stroke-reverse);
 }
 
-.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container > a:active{
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button:active{
   background-color:var(--color-button-primary-press);
   border:none;
   color:var(--color-button-text-stroke-reverse);
 }
 
-.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container > a:focus-visible{
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.primary{
+  background-color:var(--color-button-primary-default);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+  font-size:16px;
+  line-height:24px;
+  min-width:150px;
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.primary:hover{
+  background-color:var(--color-button-primary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.primary:active{
+  background-color:var(--color-button-primary-press);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.primary:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.secondary{
+  background-color:var(--color-button-secondary-default);
+  border:none;
+  color:var(--color-button-text-stroke-default);
+  font-size:16px;
+  line-height:24px;
+  min-width:150px;
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.secondary:hover{
+  background-color:var(--color-button-secondary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-hover);
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.secondary:active{
+  background-color:var(--color-button-secondary-press);
+  border:none;
+  color:var(--color-button-text-stroke-press);
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.secondary:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.outlined{
+  background-color:var(--color-button-outlined-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-default);
+  color:var(--color-button-text-stroke-default);
+  font-size:16px;
+  line-height:24px;
+  min-width:150px;
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.outlined:hover{
+  background-color:var(--color-button-outlined-hover);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-hover);
+  color:var(--color-button-text-stroke-hover);
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.outlined:active{
+  background-color:var(--color-button-outlined-press);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-press);
+  color:var(--color-button-text-stroke-press);
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.outlined:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.outlined-reverse{
+  background-color:var(--color-button-outlined-reverse-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+  font-size:16px;
+  line-height:24px;
+  min-width:150px;
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.outlined-reverse:hover{
+  background-color:var(--color-button-outlined-reverse-hover);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.outlined-reverse:active{
+  background-color:var(--color-button-outlined-reverse-press);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.outlined-reverse:focus-visible{
+  box-shadow:0 0 0 2px var(--color-focus-default), 0 0 0 3px var(--color-focus-reversed);
+  outline:none;
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.white{
+  background-color:var(--color-button-white-default);
+  border:none;
+  color:var(--color-button-text-stroke-default);
+  font-size:16px;
+  line-height:24px;
+  min-width:150px;
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.white:hover{
+  background-color:var(--color-button-white-hover);
+  border:none;
+  color:var(--color-button-text-stroke-hover);
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.white:active{
+  background-color:var(--color-button-white-press);
+  border:none;
+  color:var(--color-button-text-stroke-press);
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.white:focus-visible{
+  box-shadow:0 0 0 2px var(--color-focus-default), 0 0 0 3px var(--color-focus-reversed);
   outline:none;
 }
 
