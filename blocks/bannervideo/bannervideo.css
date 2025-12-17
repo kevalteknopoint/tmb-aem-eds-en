@@ -336,6 +336,7 @@
 }
 
 .swiperinnerdiv > div:nth-child(1) > p{
+  color:var(--body-default);
   font-family:var(--font-family-h4);
   font-size:var(--font-size-h4);
   font-weight:var(--font-weight-h4);

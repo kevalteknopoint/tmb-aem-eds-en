@@ -634,7 +634,8 @@
 .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-body h4,
 .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-body h5,
 .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-body h6{
-  border-bottom:2px solid var(--heading-default);
+  border-bottom:2px solid var(--link-default);
+  color:var(--link-default);
   font-family:var(--font-family-h3);
   font-size:var(--font-size-h3);
   font-weight:var(--font-weight-h3);

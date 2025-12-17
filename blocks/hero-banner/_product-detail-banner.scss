@@ -80,27 +80,17 @@ body:has(.product-detail-banner) {
       max-width: 640px;
     }
 
-    h4, h5, h6 {
+    h1, h2, h3 {
       @include typo-intro;
 
       color: $heading-default;
-
-      // font-size: $font-size-intro;
-      // line-height: $font-height-intro;
-      // font-weight: $font-weight-intro;
       margin-bottom: 4px;
     }
 
-    h1, h2, h3 {
+    h4, h5, h6 {
       @include typo-large-heading;
 
       color: $heading-default;
-
-      // font-family: $secondary-font;
-      // font-size: $font-size-lg;
-      // line-height: $font-height-lg;
-      // text-transform: uppercase;
-      // font-weight: $font-weight-lg;
       padding-bottom: 16px;
     }
 
