@@ -29,7 +29,7 @@ export default function decorateMomentumSaver() {
       }
     }
 
-    const isTeal = momentumSection?.classList?.contains("background-color-teal");
+    const isTeal = momentumSection?.classList?.contains("background-color-teal") && !momentumSection?.classList?.contains("momentum-image-saver");
 
     if (isTeal) {
       const varText = momentumSection.querySelector(".columns-wrapper > .momentum-columns");

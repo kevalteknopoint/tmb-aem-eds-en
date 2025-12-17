@@ -242,7 +242,8 @@
             width: fit-content;
             margin: 0 auto 16px;
             padding: 10px 0 6px;
-            border-bottom: 2px solid $heading-default;
+            color: $link-default;
+            border-bottom: 2px solid $link-default;
 
             @include typo-heading3;
 

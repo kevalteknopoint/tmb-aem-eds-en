@@ -90,7 +90,7 @@
 }
 
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-label p{
-  color:var(--body-default);
+  color:var(--heading-default);
   font-family:var(--font-family-h3);
   font-size:var(--font-size-h3);
   font-weight:var(--font-weight-h3);
