@@ -1,5 +1,5 @@
 @import '../../libs/aos/aos.min.css';
-.product-navigation .default-content-wrapper .button-container a, .momentum-saver-section .momentum-columns .momentum-second-content .button-container a, .momentum-image-saver.bg-image-saver .momentum-second-content .button-container a{
+.product-navigation .default-content-wrapper .button-container a, .momentum-saver-section .momentum-columns .momentum-second-content .button-container a, .momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content a, .momentum-image-saver.bg-image-saver .momentum-second-content .button-container a{
   align-items:center;
   border:none;
   border-radius:var(--radius-button);
@@ -635,6 +635,35 @@ header{
 }
 .momentum-saver-section.background-color-teal .momentum-columns.background-color-white{
   background-color:var(--bg-default);
+}
+.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h1, .momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2, .momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h3, .momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h4, .momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h5, .momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h6{
+  color:var(--heading-reverse);
+}
+.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content p{
+  color:var(--body-reverse);
+}
+.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content a{
+  background-color:var(--color-button-secondary-default);
+  border:none;
+  color:var(--color-button-text-stroke-default);
+  font-size:var(--font-size-h5);
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:8px;
+}
+.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content a:hover{
+  background-color:var(--color-button-secondary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-hover);
+}
+.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content a:active{
+  background-color:var(--color-button-secondary-press);
+  border:none;
+  color:var(--color-button-text-stroke-press);
+}
+.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content a:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
 }
 
 .momentum-saver-section.momentum-image-saver .columns-wrapper{

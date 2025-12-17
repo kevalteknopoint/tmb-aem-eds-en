@@ -171,6 +171,22 @@
   .momentum-columns.background-color-white {
     background-color: $bg-default;
   }
+
+  &.momentum-image-saver {
+    .columns-wrapper .momentum-columns div .momentum-second-content {
+      h1, h2, h3, h4, h5, h6 {
+        color: $heading-reverse;
+      }
+
+      p {
+        color: $body-reverse;
+      }
+
+      a {
+        @include button('secondary');
+      }
+    }
+  }
 }
 
 
