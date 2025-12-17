@@ -66,44 +66,70 @@
           "valueType": "string"
         },
         {
-          "component": "container",
-          "name": "tabbody-button",
-          "label": "Tab Body Button",
-          "collapsible": true,
-          "fields": [
+          "component": "aem-content",
+          "name": "link1",
+          "label": "Button 1 Link"
+        },
+        {
+          "component": "text",
+          "name": "linkText1",
+          "label": "Button 1 Text"
+        },
+        {
+          "component": "text",
+          "name": "linkTitle1",
+          "label": "Button 1 Title"
+        },
+        {
+          "component": "select",
+          "name": "linkType1",
+          "label": "Button 1 Type",
+          "options": [
             {
-              "component": "aem-content",
-              "name": "col3_tabbody-link",
-              "label": "Tab Body Button Link"
+              "name": "Default",
+              "value": ""
             },
             {
-              "component": "text",
-              "name": "col3_tabbody-linkText",
-              "label": "Tab Body Button Text"
+              "name": "Primary",
+              "value": "primary"
             },
             {
-              "component": "text",
-              "name": "col3_tabbody-linkTitle",
-              "label": "Tab Body Button Title"
+              "name": "Secondary",
+              "value": "secondary"
+            }
+          ]
+        },
+        {
+          "component": "aem-content",
+          "name": "link2",
+          "label": "Button 2 Link"
+        },
+        {
+          "component": "text",
+          "name": "linkText2",
+          "label": "Button 2 Text"
+        },
+        {
+          "component": "text",
+          "name": "linkTitle2",
+          "label": "Button 2 Title"
+        },
+        {
+          "component": "select",
+          "name": "linkType2",
+          "label": "Button 2 Type",
+          "options": [
+            {
+              "name": "Default",
+              "value": ""
             },
             {
-              "component": "select",
-              "name": "col3_tabbody-linkType",
-              "label": "Button Classes",
-              "options": [
-                {
-                  "name": "default",
-                  "value": ""
-                },
-                {
-                  "name": "primary",
-                  "value": "primary"
-                },
-                {
-                  "name": "secondary",
-                  "value": "secondary"
-                }
-              ]
+              "name": "Primary",
+              "value": "primary"
+            },
+            {
+              "name": "Secondary",
+              "value": "secondary"
             }
           ]
         }
