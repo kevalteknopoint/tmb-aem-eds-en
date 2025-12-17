@@ -412,29 +412,71 @@
       },
       {
         "component": "container",
-        "name": "tabbody-button",
+        "name": "banner-button",
         "label": "Button",
         "collapsible": false,
         "fields": [
           {
             "component": "aem-content",
-            "name": "col3_tabbody-link",
-            "label": "Tab Body Button Link"
+            "name": "banner-link",
+            "label": "Button Link"
           },
           {
             "component": "text",
-            "name": "col3_tabbody-linkText",
-            "label": "Tab Body Button Text"
+            "name": "banner-linkText",
+            "label": "Button Text"
           },
           {
             "component": "text",
-            "name": "col3_tabbody-linkTitle",
-            "label": "Tab Body Button Title"
+            "name": "banner-linkTitle",
+            "label": "Button Title"
           },
           {
             "component": "select",
-            "name": "col3_tabbody-linkType",
+            "name": "banner-linkType",
             "label": "Button Classes",
+            "options": [
+              {
+                "name": "default",
+                "value": ""
+              },
+              {
+                "name": "primary",
+                "value": "primary"
+              },
+              {
+                "name": "secondary",
+                "value": "secondary"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "name": "banner-button-2",
+        "label": "Button-2",
+        "collapsible": false,
+        "fields": [
+          {
+            "component": "aem-content",
+            "name": "banner-link-2",
+            "label": "Button 2 Link"
+          },
+          {
+            "component": "text",
+            "name": "banner-linkText-2",
+            "label": "Button 2 Text"
+          },
+          {
+            "component": "text",
+            "name": "banner-linkTitle-2",
+            "label": "Button 2 Title"
+          },
+          {
+            "component": "select",
+            "name": "banner-linkType-2",
+            "label": "Button 2 Classes",
             "options": [
               {
                 "name": "default",
