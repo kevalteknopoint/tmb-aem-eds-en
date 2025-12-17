@@ -203,22 +203,22 @@
           "fields": [
             {
               "component": "aem-content",
-              "name": "col3_banner-link",
+              "name": "banner-link",
               "label": "Button Link"
             },
             {
               "component": "text",
-              "name": "col3_banner-linkText",
+              "name": "banner-linkText",
               "label": "Button Text"
             },
             {
               "component": "text",
-              "name": "col3_banner-linkTitle",
+              "name": "banner-linkTitle",
               "label": "Button Title"
             },
             {
               "component": "select",
-              "name": "col3_banner-linkType",
+              "name": "banner-linkType",
               "label": "Button Classes",
               "options": [
                 {
@@ -245,22 +245,22 @@
           "fields": [
             {
               "component": "aem-content",
-              "name": "col3_banner-link-2",
+              "name": "banner-link-2",
               "label": "Button 2 Link"
             },
             {
               "component": "text",
-              "name": "col3_banner-linkText-2",
+              "name": "banner-linkText-2",
               "label": "Button 2 Text"
             },
             {
               "component": "text",
-              "name": "col3_banner-linkTitle-2",
+              "name": "banner-linkTitle-2",
               "label": "Button 2 Title"
             },
             {
               "component": "select",
-              "name": "col3_banner-linkType-2",
+              "name": "banner-linkType-2",
               "label": "Button 2 Classes",
               "options": [
                 {
