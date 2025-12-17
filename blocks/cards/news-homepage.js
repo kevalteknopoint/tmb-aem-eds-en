@@ -67,39 +67,11 @@ export default function cardCarouselHomepage(block) {
 
   // eslint-disable-next-line
   new Swiper(container, {
-    slidesPerView: 1,
-    // spaceBetween: 16,
+    slidesPerView: 'auto',
+    spaceBetween: 20,
     navigation: {
       nextEl: nextBtn,
       prevEl: prevBtn,
-    },
-    breakpoints: {
-      400: {
-        enabled: false,
-        slidesPerView: 1,
-        spaceBetween: 8
-      },
-      640: {
-        enabled: false,
-        slidesPerView: 2,
-        spaceBetween: 16
-      },
-      768: {
-        slidesPerView: 2.5,
-        spaceBetween: 16
-      },
-      834: {
-        slidesPerView: 2.5,
-        spaceBetween: 16
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      },
-      1400: {
-        slidesPerView: 3.5,
-        spaceBetween: 20
-      }
     }
   });
 
