@@ -456,6 +456,48 @@
         "value": "",
         "label": "context-model",
         "valueType": "string"
+      },
+      {
+        "component": "container",
+        "name": "tabbody-button",
+        "label": "Button",
+        "collapsible": false,
+        "fields": [
+          {
+            "component": "aem-content",
+            "name": "col3_tabbody-link",
+            "label": "Tab Body Button Link"
+          },
+          {
+            "component": "text",
+            "name": "col3_tabbody-linkText",
+            "label": "Tab Body Button Text"
+          },
+          {
+            "component": "text",
+            "name": "col3_tabbody-linkTitle",
+            "label": "Tab Body Button Title"
+          },
+          {
+            "component": "select",
+            "name": "col3_tabbody-linkType",
+            "label": "Button Classes",
+            "options": [
+              {
+                "name": "default",
+                "value": ""
+              },
+              {
+                "name": "primary",
+                "value": "primary"
+              },
+              {
+                "name": "secondary",
+                "value": "secondary"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -636,7 +678,7 @@
         "component": "container",
         "name": "tabbody-button",
         "label": "Button",
-        "collapsible": true,
+        "collapsible": false,
         "fields": [
           {
             "component": "aem-content",
@@ -678,7 +720,7 @@
         "component": "container",
         "name": "tabbody-button-2",
         "label": "Button 2",
-        "collapsible": true,
+        "collapsible": false,
         "fields": [
           {
             "component": "aem-content",

@@ -69,7 +69,7 @@
           "component": "container",
           "name": "tabbody-button",
           "label": "Button",
-          "collapsible": true,
+          "collapsible": false,
           "fields": [
             {
               "component": "aem-content",
@@ -111,7 +111,7 @@
           "component": "container",
           "name": "tabbody-button-2",
           "label": "Button 2",
-          "collapsible": true,
+          "collapsible": false,
           "fields": [
             {
               "component": "aem-content",
