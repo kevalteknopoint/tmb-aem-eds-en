@@ -44,29 +44,33 @@
 
   .faq-banner-content {
     h1, h2, h3, h4, h5, h6 {
-      font-family: $secondary-font;
-      letter-spacing: 2px;
-      font-size: 60px;
-      line-height: 52px;
+      // font-family: $secondary-font;
+      // letter-spacing: 2px;
+      // font-size: 60px;
+      // line-height: 52px;
+      @include typo-large-heading;
       color: $heading-default;
       margin-bottom: 24px;
 
       @include mobile {
-        font-size: 40px;
+        @include typo-large-heading;
+        // font-size: 40px;
         line-height: 32px;
         margin-bottom: 16px;
       }
     }
 
     p {
-      font-size: 16px;
-      line-height: 24px;
-      font-weight: 500;
+      // font-size: 16px;
+      // line-height: 24px;
+      // font-weight: 500;
+      @include typo-body ;
       color: $heading-default;
 
       @include mobile {
-        font-size: 14px;
-        line-height: 18px;
+        @include typo-sm-body-bold;
+        // font-size: 14px;
+        // line-height: 18px;
       }
     }
   }
@@ -96,10 +100,11 @@
     }
 
     .faq-search-input {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 24px;
-      color: $body-default;
+      @include typo-sm-body;
+      // font-weight: 400;
+      // font-size: 14px;
+      // line-height: 24px;
+      // color: $body-default;
       outline: none;
     }
   }

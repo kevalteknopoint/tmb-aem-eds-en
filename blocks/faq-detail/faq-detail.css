@@ -12,15 +12,15 @@ html{
 
 .faq-heading-section h1, .faq-heading-section h2, .faq-heading-section h3, .faq-heading-section h4, .faq-heading-section h5, .faq-heading-section h6{
   color:var(--heading-default);
-  font-family:var(--primary-font);
-  font-size:40px;
-  font-style:normal;
-  font-weight:700;
-  letter-spacing:0;
-  line-height:44px;
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
   max-width:1440px;
   opacity:1;
   padding:32px 0;
+  text-transform:initial;
   transform:translateY(0);
   transition:opacity 0.4s ease, transform 0.4s ease;
 }
@@ -64,21 +64,24 @@ html{
 
 .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h3{
   color:var(--body-default);
-  font-size:20px;
-  font-style:normal;
-  font-weight:500;
-  letter-spacing:0;
-  line-height:24px;
+  font-family:var(--font-family-h4);
+  font-size:var(--font-size-h4);
+  font-weight:var(--font-weight-h4);
+  letter-spacing:var(--font-letter-spacing-h4);
+  line-height:var(--font-height-h4);
   padding:0 0 30px;
+  text-transform:initial;
 }
 
 .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h1, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) p, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h2, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h4, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h5, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) h6, .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) li{
   color:var(--body-default);
-  font-size:16px;
-  font-style:normal;
-  font-weight:400;
-  line-height:24px;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
   padding-bottom:32px;
+  text-transform:initial;
 }
 
 .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) ul{
@@ -130,13 +133,14 @@ html{
 .section-wrapper .right-section-wrapper h1, .section-wrapper .right-section-wrapper h2, .section-wrapper .right-section-wrapper h3, .section-wrapper .right-section-wrapper h4, .section-wrapper .right-section-wrapper h5, .section-wrapper .right-section-wrapper h6{
   border-bottom:1px solid rgb(0 82 91 / 20%);
   color:var(--heading-default);
-  font-size:32px;
-  font-style:normal;
-  font-weight:600;
-  letter-spacing:-1px;
-  line-height:36px;
+  font-family:var(--font-family-h2);
+  font-size:var(--font-size-h2);
+  font-weight:var(--font-weight-h2);
+  letter-spacing:var(--font-letter-spacing-h2);
+  line-height:var(--font-height-h2);
   overflow:hidden;
   padding:12px 0;
+  text-transform:initial;
   transition:all 0.3s ease-in-out;
 }
 
@@ -146,12 +150,13 @@ html{
 
 .section-wrapper .right-section-wrapper p{
   color:#565659;
-  font-size:14px;
-  font-style:normal;
-  font-weight:400;
-  letter-spacing:0;
-  line-height:24px;
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-weight:var(--font-weight-sm-body);
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
   padding:24px 0;
+  text-transform:initial;
 }
 
 .section-wrapper .right-section-wrapper ul{
@@ -191,12 +196,13 @@ html{
   align-items:center;
   color:var(--body-default);
   display:flex;
-  font-size:14px;
-  font-style:normal;
-  font-weight:400;
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-weight:var(--font-weight-sm-body);
   gap:6px;
-  letter-spacing:0;
-  line-height:24px;
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
+  text-transform:initial;
 }
 
 .img-1-grid{
@@ -231,8 +237,6 @@ html{
 
 @media screen and (max-width: 1023px){
   .faq-heading-section h1, .faq-heading-section h2, .faq-heading-section h3, .faq-heading-section h4, .faq-heading-section h5, .faq-heading-section h6{
-    font-size:32px;
-    line-height:40px;
     padding:24px 0 0;
   }
 
