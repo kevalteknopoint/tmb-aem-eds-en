@@ -103,6 +103,8 @@ sup, sub{
   --gradient-1:var(--bg-light-2);
   --gradient-2:var(--bg-light-2);
   --gradient-after:linear-gradient(var(--bg-light-2), var(--bg-light-2));
+  --body-default-alt:var(--body-default);
+  --link-default-alt:var(--link-default);
   --color-button-outlined-default:#ffffff03;
   --color-button-outlined-hover:#1729831a;
   --color-button-outlined-press:#17298333;

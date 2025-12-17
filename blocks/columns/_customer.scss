@@ -2,13 +2,13 @@
 
 .customer{
     position: relative;
-    background: $gradient-1;
+    background: $gradient-2;
     display: flex;
     flex-direction: column;
     gap: 40px;
 
     &::after {
-      /* content: ''; */
+      content: '';
       position: absolute;
       height: 20px;
       width: 100%;
@@ -41,11 +41,6 @@
                         text-align: center;
                         font-family: $secondary-font;
                         font-style: normal;
-                        
-                        // font-size: 40px;
-                        // font-weight: 900;
-                        // line-height: 40px; 
-                        // text-transform: uppercase;
                         letter-spacing: 2px;
                     }
 
@@ -55,10 +50,6 @@
                         color: $body-default;
                         text-align: center;
                         margin: 16px 0 32px;
-
-                        // font-size: 16px;
-                        // font-weight: 400;
-                        // line-height: 24px;
                     }
 
                     p.button-container{
@@ -88,20 +79,13 @@
         .para-0{
             @include typo-body;
 
-            color: $body-default;
+            color: $body-default-alt;
             text-align: center;
-
-            // font-size: 16px;
-            // font-weight: 400;
-            // line-height: 24px;
 
             a{
                 @include typo-body;
 
-                // font-size: 16px;
-                // font-weight: 400;
-                // line-height: 24px;
-                color: $link-default;
+                color: $link-default-alt;
                 text-decoration-line: underline;
                 text-decoration-style: solid;
                 text-decoration-skip-ink: auto;
@@ -114,11 +98,8 @@
         .para-1{
             @include typo-disclaimer;
 
-            // font-size: 12px;
-            // font-weight: 400;
-            // line-height: 18px;
             margin-top: 16px;
-            color: $body-default;
+            color: $body-default-alt;
             text-align: center;
         }
     }
