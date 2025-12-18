@@ -802,28 +802,28 @@
       },
       {
         "component": "container",
-        "name": "tabbody-button",
+        "name": "button",
         "label": "Button",
         "collapsible": false,
         "fields": [
           {
             "component": "aem-content",
-            "name": "col3_tabbody-link",
-            "label": "Tab Body Button Link"
+            "name": "button-link",
+            "label": "Button Link"
           },
           {
             "component": "text",
-            "name": "col3_tabbody-linkText",
-            "label": "Tab Body Button Text"
+            "name": "linkText",
+            "label": "Button Text"
           },
           {
             "component": "text",
-            "name": "col3_tabbody-linkTitle",
-            "label": "Tab Body Button Title"
+            "name": "linkTitle",
+            "label": "Button Title"
           },
           {
             "component": "select",
-            "name": "col3_tabbody-linkType",
+            "name": "linkType",
             "label": "Button Classes",
             "options": [
               {
@@ -844,28 +844,28 @@
       },
       {
         "component": "container",
-        "name": "tabbody-button-2",
+        "name": "button-2",
         "label": "Button 2",
         "collapsible": false,
         "fields": [
           {
             "component": "aem-content",
-            "name": "col3_tabbody-link-2",
-            "label": "Button Link"
+            "name": "link-2",
+            "label": "Button Link 2"
           },
           {
             "component": "text",
-            "name": "col3_tabbody-linkText-2",
-            "label": "Button Text"
+            "name": "linkText-2",
+            "label": "Button Text 2"
           },
           {
             "component": "text",
-            "name": "col3_tabbody-linkTitle-2",
-            "label": "Button Title"
+            "name": "linkTitle-2",
+            "label": "Button Title 2"
           },
           {
             "component": "select",
-            "name": "col3_tabbody-linkType-2",
+            "name": "linkType-2",
             "label": "Button Classes",
             "options": [
               {
