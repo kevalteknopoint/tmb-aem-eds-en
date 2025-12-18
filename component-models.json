@@ -707,12 +707,8 @@
         "component": "select",
         "name": "role",
         "label": "System Role (Reselect from dropdown)",
-        "value": "desktop-image",
+        "value": "disabled",
         "options": [
-          {
-            "name": "Disabled",
-            "value": "disabled"
-          },
           {
             "name": "Disabled",
             "value": "disabled"
@@ -742,7 +738,7 @@
         "component": "select",
         "name": "role",
         "label": "System Role (Reselect from dropdown)",
-        "value": "mobile-image",
+        "value": "disabled",
         "options": [
           {
             "name": "Disabled",
@@ -773,7 +769,7 @@
         "component": "select",
         "name": "role",
         "label": "System Role (Reselect from dropdown)",
-        "value": "content",
+        "value": "disabled",
         "options": [
           {
             "name": "Disabled",
@@ -799,7 +795,7 @@
         "component": "select",
         "name": "role",
         "label": "System Role (Reselect from dropdown)",
-        "value": "button",
+        "value": "disabled",
         "options": [
           {
             "name": "Disabled",
@@ -870,7 +866,7 @@
         "component": "select",
         "name": "role",
         "label": "System Role (Reselect from dropdown)",
-        "value": "button",
+        "value": "disabled",
         "options": [
           {
             "name": "Disabled",
