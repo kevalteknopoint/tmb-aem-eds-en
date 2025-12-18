@@ -815,12 +815,12 @@
         "fields": [
           {
             "component": "text",
-            "name": "btn-1-btnText",
+            "name": "btn-1-text",
             "label": "Text"
           },
           {
             "component": "aem-content",
-            "name": "btn-1-btnLink",
+            "name": "btn-1-link",
             "label": "Link"
           },
           {
@@ -886,12 +886,12 @@
         "fields": [
           {
             "component": "text",
-            "name": "btn-2-btnText",
+            "name": "btn-2-text",
             "label": "Text"
           },
           {
             "component": "aem-content",
-            "name": "btn-2-btnLink",
+            "name": "btn-2-link",
             "label": "Link"
           },
           {
