@@ -115,22 +115,22 @@
           "fields": [
             {
               "component": "aem-content",
-              "name": "link-2",
+              "name": "button-2-link",
               "label": "Button Link 2"
             },
             {
               "component": "text",
-              "name": "linkText-2",
+              "name": "button-2-linkText",
               "label": "Button Text 2"
             },
             {
               "component": "text",
-              "name": "linkTitle-2",
+              "name": "button-2-linkTitle",
               "label": "Button Title 2"
             },
             {
               "component": "select",
-              "name": "linkType-2",
+              "name": "button-2-linkType",
               "label": "Button Classes",
               "options": [
                 {
