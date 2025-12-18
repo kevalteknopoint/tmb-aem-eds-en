@@ -103,12 +103,12 @@
         },
         {
           "component": "select",
-          "name": "button-1-linkType",
+          "name": "button-1-linkStyle",
           "label": "Button 1 Style",
-          "value": "button primary",
+          "value": "primary",
           "options": [
-            { "name": "Primary", "value": "button primary" },
-            { "name": "Secondary", "value": "button secondary" }
+            { "name": "Primary", "value": "primary" },
+            { "name": "Secondary", "value": "secondary" }
           ]
         },
         {
@@ -137,12 +137,12 @@
         },
         {
           "component": "select",
-          "name": "button-2-linkType",
+          "name": "button-2-linkStyle",
           "label": "Button 2 Style",
-          "value": "button primary",
+          "value": "primary",
           "options": [
-            { "name": "Primary", "value": "button primary" },
-            { "name": "Secondary", "value": "button secondary" }
+            { "name": "Primary", "value": "primary" },
+            { "name": "Secondary", "value": "secondary" }
           ]
         },
         {
