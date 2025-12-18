@@ -85,40 +85,77 @@
           "component": "multiselect",
           "name": "classes",
           "label": "Style",
-          "options": [{ "name": "Product Detail Banner", "value": "product-detail-banner" }]
+          "options": [
+            {
+              "name": "Product Detail Banner",
+              "value": "product-detail-banner"
+            }
+          ]
         }
       ]
     },
     {
       "id": "m-desktop-image",
       "fields": [
-        { "component": "reference", "name": "dt-media", "label": "Desktop Image" },
+        {
+          "component": "reference",
+          "name": "dt-media",
+          "label": "Desktop Image"
+        },
         { "component": "text", "name": "dt-alt", "label": "Alt Text" }
       ]
     },
     {
       "id": "m-mobile-image",
       "fields": [
-        { "component": "reference", "name": "mb-media", "label": "Mobile Image" },
+        {
+          "component": "reference",
+          "name": "mb-media",
+          "label": "Mobile Image"
+        },
         { "component": "text", "name": "mb-alt", "label": "Alt Text" }
       ]
     },
     {
       "id": "m-content",
-      "fields": [{ "component": "richtext", "name": "content", "label": "Banner Content" }]
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "content",
+          "label": "Banner Content"
+        }
+      ]
     },
     {
       "id": "m-button-1",
       "fields": [
-        { "component": "container", "name": "btn1-container", "label": "Button 1 Settings", "collapsible": false,
+        {
+          "component": "container",
+          "name": "btn1-container",
+          "label": "Button 1 Settings",
+          "collapsible": false,
           "fields": [
-            { "component": "text", "name": "text", "label": "Text" },
-            { "component": "aem-content", "name": "link", "label": "Link" },
-            { "component": "select", "name": "style", "label": "Style", "value": "primary",
-              "options": [{ "name": "Primary", "value": "primary" }, { "name": "Secondary", "value": "secondary" }]
+            { "component": "text", "name": "btn-1-text", "label": "Text" },
+            { "component": "aem-content", "name": "btn-1-link", "label": "Link" },
+            {
+              "component": "select",
+              "name": "btn-1-style",
+              "label": "Style",
+              "value": "primary",
+              "options": [
+                { "name": "Primary", "value": "primary" },
+                { "name": "Secondary", "value": "secondary" }
+              ]
             },
-            { "component": "select", "name": "target", "label": "Target", "value": "_self",
-              "options": [{ "name": "Same", "value": "_self" }, { "name": "New", "value": "_blank" }]
+            {
+              "component": "select",
+              "name": "btn-1-target",
+              "label": "Target",
+              "value": "_self",
+              "options": [
+                { "name": "Same", "value": "_self" },
+                { "name": "New", "value": "_blank" }
+              ]
             }
           ]
         }
@@ -127,15 +164,33 @@
     {
       "id": "m-button-2",
       "fields": [
-        { "component": "container", "name": "btn2-container", "label": "Button 2 Settings", "collapsible": false,
+        {
+          "component": "container",
+          "name": "btn2-container",
+          "label": "Button 2 Settings",
+          "collapsible": false,
           "fields": [
-            { "component": "text", "name": "text", "label": "Text" },
-            { "component": "aem-content", "name": "link", "label": "Link" },
-            { "component": "select", "name": "style", "label": "Style", "value": "primary",
-              "options": [{ "name": "Primary", "value": "primary" }, { "name": "Secondary", "value": "secondary" }]
+            { "component": "text", "name": "btn-2-text", "label": "Text" },
+            { "component": "aem-content", "name": "btn-2-link", "label": "Link" },
+            {
+              "component": "select",
+              "name": "btn-2-style",
+              "label": "Style",
+              "value": "primary",
+              "options": [
+                { "name": "Primary", "value": "primary" },
+                { "name": "Secondary", "value": "secondary" }
+              ]
             },
-            { "component": "select", "name": "target", "label": "Target", "value": "_self",
-              "options": [{ "name": "Same", "value": "_self" }, { "name": "New", "value": "_blank" }]
+            {
+              "component": "select",
+              "name": "btn-2-target",
+              "label": "Target",
+              "value": "_self",
+              "options": [
+                { "name": "Same", "value": "_self" },
+                { "name": "New", "value": "_blank" }
+              ]
             }
           ]
         }

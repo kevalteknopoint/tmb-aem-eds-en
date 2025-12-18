@@ -751,17 +751,17 @@
         "fields": [
           {
             "component": "text",
-            "name": "text",
+            "name": "btn-1-text",
             "label": "Text"
           },
           {
             "component": "aem-content",
-            "name": "link",
+            "name": "btn-1-link",
             "label": "Link"
           },
           {
             "component": "select",
-            "name": "style",
+            "name": "btn-1-style",
             "label": "Style",
             "value": "primary",
             "options": [
@@ -777,7 +777,7 @@
           },
           {
             "component": "select",
-            "name": "target",
+            "name": "btn-1-target",
             "label": "Target",
             "value": "_self",
             "options": [
@@ -806,17 +806,17 @@
         "fields": [
           {
             "component": "text",
-            "name": "text",
+            "name": "btn-2-text",
             "label": "Text"
           },
           {
             "component": "aem-content",
-            "name": "link",
+            "name": "btn-2-link",
             "label": "Link"
           },
           {
             "component": "select",
-            "name": "style",
+            "name": "btn-2-style",
             "label": "Style",
             "value": "primary",
             "options": [
@@ -832,7 +832,7 @@
           },
           {
             "component": "select",
-            "name": "target",
+            "name": "btn-2-target",
             "label": "Target",
             "value": "_self",
             "options": [
