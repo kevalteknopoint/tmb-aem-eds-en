@@ -100,9 +100,11 @@
         {
           "component": "select",
           "name": "role",
-          "label": "System Role (Do Not Edit)",
+          "label": "System Role (Reselect from dropdown)",
           "value": "desktop-image",
           "options": [
+            { "name": "Disabled", "value": "disabled" },
+            { "name": "Disabled", "value": "disabled" },
             { "name": "Desktop Image", "value": "desktop-image" }
           ]
         },
@@ -120,9 +122,10 @@
         {
           "component": "select",
           "name": "role",
-          "label": "System Role (Do Not Edit)",
+          "label": "System Role (Reselect from dropdown)",
           "value": "mobile-image",
           "options": [
+            { "name": "Disabled", "value": "disabled" },
             { "name": "Mobile Image", "value": "mobile-image" }
           ]
         },
@@ -140,9 +143,10 @@
         {
           "component": "select",
           "name": "role",
-          "label": "System Role (Do Not Edit)",
+          "label": "System Role (Reselect from dropdown)",
           "value": "content",
           "options": [
+            { "name": "Disabled", "value": "disabled" },
             { "name": "Content", "value": "content" }
           ]
         },
@@ -159,9 +163,10 @@
         {
           "component": "select",
           "name": "role",
-          "label": "System Role (Do Not Edit)",
+          "label": "System Role (Reselect from dropdown)",
           "value": "button",
           "options": [
+            { "name": "Disabled", "value": "disabled" },
             { "name": "Button", "value": "button" }
           ]
         },
@@ -203,9 +208,10 @@
         {
           "component": "select",
           "name": "role",
-          "label": "System Role (Do Not Edit)",
+          "label": "System Role (Reselect from dropdown)",
           "value": "button",
           "options": [
+            { "name": "Disabled", "value": "disabled" },
             { "name": "Button", "value": "button" }
           ]
         },
