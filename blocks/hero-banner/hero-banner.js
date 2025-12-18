@@ -21,11 +21,11 @@ export default function decorate(block) {
     roleCell?.remove();
 
     switch (role) {
-      case "desktop-media":
+      case "desktop-asset":
         parts.desktop = row;
         break;
 
-      case "mobile-media":
+      case "mobile-asset":
         parts.mobile = row;
         break;
 
@@ -59,7 +59,7 @@ export default function decorate(block) {
       mediaCell.querySelector("img").alt = altText || "";
     }
 
-    parts.desktop.classList.add("hero-banner-desktop-media");
+    parts.desktop.classList.add("hero-banner-desktop-asset");
     parts.desktop.children[1]?.remove(); // remove alt cell
     block.appendChild(parts.desktop);
   }
@@ -79,7 +79,7 @@ export default function decorate(block) {
       mediaCell.querySelector("img").alt = altText || "";
     }
 
-    parts.mobile.classList.add("hero-banner-mobile-media");
+    parts.mobile.classList.add("hero-banner-mobile-asset");
     parts.mobile.children[1]?.remove();
     block.appendChild(parts.mobile);
   }
