@@ -53,13 +53,25 @@
       }
     },
     {
-      "title": "Button",
-      "id": "button-item",
+      "title": "Button 1 Container",
+      "id": "button-1-item",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
-            "template": { "name": "Button", "model": "m-button" }
+            "template": { "name": "Button 1", "model": "m-button-1" }
+          }
+        }
+      }
+    },
+    {
+      "title": "Button 2 Container",
+      "id": "button-2-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": { "name": "Button 2", "model": "m-button-2" }
           }
         }
       }
@@ -88,11 +100,11 @@
         {
           "component": "select",
           "name": "role",
-          "label": "Block Status",
+          "label": "System Role (Reselect from dropdown)",
           "value": "disabled",
           "options": [
             { "name": "Disabled", "value": "disabled" },
-            { "name": "Enabled", "value": "desktop-image" }
+            { "name": "Desktop Image", "value": "desktop-image" }
           ]
         },
         {
@@ -109,11 +121,11 @@
         {
           "component": "select",
           "name": "role",
-          "label": "Block Status",
+          "label": "System Role (Reselect from dropdown)",
           "value": "disabled",
           "options": [
             { "name": "Disabled", "value": "disabled" },
-            { "name": "Enabled", "value": "mobile-image" }
+            { "name": "Mobile Image", "value": "mobile-image" }
           ]
         },
         {
@@ -130,11 +142,11 @@
         {
           "component": "select",
           "name": "role",
-          "label": "Block Status",
+          "label": "System Role (Reselect from dropdown)",
           "value": "disabled",
           "options": [
             { "name": "Disabled", "value": "disabled" },
-            { "name": "Enabled", "value": "content" }
+            { "name": "Content", "value": "content" }
           ]
         },
         {
@@ -145,29 +157,29 @@
       ]
     },
     {
-      "id": "m-button",
+      "id": "m-button-1",
       "fields": [
         {
           "component": "select",
           "name": "role",
-          "label": "Block Status",
+          "label": "System Role (Reselect from dropdown)",
           "value": "disabled",
           "options": [
             { "name": "Disabled", "value": "disabled" },
-            { "name": "Enabled", "value": "button" }
+            { "name": "Button", "value": "button" }
           ]
         },
         {
           "component": "container",
-          "name": "btn-container",
-          "label": "Button Settings",
+          "name": "btn1-container",
+          "label": "Button 1 Settings",
           "collapsible": false,
           "fields": [
-            { "component": "text", "name": "btn-text", "label": "Text" },
-            { "component": "aem-content", "name": "btn-link", "label": "Link" },
+            { "component": "text", "name": "btn-1-text", "label": "Text" },
+            { "component": "aem-content", "name": "btn-1-link", "label": "Link" },
             {
               "component": "select",
-              "name": "btn-style",
+              "name": "btn-1-style",
               "label": "Style",
               "value": "primary",
               "options": [
@@ -177,7 +189,52 @@
             },
             {
               "component": "select",
-              "name": "btn-target",
+              "name": "btn-1-target",
+              "label": "Target",
+              "value": "_self",
+              "options": [
+                { "name": "Same", "value": "_self" },
+                { "name": "New", "value": "_blank" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-button-2",
+      "fields": [
+        {
+          "component": "select",
+          "name": "role",
+          "label": "System Role (Reselect from dropdown)",
+          "value": "disabled",
+          "options": [
+            { "name": "Disabled", "value": "disabled" },
+            { "name": "Button", "value": "button" }
+          ]
+        },
+        {
+          "component": "container",
+          "name": "btn2-container",
+          "label": "Button 2 Settings",
+          "collapsible": false,
+          "fields": [
+            { "component": "text", "name": "btn-2-text", "label": "Text" },
+            { "component": "aem-content", "name": "btn-2-link", "label": "Link" },
+            {
+              "component": "select",
+              "name": "btn-2-style",
+              "label": "Style",
+              "value": "primary",
+              "options": [
+                { "name": "Primary", "value": "primary" },
+                { "name": "Secondary", "value": "secondary" }
+              ]
+            },
+            {
+              "component": "select",
+              "name": "btn-2-target",
               "label": "Target",
               "value": "_self",
               "options": [
@@ -197,7 +254,8 @@
         "desktop-image-item",
         "mobile-image-item",
         "content-item",
-        "button-item"
+        "button-1-item",
+        "button-2-item"
       ]
     }
   ]

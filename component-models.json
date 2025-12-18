@@ -706,7 +706,7 @@
       {
         "component": "select",
         "name": "role",
-        "label": "Block Status",
+        "label": "System Role (Reselect from dropdown)",
         "value": "disabled",
         "options": [
           {
@@ -714,7 +714,7 @@
             "value": "disabled"
           },
           {
-            "name": "Enabled",
+            "name": "Desktop Image",
             "value": "desktop-image"
           }
         ]
@@ -737,7 +737,7 @@
       {
         "component": "select",
         "name": "role",
-        "label": "Block Status",
+        "label": "System Role (Reselect from dropdown)",
         "value": "disabled",
         "options": [
           {
@@ -745,7 +745,7 @@
             "value": "disabled"
           },
           {
-            "name": "Enabled",
+            "name": "Mobile Image",
             "value": "mobile-image"
           }
         ]
@@ -768,7 +768,7 @@
       {
         "component": "select",
         "name": "role",
-        "label": "Block Status",
+        "label": "System Role (Reselect from dropdown)",
         "value": "disabled",
         "options": [
           {
@@ -776,7 +776,7 @@
             "value": "disabled"
           },
           {
-            "name": "Enabled",
+            "name": "Content",
             "value": "content"
           }
         ]
@@ -789,12 +789,12 @@
     ]
   },
   {
-    "id": "m-button",
+    "id": "m-button-1",
     "fields": [
       {
         "component": "select",
         "name": "role",
-        "label": "Block Status",
+        "label": "System Role (Reselect from dropdown)",
         "value": "disabled",
         "options": [
           {
@@ -802,30 +802,30 @@
             "value": "disabled"
           },
           {
-            "name": "Enabled",
+            "name": "Button",
             "value": "button"
           }
         ]
       },
       {
         "component": "container",
-        "name": "btn-container",
-        "label": "Button Settings",
+        "name": "btn1-container",
+        "label": "Button 1 Settings",
         "collapsible": false,
         "fields": [
           {
             "component": "text",
-            "name": "btn-text",
+            "name": "btn-1-text",
             "label": "Text"
           },
           {
             "component": "aem-content",
-            "name": "btn-link",
+            "name": "btn-1-link",
             "label": "Link"
           },
           {
             "component": "select",
-            "name": "btn-style",
+            "name": "btn-1-style",
             "label": "Style",
             "value": "primary",
             "options": [
@@ -841,7 +841,78 @@
           },
           {
             "component": "select",
-            "name": "btn-target",
+            "name": "btn-1-target",
+            "label": "Target",
+            "value": "_self",
+            "options": [
+              {
+                "name": "Same",
+                "value": "_self"
+              },
+              {
+                "name": "New",
+                "value": "_blank"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "m-button-2",
+    "fields": [
+      {
+        "component": "select",
+        "name": "role",
+        "label": "System Role (Reselect from dropdown)",
+        "value": "disabled",
+        "options": [
+          {
+            "name": "Disabled",
+            "value": "disabled"
+          },
+          {
+            "name": "Button",
+            "value": "button"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "name": "btn2-container",
+        "label": "Button 2 Settings",
+        "collapsible": false,
+        "fields": [
+          {
+            "component": "text",
+            "name": "btn-2-text",
+            "label": "Text"
+          },
+          {
+            "component": "aem-content",
+            "name": "btn-2-link",
+            "label": "Link"
+          },
+          {
+            "component": "select",
+            "name": "btn-2-style",
+            "label": "Style",
+            "value": "primary",
+            "options": [
+              {
+                "name": "Primary",
+                "value": "primary"
+              },
+              {
+                "name": "Secondary",
+                "value": "secondary"
+              }
+            ]
+          },
+          {
+            "component": "select",
+            "name": "btn-2-target",
             "label": "Target",
             "value": "_self",
             "options": [

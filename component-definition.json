@@ -358,15 +358,30 @@
           }
         },
         {
-          "title": "Button",
-          "id": "button-item",
+          "title": "Button 1 Container",
+          "id": "button-1-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Button",
-                  "model": "m-button"
+                  "name": "Button 1",
+                  "model": "m-button-1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Button 2 Container",
+          "id": "button-2-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Button 2",
+                  "model": "m-button-2"
                 }
               }
             }
