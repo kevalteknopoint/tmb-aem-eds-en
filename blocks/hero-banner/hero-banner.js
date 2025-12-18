@@ -1,55 +1,83 @@
 import { div, source, video } from "../../scripts/dom-helpers.js";
 
-const jsonMap = {
-  1: 'desktop-media',
-  2: 'desktop-img-alt',
-  3: 'mobile-media',
-  4: 'mobile-img-alt',
-  5: 'content'
-};
-
 const videoRegex = /\.(mp4|mov|wmv|avi|mkv|flv|webm|mpeg|mpg|m4v|3gp|3g2|ogv|ts|m2ts|mts)(\?.*)?$/i;
 
 export default function decorate(block) {
-  const blockMainChild = block.querySelector('div');
+  const rows = [...block.children];
 
-  blockMainChild.classList.add('hero-banner-main');
+  const desktopRow = rows[0];
+  if (desktopRow) {
+    const mediaCell = desktopRow.children[0];
+    const altText = desktopRow.children[1]?.textContent?.trim();
 
-  [...blockMainChild.children].forEach((child, index) => {
-    child.classList.add(jsonMap[String(index + 1)]);
+    if (mediaCell?.querySelector('a') && videoRegex.test(mediaCell.querySelector('a').href)) {
+      const videoBlock = video({ autoplay: '', loop: '', muted: '', playsinline: '' },
+        source({ src: mediaCell.querySelector('a').href })
+      );
+      mediaCell.innerHTML = '';
+      mediaCell.appendChild(videoBlock);
+    } else if (mediaCell?.querySelector('img')) {
+      mediaCell.querySelector('img').setAttribute('alt', altText || '');
+    }
+    desktopRow.classList.add('hero-banner-desktop-media');
+    desktopRow.children[1]?.remove(); // Remove the standalone Alt text div
+  }
+
+  // --- Handle Mobile Media ---
+  const mobileRow = rows[1];
+  if (mobileRow) {
+    const mediaCell = mobileRow.children[0];
+    const altText = mobileRow.children[1]?.textContent?.trim();
+
+    if (mediaCell?.querySelector('a') && videoRegex.test(mediaCell.querySelector('a').href)) {
+      const videoBlock = video({ autoplay: '', loop: '', muted: '', playsinline: '' },
+        source({ src: mediaCell.querySelector('a').href })
+      );
+      mediaCell.innerHTML = '';
+      mediaCell.appendChild(videoBlock);
+    } else if (mediaCell?.querySelector('img')) {
+      mediaCell.querySelector('img').setAttribute('alt', altText || '');
+    }
+    mobileRow.classList.add('hero-banner-mobile-media');
+    mobileRow.children[1]?.remove();
+  }
+
+  // --- Handle Content ---
+  const contentRow = rows[2];
+  let contentWrapper = null;
+  if (contentRow) {
+    contentRow.classList.add('hero-banner-content-wrap');
+    const contentInner = contentRow.children[0];
+    contentInner.classList.add('hero-banner-content');
+    contentWrapper = contentInner; // Reference for button placement
+  }
+
+  // --- Handle Buttons ---
+  const buttonRows = [rows[3], rows[4]];
+  const buttonsGroup = div({ class: 'hero-banner-buttons-wrap' });
+
+  buttonRows.forEach((btnRow) => {
+    if (btnRow) {
+      const cells = [...btnRow.children];
+      const text = cells[0]?.textContent?.trim();
+      const link = cells[1]?.querySelector('a')?.href || cells[1]?.textContent?.trim();
+      const style = cells[2]?.textContent?.trim() || 'primary';
+      const target = cells[3]?.textContent?.trim() || '_self';
+
+      if (text && link) {
+        const anchor = document.createElement('a');
+        anchor.href = link;
+        anchor.textContent = text;
+        anchor.className = `button ${style}`;
+        anchor.target = target;
+        buttonsGroup.appendChild(anchor);
+      }
+      btnRow.remove(); // Remove the raw data row from the block
+    }
   });
 
-  const desktopMedia = block.querySelector(`.${jsonMap['1']}`);
-  const desktopAlt = block.querySelector(`.${jsonMap['2']}`);
-  if (desktopMedia?.querySelector('a') && videoRegex.test(desktopMedia?.querySelector('a')?.href)) {
-    const videoBlock = video(source({ src: desktopMedia?.querySelector('a')?.href }));
-    desktopMedia.innerHTML = '';
-    desktopMedia.appendChild(videoBlock);
-  } else if (desktopMedia?.querySelector('img')) {
-    const desktopImg = desktopMedia?.querySelector('img');
-    desktopImg?.setAttribute('alt', desktopAlt?.textContent?.trim());
-  } else {
-    desktopMedia.remove();
+  // Append buttons group below the content inner div
+  if (contentWrapper) {
+    contentWrapper.appendChild(buttonsGroup);
   }
-  desktopAlt.remove();
-
-  const mobileMedia = block.querySelector(`.${jsonMap['3']}`);
-  const mobileAlt = block.querySelector(`.${jsonMap['4']}`);
-  if (mobileMedia?.querySelector('a') && videoRegex.test(mobileMedia?.querySelector('a')?.href)) {
-    const videoBlock = video(source({ src: mobileMedia?.querySelector('a')?.href }));
-    mobileMedia.innerHTML = '';
-    mobileMedia.appendChild(videoBlock);
-  } else if (mobileMedia?.querySelector('img')) {
-    const mobileImg = mobileMedia?.querySelector('img');
-    mobileImg?.setAttribute('alt', mobileAlt?.textContent?.trim());
-  } else {
-    mobileMedia.remove();
-  }
-  mobileAlt.remove();
-
-  const bannerContent = block.querySelector(`.${jsonMap['5']}`);
-  bannerContent?.classList.remove('content');
-  bannerContent?.classList.add('hero-banner-content');
-  const wrapperDiv = div({ class: 'hero-banner-content-wrap' }, div({ class: 'hero-banner-content' }, ...bannerContent.children));
-  bannerContent.replaceWith(wrapperDiv);
 }

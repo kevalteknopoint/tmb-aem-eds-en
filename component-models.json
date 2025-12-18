@@ -704,6 +704,18 @@
     "id": "m-desktop-image",
     "fields": [
       {
+        "component": "select",
+        "name": "role",
+        "label": "System Role (Do Not Edit)",
+        "value": "desktop-image",
+        "options": [
+          {
+            "name": "Desktop Image",
+            "value": "desktop-image"
+          }
+        ]
+      },
+      {
         "component": "reference",
         "name": "dt-media",
         "label": "Desktop Image"
@@ -718,6 +730,18 @@
   {
     "id": "m-mobile-image",
     "fields": [
+      {
+        "component": "select",
+        "name": "role",
+        "label": "System Role (Do Not Edit)",
+        "value": "mobile-image",
+        "options": [
+          {
+            "name": "Mobile Image",
+            "value": "mobile-image"
+          }
+        ]
+      },
       {
         "component": "reference",
         "name": "mb-media",
@@ -734,6 +758,18 @@
     "id": "m-content",
     "fields": [
       {
+        "component": "select",
+        "name": "role",
+        "label": "System Role (Do Not Edit)",
+        "value": "content",
+        "options": [
+          {
+            "name": "Content",
+            "value": "content"
+          }
+        ]
+      },
+      {
         "component": "richtext",
         "name": "content",
         "label": "Banner Content"
@@ -743,6 +779,18 @@
   {
     "id": "m-button-1",
     "fields": [
+      {
+        "component": "select",
+        "name": "role",
+        "label": "System Role (Do Not Edit)",
+        "value": "button",
+        "options": [
+          {
+            "name": "Button",
+            "value": "button"
+          }
+        ]
+      },
       {
         "component": "container",
         "name": "btn1-container",
@@ -798,6 +846,18 @@
   {
     "id": "m-button-2",
     "fields": [
+      {
+        "component": "select",
+        "name": "role",
+        "label": "System Role (Do Not Edit)",
+        "value": "button",
+        "options": [
+          {
+            "name": "Button",
+            "value": "button"
+          }
+        ]
+      },
       {
         "component": "container",
         "name": "btn2-container",
