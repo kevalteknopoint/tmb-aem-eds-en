@@ -313,30 +313,30 @@
           }
         },
         {
-          "title": "Desktop Image",
-          "id": "desktop-image-item",
+          "title": "Desktop Media",
+          "id": "desktop-media-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Desktop Image",
-                  "model": "m-desktop-image"
+                  "name": "Desktop Media",
+                  "model": "m-desktop-media"
                 }
               }
             }
           }
         },
         {
-          "title": "Mobile Image",
-          "id": "mobile-image-item",
+          "title": "Mobile Media",
+          "id": "mobile-media-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Mobile Image",
-                  "model": "m-mobile-image"
+                  "name": "Mobile Media",
+                  "model": "m-mobile-media"
                 }
               }
             }
@@ -358,30 +358,15 @@
           }
         },
         {
-          "title": "Button 1 Container",
-          "id": "button-1-item",
+          "title": "Button",
+          "id": "button-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Button 1",
-                  "model": "m-button-1"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Button 2 Container",
-          "id": "button-2-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Button 2",
-                  "model": "m-button-2"
+                  "name": "Button",
+                  "model": "m-button"
                 }
               }
             }

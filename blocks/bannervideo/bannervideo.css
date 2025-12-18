@@ -363,6 +363,14 @@
   outline:none;
 }
 
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container > a svg{
+  align-items:center;
+  display:flex;
+  height:12px;
+  justify-content:center;
+  width:12px;
+}
+
 @media screen and (max-width: 1439px){
   .secfirst .bannervideo-wrapper .bannervideo .outer-pagination-div{
     left:unset;

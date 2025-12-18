@@ -211,6 +211,14 @@
   outline:none;
 }
 
+.header-actions-wrap .login-btn-wrap .login-btn svg{
+  align-items:center;
+  display:flex;
+  height:12px;
+  justify-content:center;
+  width:12px;
+}
+
 @media screen and (max-width: 1279px){
   .secondary-header-wrap{
     padding-inline:24px;

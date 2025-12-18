@@ -11,13 +11,12 @@ body:has(.product-detail-banner) {
   max-width: 1728px;
   margin: 0 auto;
   border-radius: $radius-hero;
-  overflow: hidden; // Ensures media doesn't bleed out of rounded corners
+  overflow: hidden;
 
   @include tablet {
     border-radius: 0;
   }
 
-  // Updated to match the new class names from JS
   .hero-banner-desktop-media {
     img, video {
       width: 100%;
@@ -104,7 +103,6 @@ body:has(.product-detail-banner) {
       }
     }
 
-    // --- New Styles for Buttons ---
     .hero-banner-buttons-wrap {
       display: flex;
       gap: 16px;
@@ -129,7 +127,6 @@ body:has(.product-detail-banner) {
       }
     }
 
-    // Interest rate styles preserved
     .interest-rate {
       display: grid;
       column-gap: 2px;

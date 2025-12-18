@@ -72,11 +72,10 @@
   {
     "id": "hero-banner-filter",
     "components": [
-      "desktop-image-item",
-      "mobile-image-item",
+      "desktop-media-item",
+      "mobile-media-item",
       "content-item",
-      "button-1-item",
-      "button-2-item"
+      "button-item"
     ]
   }
 ]

@@ -590,6 +590,14 @@
   outline:none;
 }
 
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container a svg{
+  align-items:center;
+  display:flex;
+  height:12px;
+  justify-content:center;
+  width:12px;
+}
+
 .section.faq-cant-find-looking-for.rates-saver{
   position:relative;
 }
@@ -1179,6 +1187,14 @@ html{
 .looking-for-another-way .cards-wrapper li .cards-card-body .card-button a:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
+}
+
+.looking-for-another-way .cards-wrapper li .cards-card-body .card-button a svg{
+  align-items:center;
+  display:flex;
+  height:12px;
+  justify-content:center;
+  width:12px;
 }
 
 @media (min-width: 766px) and (max-width: 1220px){

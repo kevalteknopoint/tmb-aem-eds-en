@@ -312,6 +312,14 @@
   outline:none;
 }
 
+.customer .columns-wrapper .block .columns-container div p.button-container a svg{
+  align-items:center;
+  display:flex;
+  height:12px;
+  justify-content:center;
+  width:12px;
+}
+
 .customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a{
   background-color:var(--color-button-outlined-default);
   border:var(--stroke-button) solid var(--color-button-text-stroke-default);
@@ -337,6 +345,14 @@
 .customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
+}
+
+.customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a svg{
+  align-items:center;
+  display:flex;
+  height:12px;
+  justify-content:center;
+  width:12px;
 }
 
 .customer .content-container{
@@ -575,6 +591,14 @@
 .section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active a:focus-visible{
   box-shadow:0 0 0 2px var(--color-focus-default), 0 0 0 3px var(--color-focus-reversed);
   outline:none;
+}
+
+.section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active a svg{
+  align-items:center;
+  display:flex;
+  height:12px;
+  justify-content:center;
+  width:12px;
 }
 
 .section.compare-accounts .columns.block h3{
@@ -912,6 +936,14 @@
   outline:none;
 }
 
+.money-overseas .overseas-columns-wrapper .button-container a svg{
+  align-items:center;
+  display:flex;
+  height:12px;
+  justify-content:center;
+  width:12px;
+}
+
 .money-overseas-variant{
   background:var(--bg-light-3);
 }
@@ -962,6 +994,14 @@
 .money-overseas-variant .overseas-columns .overseas-columns-wrapper .button-container a:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
+}
+
+.money-overseas-variant .overseas-columns .overseas-columns-wrapper .button-container a svg{
+  align-items:center;
+  display:flex;
+  height:12px;
+  justify-content:center;
+  width:12px;
 }
 
 .overseas-variant .overseas-columns .overseas-columns-wrapper{

@@ -197,7 +197,7 @@ $btn-variants: (
   ),
 );
 
-@mixin button($variant: 'primary', $font-size: $font-size-h5, $line-height: $font-height-h5, $min-width: 150px) {
+@mixin button($variant: 'primary', $font-size: $font-size-h5, $line-height: $font-height-h5, $min-width: 150px, $icon-w: 12px, $icon-h: 12px) {
   @extend %button-shared-layout;
 
   font-size: $font-size;
@@ -232,6 +232,14 @@ $btn-variants: (
   &:focus-visible {
     outline: none;
     box-shadow: map.get($theme, 'focus-visible');
+  }
+
+  svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $icon-w;
+    height: $icon-h;
   }
 }
 

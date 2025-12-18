@@ -633,6 +633,13 @@ header{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
 }
+.momentum-saver-section .momentum-columns .momentum-second-content .button-container a svg{
+  align-items:center;
+  display:flex;
+  height:12px;
+  justify-content:center;
+  width:12px;
+}
 
 .momentum-saver-section.background-color-teal{
   background-color:var(--bg-reverse);
@@ -668,6 +675,13 @@ header{
 .momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content a:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
+}
+.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content a svg{
+  align-items:center;
+  display:flex;
+  height:12px;
+  justify-content:center;
+  width:12px;
 }
 
 .momentum-saver-section.momentum-image-saver .columns-wrapper{
@@ -736,6 +750,13 @@ header{
 .momentum-image-saver.bg-image-saver .momentum-second-content .button-container a:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
+}
+.momentum-image-saver.bg-image-saver .momentum-second-content .button-container a svg{
+  align-items:center;
+  display:flex;
+  height:12px;
+  justify-content:center;
+  width:12px;
 }
 
 .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div{
@@ -881,6 +902,13 @@ header{
 .product-navigation .default-content-wrapper .button-container a:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
+}
+.product-navigation .default-content-wrapper .button-container a svg{
+  align-items:center;
+  display:flex;
+  height:12px;
+  justify-content:center;
+  width:12px;
 }
 
 .interest-table-section{

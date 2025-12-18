@@ -143,6 +143,14 @@ body:has(.product-detail-banner) .breadcrumb.block{
   outline:none;
 }
 
+.product-detail-banner .hero-banner-content-wrap .hero-banner-buttons-wrap .button.primary svg{
+  align-items:center;
+  display:flex;
+  height:12px;
+  justify-content:center;
+  width:12px;
+}
+
 .product-detail-banner .hero-banner-content-wrap .hero-banner-buttons-wrap .button.secondary{
   background-color:var(--color-button-secondary-default);
   border:none;
@@ -168,6 +176,14 @@ body:has(.product-detail-banner) .breadcrumb.block{
 .product-detail-banner .hero-banner-content-wrap .hero-banner-buttons-wrap .button.secondary:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
+}
+
+.product-detail-banner .hero-banner-content-wrap .hero-banner-buttons-wrap .button.secondary svg{
+  align-items:center;
+  display:flex;
+  height:12px;
+  justify-content:center;
+  width:12px;
 }
 
 .product-detail-banner .hero-banner-content-wrap .interest-rate{
