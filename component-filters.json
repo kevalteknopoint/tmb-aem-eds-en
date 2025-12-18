@@ -70,23 +70,13 @@
     ]
   },
   {
-    "id": "banner-item-filter",
+    "id": "hero-banner-filter",
     "components": [
-      "banner-item"
-    ]
-  },
-  {
-    "id": "banner-sub-item-filter",
-    "components": [
-      "desktop-image",
-      "banner-content",
-      "button-group"
-    ]
-  },
-  {
-    "id": "only-buttons-filter",
-    "components": [
-      "button-item"
+      "desktop-image-item",
+      "mobile-image-item",
+      "content-item",
+      "button-1-item",
+      "button-2-item"
     ]
   }
 ]

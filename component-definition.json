@@ -305,7 +305,7 @@
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
                   "name": "Hero Banner",
-                  "filter": "banner-item-filter",
+                  "filter": "hero-banner-filter",
                   "model": "hero-banner-model"
                 }
               }
@@ -313,23 +313,8 @@
           }
         },
         {
-          "title": "Banner Item",
-          "id": "banner-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Banner Item",
-                  "filter": "banner-sub-item-filter"
-                }
-              }
-            }
-          }
-        },
-        {
           "title": "Desktop Image",
-          "id": "desktop-image",
+          "id": "desktop-image-item",
           "plugins": {
             "xwalk": {
               "page": {
@@ -343,8 +328,23 @@
           }
         },
         {
-          "title": "Banner Content",
-          "id": "banner-content",
+          "title": "Mobile Image",
+          "id": "mobile-image-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Mobile Image",
+                  "model": "m-mobile-image"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Content",
+          "id": "content-item",
           "plugins": {
             "xwalk": {
               "page": {
@@ -358,30 +358,30 @@
           }
         },
         {
-          "title": "Button Group",
-          "id": "button-group",
+          "title": "Button 1 Container",
+          "id": "button-1-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Button Group",
-                  "filter": "only-buttons-filter"
+                  "name": "Button 1",
+                  "model": "m-button-1"
                 }
               }
             }
           }
         },
         {
-          "title": "Button",
-          "id": "button-item",
+          "title": "Button 2 Container",
+          "id": "button-2-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Button",
-                  "model": "m-button"
+                  "name": "Button 2",
+                  "model": "m-button-2"
                 }
               }
             }
