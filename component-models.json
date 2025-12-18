@@ -737,6 +737,98 @@
         "name": "content",
         "label": "Content",
         "value": ""
+      },
+      {
+        "component": "header",
+        "label": "Button 1 Settings"
+      },
+      {
+        "component": "text",
+        "name": "button-1-linkText",
+        "label": "Button 1 Text"
+      },
+      {
+        "component": "aem-content",
+        "name": "button-1-link",
+        "label": "Button 1 Link"
+      },
+      {
+        "component": "select",
+        "name": "button-1-linkType",
+        "label": "Button 1 Style",
+        "value": "button primary",
+        "options": [
+          {
+            "name": "Primary",
+            "value": "button primary"
+          },
+          {
+            "name": "Secondary",
+            "value": "button secondary"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "button-1-linkTarget",
+        "label": "Button 1 Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
+        "component": "header",
+        "label": "Button 2 Settings"
+      },
+      {
+        "component": "text",
+        "name": "button-2-linkText",
+        "label": "Button 2 Text"
+      },
+      {
+        "component": "aem-content",
+        "name": "button-2-link",
+        "label": "Button 2 Link"
+      },
+      {
+        "component": "select",
+        "name": "button-2-linkType",
+        "label": "Button 2 Style",
+        "value": "button primary",
+        "options": [
+          {
+            "name": "Primary",
+            "value": "button primary"
+          },
+          {
+            "name": "Secondary",
+            "value": "button secondary"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "button-2-linkTarget",
+        "label": "Button 2 Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
       }
     ]
   },
