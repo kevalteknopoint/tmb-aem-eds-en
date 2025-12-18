@@ -4,8 +4,6 @@
   .overseas-columns {
     @include responsive-container;
 
-    border-bottom: 1px solid $line-default;
-
     &:first-child {
       .overseas-columns-wrapper {
         padding-top: 0;
@@ -13,11 +11,17 @@
     }
 
     &:last-child {
-      border-bottom: 0;
+      & > .columns.block {
+        border-bottom: 0;
+      }
 
       .overseas-columns-wrapper {
         padding-bottom: 0;
       }
+    }
+
+    & > .columns.block {
+      border-bottom: 1px solid $line-default;
     }
   }
 
@@ -97,6 +101,9 @@
     }
 
     p {
+      @include typo-body;
+
+      color: $body-default;
       margin-bottom: 16px;
     }
 
@@ -140,7 +147,7 @@
           min-width: 32px;
           width: fit-content;
           height: 32px;
-          border-radius: 50%;
+          border-radius: $radius-button;
           border: 1px solid rgb(0 82 91 / 10%);
           color: $heading-default;
           font-size: 16px;
