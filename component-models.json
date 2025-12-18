@@ -704,10 +704,16 @@
     "id": "m-desktop-image",
     "fields": [
       {
-        "component": "text",
+        "component": "select",
         "name": "role",
         "label": "System Role (Do Not Edit)",
-        "value": "desktop-image"
+        "value": "desktop-image",
+        "options": [
+          {
+            "name": "Desktop Image",
+            "value": "desktop-image"
+          }
+        ]
       },
       {
         "component": "reference",
@@ -725,10 +731,16 @@
     "id": "m-mobile-image",
     "fields": [
       {
-        "component": "text",
+        "component": "select",
         "name": "role",
         "label": "System Role (Do Not Edit)",
-        "value": "mobile-image"
+        "value": "mobile-image",
+        "options": [
+          {
+            "name": "Mobile Image",
+            "value": "mobile-image"
+          }
+        ]
       },
       {
         "component": "reference",
@@ -746,10 +758,16 @@
     "id": "m-content",
     "fields": [
       {
-        "component": "text",
+        "component": "select",
         "name": "role",
         "label": "System Role (Do Not Edit)",
-        "value": "content"
+        "value": "content",
+        "options": [
+          {
+            "name": "Content",
+            "value": "content"
+          }
+        ]
       },
       {
         "component": "richtext",
@@ -762,10 +780,16 @@
     "id": "m-button-1",
     "fields": [
       {
-        "component": "text",
+        "component": "select",
         "name": "role",
         "label": "System Role (Do Not Edit)",
-        "value": "button-1"
+        "value": "button",
+        "options": [
+          {
+            "name": "Button",
+            "value": "button"
+          }
+        ]
       },
       {
         "component": "container",
@@ -823,10 +847,16 @@
     "id": "m-button-2",
     "fields": [
       {
-        "component": "text",
+        "component": "select",
         "name": "role",
         "label": "System Role (Do Not Edit)",
-        "value": "button-2"
+        "value": "button",
+        "options": [
+          {
+            "name": "Button",
+            "value": "button"
+          }
+        ]
       },
       {
         "component": "container",

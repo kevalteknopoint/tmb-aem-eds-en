@@ -23,10 +23,7 @@
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
-            "template": {
-              "name": "Desktop Image",
-              "model": "m-desktop-image"
-            }
+            "template": { "name": "Desktop Image", "model": "m-desktop-image" }
           }
         }
       }
@@ -38,10 +35,7 @@
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
-            "template": {
-              "name": "Mobile Image",
-              "model": "m-mobile-image"
-            }
+            "template": { "name": "Mobile Image", "model": "m-mobile-image" }
           }
         }
       }
@@ -53,10 +47,7 @@
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
-            "template": {
-              "name": "Content",
-              "model": "m-content"
-            }
+            "template": { "name": "Content", "model": "m-content" }
           }
         }
       }
@@ -68,10 +59,7 @@
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
-            "template": {
-              "name": "Button 1",
-              "model": "m-button-1"
-            }
+            "template": { "name": "Button 1", "model": "m-button-1" }
           }
         }
       }
@@ -83,10 +71,7 @@
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
-            "template": {
-              "name": "Button 2",
-              "model": "m-button-2"
-            }
+            "template": { "name": "Button 2", "model": "m-button-2" }
           }
         }
       }
@@ -113,52 +98,53 @@
       "id": "m-desktop-image",
       "fields": [
         {
-          "component": "text",
+          "component": "select",
           "name": "role",
           "label": "System Role (Do Not Edit)",
-          "value": "desktop-image"
+          "value": "desktop-image",
+          "options": [
+            { "name": "Desktop Image", "value": "desktop-image" }
+          ]
         },
         {
           "component": "reference",
           "name": "dt-media",
           "label": "Desktop Image"
         },
-        {
-          "component": "text",
-          "name": "dt-alt",
-          "label": "Alt Text"
-        }
+        { "component": "text", "name": "dt-alt", "label": "Alt Text" }
       ]
     },
     {
       "id": "m-mobile-image",
       "fields": [
         {
-          "component": "text",
+          "component": "select",
           "name": "role",
           "label": "System Role (Do Not Edit)",
-          "value": "mobile-image"
+          "value": "mobile-image",
+          "options": [
+            { "name": "Mobile Image", "value": "mobile-image" }
+          ]
         },
         {
           "component": "reference",
           "name": "mb-media",
           "label": "Mobile Image"
         },
-        {
-          "component": "text",
-          "name": "mb-alt",
-          "label": "Alt Text"
-        }
+        { "component": "text", "name": "mb-alt", "label": "Alt Text" }
       ]
     },
     {
       "id": "m-content",
       "fields": [
         {
-          "component": "text",
+          "component": "select",
           "name": "role",
           "label": "System Role (Do Not Edit)",
-          "value": "content"
+          "value": "content",
+          "options": [
+            { "name": "Content", "value": "content" }
+          ]
         },
         {
           "component": "richtext",
@@ -171,10 +157,13 @@
       "id": "m-button-1",
       "fields": [
         {
-          "component": "text",
+          "component": "select",
           "name": "role",
           "label": "System Role (Do Not Edit)",
-          "value": "button-1"
+          "value": "button",
+          "options": [
+            { "name": "Button", "value": "button" }
+          ]
         },
         {
           "component": "container",
@@ -182,16 +171,8 @@
           "label": "Button 1 Settings",
           "collapsible": false,
           "fields": [
-            {
-              "component": "text",
-              "name": "btn-1-text",
-              "label": "Text"
-            },
-            {
-              "component": "aem-content",
-              "name": "btn-1-link",
-              "label": "Link"
-            },
+            { "component": "text", "name": "btn-1-text", "label": "Text" },
+            { "component": "aem-content", "name": "btn-1-link", "label": "Link" },
             {
               "component": "select",
               "name": "btn-1-style",
@@ -220,10 +201,13 @@
       "id": "m-button-2",
       "fields": [
         {
-          "component": "text",
+          "component": "select",
           "name": "role",
           "label": "System Role (Do Not Edit)",
-          "value": "button-2"
+          "value": "button",
+          "options": [
+            { "name": "Button", "value": "button" }
+          ]
         },
         {
           "component": "container",
@@ -231,16 +215,8 @@
           "label": "Button 2 Settings",
           "collapsible": false,
           "fields": [
-            {
-              "component": "text",
-              "name": "btn-2-text",
-              "label": "Text"
-            },
-            {
-              "component": "aem-content",
-              "name": "btn-2-link",
-              "label": "Link"
-            },
+            { "component": "text", "name": "btn-2-text", "label": "Text" },
+            { "component": "aem-content", "name": "btn-2-link", "label": "Link" },
             {
               "component": "select",
               "name": "btn-2-style",
