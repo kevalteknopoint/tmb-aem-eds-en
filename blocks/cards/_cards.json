@@ -78,17 +78,17 @@
             },
             {
               "component": "text",
-              "name": "linkText",
+              "name": "button-linkText",
               "label": "Button Text"
             },
             {
               "component": "text",
-              "name": "linkTitle",
+              "name": "button-linkTitle",
               "label": "Button Title"
             },
             {
               "component": "select",
-              "name": "linkType",
+              "name": "button-linkType",
               "label": "Button Classes",
               "options": [
                 {
