@@ -231,7 +231,7 @@
               list-style-type: none;
               padding: 0;
 
-              .banking-desc-1 {
+              h1,h2,h3,h4,h5,h6 {
                 color: $heading-default;
                 font-size: 24px;
                 font-style: normal;
@@ -249,7 +249,7 @@
                 }
               }
 
-              .banking-desc-2 {
+              p {
                 color: $body-accent;
                 font-size: 16px;
                 font-style: normal;
@@ -306,7 +306,7 @@
               }
             }
 
-            .banking-desc-3 {
+            p {
               margin: auto 0 0;
               text-align: left;
 
@@ -368,7 +368,7 @@
             }
           }
 
-          .banking-desc-3 {
+          p {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;

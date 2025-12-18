@@ -1,178 +1,77 @@
-// export default function decorateOnlineBanking(block) {
-//   // online banking help js starts
-//   const cardsUl = block.querySelector(
-//     ".online-banking .cards-wrapper .cards ul"
-//   );
-//   cardsUl.classList.add("banking-cards-ul");
-//   block.querySelectorAll(".banking-cards-ul > li").forEach((li, idx) => {
-//     li.classList.add(`banking-li-${idx + 1}`);
-//   });
-//   block
-//     .querySelectorAll(
-//       ".online-banking .cards-wrapper .cards ul li:nth-child(2) .cards-card-body ul"
-//     )
-//     .forEach((blockUl, idx) => {
-//       blockUl.classList.add(`card-bottom-${idx + 1}`);
-//     });
-//   block
-//     .querySelectorAll(
-//       ".online-banking .cards-wrapper .cards ul li:nth-child(2) .cards-card-body li"
-//     )
-//     .forEach((li, idx) => {
-//       li.classList.add(`banking-desc-${idx + 1}`);
-//     });
-//   block
-//     .querySelectorAll(
-//       ".online-banking .cards-wrapper .cards ul li:nth-child(3) .cards-card-body ul"
-//     )
-//     .forEach((blockUl, idx) => {
-//       blockUl.classList.add(`card-bottom-${idx + 1}`);
-//     });
-//   block
-//     .querySelectorAll(
-//       ".online-banking .cards-wrapper .cards ul li:nth-child(3) .cards-card-body li"
-//     )
-//     .forEach((li, idx) => {
-//       li.classList.add(`banking-desc-${idx + 1}`);
-//     });
-//   // online banking help js end
-// }
-
-
-// trial 
-// import { div, p, strong, a } from "../../scripts/dom-helpers.js";
-
-// export default function decorateOnlineBanking(block) {
-//   // 1. Identify all high-level authored rows
-//   const rows = [...block.children];
-
-//   rows.forEach((row, idx) => {
-//     // Replace the default LI-style behavior by using DIVs
-//     row.classList.add('banking-div-item', `banking-item-${idx + 1}`);
-
-//     // 2. Identify all 'cards-card-body' divs created by your JSON containers
-//     const bodies = [...row.querySelectorAll('.cards-card-body')];
-    
-//     if (bodies.length > 0) {
-//       // The first body usually contains the authored 'Text' (richtext)
-//       const mainBody = bodies[0];
-
-//       // 3. Setup a single consolidated button container
-//       const unifiedBtnContainer = p({ class: 'button-container' });
-//       const strongWrapper = strong();
-
-//       // 4. Extract Button 1 (Authored via first container)
-//       const btn1Anchor = row.querySelector('a');
-//       if (btn1Anchor) {
-//         btn1Anchor.className = 'button primary';
-//         strongWrapper.append(btn1Anchor);
-//       }
-
-//       // 5. Extract Button 2 Data (from fragmented text nodes in sibling bodies)
-//       // We look for the text authored in "linkText-2" and "linkType-2"
-//       const allPs = [...row.querySelectorAll('p')];
-//       const b2Text = allPs.find(p => p.textContent.trim() === 'Discover More' || p.textContent.trim() === 'discover-more');
-//       const b2Class = allPs.find(p => p.textContent.trim() === 'secondary' || p.textContent.trim() === 'primary');
-
-//       if (b2Text) {
-//         const btn2 = a({
-//           href: '#', // Replace with logic to find the specific href if needed
-//           title: b2Text.textContent.trim(),
-//           class: `button ${b2Class ? b2Class.textContent.trim() : 'secondary'}`
-//         });
-//         btn2.textContent = b2Text.textContent.trim();
-//         strongWrapper.append(btn2);
-
-//         // Remove the raw text paragraphs so they don't leak into the UI
-//         b2Text.remove();
-//         if (b2Class) b2Class.remove();
-//       }
-
-//       // 6. Cleanup and Re-assembly
-//       if (strongWrapper.hasChildNodes()) {
-//         unifiedBtnContainer.append(strongWrapper);
-//         mainBody.append(unifiedBtnContainer);
-//       }
-
-//       // Remove extra body divs that were created by the JSON containers
-//       bodies.slice(1).forEach(extraBody => extraBody.remove());
-      
-//       // Remove any leftover empty divs
-//       [...row.children].forEach(child => {
-//         if (child.innerHTML.trim() === '' && !child.querySelector('img')) {
-//           child.remove();
-//         }
-//       });
-//     }
-//   });
-// }
-
-//trial 2
-
 export default function decorateOnlineBanking(block) {
-  // 1. Identify all high-level authored rows (the DIVs inside the block)
-  const rows = [...block.children];
+  const cardsUl = block.querySelector(".cards ul");
+  if (!cardsUl) return;
 
-  rows.forEach((row, idx) => {
-    // Standard EDS row setup
-    row.classList.add('banking-div-item', `banking-item-${idx + 1}`);
+  cardsUl.classList.add("banking-cards-ul");
 
-    // 2. Locate all content-bearing bodies
-    const bodies = [...row.querySelectorAll('.cards-card-body')];
+  block.querySelectorAll(".banking-cards-ul > li").forEach((li, idx) => {
+    li.classList.add(`banking-li-${idx + 1}`);
+
+    const bodies = Array.from(li.querySelectorAll('.cards-card-body'));
+    if (bodies.length === 0) return;
+
+    const mainBody = bodies[0];
     
-    if (bodies.length > 0) {
-      // Find the main body that contains your Text and Heading
-      // Usually, EDS puts the first few JSON fields in the first few bodies
-      const mainBody = bodies.find(b => b.querySelector('h1, h2, h3, h4, h5, h6, p')) || bodies[0];
+    // Consolidate fragmented bodies
+    bodies.slice(1).forEach((extraBody) => {
+      while (extraBody.firstChild) {
+        mainBody.appendChild(extraBody.firstChild);
+      }
+      extraBody.remove();
+    });
 
-      // 3. Create the unified button container and strong wrapper
-      const unifiedBtnContainer = document.createElement('p');
-      unifiedBtnContainer.className = 'button-container';
-      const strongWrapper = document.createElement('strong');
+    if (idx > 0) {
+      const heading = mainBody.querySelector('h1, h2, h3, h4, h5, h6');
+      const description = mainBody.querySelector('p:not(.button-container)');
+      
+      // Setup card-bottom-1
+      const topContainer = document.createElement('div');
+      topContainer.className = 'card-bottom-1';
 
-      // 4. Extract Button 1 (Authored via first button container)
-      const btn1Anchor = row.querySelector('a');
-      if (btn1Anchor) {
-        btn1Anchor.className = 'button primary';
-        strongWrapper.append(btn1Anchor);
+      if (heading) {
+        const h2 = document.createElement('h2');
+        h2.className = 'banking-desc-1';
+        h2.textContent = heading.textContent.trim();
+        topContainer.appendChild(h2);
       }
 
-      // 5. Extract Button 2 Data
-      // We look for paragraphs containing the authored values for Button 2
-      const allPs = [...row.querySelectorAll('p')];
-      const b2Text = allPs.find(p => p.textContent.trim() === 'Discover More' || p.textContent.trim() === 'discover-more');
-      const b2Class = allPs.find(p => p.textContent.trim() === 'secondary' || p.textContent.trim() === 'primary');
-
-      if (b2Text) {
-        const btn2 = document.createElement('a');
-        btn2.href = '#'; // Logic to find specific href if necessary
-        btn2.title = b2Text.textContent.trim();
-        btn2.textContent = b2Text.textContent.trim();
-        btn2.className = `button ${b2Class ? b2Class.textContent.trim() : 'secondary'}`;
-        strongWrapper.append(btn2);
-
-        // Remove the raw text paragraphs so they don't leak into the UI
-        b2Text.remove();
-        if (b2Class) b2Class.remove();
+      if (description) {
+        const pDesc = document.createElement('p');
+        // pDesc.className = 'banking-desc-2';
+        pDesc.textContent = description.textContent.trim();
+        topContainer.appendChild(pDesc);
       }
 
-      // 6. Cleanup and Final Re-assembly
-      if (strongWrapper.hasChildNodes()) {
-        unifiedBtnContainer.append(strongWrapper);
-        mainBody.append(unifiedBtnContainer);
-      }
+      // Setup card-bottom-2 for icons and buttons
+      const bottomContainer = document.createElement('div');
+      bottomContainer.className = 'card-bottom-2';
+      const pButtons = document.createElement('p');
+      // pButtons.className = 'banking-desc-3';
 
-      // CRITICAL: Remove all extra body divs EXCEPT the one we consolidated everything into
-      bodies.forEach(body => {
-        if (body !== mainBody) body.remove();
-      });
-
-      // Remove any leftover empty sibling divs that EDS created for the JSON containers
-      [...row.children].forEach(child => {
-        if (child !== mainBody && !child.querySelector('img, picture') && child.innerHTML.trim() === '') {
-          child.remove();
+      // FIX: Find ALL links instead of just the first one
+      const allLinks = Array.from(mainBody.querySelectorAll('a'));
+      
+      allLinks.forEach((link) => {
+        // If it's a badge/icon link, keep it as is; otherwise apply button classes
+        if (!link.querySelector('.icon')) {
+            link.className = 'button primary';
         }
+        pButtons.appendChild(link);
       });
+
+      // 3. Final Re-assembly
+      mainBody.innerHTML = '';
+      
+      if (topContainer.hasChildNodes()) {
+        mainBody.appendChild(topContainer);
+      }
+      
+      if (pButtons.hasChildNodes()) {
+        bottomContainer.appendChild(pButtons);
+        mainBody.appendChild(bottomContainer);
+      }
     }
+
+    li.querySelectorAll('div:empty').forEach(empty => empty.remove());
   });
 }
