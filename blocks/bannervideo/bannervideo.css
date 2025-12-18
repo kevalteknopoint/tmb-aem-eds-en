@@ -338,6 +338,11 @@
   max-width:560px;
 }
 
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container{
+  display:flex;
+  gap:16px;
+}
+
 .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container strong, .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container em{
   font-style:normal;
 }
@@ -704,5 +709,10 @@
 
   .swiperinnerdiv > div:nth-child(1){
     padding-inline:16px;
+  }
+
+  .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container{
+    flex-direction:column;
+    gap:8px;
   }
 }

@@ -325,8 +325,17 @@
 
     &:nth-child(1) {
       &>p.button-container {
+        display: flex;
+        gap: 16px;
+
+        @include mobile{
+          flex-direction: column;
+          gap: 8px;
+        }
+
         strong, em {
           font-style: normal;
+
         }
 
         .button {
