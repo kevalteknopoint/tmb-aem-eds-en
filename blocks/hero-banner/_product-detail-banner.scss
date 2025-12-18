@@ -17,7 +17,7 @@ body:has(.product-detail-banner) {
     border-radius: 0;
   }
 
-  .hero-banner-desktop-media {
+  .hero-banner-desktop-asset {
     img, video {
       width: 100%;
       min-height: 524px;
@@ -36,7 +36,7 @@ body:has(.product-detail-banner) {
     }
   }
 
-  .hero-banner-mobile-media {
+  .hero-banner-mobile-asset {
     display: none;
 
     img, video {

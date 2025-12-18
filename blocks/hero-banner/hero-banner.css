@@ -27,7 +27,7 @@ body:has(.product-detail-banner) .breadcrumb.block{
   overflow:hidden;
 }
 
-.product-detail-banner .hero-banner-desktop-media img, .product-detail-banner .hero-banner-desktop-media video{
+.product-detail-banner .hero-banner-desktop-asset img, .product-detail-banner .hero-banner-desktop-asset video{
   border-radius:var(--radius-hero-var);
   height:-moz-fit-content;
   height:fit-content;
@@ -37,11 +37,11 @@ body:has(.product-detail-banner) .breadcrumb.block{
   width:100%;
 }
 
-.product-detail-banner .hero-banner-mobile-media{
+.product-detail-banner .hero-banner-mobile-asset{
   display:none;
 }
 
-.product-detail-banner .hero-banner-mobile-media img, .product-detail-banner .hero-banner-mobile-media video{
+.product-detail-banner .hero-banner-mobile-asset img, .product-detail-banner .hero-banner-mobile-asset video{
   -o-object-fit:cover;
      object-fit:cover;
   width:100%;
@@ -234,7 +234,7 @@ body:has(.product-detail-banner) .breadcrumb.block{
     border-radius:0;
   }
 
-  .product-detail-banner .hero-banner-desktop-media img, .product-detail-banner .hero-banner-desktop-media video{
+  .product-detail-banner .hero-banner-desktop-asset img, .product-detail-banner .hero-banner-desktop-asset video{
     border-radius:0;
     min-height:500px;
   }
@@ -261,11 +261,11 @@ body:has(.product-detail-banner) .breadcrumb.block{
 }
 
 @media screen and (max-width: 767px){
-  .product-detail-banner .hero-banner-desktop-media{
+  .product-detail-banner .hero-banner-desktop-asset{
     display:none;
   }
 
-  .product-detail-banner .hero-banner-mobile-media{
+  .product-detail-banner .hero-banner-mobile-asset{
     display:block;
   }
 
