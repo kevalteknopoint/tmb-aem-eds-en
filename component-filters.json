@@ -72,8 +72,8 @@
   {
     "id": "hero-banner-filter",
     "components": [
-      "desktop-media-item",
-      "mobile-media-item",
+      "desktop-asset-item",
+      "mobile-asset-item",
       "content-item",
       "button-item"
     ]

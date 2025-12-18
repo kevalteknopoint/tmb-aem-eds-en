@@ -701,7 +701,7 @@
     ]
   },
   {
-    "id": "m-desktop-media",
+    "id": "m-desktop-asset",
     "fields": [
       {
         "component": "select",
@@ -715,14 +715,14 @@
           },
           {
             "name": "Enabled",
-            "value": "desktop-media"
+            "value": "desktop-asset"
           }
         ]
       },
       {
         "component": "reference",
-        "name": "dt-media",
-        "label": "Desktop Media"
+        "name": "dt-asset",
+        "label": "Desktop Asset"
       },
       {
         "component": "text",
@@ -732,7 +732,7 @@
     ]
   },
   {
-    "id": "m-mobile-media",
+    "id": "m-mobile-asset",
     "fields": [
       {
         "component": "select",
@@ -746,14 +746,14 @@
           },
           {
             "name": "Enabled",
-            "value": "mobile-media"
+            "value": "mobile-asset"
           }
         ]
       },
       {
         "component": "reference",
-        "name": "mb-media",
-        "label": "Mobile Media"
+        "name": "mb-asset",
+        "label": "Mobile Asset"
       },
       {
         "component": "text",

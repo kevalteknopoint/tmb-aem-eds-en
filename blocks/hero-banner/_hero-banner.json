@@ -17,25 +17,25 @@
       }
     },
     {
-      "title": "Desktop Media",
-      "id": "desktop-media-item",
+      "title": "Desktop Asset",
+      "id": "desktop-asset-item",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
-            "template": { "name": "Desktop Media", "model": "m-desktop-media" }
+            "template": { "name": "Desktop Asset", "model": "m-desktop-asset" }
           }
         }
       }
     },
     {
-      "title": "Mobile Media",
-      "id": "mobile-media-item",
+      "title": "Mobile Asset",
+      "id": "mobile-asset-item",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
-            "template": { "name": "Mobile Media", "model": "m-mobile-media" }
+            "template": { "name": "Mobile Asset", "model": "m-mobile-asset" }
           }
         }
       }
@@ -83,7 +83,7 @@
       ]
     },
     {
-      "id": "m-desktop-media",
+      "id": "m-desktop-asset",
       "fields": [
         {
           "component": "select",
@@ -92,19 +92,19 @@
           "value": "disabled",
           "options": [
             { "name": "Disabled", "value": "disabled" },
-            { "name": "Enabled", "value": "desktop-media" }
+            { "name": "Enabled", "value": "desktop-asset" }
           ]
         },
         {
           "component": "reference",
-          "name": "dt-media",
-          "label": "Desktop Media"
+          "name": "dt-asset",
+          "label": "Desktop Asset"
         },
         { "component": "text", "name": "dt-alt", "label": "Alt Text" }
       ]
     },
     {
-      "id": "m-mobile-media",
+      "id": "m-mobile-asset",
       "fields": [
         {
           "component": "select",
@@ -113,13 +113,13 @@
           "value": "disabled",
           "options": [
             { "name": "Disabled", "value": "disabled" },
-            { "name": "Enabled", "value": "mobile-media" }
+            { "name": "Enabled", "value": "mobile-asset" }
           ]
         },
         {
           "component": "reference",
-          "name": "mb-media",
-          "label": "Mobile Media"
+          "name": "mb-asset",
+          "label": "Mobile Asset"
         },
         { "component": "text", "name": "mb-alt", "label": "Alt Text" }
       ]
@@ -194,8 +194,8 @@
     {
       "id": "hero-banner-filter",
       "components": [
-        "desktop-media-item",
-        "mobile-media-item",
+        "desktop-asset-item",
+        "mobile-asset-item",
         "content-item",
         "button-item"
       ]
