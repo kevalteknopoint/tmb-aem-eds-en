@@ -685,7 +685,7 @@
     ]
   },
   {
-    "id": "hero-banner",
+    "id": "hero-banner-model",
     "fields": [
       {
         "component": "multiselect",
@@ -701,140 +701,87 @@
     ]
   },
   {
-    "id": "banner",
+    "id": "m-desktop-image",
     "fields": [
       {
         "component": "reference",
-        "valueType": "string",
         "name": "dt-media",
-        "label": "Desktop Media (Image/Video)",
-        "multi": false
+        "label": "Desktop Media"
       },
       {
         "component": "text",
-        "valueType": "string",
         "name": "dt-alt",
-        "label": "Desktop Image Alt",
-        "value": ""
-      },
+        "label": "Alt Text"
+      }
+    ]
+  },
+  {
+    "id": "m-mobile-image",
+    "fields": [
       {
         "component": "reference",
-        "valueType": "string",
         "name": "mb-media",
-        "label": "Mobile Media (Image/Video)",
-        "multi": false
+        "label": "Mobile Media"
       },
       {
         "component": "text",
-        "valueType": "string",
         "name": "mb-alt",
-        "label": "Mobile Image Alt",
-        "value": ""
-      },
+        "label": "Alt Text"
+      }
+    ]
+  },
+  {
+    "id": "m-content",
+    "fields": [
       {
         "component": "richtext",
-        "valueType": "string",
         "name": "content",
-        "label": "Content",
-        "value": ""
+        "label": "Banner Text"
+      }
+    ]
+  },
+  {
+    "id": "m-button",
+    "fields": [
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Button Text"
       },
       {
-        "component": "container",
-        "name": "banner-button-1",
-        "label": "Button 1 Settings",
-        "collapsible": false,
-        "fields": [
+        "component": "aem-content",
+        "name": "link",
+        "label": "Button Link"
+      },
+      {
+        "component": "select",
+        "name": "type",
+        "label": "Style",
+        "value": "primary",
+        "options": [
           {
-            "component": "text",
-            "name": "button-1-linkText",
-            "label": "Button 1 Text"
+            "name": "Primary",
+            "value": "primary"
           },
           {
-            "component": "aem-content",
-            "name": "button-1-link",
-            "label": "Button 1 Link"
-          },
-          {
-            "component": "select",
-            "name": "button-1-linkType",
-            "label": "Button 1 Style",
-            "value": "primary",
-            "options": [
-              {
-                "name": "Primary",
-                "value": "primary"
-              },
-              {
-                "name": "Secondary",
-                "value": "secondary"
-              }
-            ]
-          },
-          {
-            "component": "select",
-            "name": "button-1-linkTarget",
-            "label": "Button 1 Target",
-            "value": "_self",
-            "options": [
-              {
-                "name": "Same",
-                "value": "_self"
-              },
-              {
-                "name": "New",
-                "value": "_blank"
-              }
-            ]
+            "name": "Secondary",
+            "value": "secondary"
           }
         ]
       },
       {
-        "component": "container",
-        "name": "banner-button-2",
-        "label": "Button 2 Settings",
-        "collapsible": false,
-        "fields": [
+        "component": "select",
+        "name": "target",
+        "label": "Target",
+        "value": "_self",
+        "options": [
           {
-            "component": "text",
-            "name": "button-2-linkText",
-            "label": "Button 2 Text"
+            "name": "Same",
+            "value": "_self"
           },
           {
-            "component": "aem-content",
-            "name": "button-2-link",
-            "label": "Button 2 Link"
-          },
-          {
-            "component": "select",
-            "name": "button-2-linkType",
-            "label": "Button 2 Style",
-            "value": "primary",
-            "options": [
-              {
-                "name": "Primary",
-                "value": "primary"
-              },
-              {
-                "name": "Secondary",
-                "value": "secondary"
-              }
-            ]
-          },
-          {
-            "component": "select",
-            "name": "button-2-linkTarget",
-            "label": "Button 2 Target",
-            "value": "_self",
-            "options": [
-              {
-                "name": "Same",
-                "value": "_self"
-              },
-              {
-                "name": "New",
-                "value": "_blank"
-              }
-            ]
+            "name": "New",
+            "value": "_blank"
           }
         ]
       }
