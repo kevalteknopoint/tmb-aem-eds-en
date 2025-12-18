@@ -313,30 +313,30 @@
           }
         },
         {
-          "title": "Desktop Asset",
-          "id": "desktop-asset-item",
+          "title": "Desktop Image",
+          "id": "desktop-image-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Desktop Asset",
-                  "model": "m-desktop-asset"
+                  "name": "Desktop Image",
+                  "model": "m-desktop-image"
                 }
               }
             }
           }
         },
         {
-          "title": "Mobile Asset",
-          "id": "mobile-asset-item",
+          "title": "Mobile Image",
+          "id": "mobile-image-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Mobile Asset",
-                  "model": "m-mobile-asset"
+                  "name": "Mobile Image",
+                  "model": "m-mobile-image"
                 }
               }
             }
