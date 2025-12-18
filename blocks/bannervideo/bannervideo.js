@@ -383,8 +383,8 @@ function createSwiper(block) {
       
       row.append(richtextdiv, towrapdeskandmob);
 
-      towrapdeskandmob.setAttribute("data-aos", "fade-up");
-      towrapdeskandmob.setAttribute("data-aos-duration", "2000");
+      richtextdiv.setAttribute("data-aos", "fade-up");
+      richtextdiv.setAttribute("data-aos-duration", "2000");
 
       swiperWrapper.append(row);
     });
