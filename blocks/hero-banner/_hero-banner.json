@@ -17,6 +17,21 @@
       }
     },
     {
+      "title": "Banner Item",
+      "id": "banner-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Banner Item",
+              "filter": "banner-sub-item-filter"
+            }
+          }
+        }
+      }
+    },
+    {
       "title": "Desktop Image",
       "id": "desktop-image",
       "plugins": {
@@ -24,18 +39,6 @@
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
             "template": { "name": "Desktop Image", "model": "m-desktop-image" }
-          }
-        }
-      }
-    },
-    {
-      "title": "Mobile Image",
-      "id": "mobile-image",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block/item",
-            "template": { "name": "Mobile Image", "model": "m-mobile-image" }
           }
         }
       }
@@ -61,7 +64,7 @@
             "resourceType": "core/franklin/components/block/v1/block/item",
             "template": { 
               "name": "Button Group", 
-              "filter": "button-filter"
+              "filter": "only-buttons-filter"
             }
           }
         }
@@ -84,55 +87,40 @@
     {
       "id": "hero-banner-model",
       "fields": [
-        {
-          "component": "multiselect",
-          "name": "classes",
-          "label": "Style",
-          "options": [{ "name": "Product Detail Banner", "value": "product-detail-banner" }]
-        }
+        { "component": "text", "name": "classes", "label": "Block CSS Class" }
       ]
     },
     {
       "id": "m-desktop-image",
       "fields": [
-        { "component": "reference", "name": "dt-media", "label": "Desktop Media" },
+        { "component": "reference", "name": "dt-media", "label": "Image" },
         { "component": "text", "name": "dt-alt", "label": "Alt Text" }
       ]
     },
     {
-      "id": "m-mobile-image",
-      "fields": [
-        { "component": "reference", "name": "mb-media", "label": "Mobile Media" },
-        { "component": "text", "name": "mb-alt", "label": "Alt Text" }
-      ]
-    },
-    {
       "id": "m-content",
-      "fields": [{ "component": "richtext", "name": "content", "label": "Banner Text" }]
+      "fields": [{ "component": "richtext", "name": "content", "label": "Text" }]
     },
     {
       "id": "m-button",
       "fields": [
-        { "component": "text", "name": "text", "label": "Button Text" },
-        { "component": "aem-content", "name": "link", "label": "Button Link" },
-        { 
-          "component": "select", "name": "type", "label": "Style", "value": "primary",
-          "options": [{ "name": "Primary", "value": "primary" }, { "name": "Secondary", "value": "secondary" }]
-        },
-        {
-          "component": "select", "name": "target", "label": "Target", "value": "_self",
-          "options": [{ "name": "Same", "value": "_self" }, { "name": "New", "value": "_blank" }]
-        }
+        { "component": "text", "name": "text", "label": "Label" },
+        { "component": "aem-content", "name": "link", "label": "URL" },
+        { "component": "select", "name": "style", "label": "Style", "options": [{"name":"Primary","value":"primary"},{"name":"Secondary","value":"secondary"}] }
       ]
     }
   ],
   "filters": [
     {
       "id": "banner-item-filter",
-      "components": [ "desktop-image", "mobile-image", "banner-content", "button-group" ]
+      "components": [ "banner-item" ]
     },
     {
-      "id": "button-filter",
+      "id": "banner-sub-item-filter",
+      "components": [ "desktop-image", "banner-content", "button-group" ]
+    },
+    {
+      "id": "only-buttons-filter",
       "components": [ "button-item" ]
     }
   ]

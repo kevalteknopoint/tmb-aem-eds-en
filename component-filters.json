@@ -72,14 +72,19 @@
   {
     "id": "banner-item-filter",
     "components": [
+      "banner-item"
+    ]
+  },
+  {
+    "id": "banner-sub-item-filter",
+    "components": [
       "desktop-image",
-      "mobile-image",
       "banner-content",
       "button-group"
     ]
   },
   {
-    "id": "button-filter",
+    "id": "only-buttons-filter",
     "components": [
       "button-item"
     ]

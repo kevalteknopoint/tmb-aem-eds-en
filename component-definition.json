@@ -313,6 +313,21 @@
           }
         },
         {
+          "title": "Banner Item",
+          "id": "banner-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Banner Item",
+                  "filter": "banner-sub-item-filter"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Desktop Image",
           "id": "desktop-image",
           "plugins": {
@@ -322,21 +337,6 @@
                 "template": {
                   "name": "Desktop Image",
                   "model": "m-desktop-image"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Mobile Image",
-          "id": "mobile-image",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Mobile Image",
-                  "model": "m-mobile-image"
                 }
               }
             }
@@ -366,7 +366,7 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Button Group",
-                  "filter": "button-filter"
+                  "filter": "only-buttons-filter"
                 }
               }
             }
