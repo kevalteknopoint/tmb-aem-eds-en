@@ -139,8 +139,8 @@
       },
       {
         "component": "multiselect",
-        "name": "style",
-        "label": "Style",
+        "name": "generic-style",
+        "label": "Generic Styles",
         "options": [
           {
             "name": "Top Spacing",
@@ -163,93 +163,40 @@
             "value": "bottom-partition"
           },
           {
-            "name": "secfirst",
-            "value": "secfirst"
-          },
-          {
-            "name": "secsecond",
-            "value": "secsecond"
-          },
-          {
-            "name": "quick-links",
-            "value": "quick-links"
-          },
-          {
-            "name": "momentum-teaser",
-            "value": "momentum-teaser"
-          },
-          {
-            "name": "momentum-section",
-            "value": "momentum-section"
-          },
-          {
-            "name": "momentum-saver-section",
-            "value": "momentum-saver-section"
-          },
-          {
-            "name": "Momentum Image Saver",
-            "value": "momentum-image-saver"
-          },
-          {
-            "name": "Product Detail Variant",
-            "value": "image-swapping"
-          },
-          {
-            "name": "Left Percentage Section",
-            "value": "left-percentage-section"
-          },
-          {
-            "name": "Background Color Teal",
-            "value": "background-color-teal"
-          },
-          {
-            "name": "Bg Image Saver",
-            "value": "bg-image-saver"
-          },
-          {
-            "name": "online-banking",
-            "value": "online-banking"
-          },
-          {
-            "name": "Expandable Tiles",
-            "value": "expandable-tiles-section"
-          },
-          {
-            "name": "Highlight",
-            "value": "highlight"
-          },
-          {
-            "name": "AOS Enabled",
-            "value": "aos-enabled"
-          },
-          {
-            "name": "tmb-acc-sec",
-            "value": "tmb-acc-sec"
-          },
-          {
-            "name": "banking-container",
-            "value": "banking-container"
-          },
-          {
-            "name": "tmb-footer",
-            "value": "tmb-footer"
-          },
-          {
-            "name": "tmb-sub-footer",
-            "value": "tmb-sub-footer"
+            "name": "Top Spacer",
+            "value": "spacer-top"
           },
           {
             "name": "Bottom Spacer",
             "value": "spacer-bottom"
           },
           {
-            "name": "Top Spacer",
-            "value": "spacer-top"
-          },
-          {
             "name": "Hide Section",
             "value": "d-none"
           },
+          {
+            "name": "Section Wrapper",
+            "value": "section-wrapper"
+          },
+          {
+            "name": "AOS Enabled",
+            "value": "aos-enabled"
+          },
+          {
+            "name": "Background Color Teal",
+            "value": "background-color-teal"
+          },
+          {
+            "name": "Icon library",
+            "value": "icon-library"
+          }
+        ]
+      },
+      {
+        "component": "multiselect",
+        "name": "faq-style",
+        "label": "FAQ Styles",
+        "options": [
           {
             "name": "faq-Looking",
             "value": "faq-looking-for"
@@ -287,8 +234,19 @@
             "value": "faq-cant-find-looking-for-variant"
           },
           {
-            "name": "Section Wrapper",
-            "value": "section-wrapper"
+            "name": "FAQ Accordion",
+            "value": "faq-accordion"
+          }
+        ]
+      },
+      {
+        "component": "multiselect",
+        "name": "product-style",
+        "label": "Product & Banking Styles",
+        "options": [
+          {
+            "name": "Product Detail Variant",
+            "value": "image-swapping"
           },
           {
             "name": "Banking Good",
@@ -307,28 +265,12 @@
             "value": "who-can-apply-section"
           },
           {
-            "name": "Customer",
-            "value": "customer"
-          },
-          {
-            "name": "FAQ Accordion",
-            "value": "faq-accordion"
-          },
-          {
             "name": "Interest Table",
             "value": "interest-table-section"
           },
           {
-            "name": "Product Navigation",
-            "value": "product-navigation"
-          },
-          {
             "name": "Compare Accounts Cards",
             "value": "compare-accounts"
-          },
-          {
-            "name": "News helpful",
-            "value": "news-helpful"
           },
           {
             "name": "Overseas Variant",
@@ -343,12 +285,87 @@
             "value": "money-overseas-variant"
           },
           {
-            "name": "News helpful homepage",
-            "value": "news-helpful-homepage"
+            "name": "online-banking",
+            "value": "online-banking"
           },
           {
-            "name": "Icon library",
-            "value": "icon-library"
+            "name": "banking-container",
+            "value": "banking-container"
+          }
+        ]
+      },
+      {
+        "component": "multiselect",
+        "name": "homepage-style",
+        "label": "Homepage & Other Styles",
+        "options": [
+          {
+            "name": "secfirst",
+            "value": "secfirst"
+          },
+          {
+            "name": "secsecond",
+            "value": "secsecond"
+          },
+          {
+            "name": "quick-links",
+            "value": "quick-links"
+          },
+          {
+            "name": "momentum-teaser",
+            "value": "momentum-teaser"
+          },
+          {
+            "name": "momentum-section",
+            "value": "momentum-section"
+          },
+          {
+            "name": "momentum-saver-section",
+            "value": "momentum-saver-section"
+          },
+          {
+            "name": "Momentum Image Saver",
+            "value": "momentum-image-saver"
+          },
+          {
+            "name": "Left Percentage Section",
+            "value": "left-percentage-section"
+          },
+          {
+            "name": "Bg Image Saver",
+            "value": "bg-image-saver"
+          },
+          {
+            "name": "Expandable Tiles",
+            "value": "expandable-tiles-section"
+          },
+          {
+            "name": "Highlight",
+            "value": "highlight"
+          },
+          {
+            "name": "tmb-acc-sec",
+            "value": "tmb-acc-sec"
+          },
+          {
+            "name": "tmb-footer",
+            "value": "tmb-footer"
+          },
+          {
+            "name": "tmb-sub-footer",
+            "value": "tmb-sub-footer"
+          },
+          {
+            "name": "Customer",
+            "value": "customer"
+          },
+          {
+            "name": "News helpful",
+            "value": "news-helpful"
+          },
+          {
+            "name": "News helpful homepage",
+            "value": "news-helpful-homepage"
           },
           {
             "name": "looking-for-another-way",
