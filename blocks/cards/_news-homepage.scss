@@ -1,0 +1,117 @@
+@use '../../styles/base' as *;
+
+.news-helpful-homepage {
+  .default-content-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    p:last-child {
+      display: none;
+    }
+  }
+
+  .cards-wrapper {
+    .block {
+      position: unset;
+
+      .swiper-wrapper {
+        @include mobile {
+          flex-direction: column;
+          gap: 20px;
+          margin-bottom: 20px;
+        }
+
+        .swiper-slide {
+          display: flex;
+          gap: 16px;
+          background: #FFF;
+          border: 1px solid $line-default; // Figma token missing
+          border-radius: $radius-card;
+          height: auto;
+          justify-content: flex-start;
+          padding: 20px;
+          width: 385.8px;
+          transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+          &:hover {
+            border: 1px solid $stroke-default;
+            box-shadow: 0 2px 16px 0 rgb(0 0 0 / 10%);
+          }
+
+          @include mobile {
+            width: 100% !important;
+            display: none;
+
+            &.show {
+              display: flex !important;
+            }
+          }
+
+          div {
+            picture {
+              img {
+                height: 100px;
+                width: 100px;
+                min-width: 100px;
+                object-fit: cover;
+                object-position: center;
+              }
+            }
+
+            &:last-child {
+              p {
+                color: $heading-default;
+                padding: 0;
+
+                @include typo-heading4;
+              }
+
+              p.button-container {
+                padding: 0;
+                margin: 0;
+
+                a {
+                  display: block;
+                  margin-top: 20px;
+                  width: fit-content;
+                  color: $heading-default;
+                  border-bottom: 2px solid $link-accent;
+
+                  @include typo-sm-body;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .nav-wrapper {
+      .swiper-button-next,
+      .swiper-button-prev {
+        @include mobile {
+          display: none;
+        }
+      }
+
+      .view-all-wrapper {
+        display: none;
+
+        @include tablet {
+          display: none;
+        }
+
+        @include mobile {
+          display: block;
+          padding: 6px 0;
+          margin: 4px 0;
+          color: $link-default;
+          border-bottom: 2px solid $link-default;
+
+          @include typo-heading3;
+        }
+      }
+    }
+  }
+}

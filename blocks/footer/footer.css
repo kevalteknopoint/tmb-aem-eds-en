@@ -165,7 +165,7 @@ footer .footer > div{
 .section.tmb-footer .tmb-footer-wrapper .ul-13 li a{
   color:var(--bg-reverse);
   font-size:16px;
-  font-style:regular;
+  font-style:Regular;
   font-weight:400;
   letter-spacing:-1%;
   line-height:100%;
@@ -206,7 +206,7 @@ footer .footer > div{
 
 .section.tmb-footer .tmb-footer-wrapper .ul-15 li{
   align-items:center;
-  color:#FFF;
+  color:#FFFFFF;
   display:flex;
   gap:8px;
 }
@@ -360,7 +360,7 @@ footer .footer > div{
 }
 
 .section.tmb-sub-footer .tmb-sub-footer-wrapper .ul-1 li p{
-  color:#FFF;
+  color:#FFFFFF;
   font-size:12px;
   font-weight:400;
   line-height:100%;
@@ -379,7 +379,7 @@ footer .footer > div{
 }
 
 .section.tmb-sub-footer .tmb-sub-footer-wrapper .ul-1 li ul li a{
-  color:#FFF;
+  color:#FFFFFF;
   font-size:12px;
   font-weight:400;
   line-height:100%;
@@ -390,7 +390,7 @@ footer .footer > div{
 
 .section.tmb-sub-footer .tmb-sub-footer-wrapper .ul-3{
   align-items:center;
-  background-color:#FFF;
+  background-color:#FFFFFF;
   border-radius:5px;
   display:flex;
   gap:40px;
@@ -410,7 +410,7 @@ footer .footer > div{
 }
 
 .section.tmb-sub-footer .tmb-sub-footer-wrapper .ul-4 li:nth-child(2){
-  color:#FFF;
+  color:#FFFFFF;
   font-size:12px;
   font-weight:600;
   letter-spacing:0%;
@@ -429,7 +429,7 @@ footer .footer > div{
 }
 
 .section.tmb-sub-footer .tmb-sub-footer-wrapper .ul-5 li:nth-child(1){
-  color:#FFF;
+  color:#FFFFFF;
   font-size:12px;
   font-weight:400;
   line-height:100%;
@@ -438,17 +438,17 @@ footer .footer > div{
 
 .section.tmb-sub-footer .tmb-sub-footer-wrapper .ul-5 li:nth-child(1) a,
 .section.tmb-sub-footer .tmb-sub-footer-wrapper .ul-5 li:nth-child(2) a{
-  color:#FFF;
+  color:#FFFFFF;
   font-size:12px;
   font-weight:400;
   line-height:normal;
   text-decoration:underline;
-  text-decoration-color:#FFF;
+  text-decoration-color:#FFFFFF;
   vertical-align:bottom;
 }
 
 .section.tmb-sub-footer .tmb-sub-footer-wrapper .ul-5 li:nth-child(2){
-  color:#FFF;
+  color:#FFFFFF;
   font-size:12px;
   font-weight:400;
   line-height:normal;
@@ -521,7 +521,7 @@ footer .footer > div{
 .para-9{
   color:#212121;
   font-size:16px;
-  font-style:semi bold;
+  font-style:Semi Bold;
   font-weight:600;
   letter-spacing:0%;
   line-height:24px;
@@ -530,9 +530,9 @@ footer .footer > div{
 }
 
 .para-6{
-  color:#fff;
+  color:#ffffff;
   font-size:16px;
-  font-style:semi bold;
+  font-style:Semi Bold;
   font-weight:600;
   letter-spacing:0%;
   line-height:24px;
@@ -660,7 +660,7 @@ footer .footer > div{
     align-items:center;
     display:flex;
     font-size:14px;
-    font-style:regular;
+    font-style:Regular;
     font-weight:400;
     gap:12px;
     line-height:24px;
@@ -980,7 +980,7 @@ footer .footer > div{
 
   .section.tmb-sub-footer .tmb-sub-footer-wrapper .ul-5 li:nth-child(1){
     font-size:11px;
-    font-style:semi bold;
+    font-style:Semi Bold;
     font-weight:600;
     text-align:center;
     vertical-align:bottom;

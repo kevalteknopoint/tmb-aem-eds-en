@@ -3,7 +3,7 @@ export default function decorateOnlineBanking(block) {
   const cardsUl = block.querySelector(
     ".online-banking .cards-wrapper .cards ul"
   );
-  cardsUl.classList.add("banking-cards-ul");
+  cardsUl?.classList.add("banking-cards-ul");
   block.querySelectorAll(".banking-cards-ul > li").forEach((li, idx) => {
     li.classList.add(`banking-li-${idx + 1}`);
   });

@@ -24,7 +24,11 @@
       "teachers-form-block",
       "breadcrumb",
       "faq-category",
-      "faq-detail"
+      "faq-detail",
+      "hero-banner",
+      "content-fragment",
+      "interest-table",
+      "icon-library"
     ]
   },
   {
@@ -61,7 +65,14 @@
       "text",
       "image",
       "button",
-      "title"
+      "title",
+      "content-fragment"
+    ]
+  },
+  {
+    "id": "hero-banner",
+    "components": [
+      "banner"
     ]
   }
 ]

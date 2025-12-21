@@ -1,7 +1,6 @@
 @use '../../styles/base' as *;
 @use 'banner';
 @use 'news';
-
 @import '../../libs/swiper/swiper-bundle.min.css';
 
 .bannervideo-container {
@@ -33,28 +32,23 @@
 
         p {
           color: $heading-default;
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 24px;
           margin: 0 0 20px;
           padding: 0;
-          font-family: $primary-font;
+
+          @include typo-heading4;
 
 
           &>a {
             background-color: transparent;
             color: $heading-default;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 21px;
             margin: 0;
             padding: 0;
             text-decoration: underline;
             text-decoration-thickness: 2px;
             text-decoration-color: $link-accent;
             text-underline-offset: 4px;
+
+            @include typo-sm-body
           }
         }
 
@@ -110,13 +104,8 @@
 
   &>h1 {
     color: $heading-default;
-    font-family: $secondary-font;
-    font-size: 42px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 44px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+
+    @include typo-heading1
   }
 
   &>p {
@@ -131,12 +120,8 @@
         &>div {
           &>.button-container {
             &>a {
-              background-color: unset;
-              color: $heading-default;
-              font-size: 14px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 21px;
+              @include typo-sm-body;
+
               margin: 0;
               padding: 0;
               text-decoration: underline;
@@ -181,7 +166,6 @@
           }
 
           &>p {
-            // color: #000;
             color: $heading-default;
             font-family: $primary-font;
             font-size: 20px;
@@ -281,7 +265,7 @@
     bottom: 64px;
     width: 100%;
 
-    @include responsive-container();
+    @include responsive-container;
 
     @include tablet {
       gap: 16px;
@@ -300,32 +284,20 @@
     h5,
     h6 {
       color: $heading-default;
-      font-family: $secondary-font;
-      font-size: 60px;
-      font-style: normal;
-      letter-spacing: 2px;
-      line-height: 52px;
       max-width: 560px;
-      text-transform: uppercase;
 
-      @include tablet {
-        font-size: 40px;
-        line-height: 32px;
-      }
+      @include typo-large-heading;
     }
 
     &>p {
-      color: $body-default;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 24px;
       max-width: 560px;
+      color: $body-default;
+
+      @include typo-heading4;
     }
 
     &:nth-child(1) {
       &>p.button-container {
-
         &>a {
           @include button('primary');
         }

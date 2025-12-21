@@ -129,6 +129,15 @@
         "description": "The label shown for this section in the Content Tree"
       },
       {
+        "component": "text",
+        "name": "id",
+        "label": "Section ID",
+        "description": "Unique identifier for this section (HTML ID)",
+        "validation": {
+          "regex": "^[a-zA-Z][\\w:.-]*$"
+        }
+      },
+      {
         "component": "multiselect",
         "name": "style",
         "label": "Style",
@@ -148,6 +157,10 @@
           {
             "name": "Bottom Inner Spacing",
             "value": "bottom-padding"
+          },
+          {
+            "name": "Bottom Partition",
+            "value": "bottom-partition"
           },
           {
             "name": "secfirst",
@@ -176,6 +189,14 @@
           {
             "name": "Momentum Image Saver",
             "value": "momentum-image-saver"
+          },
+          {
+            "name": "Product Detail Variant",
+            "value": "image-swapping"
+          },
+          {
+            "name": "Left Percentage Section",
+            "value": "left-percentage-section"
           },
           {
             "name": "Background Color Teal",
@@ -262,12 +283,80 @@
             "value": "faq-cant-find-looking-for"
           },
           {
+            "name": "Faq-cant-find-looking-for Variant",
+            "value": "faq-cant-find-looking-for-variant"
+          },
+          {
             "name": "Section Wrapper",
             "value": "section-wrapper"
           },
           {
             "name": "Banking Good",
             "value": "banking-goods"
+          },
+          {
+            "name": "Product Navigation",
+            "value": "product-navigation"
+          },
+          {
+            "name": "Rates Saver",
+            "value": "rates-saver"
+          },
+          {
+            "name": "Who can apply",
+            "value": "who-can-apply-section"
+          },
+          {
+            "name": "Customer",
+            "value": "customer"
+          },
+          {
+            "name": "FAQ Accordion",
+            "value": "faq-accordion"
+          },
+          {
+            "name": "Interest Table",
+            "value": "interest-table-section"
+          },
+          {
+            "name": "Product Navigation",
+            "value": "product-navigation"
+          },
+          {
+            "name": "Compare Accounts Cards",
+            "value": "compare-accounts"
+          },
+          {
+            "name": "News helpful",
+            "value": "news-helpful"
+          },
+          {
+            "name": "Overseas Variant",
+            "value": "overseas-variant"
+          },
+          {
+            "name": "Money Overseas",
+            "value": "money-overseas"
+          },
+          {
+            "name": "Money Overseas Variant",
+            "value": "money-overseas-variant"
+          },
+          {
+            "name": "News helpful homepage",
+            "value": "news-helpful-homepage"
+          },
+          {
+            "name": "Icon library",
+            "value": "icon-library"
+          },
+          {
+            "name": "looking-for-another-way",
+            "value": "looking-for-another-way"
+          },
+          {
+            "name": "Momentum Direct Variant",
+            "value": "momentum-direct-variant"
           }
         ]
       }
@@ -282,8 +371,8 @@
         "label": "Style",
         "options": [
           {
-            "name": "accordion-open",
-            "value": "accordion-open"
+            "name": "Single Item Expansion",
+            "value": "single-expansion"
           }
         ]
       }
@@ -305,39 +394,6 @@
         "name": "content",
         "value": "",
         "label": "Body"
-      }
-    ]
-  },
-  {
-    "id": "banking-good",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "bg-image",
-        "label": "Background Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "heading",
-        "label": "Heading",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "mobile-heading",
-        "label": "Heading for mobile",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
       },
       {
         "component": "multiselect",
@@ -345,8 +401,8 @@
         "label": "Style",
         "options": [
           {
-            "name": "banking-good",
-            "value": "banking-good"
+            "name": "Default Open",
+            "value": "accordion-open"
           }
         ]
       }
@@ -553,6 +609,21 @@
     ]
   },
   {
+    "id": "aem-content-fragment",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "picker",
+        "label": "Content Fragment Picker",
+        "valueType": "string",
+        "variationName": "contentFragmentVariation",
+        "validation": {
+          "rootPath": "/content/dam/tmb/content-fragments"
+        }
+      }
+    ]
+  },
+  {
     "id": "faq-category",
     "fields": [
       {
@@ -610,6 +681,62 @@
         "component": "aem-content",
         "name": "reference",
         "label": "Reference"
+      }
+    ]
+  },
+  {
+    "id": "hero-banner",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Product Detail Banner",
+            "value": "product-detail-banner"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "banner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "dt-media",
+        "label": "Desktop Media (Image/Video)",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "dt-alt",
+        "label": "Desktop Image Alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "mb-media",
+        "label": "Mobile Media (Image/Video)",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "mb-alt",
+        "label": "Mobile Image Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Content",
+        "value": ""
       }
     ]
   },
