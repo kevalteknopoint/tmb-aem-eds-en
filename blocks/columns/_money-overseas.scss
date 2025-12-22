@@ -158,9 +158,9 @@
 
     ul {
       padding: 16px;
-      background: var(--info-well, rgb(27 231 255 / 7%)); // Figma token missing
+      background: var(--info-well-default, rgb(27 231 255 / 7%)); // Figma token missing
       margin-bottom: 32px;
-      border-radius: 8px;
+      border-radius: $radius-info-well;
 
       &:last-child {
         margin-bottom: 0;
@@ -281,7 +281,7 @@
         a {
           text-decoration: underline;
           text-underline-offset: 3px;
-          color: $heading-default;
+          color: $link-default;
         }
       }
 
@@ -290,7 +290,7 @@
           min-width: 32px;
           width: 32px;
           height: 32px;
-          color: $heading-default;
+          color: $icon-2-default;
         }
       }
     }

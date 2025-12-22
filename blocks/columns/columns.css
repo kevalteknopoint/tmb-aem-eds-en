@@ -828,8 +828,8 @@
 }
 
 .money-overseas .overseas-columns-wrapper ul{
-  background:var(--info-well, rgb(27 231 255 / 7%));
-  border-radius:8px;
+  background:var(--info-well-default, rgb(27 231 255 / 7%));
+  border-radius:var(--radius-info-well);
   margin-bottom:32px;
   padding:16px;
 }
@@ -1006,13 +1006,13 @@
 }
 
 .overseas-variant .overseas-columns .overseas-columns-wrapper .content-with-icon a{
-  color:var(--heading-default);
+  color:var(--link-default);
   text-decoration:underline;
   text-underline-offset:3px;
 }
 
 .overseas-variant .overseas-columns .overseas-columns-wrapper .icon-checkmark .icon-svg{
-  color:var(--heading-default);
+  color:var(--icon-2-default);
   height:32px;
   min-width:32px;
   width:32px;
