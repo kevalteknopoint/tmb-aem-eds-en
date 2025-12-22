@@ -1,4 +1,6 @@
-import decorateMomentumSaver from '../components/momentum-saver/momentum-saver.js';
+import decorateMomentumSaver from '../blocks/momentum-saver/momentum-saver.js';
+import decorateProductNavigation from '../blocks/product-navigation/product-navigation.js';
+import decorateTable from '../blocks/table/table.js';
 import {
   loadHeader,
   loadFooter,
@@ -12,6 +14,8 @@ import {
   loadSections,
   loadCSS,
 } from './aem.js';
+import { fetchPlaceholders } from './placeholders.js';
+import decorateIconLibrary from '../blocks/icon-library/icon-library.js';
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -156,7 +160,26 @@ function loadDelayed() {
   // load anything that can be postponed to the latest here
 }
 
+function camelToKebab(str) {
+  return str.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+}
+
+function loadPlaceholders() {
+  if (window.placeholders?.default && Object.keys(window.placeholders?.default)?.length) {
+    Object.keys(window.placeholders.default).forEach((key) => {
+      let value = window.placeholders.default[key];
+      const isInterestRate = /(\d+(?:\.\d+)?)(%)(p\.a\.)/g.test(value);
+      if (isInterestRate) {
+        value = value.replaceAll(/(\d+(?:\.\d+)?)(%)(p\.a\.)/g, `<span class="rate-num">$1</span><span class="rate-unit"><span class="rate-percent">$2</span><span class="rate-pa">$3</span></span>`);
+      }
+      document.body.innerHTML = document.body.innerHTML.replaceAll(`~${key}~`, `<span class="${camelToKebab(key)}${isInterestRate ? ' interest-rate' : ''}">${value}</span>`);
+    });
+  }
+}
+
 async function loadPage() {
+  await fetchPlaceholders();
+  loadPlaceholders();
   await loadEager(document);
   await loadLazy(document);
   try {
@@ -183,6 +206,9 @@ async function loadPage() {
     console.error('Error loading SVG:', error);
   }
   decorateMomentumSaver();
+  decorateProductNavigation();
+  decorateTable();
+  decorateIconLibrary();
   loadDelayed();
 }
 

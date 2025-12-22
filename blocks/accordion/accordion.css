@@ -20,25 +20,31 @@
 }
 
 .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details p{
-  font-size:16px;
-  font-weight:500;
-  line-height:24px;
+  font-family:var(--font-family-h5);
+  font-size:var(--font-size-h5);
+  font-weight:var(--font-weight-h5);
+  letter-spacing:var(--font-letter-spacing-h5);
+  line-height:var(--font-height-h5);
   margin:0;
+  text-transform:initial;
 }
 
 .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-label{
   color:var(--heading-default);
   cursor:pointer;
   display:flex;
-  font-size:24px;
-  font-weight:700;
+  font-family:var(--font-family-h5);
+  font-size:var(--font-size-h5);
+  font-weight:var(--font-weight-h5);
   gap:16px;
   justify-content:space-between;
-  line-height:32px;
+  letter-spacing:var(--font-letter-spacing-h5);
+  line-height:var(--font-height-h5);
   list-style:none;
   overflow:auto;
   overflow:hidden;
   position:relative;
+  text-transform:initial;
   transition:background-color 0.2s;
   vertical-align:bottom;
 }
@@ -61,10 +67,13 @@
 
 .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body p{
   color:var(--body-default);
-  font-size:16px;
-  font-weight:400;
-  line-height:24px;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
   margin:0;
+  text-transform:initial;
 }
 
 .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details[open] summary svg{

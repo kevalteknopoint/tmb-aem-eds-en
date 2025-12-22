@@ -1,20 +1,7 @@
-@forward './base-old';
+@forward './base-custom';
 @import '../../libs/aos/aos.min.css';
 
 :root {
-  /* ---------- FONTS VARIABLES ---------- */
-  --primary-font: 'Inter', system-ui, -apple-system, 'BlinkMacSystemFont', "Segoe UI", 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  --secondary-font: 'Avenir LT Std', system-ui, -apple-system, 'BlinkMacSystemFont', "Segoe UI", 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  
-  /* ---------- CUSTOM VARIABLES ---------- */
-  --gradient-1: #ecf8fd;
-  --radius-button: 2px;
-  --radius-card: 0px;
-  --radius-menu-link: 0px;
-  --radius-footer-card: 0px;
-  --radius-article-thumb: 0px;
-  
-  /* ---------- OTHER VARIABLES ---------- */
   --color-button-outlined-default: #ffffff03; /* from "color/button/outlined/default" */
   --color-button-outlined-hover: #0037641a; /* from "color/button/outlined/hover" */
   --color-button-outlined-press: #00376433; /* from "color/button/outlined/press" */
@@ -57,6 +44,7 @@
   --color-variants-bg-light-1: #f7f7f7; /* from "color/variants/bg/light-1" */
   --color-variants-bg-light-2: #ecf8fd; /* from "color/variants/bg/light-2" */
   --color-variants-bg-light-3: #a2daf3; /* from "color/variants/bg/light-3" */
+  --color-variants-bg-light-4: #a2daf333; /* from "color/variants/bg/light-4" */
   --color-variants-bg-promo: #003764; /* from "color/variants/bg/promo" */
   --color-variants-bg-reverse: #003764; /* from "color/variants/bg/reverse" */
   --color-variants-body-default: #565659; /* from "color/variants/body/default" */
@@ -76,6 +64,8 @@
   --color-variants-link-default: #003764; /* from "color/variants/link/default" */
   --color-variants-link-reverse-2: #a2daf3; /* from "color/variants/link/reverse-2" */
   --color-variants-link-reverse: #ffffff; /* from "color/variants/link/reverse" */
+  --color-variants-number-list-default: #0037641a; /* from "color/variants/number-list/default" */
+  --color-variants-number-list-reverse: #ffffff1a; /* from "color/variants/number-list/reverse" */
   --color-variants-stroke-accent: #c8e1e4; /* from "color/variants/stroke/accent" */
   --color-variants-stroke-primary: #003764; /* from "color/variants/stroke/primary" */
   --color-variants-stroke-reversed-2: #ffffff; /* from "color/variants/stroke/reversed-2" */
@@ -105,19 +95,19 @@
   --font-d-size-intro: 24px; /* from "font/--D/size/intro" */
   --font-d-size-lg: 60px; /* from "font/--D/size/lg" */
   --font-d-size-sm-body: 14px; /* from "font/--D/size/sm-body" */
-  --font-family-body-bold: Inter; /* from "font/family/body-bold" */
-  --font-family-body: Inter; /* from "font/family/body" */
-  --font-family-disc: Inter; /* from "font/family/disc" */
-  --font-family-h1-std: 'Avenir LT Std'; /* from "font/family/h1-std" */
-  --font-family-h1: 'Avenir LT Std'; /* from "font/family/h1" */
-  --font-family-h2-std: 'Avenir LT Std'; /* from "font/family/h2-std" */
-  --font-family-h2: 'Avenir LT Std'; /* from "font/family/h2" */
-  --font-family-h3: Inter; /* from "font/family/h3" */
-  --font-family-h4: Inter; /* from "font/family/h4" */
-  --font-family-h5: Inter; /* from "font/family/h5" */
-  --font-family-intro: Inter; /* from "font/family/intro" */
-  --font-family-lg: 'Avenir LT Std'; /* from "font/family/lg" */
-  --font-family-sm-body: Inter; /* from "font/family/sm-body" */
+  --font-family-body-bold: var(--primary-font); /* from "font/family/body-bold" */
+  --font-family-body: var(--primary-font); /* from "font/family/body" */
+  --font-family-disc: var(--primary-font); /* from "font/family/disc" */
+  --font-family-h1-std: var(--secondary-font); /* from "font/family/h1-std" */
+  --font-family-h1: var(--secondary-font); /* from "font/family/h1" */
+  --font-family-h2-std: var(--secondary-font); /* from "font/family/h2-std" */
+  --font-family-h2: var(--secondary-font); /* from "font/family/h2" */
+  --font-family-h3: var(--primary-font); /* from "font/family/h3" */
+  --font-family-h4: var(--primary-font); /* from "font/family/h4" */
+  --font-family-h5: var(--primary-font); /* from "font/family/h5" */
+  --font-family-intro: var(--primary-font); /* from "font/family/intro" */
+  --font-family-lg: var(--secondary-font); /* from "font/family/lg" */
+  --font-family-sm-body: var(--primary-font); /* from "font/family/sm-body" */
   --font-letter-spacing-body: 0px; /* from "font/letter-spacing/body" */
   --font-letter-spacing-disc: 0px; /* from "font/letter-spacing/disc" */
   --font-letter-spacing-h1-std: -1px; /* from "font/letter-spacing/h1-std" */
@@ -178,25 +168,28 @@
   --font-t-size-intro: 24px; /* from "font/--T/size/intro" */
   --font-t-size-lg: 52px; /* from "font/--T/size/lg" */
   --font-t-size-sm-body: 14px; /* from "font/--T/size/sm-body" */
-  --font-weight-body-bold: 'Semi Bold'; /* from "font/weight/body-bold" */
-  --font-weight-body: Regular; /* from "font/weight/body" */
-  --font-weight-disc: Regular; /* from "font/weight/disc" */
-  --font-weight-h1-std: '95 Black'; /* from "font/weight/h1-std" */
-  --font-weight-h1: '95 Black'; /* from "font/weight/h1" */
-  --font-weight-h2-std: '95 Black'; /* from "font/weight/h2-std" */
-  --font-weight-h2: '95 Black'; /* from "font/weight/h2" */
-  --font-weight-h3: Medium; /* from "font/weight/h3" */
-  --font-weight-h4: Medium; /* from "font/weight/h4" */
-  --font-weight-h5: Medium; /* from "font/weight/h5" */
-  --font-weight-intro: Regular; /* from "font/weight/intro" */
-  --font-weight-lg: '95 Black'; /* from "font/weight/lg" */
-  --font-weight-sm-body: Regular; /* from "font/weight/sm-body" */
+  --font-weight-body-bold: 600; /* from "font/weight/body-bold" */
+  --font-weight-body: 400; /* from "font/weight/body" */
+  --font-weight-disc: 400; /* from "font/weight/disc" */
+  --font-weight-h1-std: 900; /* from "font/weight/h1-std" */
+  --font-weight-h1: 900; /* from "font/weight/h1" */
+  --font-weight-h2-std: 900; /* from "font/weight/h2-std" */
+  --font-weight-h2: 900; /* from "font/weight/h2" */
+  --font-weight-h3: 500; /* from "font/weight/h3" */
+  --font-weight-h4: 500; /* from "font/weight/h4" */
+  --font-weight-h5: 500; /* from "font/weight/h5" */
+  --font-weight-intro: 400; /* from "font/weight/intro" */
+  --font-weight-lg: 900; /* from "font/weight/lg" */
+  --font-weight-rate-p-a: 500; /* from "font/weight/rate-p-a" */
+  --font-weight-rate: 900; /* from "font/weight/rate" */
+  --font-weight-sm-body: 400; /* from "font/weight/sm-body" */
   --lg-rate: 150px; /* from "lg-rate" */
   --radius-article-thumb: 0px; /* from "radius/article-thumb" */
   --radius-button: 2px; /* from "radius/button" */
   --radius-card: 0px; /* from "radius/card" */
   --radius-footer-card: 0px; /* from "radius/footer-card" */
   --radius-hero: 0px; /* from "radius/hero" */
+  --radius-info-well: 0px; /* from "radius/info-well" */
   --radius-menu-link: 0px; /* from "radius/menu-link" */
   --stroke-button: 2px; /* from "stroke/button" */
   --width-logo-lg: 150px; /* from "width/logo/lg" */
@@ -259,6 +252,14 @@
   --icon-reverse-2: var(--color-variants-icon-default);
   --icon-reverse: var(--color-variants-icon-default);
   --icon-transparent: var(--color-variants-icon-accent);
+  --info-well-accent: #ffffff1a;
+  --info-well-default: var(--color-variants-bg-light-4);
+  --info-well-light-2: #ffffff4d;
+  --info-well-light-3: #ffffff1a;
+  --info-well-light: #ffffff;
+  --info-well-reverse-2: #ffffff1a;
+  --info-well-reverse: #ffffff1a;
+  --info-well-transparent: var(--color-variants-bg-light-4);
   --line-accent: var(--color-variants-line-default);
   --line-default: var(--color-variants-line-default);
   --line-light-2: var(--color-variants-line-default);
@@ -275,6 +276,14 @@
   --link-reverse-2: var(--color-variants-link-reverse-2);
   --link-reverse: var(--color-variants-link-reverse);
   --link-transparent: var(--color-variants-link-default);
+  --number-list-accent: var(--color-variants-number-list-reverse);
+  --number-list-default: var(--color-variants-number-list-default);
+  --number-list-light-2: var(--color-variants-number-list-default);
+  --number-list-light-3: var(--color-variants-number-list-default);
+  --number-list-light: var(--color-variants-number-list-default);
+  --number-list-reverse-2: var(--color-variants-number-list-reverse);
+  --number-list-reverse: var(--color-variants-number-list-reverse);
+  --number-list-transparent: var(--color-variants-number-list-default);
   --stroke-accent: var(--color-variants-stroke-accent);
   --stroke-default: var(--color-variants-stroke-primary);
   --stroke-light-2: var(--color-variants-stroke-primary);

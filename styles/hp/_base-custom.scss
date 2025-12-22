@@ -1,0 +1,12 @@
+:root {
+  /* ---------- FONTS VARIABLES ---------- */
+  --primary-font: 'Inter', system-ui, -apple-system, 'BlinkMacSystemFont', "Segoe UI", 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  --secondary-font: 'Roboto', system-ui, -apple-system, 'BlinkMacSystemFont', "Segoe UI", 'Roboto', 'Helvetica', 'Arial', sans-serif;  
+
+  /* ---------- CUSTOM VARIABLES ---------- */
+  --gradient-1: var(--bg-light-2);
+  --gradient-2: var(--bg-light-2);
+  --gradient-after: linear-gradient(var(--bg-light-2), var(--bg-light-2));
+  --body-default-alt: var(--body-default);
+  --link-default-alt: var(--link-default);
+}
