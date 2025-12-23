@@ -37,6 +37,10 @@
                 border-top: 1px solid var(--line-default);
                 padding: 16px 0;
 
+                &::-webkit-details-marker {
+                    display: none !important;
+                }
+
                 .accordion-item-label {
                     list-style: none;
                     display: flex;

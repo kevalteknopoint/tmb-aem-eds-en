@@ -421,6 +421,10 @@
   padding:16px 0;
 }
 
+.faq-accordion .accordion-wrapper .block .accordion-item::-webkit-details-marker{
+  display:none !important;
+}
+
 .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label{
   align-items:flex-start;
   display:flex;
