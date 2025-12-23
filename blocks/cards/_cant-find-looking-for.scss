@@ -153,6 +153,7 @@
           h5,
           h6 {
             margin-bottom: 16px;
+            max-width: 800px;
 
             @include typo-heading3;
           }
@@ -160,6 +161,12 @@
           p:not(p:has(.icon)) {
             padding: 0;
             margin: 0;
+
+            a {
+              color: $link-default;
+              text-decoration: underline;
+              text-underline-offset: 3px;
+            }
           }
         }
       }

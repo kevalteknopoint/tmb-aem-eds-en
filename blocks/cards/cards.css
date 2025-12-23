@@ -615,12 +615,19 @@
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
   margin-bottom:16px;
+  max-width:800px;
   text-transform:initial;
 }
 
 .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-body p:not(p:has(.icon)){
   margin:0;
   padding:0;
+}
+
+.section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-body p:not(p:has(.icon)) a{
+  color:var(--link-default);
+  text-decoration:underline;
+  text-underline-offset:3px;
 }
 
 .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li .cards-card-image,
