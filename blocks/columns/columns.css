@@ -432,6 +432,10 @@
   list-style:none;
 }
 
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label::marker, .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label::-webkit-details-marker{
+  display:none;
+}
+
 .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label p{
   color:var(--color-button-primary-default);
   font-family:var(--font-family-h3);

@@ -47,6 +47,11 @@
                     justify-content: space-between;
                     align-items: flex-start;
 
+                    // Safari Fix: Ensure the summary behaves like a block/flex item
+                    &::marker, &::-webkit-details-marker {
+                        display: none;
+                    }
+
                     p {
                         color: $color-button-primary-default;
                         margin-top: 4px;
