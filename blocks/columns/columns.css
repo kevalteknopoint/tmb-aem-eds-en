@@ -798,28 +798,59 @@
 }
 
 .money-overseas .overseas-columns-wrapper ol > li{
+  align-items:baseline;
   color:var(--body-default);
+  counter-increment:step-counter;
+  display:flex;
   font-family:var(--font-family-body);
   font-size:var(--font-size-body);
   font-weight:var(--font-weight-body);
+  gap:12px;
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   margin-bottom:10px;
   text-transform:initial;
 }
 
+.money-overseas .overseas-columns-wrapper ol > li::before{
+  align-items:center;
+  border:1px solid rgb(0 82 91 / 10%);
+  border-radius:var(--radius-button);
+  color:var(--heading-default);
+  content:counter(step-counter);
+  display:flex;
+  font-size:16px;
+  font-weight:500;
+  height:32px;
+  justify-content:center;
+  min-width:32px;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
 .money-overseas .overseas-columns-wrapper ol > li p{
   margin-bottom:0;
 }
 
-.money-overseas .overseas-columns-wrapper ol > li:not(.money-overseas .overseas-columns-wrapper ol > li:has(p)), .money-overseas .overseas-columns-wrapper ol > li:has(p) p{
+.money-overseas .overseas-columns-wrapper ol > li:has(p){
+  align-items:unset;
+  counter-increment:unset;
+  display:block;
+  gap:unset;
+}
+
+.money-overseas .overseas-columns-wrapper ol > li:has(p)::before{
+  content:unset;
+}
+
+.money-overseas .overseas-columns-wrapper ol > li:has(p) p{
   align-items:baseline;
   counter-increment:step-counter;
   display:flex;
   gap:12px;
 }
 
-.money-overseas .overseas-columns-wrapper ol > li:not(.money-overseas .overseas-columns-wrapper ol > li:has(p))::before, .money-overseas .overseas-columns-wrapper ol > li:has(p) p::before{
+.money-overseas .overseas-columns-wrapper ol > li:has(p) p::before{
   align-items:center;
   border:1px solid rgb(0 82 91 / 10%);
   border-radius:var(--radius-button);
