@@ -91,6 +91,12 @@
             padding-top: 16px;
 
             @include typo-body;
+
+            a {
+              color: $link-default;
+              text-decoration: underline;
+              text-underline-offset: 3px;
+            }
         }
 
         h5 {
@@ -99,6 +105,12 @@
           padding-top: 16px;
 
           @include typo-sm-body;
+
+          a {
+            color: $link-default;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+          }
         }
 
         h6 {
@@ -107,6 +119,12 @@
           padding-top: 16px;
 
           @include typo-disclaimer;
+
+          a {
+            color: $link-default;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+          }
         }
     }
 }
