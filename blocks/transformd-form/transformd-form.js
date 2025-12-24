@@ -41,7 +41,7 @@ export default function decorate(block) {
     novalidate: true,
   });
 
-  const wrapper = div({ class: "formatic" }, div({ id: container }));
+  const wrapper = div({ class: "formatic" }, div({ id: cfg.id }));
   formEl.appendChild(wrapper);
   block.appendChild(formEl);
 
