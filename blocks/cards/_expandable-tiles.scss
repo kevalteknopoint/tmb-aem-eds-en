@@ -13,13 +13,14 @@
     box-sizing: border-box;
     margin-bottom: 40px;
 
-    @include responsive-container();
+    @include responsive-container;
 
     h1, h2, h3, h4, h5, h6 {
-      font-family: $secondary-font;
-      font-size: 40px;
-      line-height: 40px;
-      text-align: left;
+      @include typo-heading1;
+      // font-family: $secondary-font;
+      // font-size: 40px;
+      // line-height: 40px;
+      // text-align: left;
       color: $heading-default;
       margin: 0 0 16px;
 
@@ -28,16 +29,18 @@
       }
 
       @include mobile {
-        font-size: 38px;
-        line-height: 38px;
+        @include typo-heading1;
+        // font-size: 38px;
+        // line-height: 38px;
         text-align: left;
       }
     }
 
     p {
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
+      @include typo-body;
+      // font-weight: 400;
+      // font-size: 16px;
+      // line-height: 24px;
       color: $body-default;
       text-align: left;
     }
@@ -49,7 +52,7 @@
     overflow: auto;
     scrollbar-width: none;
 
-    @include responsive-container();
+    @include responsive-container;
 
     @include mobile {
       margin-bottom: 0;
@@ -181,10 +184,11 @@
           }
 
           .content-title {
-            font-family: $secondary-font;
+            @include typo-heading1;
+            // font-family: $secondary-font;
             color: $heading-default;
-            font-size: 40px;
-            line-height: 40px;
+            // font-size: 40px;
+            // line-height: 40px;
             margin-bottom: 16px;
 
             @include mobile {
@@ -194,11 +198,12 @@
           }
 
           .content-description {
+            @include typo-body;
             color: $body-default;
-            font-size: 16px;
-            line-height: 24px;
+            // font-size: 16px;
+            // line-height: 24px;
             margin-bottom: 16px;
-            font-weight: 400;
+            // font-weight: 400;
           }
 
           .content-cta {
@@ -241,7 +246,7 @@
     display: flex;
     justify-content: flex-end;
 
-    @include responsive-container();
+    @include responsive-container;
 
     @include mobile {
       display: none;

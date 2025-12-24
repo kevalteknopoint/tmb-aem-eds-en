@@ -3,7 +3,7 @@ import { injectIcon } from "../../scripts/aem.js";
 export default function decorate(block) {
   if (window.location.href.includes("author")) return;
 
-  const shouldBeOpen = block.classList.contains("accordion-open");
+  const singleExpansion = block.classList.contains("single-expansion");
 
   [...block.children].forEach((row) => {
     const label = row.children[0];
@@ -18,10 +18,23 @@ export default function decorate(block) {
     const details = document.createElement("details");
     details.className = "accordion-item";
 
-    // Set open state based on accordion-open class
-    details.open = shouldBeOpen;
+    if (row.children?.[2] && row.children?.[2]?.textContent?.includes('accordion-open')) {
+      details.open = true;
+    }
 
     details.append(summary, body);
     row.replaceWith(details);
   });
+
+  if (singleExpansion) {
+    block.querySelectorAll('.accordion-item').forEach((item) => {
+      item.addEventListener('toggle', () => {
+        if (item.open) {
+          document.querySelectorAll('.accordion-item').forEach((other) => {
+            if (other !== item) other.removeAttribute('open');
+          });
+        }
+      });
+    });
+  }
 }
