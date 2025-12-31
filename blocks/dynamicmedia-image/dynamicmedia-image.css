@@ -1,8 +1,8 @@
 /* stylelint-disable no-descending-specificity */
 .dynamic-media{
-    place-items:end center;
     display:grid;
     grid-template-areas:"teaser";
+    place-items:end center;
 }
 
 .dynamic-media > div{
