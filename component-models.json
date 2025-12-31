@@ -902,6 +902,90 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
+      },
+      {
+        "component": "container",
+        "name": "button",
+        "label": "Button",
+        "collapsible": false,
+        "fields": [
+          {
+            "component": "aem-content",
+            "name": "link",
+            "label": "Button Link"
+          },
+          {
+            "component": "text",
+            "name": "linkText",
+            "label": "Button Text"
+          },
+          {
+            "component": "text",
+            "name": "linkTitle",
+            "label": "Button Title"
+          },
+          {
+            "component": "select",
+            "name": "linkType",
+            "label": "Button Classes",
+            "options": [
+              {
+                "name": "default",
+                "value": ""
+              },
+              {
+                "name": "primary",
+                "value": "primary"
+              },
+              {
+                "name": "secondary",
+                "value": "secondary"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "name": "button-2",
+        "label": "Button 2",
+        "collapsible": false,
+        "fields": [
+          {
+            "component": "aem-content",
+            "name": "link-2",
+            "label": "Button Link 2"
+          },
+          {
+            "component": "text",
+            "name": "linkText-2",
+            "label": "Button Text"
+          },
+          {
+            "component": "text",
+            "name": "linkTitle-2",
+            "label": "Button Title"
+          },
+          {
+            "component": "select",
+            "name": "linkType-2",
+            "label": "Button Classes",
+            "options": [
+              {
+                "name": "default",
+                "value": ""
+              },
+              {
+                "name": "primary",
+                "value": "primary"
+              },
+              {
+                "name": "secondary",
+                "value": "secondary"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
