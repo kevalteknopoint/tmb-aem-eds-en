@@ -3,6 +3,7 @@ import {
 } from '../../scripts/dom-helpers.js';
 
 export default function decorate(block) {
+  if (window.location.href.includes('author')) return;
   const newBlock = div({ class: 'compare-accounts-cards' });
   [...block.children].forEach((row) => {
     const cells = Array.from(row.children);
