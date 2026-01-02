@@ -1,4 +1,4 @@
-.money-overseas .overseas-columns-wrapper .button-container a, .money-overseas-variant .overseas-columns .overseas-columns-wrapper .button-container a, .section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active a, .customer .columns-wrapper .block .columns-container div p.button-container a, .customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a{
+.money-overseas .overseas-columns-wrapper .button-container a, .money-overseas-variant .overseas-columns .overseas-columns-wrapper .button-container a, .customer .columns-wrapper .block .columns-container div p.button-container a, .customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a{
   align-items:center;
   border:none;
   border-radius:var(--radius-button);
@@ -479,193 +479,6 @@
   border-bottom:none;
 }
 
-.section.compare-accounts{
-  display:flex;
-  flex-direction:column;
-  gap:40px;
-  margin-left:auto;
-  margin-right:auto;
-  max-width:calc(1440px - 0px);
-  padding-inline:64px;
-  width:100%;
-}
-
-.section.compare-accounts .default-content-wrapper h1, .section.compare-accounts .default-content-wrapper h2, .section.compare-accounts .default-content-wrapper h3, .section.compare-accounts .default-content-wrapper h4, .section.compare-accounts .default-content-wrapper h5, .section.compare-accounts .default-content-wrapper h6{
-  color:var(--heading-default);
-  display:block;
-  font-family:var(--font-family-h1);
-  font-size:var(--font-size-h1);
-  font-weight:var(--font-weight-h1);
-  letter-spacing:var(--font-letter-spacing-h1);
-  line-height:var(--font-height-h1);
-  margin-bottom:16px;
-  text-transform:initial;
-}
-
-.section.compare-accounts .default-content-wrapper p{
-  color:var(--heading-default);
-  font-family:var(--font-family-body);
-  font-size:var(--font-size-body);
-  font-weight:var(--font-weight-body);
-  letter-spacing:var(--font-letter-spacing-body);
-  line-height:var(--font-height-body);
-  text-transform:initial;
-}
-
-.section.compare-accounts .default-content-wrapper p a{
-  color:var(--heading-default);
-  text-decoration:underline;
-}
-
-.section.compare-accounts .default-content-wrapper:last-child p{
-  color:var(--body-default);
-}
-
-.section.compare-accounts .columns.block{
-  overflow-x:auto;
-}
-
-.section.compare-accounts .columns.block .compare-accounts-cards{
-  align-items:stretch;
-  gap:0;
-}
-
-.section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card{
-  border-radius:var(--radius-card);
-  display:flex;
-  flex-direction:column;
-  min-height:100%;
-  min-width:304px;
-}
-
-.section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active{
-  background-color:var(--bg-reverse);
-}
-
-.section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active h3, .section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active h5, .section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active p:has(.interest-rate), .section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active .interest-rate{
-  color:var(--heading-reverse);
-}
-
-.section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active h4, .section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active p{
-  color:var(--body-reverse);
-}
-
-.section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active a{
-  background-color:var(--color-button-outlined-reverse-default);
-  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
-  color:var(--color-button-text-stroke-reverse);
-  font-size:var(--font-size-h5);
-  line-height:var(--font-height-h5);
-  min-width:150px;
-  padding-block:6px;
-}
-
-.section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active a:hover{
-  background-color:var(--color-button-outlined-reverse-hover);
-  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
-  color:var(--color-button-text-stroke-reverse);
-}
-
-.section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active a:active{
-  background-color:var(--color-button-outlined-reverse-press);
-  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
-  color:var(--color-button-text-stroke-reverse);
-}
-
-.section.compare-accounts .columns.block .compare-accounts-cards .compare-accounts-card.active a:focus-visible{
-  box-shadow:0 0 0 2px var(--color-focus-default), 0 0 0 3px var(--color-focus-reversed);
-  outline:none;
-}
-
-.section.compare-accounts .columns.block h3{
-  border-bottom:5px solid var(--heading-default);
-  color:var(--heading-default);
-  font-family:var(--font-family-h3);
-  font-size:var(--font-size-h3);
-  font-weight:var(--font-weight-h3);
-  letter-spacing:var(--font-letter-spacing-h3);
-  line-height:var(--font-height-h3);
-  padding:32px 24px 8px;
-  text-transform:initial;
-}
-
-.section.compare-accounts .columns.block h4{
-  color:var(--body-default);
-  font-family:var(--font-family-body);
-  font-size:var(--font-size-body);
-  font-weight:var(--font-weight-body);
-  letter-spacing:var(--font-letter-spacing-body);
-  line-height:var(--font-height-body);
-  padding:16px 24px 0;
-  text-transform:initial;
-}
-
-.section.compare-accounts .columns.block h5{
-  color:var(--heading-default);
-  font-family:var(--font-family-disc);
-  font-size:var(--font-size-disclaimer);
-  font-weight:var(--font-weight-disc);
-  letter-spacing:var(--font-letter-spacing-disc);
-  line-height:var(--font-height-disclaimer);
-  padding:16px 24px 0;
-  text-transform:initial;
-}
-
-.section.compare-accounts .columns.block .interest-rate{
-  color:var(--heading-default);
-  display:block;
-  font-family:var(--font-family-h1-std);
-  font-size:var(--font-size-h1-std);
-  font-weight:var(--font-weight-h1-std);
-  letter-spacing:var(--font-letter-spacing-h1-std);
-  line-height:var(--font-height-h1-std);
-  text-transform:initial;
-}
-
-.section.compare-accounts .columns.block .interest-rate .rate-pa{
-  font-family:var(--font-family-body);
-  font-size:var(--font-size-body);
-  font-weight:var(--font-weight-body);
-  letter-spacing:var(--font-letter-spacing-body);
-  line-height:var(--font-height-body);
-  text-transform:initial;
-}
-
-.section.compare-accounts .columns.block p{
-  color:var(--body-default);
-  font-family:var(--font-family-disc);
-  font-size:var(--font-size-disclaimer);
-  font-weight:var(--font-weight-disc);
-  letter-spacing:var(--font-letter-spacing-disc);
-  line-height:var(--font-height-disclaimer);
-  padding:16px 24px 0;
-  text-transform:initial;
-}
-
-.section.compare-accounts .columns.block p:has(.interest-rate){
-  padding:4px 24px 0;
-}
-
-.section.compare-accounts .columns.block p:has(a){
-  margin-top:auto;
-  padding-bottom:32px;
-}
-
-.section.compare-accounts .columns.block a{
-  border-bottom:1px solid var(--heading-default);
-  color:var(--heading-default);
-  display:block;
-  font-family:var(--font-family-sm-body);
-  font-size:var(--font-size-sm-body);
-  font-weight:var(--font-weight-sm-body);
-  letter-spacing:var(--font-letter-spacing-sm-body);
-  line-height:var(--font-height-sm-body);
-  padding-bottom:2px;
-  text-transform:initial;
-  width:-moz-fit-content;
-  width:fit-content;
-}
-
 .money-overseas .overseas-columns{
   margin-left:auto;
   margin-right:auto;
@@ -1073,10 +886,6 @@
     padding-inline:24px;
   }
 
-  .section.compare-accounts{
-    padding-inline:24px;
-  }
-
   .money-overseas .overseas-columns{
     padding-inline:24px;
   }
@@ -1103,10 +912,6 @@
 
   .faq-accordion{
     flex-direction:column;
-  }
-
-  .section.compare-accounts .columns.block .compare-accounts-cards{
-    flex-direction:row;
   }
 
   .money-overseas .overseas-columns-wrapper div{
@@ -1181,11 +986,6 @@
 
   .faq-accordion .default-content-wrapper{
     min-width:unset;
-  }
-
-  .section.compare-accounts{
-    gap:24px;
-    padding-inline:16px;
   }
 
   .money-overseas .overseas-columns{
