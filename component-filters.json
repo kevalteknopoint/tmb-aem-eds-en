@@ -29,7 +29,8 @@
       "content-fragment",
       "interest-table",
       "icon-library",
-      "faq-productdetail"
+      "faq-productdetail",
+      "compare-accounts"
     ]
   },
   {
@@ -68,6 +69,12 @@
       "button",
       "title",
       "content-fragment"
+    ]
+  },
+  {
+    "id": "compare-accounts",
+    "components": [
+      "account-card"
     ]
   },
   {
