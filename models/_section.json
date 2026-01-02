@@ -284,7 +284,8 @@
         "hero-banner",
         "content-fragment",
         "interest-table",
-        "icon-library"
+        "icon-library",
+        "compare-accounts"
       ]
     }
   ]
