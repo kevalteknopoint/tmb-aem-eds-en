@@ -37,6 +37,12 @@
       "id": "account-card",
       "fields": [
         {
+          "component": "boolean",
+          "label": "Active Product",
+          "name": "active-card",
+          "valueType": "boolean"
+        },
+        {
           "component": "text",
           "name": "product-title",
           "label": "Product Title",
