@@ -68,6 +68,12 @@ html {
                     border-radius: $radius-card;
                     background: $bg-default;
                     width: 304px;
+                    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+                    
+                    &:hover {
+                      border: 1px solid $stroke-default;
+                      box-shadow: 0 2px 16px 0 rgb(0 0 0 / 10%);
+                    }
 
                     @include tablet {
                       width: 264px;
@@ -105,10 +111,6 @@ html {
                             }
                         }
                     }
-
-                    &.swiper-slide-active{
-                        margin-right: 0;
-                    }
                 }
             }
 
@@ -122,13 +124,7 @@ html {
                 padding-right: calc($padding-desktop * 2);
                 
                 @include tablet-lg{
-                  margin-right: 24px;
-                  padding-right: calc($padding-tablet * 2);
-                }
-                
-                @include mobile{
-                  margin-right: 16px;
-                  padding-right: calc($padding-mobile * 2);
+                  padding-right: 0;
                 }
 
                 .swiper-button-next{

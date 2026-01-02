@@ -1,12 +1,14 @@
 export default function decorateLookingAnotherway(block) {
-  console.log(block);
-  document.querySelectorAll(".cards li").forEach((li) => {
+  block.querySelectorAll("li").forEach((li) => {
     const contentP = li.querySelector("p:not(.button-container)");
     if (contentP) {
       contentP.classList.add("card-text");
     }
+
+    if (!li.querySelector('.cards-card-body')?.children?.length) li.querySelector('.cards-card-body')?.remove();
   });
-  document.querySelectorAll(".cards li p.button-container").forEach((p) => {
+
+  block.querySelectorAll("li p.button-container").forEach((p) => {
     p.classList.add("card-button");
   });
 }

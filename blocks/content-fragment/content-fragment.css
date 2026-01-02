@@ -90,7 +90,7 @@
 }
 
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-label p{
-  color:var(--body-default);
+  color:var(--heading-default);
   font-family:var(--font-family-h3);
   font-size:var(--font-size-h3);
   font-weight:var(--font-weight-h3);
@@ -131,10 +131,23 @@
 }
 
 .customer{
-  background:var(--gradient-1);
+  background:var(--gradient-2);
   display:flex;
   flex-direction:column;
   gap:40px;
+  position:relative;
+}
+
+.customer::after{
+  background-image:var(--gradient-after);
+  background-repeat:no-repeat;
+  background-size:100%;
+  bottom:0;
+  content:"";
+  height:20px;
+  left:0;
+  position:absolute;
+  width:100%;
 }
 
 .customer .columns-wrapper{
@@ -256,7 +269,7 @@
 }
 
 .customer .content-container .para-0{
-  color:var(--body-default);
+  color:var(--body-default-alt);
   font-family:var(--font-family-body);
   font-size:var(--font-size-body);
   font-weight:var(--font-weight-body);
@@ -267,7 +280,7 @@
 }
 
 .customer .content-container .para-0 a{
-  color:var(--link-default);
+  color:var(--link-default-alt);
   font-family:var(--font-family-body);
   font-size:var(--font-size-body);
   font-weight:var(--font-weight-body);
@@ -284,7 +297,7 @@
 }
 
 .customer .content-container .para-1{
-  color:var(--body-default);
+  color:var(--body-default-alt);
   font-family:var(--font-family-disc);
   font-size:var(--font-size-disclaimer);
   font-weight:var(--font-weight-disc);

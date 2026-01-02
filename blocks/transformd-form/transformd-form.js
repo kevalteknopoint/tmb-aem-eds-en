@@ -17,6 +17,7 @@ export default function decorate(block) {
   const formBranchEnvt = block.querySelector(".form-item6 .form-inner-item1").innerText;
   const formChannel = block.querySelector(".form-item7 .form-inner-item1").innerText;
   const formConfig = block.querySelector(".form-item8 .form-inner-item1").innerText;
+  const formContainer = block.querySelector(".form-item9 .form-inner-item1").innerText;
 
   const cfg = {
     css: cssLink,
@@ -26,7 +27,8 @@ export default function decorate(block) {
     action: formAction,
     envt: formBranchEnvt,
     channel: formChannel,
-    config: formConfig
+    config: formConfig,
+    container: formContainer
   };
 
   block.innerHTML = "";
@@ -39,7 +41,7 @@ export default function decorate(block) {
     novalidate: true,
   });
 
-  const wrapper = div({ class: "formatic" }, div({ id: "formcorp-form" }));
+  const wrapper = div({ class: "formatic" }, div({ id: cfg.id }));
   formEl.appendChild(wrapper);
   block.appendChild(formEl);
 
@@ -70,7 +72,7 @@ export default function decorate(block) {
         if (window.Formatic) {
           try {
             window.Formatic.createForm(
-              "formcorp-form",
+              cfg.container,
               cfg.id, // Enter Form ID
               cfg.key, // Enter Form Key
               cfg.envt, // Enter Form Environment

@@ -240,8 +240,20 @@
               "value": "money-overseas-variant"
             },
             {
+              "name": "News helpful homepage",
+              "value": "news-helpful-homepage"
+            },
+            {
+              "name": "Icon library",
+              "value": "icon-library"
+            },
+            {
               "name": "looking-for-another-way",
               "value": "looking-for-another-way"
+            },
+            {
+              "name": "Momentum Direct Variant",
+              "value": "momentum-direct-variant"
             }
           ]
         }
@@ -265,13 +277,14 @@
         "bannervideo",
         "accordion",
         "banking-good",
-        "teachers-form-block",
         "breadcrumb",
         "faq-category",
         "faq-detail",
+        "transformd-form",
         "hero-banner",
         "content-fragment",
         "interest-table",
+        "icon-library",
         "faq-productdetail"
       ]
     }

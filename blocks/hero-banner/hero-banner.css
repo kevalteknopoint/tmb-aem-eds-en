@@ -4,13 +4,13 @@ body:has(.product-detail-banner) .breadcrumb.block{
 }
 
 .product-detail-banner{
-  border-radius:var(--radius-hero);
+  border-radius:var(--radius-hero-var);
   margin:0 auto;
   max-width:1728px;
 }
 
 .product-detail-banner .desktop-media img{
-  border-radius:var(--radius-hero);
+  border-radius:var(--radius-hero-var);
   height:-moz-fit-content;
   height:fit-content;
   min-height:524px;
@@ -50,7 +50,7 @@ body:has(.product-detail-banner) .breadcrumb.block{
   max-width:640px;
 }
 
-.product-detail-banner .hero-banner-content-wrap h4, .product-detail-banner .hero-banner-content-wrap h5, .product-detail-banner .hero-banner-content-wrap h6{
+.product-detail-banner .hero-banner-content-wrap h1, .product-detail-banner .hero-banner-content-wrap h2, .product-detail-banner .hero-banner-content-wrap h3{
   color:var(--heading-default);
   font-family:var(--font-family-intro);
   font-size:var(--font-size-intro);
@@ -61,7 +61,7 @@ body:has(.product-detail-banner) .breadcrumb.block{
   text-transform:initial;
 }
 
-.product-detail-banner .hero-banner-content-wrap h1, .product-detail-banner .hero-banner-content-wrap h2, .product-detail-banner .hero-banner-content-wrap h3{
+.product-detail-banner .hero-banner-content-wrap h4, .product-detail-banner .hero-banner-content-wrap h5, .product-detail-banner .hero-banner-content-wrap h6{
   color:var(--heading-default);
   font-family:var(--font-family-lg);
   font-size:var(--font-size-lg);
