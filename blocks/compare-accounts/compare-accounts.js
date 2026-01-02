@@ -21,9 +21,9 @@ export default function decorate(block) {
       buttonTargetEl,
       buttonStyleEl,
     ] = cells;
-  
+
     const isActive = activeCardEl?.textContent.trim() === 'true';
-  
+
     const card = div(
       {
         class: [
@@ -31,37 +31,37 @@ export default function decorate(block) {
           isActive && 'active',
         ].filter(Boolean),
       },
-  
+
       /* Product title */
       h3(
         { class: 'product-title' },
         titleEl?.textContent.trim(),
       ),
-  
+
       /* Product description */
       h4(
         { class: 'product-description' },
         descriptionEl?.textContent.trim(),
       ),
-  
+
       /* Interest pretitle */
       h5(
         { class: 'product-interest-pretitle' },
         interestPretitleEl?.textContent.trim(),
       ),
-  
+
       /* Interest rate (keep authored markup) */
       p(
         { class: 'product-interest-rate' },
         interestRateEl?.querySelector('*'),
       ),
-  
+
       /* Disclaimer */
       p(
         { class: 'product-disclaimer' },
         disclaimerEl?.textContent.trim(),
       ),
-  
+
       /* CTA */
       p(
         { class: 'button-container' },

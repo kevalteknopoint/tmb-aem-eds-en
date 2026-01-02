@@ -1,4 +1,4 @@
-import { div, h2, p } from "../../scripts/dom-helpers.js";
+import { div, p } from "../../scripts/dom-helpers.js";
 import { fetchPlaceholders } from "../../scripts/placeholders.js";
 
 /* ---------- ACCORDION ITEM ---------- */
@@ -15,12 +15,12 @@ function createAccordionItem(question, answerHtml) {
       <svg class="icon">
         <use href="#chevron-up-round"></use>
       </svg>
-    `)
+    `),
   );
 
   const body = div({ class: "accordion-item-body" });
   body.append(
-    document.createRange().createContextualFragment(answerHtml || "")
+    document.createRange().createContextualFragment(answerHtml || ""),
   );
 
   details.append(summary, body);
@@ -29,55 +29,56 @@ function createAccordionItem(question, answerHtml) {
 
 /* ---------- RENDER FAQ ---------- */
 function renderFAQ(block, faq) {
-  /* Normalize data → always array */
-  const faqItems = Array.isArray(faq)
-    ? faq
-    : [faq];
+  const faqItems = Array.isArray(faq) ? faq : [faq];
 
-  block.append(...faqItems.map((item) =>
-    createAccordionItem(
-      item.question,
-      item.shortDescription?.html
-    )
-  ));
+  block.append(
+    ...faqItems.map((item) =>
+      createAccordionItem(
+        item.question,
+        item.shortDescription?.html,
+      ),
+    ),
+  );
 }
 
 /* ---------- DECORATE ---------- */
 export default async function decorate(block) {
   const secwrapper = document.querySelector(".faq-product-detail-wrapper");
-
   if (!secwrapper) return;
 
-  const placeholders = await fetchPlaceholders();
-  const graphqlUrl = `${placeholders.graphqlurl}faqShortContent;path=`;
-
   try {
-    const newBlock = div({ class: 'accordion-wrapper' });
-    const accordion = div(
-      {
-        class: "accordion single-expansion block",
-        "data-block-name": "accordion",
-        "data-block-status": "loaded",
-      },
-    );
+    const placeholders = await fetchPlaceholders();
+    const graphqlUrl = `${placeholders.graphqlurl}faqShortContent;path=`;
 
-    for (const item of [...block.children]) {
-      const fragUrl = item.querySelector("a")?.getAttribute("href");
-      if (!fragUrl) return;
-  
-      const res = await fetch(`${graphqlUrl}${fragUrl}`);
-      const data = await res.json();
-      const faq = data?.data?.faqByPath?.item;
-  
-      if (!faq) return;
-  
+    const newBlock = div({ class: "accordion-wrapper" });
+    const accordion = div({
+      class: "accordion single-expansion block",
+      "data-block-name": "accordion",
+      "data-block-status": "loaded",
+    });
+
+    const blockItems = Array.from(block.children);
+
+    const fetchPromises = blockItems
+      .map((item) => item.querySelector("a")?.getAttribute("href"))
+      .filter(Boolean)
+      .map((fragUrl) =>
+        fetch(`${graphqlUrl}${fragUrl}`)
+          .then((res) => res.json())
+          .then((data) => data?.data?.faqByPath?.item),
+      );
+
+    const faqs = await Promise.all(fetchPromises);
+
+    faqs.filter(Boolean).forEach((faq) => {
       renderFAQ(accordion, faq);
-    }
+    });
 
-    block.innerHTML = '';
+    block.innerHTML = "";
     newBlock.appendChild(accordion);
     block.appendChild(newBlock);
   } catch (err) {
+    // eslint-disable-next-line no-console
     console.error("Error loading FAQ:", err);
   }
 }
