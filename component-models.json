@@ -631,6 +631,12 @@
       },
       {
         "component": "text",
+        "name": "product-interest-pretitle",
+        "label": "Product Interest Pretitle",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
         "name": "product-interest-rate",
         "label": "Product Interest Rate",
         "valueType": "string"
