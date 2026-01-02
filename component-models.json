@@ -663,7 +663,7 @@
     ]
   },
   {
-    "id": "aem-content-fragment",
+    "id": "accordion-item",
     "fields": [
       {
         "component": "aem-content-fragment",

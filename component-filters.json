@@ -70,6 +70,12 @@
     ]
   },
   {
+    "id": "faq-productdetail",
+    "components": [
+      "accordion-item"
+    ]
+  },
+  {
     "id": "hero-banner",
     "components": [
       "banner"
