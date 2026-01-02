@@ -271,7 +271,8 @@
         "faq-detail",
         "hero-banner",
         "content-fragment",
-        "interest-table"
+        "interest-table",
+        "faq-productdetail"
       ]
     }
   ]
