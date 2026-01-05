@@ -56,6 +56,7 @@
         min-width: 304px;
         border-radius: $radius-card;
         min-height: 100%;
+        flex: 1;
 
         &.active {
           background-color: $bg-reverse;
