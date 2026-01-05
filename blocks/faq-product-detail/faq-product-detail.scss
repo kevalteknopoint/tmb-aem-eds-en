@@ -1,5 +1,9 @@
 @use '../../styles/base' as *;
 
+.faq-product-detail-wrapper {
+  width: 100%;
+}
+
 .faq-accordion{
     @include responsive-container;
 
