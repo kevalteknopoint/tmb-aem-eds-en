@@ -1,5 +1,6 @@
 import {
-  div, h1, h2, h3, p, a, ul, li, span,
+  div, h1, h2, h3, p, a, ul, li,
+  // span,
   img,
 } from '../../scripts/dom-helpers.js';
 import { fetchPlaceholders } from '../../scripts/placeholders.js';
@@ -39,16 +40,16 @@ export default async function decorate(block) {
     let rightSection = false;
 
     // ========== Build Sections + Right Nav ==========
-    let numCount = 0;
+    // let numCount = 0;
     faq.faqContentReference.forEach((content) => {
       const id = content.sectionTitle?.toLowerCase().replace(/\s+/g, "-");
 
       if (content.sectionTitle) {
         rightSection = true;
-        numCount += 1;
+        // numCount += 1;
         ulEl.append(
           li(
-            span(`[${numCount}]`),
+            // span(`[${numCount}]`),
             a({ href: `#${id}` }, content.sectionTitle),
           )
         );
