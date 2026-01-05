@@ -80,7 +80,7 @@
   {
     "id": "faq-productdetail",
     "components": [
-      "accordion-item"
+      "faq-accordion-item"
     ]
   },
   {
