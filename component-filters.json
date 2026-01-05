@@ -28,7 +28,9 @@
       "hero-banner",
       "content-fragment",
       "interest-table",
-      "icon-library"
+      "icon-library",
+      "faq-productdetail",
+      "compare-accounts"
     ]
   },
   {
@@ -67,6 +69,18 @@
       "button",
       "title",
       "content-fragment"
+    ]
+  },
+  {
+    "id": "compare-accounts",
+    "components": [
+      "account-card"
+    ]
+  },
+  {
+    "id": "faq-productdetail",
+    "components": [
+      "accordion-item"
     ]
   },
   {
