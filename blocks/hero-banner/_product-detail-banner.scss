@@ -102,14 +102,19 @@ body:has(.product-detail-banner) {
       }
     }
 
+    .interest-rates-wrapper {
+      display: flex;
+      gap: 64px;
+      padding-top: 16px;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+
     .interest-rate {
       display: grid;
       column-gap: 2px;
       grid-template-columns: 1fr 1fr;
       width: fit-content;
-      padding-top: 16px;
-      margin-top: 24px;
-      margin-bottom: 8px;
 
       @include tablet {
         margin-top: 0;
@@ -174,6 +179,24 @@ body:has(.product-detail-banner) {
 
       @include tablet{
         font-weight: $font-weight-body;
+      }
+    }
+  }
+
+  &.text-color-variation {
+    .hero-banner-content-wrap {
+      h1, h2, h3, h4, h5, h6 {
+        color: $heading-reverse-2;
+      }
+
+      .interest-rate {
+        .rate-num, .rate-percent, .rate-pa {
+          color: $heading-reverse-2;
+        }
+      }
+      
+      p, p:has(.interest-rate) + p {
+        color: $heading-reverse-2;
       }
     }
   }

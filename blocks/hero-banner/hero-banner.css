@@ -81,14 +81,19 @@ body:has(.product-detail-banner) .breadcrumb.block{
   color:var(--heading-default);
 }
 
+.product-detail-banner .hero-banner-content-wrap .interest-rates-wrapper{
+  display:flex;
+  gap:64px;
+  margin-bottom:8px;
+  margin-top:24px;
+  padding-top:16px;
+}
+
 .product-detail-banner .hero-banner-content-wrap .interest-rate{
   -moz-column-gap:2px;
        column-gap:2px;
   display:grid;
   grid-template-columns:1fr 1fr;
-  margin-bottom:8px;
-  margin-top:24px;
-  padding-top:16px;
   width:-moz-fit-content;
   width:fit-content;
 }
@@ -136,6 +141,18 @@ body:has(.product-detail-banner) .breadcrumb.block{
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   text-transform:initial;
+}
+
+.product-detail-banner.text-color-variation .hero-banner-content-wrap h1, .product-detail-banner.text-color-variation .hero-banner-content-wrap h2, .product-detail-banner.text-color-variation .hero-banner-content-wrap h3, .product-detail-banner.text-color-variation .hero-banner-content-wrap h4, .product-detail-banner.text-color-variation .hero-banner-content-wrap h5, .product-detail-banner.text-color-variation .hero-banner-content-wrap h6{
+  color:var(--heading-reverse-2);
+}
+
+.product-detail-banner.text-color-variation .hero-banner-content-wrap .interest-rate .rate-num, .product-detail-banner.text-color-variation .hero-banner-content-wrap .interest-rate .rate-percent, .product-detail-banner.text-color-variation .hero-banner-content-wrap .interest-rate .rate-pa{
+  color:var(--heading-reverse-2);
+}
+
+.product-detail-banner.text-color-variation .hero-banner-content-wrap p, .product-detail-banner.text-color-variation .hero-banner-content-wrap p:has(.interest-rate) + p{
+  color:var(--heading-reverse-2);
 }
 
 @media screen and (max-width: 1279px){
