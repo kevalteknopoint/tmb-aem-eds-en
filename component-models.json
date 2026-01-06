@@ -359,6 +359,10 @@
             "value": "momentum-direct-variant"
           },
           {
+            "name": "Circular Image",
+            "value": "circular-image "
+          },
+          {
             "name": "Variation Border",
             "value": "variation-border"
           }

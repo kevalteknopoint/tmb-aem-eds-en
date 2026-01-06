@@ -104,6 +104,7 @@
     }
 
     .momentum-second-content {
+
       h1,
       h2,
       h3 {
@@ -174,7 +175,13 @@
 
   &.momentum-image-saver {
     .columns-wrapper .momentum-columns div .momentum-second-content {
-      h1, h2, h3, h4, h5, h6 {
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         color: $heading-reverse;
       }
 
@@ -235,6 +242,7 @@
   background-color: $heading-default;
 
   .momentum-second-content {
+
     h1,
     h2,
     h3,
@@ -274,7 +282,10 @@
         }
 
         .momentum-second-content {
-          h1, h2, h3 {
+
+          h1,
+          h2,
+          h3 {
             @include typo-heading1;
           }
 
@@ -322,5 +333,23 @@
       }
     }
 
+  }
+}
+
+
+//circular image variant
+
+.momentum-saver-section.circular-image {
+  .momentum-image-saver {
+    .columns-wrapper {
+      .momentum-columns {
+        div {
+          gap: 64px;
+          .columns-img-col {
+            max-width: 250px;
+          }
+        }
+      }
+    }
   }
 }

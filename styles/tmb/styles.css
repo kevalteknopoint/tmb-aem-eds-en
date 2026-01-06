@@ -640,7 +640,12 @@ header{
 .momentum-saver-section.background-color-teal .momentum-columns.background-color-white{
   background-color:var(--bg-default);
 }
-.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h1, .momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2, .momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h3, .momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h4, .momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h5, .momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h6{
+.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h1,
+.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2,
+.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h3,
+.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h4,
+.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h5,
+.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h6{
   color:var(--heading-reverse);
 }
 .momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content p{
@@ -745,7 +750,9 @@ header{
   max-width:unset;
   width:50%;
 }
-.momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content h1, .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content h2, .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content h3{
+.momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content h1,
+.momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content h2,
+.momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content h3{
   font-family:var(--font-family-h1);
   font-size:var(--font-size-h1);
   font-weight:var(--font-weight-h1);
@@ -774,6 +781,13 @@ header{
   height:32px;
   margin-right:16px;
   width:32px;
+}
+
+.momentum-saver-section.circular-image .momentum-image-saver .columns-wrapper .momentum-columns div{
+  gap:64px;
+}
+.momentum-saver-section.circular-image .momentum-image-saver .columns-wrapper .momentum-columns div .columns-img-col{
+  max-width:250px;
 }
 
 .product-navigation{
