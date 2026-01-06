@@ -1,0 +1,100 @@
+@use '../../styles/base' as *;
+
+.faq-product-detail-wrapper {
+  width: 100%;
+}
+
+.faq-accordion{
+    @include responsive-container;
+
+    display: flex;
+    gap: 32px;
+
+    @include mobile{
+        flex-direction: column;
+    }
+
+    @include tablet{
+        flex-direction: column;
+    }
+
+    .default-content-wrapper{
+        min-width: 417px;
+
+        @include mobile{
+            min-width: unset;
+        }
+
+        h1,h2,h3,h4,h5,h6{
+            color: $heading-default;
+
+            @include typo-heading1;
+        }
+    }
+
+    .accordion-wrapper{
+        width: 100%;
+
+        .block{
+            .accordion-item{
+                border-bottom: 1px solid var(--line-default);
+                border-top: 1px solid var(--line-default);
+                padding: 16px 0;
+
+                .accordion-item-label {
+                    list-style: none;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+
+                    p {
+                        color: $color-button-primary-default;
+                        margin-top: 4px;
+
+                        @include typo-heading3
+                    }
+
+                    svg {
+                        color: $color-button-primary-default;
+                        min-width: 40px;
+                        width: 40px;
+                        height: 40px;
+                        padding: 8px;
+                        border-radius: 44px;
+                        background: $bg-light;
+                        cursor: pointer;
+                        margin-left: 32px;
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .accordion-item-body{
+                    margin-top: 8px;
+
+                    p {
+                      color: $body-default;  
+
+                      @include typo-body;
+                    }
+                }  
+
+                &[open] {
+                    summary {
+                        svg {
+                            transform: rotate(0deg);
+                        }              
+                    }
+                }
+
+                &.accordion-item:first-child{
+                    border-top: none;
+                    padding-top: 0;
+                }
+
+                &.accordion-item:last-child{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}

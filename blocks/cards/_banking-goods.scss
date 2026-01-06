@@ -4,27 +4,29 @@
   @include responsive-container;
 
   .cards-wrapper {
-
     .banking-goods-mb {
       margin-bottom: 40px;
 
       h1, h2, h3, h4, h5, h6 {
+        @include typo-heading1;
+
+        // text-transform: uppercase;
+        // letter-spacing: 2px;
+        // font-size: 38px;
+        // line-height: 38px;
         color: $heading-default;
-        text-transform: uppercase;
         font-family: $secondary-font;
-        letter-spacing: 2px;
-        font-size: 38px;
-        line-height: 38px;
         margin-bottom: 16px;
-        // font-weight: 500;
       }
 
       p {
+        @include typo-body;
+
+        // font-size: 16px;
+        // font-weight: 400;
+        // line-height: 24px;
+        // letter-spacing: 0;
         color: $body-default;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        letter-spacing: 0;
       }
     }
 
@@ -77,20 +79,24 @@
             gap: 16px;
 
             > h1, h2, h3, h4, h5, h6 {
+              @include typo-heading1;
+
+              // text-transform: uppercase;
+              // font-family: $secondary-font;
+              // letter-spacing: 2px;
+              // font-size: 40px;
+              // line-height: 40px;
               color: $heading-default;
-              text-transform: uppercase;
-              font-family: $secondary-font;
-              letter-spacing: 2px;
-              font-size: 40px;
-              line-height: 40px;
             }
 
             > p {
+              @include typo-body;
+
+              // font-size: 16px;
+              // font-weight: 400;
+              // line-height: 24px;
+              // letter-spacing: 0;
               color: $body-default;
-              font-size: 16px;
-              font-weight: 400;
-              line-height: 24px;
-              letter-spacing: 0;
             }
           }
         }
@@ -165,27 +171,33 @@
             }
 
             h1, h2, h3, h4, h5, h6 {
-              font-size: 40px;
-              transition: transform 0.4s ease;
+              @include typo-heading1;
+
+              // font-size: 40px;
+              // line-height: 40px;
+              // letter-spacing: 2px;
+              // text-transform: uppercase;
               font-family: $secondary-font ;
-              font-style: normal;
-              line-height: 40px;
-              letter-spacing: 2px;
-              text-transform: uppercase;
               color: $heading-reverse-2;
+              font-style: normal;
+              transition: transform 0.4s ease;
               z-index: 1;
 
               @include tablet {
-                font-size: 32px;
-                line-height: 32px;
+                @include typo-heading1;
+
+                // font-size: 32px;
+                // line-height: 32px;
               }
             }
 
             p {
+              @include typo-body;
+
+              // font-size: 16px;
+              // line-height: 24px;
+              // font-weight: 400;
               transition: all 0.4s ease-in-out;
-              font-size: 16px;
-              line-height: 24px;
-              font-weight: 400;
               color: $body-reverse-2;
               opacity: 0;
               z-index: 1;
@@ -213,12 +225,14 @@
               }
 
               a {
+                @include typo-sm-body;
+
+                // font-size: 14px;
+                // line-height: 21px;
                 position: relative;
                 display: flex;
                 align-items: center;
                 gap: 8px;
-                font-size: 14px;
-                line-height: 21px;
                 width: fit-content;
                 color: $link-reverse-2;
 

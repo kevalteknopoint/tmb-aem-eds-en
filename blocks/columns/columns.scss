@@ -1,4 +1,7 @@
 @use './faq-banner' as *;
+@use './who-can-apply' as *;
+@use './customer' as *;
+@use './money-overseas' as *;
 
 .columns {
   img {

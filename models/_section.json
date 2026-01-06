@@ -26,6 +26,15 @@
           "description": "The label shown for this section in the Content Tree"
         },
         {
+          "component": "text",
+          "name": "id",
+          "label": "Section ID",
+          "description": "Unique identifier for this section (HTML ID)",
+          "validation": {
+            "regex": "^[a-zA-Z][\\w:.-]*$"
+          }
+        },
+        {
           "component": "multiselect",
           "name": "style",
           "label": "Style",
@@ -45,6 +54,10 @@
             {
               "name": "Bottom Inner Spacing",
               "value": "bottom-padding"
+            },
+            {
+              "name": "Bottom Partition",
+              "value": "bottom-partition"
             },
             {
               "name": "secfirst",
@@ -73,6 +86,14 @@
             {
               "name": "Momentum Image Saver",
               "value": "momentum-image-saver"
+            },
+            {
+              "name": "Product Detail Variant",
+              "value": "image-swapping"
+            },
+            {
+              "name": "Left Percentage Section",
+              "value": "left-percentage-section"
             },
             {
               "name": "Background Color Teal",
@@ -159,12 +180,80 @@
               "value": "faq-cant-find-looking-for"
             },
             {
+              "name": "Faq-cant-find-looking-for Variant",
+              "value": "faq-cant-find-looking-for-variant"
+            },
+            {
               "name": "Section Wrapper",
               "value": "section-wrapper"
             },
             {
               "name": "Banking Good",
               "value": "banking-goods"
+            },
+            {
+              "name": "Product Navigation",
+              "value": "product-navigation"
+            },
+            {
+              "name": "Rates Saver",
+              "value": "rates-saver"
+            },
+            {
+              "name": "Who can apply",
+              "value": "who-can-apply-section"
+            },
+            {
+              "name": "Customer",
+              "value": "customer"
+            },
+            {
+              "name": "FAQ Accordion",
+              "value": "faq-accordion"
+            },
+            {
+              "name": "Interest Table",
+              "value": "interest-table-section"
+            },
+            {
+              "name": "Product Navigation",
+              "value": "product-navigation"
+            },
+            {
+              "name": "Compare Accounts Cards",
+              "value": "compare-accounts"
+            },
+            {
+              "name": "News helpful",
+              "value": "news-helpful"
+            },
+            {
+              "name": "Overseas Variant",
+              "value": "overseas-variant"
+            },
+            {
+              "name": "Money Overseas",
+              "value": "money-overseas"
+            },
+            {
+              "name": "Money Overseas Variant",
+              "value": "money-overseas-variant"
+            },
+            {
+              "name": "News helpful homepage",
+              "value": "news-helpful-homepage"
+            },
+            {
+              "name": "Icon library",
+              "value": "icon-library"
+            },
+            {
+              "name": "looking-for-another-way",
+              "value": "looking-for-another-way"
+            },
+            {
+              "name": "Momentum Direct Variant",
+              "value": "momentum-direct-variant"
             }
           ]
         }
@@ -188,10 +277,16 @@
         "bannervideo",
         "accordion",
         "banking-good",
-        "teachers-form-block",
         "breadcrumb",
         "faq-category",
-        "faq-detail"
+        "faq-detail",
+        "transformd-form",
+        "hero-banner",
+        "content-fragment",
+        "interest-table",
+        "icon-library",
+        "faq-productdetail",
+        "compare-accounts"
       ]
     }
   ]

@@ -12,6 +12,8 @@
     "value-no-vendor-prefix": null,
     "media-feature-range-notation": null,
     "comment-empty-line-before": null,
-    "no-descending-specificity": null
+    "no-descending-specificity": null,
+    "color-hex-length": null,
+    "value-keyword-case": null
   }
 }
