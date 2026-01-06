@@ -357,6 +357,10 @@
           {
             "name": "Momentum Direct Variant",
             "value": "momentum-direct-variant"
+          },
+          {
+            "name": "Variation Border",
+            "value": "variation-border"
           }
         ]
       }

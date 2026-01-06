@@ -254,6 +254,10 @@
             {
               "name": "Momentum Direct Variant",
               "value": "momentum-direct-variant"
+            },
+            {
+              "name": "Variation Border",
+              "value": "variation-border"
             }
           ]
         }
@@ -284,9 +288,7 @@
         "hero-banner",
         "content-fragment",
         "interest-table",
-        "icon-library",
-        "faq-productdetail",
-        "compare-accounts"
+        "icon-library"
       ]
     }
   ]
