@@ -596,6 +596,7 @@ header{
 }
 .momentum-saver-section .momentum-columns .momentum-second-content p:has(a) a{
   display:block;
+  margin-top:32px;
 }
 .momentum-saver-section .momentum-columns .momentum-second-content p:has(a) a span{
   display:block;
@@ -604,7 +605,6 @@ header{
   display:flex;
   height:40px;
   justify-content:flex-start;
-  margin-top:32px;
   width:135px;
 }
 .momentum-saver-section .momentum-columns .momentum-second-content .button-container{
