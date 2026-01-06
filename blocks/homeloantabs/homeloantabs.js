@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import { toClassName } from "../../scripts/aem.js";
 
 export default async function decorate(block) {
@@ -42,6 +41,5 @@ export default async function decorate(block) {
     tablist.append(button);
     tab.remove();
   });
-
   block.prepend(tablist);
 }

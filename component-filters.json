@@ -31,7 +31,7 @@
       "icon-library",
       "faq-productdetail",
       "compare-accounts",
-      "tabs"
+      "homeloantabs"
     ]
   },
   {
@@ -91,7 +91,7 @@
     ]
   },
   {
-    "id": "tabs",
+    "id": "homeloantabs",
     "components": [
       "tabsitem"
     ]
