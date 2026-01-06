@@ -873,23 +873,22 @@
     ]
   },
   {
-    "id": "tabs",
+    "id": "tabsitem",
     "fields": [
       {
-        "component": "table",
-        "name": "items",
-        "label": "Tabs",
-        "valueType": "string",
-        "columns": [
-          {
-            "name": "title",
-            "label": "Tab Title"
-          },
-          {
-            "name": "content",
-            "label": "Tab Content"
-          }
-        ]
+        "component": "text",
+        "name": "title",
+        "label": "Tab Title"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Fragment URL"
+      },
+      {
+        "component": "aem-content",
+        "name": "two_link",
+        "label": "Fragment URL"
       }
     ]
   },

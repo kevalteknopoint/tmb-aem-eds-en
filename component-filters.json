@@ -89,5 +89,11 @@
     "components": [
       "banner"
     ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tabsitem"
+    ]
   }
 ]
