@@ -14,6 +14,7 @@ import {
   loadSections,
   loadCSS,
 } from './aem.js';
+import { pageIntialization } from './analytics/exports.js';
 import { fetchPlaceholders } from './placeholders.js';
 import decorateIconLibrary from '../blocks/icon-library/icon-library.js';
 
@@ -178,29 +179,28 @@ function loadPlaceholders() {
 }
 
 async function loadPage() {
+  window.adobeDataLayer = window.adobeDataLayer || [];
+
   await fetchPlaceholders();
   loadPlaceholders();
+
+  pageIntialization(document.title, getMetadata('page-type'), getMetadata('site-section'), '', 'english', '', getMetadata('brand'), getMetadata('web-type'), '', '', '', getMetadata('campaign-userjourney'), getMetadata('persona'), getMetadata('product'));
+
   await loadEager(document);
   await loadLazy(document);
   try {
-    // 1. Fetch the SVG file from the server
     const response = await fetch(`/icons/icon-sprite.svg`);
 
-    // 2. Check if the request was successful
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
-    // 3. Get the raw SVG text
     const svgText = await response.text();
 
-    // 4. Use DOMParser to safely parse the text into a real SVG element
-    // This is safer than using .innerHTML as it avoids XSS risks
     const parser = new DOMParser();
     const doc = parser.parseFromString(svgText, 'image/svg+xml');
     const svgElement = doc.documentElement;
 
-    // 5. Add the SVG element to the container
     document.body.appendChild(svgElement);
   } catch (error) {
     console.error('Error loading SVG:', error);
