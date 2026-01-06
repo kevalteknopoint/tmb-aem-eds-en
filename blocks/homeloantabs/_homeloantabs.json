@@ -42,14 +42,11 @@
                     "label": "Tab Title"
                 },
                 {
-                    "component": "aem-content",
-                    "name": "link",
-                    "label": "Fragment URL"
-                },
-                {
-                    "component": "aem-content",
-                    "name": "two_link",
-                    "label": "Fragment URL"
+                    "component": "richtext",
+                    "name": "text",
+                    "value": "",
+                    "label": "Text",
+                    "valueType": "string"
                 }
             ]
         }
