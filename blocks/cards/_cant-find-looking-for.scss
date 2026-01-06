@@ -1,52 +1,40 @@
 @use '../../styles/base' as *;
 
 .section.faq-cant-find-looking-for {
-  padding-block: 32px;
-
-  @include responsive-container();
-
-  @include mobile {
-    padding-block: 24px;
-  }
+  @include responsive-container;
 
   .default-content-wrapper {
-    @include mobile {
-      margin: 0 8px;
-    }
-
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
+      @include typo-heading1;
+
       text-align: center;
       color: $heading-default;
-      font-family: $secondary-font;
-      font-size: 40px;
-      font-style: normal;
-      line-height: 44px;
+      margin-bottom: 40px;
+
+      @include mobile {
+        margin-bottom: 24px;
+      }
     }
   }
 
   .cards-wrapper {
-    margin-top: 48px;
-    padding: 32px 0;
-
-    @include mobile {
-      margin-top: 32px;
-      padding: 0;
-    }
-
     .cards {
       ul {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 32px;
 
+        @include tablet {
+          grid-template-columns: 1fr 1fr;
+        }
+
         @include mobile {
           grid-template-columns: 1fr;
-          gap: 48px;
         }
 
         li {
@@ -56,7 +44,12 @@
           display: flex;
           flex-direction: column;
 
-          .cards-card-image {
+          @include mobile {
+            padding: 8px 0;
+          }
+
+          .cards-card-image,
+          svg {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -66,13 +59,23 @@
             @include mobile {
               margin-bottom: 20px;
             }
+          }
 
+          .icon {
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+          }
+
+          svg {
+            width: 64px;
+            height: 64px;
+            color: $icon-bg-default;
           }
 
           .cards-card-body {
             display: flex;
             flex-direction: column;
-            flex-grow: 1;
 
             h1,
             h2,
@@ -82,25 +85,21 @@
             h6 {
               color: $heading-default;
               text-align: center;
-              font-family: $primary-font;
-              font-size: 20px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 24px;
+              margin-bottom: 8px;
+
+              @include typo-heading4;
             }
 
-            p {
+            p:not(p:has(.icon)) {
               color: $body-default;
               text-align: center;
-              font-family: $primary-font;
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 24px;
-              margin: 8px 0 38px;
+              padding-bottom: 14px;
+              margin-bottom: 24px;
+
+              @include typo-body;
 
               @include mobile {
-                margin-bottom: 20px;
+                padding-bottom: 0;
               }
             }
 
@@ -108,10 +107,12 @@
               display: flex;
               align-items: center;
               justify-content: center;
+              padding-top: 24px;
               margin-top: auto;
+              margin-bottom: 0;
 
               @include mobile {
-                margin-bottom: unset;
+                margin-bottom: 0;
               }
 
               a {
@@ -124,4 +125,154 @@
     }
   }
 
+  &.rates-saver {
+    position: relative;
+
+    .cards-wrapper .cards ul {
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+
+      @include tablet {
+        grid-template-columns: 1fr;
+      }
+
+      li {
+        @include mobile {
+          padding: 0;
+        }
+
+        .cards-card-image,
+        svg {
+          margin-bottom: 16px;
+        }
+
+        .cards-card-body {
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            margin-bottom: 16px;
+
+            @include typo-heading3;
+          }
+
+          p:not(p:has(.icon)) {
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.faq-cant-find-looking-for-variant {
+    .default-content-wrapper {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        @include tablet {
+          text-align: left;
+        }
+      }
+    }
+
+    .cards-wrapper .cards ul {
+      @include tablet {
+        grid-template-columns: 1fr;
+      }
+      
+      li {
+        @include tablet {
+          flex-direction: row;
+          gap: 16px;
+        }
+
+        @include mobile {
+          padding: 0;
+        }
+
+        .cards-card-image,
+        svg {
+          margin-bottom: 16px;
+
+          @include tablet {
+            margin-bottom: 0;
+
+            img {
+              width: 48px;
+              height: 48px;
+            }
+          }
+        }
+
+        @include tablet {
+          svg {
+            width: 48px;
+            height: 48px;
+          }
+        }
+
+        .cards-card-body {
+          @include tablet {
+            &:has(svg) {
+              display: grid;
+              grid-template-columns: auto 2fr;
+              column-gap: 16px;
+            }
+
+            &:first-child {
+              display: none;
+            }
+
+            p:has(svg) {
+              grid-row: 1 / 10;
+            }
+          }
+
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            width: fit-content;
+            margin: 0 auto 16px;
+            padding: 10px 0 6px;
+            color: $link-default;
+            border-bottom: 2px solid $link-default;
+
+            @include typo-heading3;
+
+            @include tablet {
+              margin: 0 0 16px;
+              text-align: left;
+            }
+          }
+
+          p:not(p:has(.icon)) {
+            padding: 0;
+            margin-bottom: 16px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            @include tablet {
+              text-align: left;
+            }
+
+            a {
+              color: $link-default;
+              text-decoration: underline;
+              text-underline-offset: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -21,10 +21,16 @@
       "bannervideo",
       "accordion",
       "banking-good",
-      "teachers-form-block",
       "breadcrumb",
       "faq-category",
-      "faq-detail"
+      "faq-detail",
+      "transformd-form",
+      "hero-banner",
+      "content-fragment",
+      "interest-table",
+      "icon-library",
+      "faq-productdetail",
+      "compare-accounts"
     ]
   },
   {
@@ -67,7 +73,26 @@
       "text",
       "image",
       "button",
-      "title"
+      "title",
+      "content-fragment"
+    ]
+  },
+  {
+    "id": "compare-accounts",
+    "components": [
+      "account-card"
+    ]
+  },
+  {
+    "id": "faq-productdetail",
+    "components": [
+      "accordion-item"
+    ]
+  },
+  {
+    "id": "hero-banner",
+    "components": [
+      "banner"
     ]
   }
 ]

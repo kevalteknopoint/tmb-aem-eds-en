@@ -1,0 +1,79 @@
+@use '../../styles/base' as *;
+
+.icon-library {
+  @include responsive-container;
+
+  .default-content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 24px;
+  }
+
+  .icon-lib-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 1 / -1;
+    margin-bottom: 40px;
+    align-items: center;
+    gap: 40px;
+
+    h1 {
+      @include typo-heading1;
+      
+      color: $heading-default;
+      text-transform: uppercase;
+    }
+
+    .search-inp-wrap {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 16px;
+      align-items: center;
+      padding: 4px;
+      background-color: transparent;
+      border-radius: $radius-card;
+      border: 1px solid $line-default;
+
+      svg {
+        display: block;
+        padding: 6px;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        background-color: $icon-bg-default;
+        color: $icon-default;
+      }
+
+      input {
+        @include typo-sm-body;
+
+        background-color: transparent;
+        color: $body-default;
+        outline: none;
+        padding: 4px;
+        border-radius: $radius-card;
+      }
+    }
+
+  }
+
+  p {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgb(0 0 0 / 10%) 0 4px 12px;
+    border-radius: 16px;
+    padding: 24px;
+    gap: 8px;
+
+    @include typo-disclaimer;
+
+    svg {
+      width: 40px;
+      height: 40px;
+      color: $icon-reverse;
+    }
+  }
+}

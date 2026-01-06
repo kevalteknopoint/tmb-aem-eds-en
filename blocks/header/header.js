@@ -1,3 +1,4 @@
+import './header-analytics.js';
 import { createOptimizedPicture, getMetadata } from '../../scripts/aem.js';
 import { div, ul, li, a, button } from '../../scripts/dom-helpers.js';
 import { loadFragment } from '../fragment/fragment.js';

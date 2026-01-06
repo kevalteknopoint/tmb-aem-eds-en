@@ -3,7 +3,7 @@
 @use '../../styles/mixins';
 
 .section.online-banking {
-  @include responsive-container();
+  @include responsive-container;
 
   @media (min-width: 766px) and (max-width: 980px) {
     margin-left: auto;
@@ -101,14 +101,15 @@
             margin: 0;
 
             h1, h2, h3, h4, h5, h6 {
+              @include typo-heading1;
               color: $heading-default;
-              font-size: 40px;
-              font-style: normal;
-              line-height: 40px;
-              margin: 0;
-              text-transform: uppercase;
-              letter-spacing: 2px;
-              font-family: $secondary-font;
+              // font-size: 40px;
+              // font-style: normal;
+              // line-height: 40px;
+              // margin: 0;
+              // text-transform: uppercase;
+              // letter-spacing: 2px;
+              // font-family: $secondary-font;
 
               @media (min-width: 766px) and (max-width: 1220px) {
                 font-size: 24px;
@@ -156,14 +157,15 @@
                 }
 
                 a {
+                  @include typo-body;
                   display: flex;
                   justify-content: space-between;
                   align-items: center;
                   color: $body-accent;
-                  font-size: 16px;
-                  font-style: normal;
-                  font-weight: 400;
-                  line-height: 24px;
+                  // font-size: 16px;
+                  // font-style: normal;
+                  // font-weight: 400;
+                  // line-height: 24px;
                   text-decoration: none;
                   gap: 10px;
 
@@ -232,11 +234,12 @@
               padding: 0;
 
               h1,h2,h3,h4,h5,h6 {
+                @include typo-heading3;
                 color: $heading-default;
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 32px;
+                // font-size: 24px;
+                // font-style: normal;
+                // font-weight: 500;
+                // line-height: 32px;
 
                 @media (min-width: 766px) and (max-width: 1220px) {
                   font-size: 15px;
@@ -250,11 +253,12 @@
               }
 
               p {
+                @include typo-body;
                 color: $body-accent;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 24px;
+                // font-size: 16px;
+                // font-style: normal;
+                // font-weight: 400;
+                // line-height: 24px;
 
                 @media (min-width: 766px) and (max-width: 1220px) {
                   font-size: 12px;
@@ -315,15 +319,16 @@
               }
 
               a {
+                @include typo-heading5;
                 align-items: center;
                 background: transparent;
                 color: $link-accent;
                 display: flex;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 500;
+                // font-size: 16px;
+                // font-style: normal;
+                // font-weight: 500;
                 gap: 8px;
-                line-height: 24px;
+                // line-height: 24px;
                 text-decoration: none;
                 width: max-content;
 

@@ -1,4 +1,6 @@
-import decorateMomentumSaver from '../components/momentum-saver/momentum-saver.js';
+import decorateMomentumSaver from '../blocks/momentum-saver/momentum-saver.js';
+import decorateProductNavigation from '../blocks/product-navigation/product-navigation.js';
+import decorateTable from '../blocks/table/table.js';
 import {
   loadHeader,
   loadFooter,
@@ -12,6 +14,9 @@ import {
   loadSections,
   loadCSS,
 } from './aem.js';
+import { pageIntialization } from './analytics/exports.js';
+import { fetchPlaceholders } from './placeholders.js';
+import decorateIconLibrary from '../blocks/icon-library/icon-library.js';
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -156,33 +161,54 @@ function loadDelayed() {
   // load anything that can be postponed to the latest here
 }
 
+function camelToKebab(str) {
+  return str.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+}
+
+function loadPlaceholders() {
+  if (window.placeholders?.default && Object.keys(window.placeholders?.default)?.length) {
+    Object.keys(window.placeholders.default).forEach((key) => {
+      let value = window.placeholders.default[key];
+      const isInterestRate = /(\d+(?:\.\d+)?)(%)(p\.a\.)/g.test(value);
+      if (isInterestRate) {
+        value = value.replaceAll(/(\d+(?:\.\d+)?)(%)(p\.a\.)/g, `<span class="rate-num">$1</span><span class="rate-unit"><span class="rate-percent">$2</span><span class="rate-pa">$3</span></span>`);
+      }
+      document.body.innerHTML = document.body.innerHTML.replaceAll(`~${key}~`, `<span class="${camelToKebab(key)}${isInterestRate ? ' interest-rate' : ''}">${value}</span>`);
+    });
+  }
+}
+
 async function loadPage() {
+  window.adobeDataLayer = window.adobeDataLayer || [];
+
+  await fetchPlaceholders();
+  loadPlaceholders();
+
+  pageIntialization(document.title, getMetadata('page-type'), getMetadata('site-section'), '', 'english', '', getMetadata('brand'), getMetadata('web-type'), '', '', '', getMetadata('campaign-userjourney'), getMetadata('persona'), getMetadata('product'));
+
   await loadEager(document);
   await loadLazy(document);
   try {
-    // 1. Fetch the SVG file from the server
     const response = await fetch(`/icons/icon-sprite.svg`);
 
-    // 2. Check if the request was successful
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
-    // 3. Get the raw SVG text
     const svgText = await response.text();
 
-    // 4. Use DOMParser to safely parse the text into a real SVG element
-    // This is safer than using .innerHTML as it avoids XSS risks
     const parser = new DOMParser();
     const doc = parser.parseFromString(svgText, 'image/svg+xml');
     const svgElement = doc.documentElement;
 
-    // 5. Add the SVG element to the container
     document.body.appendChild(svgElement);
   } catch (error) {
     console.error('Error loading SVG:', error);
   }
   decorateMomentumSaver();
+  decorateProductNavigation();
+  decorateTable();
+  decorateIconLibrary();
   loadDelayed();
 }
 

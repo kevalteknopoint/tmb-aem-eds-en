@@ -5,7 +5,7 @@ html {
 }
 
 .faq-heading-section {
-  @include responsive-container();
+  @include responsive-container;
 
   h1, h2, h3, h4, h5, h6 {
     color: $heading-default;
@@ -51,7 +51,7 @@ html {
     display: none;
   }
 
-  @include responsive-container();
+  @include responsive-container;
 
   @include tablet {
     padding-block: 24px;
