@@ -71,27 +71,29 @@ export default function expandableTiles(block) {
 
     if (allButtons.length) {
       const firstBtn = allButtons[0];
-      const anchorElement = firstBtn?.querySelector('a');
-      const anchorLink = anchorElement?.getAttribute('href');
+      const anchorLink = firstBtn?.getAttribute('href');
 
       const contentCtaDiv = div({ class: 'content-cta' });
 
       allButtons.forEach((btn) => {
         btn.classList.add('cta-link');
+        if (!btn?.textContent?.trim()) btn.classList.add('icon-btn');
         contentCtaDiv.appendChild(btn);
       });
 
+      textCol.appendChild(contentCtaDiv);
+
       if (anchorLink) {
+        allButtons.forEach((btn) => {
+          const newBtn = htmlToElement(`<span>${btn.innerHTML}</span>`);
+          newBtn.classList.add(...btn.classList);
+          btn.replaceWith(newBtn);
+        });
+
         textCol.replaceWith(
           htmlToElement(`<a href="${anchorLink}" class="tile-content">${textCol.innerHTML}</a>`),
         );
-
-        allButtons.forEach((btn) => {
-          btn.replaceWith(htmlToElement(`<span class="cta-link">${btn.innerHTML}</span>`));
-        });
       }
-
-      textCol.appendChild(contentCtaDiv);
 
       btnElement.remove();
       otherBtns.forEach((btn) => btn.remove());

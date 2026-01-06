@@ -1,5 +1,4 @@
 @use '../../styles/base' as *;
-
 @import "../../libs/swiper/swiper-bundle.min.css";
 
 .section.expandable-tiles-section {
@@ -17,10 +16,7 @@
 
     h1, h2, h3, h4, h5, h6 {
       @include typo-heading1;
-      // font-family: $secondary-font;
-      // font-size: 40px;
-      // line-height: 40px;
-      // text-align: left;
+
       color: $heading-default;
       margin: 0 0 16px;
 
@@ -30,17 +26,14 @@
 
       @include mobile {
         @include typo-heading1;
-        // font-size: 38px;
-        // line-height: 38px;
+
         text-align: left;
       }
     }
 
     p {
       @include typo-body;
-      // font-weight: 400;
-      // font-size: 16px;
-      // line-height: 24px;
+
       color: $body-default;
       text-align: left;
     }
@@ -58,9 +51,11 @@
       margin-bottom: 0;
       scrollbar-width: none;
     }
+
     @include tablet {
       scrollbar-width: none;
     }
+
     .cards.expandable-tiles.block {
       display: flex;
       justify-content: center;
@@ -69,6 +64,7 @@
       @include mobile {
         --swiper-pagination-bottom: 0;
         --swiper-pagination-bullet-horizontal-gap: 2px;
+
         justify-content: unset;
         gap: 20px;
 
@@ -185,10 +181,8 @@
 
           .content-title {
             @include typo-heading1;
-            // font-family: $secondary-font;
+
             color: $heading-default;
-            // font-size: 40px;
-            // line-height: 40px;
             margin-bottom: 16px;
 
             @include mobile {
@@ -199,25 +193,35 @@
 
           .content-description {
             @include typo-body;
+
             color: $body-default;
-            // font-size: 16px;
-            // line-height: 24px;
             margin-bottom: 16px;
-            // font-weight: 400;
           }
 
           .content-cta {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             gap: 12px;
 
             .cta-link {
-              display: block;
+              /* display: block;
               width: fit-content;
               height: fit-content;
               padding: 8px;
               border-radius: $radius-button;
-              background-color: $bg-reverse;
+              background-color: $bg-reverse; */
+
+              @include button('primary');
+              
+              &.secondary {
+                @include button('secondary');
+              }
+
+              &.icon-btn {
+                min-width: unset;
+                padding: 8px;
+              }
             }
 
             .icon {
@@ -266,7 +270,7 @@
         width: 24px;
         height: 24px;
         color: $color-pagination-selected;
-        filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.40));
+        filter: drop-shadow(0 1px 3px rgb(0 0 0 / 40%));
       }
     }
   }
