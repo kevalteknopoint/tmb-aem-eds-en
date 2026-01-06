@@ -702,6 +702,7 @@ header{
   margin-bottom:24px;
 }
 .momentum-saver-section .momentum-columns .momentum-second-content .button-container{
+  display:inline-block;
   margin-bottom:unset;
 }
 .momentum-saver-section .momentum-columns .momentum-second-content .button-container a{
@@ -910,6 +911,10 @@ header{
   .momentum-saver-section .momentum-columns .momentum-second-content h2{
     font-size:38px;
     line-height:38px;
+  }
+  .momentum-saver-section .momentum-columns .momentum-second-content .button-container{
+    display:block;
+    margin-bottom:5px;
   }
   .momentum-saver-section.momentum-image-saver .columns-wrapper{
     padding-inline:16px;

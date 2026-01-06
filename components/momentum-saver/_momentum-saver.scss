@@ -159,7 +159,14 @@
 
       .button-container {
         margin-bottom: unset;
+        display: inline-block;
         
+        @include mobile{
+          display: block;
+          margin-bottom: 5px
+          
+        }
+
         a {
           @include button('primary');
         }

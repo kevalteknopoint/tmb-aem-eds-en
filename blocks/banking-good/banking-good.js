@@ -1,6 +1,7 @@
 import { moveInstrumentation } from "../../scripts/scripts.js";
 
 export default async function decorate(block) {
+  console.log('inside')
   const goodWrapper = document.querySelectorAll('.banking-good-wrapper');
   goodWrapper.forEach((wrapper, index) => {
     wrapper.classList.add(`card-${index + 1}`);
