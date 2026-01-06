@@ -21,18 +21,24 @@
       "id": "tabs",
       "fields": [
         {
-          "component": "text",
-          "valueType": "string",
-          "name": "tabTitle",
-          "label": "Tab Title",
-          "multi": true
-        },
-        {
-          "component": "richtext",
-          "valueType": "string",
-          "name": "tabContent",
-          "label": "Tab Content",
-          "multi": true
+          "component": "object",
+          "name": "tab",
+          "label": "Tab",
+          "multi": true,
+          "fields": [
+            {
+              "component": "text",
+              "name": "title",
+              "label": "Tab Title",
+              "valueType": "string"
+            },
+            {
+              "component": "richtext",
+              "name": "content",
+              "label": "Tab Content",
+              "valueType": "string"
+            }
+          ]
         }
       ]
     }
