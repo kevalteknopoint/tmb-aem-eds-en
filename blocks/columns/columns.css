@@ -277,6 +277,7 @@
 
 .customer .columns-wrapper .block .columns-container div p.button-container{
   display:flex;
+  gap:10px;
   justify-content:center;
   margin:0;
 }
