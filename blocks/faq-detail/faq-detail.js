@@ -5,6 +5,8 @@ import {
 import { fetchPlaceholders } from '../../scripts/placeholders.js';
 
 export default async function decorate(block) {
+  if (window.location.origin.includes("author")) return;
+
   const secwrapper = document?.querySelector(".section-wrapper");
   if (!secwrapper) return;
 
