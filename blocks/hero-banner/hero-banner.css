@@ -35,7 +35,8 @@ body:has(.product-detail-banner) .breadcrumb.block{
   bottom:80px;
   display:flex;
   flex-direction:column;
-  height:100%;
+  height:-moz-fit-content;
+  height:fit-content;
   justify-content:flex-end;
   margin-left:auto;
   margin-right:auto;
