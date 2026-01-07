@@ -1,3 +1,4 @@
+import { applyCapsizeToElement } from "../../libs/capsize/capsize.min.js";
 import { div, source, video } from "../../scripts/dom-helpers.js";
 
 const jsonMap = {
@@ -63,4 +64,7 @@ export default function decorate(block) {
     }
   });
   bannerContent.replaceWith(wrapperDiv);
+
+  const capsizeItems = document.querySelectorAll('.rate-num, .rate-percent, .rate-pa');
+  capsizeItems.forEach(applyCapsizeToElement);
 }
