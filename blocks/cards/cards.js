@@ -52,4 +52,8 @@ export default function decorate(block) {
     console.log('inside');
     newsHomepage(block);
   }
+    if (block.closest(".milestones")) {
+    console.log('inside');
+    newsHomepage(block);
+  }
 }

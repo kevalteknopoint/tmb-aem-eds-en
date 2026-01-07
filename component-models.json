@@ -365,6 +365,10 @@
           {
             "name": "Variation Border",
             "value": "variation-border"
+          },
+          {
+            "name": "Milestones",
+            "value": "milestones"
           }
         ]
       }
