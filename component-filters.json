@@ -30,7 +30,8 @@
       "interest-table",
       "icon-library",
       "faq-productdetail",
-      "compare-accounts"
+      "compare-accounts",
+      "stepper"
     ]
   },
   {
@@ -68,7 +69,8 @@
       "image",
       "button",
       "title",
-      "content-fragment"
+      "content-fragment",
+      "stepper"
     ]
   },
   {

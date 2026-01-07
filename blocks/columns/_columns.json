@@ -51,7 +51,8 @@
         "image",
         "button",
         "title",
-        "content-fragment"
+        "content-fragment",
+        "stepper"
       ]
     }
   ]
