@@ -604,6 +604,8 @@
 }
 
 .money-overseas .overseas-columns-wrapper .button-container{
+  display:flex;
+  gap:10px;
   margin-bottom:0;
 }
 
