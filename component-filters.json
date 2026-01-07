@@ -91,7 +91,7 @@
     ]
   },
   {
-    "id": "homeloantabs",
+    "id": "tabs",
     "components": [
       "tabsitem"
     ]

@@ -6,11 +6,11 @@
     font-size: var(--body-font-size-xs);
     overflow-x: auto;
 
-    @media (width >= 600px) {
+    @media (width >=600px) {
       font-size: var(--body-font-size-s);
     }
 
-    @media (width >= 900px) {
+    @media (width >=900px) {
       font-size: var(--body-font-size-m);
     }
 
