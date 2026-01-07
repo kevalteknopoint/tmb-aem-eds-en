@@ -1237,6 +1237,10 @@ html{
   outline:none;
 }
 
+.news-helpful-slider{
+  background-color:red;
+}
+
 @media (min-width: 766px) and (max-width: 1220px){
   .section.online-banking .cards-wrapper .cards .banking-cards-ul{
     display:grid;

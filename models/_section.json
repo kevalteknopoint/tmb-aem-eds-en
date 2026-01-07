@@ -254,6 +254,10 @@
             {
               "name": "Momentum Direct Variant",
               "value": "momentum-direct-variant"
+            },
+            {
+              "name": "News Helpful Slider",
+              "value": "news-helpful-slider"
             }
           ]
         }
