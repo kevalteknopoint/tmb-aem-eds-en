@@ -896,14 +896,125 @@
     ]
   },
   {
-    "id": "stepper",
+    "id": "stepper-item",
     "fields": [
       {
         "component": "text",
-        "valueType": "number",
-        "name": "columns",
-        "value": "",
-        "label": "Step Count"
+        "name": "step-number",
+        "label": "Step Number",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "Step Title",
+        "label": "step-title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "Content",
+        "label": "step-content",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "Tip Box",
+        "label": "step-tip-content",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "content-btn-1-text",
+        "label": "Button 1 Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "content-btn-1-title",
+        "label": "Button 1 Title",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "content-btn-1-link",
+        "label": "Button 1 Link",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "content-btn-1-target",
+        "label": "Button 1 Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "content-btn-1-style",
+        "label": "Button 1 Style",
+        "value": "outlined",
+        "options": [
+          {
+            "name": "Outlined Button",
+            "value": "outlined"
+          },
+          {
+            "name": "Secondary Button",
+            "value": "secondary"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "content-btn-2-title",
+        "label": "Button 2 Title",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "content-btn-2-link",
+        "label": "Button 2 Link",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "content-btn-2-target",
+        "label": "Button 2 Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "content-btn-2-style",
+        "label": "Button 2 Style",
+        "value": "outlined",
+        "options": [
+          {
+            "name": "Outlined Button",
+            "value": "outlined"
+          },
+          {
+            "name": "Secondary Button",
+            "value": "secondary"
+          }
+        ]
       }
     ]
   },

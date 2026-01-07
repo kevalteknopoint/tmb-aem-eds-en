@@ -94,17 +94,7 @@
   {
     "id": "stepper",
     "components": [
-      "column"
-    ]
-  },
-  {
-    "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title",
-      "content-fragment"
+      "stepper-item"
     ]
   }
 ]
