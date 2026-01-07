@@ -61,7 +61,8 @@ export default async function decorateCustomer(block) {
   });
 
   // 3. Handle bottom content wrapper classes
-  const customerLinkContent = block.querySelector(".default-content-wrapper");
+  const customerLinkContent = block?.closest('.customer')?.querySelector(".customer .default-content-wrapper");
+  console.log(customerLinkContent);
   if (customerLinkContent) {
     customerLinkContent.classList.add("content-container");
     const paragraphs = customerLinkContent.querySelectorAll("p");
