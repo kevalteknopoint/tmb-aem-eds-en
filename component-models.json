@@ -896,6 +896,18 @@
     ]
   },
   {
+    "id": "stepper",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "columns",
+        "value": "",
+        "label": "Step Count"
+      }
+    ]
+  },
+  {
     "id": "teachers-calculator-block",
     "fields": [
       {

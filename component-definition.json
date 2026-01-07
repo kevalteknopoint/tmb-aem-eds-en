@@ -419,6 +419,20 @@
           }
         },
         {
+          "title": "Stepper",
+          "id": "stepper",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/columns/v1/columns",
+                "template": {
+                  "stepper": "2"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Teachers Calculator Block",
           "id": "teachers-calculator-block",
           "plugins": {
