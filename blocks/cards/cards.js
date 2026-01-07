@@ -6,12 +6,11 @@ import decorateOnlineBanking from "./online-banking.js";
 import newsHelpful from "./news-helpful.js";
 import newsHomepage from "./news-homepage.js";
 import decorateLookingAnotherway from "./looking-for-anotherway.js";
-import newsHelpfulSlider from "./news-helpful-slider.js";
 
 export default function decorate(block) {
   if (block.classList.contains("expandable-tiles")) {
     expandableTiles(block);
-  } else if (block.closest(".news-helpful-homepage")) {
+  }else if (block.closest(".news-helpful-homepage")) {
     newsHomepage(block);
   } else if (block.closest(".news-helpful")) {
     console.log(block.closest(".news-helpful-homepage"));
@@ -51,9 +50,5 @@ export default function decorate(block) {
   }
   if (block.closest(".news-helpful-homepage")) {
     newsHomepage(block);
-  }
-  if (block.closest(".news-helpful-slider")) {
-    console.log('inside button');
-    newsHomepageSlider(block);
   }
 }

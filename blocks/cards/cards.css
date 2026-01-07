@@ -1101,6 +1101,8 @@ html{
 }
 
 .news-helpful-homepage .cards-wrapper .block .swiper-wrapper .swiper-slide div:last-child p.button-container{
+  display:flex;
+  gap:15px;
   margin:0;
   padding:0;
 }
@@ -1235,10 +1237,6 @@ html{
 .looking-for-another-way .cards-wrapper li .cards-card-body .card-button a:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
-}
-
-.news-helpful-slider{
-  background-color:red;
 }
 
 @media (min-width: 766px) and (max-width: 1220px){
