@@ -29,21 +29,42 @@ export default function decorateMomentumSaver() {
       }
     }
 
-    const isTeal = momentumSection?.classList?.contains("background-color-teal") && !momentumSection?.classList?.contains("momentum-image-saver");
+    const secondContent = momentumSection.querySelector('.momentum-second-content');
+    if (secondContent) {
+      const buttonContainers = secondContent.querySelectorAll('.button-container');
+      
+      if (buttonContainers.length > 0) {
+        const newButtonPara = document.createElement('p');
+        newButtonPara.className = 'button-container';
 
+        buttonContainers.forEach((container, index) => {
+          const anchor = container.querySelector('a');
+          if (anchor) {
+            newButtonPara.appendChild(anchor);
+          }
+          
+          if (index > 0) {
+            container.remove();
+          }
+        });
+
+        buttonContainers[0].replaceWith(newButtonPara);
+      }
+    }
+
+    const isTeal = momentumSection?.classList?.contains("background-color-teal") && !momentumSection?.classList?.contains("momentum-image-saver");
     if (isTeal) {
       const varText = momentumSection.querySelector(".columns-wrapper > .momentum-columns");
       varText?.classList?.add("background-color-white");
     }
 
     const interestRateWrap = momentumSection?.querySelector('p:has(.interest-rate)');
-    if (!interestRateWrap) return;
-
-    const interestRate = interestRateWrap?.querySelector('.interest-rate');
-
-    if (!interestRate) return;
-
-    interestRateWrap.insertAdjacentHTML('afterend', interestRate.innerHTML);
-    interestRateWrap.remove();
+    if (interestRateWrap) {
+      const interestRate = interestRateWrap?.querySelector('.interest-rate');
+      if (interestRate) {
+        interestRateWrap.insertAdjacentHTML('afterend', interestRate.innerHTML);
+        interestRateWrap.remove();
+      }
+    }
   });
 }

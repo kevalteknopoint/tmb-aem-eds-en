@@ -154,7 +154,8 @@
 
       .button-container {
         margin-bottom: unset;
-        display: inline-block;
+        display: flex;
+        gap: 15px;
         
         @include mobile{
           display: block;
