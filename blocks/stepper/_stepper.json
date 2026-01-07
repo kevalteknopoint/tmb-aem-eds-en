@@ -44,20 +44,20 @@
         },
         {
           "component": "text",
-          "name": "Step Title",
-          "label": "step-title",
+          "name": "step-title",
+          "label": "Step Title",
           "valueType": "string"
         },
         {
           "component": "richtext",
-          "name": "Content",
-          "label": "step-content",
+          "label": "Content",
+          "name": "step-content",
           "valueType": "string"
         },
         {
           "component": "richtext",
-          "name": "Tip Box",
-          "label": "step-tip-content",
+          "label": "Tip Box",
+          "name": "step-tip-content",
           "valueType": "string"
         },
         {
