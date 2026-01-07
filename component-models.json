@@ -660,10 +660,11 @@
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "aem-content",
         "name": "product-button-link",
         "label": "Product Button Link",
-        "valueType": "string"
+        "valueType": "string",
+        "value": ""
       },
       {
         "component": "select",
@@ -935,7 +936,7 @@
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "aem-content",
         "name": "content-btn-1-link",
         "label": "Button 1 Link",
         "valueType": "string"
@@ -974,12 +975,18 @@
       },
       {
         "component": "text",
+        "name": "content-btn-2-text",
+        "label": "Button 2 Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
         "name": "content-btn-2-title",
         "label": "Button 2 Title",
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "aem-content",
         "name": "content-btn-2-link",
         "label": "Button 2 Link",
         "valueType": "string"
