@@ -47,18 +47,6 @@
             {
               "name": "Secondary",
               "value": "secondary"
-            },
-            {
-              "name": "Outlined",
-              "value": "outlined"
-            },
-            {
-              "name": "Outlined Reverse",
-              "value": "outlined-reverse"
-            },
-            {
-              "name": "White",
-              "value": "white"
             }
           ]
         }
