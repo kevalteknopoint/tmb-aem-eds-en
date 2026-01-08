@@ -1,0 +1,171 @@
+@use '../../styles/base' as *;
+
+// .milestones{
+//     background-color: $bg-reverse;
+
+//     .default-content-wrapper{
+//          @include responsive-container;
+//         display: block;
+//         h2{
+//             @include typo-heading1;
+//             color: $color-variants-heading-reverse;
+//         }
+//         p{
+//             color: $color-variants-heading-reverse;
+//             @include typo-body;
+//              &:last-child{
+//                 display: block;
+//              } 
+//         }
+//     }
+//     .cards-wrapper{
+//         .block{
+//             .swiper-wrapper{
+//                 .swiper-slide{
+//                     gap:0;
+//                     background: unset;
+//                     border: none;
+//                     border-radius: unset;
+//                     &:hover{
+//                         border: none;
+//                         box-shadow: none;
+//                     }
+//                     div{
+//                         &:last-child{
+//                             p{
+//                                 color: $body-reverse;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+.milestones {
+    background-color: $bg-reverse;
+
+    .default-content-wrapper {
+        @include responsive-container;
+        display: block;
+
+        h2 {
+            @include typo-heading1;
+            color: $color-variants-heading-reverse;
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: $color-variants-heading-reverse;
+            @include typo-body;
+
+            &:last-child {
+                display: block;
+            }
+        }
+    }
+
+    .cards-wrapper {
+        position: relative;
+        padding-top: 40px;
+        padding-left: calc((100% - 1440px) / 2 + 64px);
+
+        @include mobile {
+            padding-left: 16px; // Reduce side padding for mobile
+            padding-right: 16px;
+            padding-top: 24px; // Slightly smaller top padding on mobile
+        }
+
+
+
+        .block {
+            .swiper-wrapper {
+                align-items: flex-start;
+                @include mobile{
+                    flex-direction: row;
+                    
+                }
+
+                .swiper-slide {
+                    gap: 0;
+                    background: unset;
+                    border: none;
+                    border-radius: unset;
+                    position: relative;
+                    padding-top: 32px;
+                    padding-right: 32px;
+                    margin-right: unset !important;
+                    padding: 32px 32px 0 0;
+
+                    @include mobile {
+                        width: 220px; // Smaller slide width for mobile
+                        padding: 16px 16px 0 0; // Reduce padding for mobile
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 4px;
+                        left: 0;
+                        right: 0;
+                        height: 2px;
+                        background-color: rgba(255, 255, 255, 0.35);
+                    }
+
+                    &:hover {
+                        border: none;
+                        box-shadow: none;
+                    }
+
+                    @include mobile {
+                        display: block;
+                    }
+
+                    /* ===== DOT ON BORDER ===== */
+                    div {
+                        &:first-child {
+                            position: absolute;
+                            top: 0; //  22px - (dotHeight / 2)
+                            left: 0;
+                            width: 10px;
+                            height: 10px;
+                            background-color: #7fd6d0;
+                            border-radius: 50%;
+
+                            @include mobile {
+                                top: 2px; // Adjust dot vertical position on mobile
+                            }
+                        }
+
+                        &:last-child {
+                            margin-top: 24px;
+
+                            p {
+                                color: $body-reverse;
+
+                                &:first-child {
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+                }          
+            }
+             .nav-wrapper {
+                    padding-right: 244px;
+                    @include mobile{
+                        padding-right: 16px;
+                    }
+                    .swiper-button-next,
+                    .swiper-button-prev {
+                        @include mobile {
+                            display: block;
+                        }
+                    }
+
+                }
+        }
+    }
+
+}
