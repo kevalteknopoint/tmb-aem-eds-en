@@ -100,7 +100,7 @@
       },
       {
         "component": "select",
-        "name": "linkStyle",
+        "name": "linkType",
         "label": "Type",
         "value": "primary",
         "options": [
@@ -890,8 +890,12 @@
             "component": "select",
             "name": "button-linkType",
             "label": "Button Classes",
-            "value": "primary",
+            "value": "default",
             "options": [
+              {
+                "name": "Default",
+                "value": "default"
+              },
               {
                 "name": "Primary",
                 "value": "primary"
@@ -941,8 +945,12 @@
             "component": "select",
             "name": "button-2-linkType",
             "label": "Button Classes",
-            "value": "primary",
+            "value": "default",
             "options": [
+              {
+                "name": "Default",
+                "value": "default"
+              },
               {
                 "name": "Primary",
                 "value": "primary"
