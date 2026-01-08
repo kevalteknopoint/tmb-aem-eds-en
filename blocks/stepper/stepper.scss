@@ -1,5 +1,265 @@
-@use '../../styles/base';
+@use '../../styles/base' as *;
 
-.stepper {
-  background-color: #000;
+.stepper-container {
+  @include responsive-container;
+  
+  display: flex;
+  gap: 64px;
+
+  @include tablet {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .default-content-wrapper {
+    min-width: 384px;
+    
+    h1, h2, h3, h4, h5, h6 {
+      @include typo-heading1;
+
+      color: $heading-default;
+      margin-bottom: 16px;
+    }
+
+    p {
+      @include typo-body;
+
+      color: $body-default;
+      margin-bottom: 32px;
+    }
+
+    .button-container {
+      display: inline-block;
+      margin-right: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .button {
+      @include button('primary');
+
+      font-style: normal;
+    }
+
+    .button.secondary {
+      @include button('secondary');
+    }
+  }
+
+  .stepper-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stepper-item {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 24px;
+    position: relative;
+
+    &:last-child {
+      .stepper-indicator {
+        &::after {
+          content: unset;
+        }
+      }
+    }
+
+    /* &.is-completed {
+      .stepper-indicator {
+        background-color: $icon-bg-default;
+        color: $icon-default;
+      }
+
+      .stepper-indicator::after {
+        background: $icon-2-default;
+      }
+    } */
+
+    &.is-completed .stepper-indicator::after {
+      background: $icon-2-default;
+    }
+
+    &.is-active {
+      .stepper-indicator {
+        background-color: $icon-bg-default;
+        color: $icon-default;
+
+        &::after {
+          background: $icon-2-default;
+        }
+      }
+
+      .stepper-title {
+        font-weight: 700;
+        text-decoration: unset;
+      }
+
+      .step-collapse {
+        display: block
+      }
+    }
+
+    .stepper-indicator {
+      @include typo-body;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 64px;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 1px solid $stroke-default;
+      color: $icon-2-default;
+      
+      &::after {
+        content: '';
+        width: 1px;
+        height: calc(100% - 64px);
+        background: repeating-linear-gradient(
+          to bottom,
+          $icon-2-default,
+          $icon-2-default 6px,
+          transparent 6px,
+          transparent 10px
+        );
+;
+        position: absolute;
+        top: 64px;
+
+        @include mobile {
+          top: 40px;
+          height: calc(100% - 40px);
+        }
+      }
+
+      @include mobile {
+        min-width: 40px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .stepper-title {
+      @include typo-heading3;
+
+      display: block;
+      padding: 17.5px 0;
+      color: $heading-default;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .step-collapse {
+      margin-top: 16px;
+      display: none;
+    }
+
+    .stepper-content {
+      @include typo-body;
+
+      display: block;
+      color: $body-default;
+
+      a {
+        color: $link-default;
+        text-decoration: underline;
+      }
+
+      ul {
+        margin-top: 16px;
+        list-style: disc;
+        padding-left: 24px;
+
+        li {
+          margin-bottom: 8px;
+        }
+      }
+    }
+
+    .stepper-tip {
+      @include typo-body;
+      
+      color: $body-default;
+      background: $info-well-default;
+      padding: 16px;
+      border-radius: $radius-info-well;
+      margin-top: 16px;
+
+      &:has(.icon) {
+        display: grid;
+        column-gap: 8px;
+        grid-template-columns: 40px auto;
+      }
+
+      p:has(.icon) {
+        width: fit-content;
+        grid-row: 1 / 100;
+
+        .icon {
+          display: block;
+          padding: 7.5px;
+        }
+
+        svg {
+          color: $icon-bg-default;
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        @include typo-heading4;
+
+        color: $heading-default;
+        padding: 8px 0;
+        margin-bottom: 4px;
+      }
+
+      a {
+        color: $link-default;
+        text-decoration: underline;
+      }
+
+      ul {
+        margin-top: 16px;
+        list-style: disc;
+        padding-left: 24px;
+
+        li {
+          margin-bottom: 8px;
+        }
+      }
+    }
+
+    .stepper-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+
+      .button {
+        @include button('primary');
+
+        &.secondary {
+          @include button('secondary');
+        }
+
+        &.outlined {
+          @include button('outlined');
+        }
+
+        &.outlined-reverse {
+          @include button('outlined-reverse');
+        }
+
+        &.white {
+          @include button('white');
+        }
+      }
+    }
+  }
 }

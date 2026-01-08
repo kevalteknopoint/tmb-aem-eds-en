@@ -961,15 +961,27 @@
         "component": "select",
         "name": "content-btn-1-style",
         "label": "Button 1 Style",
-        "value": "outlined",
+        "value": "primary",
         "options": [
+          {
+            "name": "Primary Button",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary Button",
+            "value": "secondary"
+          },
           {
             "name": "Outlined Button",
             "value": "outlined"
           },
           {
-            "name": "Secondary Button",
-            "value": "secondary"
+            "name": "Outlined Reverse Button",
+            "value": "outlined-reverse"
+          },
+          {
+            "name": "White Button",
+            "value": "white"
           }
         ]
       },
@@ -1014,12 +1026,24 @@
         "value": "outlined",
         "options": [
           {
-            "name": "Outlined Button",
-            "value": "outlined"
+            "name": "Primary Button",
+            "value": "primary"
           },
           {
             "name": "Secondary Button",
             "value": "secondary"
+          },
+          {
+            "name": "Outlined Button",
+            "value": "outlined"
+          },
+          {
+            "name": "Outlined Reverse Button",
+            "value": "outlined-reverse"
+          },
+          {
+            "name": "White Button",
+            "value": "white"
           }
         ]
       }
