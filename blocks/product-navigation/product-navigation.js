@@ -24,6 +24,7 @@ export default function decorateProductNavigation() {
 
   // eslint-disable-next-line
   const offsetSub = isMobile() ? 60 : 90;
+  const threshold = isMobile() ? 0.3 : 0.4;
 
   const allLinks = productNav?.querySelectorAll("ul a");
   const allContainers = Array.from(allLinks).map((link) => {
@@ -77,7 +78,7 @@ export default function decorateProductNavigation() {
       });
     },
     {
-      threshold: 0.4,
+      threshold,
       rootMargin: "0px 0px -20% 0px",
     }
   );
