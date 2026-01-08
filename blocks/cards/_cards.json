@@ -69,7 +69,6 @@
           "component": "container",
           "name": "button",
           "label": "Button",
-          "value": "primary",
           "collapsible": false,
           "fields": [
             {
@@ -91,6 +90,7 @@
               "component": "select",
               "name": "button-linkType",
               "label": "Button Classes",
+              "value": "primary",
               "options": [
                 {
                   "name": "Primary",
@@ -109,10 +109,6 @@
                   "value": "outlined-reverse"
                 },
                 {
-                  "name": "Outlined Reverse",
-                  "value": "outlined-reverse"
-                },
-                {
                   "name": "White",
                   "value": "white"
                 }
@@ -124,7 +120,6 @@
           "component": "container",
           "name": "button-2",
           "label": "Button 2",
-          "value": "primary",
           "collapsible": false,
           "fields": [
             {
@@ -146,6 +141,7 @@
               "component": "select",
               "name": "button-2-linkType",
               "label": "Button Classes",
+              "value": "primary",
               "options": [
                 {
                   "name": "Primary",
@@ -158,10 +154,6 @@
                 {
                   "name": "Outlined",
                   "value": "outlined"
-                },
-                {
-                  "name": "Outlined Reverse",
-                  "value": "outlined-reverse"
                 },
                 {
                   "name": "Outlined Reverse",
