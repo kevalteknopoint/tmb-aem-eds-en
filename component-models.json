@@ -660,10 +660,11 @@
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "aem-content",
         "name": "product-button-link",
         "label": "Product Button Link",
-        "valueType": "string"
+        "valueType": "string",
+        "value": ""
       },
       {
         "component": "select",
@@ -766,7 +767,7 @@
     ]
   },
   {
-    "id": "accordion-item",
+    "id": "faq-accordion-item",
     "fields": [
       {
         "component": "aem-content-fragment",
@@ -890,6 +891,159 @@
           {
             "name": "quick-links-block",
             "value": "quick-links-block"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stepper-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "step-number",
+        "label": "Step Number",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "step-title",
+        "label": "Step Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "label": "Content",
+        "name": "step-content",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "label": "Tip Box",
+        "name": "step-tip-content",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "content-btn-1-text",
+        "label": "Button 1 Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "content-btn-1-title",
+        "label": "Button 1 Title",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "content-btn-1-link",
+        "label": "Button 1 Link",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "content-btn-1-target",
+        "label": "Button 1 Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "content-btn-1-style",
+        "label": "Button 1 Style",
+        "value": "primary",
+        "options": [
+          {
+            "name": "Primary Button",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary Button",
+            "value": "secondary"
+          },
+          {
+            "name": "Outlined Button",
+            "value": "outlined"
+          },
+          {
+            "name": "Outlined Reverse Button",
+            "value": "outlined-reverse"
+          },
+          {
+            "name": "White Button",
+            "value": "white"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "content-btn-2-text",
+        "label": "Button 2 Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "content-btn-2-title",
+        "label": "Button 2 Title",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "content-btn-2-link",
+        "label": "Button 2 Link",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "content-btn-2-target",
+        "label": "Button 2 Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "content-btn-2-style",
+        "label": "Button 2 Style",
+        "value": "outlined",
+        "options": [
+          {
+            "name": "Primary Button",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary Button",
+            "value": "secondary"
+          },
+          {
+            "name": "Outlined Button",
+            "value": "outlined"
+          },
+          {
+            "name": "Outlined Reverse Button",
+            "value": "outlined-reverse"
+          },
+          {
+            "name": "White Button",
+            "value": "white"
           }
         ]
       }
