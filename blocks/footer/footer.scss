@@ -118,7 +118,8 @@ footer {
       // padding: 24px 24px 0 24px;
 
       li {
-        width: 271px;
+        max-width: 271px;
+        width: 100%;
       }
 
       @media (max-width: 1024px) {
@@ -169,13 +170,14 @@ footer {
       gap: 64px;
 
       li {
-        width: 271px;
+        max-width: 271px;
+        width: 100%;
       }
 
       @media (max-width: 1024px) {
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: space-between;
         gap: 24px;
         margin-top: 24px;
         border-top: 1px solid rgb(255 255 255 / 20%);
