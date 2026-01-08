@@ -114,6 +114,7 @@
       border-radius: 50%;
       border: 1px solid $stroke-default;
       color: $icon-2-default;
+      cursor: pointer;
       
       &::after {
         content: '';
