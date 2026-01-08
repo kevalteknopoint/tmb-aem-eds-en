@@ -890,7 +890,7 @@
             "component": "select",
             "name": "button-linkType",
             "label": "Button Classes",
-            "value": "primary",
+            "value": "default",
             "options": [
               {
                 "name": "Primary",
