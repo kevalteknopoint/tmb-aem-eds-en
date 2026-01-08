@@ -50,7 +50,7 @@ export default async function decorate(block) {
 
   try {
     const placeholders = await fetchPlaceholders();
-    const graphqlUrl = `${placeholders.graphqlurl}faqShortContent;path=`;
+    const graphqlUrl = `${placeholders.graphqlUrl}faqShortContent;path=`;
 
     const newBlock = div({ class: "accordion-wrapper" });
     const accordion = div({
