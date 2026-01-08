@@ -44,11 +44,7 @@
               "name": "Primary",
               "value": "primary"
             },
-            {
-              "name": "Secondary",
-              "value": "secondary"
-            },
-            {
+                {
               "name": "Outlined",
               "value": "outlined"
             },
@@ -59,7 +55,12 @@
             {
               "name": "White",
               "value": "white"
+            },
+            {
+              "name": "Secondary",
+              "value": "secondary"
             }
+        
           ]
         }
       ]
