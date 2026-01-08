@@ -41,11 +41,20 @@
                 border-top: 1px solid var(--line-default);
                 padding: 16px 0;
 
+                &::-webkit-details-marker {
+                    display: none !important;
+                }
+
                 .accordion-item-label {
                     list-style: none;
                     display: flex;
                     justify-content: space-between;
                     align-items: flex-start;
+
+                    // Safari Fix: Ensure the summary behaves like a block/flex item
+                    &::marker, &::-webkit-details-marker {
+                        display: none;
+                    }
 
                     p {
                         color: $color-button-primary-default;
