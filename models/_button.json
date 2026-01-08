@@ -36,29 +36,29 @@
         },
         {
           "component": "select",
-          "name": "linkStyle",
-          "label": "Type",
-          "value": "default",
+          "name": "classes",
+          "label": "Button Style",
+          "value": "btn-primary",
           "options": [
             {
               "name": "Primary",
-              "value": "primary"
+              "value": "btn-primary"
             },
             {
               "name": "Secondary",
-              "value": "secondary"
+              "value": "btn-secondary"
             },
             {
               "name": "Outlined",
-              "value": "outlined"
+              "value": "btn-outlined"
             },
             {
               "name": "Outlined Reverse",
-              "value": "outlined-reverse"
+              "value": "btn-outlined-reverse"
             },
             {
               "name": "White",
-              "value": "white"
+              "value": "btn-white"
             }
           ]
         }
