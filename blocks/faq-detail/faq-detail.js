@@ -10,7 +10,7 @@ export default async function decorate(block) {
 
   const placeholders = await fetchPlaceholders();
 
-  const graphqlUrl = `${placeholders.graphqlurl}faqDetailByPath;path=`;
+  const graphqlUrl = `${placeholders.graphqlUrl}faqDetailByPath;path=`;
 
   try {
     const fragUrl = block?.querySelector("a")?.getAttribute("href");
