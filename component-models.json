@@ -860,6 +860,7 @@
         "component": "container",
         "name": "button",
         "label": "Button",
+        "value": "primary",
         "collapsible": false,
         "fields": [
           {
@@ -883,16 +884,28 @@
             "label": "Button Classes",
             "options": [
               {
-                "name": "default",
-                "value": ""
-              },
-              {
-                "name": "primary",
+                "name": "Primary",
                 "value": "primary"
               },
               {
-                "name": "secondary",
+                "name": "Secondary",
                 "value": "secondary"
+              },
+              {
+                "name": "Outlined",
+                "value": "outlined"
+              },
+              {
+                "name": "Outlined Reverse",
+                "value": "outlined-reverse"
+              },
+              {
+                "name": "Outlined Reverse",
+                "value": "outlined-reverse"
+              },
+              {
+                "name": "White",
+                "value": "white"
               }
             ]
           }
@@ -902,6 +915,7 @@
         "component": "container",
         "name": "button-2",
         "label": "Button 2",
+        "value": "primary",
         "collapsible": false,
         "fields": [
           {
@@ -925,16 +939,28 @@
             "label": "Button Classes",
             "options": [
               {
-                "name": "default",
-                "value": ""
-              },
-              {
-                "name": "primary",
+                "name": "Primary",
                 "value": "primary"
               },
               {
-                "name": "secondary",
+                "name": "Secondary",
                 "value": "secondary"
+              },
+              {
+                "name": "Outlined",
+                "value": "outlined"
+              },
+              {
+                "name": "Outlined Reverse",
+                "value": "outlined-reverse"
+              },
+              {
+                "name": "Outlined Reverse",
+                "value": "outlined-reverse"
+              },
+              {
+                "name": "White",
+                "value": "white"
               }
             ]
           }
