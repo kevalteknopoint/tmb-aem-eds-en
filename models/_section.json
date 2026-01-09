@@ -291,7 +291,8 @@
         "icon-library",
         "faq-productdetail",
         "compare-accounts",
-        "stepper"
+        "stepper",
+        "section"
       ]
     }
   ]
