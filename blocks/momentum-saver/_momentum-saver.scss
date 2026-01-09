@@ -136,13 +136,14 @@
 
         a {
           display: block;
+          margin-top: 32px;
 
           span {
             display: block;
           }
 
           svg {
-            margin-top: 32px;
+            // margin-top: 32px;
             display: flex;
             justify-content: flex-start;
             width: 135px;

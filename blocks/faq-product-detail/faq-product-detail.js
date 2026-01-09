@@ -43,6 +43,8 @@ function renderFAQ(block, faq) {
 
 /* ---------- DECORATE ---------- */
 export default async function decorate(block) {
+  if (window.location.origin.includes("author")) return;
+
   const secwrapper = document.querySelector(".faq-product-detail-wrapper");
   if (!secwrapper) return;
 

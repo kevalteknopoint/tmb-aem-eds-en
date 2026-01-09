@@ -596,6 +596,7 @@ header{
 }
 .momentum-saver-section .momentum-columns .momentum-second-content p:has(a) a{
   display:block;
+  margin-top:32px;
 }
 .momentum-saver-section .momentum-columns .momentum-second-content p:has(a) a span{
   display:block;
@@ -604,7 +605,6 @@ header{
   display:flex;
   height:40px;
   justify-content:flex-start;
-  margin-top:32px;
   width:135px;
 }
 .momentum-saver-section .momentum-columns .momentum-second-content .button-container{
@@ -969,6 +969,11 @@ header{
   padding-top:16px;
   text-transform:initial;
 }
+.interest-table-section .default-content-wrapper p a{
+  color:var(--link-default);
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
 .interest-table-section .default-content-wrapper h5{
   color:var(--body-default);
   font-family:var(--font-family-sm-body);
@@ -980,6 +985,11 @@ header{
   padding-top:16px;
   text-transform:initial;
 }
+.interest-table-section .default-content-wrapper h5 a{
+  color:var(--link-default);
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
 .interest-table-section .default-content-wrapper h6{
   color:var(--body-default);
   font-family:var(--font-family-disc);
@@ -990,6 +1000,11 @@ header{
   line-height:var(--font-height-disclaimer);
   padding-top:16px;
   text-transform:initial;
+}
+.interest-table-section .default-content-wrapper h6 a{
+  color:var(--link-default);
+  text-decoration:underline;
+  text-underline-offset:3px;
 }
 
 .icon-library{
