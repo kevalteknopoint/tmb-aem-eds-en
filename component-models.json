@@ -357,6 +357,10 @@
           {
             "name": "Momentum Direct Variant",
             "value": "momentum-direct-variant"
+          },
+          {
+            "name": "Rate Details",
+            "value": "rate-details"
           }
         ]
       }
