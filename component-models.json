@@ -373,6 +373,10 @@
           {
             "name": "Rate Details",
             "value": "rate-details"
+          },
+          {
+            "name": "Home Loan explained",
+            "value": "home-loan-explained"
           }
         ]
       }

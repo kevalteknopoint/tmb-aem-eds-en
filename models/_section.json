@@ -271,6 +271,10 @@
             {
                "name": "Rate Details",
               "value": "rate-details"
+            },
+            {
+               "name": "Home Loan explained",
+              "value": "home-loan-explained"
             }
           ]
         }
@@ -304,11 +308,8 @@
         "icon-library",
         "faq-productdetail",
         "compare-accounts",
-<<<<<<< HEAD
-        "stepper"
-=======
+        "stepper",
         "tabs"
->>>>>>> c6110f0672773304e10c03dd9e7cbea32998ccbd
       ]
     }
   ]

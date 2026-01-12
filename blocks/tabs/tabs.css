@@ -1,4 +1,15 @@
-.tabs .tabs-list{
+.home-loan-explained{
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:1440px;
+  padding-inline:64px;
+  width:100%;
+}
+
+.home-loan-explained .tabs .tabs-list{
   align-items:center;
   border:1px solid #00525B;
   border-radius:24px;
@@ -6,14 +17,13 @@
   width:471px;
 }
 
-.tabs .tabs-list button{
+.home-loan-explained .tabs .tabs-list button{
   align-items:center;
   display:flex;
   justify-content:center;
-  padding:var(--space-3xs, 8px) 0;
 }
 
-.tabs .tabs-list button p{
+.home-loan-explained .tabs .tabs-list button p{
   align-items:center;
   display:flex;
   justify-content:center;
@@ -22,31 +32,32 @@
   width:157px;
 }
 
-.tabs .tabs-list button[aria-selected="false"]{
+.home-loan-explained .tabs .tabs-list button[aria-selected="false"]{
   background-color:var(--heading-default);
   border-radius:24px;
   color:#FFF;
 }
 
-.tabs .tabs-panel{
+.home-loan-explained .tabs .tabs-panel{
   margin-top:-1px;
   overflow:auto;
   padding:24px;
   padding-top:32px;
 }
 
-.tabs .tabs-panel[aria-hidden="true"]{
+.home-loan-explained .tabs .tabs-panel[aria-hidden="true"]{
   display:none;
 }
 
-.tabs .tabs-panel .panel1{
+.home-loan-explained .tabs .tabs-panel .panel1{
   display:grid;
   gap:64px;
   grid-template-columns:repeat(3, 1fr);
   row-gap:16px;
 }
 
-.tabs .tabs-panel .panel1 h3, .tabs .tabs-panel .panel1 h2{
+.home-loan-explained .tabs .tabs-panel .panel1 h3,
+.home-loan-explained .tabs .tabs-panel .panel1 h2{
   color:#00525B;
   font-family:var(--primary-font);
   font-size:24px;
@@ -55,20 +66,20 @@
   grid-row:1;
 }
 
-.tabs .tabs-panel .panel1 p{
+.home-loan-explained .tabs .tabs-panel .panel1 p{
   color:black;
   font-size:16px;
   grid-row:2;
 }
 
 @media (width >= 600px){
-  .tabs .tabs-list{
+  .home-loan-explained .tabs .tabs-list{
     font-size:var(--body-font-size-s);
   }
 }
 
 @media (width >= 900px){
-  .tabs .tabs-list{
+  .home-loan-explained .tabs .tabs-list{
     font-size:var(--body-font-size-m);
   }
 }
