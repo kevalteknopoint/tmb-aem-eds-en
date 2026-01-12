@@ -26,6 +26,10 @@ export default function loadNonBlockLibs() {
       selector: '.product-navigation',
       name: 'product-navigation',
     },
+    {
+      selector: '.lone-suits-u',
+      name: 'table-with-icons',
+    },
   ];
 
   blocks.forEach(({ selector, name }) => {

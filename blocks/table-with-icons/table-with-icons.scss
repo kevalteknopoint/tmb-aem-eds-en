@@ -21,11 +21,13 @@
 
     .pipe-grid-cell {
         @include typo-heading3;
+        
         color: $heading-default;
     }
 }
 
 .pipe-grid-cell {
     @include typo-body;
+
     color: $body-default;
 }
