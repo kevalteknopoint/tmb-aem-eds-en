@@ -674,6 +674,25 @@
   text-underline-offset:3px;
 }
 
+.section.faq-cant-find-looking-for.variation-border .default-content-wrapper h1,
+.section.faq-cant-find-looking-for.variation-border .default-content-wrapper h2,
+.section.faq-cant-find-looking-for.variation-border .default-content-wrapper h3,
+.section.faq-cant-find-looking-for.variation-border .default-content-wrapper h4,
+.section.faq-cant-find-looking-for.variation-border .default-content-wrapper h5,
+.section.faq-cant-find-looking-for.variation-border .default-content-wrapper h6{
+  text-align:left;
+}
+
+.section.faq-cant-find-looking-for.variation-border .cards-wrapper .cards ul li{
+  border:1px solid var(--line-default);
+  border-radius:24px;
+  padding:40px 24px;
+}
+
+.section.faq-cant-find-looking-for.variation-border .cards-wrapper .cards ul li .cards-card-body p.button-container a{
+  border:unset;
+}
+
 .banking-goods{
   margin-left:auto;
   margin-right:auto;
@@ -1192,6 +1211,116 @@ html{
   outline:none;
 }
 
+.milestones{
+  background-color:var(--bg-reverse);
+}
+
+.milestones .default-content-wrapper{
+  display:block;
+  margin-bottom:unset;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
+}
+
+.milestones .default-content-wrapper h2{
+  color:var(--color-variants-heading-reverse);
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  margin-bottom:16px;
+  text-transform:initial;
+}
+
+.milestones .default-content-wrapper p{
+  color:var(--color-variants-heading-reverse);
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-transform:initial;
+}
+
+.milestones .default-content-wrapper p:last-child{
+  display:block;
+}
+
+.milestones .cards-wrapper{
+  padding-left:calc((100% - 1440px) / 2 + 64px);
+  padding-top:40px;
+  position:relative;
+}
+
+.milestones .cards-wrapper .block .swiper-wrapper{
+  align-items:flex-start;
+}
+
+.milestones .cards-wrapper .block .swiper-wrapper .swiper-slide{
+  background:unset;
+  border:none;
+  border-radius:unset;
+  gap:0;
+  margin-right:unset !important;
+  padding:32px 32px 0 0;
+  padding-right:32px;
+  padding-top:32px;
+  position:relative;
+}
+
+.milestones .cards-wrapper .block .swiper-wrapper .swiper-slide::before{
+  background-color:rgb(255 255 255 / 35%);
+  content:"";
+  height:2px;
+  left:0;
+  position:absolute;
+  right:0;
+  top:4px;
+}
+
+.milestones .cards-wrapper .block .swiper-wrapper .swiper-slide:hover{
+  border:none;
+  box-shadow:none;
+}
+
+.milestones .cards-wrapper .block .swiper-wrapper .swiper-slide div:first-child{
+  background-color:#7fd6d0;
+  border-radius:50%;
+  height:10px;
+  left:0;
+  position:absolute;
+  top:0;
+  width:10px;
+}
+
+.milestones .cards-wrapper .block .swiper-wrapper .swiper-slide div:last-child p{
+  color:var(--body-reverse);
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-transform:initial;
+}
+
+.milestones .cards-wrapper .block .swiper-wrapper .swiper-slide div:last-child p:first-child{
+  font-family:var(--font-family-h4);
+  font-size:var(--font-size-h4);
+  font-weight:var(--font-weight-h4);
+  letter-spacing:var(--font-letter-spacing-h4);
+  line-height:var(--font-height-h4);
+  margin-bottom:16px;
+  text-transform:initial;
+}
+
+.milestones .cards-wrapper .block .nav-wrapper{
+  padding-right:unset;
+}
+
 @media (min-width: 766px) and (max-width: 1220px){
   .section.online-banking .cards-wrapper .cards .banking-cards-ul{
     display:grid;
@@ -1349,6 +1478,10 @@ html{
   }
 
   .looking-for-another-way{
+    padding-inline:24px;
+  }
+
+  .milestones .default-content-wrapper{
     padding-inline:24px;
   }
 }
@@ -1788,5 +1921,35 @@ html{
   .looking-for-another-way{
     gap:24px;
     padding-inline:16px;
+  }
+
+  .milestones .default-content-wrapper{
+    padding-inline:16px;
+  }
+
+  .milestones .cards-wrapper{
+    padding-left:16px;
+    padding-right:16px;
+    padding-top:24px;
+  }
+
+  .milestones .cards-wrapper .block{
+    padding-left:0;
+  }
+
+  .milestones .cards-wrapper .block .swiper-wrapper{
+    flex-direction:row;
+    gap:unset;
+  }
+
+  .milestones .cards-wrapper .block .swiper-wrapper .swiper-slide{
+    display:block;
+    max-width:300px;
+    width:220px;
+  }
+
+  .milestones .cards-wrapper .block .nav-wrapper .swiper-button-next,
+  .milestones .cards-wrapper .block .nav-wrapper .swiper-button-prev{
+    display:block;
   }
 }

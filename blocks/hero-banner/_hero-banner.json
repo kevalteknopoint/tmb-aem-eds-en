@@ -44,6 +44,10 @@
             {
               "name": "Product Detail Banner",
               "value": "product-detail-banner"
+            },
+            {
+              "name": "Alternate Text Color Variation",
+              "value": "text-color-variation"
             }
           ]
         }

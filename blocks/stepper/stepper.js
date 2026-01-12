@@ -3,6 +3,8 @@ import {
 } from '../../scripts/dom-helpers.js';
 
 export default function decorate(block) {
+  if (window.location.origin.includes('author')) return;
+
   const items = [...block.children];
 
   const getText = (cell, fallback = '') =>

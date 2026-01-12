@@ -31,7 +31,9 @@
       "icon-library",
       "faq-productdetail",
       "compare-accounts",
-      "stepper"
+      "stepper",
+      "tabs",
+      "interest-rates"
     ]
   },
   {
@@ -70,7 +72,7 @@
       "button",
       "title",
       "content-fragment",
-      "stepper"
+      "accordion"
     ]
   },
   {
@@ -92,9 +94,21 @@
     ]
   },
   {
+    "id": "interest-rates",
+    "components": [
+      "rate-details"
+    ]
+  },
+  {
     "id": "stepper",
     "components": [
       "stepper-item"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tabsitem"
     ]
   }
 ]

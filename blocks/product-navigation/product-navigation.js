@@ -15,7 +15,7 @@ function isElementInView(container, element, percentVisible = 1) {
   return visiblePercent >= percentVisible;
 }
 
-export default function decorateProductNavigation() {
+(function decorateProductNavigation() {
   const productNav = document.querySelector(".product-navigation");
   const scrollWrapper = productNav?.querySelector(".default-content-wrapper");
   const scrollContainer = productNav?.querySelector(".default-content-wrapper ul");
@@ -121,4 +121,4 @@ export default function decorateProductNavigation() {
   toggleFade();
 
   scrollContainer.addEventListener("scroll", toggleFade);
-}
+}());

@@ -357,6 +357,30 @@
           {
             "name": "Momentum Direct Variant",
             "value": "momentum-direct-variant"
+          },
+          {
+            "name": "Circular Image",
+            "value": "circular-image "
+          },
+          {
+            "name": "Variation Border",
+            "value": "variation-border"
+          },
+          {
+            "name": "Milestones",
+            "value": "milestones"
+          },
+          {
+            "name": "Rate Details",
+            "value": "rate-details"
+          },
+          {
+            "name": "Home Loan Explained",
+            "value": "home-loan-explained"
+          },
+          {
+            "name": "Table with icons",
+            "value": "table-with-icons"
           }
         ]
       }
@@ -802,6 +826,10 @@
           {
             "name": "Product Detail Banner",
             "value": "product-detail-banner"
+          },
+          {
+            "name": "Alternate Text Color Variation",
+            "value": "text-color-variation"
           }
         ]
       }
@@ -869,6 +897,29 @@
         "name": "text",
         "value": "",
         "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "rate-details",
+    "fields": [
+      {
+        "component": "text",
+        "name": "rate-title",
+        "label": "Rate Title",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "interest-rate",
+        "label": "Interest Rate / Placeholder",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "rate-disclaimer",
+        "label": "Rate Disclaimer",
         "valueType": "string"
       }
     ]
@@ -1046,6 +1097,23 @@
             "value": "white"
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "tabsitem",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Tab Title"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   },

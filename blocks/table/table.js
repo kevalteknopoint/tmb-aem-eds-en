@@ -1,4 +1,4 @@
-export default function decorateTable() {
+(function decorateTable() {
   const sections = document.querySelectorAll(".interest-table-section");
   sections.forEach((section) => {
     const headingContainers = section.querySelectorAll(
@@ -12,4 +12,4 @@ export default function decorateTable() {
       ul.classList.add(`ul-${idx}`);
     });
   });
-}
+}());

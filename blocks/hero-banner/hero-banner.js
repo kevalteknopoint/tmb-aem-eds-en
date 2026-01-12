@@ -51,5 +51,16 @@ export default function decorate(block) {
   bannerContent?.classList.remove('content');
   bannerContent?.classList.add('hero-banner-content');
   const wrapperDiv = div({ class: 'hero-banner-content-wrap' }, div({ class: 'hero-banner-content' }, ...bannerContent.children));
+  const interestRates = wrapperDiv.querySelectorAll('.interest-rate');
+  const rateWrap = div({ class: 'interest-rates-wrapper' });
+  interestRates.forEach((item, index) => {
+    if (item.parentElement.classList.contains('hero-banner-content')) {
+      if (index === 0) item.insertAdjacentElement('beforebegin', rateWrap);
+      rateWrap.appendChild(item);
+    } else {
+      if (index === 0) item.parentElement.insertAdjacentElement('beforebegin', rateWrap);
+      rateWrap.appendChild(item.parentElement);
+    }
+  });
   bannerContent.replaceWith(wrapperDiv);
 }
