@@ -93,6 +93,12 @@
     ]
   },
   {
+    "id": "interest-rates",
+    "components": [
+      "rate-details"
+    ]
+  },
+  {
     "id": "stepper",
     "components": [
       "stepper-item"

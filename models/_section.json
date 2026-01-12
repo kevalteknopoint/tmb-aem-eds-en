@@ -304,11 +304,8 @@
         "icon-library",
         "faq-productdetail",
         "compare-accounts",
-<<<<<<< HEAD
-        "stepper"
-=======
+        "stepper",
         "tabs"
->>>>>>> c6110f0672773304e10c03dd9e7cbea32998ccbd
       ]
     }
   ]

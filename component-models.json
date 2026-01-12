@@ -894,6 +894,29 @@
     ]
   },
   {
+    "id": "rate-details",
+    "fields": [
+      {
+        "component": "text",
+        "name": "rate-title",
+        "label": "Rate Title",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "interest-rate",
+        "label": "Interest Rate / Placeholder",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "rate-disclaimer",
+        "label": "Rate Disclaimer",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "quick-links",
     "fields": [
       {
