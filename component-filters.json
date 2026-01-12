@@ -32,7 +32,8 @@
       "faq-productdetail",
       "compare-accounts",
       "stepper",
-      "tabs"
+      "tabs",
+      "interest-rates"
     ]
   },
   {
@@ -90,6 +91,12 @@
     "id": "hero-banner",
     "components": [
       "banner"
+    ]
+  },
+  {
+    "id": "interest-rates",
+    "components": [
+      "rate-details"
     ]
   },
   {

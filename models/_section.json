@@ -309,7 +309,12 @@
         "faq-productdetail",
         "compare-accounts",
         "stepper",
+<<<<<<< HEAD
         "tabs"
+=======
+        "tabs",
+        "interest-rates"
+>>>>>>> 66b45a108561580e7779b104f77e2bc7f345d6a9
       ]
     }
   ]

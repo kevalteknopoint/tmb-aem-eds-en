@@ -3,7 +3,7 @@ import {
 } from '../../scripts/dom-helpers.js';
 
 export default function decorate(block) {
-  if (window.location.href.includes('author')) return;
+  if (window.location.origin.includes('author')) return;
 
   const items = [...block.children];
 
