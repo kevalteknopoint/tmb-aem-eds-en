@@ -11,20 +11,21 @@
   width: 100%;
 
   .default-content-wrapper {
-    h1,h2,h3 {
-      color: #00525B;
-      font-family: $primary-font;
-      font-size: 40px;
-      font-style: normal;
-      font-weight: 900;
-      line-height: 40px;
+
+    h1,
+    h2,
+    h3 {
+      color: $heading-light;
+
+      @include typo-heading1;
+
     }
   }
 
   .tabs {
     .tabs-list {
       // border-radius: 24px;
-      border: 1px solid #00525B;
+      border: 1px solid $heading-light;
       display: flex;
       align-items: center;
       width: 471px;
@@ -75,12 +76,11 @@
 
         h3,
         h2 {
-          color: #00525B;
-          font-size: 24px;
-          font-family: $primary-font;
+          color: $heading-light;
+        
+          @include typo-heading3;
+
           grid-row: 1;
-          font-style: normal;
-          font-weight: 500;
         }
 
         p {
