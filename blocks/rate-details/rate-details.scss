@@ -6,6 +6,10 @@
   display: grid;
   grid-template-columns: 384px auto;
 
+  @include mobile {
+    grid-template-columns: auto;
+  }
+
   .columns-wrapper {
     grid-row: 1 / 100;
     

@@ -123,6 +123,7 @@
 
 @media screen and (max-width: 767px){
   .rate-details{
+    grid-template-columns:auto;
     padding-inline:16px;
   }
 }
