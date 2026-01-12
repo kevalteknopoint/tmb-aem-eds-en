@@ -71,6 +71,8 @@ function createTable(block) {
 }
 
 (function decorateRateDetails() {
+  if (window.location.origin.includes('author')) return;
+
   const allRateDetailSections = document.querySelectorAll('.rate-details');
 
   allRateDetailSections.forEach((section) => {
