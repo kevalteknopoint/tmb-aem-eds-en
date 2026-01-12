@@ -31,7 +31,8 @@
       "icon-library",
       "faq-productdetail",
       "compare-accounts",
-      "stepper"
+      "stepper",
+      "tabs"
     ]
   },
   {
@@ -95,6 +96,12 @@
     "id": "stepper",
     "components": [
       "stepper-item"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tabsitem"
     ]
   }
 ]

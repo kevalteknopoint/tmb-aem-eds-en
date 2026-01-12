@@ -1070,6 +1070,23 @@
     ]
   },
   {
+    "id": "tabsitem",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Tab Title"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "teachers-calculator-block",
     "fields": [
       {
