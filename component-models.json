@@ -375,17 +375,12 @@
             "value": "rate-details"
           },
           {
-<<<<<<< HEAD
             "name": "Home Loan Explained",
             "value": "home-loan-explained"
           },
           {
             "name": "Table with icons",
             "value": "table-with-icons"
-=======
-            "name": "Home Loan explained",
-            "value": "home-loan-explained"
->>>>>>> 4dc994b361dca971e42d4dfac3ba46b32f22a1bc
           }
         ]
       }
