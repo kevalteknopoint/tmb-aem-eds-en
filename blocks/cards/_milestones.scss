@@ -49,6 +49,7 @@
     .default-content-wrapper {
         @include responsive-container;
         display: block;
+        margin-bottom: unset;
 
         h2 {
             @include typo-heading1;
@@ -80,10 +81,15 @@
 
 
         .block {
+            @include mobile{
+                padding-left: 0;
+            }
+
             .swiper-wrapper {
                 align-items: flex-start;
                 @include mobile{
                     flex-direction: row;
+                    gap: unset;
                     
                 }
 
@@ -100,7 +106,7 @@
 
                     @include mobile {
                         width: 220px; // Smaller slide width for mobile
-                        padding: 16px 16px 0 0; // Reduce padding for mobile
+                        max-width: 300px;
                     }
 
                     &::before {
@@ -132,20 +138,18 @@
                             height: 10px;
                             background-color: #7fd6d0;
                             border-radius: 50%;
-
-                            @include mobile {
-                                top: 2px; // Adjust dot vertical position on mobile
-                            }
                         }
 
                         &:last-child {
-                            margin-top: 24px;
+                            // margin-top: 24px;
 
                             p {
                                 color: $body-reverse;
+                                @include typo-body;
 
                                 &:first-child {
-                                    font-weight: 700;
+                                    @include typo-heading4;
+                                    margin-bottom: 16px;
                                 }
                             }
                         }
@@ -153,10 +157,8 @@
                 }          
             }
              .nav-wrapper {
-                    padding-right: 244px;
-                    @include mobile{
-                        padding-right: 16px;
-                    }
+                    padding-right: unset;
+
                     .swiper-button-next,
                     .swiper-button-prev {
                         @include mobile {
