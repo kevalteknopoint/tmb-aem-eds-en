@@ -1,10 +1,12 @@
+@use '../../styles/base' as *;
+
 .tabs {
   .tabs-list {
+    border-radius: 24px;
+    border: 1px solid #00525B;
     display: flex;
-    gap: 0.5ch;
-    max-width: 100%;
-    font-size: var(--body-font-size-xs);
-    overflow-x: auto;
+    align-items: center;
+    width: 471px;
 
     @media (width >=600px) {
       font-size: var(--body-font-size-s);
@@ -15,29 +17,24 @@
     }
 
     button {
-      flex: 0 0 max-content;
-      margin: 0;
-      border: 1px solid var(--dark-color);
-      border-radius: 0;
-      padding: 0.5em;
-      background-color: #949494;
-      color: initial;
-      font-weight: bold;
-      line-height: unset;
-      text-align: initial;
-      text-overflow: unset;
-      overflow: unset;
-      white-space: unset;
-      transition: background-color 0.2s;
+      display: flex;
+      padding: var(--space-3xs, 8px) 0;
+      justify-content: center;
+      align-items: center;
 
       p {
+        display: flex;
+        width: 157px;
+        padding: var(--space-3xs, 8px) var(--space-sm, 24px);
+        justify-content: center;
+        align-items: center;
         margin: 0;
       }
 
-      &[aria-selected='true'] {
-        border-bottom: 1px solid var(--background-color);
-        background-color: var(--background-color);
-        cursor: initial;
+      &[aria-selected='false'] {
+        background-color: $heading-default;
+        border-radius: 24px;
+        color:#FFF;
       }
     }
   }
@@ -47,9 +44,33 @@
     padding: 24px;
     border: 1px solid var(--dark-color);
     overflow: auto;
+    padding-top: 32px;
 
     &[aria-hidden='true'] {
       display: none;
     }
+
+    .panel1 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 64px;
+      row-gap: 16px;
+
+      h3,h2 {
+        color: #00525B;
+        font-size: 24px;
+        font-family:$primary-font;
+        grid-row: 1;
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      p {
+        grid-row: 2;
+        color: black;
+        font-size: 16px;
+      }
+    }
+
   }
 }

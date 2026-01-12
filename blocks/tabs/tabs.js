@@ -13,11 +13,26 @@ export default async function decorate(block) {
 
     // decorate tabpanel
     const tabpanel = block.children[i];
-    tabpanel.className = "tabs-panel";
+    tabpanel.className = `tabs-panel panel${i + 1}`;
     tabpanel.id = `tabpanel-${id}`;
     tabpanel.setAttribute("aria-hidden", !!i);
     tabpanel.setAttribute("aria-labelledby", `tab-${id}`);
-    tabpanel.setAttribute("role", "tabpanel");
+    tabpanel.setAttribute("role", `tabpanel`);
+
+    requestAnimationFrame(() => {
+      const panels = block.querySelectorAll(".tabs-panel");
+
+      panels.forEach((panel) => {
+        const innerDiv = panel.querySelector(":scope > div");
+        if (!innerDiv) return;
+
+        panel.classList.forEach((cls) => {
+          if (cls !== "tabs-panel") {
+            innerDiv.classList.add(cls);
+          }
+        });
+      });
+    });
 
     // build tab button
     const button = document.createElement("button");
@@ -25,7 +40,7 @@ export default async function decorate(block) {
     button.id = `tab-${id}`;
     button.innerHTML = tab.innerHTML;
     button.setAttribute("aria-controls", `tabpanel-${id}`);
-    button.setAttribute("aria-selected", !i);
+    // button.setAttribute("aria-selected", !i);
     button.setAttribute("role", "tab");
     button.setAttribute("type", "button");
     button.addEventListener("click", () => {
@@ -33,10 +48,10 @@ export default async function decorate(block) {
         panel.setAttribute("aria-hidden", true);
       });
       tablist.querySelectorAll("button").forEach((btn) => {
-        btn.setAttribute("aria-selected", false);
+        btn.setAttribute("aria-selected", true);
       });
       tabpanel.setAttribute("aria-hidden", false);
-      button.setAttribute("aria-selected", true);
+      button.setAttribute("aria-selected", false);
     });
     tablist.append(button);
     tab.remove();
