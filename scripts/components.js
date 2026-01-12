@@ -27,7 +27,7 @@ export default function loadNonBlockLibs() {
       name: 'product-navigation',
     },
     {
-      selector: '.lone-suits-u',
+      selector: '.table-with-icons',
       name: 'table-with-icons',
     },
   ];
