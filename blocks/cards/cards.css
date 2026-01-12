@@ -1217,6 +1217,7 @@ html{
 
 .milestones .default-content-wrapper{
   display:block;
+  margin-bottom:unset;
   margin-left:auto;
   margin-right:auto;
   max-width:calc(1440px - 0px);
@@ -1296,20 +1297,28 @@ html{
   width:10px;
 }
 
-.milestones .cards-wrapper .block .swiper-wrapper .swiper-slide div:last-child{
-  margin-top:24px;
-}
-
 .milestones .cards-wrapper .block .swiper-wrapper .swiper-slide div:last-child p{
   color:var(--body-reverse);
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-transform:initial;
 }
 
 .milestones .cards-wrapper .block .swiper-wrapper .swiper-slide div:last-child p:first-child{
-  font-weight:700;
+  font-family:var(--font-family-h4);
+  font-size:var(--font-size-h4);
+  font-weight:var(--font-weight-h4);
+  letter-spacing:var(--font-letter-spacing-h4);
+  line-height:var(--font-height-h4);
+  margin-bottom:16px;
+  text-transform:initial;
 }
 
 .milestones .cards-wrapper .block .nav-wrapper{
-  padding-right:244px;
+  padding-right:unset;
 }
 
 @media (min-width: 766px) and (max-width: 1220px){
@@ -1924,22 +1933,19 @@ html{
     padding-top:24px;
   }
 
+  .milestones .cards-wrapper .block{
+    padding-left:0;
+  }
+
   .milestones .cards-wrapper .block .swiper-wrapper{
     flex-direction:row;
+    gap:unset;
   }
 
   .milestones .cards-wrapper .block .swiper-wrapper .swiper-slide{
     display:block;
-    padding:16px 16px 0 0;
+    max-width:300px;
     width:220px;
-  }
-
-  .milestones .cards-wrapper .block .swiper-wrapper .swiper-slide div:first-child{
-    top:2px;
-  }
-
-  .milestones .cards-wrapper .block .nav-wrapper{
-    padding-right:16px;
   }
 
   .milestones .cards-wrapper .block .nav-wrapper .swiper-button-next,
