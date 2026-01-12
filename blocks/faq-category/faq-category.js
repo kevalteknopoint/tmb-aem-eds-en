@@ -8,7 +8,7 @@ async function fetchFaqs(tagValue, limit = 10, offset = 0) {
   try {
     const placeholders = await fetchPlaceholders();
     const res = await fetch(
-      `${placeholders.graphqlurl}faqListByTags;tagValue=${tagValue};limit=${limit};offset=${offset}`
+      `${placeholders.graphqlUrl}faqListByTags;tagValue=${tagValue};limit=${limit};offset=${offset}`
     );
     const json = await res.json();
     return json?.data?.faqList?.items || [];
@@ -23,7 +23,7 @@ async function fetchAllFaqsByTag(tagValue) {
   try {
     const placeholders = await fetchPlaceholders();
     const res = await fetch(
-      `${placeholders.graphqlurl}allFaqsByTag;tagValue=${tagValue}`
+      `${placeholders.graphqlUrl}allFaqsByTag;tagValue=${tagValue}`
     );
     const json = await res.json();
     return json?.data?.faqList?.items || [];

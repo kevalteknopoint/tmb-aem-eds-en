@@ -3,7 +3,7 @@ import { fetchPlaceholders } from "../../scripts/placeholders.js";
 export default async function decorate(block) {
   const placeholders = await fetchPlaceholders();
 
-  const graphqlUrl = `${placeholders.graphqlurl}genericContentByPath;path=`;
+  const graphqlUrl = `${placeholders.graphqlUrl}genericContentByPath;path=`;
 
   try {
     const fragUrl = block?.querySelector("a")?.getAttribute("href");

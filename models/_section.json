@@ -266,6 +266,11 @@
             {
               "name": "Milestones",
               "value": "milestones"
+             
+            },
+            {
+               "name": "Rate Details",
+              "value": "rate-details"
             }
           ]
         }
@@ -296,7 +301,10 @@
         "hero-banner",
         "content-fragment",
         "interest-table",
-        "icon-library"
+        "icon-library",
+        "faq-productdetail",
+        "compare-accounts",
+        "stepper"
       ]
     }
   ]
