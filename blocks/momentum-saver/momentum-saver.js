@@ -1,4 +1,4 @@
-export default function decorateMomentumSaver() {
+(function decorateMomentumSaver() {
   const allMomentumSections = document.querySelectorAll('.momentum-saver-section');
 
   allMomentumSections?.forEach((momentumSection) => {
@@ -46,4 +46,4 @@ export default function decorateMomentumSaver() {
     interestRateWrap.insertAdjacentHTML('afterend', interestRate.innerHTML);
     interestRateWrap.remove();
   });
-}
+}());

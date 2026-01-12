@@ -1,0 +1,46 @@
+@use '../../styles/base' as *;
+
+.rate-details {
+  @include responsive-container;
+
+  display: grid;
+  grid-template-columns: 384px auto;
+
+  .columns-wrapper {
+    grid-row: 1 / 100;
+    
+    h1, h2, h3, h4, h5, h6 {
+      @include typo-heading1;
+
+      color: $heading-default;
+      margin-bottom: 16px;
+    }
+
+    p {
+      @include typo-body;
+
+      color: $body-default;
+      margin-bottom: 32px;
+    }
+
+    .button-container {
+      display: inline-block;
+      margin-right: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .button {
+      @include button('primary');
+
+      font-style: normal;
+    }
+
+    .button.secondary {
+      @include button('secondary');
+    }
+  }
+
+}

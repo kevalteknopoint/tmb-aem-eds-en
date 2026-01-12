@@ -1,16 +1,19 @@
 import {
-  div, h1, h2, h3, p, a, ul, li, span,
+  div, h1, h2, h3, p, a, ul, li,
+  // span,
   img,
 } from '../../scripts/dom-helpers.js';
 import { fetchPlaceholders } from '../../scripts/placeholders.js';
 
 export default async function decorate(block) {
+  if (window.location.origin.includes("author")) return;
+
   const secwrapper = document?.querySelector(".section-wrapper");
   if (!secwrapper) return;
 
   const placeholders = await fetchPlaceholders();
 
-  const graphqlUrl = `${placeholders.graphqlurl}faqDetailByPath;path=`;
+  const graphqlUrl = `${placeholders.graphqlUrl}faqDetailByPath;path=`;
 
   try {
     const fragUrl = block?.querySelector("a")?.getAttribute("href");
@@ -39,16 +42,16 @@ export default async function decorate(block) {
     let rightSection = false;
 
     // ========== Build Sections + Right Nav ==========
-    let numCount = 0;
+    // let numCount = 0;
     faq.faqContentReference.forEach((content) => {
       const id = content.sectionTitle?.toLowerCase().replace(/\s+/g, "-");
 
       if (content.sectionTitle) {
         rightSection = true;
-        numCount += 1;
+        // numCount += 1;
         ulEl.append(
           li(
-            span(`[${numCount}]`),
+            // span(`[${numCount}]`),
             a({ href: `#${id}` }, content.sectionTitle),
           )
         );

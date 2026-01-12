@@ -36,11 +36,19 @@
   padding:16px 0;
 }
 
+.faq-accordion .accordion-wrapper .block .accordion-item::-webkit-details-marker{
+  display:none !important;
+}
+
 .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label{
   align-items:flex-start;
   display:flex;
   justify-content:space-between;
   list-style:none;
+}
+
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label::marker, .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label::-webkit-details-marker{
+  display:none;
 }
 
 .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label p{

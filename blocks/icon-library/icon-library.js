@@ -1,7 +1,7 @@
 import { injectIcon } from "../../scripts/aem.js";
 import { div, h1, input, p } from "../../scripts/dom-helpers.js";
 
-export default function decorateIconLibrary() {
+(function decorateIconLibrary() {
   if (!document.querySelector('.icon-library')) return;
 
   function showToast(message, duration = 3000) {
@@ -103,4 +103,4 @@ export default function decorateIconLibrary() {
       showToast("Icon code copied");
     });
   });
-}
+}());

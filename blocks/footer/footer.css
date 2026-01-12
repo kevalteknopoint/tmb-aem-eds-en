@@ -83,7 +83,8 @@ footer .footer > div{
 }
 
 .section.tmb-footer .tmb-footer-wrapper .ul-4 li{
-  width:271px;
+  max-width:271px;
+  width:100%;
 }
 
 .section.tmb-footer .tmb-footer-wrapper .ul-5,
@@ -114,7 +115,8 @@ footer .footer > div{
 }
 
 .section.tmb-footer .tmb-footer-wrapper .ul-9 li{
-  width:271px;
+  max-width:271px;
+  width:100%;
 }
 
 .section.tmb-footer .tmb-footer-wrapper .ul-10,
@@ -576,7 +578,7 @@ footer .footer > div{
     display:flex;
     flex-wrap:wrap;
     gap:24px;
-    justify-content:flex-start;
+    justify-content:space-between;
     margin-top:24px;
     padding-top:20px;
   }
