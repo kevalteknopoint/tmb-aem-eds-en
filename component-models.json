@@ -359,6 +359,18 @@
             "value": "momentum-direct-variant"
           },
           {
+            "name": "Circular Image",
+            "value": "circular-image "
+          },
+          {
+            "name": "Variation Border",
+            "value": "variation-border"
+          },
+          {
+            "name": "Milestones",
+            "value": "milestones"
+          },
+          {
             "name": "Rate Details",
             "value": "rate-details"
           }
@@ -1054,6 +1066,23 @@
             "value": "white"
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "tabsitem",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Tab Title"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   },
