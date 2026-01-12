@@ -271,6 +271,14 @@
             {
                "name": "Rate Details",
               "value": "rate-details"
+            },
+            {
+              "name": "Home loan explaind",
+              "value": "home-loan-explained"
+            },
+            {
+              "name": "which loan suits you",
+              "value": "lone-suits-u"
             }
           ]
         }

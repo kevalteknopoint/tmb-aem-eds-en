@@ -1,0 +1,31 @@
+@use '../../styles/base' as *;
+
+.pipe-grid {
+    display: grid;
+    gap: 1px;
+}
+
+.pipe-grid-row {
+    display: grid;
+    grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+    border-bottom: 1px solid #00000033;
+    padding: 16px 0;
+
+    &:first-child {
+        border-top: 1px solid #00000033;
+    }
+}
+
+.pipe-grid-header {
+    border-bottom: 4px solid $heading-default;
+
+    .pipe-grid-cell {
+        @include typo-heading3;
+        color: $heading-default;
+    }
+}
+
+.pipe-grid-cell {
+    @include typo-body;
+    color: $body-default;
+}
