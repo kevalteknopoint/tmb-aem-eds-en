@@ -1,0 +1,128 @@
+.rate-details .columns-wrapper .button, .rate-details .columns-wrapper .button.secondary{
+  align-items:center;
+  border:none;
+  border-radius:var(--radius-button);
+  cursor:pointer;
+  display:flex;
+  font-family:var(--font-family-h5);
+  font-weight:var(--font-weight-h5);
+  gap:16px;
+  justify-content:center;
+  padding-inline:24px;
+  text-align:center;
+  transition:all 0.3s ease-in-out;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
+.rate-details{
+  display:grid;
+  grid-template-columns:384px auto;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
+}
+
+.rate-details .columns-wrapper{
+  grid-row:1/100;
+}
+
+.rate-details .columns-wrapper h1, .rate-details .columns-wrapper h2, .rate-details .columns-wrapper h3, .rate-details .columns-wrapper h4, .rate-details .columns-wrapper h5, .rate-details .columns-wrapper h6{
+  color:var(--heading-default);
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  margin-bottom:16px;
+  text-transform:initial;
+}
+
+.rate-details .columns-wrapper p{
+  color:var(--body-default);
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  margin-bottom:32px;
+  text-transform:initial;
+}
+
+.rate-details .columns-wrapper .button-container{
+  display:inline-block;
+  margin-right:8px;
+}
+
+.rate-details .columns-wrapper .button-container:last-child{
+  margin-right:0;
+}
+
+.rate-details .columns-wrapper .button{
+  background-color:var(--color-button-primary-default);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+  font-size:var(--font-size-h5);
+  font-style:normal;
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:8px;
+}
+
+.rate-details .columns-wrapper .button:hover{
+  background-color:var(--color-button-primary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.rate-details .columns-wrapper .button:active{
+  background-color:var(--color-button-primary-press);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.rate-details .columns-wrapper .button:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.rate-details .columns-wrapper .button.secondary{
+  background-color:var(--color-button-secondary-default);
+  border:none;
+  color:var(--color-button-text-stroke-default);
+  font-size:var(--font-size-h5);
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:8px;
+}
+
+.rate-details .columns-wrapper .button.secondary:hover{
+  background-color:var(--color-button-secondary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-hover);
+}
+
+.rate-details .columns-wrapper .button.secondary:active{
+  background-color:var(--color-button-secondary-press);
+  border:none;
+  color:var(--color-button-text-stroke-press);
+}
+
+.rate-details .columns-wrapper .button.secondary:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+@media screen and (max-width: 1279px){
+  .rate-details{
+    padding-inline:24px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .rate-details{
+    padding-inline:16px;
+  }
+}
