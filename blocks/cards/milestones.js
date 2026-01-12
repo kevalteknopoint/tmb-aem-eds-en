@@ -83,6 +83,7 @@ export default function milestones(block) {
 
   // Wait for next frame to ensure container has layout
   requestAnimationFrame(() => {
+    // eslint-disable-next-line
     const swiper = new Swiper(container, {
       slidesPerView: "auto",
       // spaceBetween: 16,
@@ -100,10 +101,10 @@ export default function milestones(block) {
         1400: { slidesPerView: 4.5, spaceBetween: 32 },
       },
       on: {
-        init: function () {
+        init() {
           this.update(); // Force update after init
         },
-        resize: function () {
+        resize() {
           this.update(); // Update on resize to fix mobile issues
         },
       },

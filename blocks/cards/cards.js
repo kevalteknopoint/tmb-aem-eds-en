@@ -17,7 +17,7 @@ export default function decorate(block) {
     newsHomepage(block);
   } else if (block.closest(".news-helpful")) {
     newsHelpful(block);
-  }else {
+  } else {
     /* change to ul, li */
     const ul = document.createElement("ul");
     [...block.children].forEach((row) => {
@@ -54,5 +54,4 @@ export default function decorate(block) {
     console.log('inside');
     newsHomepage(block);
   }
-
 }
