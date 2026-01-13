@@ -13,9 +13,16 @@ import { div } from "../../scripts/dom-helpers.js";
         .filter(Boolean)
         .map((innerUl) => [...innerUl.querySelectorAll(':scope > li')]);
 
-      if (!rows.length) return;
+      if (rows.length < 2) return;
 
-      const [headerRow, ...bodyRows] = rows;
+      const firstRow = rows[0];
+
+      const isHeaderRow = firstRow.some((cellLi) =>
+        cellLi.querySelector('h1, h2, h3, h4, h5, h6')
+      );
+
+      const headerRow = isHeaderRow ? firstRow : null;
+      const bodyRows = isHeaderRow ? rows.slice(1) : rows;
 
       const columnCount = Math.max(
         ...rows.map((r) => r.length),
@@ -26,7 +33,8 @@ import { div } from "../../scripts/dom-helpers.js";
         style: `--cols: ${columnCount}`,
       });
 
-      if (headerRow?.length) {
+      // Header row (only if detected)
+      if (headerRow) {
         const headerEl = div({
           class: 'pipe-grid-row pipe-grid-header',
         });
@@ -40,6 +48,7 @@ import { div } from "../../scripts/dom-helpers.js";
         gridEl.append(headerEl);
       }
 
+      // Body rows
       bodyRows.forEach((row) => {
         const rowEl = div({ class: 'pipe-grid-row' });
 

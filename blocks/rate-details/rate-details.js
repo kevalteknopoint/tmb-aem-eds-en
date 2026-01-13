@@ -1,70 +1,64 @@
 import { div } from '../../scripts/dom-helpers.js';
 
 function createGrid(block) {
-  block.querySelectorAll('ul').forEach((ulEl) => {
-    const liEls = [...ulEl.querySelectorAll(':scope > li')];
-    if (liEls.length < 2) return;
+  block.querySelectorAll(':scope > ul, .default-content-wrapper > ul').forEach((outerUl) => {
+    const outerLis = [...outerUl.querySelectorAll(':scope > li')];
+    if (!outerLis.length) return;
 
-    let headerCells = null;
-    let startIndex = 0;
+    const rows = outerLis
+      .map((outerLi) => outerLi.querySelector(':scope > ul'))
+      .filter(Boolean)
+      .map((innerUl) => [...innerUl.querySelectorAll(':scope > li')]);
 
-    const firstLi = liEls[0];
-    const headerEl = firstLi.querySelector('h1, h2, h3, h4, h5, h6');
+    if (rows.length < 2) return;
 
-    if (headerEl && headerEl.textContent.includes('|')) {
-      headerCells = headerEl.textContent
-        .split('|')
-        .map((c) => c.trim());
-      startIndex = 1;
-    }
+    const firstRow = rows[0];
 
-    const bodyRows = liEls
-      .slice(startIndex)
-      .map((li) => li.textContent.trim())
-      .filter((text) => text.includes('|'))
-      .map((text) => text.split('|').map((c) => c.trim()));
-
-    if (bodyRows.length < 1) return;
-
-    const columnCount = Math.max(
-      headerCells ? headerCells.length : 0,
-      ...bodyRows.map((r) => r.length),
+    const isHeaderRow = firstRow.some((cellLi) =>
+      cellLi.querySelector('h1, h2, h3, h4, h5, h6')
     );
 
-    if (headerCells) {
-      while (headerCells.length < columnCount) headerCells.push('');
-    }
+    const headerRow = isHeaderRow ? firstRow : null;
+    const bodyRows = isHeaderRow ? rows.slice(1) : rows;
 
-    bodyRows.forEach((row) => {
-      while (row.length < columnCount) row.push('');
-    });
+    const columnCount = Math.max(
+      ...rows.map((r) => r.length),
+    );
 
     const gridEl = div({
       class: 'pipe-grid',
       style: `--cols: ${columnCount}`,
     });
 
-    // Header row
-    if (headerCells) {
-      const headerRow = div({ class: 'pipe-grid-row pipe-grid-header' },
-        ...headerCells.map((cell) =>
-          div({ class: 'pipe-grid-cell' }, cell || ''),
-        ),
-      );
-      gridEl.append(headerRow);
+    // Header row (only if detected)
+    if (headerRow) {
+      const headerEl = div({
+        class: 'pipe-grid-row pipe-grid-header',
+      });
+
+      headerRow.forEach((cellLi) => {
+        const cell = div({ class: 'pipe-grid-cell' });
+        [...cellLi.childNodes].forEach((n) => cell.append(n.cloneNode(true)));
+        headerEl.append(cell);
+      });
+
+      gridEl.append(headerEl);
     }
 
     // Body rows
     bodyRows.forEach((row) => {
-      const rowEl = div({ class: 'pipe-grid-row' },
-        ...row.map((cell) =>
-          div({ class: 'pipe-grid-cell' }, cell || ''),
-        ),
-      );
+      const rowEl = div({ class: 'pipe-grid-row' });
+
+      row.forEach((cellLi) => {
+        const cell = div({ class: 'pipe-grid-cell' });
+        [...cellLi.childNodes].forEach((n) => cell.append(n.cloneNode(true)));
+        rowEl.append(cell);
+      });
+
       gridEl.append(rowEl);
     });
 
-    ulEl.replaceWith(gridEl);
+    outerUl.replaceWith(gridEl);
   });
 }
 
