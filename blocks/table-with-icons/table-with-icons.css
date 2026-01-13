@@ -61,7 +61,7 @@
   border-top:0;
 }
 
-.table-with-icons .pipe-grid-header .pipe-grid-cell{
+.table-with-icons .pipe-grid-header .pipe-grid-cell h1, .table-with-icons .pipe-grid-header .pipe-grid-cell h2, .table-with-icons .pipe-grid-header .pipe-grid-cell h3, .table-with-icons .pipe-grid-header .pipe-grid-cell h4, .table-with-icons .pipe-grid-header .pipe-grid-cell h5, .table-with-icons .pipe-grid-header .pipe-grid-cell h6{
   color:var(--heading-default);
   font-family:var(--font-family-h3);
   font-size:var(--font-size-h3);

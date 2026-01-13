@@ -60,9 +60,11 @@
     border-bottom: 4px solid $heading-default;
 
     .pipe-grid-cell {
-      @include typo-heading3;
-      
-      color: $heading-default;
+      h1, h2, h3, h4, h5, h6 {
+        @include typo-heading3;
+        
+        color: $heading-default;
+      }
     }
   }
 
