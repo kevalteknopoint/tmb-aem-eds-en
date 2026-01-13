@@ -1,33 +1,95 @@
 @use '../../styles/base' as *;
 
-.pipe-grid {
+.table-with-icons {
+  @include responsive-container;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include typo-heading1;
+
+    color: $heading-default;
+    margin-bottom: 40px;
+
+    @include mobile {
+      margin-bottom: 24px;
+    }
+  }
+
+  &:has(h1+p, h2+p, h3+p, h4+p, h5+p, h6+p) {
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 16px;
+    }
+
+    p {
+      margin-bottom: 40px;
+
+      @include mobile {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  p {
+    @include typo-body;
+
+    color: $body-default;
+  }
+
+  .pipe-grid {
     display: grid;
     gap: 1px;
-}
+  }
 
-.pipe-grid-row {
+  .pipe-grid-row {
     display: grid;
     grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
     border-bottom: 1px solid #00000033;
     padding: 16px 0;
 
-    &:first-child {
-        border-top: 1px solid #00000033;
+    &:first-child:not(.pipe-grid-header) {
+      border-top: 1px solid #00000033;
     }
-}
+  }
 
-.pipe-grid-header {
+  .pipe-grid-header {
+    border-top: 0;
     border-bottom: 4px solid $heading-default;
 
     .pipe-grid-cell {
-        @include typo-heading3;
-        
-        color: $heading-default;
+      @include typo-heading3;
+      
+      color: $heading-default;
     }
-}
+  }
 
-.pipe-grid-cell {
+  .pipe-grid-cell {
     @include typo-body;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: $body-default;
+
+    &:first-child {
+      justify-content: flex-start;
+    }
+  }
+
+  .icon {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  svg {
+    text-align: center;
+    display: block;
+    width: 36px;
+    height: 36px;
+    color: $icon-2-default;
+  }
 }
