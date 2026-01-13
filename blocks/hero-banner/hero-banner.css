@@ -197,6 +197,13 @@ body:has(.product-detail-banner) .breadcrumb.block{
   color:var(--heading-reverse-2);
 }
 
+.product-detail-banner .hero-banner-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:16px;
+}
+
 .product-detail-banner .button{
   background-color:var(--color-button-primary-default);
   border:none;
