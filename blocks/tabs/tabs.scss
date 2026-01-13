@@ -11,7 +11,6 @@
   width: 100%;
 
   .default-content-wrapper {
-
     h1,
     h2,
     h3 {
@@ -24,35 +23,38 @@
 
   .tabs {
     .tabs-list {
-      // border-radius: 24px;
-      border: 1px solid $heading-light;
+      border: 1px solid $link-default;
       display: flex;
       align-items: center;
       width: 471px;
-      border-radius: 999px;
+      border-radius: $radius-card;
       overflow: hidden;
 
       .tabs-tab {
         flex: 1;
         padding: 8px 0;
         background: #fff;
-        border: 1px solid $heading-light;
         cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
+        border-right: 1px solid $link-default;
+
+        &:last-child {
+          border-right: 0;
+        }
 
         p {
           width: 157px;
           margin: 0;
-
+          color: $heading-default;
         }
 
         &[aria-selected='true'] {
           background-color: $heading-default;
 
           p {
-            color: #FFF;
+            color: $icon-default;
           }
         }
       }
@@ -68,7 +70,7 @@
         display: none;
       }
 
-      .panel1 {
+      div {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 64px;
