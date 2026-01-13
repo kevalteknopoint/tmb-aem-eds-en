@@ -68,6 +68,7 @@
   font-weight:var(--font-weight-h3);
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
+  margin-bottom:0;
   text-transform:initial;
 }
 
