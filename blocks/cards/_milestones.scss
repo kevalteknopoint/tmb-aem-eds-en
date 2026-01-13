@@ -1,173 +1,130 @@
 @use '../../styles/base' as *;
 
-// .milestones{
-//     background-color: $bg-reverse;
-
-//     .default-content-wrapper{
-//          @include responsive-container;
-//         display: block;
-//         h2{
-//             @include typo-heading1;
-//             color: $color-variants-heading-reverse;
-//         }
-//         p{
-//             color: $color-variants-heading-reverse;
-//             @include typo-body;
-//              &:last-child{
-//                 display: block;
-//              } 
-//         }
-//     }
-//     .cards-wrapper{
-//         .block{
-//             .swiper-wrapper{
-//                 .swiper-slide{
-//                     gap:0;
-//                     background: unset;
-//                     border: none;
-//                     border-radius: unset;
-//                     &:hover{
-//                         border: none;
-//                         box-shadow: none;
-//                     }
-//                     div{
-//                         &:last-child{
-//                             p{
-//                                 color: $body-reverse;
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
 .milestones {
-    background-color: $bg-reverse;
+  background-color: $bg-reverse;
 
-    .default-content-wrapper {
-        @include responsive-container;
-        display: block;
-        margin-bottom: unset;
+  .default-content-wrapper {
+    @include responsive-container;
 
-        h2 {
-            @include typo-heading1;
-            color: $color-variants-heading-reverse;
-            margin-bottom: 16px;
-        }
+    display: block;
+    margin-bottom: unset;
 
-        p {
-            color: $color-variants-heading-reverse;
-            @include typo-body;
+    h2 {
+      @include typo-heading1;
 
-            &:last-child {
-                display: block;
-            }
-        }
+      color: $color-variants-heading-reverse;
+      margin-bottom: 16px;
     }
 
-    .cards-wrapper {
-        position: relative;
-        padding-top: 40px;
-        padding-left: calc((100% - 1440px) / 2 + 64px);
+    p {
+      color: $color-variants-heading-reverse;
+
+      @include typo-body;
+
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+
+  .cards-wrapper {
+    position: relative;
+    padding-top: 40px;
+    padding-left: calc((100% - 1440px) / 2 + 64px);
+
+    @include mobile {
+      padding-left: 16px; // Reduce side padding for mobile
+      padding-right: 16px;
+      padding-top: 24px; // Slightly smaller top padding on mobile
+    }
+
+
+
+    .block {
+      @include mobile {
+        padding-left: 0;
+      }
+
+      .swiper-wrapper {
+        align-items: flex-start;
 
         @include mobile {
-            padding-left: 16px; // Reduce side padding for mobile
-            padding-right: 16px;
-            padding-top: 24px; // Slightly smaller top padding on mobile
+          flex-direction: row;
+          gap: unset;
         }
 
+        .swiper-slide {
+          gap: 0;
+          background: unset;
+          border: none;
+          border-radius: unset;
+          position: relative;
+          margin-right: unset !important;
+          padding: 32px 32px 0 0;
 
+          @include mobile {
+            width: 220px; // Smaller slide width for mobile
+            max-width: 300px;
+          }
 
-        .block {
-            @include mobile{
-                padding-left: 0;
+          &::before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: rgb(255 255 255 / 35%);
+          }
+
+          &:hover {
+            border: none;
+            box-shadow: none;
+          }
+
+          @include mobile {
+            display: block;
+          }
+
+          /* ===== DOT ON BORDER ===== */
+          div {
+            &:first-child {
+              position: absolute;
+              top: 0; //  22px - (dotHeight / 2)
+              left: 0;
+              width: 10px;
+              height: 10px;
+              background-color: #7fd6d0;
+              border-radius: 50%;
             }
 
-            .swiper-wrapper {
-                align-items: flex-start;
-                @include mobile{
-                    flex-direction: row;
-                    gap: unset;
-                    
+            &:last-child {
+              p {
+                @include typo-body;
+
+                color: $body-reverse;
+
+                &:first-child {
+                  @include typo-heading4;
+
+                  margin-bottom: 16px;
                 }
-
-                .swiper-slide {
-                    gap: 0;
-                    background: unset;
-                    border: none;
-                    border-radius: unset;
-                    position: relative;
-                    padding-top: 32px;
-                    padding-right: 32px;
-                    margin-right: unset !important;
-                    padding: 32px 32px 0 0;
-
-                    @include mobile {
-                        width: 220px; // Smaller slide width for mobile
-                        max-width: 300px;
-                    }
-
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        top: 4px;
-                        left: 0;
-                        right: 0;
-                        height: 2px;
-                        background-color: rgba(255, 255, 255, 0.35);
-                    }
-
-                    &:hover {
-                        border: none;
-                        box-shadow: none;
-                    }
-
-                    @include mobile {
-                        display: block;
-                    }
-
-                    /* ===== DOT ON BORDER ===== */
-                    div {
-                        &:first-child {
-                            position: absolute;
-                            top: 0; //  22px - (dotHeight / 2)
-                            left: 0;
-                            width: 10px;
-                            height: 10px;
-                            background-color: #7fd6d0;
-                            border-radius: 50%;
-                        }
-
-                        &:last-child {
-                            // margin-top: 24px;
-
-                            p {
-                                color: $body-reverse;
-                                @include typo-body;
-
-                                &:first-child {
-                                    @include typo-heading4;
-                                    margin-bottom: 16px;
-                                }
-                            }
-                        }
-                    }
-                }          
+              }
             }
-             .nav-wrapper {
-                    padding-right: unset;
-
-                    .swiper-button-next,
-                    .swiper-button-prev {
-                        @include mobile {
-                            display: block;
-                        }
-                    }
-
-                }
+          }
         }
+      }
+
+      .nav-wrapper {
+        .swiper-button-next,
+        .swiper-button-prev {
+          @include mobile {
+            display: block;
+          }
+        }
+
+      }
     }
+  }
 
 }

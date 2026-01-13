@@ -1267,8 +1267,6 @@ html{
   gap:0;
   margin-right:unset !important;
   padding:32px 32px 0 0;
-  padding-right:32px;
-  padding-top:32px;
   position:relative;
 }
 
@@ -1315,10 +1313,6 @@ html{
   line-height:var(--font-height-h4);
   margin-bottom:16px;
   text-transform:initial;
-}
-
-.milestones .cards-wrapper .block .nav-wrapper{
-  padding-right:unset;
 }
 
 @media (min-width: 766px) and (max-width: 1220px){
