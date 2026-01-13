@@ -35,6 +35,8 @@ function setMobileView(block) {
 }
 
 export default function cardCarouselHomepage(block) {
+  if (window.location.origin.includes('author')) return;
+
   const slides = Array.from(block.children);
   slides.forEach((el) => {
     el.classList.add("swiper-slide");
