@@ -381,6 +381,10 @@
           {
             "name": "Table with icons",
             "value": "table-with-icons"
+          },
+          {
+            "name": "Heading tag H1",
+            "value": "heading-tag-h1"
           }
         ]
       }
