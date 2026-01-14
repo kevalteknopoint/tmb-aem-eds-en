@@ -30,7 +30,10 @@
       "interest-table",
       "icon-library",
       "faq-productdetail",
-      "compare-accounts"
+      "compare-accounts",
+      "stepper",
+      "tabs",
+      "interest-rates"
     ]
   },
   {
@@ -74,7 +77,8 @@
       "image",
       "button",
       "title",
-      "content-fragment"
+      "content-fragment",
+      "accordion"
     ]
   },
   {
@@ -86,13 +90,31 @@
   {
     "id": "faq-productdetail",
     "components": [
-      "accordion-item"
+      "faq-accordion-item"
     ]
   },
   {
     "id": "hero-banner",
     "components": [
       "banner"
+    ]
+  },
+  {
+    "id": "interest-rates",
+    "components": [
+      "rate-details"
+    ]
+  },
+  {
+    "id": "stepper",
+    "components": [
+      "stepper-item"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tabsitem"
     ]
   }
 ]

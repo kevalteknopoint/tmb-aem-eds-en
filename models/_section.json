@@ -254,6 +254,31 @@
             {
               "name": "Momentum Direct Variant",
               "value": "momentum-direct-variant"
+            },
+            {
+              "name": "Circular Image",
+              "value": "circular-image "
+            },
+            {
+              "name": "Variation Border",
+              "value": "variation-border"
+            },
+            {
+              "name": "Milestones",
+              "value": "milestones"
+             
+            },
+            {
+               "name": "Rate Details",
+              "value": "rate-details"
+            },
+            {
+              "name": "Home Loan Explained",
+              "value": "home-loan-explained"
+            },
+            {
+              "name": "Table with icons",
+              "value": "table-with-icons"
             }
           ]
         }
@@ -286,7 +311,10 @@
         "interest-table",
         "icon-library",
         "faq-productdetail",
-        "compare-accounts"
+        "compare-accounts",
+        "stepper",
+        "tabs",
+        "interest-rates"
       ]
     }
   ]

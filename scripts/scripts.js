@@ -1,6 +1,3 @@
-import decorateMomentumSaver from '../blocks/momentum-saver/momentum-saver.js';
-import decorateProductNavigation from '../blocks/product-navigation/product-navigation.js';
-import decorateTable from '../blocks/table/table.js';
 import {
   loadHeader,
   loadFooter,
@@ -16,7 +13,7 @@ import {
 } from './aem.js';
 import { pageIntialization } from './analytics/exports.js';
 import { fetchPlaceholders } from './placeholders.js';
-import decorateIconLibrary from '../blocks/icon-library/icon-library.js';
+import loadNonBlockLibs from './components.js';
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -205,10 +202,7 @@ async function loadPage() {
   } catch (error) {
     console.error('Error loading SVG:', error);
   }
-  decorateMomentumSaver();
-  decorateProductNavigation();
-  decorateTable();
-  decorateIconLibrary();
+  loadNonBlockLibs();
   loadDelayed();
 }
 

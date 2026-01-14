@@ -38,13 +38,12 @@ html {
   display: grid;
   grid-template-columns: 1fr;
   column-gap: 74px;
-  row-gap: 32px;
   position: relative;
   align-items: start;
   padding-block: 32px;
 
   &:has(.right-section-wrapper) {
-    grid-template-columns: 1fr 392px; // Left | Right
+    grid-template-columns: 1fr 392px;
   }
 
   .default-content-wrapper {
@@ -87,10 +86,15 @@ html {
     ul {
       list-style-type: disc;
       padding-bottom: 32px;
-      list-style-position: inside;
+      list-style-position: outside;
+      padding-left: 24px;
 
       li {
-        padding: 0;
+        padding-bottom: 8px;
+
+        &:last-child {
+          padding-bottom: 0;
+        }
       }
     }
 
@@ -121,7 +125,7 @@ html {
 
   .right-section-wrapper {
     grid-column: 2;
-    grid-row: 1 / span 1;
+    grid-row: 1 / 100;
     align-self: start;
     margin-top: 0;
     position: sticky;

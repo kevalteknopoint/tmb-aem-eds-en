@@ -15,7 +15,7 @@ function isElementInView(container, element, percentVisible = 1) {
   return visiblePercent >= percentVisible;
 }
 
-export default function decorateProductNavigation() {
+(function decorateProductNavigation() {
   const productNav = document.querySelector(".product-navigation");
   const scrollWrapper = productNav?.querySelector(".default-content-wrapper");
   const scrollContainer = productNav?.querySelector(".default-content-wrapper ul");
@@ -24,6 +24,7 @@ export default function decorateProductNavigation() {
 
   // eslint-disable-next-line
   const offsetSub = isMobile() ? 60 : 90;
+  const threshold = isMobile() ? 0.3 : 0.4;
 
   const allLinks = productNav?.querySelectorAll("ul a");
   const allContainers = Array.from(allLinks).map((link) => {
@@ -77,7 +78,7 @@ export default function decorateProductNavigation() {
       });
     },
     {
-      threshold: 0.4,
+      threshold,
       rootMargin: "0px 0px -20% 0px",
     }
   );
@@ -120,4 +121,4 @@ export default function decorateProductNavigation() {
   toggleFade();
 
   scrollContainer.addEventListener("scroll", toggleFade);
-}
+}());

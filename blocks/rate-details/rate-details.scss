@@ -1,0 +1,160 @@
+@use '../../styles/base' as *;
+
+.rate-details {
+  @include responsive-container;
+
+  display: grid;
+  grid-template-columns: 384px auto;
+
+  @include mobile {
+    grid-template-columns: auto;
+  }
+
+  .interest-rates.block {
+    margin-bottom: 40px;
+  }
+
+  .columns-wrapper {
+    grid-row: 1 / 100;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include typo-heading1;
+
+      color: $heading-default;
+      margin-bottom: 16px;
+    }
+
+    p {
+      @include typo-body;
+
+      color: $body-default;
+      margin-bottom: 32px;
+    }
+
+    .button-container {
+      display: inline-block;
+      margin-right: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .button {
+      @include button('primary');
+
+      font-style: normal;
+    }
+
+    .button.secondary {
+      @include button('secondary');
+    }
+  }
+
+  .accordion-wrapper {
+    width: 100%;
+
+    .block {
+      .accordion-item {
+        border-bottom: 1px solid $line-default;
+        border-top: 1px solid $line-default;
+        padding: 16px 0;
+
+        &::-webkit-details-marker {
+          display: none;
+        }
+
+        .accordion-item-label {
+          list-style: none;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+
+          &::marker,
+          &::-webkit-details-marker {
+            display: none;
+          }
+
+          p {
+            color: $color-button-primary-default;
+            margin-top: 4px;
+
+            @include typo-heading3
+          }
+
+          svg {
+            color: $color-button-primary-default;
+            min-width: 40px;
+            width: 40px;
+            height: 40px;
+            padding: 8px;
+            border-radius: 44px;
+            background: $bg-light;
+            cursor: pointer;
+            margin-left: 32px;
+            transform: rotate(180deg);
+          }
+        }
+
+        .accordion-item-body {
+          margin-top: 8px;
+
+          p {
+            color: $body-default;
+
+            @include typo-body;
+          }
+        }
+
+        &[open] {
+          summary {
+            svg {
+              transform: rotate(0deg);
+            }
+          }
+        }
+
+        &.accordion-item:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  .pipe-grid {
+    display: grid;
+    gap: 1px;
+  }
+
+  .pipe-grid-row {
+    display: grid;
+    grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+    border-bottom: 1px solid #00000033;
+    padding: 16px 0;
+    
+    &:first-child {
+      border-top: 1px solid #00000033;
+    }
+  }
+
+  .pipe-grid-header {
+    border-bottom: 4px solid $heading-default;
+
+    .pipe-grid-cell {
+      @include typo-heading3;
+      
+      color: $heading-default;
+    }
+  }
+
+  .pipe-grid-cell {
+    @include typo-body;
+
+    color: $body-default;
+  }
+}

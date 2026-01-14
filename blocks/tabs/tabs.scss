@@ -1,0 +1,95 @@
+@use '../../styles/base' as *;
+
+.home-loan-explained {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calc(1440px - 0px);
+  padding-inline: 64px;
+  width: 100%;
+
+  .default-content-wrapper {
+
+    h1,
+    h2,
+    h3 {
+      color: $heading-light;
+
+      @include typo-heading1;
+
+    }
+  }
+
+  .tabs {
+    .tabs-list {
+      // border-radius: 24px;
+      border: 1px solid $heading-light;
+      display: flex;
+      align-items: center;
+      width: 471px;
+      border-radius: 999px;
+      overflow: hidden;
+
+      .tabs-tab {
+        flex: 1;
+        padding: 8px 0;
+        background: #fff;
+        border: 1px solid $heading-light;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+          width: 157px;
+          margin: 0;
+
+        }
+
+        &[aria-selected='true'] {
+          background-color: $heading-default;
+
+          p {
+            color: #FFF;
+          }
+        }
+      }
+    }
+
+    .tabs-panel {
+      margin-top: -1px;
+      padding: 24px;
+      overflow: auto;
+      padding-top: 32px;
+
+      &[aria-hidden='true'] {
+        display: none;
+      }
+
+      .panel1 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 64px;
+        row-gap: 16px;
+
+        h3,
+        h2 {
+          color: $heading-light;
+        
+          @include typo-heading3;
+
+          grid-row: 1;
+        }
+
+        p {
+          grid-row: 2;
+          color: black;
+          font-size: 16px;
+        }
+      }
+
+    }
+  }
+}

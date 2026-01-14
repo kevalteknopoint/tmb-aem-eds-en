@@ -104,6 +104,7 @@
     }
 
     .momentum-second-content {
+
       h1,
       h2,
       h3 {
@@ -136,13 +137,14 @@
 
         a {
           display: block;
+          margin-top: 32px;
 
           span {
             display: block;
           }
 
           svg {
-            margin-top: 32px;
+            // margin-top: 32px;
             display: flex;
             justify-content: flex-start;
             width: 135px;
@@ -180,7 +182,13 @@
 
   &.momentum-image-saver {
     .columns-wrapper .momentum-columns div .momentum-second-content {
-      h1, h2, h3, h4, h5, h6 {
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         color: $heading-reverse;
       }
 
@@ -241,6 +249,7 @@
   background-color: $heading-default;
 
   .momentum-second-content {
+
     h1,
     h2,
     h3,
@@ -280,7 +289,10 @@
         }
 
         .momentum-second-content {
-          h1, h2, h3 {
+
+          h1,
+          h2,
+          h3 {
             @include typo-heading1;
           }
 
@@ -330,3 +342,25 @@
 
   }
 }
+
+
+//circular image variant
+
+.momentum-saver-section.circular-image {
+
+    .columns-wrapper {
+      .momentum-columns {
+        div {
+          gap: 64px;
+          .columns-img-col {
+            max-width: 250px;
+          }
+          .momentum-second-content{
+            // .button-container{
+            //      @include button('outlined');
+            // }
+          }
+        }
+      }
+    }
+  }

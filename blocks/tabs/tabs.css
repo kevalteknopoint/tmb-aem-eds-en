@@ -1,0 +1,91 @@
+.home-loan-explained{
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:1440px;
+  padding-inline:64px;
+  width:100%;
+}
+
+.home-loan-explained .default-content-wrapper h1,
+.home-loan-explained .default-content-wrapper h2,
+.home-loan-explained .default-content-wrapper h3{
+  color:var(--heading-light);
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  text-transform:initial;
+}
+
+.home-loan-explained .tabs .tabs-list{
+  align-items:center;
+  border:1px solid var(--heading-light);
+  border-radius:999px;
+  display:flex;
+  overflow:hidden;
+  width:471px;
+}
+
+.home-loan-explained .tabs .tabs-list .tabs-tab{
+  align-items:center;
+  background:#fff;
+  border:1px solid var(--heading-light);
+  cursor:pointer;
+  display:flex;
+  flex:1;
+  justify-content:center;
+  padding:8px 0;
+}
+
+.home-loan-explained .tabs .tabs-list .tabs-tab p{
+  margin:0;
+  width:157px;
+}
+
+.home-loan-explained .tabs .tabs-list .tabs-tab[aria-selected="true"]{
+  background-color:var(--heading-default);
+}
+
+.home-loan-explained .tabs .tabs-list .tabs-tab[aria-selected="true"] p{
+  color:#FFF;
+}
+
+.home-loan-explained .tabs .tabs-panel{
+  margin-top:-1px;
+  overflow:auto;
+  padding:24px;
+  padding-top:32px;
+}
+
+.home-loan-explained .tabs .tabs-panel[aria-hidden="true"]{
+  display:none;
+}
+
+.home-loan-explained .tabs .tabs-panel .panel1{
+  display:grid;
+  gap:64px;
+  grid-template-columns:repeat(3, 1fr);
+  row-gap:16px;
+}
+
+.home-loan-explained .tabs .tabs-panel .panel1 h3,
+.home-loan-explained .tabs .tabs-panel .panel1 h2{
+  color:var(--heading-light);
+  font-family:var(--font-family-h3);
+  font-size:var(--font-size-h3);
+  font-weight:var(--font-weight-h3);
+  grid-row:1;
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
+  text-transform:initial;
+}
+
+.home-loan-explained .tabs .tabs-panel .panel1 p{
+  color:black;
+  font-size:16px;
+  grid-row:2;
+}

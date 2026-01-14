@@ -52,7 +52,8 @@
         "image",
         "button",
         "title",
-        "content-fragment"
+        "content-fragment",
+        "accordion"
       ]
     }
   ]

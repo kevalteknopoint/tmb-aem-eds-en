@@ -101,3 +101,9 @@ export function script(...items) { return domEl('script', ...items); }
 export function linkEl(...items) { return domEl('link', ...items); }
 export function video(...items) { return domEl('video', ...items); }
 export function source(...items) { return domEl('source', ...items); }
+export function table(...items) { return domEl('table', ...items); }
+export function thead(...items) { return domEl('thead', ...items); }
+export function tbody(...items) { return domEl('tbody', ...items); }
+export function th(...items) { return domEl('th', ...items); }
+export function tr(...items) { return domEl('tr', ...items); }
+export function td(...items) { return domEl('td', ...items); }
