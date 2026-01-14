@@ -1,23 +1,3 @@
-// export default async function decorateCustomer(block) {
-//   const columns = block.querySelector(".columns-wrapper div");
-//   columns?.classList?.add("columns-container");
-//   const customerLinkContent = block?.closest('.customer')?.querySelector(".customer .default-content-wrapper");
-//   customerLinkContent?.classList?.add("content-container");
-
-//   if (customerLinkContent) {
-//     const paragraphs = customerLinkContent.querySelectorAll("p");
-//     paragraphs.forEach((p, idx) => {
-//       p.classList.add(`para-${idx}`);
-//     });
-//   }
-// }
-
-
-
-
-
-
-
 export default async function decorateCustomer(block) {
   // 1. Target the columns wrapper and add 'columns-container' class
   // This targets the div that immediately wraps the column cells
@@ -31,7 +11,7 @@ export default async function decorateCustomer(block) {
 
   columnCells.forEach((col) => {
     const btnContainers = col.querySelectorAll('.button-container');
-    
+
     if (btnContainers.length > 0) {
       // Pick the first container as the master
       const mainBtnContainer = btnContainers[0];

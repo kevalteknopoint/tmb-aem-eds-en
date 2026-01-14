@@ -11,7 +11,7 @@ export default function decorateOnlineBanking(block) {
     if (bodies.length === 0) return;
 
     const mainBody = bodies[0];
-    
+
     // Consolidate fragmented bodies
     bodies.slice(1).forEach((extraBody) => {
       while (extraBody.firstChild) {
@@ -23,7 +23,7 @@ export default function decorateOnlineBanking(block) {
     if (idx > 0) {
       const heading = mainBody.querySelector('h1, h2, h3, h4, h5, h6');
       const description = mainBody.querySelector('p:not(.button-container)');
-      
+
       // Setup card-bottom-1
       const topContainer = document.createElement('div');
       topContainer.className = 'card-bottom-1';
@@ -50,28 +50,28 @@ export default function decorateOnlineBanking(block) {
 
       // FIX: Find ALL links instead of just the first one
       const allLinks = Array.from(mainBody.querySelectorAll('a'));
-      
+
       allLinks.forEach((link) => {
         // If it's a badge/icon link, keep it as is; otherwise apply button classes
         if (!link.querySelector('.icon')) {
-            link.className = 'button primary';
+          link.className = 'button primary';
         }
         pButtons.appendChild(link);
       });
 
       // 3. Final Re-assembly
       mainBody.innerHTML = '';
-      
+
       if (topContainer.hasChildNodes()) {
         mainBody.appendChild(topContainer);
       }
-      
+
       if (pButtons.hasChildNodes()) {
         bottomContainer.appendChild(pButtons);
         mainBody.appendChild(bottomContainer);
       }
     }
 
-    li.querySelectorAll('div:empty').forEach(empty => empty.remove());
+    li.querySelectorAll('div:empty').forEach((empty) => empty.remove());
   });
 }
