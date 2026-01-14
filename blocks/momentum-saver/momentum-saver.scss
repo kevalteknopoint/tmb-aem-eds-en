@@ -269,11 +269,12 @@
   }
 }
 
-.momentum-saver-section.momentum-image-saver.image-swapping {
+.momentum-saver-section.image-swapping {
   .columns-wrapper {
     .momentum-columns {
-      div {
+      >div {
         gap: 80px;
+        flex-direction: row-reverse;
 
         @include tablet {
           gap: 32px;
