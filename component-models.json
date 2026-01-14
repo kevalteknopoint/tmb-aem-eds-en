@@ -491,7 +491,6 @@
         "component": "container",
         "name": "banner-button",
         "label": "Button",
-        "collapsible": false,
         "fields": [
           {
             "component": "aem-content",
@@ -533,7 +532,6 @@
         "component": "container",
         "name": "banner-button-2",
         "label": "Button-2",
-        "collapsible": false,
         "fields": [
           {
             "component": "aem-content",
@@ -622,7 +620,6 @@
         "component": "container",
         "name": "banner-button",
         "label": "Button",
-        "collapsible": false,
         "fields": [
           {
             "component": "aem-content",
@@ -664,7 +661,6 @@
         "component": "container",
         "name": "banner-button-2",
         "label": "Button-2",
-        "collapsible": false,
         "fields": [
           {
             "component": "aem-content",
@@ -881,7 +877,6 @@
         "component": "container",
         "name": "button",
         "label": "Button",
-        "collapsible": false,
         "fields": [
           {
             "component": "aem-content",
@@ -920,7 +915,6 @@
         "component": "container",
         "name": "button-2",
         "label": "Button 2",
-        "collapsible": false,
         "fields": [
           {
             "component": "aem-content",

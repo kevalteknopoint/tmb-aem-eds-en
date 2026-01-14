@@ -31,7 +31,7 @@
         }
       }
     },
-     {
+    {
       "title": "Banner Video Item 2",
       "id": "banner-video-item-2",
       "plugins": {
@@ -50,66 +50,66 @@
   "models": [
     {
       "id": "bannervideo",
-      "fields":[
+      "fields": [
         {
-      "component": "multiselect",
-      "name": "classes",
-      "label": "Style",
-      "options": [
-        {
-          "name": "Video banner",
-          "value": "video-banner"
-        },
-        {
-          "name": "Text Center",
-          "value": "text-center"
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Style",
+          "options": [
+            {
+              "name": "Video banner",
+              "value": "video-banner"
+            },
+            {
+              "name": "Text Center",
+              "value": "text-center"
+            }
+          ]
         }
-    ]
-  }
       ]
     },
-  {
-    "id": "banner-video-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "desk_image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "desk_imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "mob_image",
-        "label": "Mobile Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "mob_imageAlt",
-        "label": "Mobile Alt",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "context",
-        "value": "",
-        "label": "context-model",
-        "valueType": "string"
-      },{
+    {
+      "id": "banner-video-item",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "desk_image",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "desk_imageAlt",
+          "label": "Alt",
+          "value": ""
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "mob_image",
+          "label": "Mobile Image",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "mob_imageAlt",
+          "label": "Mobile Alt",
+          "value": ""
+        },
+        {
+          "component": "richtext",
+          "name": "context",
+          "value": "",
+          "label": "context-model",
+          "valueType": "string"
+        },
+        {
           "component": "container",
           "name": "banner-button",
           "label": "Button",
-          "collapsible": false,
           "fields": [
             {
               "component": "aem-content",
@@ -151,7 +151,6 @@
           "component": "container",
           "name": "banner-button-2",
           "label": "Button-2",
-          "collapsible": false,
           "fields": [
             {
               "component": "aem-content",
@@ -189,58 +188,57 @@
             }
           ]
         }
-    ]
-  },
-  {
-    "id": "banner-video-item-2",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "desk_image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "desk_imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "mob_image",
-        "label": "Mobile Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "mob_imageAlt",
-        "label": "Mobile Alt",
-        "value": ""
-      },
-      {
-        "component": "aem-content",
-        "name": "context_video",
-        "value": "",
-        "label": "video",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "context",
-        "value": "",
-        "label": "context-model",
-        "valueType": "string"
-      },
+      ]
+    },
+    {
+      "id": "banner-video-item-2",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "desk_image",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "desk_imageAlt",
+          "label": "Alt",
+          "value": ""
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "mob_image",
+          "label": "Mobile Image",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "mob_imageAlt",
+          "label": "Mobile Alt",
+          "value": ""
+        },
+        {
+          "component": "aem-content",
+          "name": "context_video",
+          "value": "",
+          "label": "video",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "context",
+          "value": "",
+          "label": "context-model",
+          "valueType": "string"
+        },
         {
           "component": "container",
           "name": "banner-button",
           "label": "Button",
-          "collapsible": false,
           "fields": [
             {
               "component": "aem-content",
@@ -282,7 +280,6 @@
           "component": "container",
           "name": "banner-button-2",
           "label": "Button-2",
-          "collapsible": false,
           "fields": [
             {
               "component": "aem-content",
@@ -320,16 +317,13 @@
             }
           ]
         }
-    ]
-  }
-],
-"filters": [
-  {
-    "id": "bannervideo",
-    "components": [
-      "banner-video-item",
-      "banner-video-item-2"
-    ]
-  }
-]
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "bannervideo",
+      "components": ["banner-video-item", "banner-video-item-2"]
+    }
+  ]
 }
