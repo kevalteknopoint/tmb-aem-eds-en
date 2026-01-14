@@ -66,78 +66,64 @@
           "valueType": "string"
         },
         {
-          "component": "container",
-          "name": "button",
-          "label": "Button",
-          "fields": [
+          "component": "aem-content",
+          "name": "button-link",
+          "label": "Button Link"
+        },
+        {
+          "component": "text",
+          "name": "button-linkText",
+          "label": "Button Text"
+        },
+        {
+          "component": "text",
+          "name": "button-linkTitle",
+          "label": "Button Title"
+        },
+        {
+          "component": "select",
+          "name": "button-style-linkType",
+          "label": "Button Classes",
+          "value": "primary",
+          "options": [
             {
-              "component": "aem-content",
-              "name": "button-link",
-              "label": "Button Link"
+              "name": "Primary",
+              "value": "primary"
             },
             {
-              "component": "text",
-              "name": "button-linkText",
-              "label": "Button Text"
-            },
-            {
-              "component": "text",
-              "name": "button-linkTitle",
-              "label": "Button Title"
-            },
-            {
-              "component": "select",
-              "name": "button-style-linkType",
-              "label": "Button Classes",
-              "value":"primary",
-              "options": [
-                {
-                  "name": "Primary",
-                  "value": "primary"
-                },
-                {
-                  "name": "Secondary",
-                  "value": "secondary"
-                }
-              ]
+              "name": "Secondary",
+              "value": "secondary"
             }
           ]
         },
         {
-          "component": "container",
-          "name": "button-2",
-          "label": "Button 2",
-          "fields": [
+          "component": "aem-content",
+          "name": "button-2-link",
+          "label": "Button Link 2"
+        },
+        {
+          "component": "text",
+          "name": "button-2-linkText",
+          "label": "Button Text 2"
+        },
+        {
+          "component": "text",
+          "name": "button-2-linkTitle",
+          "label": "Button Title 2"
+        },
+        {
+          "component": "select",
+          "name": "button-2-style-linkType",
+          "label": "Button Classes",
+          "value": "primary",
+          "options": [
             {
-              "component": "aem-content",
-              "name": "button-2-link",
-              "label": "Button Link 2"
+              "name": "Primary",
+              "value": "primary"
             },
             {
-              "component": "text",
-              "name": "button-2-linkText",
-              "label": "Button Text 2"
-            },
-            {
-              "component": "text",
-              "name": "button-2-linkTitle",
-              "label": "Button Title 2"
-            },
-            {
-              "component": "select",
-              "name": "button-2-style-linkType",
-              "label": "Button Classes",
-              "value":"primary",
-              "options": [
-                {
-                  "name": "Primary",
-                  "value": "primary"
-                },
-                {
-                  "name": "Secondary",
-                  "value": "secondary"
-                }
-              ]
+              "name": "Secondary",
+              "value": "secondary"
             }
           ]
         }
@@ -147,9 +133,7 @@
   "filters": [
     {
       "id": "cards",
-      "components": [
-        "card"
-      ]
+      "components": ["card"]
     }
   ]
 }

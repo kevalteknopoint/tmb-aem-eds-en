@@ -107,84 +107,70 @@
           "valueType": "string"
         },
         {
-          "component": "container",
-          "name": "banner-button",
-          "label": "Button",
-          "fields": [
+          "component": "aem-content",
+          "name": "banner-link",
+          "label": "Button Link"
+        },
+        {
+          "component": "text",
+          "name": "banner-linkText",
+          "label": "Button Text"
+        },
+        {
+          "component": "text",
+          "name": "banner-linkTitle",
+          "label": "Button Title"
+        },
+        {
+          "component": "select",
+          "name": "banner-linkType",
+          "label": "Button Classes",
+          "options": [
             {
-              "component": "aem-content",
-              "name": "banner-link",
-              "label": "Button Link"
+              "name": "default",
+              "value": ""
             },
             {
-              "component": "text",
-              "name": "banner-linkText",
-              "label": "Button Text"
+              "name": "primary",
+              "value": "primary"
             },
             {
-              "component": "text",
-              "name": "banner-linkTitle",
-              "label": "Button Title"
-            },
-            {
-              "component": "select",
-              "name": "banner-linkType",
-              "label": "Button Classes",
-              "options": [
-                {
-                  "name": "default",
-                  "value": ""
-                },
-                {
-                  "name": "primary",
-                  "value": "primary"
-                },
-                {
-                  "name": "secondary",
-                  "value": "secondary"
-                }
-              ]
+              "name": "secondary",
+              "value": "secondary"
             }
           ]
         },
         {
-          "component": "container",
-          "name": "banner-button-2",
-          "label": "Button-2",
-          "fields": [
+          "component": "aem-content",
+          "name": "banner-link-2",
+          "label": "Button 2 Link"
+        },
+        {
+          "component": "text",
+          "name": "banner-linkText-2",
+          "label": "Button 2 Text"
+        },
+        {
+          "component": "text",
+          "name": "banner-linkTitle-2",
+          "label": "Button 2 Title"
+        },
+        {
+          "component": "select",
+          "name": "banner-linkType-2",
+          "label": "Button 2 Classes",
+          "options": [
             {
-              "component": "aem-content",
-              "name": "banner-link-2",
-              "label": "Button 2 Link"
+              "name": "default",
+              "value": ""
             },
             {
-              "component": "text",
-              "name": "banner-linkText-2",
-              "label": "Button 2 Text"
+              "name": "primary",
+              "value": "primary"
             },
             {
-              "component": "text",
-              "name": "banner-linkTitle-2",
-              "label": "Button 2 Title"
-            },
-            {
-              "component": "select",
-              "name": "banner-linkType-2",
-              "label": "Button 2 Classes",
-              "options": [
-                {
-                  "name": "default",
-                  "value": ""
-                },
-                {
-                  "name": "primary",
-                  "value": "primary"
-                },
-                {
-                  "name": "secondary",
-                  "value": "secondary"
-                }
-              ]
+              "name": "secondary",
+              "value": "secondary"
             }
           ]
         }
@@ -236,84 +222,70 @@
           "valueType": "string"
         },
         {
-          "component": "container",
-          "name": "banner-button",
-          "label": "Button",
-          "fields": [
+          "component": "aem-content",
+          "name": "banner-link",
+          "label": "Button Link"
+        },
+        {
+          "component": "text",
+          "name": "banner-linkText",
+          "label": "Button Text"
+        },
+        {
+          "component": "text",
+          "name": "banner-linkTitle",
+          "label": "Button Title"
+        },
+        {
+          "component": "select",
+          "name": "banner-linkType",
+          "label": "Button Classes",
+          "options": [
             {
-              "component": "aem-content",
-              "name": "banner-link",
-              "label": "Button Link"
+              "name": "default",
+              "value": ""
             },
             {
-              "component": "text",
-              "name": "banner-linkText",
-              "label": "Button Text"
+              "name": "primary",
+              "value": "primary"
             },
             {
-              "component": "text",
-              "name": "banner-linkTitle",
-              "label": "Button Title"
-            },
-            {
-              "component": "select",
-              "name": "banner-linkType",
-              "label": "Button Classes",
-              "options": [
-                {
-                  "name": "default",
-                  "value": ""
-                },
-                {
-                  "name": "primary",
-                  "value": "primary"
-                },
-                {
-                  "name": "secondary",
-                  "value": "secondary"
-                }
-              ]
+              "name": "secondary",
+              "value": "secondary"
             }
           ]
         },
         {
-          "component": "container",
-          "name": "banner-button-2",
-          "label": "Button-2",
-          "fields": [
+          "component": "aem-content",
+          "name": "banner-link-2",
+          "label": "Button 2 Link"
+        },
+        {
+          "component": "text",
+          "name": "banner-linkText-2",
+          "label": "Button 2 Text"
+        },
+        {
+          "component": "text",
+          "name": "banner-linkTitle-2",
+          "label": "Button 2 Title"
+        },
+        {
+          "component": "select",
+          "name": "banner-linkType-2",
+          "label": "Button 2 Classes",
+          "options": [
             {
-              "component": "aem-content",
-              "name": "banner-link-2",
-              "label": "Button 2 Link"
+              "name": "default",
+              "value": ""
             },
             {
-              "component": "text",
-              "name": "banner-linkText-2",
-              "label": "Button 2 Text"
+              "name": "primary",
+              "value": "primary"
             },
             {
-              "component": "text",
-              "name": "banner-linkTitle-2",
-              "label": "Button 2 Title"
-            },
-            {
-              "component": "select",
-              "name": "banner-linkType-2",
-              "label": "Button 2 Classes",
-              "options": [
-                {
-                  "name": "default",
-                  "value": ""
-                },
-                {
-                  "name": "primary",
-                  "value": "primary"
-                },
-                {
-                  "name": "secondary",
-                  "value": "secondary"
-                }
-              ]
+              "name": "secondary",
+              "value": "secondary"
             }
           ]
         }
@@ -323,7 +295,7 @@
   "filters": [
     {
       "id": "bannervideo",
-      "components": ["banner-video-item", "banner-video-item-2"]
+      "components": ["banner-video-item"]
     }
   ]
 }
