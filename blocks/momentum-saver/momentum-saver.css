@@ -155,7 +155,8 @@
 }
 
 .momentum-saver-section .momentum-columns .momentum-second-content .button-container{
-  display:inline-block;
+  display:flex;
+  gap:15px;
   margin-bottom:unset;
 }
 

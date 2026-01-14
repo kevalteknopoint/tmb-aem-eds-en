@@ -88,19 +88,16 @@
             },
             {
               "component": "select",
-              "name": "button-linkType",
+              "name": "button-style-linkType",
               "label": "Button Classes",
+              "value":"primary",
               "options": [
                 {
-                  "name": "default",
-                  "value": ""
-                },
-                {
-                  "name": "primary",
+                  "name": "Primary",
                   "value": "primary"
                 },
                 {
-                  "name": "secondary",
+                  "name": "Secondary",
                   "value": "secondary"
                 }
               ]
@@ -130,19 +127,16 @@
             },
             {
               "component": "select",
-              "name": "button-2-linkType",
+              "name": "button-2-style-linkType",
               "label": "Button Classes",
+              "value":"primary",
               "options": [
                 {
-                  "name": "default",
-                  "value": ""
-                },
-                {
-                  "name": "primary",
+                  "name": "Primary",
                   "value": "primary"
                 },
                 {
-                  "name": "secondary",
+                  "name": "Secondary",
                   "value": "secondary"
                 }
               ]

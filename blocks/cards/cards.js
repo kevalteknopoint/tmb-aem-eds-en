@@ -51,7 +51,6 @@ export default function decorate(block) {
     });
   }
   if (block.closest(".news-helpful-homepage")) {
-    console.log('inside');
     newsHomepage(block);
   }
 }

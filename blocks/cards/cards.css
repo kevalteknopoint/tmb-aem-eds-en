@@ -454,8 +454,9 @@
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body p{
+  display:flex;
+  gap:25px;
   margin:auto 0 0;
-  text-align:left;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body p a{
@@ -1131,6 +1132,8 @@ html{
 }
 
 .news-helpful-homepage .cards-wrapper .block .swiper-wrapper .swiper-slide div:last-child p.button-container{
+  display:flex;
+  gap:15px;
   margin:0;
   padding:0;
 }
