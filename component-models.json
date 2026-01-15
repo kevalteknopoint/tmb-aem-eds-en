@@ -102,17 +102,14 @@
         "component": "select",
         "name": "linkType",
         "label": "Type",
+        "value": "primary",
         "options": [
           {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
+            "name": "Primary",
             "value": "primary"
           },
           {
-            "name": "secondary",
+            "name": "Secondary",
             "value": "secondary"
           }
         ]
@@ -489,6 +486,74 @@
         "value": "",
         "label": "context-model",
         "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "banner-link",
+        "label": "Button Link"
+      },
+      {
+        "component": "text",
+        "name": "banner-linkText",
+        "label": "Button Text"
+      },
+      {
+        "component": "text",
+        "name": "banner-linkTitle",
+        "label": "Button Title"
+      },
+      {
+        "component": "select",
+        "name": "banner-linkType",
+        "label": "Button Classes",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "banner-link-2",
+        "label": "Button 2 Link"
+      },
+      {
+        "component": "text",
+        "name": "banner-linkText-2",
+        "label": "Button 2 Text"
+      },
+      {
+        "component": "text",
+        "name": "banner-linkTitle-2",
+        "label": "Button 2 Title"
+      },
+      {
+        "component": "select",
+        "name": "banner-linkType-2",
+        "label": "Button 2 Classes",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
       }
     ]
   },
@@ -536,20 +601,72 @@
         "value": "",
         "label": "context-model",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "breadcrumb",
-    "fields": [
+      },
       {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Style",
+        "component": "aem-content",
+        "name": "banner-link",
+        "label": "Button Link"
+      },
+      {
+        "component": "text",
+        "name": "banner-linkText",
+        "label": "Button Text"
+      },
+      {
+        "component": "text",
+        "name": "banner-linkTitle",
+        "label": "Button Title"
+      },
+      {
+        "component": "select",
+        "name": "banner-linkType",
+        "label": "Button Classes",
         "options": [
           {
-            "name": "Alternate Variation",
-            "value": "alt-variation"
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "banner-link-2",
+        "label": "Button 2 Link"
+      },
+      {
+        "component": "text",
+        "name": "banner-linkText-2",
+        "label": "Button 2 Text"
+      },
+      {
+        "component": "text",
+        "name": "banner-linkTitle-2",
+        "label": "Button 2 Title"
+      },
+      {
+        "component": "select",
+        "name": "banner-linkType-2",
+        "label": "Button 2 Classes",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
           }
         ]
       }
@@ -607,9 +724,70 @@
       {
         "component": "richtext",
         "name": "text",
-        "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "button-link",
+        "label": "Button Link"
+      },
+      {
+        "component": "text",
+        "name": "button-linkText",
+        "label": "Button Text"
+      },
+      {
+        "component": "text",
+        "name": "button-linkTitle",
+        "label": "Button Title"
+      },
+      {
+        "component": "select",
+        "name": "button-style-linkType",
+        "label": "Button Classes",
+        "value": "primary",
+        "options": [
+          {
+            "name": "Primary",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary",
+            "value": "secondary"
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "button-2-link",
+        "label": "Button Link 2"
+      },
+      {
+        "component": "text",
+        "name": "button-2-linkText",
+        "label": "Button Text 2"
+      },
+      {
+        "component": "text",
+        "name": "button-2-linkTitle",
+        "label": "Button Title 2"
+      },
+      {
+        "component": "select",
+        "name": "button-2-style-linkType",
+        "label": "Button Classes",
+        "value": "primary",
+        "options": [
+          {
+            "name": "Primary",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary",
+            "value": "secondary"
+          }
+        ]
       }
     ]
   },

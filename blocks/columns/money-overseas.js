@@ -1,17 +1,14 @@
 import { div } from "../../scripts/dom-helpers.js";
 
 export default function decorateMoneyOverseas() {
-  // Add .overseas-wrapper to the content wrapper
   document
     .querySelectorAll(".money-overseas .default-content-wrapper")
     .forEach((el) => el.classList.add("overseas-wrapper"));
 
-  // Add .overseas-columns to every columns wrapper
   document
     .querySelectorAll(".money-overseas .columns-wrapper")
     .forEach((el) => el.classList.add("overseas-columns"));
 
-  // Add .overseas-columns-wrapper to every nested div inside .columns
   document
     .querySelectorAll(".money-overseas .columns-wrapper .columns > div")
     .forEach((el) => el.classList.add("overseas-columns-wrapper"));
@@ -28,8 +25,23 @@ export default function decorateMoneyOverseas() {
 
   targetColumns?.forEach((col) => {
     const textCol = col?.querySelector("div:last-child");
-    const paragraphs = textCol.querySelectorAll("p");
+    if (!textCol) return;
 
+    // --- 1. Restructuring Buttons (MERGE LOGIC) ---
+    const buttonContainers = Array.from(textCol.querySelectorAll('.button-container'));
+    if (buttonContainers.length > 1) {
+      const firstContainer = buttonContainers[0];
+      // Get all anchors from the 2nd container onwards and move them to the 1st
+      buttonContainers.slice(1).forEach((container) => {
+        const anchors = container.querySelectorAll('a');
+        anchors.forEach((a) => firstContainer.appendChild(a));
+        // Remove the now empty container
+        container.remove();
+      });
+    }
+
+    // --- 2. Handle Icons in paragraphs ---
+    const paragraphs = textCol.querySelectorAll("p");
     paragraphs.forEach((pTag) => {
       if (!pTag?.querySelector("span.icon")) return;
 

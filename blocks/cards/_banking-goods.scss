@@ -216,6 +216,8 @@
               padding: 6px 0;
               opacity: 0;
               z-index: 1;
+              display: flex;
+              gap: 15px;
 
               @include tablet {
                 opacity: 1;

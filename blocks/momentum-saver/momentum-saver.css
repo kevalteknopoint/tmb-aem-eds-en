@@ -155,6 +155,8 @@
 }
 
 .momentum-saver-section .momentum-columns .momentum-second-content .button-container{
+  display:flex;
+  gap:15px;
   margin-bottom:unset;
 }
 
@@ -311,18 +313,19 @@
   outline:none;
 }
 
-.momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div{
+.momentum-saver-section.image-swapping .columns-wrapper .momentum-columns > div{
+  flex-direction:row-reverse;
   gap:80px;
 }
 
-.momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .columns-img-col{
+.momentum-saver-section.image-swapping .columns-wrapper .momentum-columns > div .columns-img-col{
   max-width:unset;
   width:50%;
 }
 
-.momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content h1,
-.momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content h2,
-.momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content h3{
+.momentum-saver-section.image-swapping .columns-wrapper .momentum-columns > div .momentum-second-content h1,
+.momentum-saver-section.image-swapping .columns-wrapper .momentum-columns > div .momentum-second-content h2,
+.momentum-saver-section.image-swapping .columns-wrapper .momentum-columns > div .momentum-second-content h3{
   font-family:var(--font-family-h1);
   font-size:var(--font-size-h1);
   font-weight:var(--font-weight-h1);
@@ -331,7 +334,7 @@
   text-transform:initial;
 }
 
-.momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .momentum-second-content p{
+.momentum-saver-section.image-swapping .columns-wrapper .momentum-columns > div .momentum-second-content p{
   margin-bottom:0;
 }
 
@@ -388,11 +391,11 @@
     display:block;
   }
 
-  .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div{
+  .momentum-saver-section.image-swapping .columns-wrapper .momentum-columns > div{
     gap:32px;
   }
 
-  .momentum-saver-section.momentum-image-saver.image-swapping .columns-wrapper .momentum-columns div .columns-img-col{
+  .momentum-saver-section.image-swapping .columns-wrapper .momentum-columns > div .columns-img-col{
     max-width:unset;
     width:100%;
   }
@@ -418,6 +421,11 @@
   .momentum-saver-section .momentum-columns .momentum-content .rate-percent{
     font-size:78px;
     line-height:72px;
+  }
+
+  .momentum-saver-section .momentum-columns .momentum-second-content .button-container{
+    display:block;
+    margin-bottom:5px;
   }
 
   .momentum-saver-section.momentum-image-saver .columns-wrapper{

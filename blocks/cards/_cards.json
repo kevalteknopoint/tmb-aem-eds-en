@@ -62,9 +62,70 @@
         {
           "component": "richtext",
           "name": "text",
-          "value": "",
           "label": "Text",
           "valueType": "string"
+        },
+        {
+          "component": "aem-content",
+          "name": "button-link",
+          "label": "Button Link"
+        },
+        {
+          "component": "text",
+          "name": "button-linkText",
+          "label": "Button Text"
+        },
+        {
+          "component": "text",
+          "name": "button-linkTitle",
+          "label": "Button Title"
+        },
+        {
+          "component": "select",
+          "name": "button-style-linkType",
+          "label": "Button Classes",
+          "value": "primary",
+          "options": [
+            {
+              "name": "Primary",
+              "value": "primary"
+            },
+            {
+              "name": "Secondary",
+              "value": "secondary"
+            }
+          ]
+        },
+        {
+          "component": "aem-content",
+          "name": "button-2-link",
+          "label": "Button Link 2"
+        },
+        {
+          "component": "text",
+          "name": "button-2-linkText",
+          "label": "Button Text 2"
+        },
+        {
+          "component": "text",
+          "name": "button-2-linkTitle",
+          "label": "Button Title 2"
+        },
+        {
+          "component": "select",
+          "name": "button-2-style-linkType",
+          "label": "Button Classes",
+          "value": "primary",
+          "options": [
+            {
+              "name": "Primary",
+              "value": "primary"
+            },
+            {
+              "name": "Secondary",
+              "value": "secondary"
+            }
+          ]
         }
       ]
     }

@@ -156,6 +156,13 @@
 
       .button-container {
         margin-bottom: unset;
+        display: flex;
+        gap: 15px;
+        
+        @include mobile{
+          display: block;
+          margin-bottom: 5px
+        }
 
         a {
           @include button('primary');
@@ -262,11 +269,12 @@
   }
 }
 
-.momentum-saver-section.momentum-image-saver.image-swapping {
+.momentum-saver-section.image-swapping {
   .columns-wrapper {
     .momentum-columns {
-      div {
+      >div {
         gap: 80px;
+        flex-direction: row-reverse;
 
         @include tablet {
           gap: 32px;

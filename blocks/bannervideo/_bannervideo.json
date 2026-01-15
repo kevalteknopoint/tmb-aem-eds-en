@@ -31,7 +31,7 @@
         }
       }
     },
-     {
+    {
       "title": "Banner Video Item 2",
       "id": "banner-video-item-2",
       "plugins": {
@@ -50,119 +50,252 @@
   "models": [
     {
       "id": "bannervideo",
-      "fields":[
+      "fields": [
         {
-      "component": "multiselect",
-      "name": "classes",
-      "label": "Style",
-      "options": [
-        {
-          "name": "Video banner",
-          "value": "video-banner"
-        },
-        {
-          "name": "Text Center",
-          "value": "text-center"
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Style",
+          "options": [
+            {
+              "name": "Video banner",
+              "value": "video-banner"
+            },
+            {
+              "name": "Text Center",
+              "value": "text-center"
+            }
+          ]
         }
-    ]
-  }
       ]
     },
-  {
-    "id": "banner-video-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "desk_image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "desk_imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "mob_image",
-        "label": "Mobile Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "mob_imageAlt",
-        "label": "Mobile Alt",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "context",
-        "value": "",
-        "label": "context-model",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "banner-video-item-2",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "desk_image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "desk_imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "mob_image",
-        "label": "Mobile Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "mob_imageAlt",
-        "label": "Mobile Alt",
-        "value": ""
-      },
-      {
-        "component": "aem-content",
-        "name": "context_video",
-        "value": "",
-        "label": "video",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "context",
-        "value": "",
-        "label": "context-model",
-        "valueType": "string"
-      }
-    ]
-  }
-],
-"filters": [
-  {
-    "id": "bannervideo",
-    "components": [
-      "banner-video-item",
-      "banner-video-item-2"
-    ]
-  }
-]
+    {
+      "id": "banner-video-item",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "desk_image",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "desk_imageAlt",
+          "label": "Alt",
+          "value": ""
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "mob_image",
+          "label": "Mobile Image",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "mob_imageAlt",
+          "label": "Mobile Alt",
+          "value": ""
+        },
+        {
+          "component": "richtext",
+          "name": "context",
+          "value": "",
+          "label": "context-model",
+          "valueType": "string"
+        },
+        {
+          "component": "aem-content",
+          "name": "banner-link",
+          "label": "Button Link"
+        },
+        {
+          "component": "text",
+          "name": "banner-linkText",
+          "label": "Button Text"
+        },
+        {
+          "component": "text",
+          "name": "banner-linkTitle",
+          "label": "Button Title"
+        },
+        {
+          "component": "select",
+          "name": "banner-linkType",
+          "label": "Button Classes",
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            }
+          ]
+        },
+        {
+          "component": "aem-content",
+          "name": "banner-link-2",
+          "label": "Button 2 Link"
+        },
+        {
+          "component": "text",
+          "name": "banner-linkText-2",
+          "label": "Button 2 Text"
+        },
+        {
+          "component": "text",
+          "name": "banner-linkTitle-2",
+          "label": "Button 2 Title"
+        },
+        {
+          "component": "select",
+          "name": "banner-linkType-2",
+          "label": "Button 2 Classes",
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "banner-video-item-2",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "desk_image",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "desk_imageAlt",
+          "label": "Alt",
+          "value": ""
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "mob_image",
+          "label": "Mobile Image",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "mob_imageAlt",
+          "label": "Mobile Alt",
+          "value": ""
+        },
+        {
+          "component": "aem-content",
+          "name": "context_video",
+          "value": "",
+          "label": "video",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "context",
+          "value": "",
+          "label": "context-model",
+          "valueType": "string"
+        },
+        {
+          "component": "aem-content",
+          "name": "banner-link",
+          "label": "Button Link"
+        },
+        {
+          "component": "text",
+          "name": "banner-linkText",
+          "label": "Button Text"
+        },
+        {
+          "component": "text",
+          "name": "banner-linkTitle",
+          "label": "Button Title"
+        },
+        {
+          "component": "select",
+          "name": "banner-linkType",
+          "label": "Button Classes",
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            }
+          ]
+        },
+        {
+          "component": "aem-content",
+          "name": "banner-link-2",
+          "label": "Button 2 Link"
+        },
+        {
+          "component": "text",
+          "name": "banner-linkText-2",
+          "label": "Button 2 Text"
+        },
+        {
+          "component": "text",
+          "name": "banner-linkTitle-2",
+          "label": "Button 2 Title"
+        },
+        {
+          "component": "select",
+          "name": "banner-linkType-2",
+          "label": "Button 2 Classes",
+          "options": [
+            {
+              "name": "default",
+              "value": ""
+            },
+            {
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "name": "secondary",
+              "value": "secondary"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "bannervideo",
+      "components": ["banner-video-item"]
+    }
+  ]
 }

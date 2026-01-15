@@ -233,7 +233,7 @@
               list-style-type: none;
               padding: 0;
 
-              .banking-desc-1 {
+              h1,h2,h3,h4,h5,h6 {
                 @include typo-heading3;
                 color: $heading-default;
                 // font-size: 24px;
@@ -252,7 +252,7 @@
                 }
               }
 
-              .banking-desc-2 {
+              p {
                 @include typo-body;
                 color: $body-accent;
                 // font-size: 16px;
@@ -310,9 +310,10 @@
               }
             }
 
-            .banking-desc-3 {
+            p {
               margin: auto 0 0;
-              text-align: left;
+              display: flex;
+              gap: 25px;
 
               @media (min-width: 766px) and (max-width: 1220px) {
                 width: 115px;
@@ -320,14 +321,17 @@
 
               a {
                 @include typo-heading5;
+
                 align-items: center;
                 background: transparent;
                 color: $link-accent;
                 display: flex;
+
                 // font-size: 16px;
                 // font-style: normal;
                 // font-weight: 500;
                 gap: 8px;
+                
                 // line-height: 24px;
                 text-decoration: none;
                 width: max-content;
@@ -373,7 +377,7 @@
             }
           }
 
-          .banking-desc-3 {
+          p {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
