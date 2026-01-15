@@ -174,17 +174,30 @@
 }
 
 .rate-details .accordion-wrapper .block .accordion-item .accordion-item-body{
-  margin-top:8px;
-}
-
-.rate-details .accordion-wrapper .block .accordion-item .accordion-item-body p{
   color:var(--body-default);
+  display:block;
   font-family:var(--font-family-body);
   font-size:var(--font-size-body);
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
+  margin-top:8px;
   text-transform:initial;
+}
+
+.rate-details .accordion-wrapper .block .accordion-item .accordion-item-body a{
+  color:var(--link-default);
+  text-decoration:underline;
+}
+
+.rate-details .accordion-wrapper .block .accordion-item .accordion-item-body ul{
+  list-style:disc;
+  margin-top:16px;
+  padding-left:24px;
+}
+
+.rate-details .accordion-wrapper .block .accordion-item .accordion-item-body ul li{
+  margin-bottom:8px;
 }
 
 .rate-details .accordion-wrapper .block .accordion-item[open] summary svg{

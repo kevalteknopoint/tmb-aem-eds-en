@@ -23,8 +23,8 @@
 
 .home-loan-explained .tabs .tabs-list{
   align-items:center;
-  border:1px solid var(--heading-light);
-  border-radius:999px;
+  border:1px solid var(--link-default);
+  border-radius:var(--radius-card);
   display:flex;
   overflow:hidden;
   width:471px;
@@ -33,7 +33,7 @@
 .home-loan-explained .tabs .tabs-list .tabs-tab{
   align-items:center;
   background:#fff;
-  border:1px solid var(--heading-light);
+  border-right:1px solid var(--link-default);
   cursor:pointer;
   display:flex;
   flex:1;
@@ -41,7 +41,12 @@
   padding:8px 0;
 }
 
+.home-loan-explained .tabs .tabs-list .tabs-tab:last-child{
+  border-right:0;
+}
+
 .home-loan-explained .tabs .tabs-list .tabs-tab p{
+  color:var(--heading-default);
   margin:0;
   width:157px;
 }
@@ -51,7 +56,7 @@
 }
 
 .home-loan-explained .tabs .tabs-list .tabs-tab[aria-selected="true"] p{
-  color:#FFF;
+  color:var(--icon-default);
 }
 
 .home-loan-explained .tabs .tabs-panel{
@@ -65,15 +70,15 @@
   display:none;
 }
 
-.home-loan-explained .tabs .tabs-panel .panel1{
+.home-loan-explained .tabs .tabs-panel div{
   display:grid;
   gap:64px;
   grid-template-columns:repeat(3, 1fr);
   row-gap:16px;
 }
 
-.home-loan-explained .tabs .tabs-panel .panel1 h3,
-.home-loan-explained .tabs .tabs-panel .panel1 h2{
+.home-loan-explained .tabs .tabs-panel div h3,
+.home-loan-explained .tabs .tabs-panel div h2{
   color:var(--heading-light);
   font-family:var(--font-family-h3);
   font-size:var(--font-size-h3);
@@ -84,7 +89,7 @@
   text-transform:initial;
 }
 
-.home-loan-explained .tabs .tabs-panel .panel1 p{
+.home-loan-explained .tabs .tabs-panel div p{
   color:black;
   font-size:16px;
   grid-row:2;

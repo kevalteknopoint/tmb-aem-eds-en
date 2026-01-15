@@ -1,34 +1,36 @@
-.pipe-grid{
-  display:grid;
-  gap:1px;
+.table-with-icons{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
 }
 
-.pipe-grid-row{
-  border-bottom:1px solid rgb(0 0 0 / 20%);
-  display:grid;
-  grid-template-columns:repeat(var(--cols), minmax(0, 1fr));
-  padding:16px 0;
-}
-
-.pipe-grid-row:first-child{
-  border-top:1px solid rgb(0 0 0 / 20%);
-}
-
-.pipe-grid-header{
-  border-bottom:4px solid var(--heading-default);
-}
-
-.pipe-grid-header .pipe-grid-cell{
+.table-with-icons h1,
+.table-with-icons h2,
+.table-with-icons h3,
+.table-with-icons h4,
+.table-with-icons h5,
+.table-with-icons h6{
   color:var(--heading-default);
-  font-family:var(--font-family-h3);
-  font-size:var(--font-size-h3);
-  font-weight:var(--font-weight-h3);
-  letter-spacing:var(--font-letter-spacing-h3);
-  line-height:var(--font-height-h3);
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  margin-bottom:40px;
   text-transform:initial;
 }
 
-.pipe-grid-cell{
+.table-with-icons:has(h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p) h1, .table-with-icons:has(h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p) h2, .table-with-icons:has(h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p) h3, .table-with-icons:has(h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p) h4, .table-with-icons:has(h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p) h5, .table-with-icons:has(h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p) h6{
+  margin-bottom:16px;
+}
+
+.table-with-icons:has(h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p) p{
+  margin-bottom:40px;
+}
+
+.table-with-icons p{
   color:var(--body-default);
   font-family:var(--font-family-body);
   font-size:var(--font-size-body);
@@ -36,4 +38,93 @@
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   text-transform:initial;
+}
+
+.table-with-icons .pipe-grid{
+  display:grid;
+  gap:1px;
+}
+
+.table-with-icons .pipe-grid-row{
+  border-bottom:1px solid rgb(0 0 0 / 20%);
+  display:grid;
+  grid-template-columns:repeat(var(--cols), minmax(0, 1fr));
+  padding:16px 0;
+}
+
+.table-with-icons .pipe-grid-row:first-child:not(.pipe-grid-header){
+  border-top:1px solid rgb(0 0 0 / 20%);
+}
+
+.table-with-icons .pipe-grid-header{
+  border-bottom:4px solid var(--heading-default);
+  border-top:0;
+}
+
+.table-with-icons .pipe-grid-header .pipe-grid-cell h1, .table-with-icons .pipe-grid-header .pipe-grid-cell h2, .table-with-icons .pipe-grid-header .pipe-grid-cell h3, .table-with-icons .pipe-grid-header .pipe-grid-cell h4, .table-with-icons .pipe-grid-header .pipe-grid-cell h5, .table-with-icons .pipe-grid-header .pipe-grid-cell h6{
+  color:var(--heading-default);
+  font-family:var(--font-family-h3);
+  font-size:var(--font-size-h3);
+  font-weight:var(--font-weight-h3);
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
+  margin-bottom:0;
+  text-transform:initial;
+}
+
+.table-with-icons .pipe-grid-cell{
+  align-items:center;
+  color:var(--body-default);
+  display:flex;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  justify-content:center;
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-transform:initial;
+}
+
+.table-with-icons .pipe-grid-cell:first-child{
+  justify-content:flex-start;
+}
+
+.table-with-icons .icon{
+  display:block;
+  margin:0 auto;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
+.table-with-icons svg{
+  color:var(--icon-2-default);
+  display:block;
+  height:36px;
+  text-align:center;
+  width:36px;
+}
+
+@media screen and (max-width: 1279px){
+  .table-with-icons{
+    padding-inline:24px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .table-with-icons{
+    padding-inline:16px;
+  }
+
+  .table-with-icons h1,
+  .table-with-icons h2,
+  .table-with-icons h3,
+  .table-with-icons h4,
+  .table-with-icons h5,
+  .table-with-icons h6{
+    margin-bottom:24px;
+  }
+
+  .table-with-icons:has(h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p) p{
+    margin-bottom:24px;
+  }
 }
