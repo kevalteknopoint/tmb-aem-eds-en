@@ -283,6 +283,10 @@
             {
               "name": "Page Heading",
               "value": "page-heading"
+            },
+            {
+              "name": "Legal TC Guide",
+              "value": "legal-tc-guide"
             }
           ]
         }
