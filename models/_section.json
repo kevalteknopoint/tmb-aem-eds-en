@@ -279,6 +279,10 @@
             {
               "name": "Table with icons",
               "value": "table-with-icons"
+            },
+            {
+              "name": "Page Heading",
+              "value": "page-heading"
             }
           ]
         }
@@ -314,7 +318,8 @@
         "compare-accounts",
         "stepper",
         "tabs",
-        "interest-rates"
+        "interest-rates",
+        "page-heading"
       ]
     }
   ]

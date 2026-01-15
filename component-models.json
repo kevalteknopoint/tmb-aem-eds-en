@@ -378,6 +378,10 @@
           {
             "name": "Table with icons",
             "value": "table-with-icons"
+          },
+          {
+            "name": "Page Heading",
+            "value": "page-heading"
           }
         ]
       }
