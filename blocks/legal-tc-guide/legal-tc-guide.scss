@@ -1,5 +1,67 @@
 @use '../../styles/base' as *;
 
 .legal-tc-guide{
-    background-color: red;
+    @include responsive-container;
+
+    .columns-wrapper{
+        .block{
+            div{
+                align-items: start;
+
+                div{
+                    h1,h2,h3,h4,h5,h6{
+                        color: $heading-default;
+                        font-family: $secondary-font;
+                        font-size: $font-size-h1;
+                        font-weight: 900;
+                        line-height:  $font-height-h1;
+                        letter-spacing: $font-letter-spacing-h1;
+                        text-transform: uppercase;
+                    }
+                    
+                    p{
+                        color: #000;
+                        font-size: $font-size-body;
+                        font-weight: 400;
+                        line-height: $font-height-body; 
+
+                        &.button-container {
+                            display: flex;
+                            gap: 30px;
+                            align-items: center;
+                            margin-top: 32px;
+
+                            a {
+                                display: flex;
+                                align-items: center;
+                                gap: 12px;
+                                color: $color-button-text-stroke-default;
+                                text-align: center;
+                                font-size: $font-size-h5;
+                                font-weight: 500;
+                                line-height: $font-height-h5;
+                                letter-spacing: $font-letter-spacing-h5;
+                                padding: 8px 24px;
+                                text-decoration: none;
+                                border: $stroke-button solid $color-button-text-stroke-default;
+                                border-radius: $radius-button;
+                                background: $color-button-outlined-default;
+
+                                span{
+                                    svg{
+                                        width: 18px;
+                                        height: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:first-child{
+                        max-width: 416px;
+                    }
+                }
+            }
+        }
+    }
 }

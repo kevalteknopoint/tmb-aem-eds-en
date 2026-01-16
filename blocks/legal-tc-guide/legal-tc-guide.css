@@ -1,3 +1,73 @@
 .legal-tc-guide{
-  background-color:red;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
+}
+
+.legal-tc-guide .columns-wrapper .block div{
+  align-items:start;
+}
+
+.legal-tc-guide .columns-wrapper .block div div h1, .legal-tc-guide .columns-wrapper .block div div h2, .legal-tc-guide .columns-wrapper .block div div h3, .legal-tc-guide .columns-wrapper .block div div h4, .legal-tc-guide .columns-wrapper .block div div h5, .legal-tc-guide .columns-wrapper .block div div h6{
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
+  font-size:var(--font-size-h1);
+  font-weight:900;
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  text-transform:uppercase;
+}
+
+.legal-tc-guide .columns-wrapper .block div div p{
+  color:#000;
+  font-size:var(--font-size-body);
+  font-weight:400;
+  line-height:var(--font-height-body);
+}
+
+.legal-tc-guide .columns-wrapper .block div div p.button-container{
+  align-items:center;
+  display:flex;
+  gap:30px;
+  margin-top:32px;
+}
+
+.legal-tc-guide .columns-wrapper .block div div p.button-container a{
+  align-items:center;
+  background:var(--color-button-outlined-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-default);
+  border-radius:var(--radius-button);
+  color:var(--color-button-text-stroke-default);
+  display:flex;
+  font-size:var(--font-size-h5);
+  font-weight:500;
+  gap:12px;
+  letter-spacing:var(--font-letter-spacing-h5);
+  line-height:var(--font-height-h5);
+  padding:8px 24px;
+  text-align:center;
+  text-decoration:none;
+}
+
+.legal-tc-guide .columns-wrapper .block div div p.button-container a span svg{
+  height:18px;
+  width:18px;
+}
+
+.legal-tc-guide .columns-wrapper .block div div:first-child{
+  max-width:416px;
+}
+
+@media screen and (max-width: 1279px){
+  .legal-tc-guide{
+    padding-inline:24px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .legal-tc-guide{
+    padding-inline:16px;
+  }
 }

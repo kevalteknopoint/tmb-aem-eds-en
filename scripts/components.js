@@ -30,6 +30,14 @@ export default function loadNonBlockLibs() {
       selector: '.table-with-icons',
       name: 'table-with-icons',
     },
+    {
+      selector: '.page-heading',
+      name: 'page-heading',
+    },
+    {
+      selector: '.legal-tc-guide',
+      name: 'legal-tc-guide',
+    },
   ];
 
   blocks.forEach(({ selector, name }) => {
