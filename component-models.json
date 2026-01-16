@@ -757,6 +757,10 @@
         "value": "primary",
         "options": [
           {
+            "name": "Default",
+            "value": "default"
+          },
+          {
             "name": "Primary",
             "value": "primary"
           },
