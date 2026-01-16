@@ -115,8 +115,11 @@
           "component": "select",
           "name": "button-2-style-linkType",
           "label": "Button Classes",
-          "value": "primary",
           "options": [
+            {
+              "name": "Default",
+              "value": "default"
+            },
             {
               "name": "Primary",
               "value": "primary"

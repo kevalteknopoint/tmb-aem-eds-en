@@ -8,6 +8,7 @@
 
 .legal-tc-guide .columns-wrapper .block div{
   align-items:start;
+  gap:32px;
 }
 
 .legal-tc-guide .columns-wrapper .block div div h1, .legal-tc-guide .columns-wrapper .block div div h2, .legal-tc-guide .columns-wrapper .block div div h3, .legal-tc-guide .columns-wrapper .block div div h4, .legal-tc-guide .columns-wrapper .block div div h5, .legal-tc-guide .columns-wrapper .block div div h6{
