@@ -392,6 +392,7 @@
   }
 
   .momentum-saver-section.image-swapping .columns-wrapper .momentum-columns > div{
+    flex-direction:column-reverse;
     gap:32px;
   }
 
