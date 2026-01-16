@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Homepage Banner",
+      "title": "BannerVideo",
       "id": "bannervideo",
       "plugins": {
         "xwalk": {
