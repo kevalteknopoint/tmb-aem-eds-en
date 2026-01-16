@@ -17,7 +17,7 @@
       }
     },
     {
-      "title": "Banner Video Item",
+      "title": "Banner Image Item",
       "id": "banner-video-item",
       "plugins": {
         "xwalk": {
@@ -32,7 +32,7 @@
       }
     },
     {
-      "title": "Banner Video Item 2",
+      "title": "Banner Video Item",
       "id": "banner-video-item-2",
       "plugins": {
         "xwalk": {
