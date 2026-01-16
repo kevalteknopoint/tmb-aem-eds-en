@@ -456,7 +456,7 @@
         "component": "reference",
         "valueType": "string",
         "name": "desk_image",
-        "label": "Image",
+        "label": "Desktop Image",
         "multi": false
       },
       {
@@ -484,7 +484,7 @@
         "component": "richtext",
         "name": "context",
         "value": "",
-        "label": "context-model",
+        "label": "Banner Content",
         "valueType": "string"
       },
       {
@@ -564,7 +564,7 @@
         "component": "reference",
         "valueType": "string",
         "name": "desk_image",
-        "label": "Image",
+        "label": "Desktop Image",
         "multi": false
       },
       {
@@ -592,14 +592,14 @@
         "component": "aem-content",
         "name": "context_video",
         "value": "",
-        "label": "video",
+        "label": "Video Path",
         "valueType": "string"
       },
       {
         "component": "richtext",
         "name": "context",
         "value": "",
-        "label": "context-model",
+        "label": "Banner Content",
         "valueType": "string"
       },
       {
