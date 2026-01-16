@@ -754,7 +754,6 @@
         "component": "select",
         "name": "button-style-linkType",
         "label": "Button Classes",
-        "value": "primary",
         "options": [
           {
             "name": "Default",
