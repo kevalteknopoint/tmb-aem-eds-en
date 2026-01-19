@@ -1,3 +1,90 @@
-.faq-legal{
-  background:red;
+.faq-legal.accordion-container{
+  background:unset;
+  display:flex;
+  gap:32px;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  padding-bottom:80px;
+  padding-top:80px;
+  width:100%;
+}
+
+.faq-legal.accordion-container .default-content-wrapper{
+  max-width:416px;
+  width:100%;
+}
+
+.faq-legal.accordion-container .default-content-wrapper h1, .faq-legal.accordion-container .default-content-wrapper h2, .faq-legal.accordion-container .default-content-wrapper h3, .faq-legal.accordion-container .default-content-wrapper h4, .faq-legal.accordion-container .default-content-wrapper h5, .faq-legal.accordion-container .default-content-wrapper h6{
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
+  font-size:var(--font-size-h1);
+  font-weight:900;
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  text-transform:uppercase;
+}
+
+.faq-legal.accordion-container .accordion-wrapper{
+  padding-inline:0;
+}
+
+.faq-legal.accordion-container .accordion-wrapper .accordion details{
+  border-bottom:1px solid var(--line-default);
+  padding-bottom:16px;
+}
+
+.faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-label p{
+  color:var(--color-button-primary-default);
+  font-size:var(--font-size-h3);
+  font-weight:500;
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
+}
+
+.faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-body p{
+  color:var(--body-default);
+  font-size:var(--font-size-body);
+  font-weight:400;
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+}
+
+.faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-body ul{
+  list-style-type:disc;
+  padding-bottom:16px;
+  padding-left:25px;
+}
+
+.faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-body ul li{
+  color:var(--link-default);
+  font-size:var(--font-size-body);
+  font-weight:400;
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  padding-top:5px;
+  text-decoration-line:underline;
+  -webkit-text-decoration-skip:ink;
+          text-decoration-skip-ink:auto;
+  text-decoration-style:solid;
+  text-decoration-thickness:auto;
+  text-underline-offset:auto;
+  text-underline-position:from-font;
+}
+
+.faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-body ul li::marker{
+  color:var(--link-default);
+}
+
+@media screen and (max-width: 1279px){
+  .faq-legal.accordion-container{
+    padding-inline:24px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .faq-legal.accordion-container{
+    padding-inline:16px;
+  }
 }

@@ -53,7 +53,8 @@
         "button",
         "title",
         "content-fragment",
-        "accordion"
+        "accordion",
+        "table-with-icons"
       ]
     }
   ]

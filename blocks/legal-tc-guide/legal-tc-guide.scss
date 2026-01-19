@@ -69,6 +69,32 @@
                         }
                     }
 
+                    &:has(ul){
+                        ul{
+                            list-style-type: disc;
+                            padding-left: 25px;
+                            padding-bottom: 16px;
+
+                            li{
+                                color: $link-default;
+                                font-size: $font-size-body;
+                                font-weight: 400;
+                                line-height: $font-height-body;
+                                letter-spacing: $font-letter-spacing-body;
+                                text-decoration-line: underline;
+                                text-decoration-style: solid;
+                                text-decoration-skip-ink: auto;
+                                text-decoration-thickness: auto;
+                                text-underline-offset: auto;
+                                text-underline-position: from-font;
+
+                                &::marker{
+                                    color: var(--link-default);
+                                }
+                            }
+                        }
+                    }
+
                     &:first-child{
                         max-width: 416px;
 
