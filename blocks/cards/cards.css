@@ -1703,6 +1703,10 @@ html{
   .looking-for-another-way .cards-wrapper ul{
     grid-template-columns:1fr;
   }
+
+  .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul{
+    gap:32px;
+  }
 }
 
 @media screen and (max-width: 767px){
