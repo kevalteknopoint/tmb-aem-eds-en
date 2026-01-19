@@ -102,8 +102,11 @@
         "component": "select",
         "name": "linkType",
         "label": "Type",
-        "value": "primary",
         "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
           {
             "name": "Primary",
             "value": "primary"

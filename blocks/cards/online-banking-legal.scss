@@ -9,6 +9,49 @@
                     @include tablet{
                         gap: 32px;
                     }
+
+                    .banking-li-2 {
+                        .cards-card-body{
+                            padding: 40px 32px;
+
+                            @include tablet{
+                                padding: 40px 24px;
+                            }
+
+                            .card-bottom-1{
+                                h1,h2,h3,h4,h5,h6{
+                                    color: $heading-default;
+                                    font-size: $font-size-h3;
+                                    font-weight: 500;
+                                    line-height: $font-height-h3;
+                                    letter-spacing: $font-letter-spacing-h3;
+                                }
+
+                                p{
+                                    color: $body-default;
+                                    font-size: $font-size-body;
+                                    font-weight: 400;
+                                    line-height: $font-height-body;
+                                    letter-spacing: $font-letter-spacing-body;
+                                    width: 100%;
+                                }
+                            }
+
+                            .card-bottom-2{
+                                margin-top: 24px;
+
+                                p{
+                                    width: 100%;
+                                    padding: 6px 18px 6px 0;
+
+                                    a{
+                                        border-bottom: 2px solid $link-accent;
+                                        padding: 0;
+                                    }
+                                }
+                            }
+                        }
+                    } 
                 }
             }
         }

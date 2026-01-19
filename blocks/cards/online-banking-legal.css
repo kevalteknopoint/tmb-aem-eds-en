@@ -1,5 +1,44 @@
+.section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body{
+  padding:40px 32px;
+}
+
+.section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 h1, .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 h2, .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 h3, .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 h4, .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 h5, .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 h6{
+  color:var(--heading-default);
+  font-size:var(--font-size-h3);
+  font-weight:500;
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
+}
+
+.section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 p{
+  color:var(--body-default);
+  font-size:var(--font-size-body);
+  font-weight:400;
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  width:100%;
+}
+
+.section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-2{
+  margin-top:24px;
+}
+
+.section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-2 p{
+  padding:6px 18px 6px 0;
+  width:100%;
+}
+
+.section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-2 p a{
+  border-bottom:2px solid var(--link-accent);
+  padding:0;
+}
+
 @media screen and (max-width: 1023px){
   .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul{
     gap:32px;
+  }
+
+  .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body{
+    padding:40px 24px;
   }
 }
