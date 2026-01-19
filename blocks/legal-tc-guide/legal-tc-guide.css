@@ -67,8 +67,26 @@
   }
 }
 
+@media screen and (max-width: 1023px){
+  .legal-tc-guide .columns-wrapper .block div{
+    gap:40px;
+  }
+
+  .legal-tc-guide .columns-wrapper .block div div:first-child{
+    max-width:unset;
+  }
+}
+
 @media screen and (max-width: 767px){
   .legal-tc-guide{
     padding-inline:16px;
+  }
+
+  .legal-tc-guide .columns-wrapper .block div{
+    gap:24px;
+  }
+
+  .legal-tc-guide .columns-wrapper .block div div p.button-container{
+    flex-direction:column;
   }
 }

@@ -1,0 +1,5 @@
+@media screen and (max-width: 1023px){
+  .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul{
+    gap:32px;
+  }
+}

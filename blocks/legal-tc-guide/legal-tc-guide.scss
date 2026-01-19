@@ -9,6 +9,14 @@
                 align-items: start;
                 gap: 32px;
 
+                @include tablet{
+                    gap: 40px;
+                }
+                
+                @include mobile{
+                    gap: 24px;
+                }
+
                 div{
                     h1,h2,h3,h4,h5,h6{
                         color: $heading-default;
@@ -31,6 +39,10 @@
                             gap: 30px;
                             align-items: center;
                             margin-top: 32px;
+
+                            @include mobile{
+                                flex-direction: column;
+                            }
 
                             a {
                                 display: flex;
@@ -60,6 +72,10 @@
 
                     &:first-child{
                         max-width: 416px;
+
+                        @include tablet{
+                            max-width: unset;
+                        }
                     }
                 }
             }

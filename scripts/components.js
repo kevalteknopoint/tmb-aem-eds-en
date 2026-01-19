@@ -38,6 +38,10 @@ export default function loadNonBlockLibs() {
       selector: '.legal-tc-guide',
       name: 'legal-tc-guide',
     },
+    {
+      selector: '.online-banking-legal',
+      name: 'online-banking-legal',
+    },
   ];
 
   blocks.forEach(({ selector, name }) => {

@@ -1,0 +1,15 @@
+@use '../../styles/base' as *;
+@use '../../styles/variables';
+@use '../../styles/mixins';
+
+    .section.online-banking-legal{
+        .cards-wrapper{
+            .cards{
+                .banking-cards-ul{
+                    @include tablet{
+                        gap: 32px;
+                    }
+                }
+            }
+        }
+    }
