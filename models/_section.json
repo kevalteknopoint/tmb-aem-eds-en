@@ -291,6 +291,10 @@
             {
               "name": "Online Banking Legal",
               "value": "online-banking-legal"
+            },
+            {
+              "name": "faq-legal",
+              "value": "faq-legal"
             }
           ]
         }
@@ -328,7 +332,8 @@
         "tabs",
         "interest-rates",
         "page-heading",
-        "legal-tc-guide"
+        "legal-tc-guide",
+        "faq-legal"
       ]
     }
   ]

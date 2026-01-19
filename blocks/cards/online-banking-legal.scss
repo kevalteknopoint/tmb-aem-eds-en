@@ -10,9 +10,37 @@
                         gap: 32px;
                     }
 
+                    .banking-li-1{
+                        .cards-card-body{
+                            h1,h2,h3,h4,h5,h6{
+                                color: $heading-default;
+                                font-family: $secondary-font;
+                                font-size: $font-size-h1;
+                                font-style: normal;
+                                font-weight: 900;
+                                line-height: $font-height-h1;
+                                letter-spacing: $font-letter-spacing-h1;
+                                text-transform: uppercase;
+                            }
+
+                            ul{
+                                li{
+                                    a{
+                                        color: $body-default;
+                                        font-size: 16px;
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        line-height: 24px; /* 150% */
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                     .banking-li-2 {
                         .cards-card-body{
                             padding: 40px 32px;
+                            height: unset;
 
                             @include tablet{
                                 padding: 40px 24px;
@@ -52,6 +80,13 @@
                             }
                         }
                     } 
+
+                    .banking-li-3 {
+                        .cards-card-body{
+                            padding: 40px 32px;
+                            height: unset;
+                        }
+                    }
                 }
             }
         }

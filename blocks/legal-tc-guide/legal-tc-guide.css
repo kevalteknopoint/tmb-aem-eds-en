@@ -29,7 +29,6 @@
 }
 
 .legal-tc-guide .columns-wrapper .block div div p.button-container{
-  align-items:center;
   display:flex;
   gap:30px;
   margin-top:32px;
@@ -41,7 +40,7 @@
   border:var(--stroke-button) solid var(--color-button-text-stroke-default);
   border-radius:var(--radius-button);
   color:var(--color-button-text-stroke-default);
-  display:flex;
+  display:inline-flex;
   font-size:var(--font-size-h5);
   font-weight:500;
   gap:12px;

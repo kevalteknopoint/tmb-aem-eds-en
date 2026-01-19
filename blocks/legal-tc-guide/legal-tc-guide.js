@@ -1,5 +1,4 @@
 (function decorateLegalTcGuide() {
-    console.log("legal");
     // 1. Target the component block
     const block = document.querySelector('.legal-tc-guide');
     if (!block) return;
@@ -29,3 +28,46 @@
         });
     }
 })();
+
+
+
+// (function decorateLegalTcGuide() {
+//     // Select the block - in EDS this usually matches the class of the block
+//     const block = document.querySelector('.legal-tc-guide');
+//     if (!block) return;
+
+//     // Find all links that were authored in the Universal Editor
+//     const allButtons = block.querySelectorAll('a');
+//     const firstPara = block.querySelector('.button-container');
+
+//     if (allButtons.length > 0 && firstPara) {
+//         // Ensure we have a strong tag as requested
+//         let masterWrapper = firstPara.querySelector('strong');
+//         if (!masterWrapper) {
+//             masterWrapper = document.createElement('strong');
+//             // Move buttons into the new strong tag
+//             firstPara.innerHTML = ''; 
+//             firstPara.appendChild(masterWrapper);
+//         }
+
+//         const iconHTML = `<span class="icon icon-download-icon">
+//             <svg class="icon-svg"><use href="#download-icon"></use></svg>
+//         </span>`;
+
+//         // Clear and rebuild to ensure exact structure
+//         masterWrapper.innerHTML = '';
+
+//         allButtons.forEach(button => {
+//             button.classList.add('button'); // Ensure class consistency
+//             // Inject icon if it's missing from the editor output
+//             if (!button.querySelector('.icon')) {
+//                 button.insertAdjacentHTML('beforeend', iconHTML);
+//             }
+//             masterWrapper.appendChild(button);
+//         });
+
+//         // Clean up empty paragraphs authored in the editor
+//         const extraParas = block.querySelectorAll('.button-container');
+//         extraParas.forEach((p, i) => { if (i > 0) p.remove(); });
+//     }
+// })();

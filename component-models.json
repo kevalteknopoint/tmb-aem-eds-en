@@ -393,6 +393,10 @@
           {
             "name": "Online Banking Legal",
             "value": "online-banking-legal"
+          },
+          {
+            "name": "faq-legal",
+            "value": "faq-legal"
           }
         ]
       }

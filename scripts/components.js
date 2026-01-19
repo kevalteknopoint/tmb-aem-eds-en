@@ -42,6 +42,10 @@ export default function loadNonBlockLibs() {
       selector: '.online-banking-legal',
       name: 'online-banking-legal',
     },
+    {
+      selector: '.faq-legal',
+      name: 'faq-legal',
+    },
   ];
 
   blocks.forEach(({ selector, name }) => {

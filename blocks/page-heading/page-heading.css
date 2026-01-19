@@ -16,6 +16,16 @@
   text-transform:uppercase;
 }
 
+.page-heading .default-content-wrapper p{
+  color:#121212;
+  font-size:var(--font-size-body, 16px);
+  font-style:normal;
+  font-weight:400;
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  margin-top:16px;
+}
+
 @media screen and (max-width: 1279px){
   .page-heading{
     padding-inline:24px;

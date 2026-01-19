@@ -650,7 +650,6 @@
 
 .section.faq-cant-find-looking-for.rates-saver .default-content-wrapper h1, .section.faq-cant-find-looking-for.rates-saver .default-content-wrapper h2, .section.faq-cant-find-looking-for.rates-saver .default-content-wrapper h3, .section.faq-cant-find-looking-for.rates-saver .default-content-wrapper h4, .section.faq-cant-find-looking-for.rates-saver .default-content-wrapper h5, .section.faq-cant-find-looking-for.rates-saver .default-content-wrapper h6{
   margin-inline:auto;
-  max-width:800px;
 }
 
 .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul{
@@ -1373,7 +1372,27 @@ html{
   text-transform:initial;
 }
 
+.section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h1, .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h2, .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h3, .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h4, .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h5, .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body h6{
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
+  font-size:var(--font-size-h1);
+  font-style:normal;
+  font-weight:900;
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  text-transform:uppercase;
+}
+
+.section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li a{
+  color:var(--body-default);
+  font-size:16px;
+  font-style:normal;
+  font-weight:400;
+  line-height:24px;
+}
+
 .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body{
+  height:unset;
   padding:40px 32px;
 }
 
@@ -1406,6 +1425,11 @@ html{
 .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-2 p a{
   border-bottom:2px solid var(--link-accent);
   padding:0;
+}
+
+.section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body{
+  height:unset;
+  padding:40px 32px;
 }
 
 @media (min-width: 766px) and (max-width: 1220px){
