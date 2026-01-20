@@ -295,6 +295,10 @@
             {
               "name": "faq-legal",
               "value": "faq-legal"
+            },
+            {
+              "name": "faq-legal-table",
+              "value": "faq-legal-table"
             }
           ]
         }
