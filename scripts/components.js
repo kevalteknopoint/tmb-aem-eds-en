@@ -46,6 +46,10 @@ export default function loadNonBlockLibs() {
       selector: '.faq-legal',
       name: 'faq-legal',
     },
+    {
+      selector: '.faq-legal-table',
+      name: 'faq-legal-table',
+    },
   ];
 
   blocks.forEach(({ selector, name }) => {

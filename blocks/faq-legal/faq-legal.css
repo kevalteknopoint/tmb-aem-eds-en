@@ -83,6 +83,13 @@
   }
 }
 
+@media screen and (max-width: 1023px){
+  .faq-legal.accordion-container{
+    flex-direction:column;
+    gap:40px;
+  }
+}
+
 @media screen and (max-width: 767px){
   .faq-legal.accordion-container{
     padding-inline:16px;

@@ -110,6 +110,10 @@
     gap:24px;
   }
 
+  .legal-tc-guide .columns-wrapper .block div div p{
+    font-size:var(--font-size-sm-body);
+  }
+
   .legal-tc-guide .columns-wrapper .block div div p.button-container{
     flex-direction:column;
   }

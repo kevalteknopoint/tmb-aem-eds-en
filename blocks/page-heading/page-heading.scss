@@ -16,7 +16,7 @@
 
         p{
             color: #121212; // Missing figma token
-            font-size: var(--font-size-body, 16px);
+            font-size: $font-size-body;
             font-style: normal;
             font-weight: 400;
             line-height: $font-height-body; /* 150% */

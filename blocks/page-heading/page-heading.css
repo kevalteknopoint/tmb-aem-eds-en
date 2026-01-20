@@ -18,7 +18,7 @@
 
 .page-heading .default-content-wrapper p{
   color:#121212;
-  font-size:var(--font-size-body, 16px);
+  font-size:var(--font-size-body);
   font-style:normal;
   font-weight:400;
   letter-spacing:var(--font-letter-spacing-body);
