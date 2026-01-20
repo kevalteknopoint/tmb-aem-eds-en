@@ -1,6 +1,6 @@
 .faq-legal-table .columns-wrapper .block div div ul{
-  margin:0;
-  padding:0;
+  margin-top:32px;
+  padding-left:unset !important;
 }
 
 .faq-legal-table .columns-wrapper .block div div ul li{
@@ -13,6 +13,7 @@
   border-bottom:1px solid #cfcfcf;
   display:grid;
   grid-template-columns:1fr 1fr;
+  margin-top:unset;
   padding-bottom:0;
   padding-left:0 !important;
 }
