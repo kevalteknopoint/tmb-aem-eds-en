@@ -401,6 +401,10 @@
           {
             "name": "faq-legal-table",
             "value": "faq-legal-table"
+          },
+          {
+            "name": "legal-privacy",
+            "value": "legal-privacy"
           }
         ]
       }
