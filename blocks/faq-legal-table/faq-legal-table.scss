@@ -1,48 +1,131 @@
+// @use '../../styles/base' as *;
+
+// .faq-legal-table{
+//     .columns-wrapper{
+//         .block{
+//             div{
+//                 div{
+//                     ul{
+//                         li{
+//                             ul{
+//                                 display: flex;
+//                                 justify-content: flex-start;
+//                                 margin-top: 32px;
+
+//                             li{
+//                                 border-bottom: 1px solid rgb(0 0 0 / 20%);
+//                                 color: var(--body-default);
+//                                 font-family: var(--font-family-body);
+//                                 font-size: var(--font-size-body);
+//                                 font-weight: var(--font-weight-body);
+//                                 letter-spacing: var(--font-letter-spacing-body);
+//                                 line-height: var(--font-height-body);
+//                                 list-style: none;
+//                                 padding: 16px 8px 16px 0;
+//                                 text-transform: initial;
+//                                 width: 50%;
+//                             }
+//                         }
+
+//                         &:first-child{
+//                             color: var(--heading-default);
+//                             font-family: var(--font-family-h3);
+//                             font-size: var(--font-size-h3);
+//                             font-weight: var(--font-weight-h3);
+//                             letter-spacing: var(--font-letter-spacing-h3);
+//                             line-height: var(--font-height-h3);
+//                             margin: 0 0 16px;
+//                             text-decoration: none;
+//                             text-transform: initial;
+//                             width: 50%;
+//                         }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
 @use '../../styles/base' as *;
 
-.faq-legal-table{
-    .columns-wrapper{
-        .block{
-            div{
-                div{
-                    ul{
-                        li{
-                            ul{
-                                display: flex;
-                                justify-content: flex-start;
-                                margin-top: 32px;
+.faq-legal-table {
+  .columns-wrapper {
+    .block {
+      div {
+        div {
+          ul {
+            margin: 0;
+            padding: 0;
 
-                            li{
-                                border-bottom: 1px solid rgb(0 0 0 / 20%);
-                                color: var(--body-default);
-                                font-family: var(--font-family-body);
-                                font-size: var(--font-size-body);
-                                font-weight: var(--font-weight-body);
-                                letter-spacing: var(--font-letter-spacing-body);
-                                line-height: var(--font-height-body);
-                                list-style: none;
-                                padding: 16px 8px 16px 0;
-                                text-transform: initial;
-                                width: 50%;
-                            }
-                        }
+            li {
+              list-style: none;
+              text-decoration-line: none !important;
 
-                        &:first-child{
-                            color: var(--heading-default);
-                            font-family: var(--font-family-h3);
-                            font-size: var(--font-size-h3);
-                            font-weight: var(--font-weight-h3);
-                            letter-spacing: var(--font-letter-spacing-h3);
-                            line-height: var(--font-height-h3);
-                            margin: 0 0 16px;
-                            text-decoration: none;
-                            text-transform: initial;
-                            width: 50%;
-                        }
-                        }
-                    }
+              ul {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+                border-bottom: 1px solid #cfcfcf;
+                padding-left: 0 !important;
+                padding-bottom: 0;
+                
+
+                li {
+                  padding: 16px 0;
+                  font-family: var(--font-family-body);
+                  font-size: var(--font-size-body);
+                  line-height: var(--font-height-body);
+                  color: var(--body-default);
+                  text-decoration-line: none !important;
+                  cursor: default;
+
+                  /*  ALL link behaviour */
+                  a {
+                    color: inherit;
+                    text-decoration: none !important;
+                    pointer-events: none;
+                    cursor: default;
+                  }
+
+                  /* Date column */
+                  &:last-child {
+                    text-align: left !important;
+                    white-space: nowrap;
+                  }
                 }
+              }
+
+              /* HEADER ROW */
+              &:first-child {
+                ul {
+                  border-bottom: 4px solid var(--heading-default);
+                  padding-bottom: 8px;
+
+                  li {
+                    padding: 0;
+                    font-family: var(--font-family-h3);
+                    font-size: var(--font-size-h3);
+                    font-weight: var(--font-weight-h3);
+                    color: var(--heading-default);
+                  }
+                }
+              }
+
+              /* LAST ROW */
+              &:last-child {
+                ul {
+                  border-bottom: none;
+                }
+              }
             }
+          }
         }
+      }
     }
+  }
 }
+
+
+
