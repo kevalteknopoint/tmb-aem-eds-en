@@ -1,3 +1,16 @@
-.legal-privacy .column-wrapper .block ul li ul li{
-  list-style:none;
+.section.legal-privacy.columns-container .columns-wrapper .block div div:has(ul) ul{
+  margin-top:10px;
+}
+
+.section.legal-privacy.columns-container .columns-wrapper .block div div:has(ul) ul li{
+  color:#121212;
+  text-decoration:none;
+}
+
+.section.legal-privacy.columns-container .columns-wrapper .block div div:has(ul) ul li::marker{
+  color:#121212 !important;
+}
+
+.section.legal-privacy.columns-container .columns-wrapper .block div div h3:first-child, .section.legal-privacy.columns-container .columns-wrapper .block div div h4:first-child, .section.legal-privacy.columns-container .columns-wrapper .block div div h5:first-child, .section.legal-privacy.columns-container .columns-wrapper .block div div h6:first-child{
+  margin-top:0;
 }
