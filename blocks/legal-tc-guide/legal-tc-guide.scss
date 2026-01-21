@@ -77,7 +77,8 @@
                         ul{
                             list-style-type: disc;
                             padding-left: 25px;
-                            padding-bottom: 16px;
+
+                            // padding-bottom: 16px;
 
                             li{
                                 color:  $body-default;
@@ -127,6 +128,47 @@
                         margin-top: 40px;
                         margin-bottom: 12px;
                     }
+
+                    // &:has(ol){
+                    //     ol{
+                    //         counter-reset: step-counter;
+                    //         list-style: none;
+                    //         margin-bottom: 32px;
+                    //         padding: 0;
+
+                    //         li {
+                    //                 align-items: baseline;
+                    //                 color: $body-default;
+                    //                 counter-increment: step-counter;
+                    //                 display: flex;
+                    //                 font-size: $font-size-body;
+                    //                 font-weight: $font-weight-body;
+                    //                 gap: 12px;
+                    //                 letter-spacing: $font-letter-spacing-body;
+                    //                 line-height: $font-height-body;
+                    //                 margin-bottom: 10px;
+                    //                 text-transform: initial;
+
+                    //                 @include typo-body;
+
+                    //                 &::before {
+                    //                         align-items: center;
+                    //                         border: 1px solid rgb(0 82 91 / 10%);
+                    //                         border-radius: $radius-button;
+                    //                         color: $heading-default;
+                    //                         content: counter(step-counter);
+                    //                         display: flex;
+                    //                         font-size: 16px;
+                    //                         font-weight: 500;
+                    //                         height: 32px;
+                    //                         justify-content: center;
+                    //                         min-width: 32px;
+                    //                         width: -moz-fit-content;
+                    //                         width: fit-content;
+                    //                 }
+                    //             }
+                    //         }
+                    // }
 
                     &:first-child{
                         max-width: 416px;

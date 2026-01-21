@@ -105,6 +105,24 @@
 
       color: $body-default;
       margin-bottom: 16px;
+
+      &:has(a):not(.button-container){
+        a{
+            color: $link-default;
+            font-size: $font-size-body;
+            font-style: normal;
+            font-weight: 400;
+            line-height: $font-height-body;
+            letter-spacing: $font-letter-spacing-body;
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            text-decoration-skip-ink: auto;
+            text-decoration-thickness: auto;
+            text-underline-offset: auto;
+            text-underline-position: from-font;
+        }
+       
+      }
     }
 
     ol {
@@ -282,8 +300,7 @@
 
       div {
         h1,
-        h2,
-        h3 {
+        h2 {
           color: $heading-default;
           white-space: normal;
           overflow-wrap: break-word;
@@ -291,6 +308,17 @@
           width: 100%;
 
           @include typo-heading1;
+        }
+
+        h3,h4,h5,h6{
+          color: $heading-default;
+          white-space: normal;
+          overflow-wrap: break-word;
+          width: 100%;
+          max-width: unset;
+          margin-bottom: 16px;
+
+          @include typo-heading3;
         }
       }
 
