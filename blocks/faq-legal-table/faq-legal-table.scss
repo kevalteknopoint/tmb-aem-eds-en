@@ -7,40 +7,58 @@
                 div{
                     &:has(ul){
                         ul{
+                            list-style: none;
+                            padding: 0;
+                            margin: 32px 0 0;
+                            min-width: 500px;
+
                             li{
+                              border-bottom: 1px solid rgb(0 0 0 / 20%);
+
                                 ul{
                                     display: flex;
-                                    justify-content: flex-start;
-                                    margin-top: 32px;
+                                    list-style: none;
+                                    padding: 0;
+                                    margin: 0;
+
 
                                     li{
-                                        border-bottom: 1px solid rgb(0 0 0 / 20%);
-                                        color: var(--body-default);
-                                        font-family: var(--font-family-body);
-                                        font-size: var(--font-size-body);
-                                        font-weight: var(--font-weight-body);
-                                        letter-spacing: var(--font-letter-spacing-body);
-                                        line-height: var(--font-height-body);
-                                        list-style: none;
-                                        padding: 16px 8px 16px 0;
-                                        text-transform: initial;
-                                        width: 50%;
+                                            flex: 1;
+                                            display: flex;
+                                            align-items: center;
+                                            border-bottom: unset;
+                                            padding: 16px 0;
+                                            color: $body-default;
+                                            font-size: $font-size-body;
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            line-height: $font-height-body; 
+                                            letter-spacing: $font-letter-spacing-body;
+
+                                            &:first-child{
+                                                border-bottom: unset;
+                                            }
                                     }
                                 }
 
                                 &:first-child{
-                                    color: var(--heading-default);
-                                    font-family: var(--font-family-h3);
-                                    font-size: var(--font-size-h3);
-                                    font-weight: var(--font-weight-h3);
-                                    letter-spacing: var(--font-letter-spacing-h3);
-                                    line-height: var(--font-height-h3);
-                                    margin: 0 0 16px;
-                                    text-decoration: none;
-                                    text-transform: initial;
-                                    width: 50%;
+                                    border-bottom: 4px solid $heading-default; 
+
+                                    ul{
+                                        li{
+                                            color: var(--heading, #00525B);
+                                            /* Heading 3 */
+                                            font-family: var(--font-family-h3, Inter);
+                                            font-size: var(--font-size-h3, 24px);
+                                            font-style: normal;
+                                            font-weight: 500;
+                                            line-height: var(--font-height-h3, 29px); /* 120.833% */
+                                            letter-spacing: var(--font-letter-spacing-h3, 0);                                           
+                                        }
+                                    }
                                 }
                             }
+
                         }
                     }
                 }
