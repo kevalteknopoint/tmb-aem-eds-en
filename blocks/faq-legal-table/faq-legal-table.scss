@@ -47,6 +47,23 @@
                                             line-height: $font-height-body; 
                                             letter-spacing: $font-letter-spacing-body;
 
+                                            &:has(a){
+                                                a{
+                                                    color: $link-default;
+                                                    font-size: $font-size-body;
+                                                    font-style: normal;
+                                                    font-weight: 400;
+                                                    line-height: $font-height-body; /* 150% */
+                                                    letter-spacing: $font-letter-spacing-body;
+                                                    text-decoration-line: underline;
+                                                    text-decoration-style: solid;
+                                                    text-decoration-skip-ink: auto;
+                                                    text-decoration-thickness: auto;
+                                                    text-underline-offset: auto;
+                                                    text-underline-position: from-font;
+                                                }
+                                            }
+
                                             &:first-child{
                                                 border-bottom: unset;
                                             }
@@ -63,7 +80,7 @@
                                             font-style: normal;
                                             font-weight: 500;
                                             line-height: $font-height-h3;
-                                            letter-spacing: $font-letter-spacing-h3;                                           
+                                            letter-spacing: $font-letter-spacing-h3;  
                                         }
                                     }
                                 }

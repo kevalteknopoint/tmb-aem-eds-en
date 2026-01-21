@@ -40,6 +40,22 @@
   padding:12px 0;
 }
 
+.faq-legal-table .columns-wrapper .block div div:has(ul) ul li ul li:has(a) a{
+  color:var(--link-default);
+  font-size:var(--font-size-body);
+  font-style:normal;
+  font-weight:400;
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-decoration-line:underline;
+  -webkit-text-decoration-skip:ink;
+          text-decoration-skip-ink:auto;
+  text-decoration-style:solid;
+  text-decoration-thickness:auto;
+  text-underline-offset:auto;
+  text-underline-position:from-font;
+}
+
 .faq-legal-table .columns-wrapper .block div div:has(ul) ul li ul li:first-child{
   border-bottom:unset;
 }
