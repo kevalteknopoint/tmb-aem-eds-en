@@ -1,5 +1,12 @@
 @use '../../styles/base' as *;
 
+body:has(.page-heading) {
+  .breadcrumb.block {
+    color: $link-default;
+    padding-block: 16px;
+  }
+}
+
 .page-heading{
     @include responsive-container;
 

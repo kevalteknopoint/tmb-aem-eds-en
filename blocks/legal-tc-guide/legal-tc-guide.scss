@@ -80,21 +80,40 @@
                             padding-bottom: 16px;
 
                             li{
-                                color: $link-default;
+                                color:  $body-default;
                                 font-size: $font-size-body;
                                 font-weight: 400;
                                 line-height: $font-height-body;
                                 letter-spacing: $font-letter-spacing-body;
-                                text-decoration-line: underline;
-                                text-decoration-style: solid;
-                                text-decoration-skip-ink: auto;
-                                text-decoration-thickness: auto;
-                                text-underline-offset: auto;
-                                text-underline-position: from-font;
+                                padding: 2px 0;
 
                                 &::marker{
-                                    color: var(--link-default);
+                                    // color: var(--link-default);
+                                    color: #121212;
                                 }
+
+// trial for anchor tag
+                                &:has(a){
+                                    &::marker{
+                                        color: var(--link-default);
+                                    }
+
+                                    a{
+                                        color: $link-default;
+                                        font-size: $font-size-body;
+                                        font-weight: 400;
+                                        line-height: $font-height-body;
+                                        letter-spacing: $font-letter-spacing-body;
+                                        text-decoration-line: underline;
+                                        text-decoration-style: solid;
+                                        text-decoration-skip-ink: auto;
+                                        text-decoration-thickness: auto;
+                                        text-underline-offset: auto;
+                                        text-underline-position: from-font;
+                                    }
+                                }
+
+                                // end trial
                             }
                         }
                     }

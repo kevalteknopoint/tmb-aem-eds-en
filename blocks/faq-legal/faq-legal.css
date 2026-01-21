@@ -35,7 +35,7 @@
   padding-bottom:16px;
 }
 
-.faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-label p{
+.faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-label h3, .faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-label h4, .faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-label h5, .faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-label h6, .faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-label p{
   color:var(--color-button-primary-default);
   font-size:var(--font-size-h3);
   font-weight:500;
@@ -51,19 +51,35 @@
   line-height:var(--font-height-body);
 }
 
-.faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-body ul{
+.faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-body:has(ul) ul{
   list-style-type:disc;
   padding-bottom:16px;
   padding-left:25px;
+  padding-top:5px;
 }
 
-.faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-body ul li{
+.faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-body:has(ul) ul li{
+  color:var(--body-default);
+  font-size:var(--font-size-body);
+  font-weight:400;
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+}
+
+.faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-body:has(ul) ul li::marker{
+  color:#121212;
+}
+
+.faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-body:has(ul) ul li:has(a)::marker{
+  color:var(--link-default);
+}
+
+.faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-body:has(ul) ul li:has(a) a{
   color:var(--link-default);
   font-size:var(--font-size-body);
   font-weight:400;
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  padding-top:5px;
   text-decoration-line:underline;
   -webkit-text-decoration-skip:ink;
           text-decoration-skip-ink:auto;
@@ -71,10 +87,6 @@
   text-decoration-thickness:auto;
   text-underline-offset:auto;
   text-underline-position:from-font;
-}
-
-.faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-body ul li::marker{
-  color:var(--link-default);
 }
 
 @media screen and (max-width: 1279px){

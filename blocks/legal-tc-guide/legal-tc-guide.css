@@ -63,6 +63,23 @@
 }
 
 .legal-tc-guide .columns-wrapper .block div div:has(ul) ul li{
+  color:var(--body-default);
+  font-size:var(--font-size-body);
+  font-weight:400;
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  padding:2px 0;
+}
+
+.legal-tc-guide .columns-wrapper .block div div:has(ul) ul li::marker{
+  color:#121212;
+}
+
+.legal-tc-guide .columns-wrapper .block div div:has(ul) ul li:has(a)::marker{
+  color:var(--link-default);
+}
+
+.legal-tc-guide .columns-wrapper .block div div:has(ul) ul li:has(a) a{
   color:var(--link-default);
   font-size:var(--font-size-body);
   font-weight:400;
@@ -75,10 +92,6 @@
   text-decoration-thickness:auto;
   text-underline-offset:auto;
   text-underline-position:from-font;
-}
-
-.legal-tc-guide .columns-wrapper .block div div:has(ul) ul li::marker{
-  color:var(--link-default);
 }
 
 .legal-tc-guide .columns-wrapper .block div div h3, .legal-tc-guide .columns-wrapper .block div div h4, .legal-tc-guide .columns-wrapper .block div div h5, .legal-tc-guide .columns-wrapper .block div div h6{
