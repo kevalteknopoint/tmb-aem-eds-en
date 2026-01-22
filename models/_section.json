@@ -314,7 +314,8 @@
         "compare-accounts",
         "stepper",
         "tabs",
-        "interest-rates"
+        "interest-rates",
+        "compare-accounts-copy"
       ]
     }
   ]
