@@ -466,15 +466,15 @@
           }
         },
         {
-          "title": "Fragment",
-          "id": "fragment",
+          "title": "Fragment Item",
+          "id": "fragment-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Fragment",
-                  "model": "fragment"
+                  "name": "Fragment Item",
+                  "model": "fragment-item"
                 }
               }
             }
