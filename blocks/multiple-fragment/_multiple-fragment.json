@@ -22,8 +22,8 @@
       "fields": [
         {
           "component": "aem-content",
-          "name": "reference",
-          "label": "Reference",
+          "name": "reference-copy",
+          "label": "Reference-copy",
           "multi": "true"
         }
       ]
