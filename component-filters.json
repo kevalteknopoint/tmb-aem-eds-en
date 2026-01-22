@@ -101,6 +101,12 @@
     ]
   },
   {
+    "id": "fragments",
+    "components": [
+      "fragment"
+    ]
+  },
+  {
     "id": "stepper",
     "components": [
       "stepper-item"

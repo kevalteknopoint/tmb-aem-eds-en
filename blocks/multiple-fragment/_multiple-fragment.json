@@ -1,15 +1,31 @@
 {
   "definitions": [
     {
-      "title": "Multiple Fragment",
-      "id": "multiple-fragment",
+      "title": "Fragments",
+      "id": "fragments",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
-              "name": "Multiple Fragment",
-              "model": "multiple-fragment"
+              "name": "Fragments",
+              "model": "fragments",
+              "filter": "fragments"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Fragment",
+      "id": "fragment",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Fragment",
+              "model": "fragment"
             }
           }
         }
@@ -18,16 +34,23 @@
   ],
   "models": [
     {
-      "id": "multiple-fragment",
+      "id": "fragment",
       "fields": [
         {
           "component": "aem-content",
-          "name": "reference-copy",
-          "label": "Reference-copy",
-          "multi": "true"
+          "name": "reference",
+          "label": "Reference"
         }
       ]
     }
   ],
-  "filters": []
+  "filters": [
+    {
+
+      "id": "fragments",
+      "components": [
+        "fragment"
+      ]
+    }
+  ]
 }

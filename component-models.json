@@ -1319,13 +1319,12 @@
     ]
   },
   {
-    "id": "multiple-fragment",
+    "id": "fragment",
     "fields": [
       {
         "component": "aem-content",
-        "name": "reference-copy",
-        "label": "Reference-copy",
-        "multi": "true"
+        "name": "reference",
+        "label": "Reference"
       }
     ]
   },
