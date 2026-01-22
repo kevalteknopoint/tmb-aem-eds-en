@@ -1319,6 +1319,17 @@
     ]
   },
   {
+    "id": "multiple-fragment",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "reference",
+        "label": "Reference",
+        "multi": "true"
+      }
+    ]
+  },
+  {
     "id": "quick-links",
     "fields": [
       {
