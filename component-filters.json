@@ -90,6 +90,12 @@
     ]
   },
   {
+    "id": "fragments",
+    "components": [
+      "fragment-item"
+    ]
+  },
+  {
     "id": "hero-banner",
     "components": [
       "banner"
@@ -99,12 +105,6 @@
     "id": "interest-rates",
     "components": [
       "rate-details"
-    ]
-  },
-  {
-    "id": "fragments",
-    "components": [
-      "fragment-item"
     ]
   },
   {

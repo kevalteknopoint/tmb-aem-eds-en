@@ -1086,6 +1086,16 @@
     ]
   },
   {
+    "id": "fragment-item",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "reference",
+        "label": "Reference"
+      }
+    ]
+  },
+  {
     "id": "hero-banner",
     "fields": [
       {
@@ -1315,16 +1325,6 @@
         "name": "rate-disclaimer",
         "label": "Rate Disclaimer",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "fragment-item",
-    "fields": [
-      {
-        "component": "aem-content",
-        "name": "reference",
-        "label": "Reference"
       }
     ]
   },
