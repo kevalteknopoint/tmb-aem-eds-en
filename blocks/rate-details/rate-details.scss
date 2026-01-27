@@ -6,12 +6,32 @@
   display: grid;
   grid-template-columns: 384px auto;
 
+  @include tablet-lg {
+    grid-template-columns: auto;
+  }
+
+  @include tablet {
+    grid-template-columns: auto;
+  }
+
   @include mobile {
     grid-template-columns: auto;
   }
 
   .interest-rates.block {
     margin-bottom: 40px;
+
+    .interest-rates-wrap{
+      gap: 32px;
+
+      @include tablet-lg{
+        gap: 32px;
+      }
+
+      @include tablet{
+        gap: 32px;
+      }
+    }
   }
 
   .columns-wrapper {
@@ -170,5 +190,29 @@
     @include typo-body;
 
     color: $body-default;
+  }
+
+  .default-content-wrapper{
+    p{
+      color: $body-default;
+      font-size: $font-size-body;
+      font-style: normal;
+      font-weight: 400;
+      line-height: $font-height-body; /* 150% */
+      letter-spacing: $font-letter-spacing-body;
+      margin-top: 16px;
+
+      a{
+        color: $link-default;
+        font-style: normal;
+        font-weight: 400;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+      }
+    }
   }
 }

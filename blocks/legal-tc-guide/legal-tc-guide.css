@@ -26,6 +26,7 @@
   font-size:var(--font-size-body);
   font-weight:400;
   line-height:var(--font-height-body);
+  margin-bottom:15px;
 }
 
 .legal-tc-guide .columns-wrapper .block div div p.button-container{
@@ -56,8 +57,25 @@
   width:18px;
 }
 
+.legal-tc-guide .columns-wrapper .block div div p a{
+  color:var(--link-default);
+  font-size:var(--font-size-body);
+  font-style:normal;
+  font-weight:400;
+  letter-spacing:var(--font-letter-spacing-disc, 0);
+  line-height:var(--font-height-disclaimer, 18px);
+  text-decoration-line:underline;
+  -webkit-text-decoration-skip:ink;
+          text-decoration-skip-ink:auto;
+  text-decoration-style:solid;
+  text-decoration-thickness:auto;
+  text-underline-offset:auto;
+  text-underline-position:from-font;
+}
+
 .legal-tc-guide .columns-wrapper .block div div:has(ul) ul{
   list-style-type:disc;
+  margin-bottom:32px;
   padding-left:25px;
 }
 
@@ -133,7 +151,7 @@
   }
 
   .legal-tc-guide .columns-wrapper .block div div p{
-    font-size:var(--font-size-sm-body);
+    font-size:var(--font-size-body);
   }
 
   .legal-tc-guide .columns-wrapper .block div div p.button-container{

@@ -43,6 +43,14 @@
   line-height:var(--font-height-h3);
 }
 
+.faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-label svg{
+  background:var(--bg-light);
+  border-radius:44%;
+  height:32px;
+  padding:8px;
+  width:32px;
+}
+
 .faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-body p{
   color:var(--body-default);
   font-size:var(--font-size-body);

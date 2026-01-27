@@ -46,13 +46,13 @@
                         letter-spacing: $font-letter-spacing-h3;
                     }
 
-                    // p{
-                    //     color: $color-button-primary-default;
-                    //     font-size: $font-size-h3;
-                    //     font-weight: 500;
-                    //     line-height: $font-height-h3;
-                    //     letter-spacing: $font-letter-spacing-h3;
-                    // }
+                    svg{
+                        padding: 8px;
+                        height: 32px;
+                        width: 32px;
+                        background: $bg-light;
+                        border-radius: 44%;
+                    }
                 }
 
                 .accordion-item-body{

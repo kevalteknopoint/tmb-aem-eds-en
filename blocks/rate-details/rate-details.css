@@ -29,6 +29,10 @@
   margin-bottom:40px;
 }
 
+.rate-details .interest-rates.block .interest-rates-wrap{
+  gap:32px;
+}
+
 .rate-details .columns-wrapper{
   grid-row:1/100;
 }
@@ -248,9 +252,47 @@
   text-transform:initial;
 }
 
+.rate-details .default-content-wrapper p{
+  color:var(--body-default);
+  font-size:var(--font-size-body);
+  font-style:normal;
+  font-weight:400;
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  margin-top:16px;
+}
+
+.rate-details .default-content-wrapper p a{
+  color:var(--link-default);
+  font-style:normal;
+  font-weight:400;
+  text-decoration-line:underline;
+  -webkit-text-decoration-skip:ink;
+          text-decoration-skip-ink:auto;
+  text-decoration-style:solid;
+  text-decoration-thickness:auto;
+  text-underline-offset:auto;
+  text-underline-position:from-font;
+}
+
 @media screen and (max-width: 1279px){
   .rate-details{
+    grid-template-columns:auto;
     padding-inline:24px;
+  }
+
+  .rate-details .interest-rates.block .interest-rates-wrap{
+    gap:32px;
+  }
+}
+
+@media screen and (max-width: 1023px){
+  .rate-details{
+    grid-template-columns:auto;
+  }
+
+  .rate-details .interest-rates.block .interest-rates-wrap{
+    gap:32px;
   }
 }
 
