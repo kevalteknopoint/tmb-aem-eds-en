@@ -9,9 +9,9 @@ export default function decorate(block) {
   ];
   dataMapMoObj.addIndexed(block);
 
-  const iframeAnchor = block.querySelector('.calculator-item1 .calculator-inner-item1 a');
-  console.log("iframeAnchor",iframeAnchor);
-  const iframeLink = iframeAnchor ? iframeAnchor.innerText : '';
+  // const iframeAnchor = block.querySelector('.calculator-item1 .calculator-inner-item1 a');
+  // console.log("iframeAnchor",iframeAnchor);
+  const iframeLink = block ? block.innerText : '';
 
   const cfg = { iframeLink };
 
