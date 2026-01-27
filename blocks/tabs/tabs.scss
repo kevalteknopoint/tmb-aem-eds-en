@@ -1,6 +1,8 @@
 @use '../../styles/base' as *;
 
 .home-loan-explained {
+  @include responsive-container;
+
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -9,6 +11,14 @@
   max-width: calc(1440px - 0px);
   padding-inline: 64px;
   width: 100%;
+
+  @include tablet-lg {
+    padding-inline: $padding-tablet;
+  }
+
+  @include mobile {
+    padding-inline: $padding-mobile;
+  }
 
   .default-content-wrapper {
     h1,

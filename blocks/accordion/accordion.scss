@@ -5,17 +5,17 @@
   padding: 32px 0;
 
   @media (max-width: 720px) {
-    padding: 40px 0px;
+    padding: 40px 0;
   }
 
   @media (max-width: 390px) {
-    padding: 40px 0px;
+    padding: 40px 0;
   }
 
   .accordion-wrapper{
     @include responsive-container;
-    .accordion {
 
+    .accordion {
       @include mobile {
         padding: 0;
       }
@@ -28,7 +28,8 @@
       }
 
       p {
-        margin: 0px;
+        margin: 0;
+
         // font-size: 16px;
         // font-weight: 500;
         // line-height: 24px;
@@ -37,6 +38,7 @@
 
       .accordion-item-label {
         @include typo-heading5;
+
         // font-weight: 700;
         // font-size: 24px;
         // line-height: 32px;
@@ -75,6 +77,7 @@
         
         p {
           @include typo-body;
+
           // font-weight: 400;
           // font-size: 16px;
           // line-height: 24px;
@@ -85,7 +88,6 @@
 
       &[open] {
         summary {
-
           svg {
             transform: rotate(0deg);
           }
