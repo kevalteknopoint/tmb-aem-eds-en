@@ -20,7 +20,7 @@ export default function decorate(block) {
 
   if (cfg.iframeLink) {
     const iframe = document.createElement('iframe');
-    iframe.src = "https://www.tmbank.com.au/" + cfg.iframeLink;
+    iframe.src = `https://www.tmbank.com.au/ ${cfg.iframeLink}`;
     iframe.style.border = 'none';
     iframe.style.width = '100%';
     iframe.style.height = '100%';
