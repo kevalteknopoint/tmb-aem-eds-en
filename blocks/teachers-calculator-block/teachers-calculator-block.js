@@ -9,8 +9,9 @@ export default function decorate(block) {
   ];
   dataMapMoObj.addIndexed(block);
 
-  const iframeAnchor = block.querySelector('.calculator-item1 .calculator-inner-item1 a');
-  const iframeLink = iframeAnchor ? iframeAnchor.getAttribute('href') : '';
+  // const iframeAnchor = block.querySelector('.calculator-item1 .calculator-inner-item1 a');
+  // console.log("iframeAnchor",iframeAnchor);
+  const iframeLink = block ? block.innerText : '';
 
   const cfg = { iframeLink };
 
@@ -19,7 +20,7 @@ export default function decorate(block) {
 
   if (cfg.iframeLink) {
     const iframe = document.createElement('iframe');
-    iframe.src = cfg.iframeLink;
+    iframe.src = `https://www.tmbank.com.au/ ${cfg.iframeLink}`;
     iframe.style.border = 'none';
     iframe.style.width = '100%';
     iframe.style.height = '100%';

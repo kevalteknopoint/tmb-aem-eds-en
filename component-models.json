@@ -1425,7 +1425,7 @@
       {
         "component": "text",
         "name": "i-frame-link",
-        "label": "Enter calculator iframe link"
+        "label": "Enter calculator only URL for iframe"
       }
     ]
   },
