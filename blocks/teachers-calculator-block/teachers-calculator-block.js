@@ -10,7 +10,7 @@ export default function decorate(block) {
   dataMapMoObj.addIndexed(block);
 
   const iframeAnchor = block.querySelector('.calculator-item1 .calculator-inner-item1 a');
-  const iframeLink = iframeAnchor ? iframeAnchor.getAttribute('href') : '';
+  const iframeLink = iframeAnchor ? iframeAnchor.innerText : '';
 
   const cfg = { iframeLink };
 
