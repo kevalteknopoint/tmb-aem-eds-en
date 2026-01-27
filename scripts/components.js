@@ -30,6 +30,30 @@ export default function loadNonBlockLibs() {
       selector: '.table-with-icons',
       name: 'table-with-icons',
     },
+    {
+      selector: '.page-heading',
+      name: 'page-heading',
+    },
+    {
+      selector: '.legal-tc-guide',
+      name: 'legal-tc-guide',
+    },
+    {
+      selector: '.online-banking-legal',
+      name: 'online-banking-legal',
+    },
+    {
+      selector: '.faq-legal',
+      name: 'faq-legal',
+    },
+    {
+      selector: '.faq-legal-table',
+      name: 'faq-legal-table',
+    },
+    {
+      selector: '.legal-privacy',
+      name: 'legal-privacy',
+    },
   ];
 
   blocks.forEach(({ selector, name }) => {

@@ -4,7 +4,6 @@
   @include responsive-container;
 
   .default-content-wrapper {
-
     h1,
     h2,
     h3,
@@ -131,7 +130,7 @@
 
     .default-content-wrapper {
       h1, h2, h3, h4, h5, h6 {
-        max-width: 800px;
+        // max-width: 800px;
         margin-inline: auto;
       }
     }
@@ -154,7 +153,6 @@
         }
 
         .cards-card-body {
-
           h1,
           h2,
           h3,
@@ -183,7 +181,6 @@
 
   &.faq-cant-find-looking-for-variant {
     .default-content-wrapper {
-
       h1,
       h2,
       h3,
@@ -293,10 +290,10 @@
   }
 }
 
-//BORDER VARIATION
+// BORDER VARIATION
+
 .section.faq-cant-find-looking-for.variation-border {
   .default-content-wrapper {
-
     h1,
     h2,
     h3,
