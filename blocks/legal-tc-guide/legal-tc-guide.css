@@ -26,7 +26,7 @@
   font-size:var(--font-size-body);
   font-weight:400;
   line-height:var(--font-height-body);
-  margin-bottom:15px;
+  margin-bottom:16px;
 }
 
 .legal-tc-guide .columns-wrapper .block div div p.button-container{
@@ -115,7 +115,7 @@
   text-underline-position:from-font;
 }
 
-.legal-tc-guide .columns-wrapper .block div div h3, .legal-tc-guide .columns-wrapper .block div div h4, .legal-tc-guide .columns-wrapper .block div div h5, .legal-tc-guide .columns-wrapper .block div div h6{
+.legal-tc-guide .columns-wrapper .block div div h3{
   color:var(--heading-default);
   font-size:var(--font-size-h3);
   font-weight:500;
@@ -123,6 +123,41 @@
   line-height:var(--font-height-h3);
   margin-bottom:12px;
   margin-top:40px;
+}
+
+.legal-tc-guide .columns-wrapper .block div div h4{
+  color:var(--body-default);
+  font-family:var(--font-family-intro);
+  font-size:var(--font-size-intro);
+  font-weight:var(--font-weight-intro);
+  letter-spacing:var(--font-letter-spacing-intro);
+  line-height:var(--font-height-intro);
+  margin-top:40px;
+  text-transform:initial;
+}
+
+.legal-tc-guide .columns-wrapper .block div div h4:first-child{
+  margin-top:0;
+}
+
+.legal-tc-guide .columns-wrapper .block div div h5{
+  color:var(--body-default);
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-weight:var(--font-weight-sm-body);
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
+  text-transform:initial;
+}
+
+.legal-tc-guide .columns-wrapper .block div div h6{
+  color:var(--body-default);
+  font-family:var(--font-family-disc);
+  font-size:var(--font-size-disclaimer);
+  font-weight:var(--font-weight-disc);
+  letter-spacing:var(--font-letter-spacing-disc);
+  line-height:var(--font-height-disclaimer);
+  text-transform:initial;
 }
 
 .legal-tc-guide .columns-wrapper .block div div:first-child{
@@ -138,6 +173,10 @@
 @media screen and (max-width: 1023px){
   .legal-tc-guide .columns-wrapper .block div{
     gap:40px;
+  }
+
+  .legal-tc-guide .columns-wrapper .block div div h3{
+    margin-top:32px;
   }
 
   .legal-tc-guide .columns-wrapper .block div div:first-child{
@@ -160,5 +199,13 @@
 
   .legal-tc-guide .columns-wrapper .block div div p.button-container{
     flex-direction:column;
+  }
+
+  .legal-tc-guide .columns-wrapper .block div div h3{
+    margin-top:24px;
+  }
+
+  .legal-tc-guide .columns-wrapper .block div div h4{
+    margin-top:24px;
   }
 }

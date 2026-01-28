@@ -33,7 +33,7 @@
                         font-size: $font-size-body;
                         font-weight: 400;
                         line-height: $font-height-body; 
-                        margin-bottom: 15px;
+                        margin-bottom: 16px;
 
                         @include mobile{
                             font-size: $font-size-body;
@@ -142,7 +142,7 @@
                         }
                     }
 
-                    h3,h4,h5,h6{
+                    h3 {
                         color: $heading-default;
                         font-size: $font-size-h3;
                         font-weight: 500;
@@ -150,6 +150,14 @@
                         letter-spacing: $font-letter-spacing-h3;
                         margin-top: 40px;
                         margin-bottom: 12px;
+                        
+                        @include tablet {
+                            margin-top: 32px
+                        }
+
+                        @include mobile {
+                            margin-top: 24px
+                        }
                     }
 
                     // &:has(ol){
@@ -192,6 +200,33 @@
                     //             }
                     //         }
                     // }
+
+                    h4 {
+                        @include typo-intro;
+
+                        color: $body-default;
+                        margin-top: 40px;
+
+                        @include mobile {
+                            margin-top: 24px;
+                        }
+
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                    }
+
+                    h5 {
+                        @include typo-sm-body;
+
+                        color: $body-default;
+                    }
+
+                    h6 {
+                        @include typo-disclaimer;
+
+                        color: $body-default;
+                    }
 
                     &:first-child{
                         max-width: 416px;
