@@ -67,3 +67,9 @@
     padding:40px 24px;
   }
 }
+
+@media screen and (max-width: 767px){
+  .section.online-banking-legal{
+    padding-top:40px;
+  }
+}

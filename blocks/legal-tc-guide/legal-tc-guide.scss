@@ -64,10 +64,16 @@
                                 border-radius: $radius-button;
                                 background: $color-button-outlined-default;
 
-                                span{
-                                    svg{
-                                        width: 18px;
-                                        height: 18px;
+                               span.icon {
+                                    svg {
+                                        width: 7px;
+                                        height: 12px;
+                                    }
+
+                                    &.icon-download-icon {
+                                        svg {
+                                        width: 11px;
+                                        }
                                     }
                                 }
                             }

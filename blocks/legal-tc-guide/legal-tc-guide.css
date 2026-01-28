@@ -52,9 +52,13 @@
   text-decoration:none;
 }
 
-.legal-tc-guide .columns-wrapper .block div div p.button-container a span svg{
-  height:18px;
-  width:18px;
+.legal-tc-guide .columns-wrapper .block div div p.button-container a span.icon svg{
+  height:12px;
+  width:7px;
+}
+
+.legal-tc-guide .columns-wrapper .block div div p.button-container a span.icon.icon-download-icon svg{
+  width:11px;
 }
 
 .legal-tc-guide .columns-wrapper .block div div p a{

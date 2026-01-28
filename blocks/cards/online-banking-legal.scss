@@ -3,6 +3,10 @@
 @use '../../styles/mixins';
 
     .section.online-banking-legal{
+        @include mobile{
+            padding-top: 40px;
+        }
+
         .cards-wrapper{
             .cards{
                 .banking-cards-ul{

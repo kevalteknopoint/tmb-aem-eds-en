@@ -2077,4 +2077,8 @@ html{
   .milestones .cards-wrapper .block .nav-wrapper .swiper-button-prev{
     display:block;
   }
+
+  .section.online-banking-legal{
+    padding-top:40px;
+  }
 }
