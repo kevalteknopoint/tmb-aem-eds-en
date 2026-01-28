@@ -158,6 +158,10 @@
                         @include mobile {
                             margin-top: 24px
                         }
+
+                        &:first-child{
+                            margin-top: 0;
+                        }
                     }
 
                     // &:has(ol){

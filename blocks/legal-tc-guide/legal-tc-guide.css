@@ -125,6 +125,10 @@
   margin-top:40px;
 }
 
+.legal-tc-guide .columns-wrapper .block div div h3:first-child{
+  margin-top:0;
+}
+
 .legal-tc-guide .columns-wrapper .block div div h4{
   color:var(--body-default);
   font-family:var(--font-family-intro);
