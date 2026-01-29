@@ -1,9 +1,5 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{
+.default-content-wrapper h1{
+  background-color:var(--heading-light);
   color:var(--heading-default);
   font-family:var(--font-family-h1);
   font-size:var(--font-size-h1);
