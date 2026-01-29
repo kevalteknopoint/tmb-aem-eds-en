@@ -1,0 +1,130 @@
+@use '../../styles/base' as *;
+
+.interest-table-section{
+    @include responsive-container;
+
+    .default-content-wrapper{
+        h1,h2{
+            color: $heading-default;
+            margin-bottom: 40px;
+
+            @include typo-heading1;
+
+            @include mobile {
+                margin-bottom: 24px;
+            }
+        }
+
+        .ul-0{
+            display: flex;
+            justify-content: flex-start;
+            border-bottom: 4px solid $heading-default;
+
+            li{
+                width: 50%;
+                text-decoration: none;
+                color: $heading-default;
+                margin: 0 0 16px;
+
+                @include typo-heading3;
+            }
+        }
+
+        .ul-1 {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            li{
+                ul{
+                    display: flex;
+                    justify-content: flex-start;
+
+                    li{
+                        list-style: none;
+                        width: 50%;
+                        padding: 16px 8px 16px 0;
+                        color: $body-default;
+                        border-bottom: 1px solid rgb(0 0 0 / 20%); // FIGMA TOKEN MISSING
+
+                        @include typo-body;
+                    }
+                    
+                    li:nth-child(odd) {
+                        padding: 16px 8px 16px 0;
+                    }
+
+                    li:nth-child(even) {
+                        padding: 16px 16px 16px 8px;
+                        
+                        @include tablet {
+                          text-align: left;
+                        }
+
+                        @include mobile {
+                          text-align: left;
+                        }
+                    }
+                }
+                
+            }
+
+            &:last-child {
+              & > li:last-child {
+                li {
+                  border-bottom: 0;
+                }
+              }
+            }
+        }
+
+        h3, h4{
+            color: $heading-default;
+            padding: 40px 0 16px;
+            border-bottom: 4px solid $heading-default;
+
+            @include typo-heading3;
+        }
+
+        p {
+            color: $body-default;
+            padding-top: 16px;
+
+            @include typo-body;
+
+            a {
+              color: $link-default;
+              text-decoration: underline;
+              text-underline-offset: 3px;
+            }
+        }
+
+        h5 {
+          font-style: normal;
+          color: $body-default;
+          padding-top: 16px;
+
+          @include typo-sm-body;
+
+          a {
+            color: $link-default;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+          }
+        }
+
+        h6 {
+          font-style: normal;
+          color: $body-default;
+          padding-top: 16px;
+
+          @include typo-disclaimer;
+
+          a {
+            color: $link-default;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+          }
+        }
+    }
+}

@@ -1,3 +1,4 @@
+import './header-analytics.js';
 import { createOptimizedPicture, getMetadata } from '../../scripts/aem.js';
 import { div, ul, li, a, button } from '../../scripts/dom-helpers.js';
 import { loadFragment } from '../fragment/fragment.js';
@@ -76,11 +77,8 @@ export default async function decorate(block) {
   const logoNavWrap = div({ class: 'logo-nav-wrap' }, hamMenuBtn, logoWrap, primaryNavList);
 
   // Search button
-  const searchIcon = col2.querySelector('picture');
-  const searchPic = createOptimizedPicture(searchIcon.querySelector('img')?.src, searchIcon.querySelector('img')?.alt, false, [
-    { width: 36 },
-  ]);
-  const searchBtn = button({ class: 'search-btn' }, searchPic);
+  const searchIcon = col2.querySelector('svg');
+  const searchBtn = button({ class: 'search-btn' }, searchIcon);
   const searchBtnWrap = div({ class: 'search-btn-wrap' }, searchBtn);
 
   // Login button

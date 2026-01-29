@@ -1,112 +1,89 @@
-@use '../../styles/mixins' as *;
-@use '../../styles/variables' as *;
-
+@use '../../styles/base' as *;
 @import "../../libs/swiper/swiper-bundle.min.css";
 
 .section.expandable-tiles-section {
-  padding: 100px 0;
-  background: linear-gradient(46.23deg, #59ffa0 1.03%, #1be7ff 98.97%);
+  background: $gradient-1;
 
   @include tablet {
-    padding-bottom: 0;
-  }
-
-  @include mobile {
-    padding: 40px 0;
+    padding-right: 16px;
   }
 
   .default-content-wrapper {
     box-sizing: border-box;
-    max-width: 832px;
-    padding: 0;
-    margin: 0 auto 40px;
+    margin-bottom: 40px;
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-weight: 900;
-      font-size: 32px;
-      line-height: 30px;
-      text-align: left;
-      color: $text-brand;
-      margin: 0 0 20px;
+    @include responsive-container;
+
+    h1, h2, h3, h4, h5, h6 {
+      @include typo-heading1;
+
+      color: $heading-default;
+      margin: 0 0 16px;
 
       @include tablet {
         text-align: center;
       }
 
       @include mobile {
-        font-size: 24px;
-        line-height: 32px;
-        text-align: center;
-        margin: 0 0 15px;
+        @include typo-heading1;
+
+        text-align: left;
       }
     }
 
     p {
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 19px;
-      color: #00525bcc;
+      @include typo-body;
+
+      color: $body-default;
       text-align: left;
-      margin: 0;
-
-      @include tablet {
-        text-align: center;
-      }
-
-      @include mobile {
-        line-height: 18px;
-        text-align: center;
-      }
-    }
-
-    @include mobile {
-      padding: 0 20px;
-      margin-bottom: 30px;
     }
   }
 
   .cards-wrapper {
     box-sizing: border-box;
-    max-width: 1452px;
-    padding: 0 40px;
-    margin: 0 auto;
+    margin-bottom: 40px;
+    overflow: auto;
+    scrollbar-width: none;
+
+    @include responsive-container;
 
     @include mobile {
-      padding: 0 20px;
+      margin-bottom: 0;
+      scrollbar-width: none;
+    }
+
+    @include tablet {
+      scrollbar-width: none;
     }
 
     .cards.expandable-tiles.block {
       display: flex;
-      gap: 24px;
       justify-content: center;
+      gap: 10px;
 
       @include mobile {
         --swiper-pagination-bottom: 0;
         --swiper-pagination-bullet-horizontal-gap: 2px;
-        gap: unset;
+
         justify-content: unset;
-        padding-bottom: 30px;
+        gap: 20px;
 
         .swiper-pagination-bullet {
           transition: all 0.3s linear;
-          background-color: #fff;
+          background-color: $bg-default;
           border-radius: 30px;
           height: 7px;
           opacity: 1;
           width: 20px;
 
           &.swiper-pagination-bullet-active {
-            background-color: $surface-brand;
+            background-color: $bg-reverse;
           }
         }
       }
 
       .expandable-tile {
+        position: relative;
         display: flex;
         flex: 1;
         flex-direction: column;
@@ -114,22 +91,57 @@
         transition: all 1.7s;
         transition-timing-function: cubic-bezier(0.11, 0.45, 0.4, 1);
 
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          background: #000;
+          opacity: 0.2;
+          pointer-events: none;
+          transition: all 0.7s ease-in-out;
+          border-radius: $radius-card;
+
+          @include mobile {
+            content: unset;
+          }
+        }
+
+        @include mobile {
+          flex: none;
+          max-width: 335px;
+        }
+
         &.active {
-          flex: 3.85;
+          flex: 3.0951;
+
+          &::after {
+            opacity: 0;
+          }
+
+          .tile-content {
+            opacity: 1;
+            pointer-events: all;
+          }
+
+          .tile-image img {
+            transform: scale(1.1);
+          }
         }
 
         .tile-image {
-          border-radius: 20px;
+          border-radius: $radius-card;
           cursor: pointer;
           font-size: 0;
-          height: 555px;
+          height: 500px;
           width: auto;
           overflow: hidden;
 
           img {
-            border-radius: 20px;
+            border-radius: $radius-card;
             width: 100%;
-            height: 555px;
+            height: 500px;
             object-fit: cover;
             object-position: center;
             transition: all 0.7s ease-in-out;
@@ -147,67 +159,68 @@
         }
 
         .tile-content {
+          position: absolute;
+          bottom: 0;
           display: block;
-          min-width: fit-content;
+          width: calc(100% - 32px);
           opacity: 0;
-          position: relative;
-          transition: all 1s ease-in-out;
+          padding: 24px;
+          margin: 0 16px 16px;
           text-decoration: none;
-
-          &.active {
-            opacity: 1;
-          }
-
+          background-color: $bg-default;
+          border-radius: $radius-card;
+          pointer-events: none;
+          transition: all 1s ease-in-out;
+          
           @include mobile {
+            pointer-events: all;
+            width: calc(100% - 32px);
+            margin: 16px;
             opacity: 1;
           }
 
           .content-title {
-            color: $text-brand;
-            font-size: 16px;
-            font-weight: 600;
-            line-height: 19px;
-            margin: 0 0 10px;
-            max-width: 90%;
+            @include typo-heading1;
+
+            color: $heading-default;
+            margin-bottom: 16px;
 
             @include mobile {
-              font-size: 20px;
-              font-weight: 800;
-              line-height: 24px;
-              margin: 0 0 8px;
-              max-width: 100%;
+              font-size: 38px;
+              line-height: 38px;
             }
           }
 
           .content-description {
-            color: $text-brand;
-            font-size: 14px;
-            line-height: 17px;
-            margin: 0;
-            max-width: 90%;
+            @include typo-body;
 
-            @include mobile {
-              font-size: 16px;
-              line-height: 18px;
-              max-width: 100%;
-            }
+            color: $body-default;
+            margin-bottom: 16px;
           }
 
           .content-cta {
-            align-items: center;
             display: flex;
+            flex-wrap: wrap;
+            align-items: center;
             gap: 12px;
-            position: absolute;
-            right: 0;
-            top: 0;
 
             .cta-link {
-              color: $text-brand;
-              font-size: 0;
-              line-height: 19px;
+              /* display: block;
+              width: fit-content;
+              height: fit-content;
+              padding: 8px;
+              border-radius: $radius-button;
+              background-color: $bg-reverse; */
 
-              @include mobile {
-                font-size: 16px;
+              @include button('primary');
+              
+              &.secondary {
+                @include button('secondary');
+              }
+
+              &.icon-btn {
+                min-width: unset;
+                padding: 8px;
               }
             }
 
@@ -217,42 +230,47 @@
               height: fit-content;
             }
 
-            img {
+            svg {
+              color: $heading-reverse-2;
               display: block;
               width: 24px;
-              height: auto;
-
-              @include mobile {
-                width: 18px;
-              }
+              height: 24px;
             }
 
             &:hover {
               text-decoration: none;
             }
-
-            @include mobile {
-              margin-top: 8px;
-              padding: 8px 0;
-              position: static;
-              gap: 12px;
-            }
           }
         }
+      }
+    }
+  }
 
-        &.active {
-          .tile-content {
-            opacity: 1;
-          }
+  .autoplay-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
 
-          .tile-image img {
-            transform: scale(1.1);
-          }
-        }
+    @include responsive-container;
 
-        @include mobile {
-          flex: none;
-        }
+    @include mobile {
+      display: none;
+    }
+
+    .autoplay-btn {
+      display: grid;
+      place-items: center;
+      font-size: 0;
+      width: 35px;
+      height: 35px;
+      border-radius: $radius-button;
+      background-color: $bg-default;
+
+      svg {
+        display: block;
+        width: 24px;
+        height: 24px;
+        color: $color-pagination-selected;
+        filter: drop-shadow(0 1px 3px rgb(0 0 0 / 40%));
       }
     }
   }

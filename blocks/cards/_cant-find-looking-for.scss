@@ -1,0 +1,333 @@
+@use '../../styles/base' as *;
+
+.section.faq-cant-find-looking-for {
+  @include responsive-container;
+
+  .default-content-wrapper {
+    margin-bottom: 40px;
+
+    @include mobile {
+      margin-bottom: 24px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include typo-heading1;
+
+      text-align: center;
+      color: $heading-default;
+    }
+
+    p {
+      text-align: center;
+      margin-top: 16px;
+    }
+  }
+
+  .cards-wrapper {
+    .cards {
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 32px;
+
+        @include tablet {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        @include mobile {
+          grid-template-columns: 1fr;
+        }
+
+        li {
+          text-align: center;
+          box-sizing: border-box;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+
+          @include mobile {
+            padding: 8px 0;
+          }
+
+          .cards-card-image,
+          svg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: unset;
+            margin-bottom: 32px;
+
+            @include mobile {
+              margin-bottom: 20px;
+            }
+          }
+
+          .icon {
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+          }
+
+          svg {
+            width: 64px;
+            height: 64px;
+            color: $icon-bg-default;
+          }
+
+          .cards-card-body {
+            display: flex;
+            flex-direction: column;
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+              color: $heading-default;
+              text-align: center;
+              margin-bottom: 8px;
+
+              @include typo-heading4;
+            }
+
+            p:not(p:has(.icon)) {
+              color: $body-default;
+              text-align: center;
+              padding-bottom: 14px;
+              margin-bottom: 24px;
+
+              @include typo-body;
+
+              @include mobile {
+                padding-bottom: 0;
+              }
+            }
+
+            p.button-container {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding-top: 24px;
+              margin-top: auto;
+              margin-bottom: 0;
+
+              @include mobile {
+                margin-bottom: 0;
+              }
+
+              a {
+                @include button('outlined');
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.rates-saver {
+    position: relative;
+
+    .default-content-wrapper {
+      max-width: 800px;
+      margin-inline: auto;
+    }
+
+    .cards-wrapper .cards ul {
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+
+      @include tablet {
+        grid-template-columns: 1fr;
+      }
+
+      li {
+        @include mobile {
+          padding: 0;
+        }
+
+        .cards-card-image,
+        svg {
+          margin-bottom: 16px;
+        }
+
+        .cards-card-body {
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            margin-bottom: 16px;
+
+            @include typo-heading3;
+          }
+
+          p:not(p:has(.icon)) {
+            padding: 0;
+            margin: 0;
+
+            a {
+              color: $link-default;
+              text-decoration: underline;
+              text-underline-offset: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.faq-cant-find-looking-for-variant {
+    .default-content-wrapper {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        @include tablet {
+          text-align: left;
+        }
+      }
+    }
+
+    .cards-wrapper .cards ul {
+      @include tablet {
+        grid-template-columns: 1fr;
+      }
+
+      li {
+        @include tablet {
+          flex-direction: row;
+          gap: 16px;
+        }
+
+        @include mobile {
+          padding: 0;
+        }
+
+        .cards-card-image,
+        svg {
+          margin-bottom: 16px;
+
+          @include tablet {
+            margin-bottom: 0;
+
+            img {
+              width: 48px;
+              height: 48px;
+            }
+          }
+        }
+
+        @include tablet {
+          svg {
+            width: 48px;
+            height: 48px;
+          }
+        }
+
+        .cards-card-body {
+          @include tablet {
+            &:has(svg) {
+              display: grid;
+              grid-template-columns: auto 2fr;
+              column-gap: 16px;
+            }
+
+            &:first-child {
+              display: none;
+            }
+
+            p:has(svg) {
+              grid-row: 1 / 10;
+            }
+          }
+
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            width: fit-content;
+            margin: 0 auto 16px;
+            padding: 10px 0 6px;
+            color: $link-default;
+            border-bottom: 2px solid $link-default;
+
+            @include typo-heading3;
+
+            @include tablet {
+              margin: 0 0 16px;
+              text-align: left;
+            }
+          }
+
+          p:not(p:has(.icon)) {
+            padding: 0;
+            margin-bottom: 16px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            @include tablet {
+              text-align: left;
+            }
+
+            a {
+              color: $link-default;
+              text-decoration: underline;
+              text-underline-offset: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// BORDER VARIATION
+
+.section.faq-cant-find-looking-for.variation-border {
+  .default-content-wrapper {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-align: left;
+    }
+  }
+
+  .cards-wrapper {
+    .cards {
+      ul {
+        li {
+          padding: 40px 24px;
+          border: 1px solid $line-default;
+          border-radius: 24px;
+
+          .cards-card-body {
+            p.button-container {
+                a {
+                  border: unset;
+                }
+              
+            }
+
+          }
+        }
+
+      }
+    }
+  }
+}

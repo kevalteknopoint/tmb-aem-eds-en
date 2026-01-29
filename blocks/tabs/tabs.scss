@@ -1,0 +1,121 @@
+@use '../../styles/base' as *;
+
+.home-loan-explained {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+
+  @include mobile {
+    gap: 32px;
+  }
+
+  .default-content-wrapper {
+    @include responsive-container;
+
+    h1,
+    h2,
+    h3 {
+      color: $heading-light;
+
+      @include typo-heading1;
+
+    }
+  }
+
+  .tabs {
+    .tab-list-wrapper {
+      @include responsive-container;
+      
+      overflow-x: auto;
+    }
+    
+    .tabs-list {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+      width: fit-content;
+      max-width: 100%;
+
+      .tabs-tab {
+        flex: 1;
+        padding: 8px 24px;
+        background: #fff;
+        min-width: max-content;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid $link-default;
+        border-bottom: 1px solid $link-default;
+        border-right: 1px solid $link-default;
+
+        &:first-child {
+          border-top-left-radius: $radius-card;
+          border-bottom-left-radius: $radius-card;
+        }
+        
+        &:last-child {
+          border-top-right-radius: $radius-card;
+          border-bottom-right-radius: $radius-card;
+        }
+
+        p {
+          margin: 0;
+          color: $heading-default;
+        }
+
+        &[aria-selected='true'] {
+          background-color: $heading-default;
+
+          p {
+            color: $icon-default;
+          }
+        }
+      }
+    }
+
+    .tabs-panel {
+      @include responsive-container;
+
+      overflow: auto;
+      margin-top: 40px;
+
+      @include mobile {
+        margin-top: 24px;
+      }
+
+      &[aria-hidden='true'] {
+        display: none;
+      }
+
+      div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 64px;
+        row-gap: 16px;
+
+        @include tablet {
+          display: flex;
+          flex-direction: column;
+        }
+
+        h3,
+        h2 {
+          color: $heading-light;
+        
+          @include typo-heading3;
+
+          grid-row: 1;
+        }
+
+        p {
+          grid-row: 2;
+          color: black;
+          font-size: 16px;
+        }
+      }
+
+    }
+  }
+}

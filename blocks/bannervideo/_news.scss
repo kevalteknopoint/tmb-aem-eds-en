@@ -1,26 +1,52 @@
+@use '../../styles/base' as *;
+
 .secsecond {
+  @include responsive-container;
+  // margin-left: auto;
+  // margin-right: auto;
+  // max-width: 1452px;
+  // padding: 0 40px;
+
   .default-content-wrapper {
     display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
   }
 
   .swiper-wrapper {
-    display: flex;
-    padding: 30px 0;
-    align-items: flex-start;
-    gap: 0;
+    align-items: stretch;
     align-self: stretch;
+    display: flex;
+    gap: 0;
+    padding: 30px 0 0;
+
+      @include tablet {
+        padding: 0;
+      }
 
     .swiper-slide {
-      width: 379px !important;
+      background: #FFF;
+      border: 1px solid rgb(0 0 0 / 20%);
+      // border-radius: 24px;
+      border-radius: $radius-card;
       display: flex;
-      justify-content: flex-start;
       gap: 19px;
+      justify-content: flex-start;
       padding: 20px;
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      border-radius: 12px;
-      background: #fff;
-      height: 120px;
+      width: 388px !important;
+      height: auto;
+      margin-right: 24px;
     }
+
+    // .swiper-button-next:disabled,
+    // .swiper-button-prev:disabled {
+    //   opacity: 0.8;
+    //   pointer-events: none;
+    // }
   }
 
   .bannervedio-wrapper {

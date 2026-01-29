@@ -1,0 +1,130 @@
+@use '../../styles/base' as *;
+
+.milestones {
+  background-color: $bg-reverse;
+
+  .default-content-wrapper {
+    @include responsive-container;
+
+    display: block;
+    margin-bottom: unset;
+
+    h2 {
+      @include typo-heading1;
+
+      color: $color-variants-heading-reverse;
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: $color-variants-heading-reverse;
+
+      @include typo-body;
+
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+
+  .cards-wrapper {
+    position: relative;
+    padding-top: 40px;
+    padding-left: calc((100% - 1440px) / 2 + 64px);
+
+    @include mobile {
+      padding-left: 16px; // Reduce side padding for mobile
+      padding-right: 16px;
+      padding-top: 24px; // Slightly smaller top padding on mobile
+    }
+
+
+
+    .block {
+      @include mobile {
+        padding-left: 0;
+      }
+
+      .swiper-wrapper {
+        align-items: flex-start;
+
+        @include mobile {
+          flex-direction: row;
+          gap: unset;
+        }
+
+        .swiper-slide {
+          gap: 0;
+          background: unset;
+          border: none;
+          border-radius: unset;
+          position: relative;
+          margin-right: unset !important;
+          padding: 32px 32px 0 0;
+
+          @include mobile {
+            width: 220px; // Smaller slide width for mobile
+            max-width: 300px;
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: rgb(255 255 255 / 35%);
+          }
+
+          &:hover {
+            border: none;
+            box-shadow: none;
+          }
+
+          @include mobile {
+            display: block;
+          }
+
+          /* ===== DOT ON BORDER ===== */
+          div {
+            &:first-child {
+              position: absolute;
+              top: 0; //  22px - (dotHeight / 2)
+              left: 0;
+              width: 10px;
+              height: 10px;
+              background: #4D868D;  // Figma token missing
+              border-radius: 50%;
+            }
+
+            &:last-child {
+              p {
+                @include typo-body;
+
+                color: $body-reverse;
+
+                &:first-child {
+                  @include typo-heading4;
+
+                  margin-bottom: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .nav-wrapper {
+        .swiper-button-next,
+        .swiper-button-prev {
+          @include mobile {
+            display: block;
+          }
+        }
+
+      }
+    }
+  }
+
+}

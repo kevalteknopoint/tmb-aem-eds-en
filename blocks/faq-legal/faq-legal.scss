@@ -1,0 +1,111 @@
+@use '../../styles/base' as *;
+
+.faq-legal.accordion-container{
+    @include responsive-container;
+
+    display: flex;
+    gap: 32px;
+    background: unset;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include tablet{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .default-content-wrapper{
+        max-width: 416px;
+        width: 100%;
+
+        h1,h2,h3,h4,h5,h6{
+            color: $heading-default;
+            font-family: $secondary-font;
+            font-size: $font-size-h1;
+            font-weight: 900;
+            line-height: $font-height-h1;
+            letter-spacing: $font-letter-spacing-h1;
+            text-transform: uppercase;
+        }
+    }
+
+    .accordion-wrapper {
+        padding-inline: 0;
+
+        .accordion{
+            details{
+                border-bottom: 1px solid $line-default;
+                padding-bottom: 16px;
+
+                .accordion-item-label{
+                    h3,h4,h5,h6,p{
+                        color: $color-button-primary-default;
+                        font-size: $font-size-h3;
+                        font-weight: 500;
+                        line-height: $font-height-h3;
+                        letter-spacing: $font-letter-spacing-h3;
+                    }
+
+                    svg{
+                        padding: 8px;
+                        height: 32px;
+                        width: 32px;
+                        background: $bg-light;
+                        border-radius: 44%;
+                    }
+                }
+
+                .accordion-item-body{
+                    p{
+                        color: $body-default;
+                        font-size: $font-size-body;
+                        font-weight: 400;
+                        line-height: $font-height-body;
+                        letter-spacing: $font-letter-spacing-body;
+                    }
+
+                    &:has(ul){
+                        ul{
+                            list-style-type: disc;
+                            padding-left: 25px;
+                            padding-bottom: 16px;
+                            padding-top: 5px;
+
+                            li{
+                                color:  $body-default;
+                                font-size: $font-size-body;
+                                font-weight: 400;
+                                line-height: $font-height-body;
+                                letter-spacing: $font-letter-spacing-body;
+
+                                &::marker{
+                                    color: #121212;
+                                }
+
+                                &:has(a){
+                                    &::marker{
+                                        color: var(--link-default);
+                                    }
+
+                                    a{
+                                        color: $link-default;
+                                        font-size: $font-size-body;
+                                        font-weight: 400;
+                                        line-height: $font-height-body;
+                                        letter-spacing: $font-letter-spacing-body;
+                                        text-decoration-line: underline;
+                                        text-decoration-style: solid;
+                                        text-decoration-skip-ink: auto;
+                                        text-decoration-thickness: auto;
+                                        text-underline-offset: auto;
+                                        text-underline-position: from-font;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

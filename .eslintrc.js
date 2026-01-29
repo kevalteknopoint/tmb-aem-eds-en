@@ -26,6 +26,8 @@ module.exports = {
     "no-underscore-dangle": "off", // Allow variable names with underscores
     "implicit-arrow-linebreak": "off", // Allow flexible arrow function formatting
     "function-paren-newline": "off", // Allow flexible function parameter line breaks
-    "no-mixed-operators": "off", // Allow mixing operators without extra parens
+    "no-mixed-operators": "off", // Allow mixing operators without extra parens,
+    "xwalk/max-cells": "off",
+    "xwalk/no-orphan-collapsible-fields": "off" // Allow prefixed names for easier understanding
   },
 };

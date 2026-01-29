@@ -1,0 +1,160 @@
+.legal-tc-guide{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
+}
+
+.legal-tc-guide .columns-wrapper .block div{
+  align-items:start;
+  gap:32px;
+}
+
+.legal-tc-guide .columns-wrapper .block div div h1, .legal-tc-guide .columns-wrapper .block div div h2{
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
+  font-size:var(--font-size-h1);
+  font-weight:900;
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  text-transform:uppercase;
+}
+
+.legal-tc-guide .columns-wrapper .block div div p{
+  color:#000;
+  font-size:var(--font-size-body);
+  font-weight:400;
+  line-height:var(--font-height-body);
+  margin-bottom:15px;
+}
+
+.legal-tc-guide .columns-wrapper .block div div p.button-container{
+  display:flex;
+  gap:30px;
+  margin-top:32px;
+}
+
+.legal-tc-guide .columns-wrapper .block div div p.button-container a{
+  align-items:center;
+  background:var(--color-button-outlined-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-default);
+  border-radius:var(--radius-button);
+  color:var(--color-button-text-stroke-default);
+  display:inline-flex;
+  font-size:var(--font-size-h5);
+  font-weight:500;
+  gap:12px;
+  letter-spacing:var(--font-letter-spacing-h5);
+  line-height:var(--font-height-h5);
+  padding:8px 24px;
+  text-align:center;
+  text-decoration:none;
+}
+
+.legal-tc-guide .columns-wrapper .block div div p.button-container a span svg{
+  height:18px;
+  width:18px;
+}
+
+.legal-tc-guide .columns-wrapper .block div div p a{
+  color:var(--link-default);
+  font-size:var(--font-size-body);
+  font-style:normal;
+  font-weight:400;
+  letter-spacing:var(--font-letter-spacing-disc, 0);
+  line-height:var(--font-height-disclaimer, 18px);
+  text-decoration-line:underline;
+  -webkit-text-decoration-skip:ink;
+          text-decoration-skip-ink:auto;
+  text-decoration-style:solid;
+  text-decoration-thickness:auto;
+  text-underline-offset:auto;
+  text-underline-position:from-font;
+}
+
+.legal-tc-guide .columns-wrapper .block div div:has(ul) ul{
+  list-style-type:disc;
+  margin-bottom:32px;
+  padding-left:25px;
+}
+
+.legal-tc-guide .columns-wrapper .block div div:has(ul) ul li{
+  color:var(--body-default);
+  font-size:var(--font-size-body);
+  font-weight:400;
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  padding:2px 0;
+}
+
+.legal-tc-guide .columns-wrapper .block div div:has(ul) ul li::marker{
+  color:#121212;
+}
+
+.legal-tc-guide .columns-wrapper .block div div:has(ul) ul li:has(a)::marker{
+  color:var(--link-default);
+}
+
+.legal-tc-guide .columns-wrapper .block div div:has(ul) ul li:has(a) a{
+  color:var(--link-default);
+  font-size:var(--font-size-body);
+  font-weight:400;
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-decoration-line:underline;
+  -webkit-text-decoration-skip:ink;
+          text-decoration-skip-ink:auto;
+  text-decoration-style:solid;
+  text-decoration-thickness:auto;
+  text-underline-offset:auto;
+  text-underline-position:from-font;
+}
+
+.legal-tc-guide .columns-wrapper .block div div h3, .legal-tc-guide .columns-wrapper .block div div h4, .legal-tc-guide .columns-wrapper .block div div h5, .legal-tc-guide .columns-wrapper .block div div h6{
+  color:var(--heading-default);
+  font-size:var(--font-size-h3);
+  font-weight:500;
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
+  margin-bottom:12px;
+  margin-top:40px;
+}
+
+.legal-tc-guide .columns-wrapper .block div div:first-child{
+  max-width:416px;
+}
+
+@media screen and (max-width: 1279px){
+  .legal-tc-guide{
+    padding-inline:24px;
+  }
+}
+
+@media screen and (max-width: 1023px){
+  .legal-tc-guide .columns-wrapper .block div{
+    gap:40px;
+  }
+
+  .legal-tc-guide .columns-wrapper .block div div:first-child{
+    max-width:unset;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .legal-tc-guide{
+    padding-inline:16px;
+  }
+
+  .legal-tc-guide .columns-wrapper .block div{
+    gap:24px;
+  }
+
+  .legal-tc-guide .columns-wrapper .block div div p{
+    font-size:var(--font-size-body);
+  }
+
+  .legal-tc-guide .columns-wrapper .block div div p.button-container{
+    flex-direction:column;
+  }
+}

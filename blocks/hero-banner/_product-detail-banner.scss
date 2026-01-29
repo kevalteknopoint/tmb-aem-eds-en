@@ -1,0 +1,252 @@
+@use '../../styles/base' as *;
+
+body:has(.product-detail-banner) {
+  .breadcrumb.block {
+    color: $link-default;
+    padding-block: 16px;
+  }
+}
+
+.product-detail-banner {
+  max-width: 1728px;
+  margin: 0 auto;
+  border-radius: $radius-hero;
+
+  @include tablet {
+    border-radius: 0;
+  }
+
+  &:has(.mobile-media) {
+    @include mobile {
+      .desktop-media {
+        display: none;
+      }
+    }
+  }
+
+  .desktop-media {
+    img {
+      min-height: 524px;
+      height: fit-content;
+      object-fit: cover;
+      border-radius: $radius-hero;
+
+      @include tablet {
+        min-height: 500px;
+        border-radius: 0;
+      }
+    }
+  }
+
+  .mobile-media {
+    display: none;
+
+    img {
+      width: 100%;
+    }
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  .hero-banner-main {
+    position: relative;
+  }
+
+  .hero-banner-content-wrap {
+    position: absolute;
+    inset: 0;
+    top: unset;
+    bottom: 80px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include responsive-container;
+
+    @include tablet {
+      top: unset;
+      justify-content: flex-end;
+      bottom: 64px;
+    }
+
+    @include mobile {
+      bottom: 40px;
+    }
+
+    .hero-banner-content {
+      max-width: 640px;
+    }
+
+    h1, h2, h3 {
+      @include typo-intro;
+
+      color: $heading-default;
+      margin-bottom: 4px;
+    }
+
+    h4, h5, h6 {
+      @include typo-large-heading;
+
+      color: $heading-default;
+      padding-bottom: 16px;
+    }
+
+    p:has(.interest-rate) {
+      width: fit-content;
+    }
+
+    .interest-rates-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 64px;
+      padding-top: 16px;
+      margin-top: 24px;
+      margin-bottom: 8px;
+
+      @include mobile {
+        gap: 24px;
+      }
+
+      h3 {
+        @include typo-heading3;
+      }
+
+      &:has(h1:nth-child(2), h2:nth-child(2), h3:nth-child(2), h4:nth-child(2), h5:nth-child(2), h6:nth-child(2), p:nth-child(2), div:nth-child(2)) {
+        .interest-rate {
+          .rate-num {
+            font-size: 120px;
+            line-height: 120px;
+          }
+
+          .rate-percent {
+            font-size: 66px;
+            line-height: 72px;
+          }
+
+          .rate-pa {
+            font-size: 32px;
+            line-height: 32px;
+          }
+        }
+      }
+
+      & + p {
+        color: $heading-default;
+      }
+    }
+
+    .interest-rate {
+      display: grid;
+      column-gap: 2px;
+      grid-template-columns: auto auto;
+      width: fit-content;
+
+      @include tablet {
+        margin-top: 0;
+      }
+
+      .rate-num {
+        display: block;
+        color: $heading-default;
+        font-family: $font-family-lg;
+        grid-row: 1 / 3;
+        font-size: 150px; // Figma missing token
+        line-height: 120px;
+        font-weight: $font-weight-rate;
+        width: fit-content;
+
+        @include tablet {
+          font-size: 120px;
+        }
+      }
+
+      .rate-percent {
+        display: block;
+        color: $heading-default;
+        font-family: $font-family-lg;
+        font-size: 86px; // FIGMA MISSING TOKEN
+        line-height: 72px;
+        font-weight: $font-weight-rate;
+        width: fit-content;
+
+        @include tablet {
+          font-size: 62px;
+        }
+      }
+
+      .rate-pa {
+        display: block;
+        letter-spacing: -1.8px;
+        color: $heading-default;
+        font-family: $font-family-h1-std;
+        font-size: 45px; // FIGMA MISSING TOKEN
+        line-height: 54px;
+        font-weight: $font-weight-rate-p-a;
+        width: fit-content;
+
+        @include mobile {
+          font-size: 32px;
+          line-height: 32px;
+        }
+      }
+    }
+
+    p {
+      @include typo-body;
+
+      color: $body-default;
+      
+      @include tablet{
+        font-weight: $font-weight-body;
+      }
+    }
+  }
+
+  &.text-color-variation {
+    .hero-banner-content-wrap {
+      h1, h2, h3, h4, h5, h6 {
+        color: $heading-reverse-2;
+      }
+
+      .interest-rate {
+        .rate-num, .rate-percent, .rate-pa {
+          color: $heading-reverse-2;
+        }
+      }
+      
+      p, .interest-rates-wrapper + p {
+        color: $heading-reverse-2;
+      }
+    }
+  }
+
+  .hero-banner-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .button {
+    @include button('primary');
+
+    &.secondary {
+      @include button('secondary');
+    }
+
+    &.outlined {
+      @include button('outlined');
+    }
+
+    &.outlined-reverse {
+      @include button('outlined-reverse');
+    }
+
+    &.white {
+      @include button('white');
+    }
+  }
+}

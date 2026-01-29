@@ -1,25 +1,24 @@
-@use '../../styles/mixins' as *;
+@use '../../styles/base' as *;
 
 .tmb-acc-sec.accordion-container {
-  background: #EDEDED;
-  padding: 80px 0;
+  background: $color-footer-info;
+  padding: 32px 0;
 
   @media (max-width: 720px) {
-    padding: 40px 0px;
+    padding: 40px 0;
   }
 
   @media (max-width: 390px) {
-    padding: 40px 0px;
+    padding: 40px 0;
   }
 
-  .accordion {
-    margin: 0 auto;
-    max-width: 1452px;
-    padding: 0 40px;
+  .accordion-wrapper{
+    @include responsive-container;
 
-    @include mobile {
-      padding: 0 20px;
-    }
+    .accordion {
+      @include mobile {
+        padding: 0;
+      }
 
     details {
       border: none;
@@ -29,77 +28,180 @@
       }
 
       p {
-        margin: 0px;
+        margin: 0;
+
+        // font-size: 16px;
+        // font-weight: 500;
+        // line-height: 24px;
+        @include typo-heading5;
       }
 
       .accordion-item-label {
+        @include typo-heading5;
+
+        // font-weight: 700;
+        // font-size: 24px;
+        // line-height: 32px;
         position: relative;
-        padding: 0 16px;
-        padding-right: 46px;
         cursor: pointer;
         list-style: none;
-        overflow: auto;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 32px;
         vertical-align: bottom;
-        color: #00525B;
+        color: $heading-default;
         transition: background-color 0.2s;
-
-        &:focus,
-        &:hover {
-          background-color: #EDEDED;
-        }
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        overflow: hidden;
 
         &::-webkit-details-marker {
           display: none;
         }
 
-        &::after {
-          content: '';
-          position: absolute;
-          top: 50%;
-          right: 18px;
-          transform: translateY(-50%) rotate(135deg);
-          width: 6px;
-          height: 6px;
-          border: 2px solid;
-          border-width: 2px 2px 0 0;
-          transition: transform 0.2s;
+        svg {
+          width: 24px;
+          height: 24px;
+          transition: all 0.3s ease-in-out;
+          transform: rotate(180deg);
         }
       }
 
       .accordion-item-body {
-        margin-top: 32px;
-        padding: 0 16px;
+        margin-top: 16px;
+        padding-right: 48px;
 
         @include mobile {
           margin-top: 18px;
+          padding-right: 24px;
         }
         
         p {
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 24px;
-          margin: 32px 0 0 0;
-          color: #333333;
+          @include typo-body;
+
+          // font-weight: 400;
+          // font-size: 16px;
+          // line-height: 24px;
+          margin: 0;
+          color: $body-default;
         }
       }
 
       &[open] {
         summary {
-          background-color: #EDEDED;
-
-          &::after {
-            transform: translateY(-50%) rotate(-45deg);
+          svg {
+            transform: rotate(0deg);
           }
         }
 
         .accordion-item-body {
           border-top: none;
-          background-color: #EDEDED;
         }
       }
     }
   }
+  }
+  
+}
+
+.faq-accordion{
+    @include responsive-container;
+
+    display: flex;
+    gap: 32px;
+
+    @include mobile{
+        flex-direction: column;
+    }
+
+    @include tablet{
+        flex-direction: column;
+    }
+
+    .default-content-wrapper{
+        min-width: 417px;
+
+        @include mobile{
+            min-width: unset;
+        }
+
+        h1,h2,h3,h4,h5,h6{
+            color: $heading-default;
+
+            @include typo-heading1;
+        }
+    }
+
+    .accordion-wrapper{
+        width: 100%;
+
+        .block{
+            .accordion-item{
+                border-bottom: 1px solid var(--line-default);
+                border-top: 1px solid var(--line-default);
+                padding: 16px 0;
+
+                &::-webkit-details-marker {
+                    display: none !important;
+                }
+
+                .accordion-item-label {
+                    list-style: none;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+
+                    // Safari Fix: Ensure the summary behaves like a block/flex item
+                    &::marker, &::-webkit-details-marker {
+                        display: none;
+                    }
+
+                    p {
+                        color: $color-button-primary-default;
+                        margin-top: 4px;
+
+                        @include typo-heading3
+                    }
+
+                    svg {
+                        color: $color-button-primary-default;
+                        min-width: 40px;
+                        width: 40px;
+                        height: 40px;
+                        padding: 8px;
+                        border-radius: 44px;
+                        background: $bg-light;
+                        cursor: pointer;
+                        margin-left: 32px;
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .accordion-item-body{
+                    margin-top: 8px;
+
+                    p {
+                      color: $body-default;  
+
+                      @include typo-body;
+                    }
+                }  
+
+                &[open] {
+                    summary {
+                        svg {
+                            transform: rotate(0deg);
+                        }              
+                    }
+                }
+
+                &.accordion-item:first-child{
+                    border-top: none;
+                    padding-top: 0;
+                }
+
+                &.accordion-item:last-child{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
 }

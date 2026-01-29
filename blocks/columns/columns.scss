@@ -1,3 +1,8 @@
+@use './faq-banner' as *;
+@use './who-can-apply' as *;
+@use './customer' as *;
+@use './money-overseas' as *;
+
 .columns {
   img {
     width: 100%;
@@ -20,6 +25,7 @@
     }
   }
 }
+
 
 @media (width >= 900px) {
   .columns {

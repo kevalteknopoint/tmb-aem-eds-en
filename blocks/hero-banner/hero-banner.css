@@ -1,0 +1,404 @@
+.product-detail-banner .button, .product-detail-banner .button.secondary, .product-detail-banner .button.outlined, .product-detail-banner .button.outlined-reverse, .product-detail-banner .button.white{
+  align-items:center;
+  border:none;
+  border-radius:var(--radius-button);
+  cursor:pointer;
+  display:flex;
+  font-family:var(--font-family-h5);
+  font-weight:var(--font-weight-h5);
+  gap:16px;
+  justify-content:center;
+  padding-inline:24px;
+  text-align:center;
+  transition:all 0.3s ease-in-out;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
+body:has(.product-detail-banner) .breadcrumb.block{
+  color:var(--link-default);
+  padding-block:16px;
+}
+
+.product-detail-banner{
+  border-radius:var(--radius-hero-var);
+  margin:0 auto;
+  max-width:1728px;
+}
+
+.product-detail-banner .desktop-media img{
+  border-radius:var(--radius-hero-var);
+  height:-moz-fit-content;
+  height:fit-content;
+  min-height:524px;
+  -o-object-fit:cover;
+     object-fit:cover;
+}
+
+.product-detail-banner .mobile-media{
+  display:none;
+}
+
+.product-detail-banner .mobile-media img{
+  width:100%;
+}
+
+.product-detail-banner .hero-banner-main{
+  position:relative;
+}
+
+.product-detail-banner .hero-banner-content-wrap{
+  inset:0;
+  bottom:80px;
+  display:flex;
+  flex-direction:column;
+  height:-moz-fit-content;
+  height:fit-content;
+  justify-content:flex-end;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  position:absolute;
+  top:unset;
+  width:100%;
+}
+
+.product-detail-banner .hero-banner-content-wrap .hero-banner-content{
+  max-width:640px;
+}
+
+.product-detail-banner .hero-banner-content-wrap h1, .product-detail-banner .hero-banner-content-wrap h2, .product-detail-banner .hero-banner-content-wrap h3{
+  color:var(--heading-default);
+  font-family:var(--font-family-intro);
+  font-size:var(--font-size-intro);
+  font-weight:var(--font-weight-intro);
+  letter-spacing:var(--font-letter-spacing-intro);
+  line-height:var(--font-height-intro);
+  margin-bottom:4px;
+  text-transform:initial;
+}
+
+.product-detail-banner .hero-banner-content-wrap h4, .product-detail-banner .hero-banner-content-wrap h5, .product-detail-banner .hero-banner-content-wrap h6{
+  color:var(--heading-default);
+  font-family:var(--font-family-lg);
+  font-size:var(--font-size-lg);
+  font-weight:var(--font-weight-lg);
+  letter-spacing:var(--font-letter-spacing-lg);
+  line-height:var(--font-height-lg);
+  padding-bottom:16px;
+  text-transform:initial;
+}
+
+.product-detail-banner .hero-banner-content-wrap p:has(.interest-rate){
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
+.product-detail-banner .hero-banner-content-wrap .interest-rates-wrapper{
+  display:flex;
+  flex-wrap:wrap;
+  gap:64px;
+  margin-bottom:8px;
+  margin-top:24px;
+  padding-top:16px;
+}
+
+.product-detail-banner .hero-banner-content-wrap .interest-rates-wrapper h3{
+  font-family:var(--font-family-h3);
+  font-size:var(--font-size-h3);
+  font-weight:var(--font-weight-h3);
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
+  text-transform:initial;
+}
+
+.product-detail-banner .hero-banner-content-wrap .interest-rates-wrapper:has(h1:nth-child(2), h2:nth-child(2), h3:nth-child(2), h4:nth-child(2), h5:nth-child(2), h6:nth-child(2), p:nth-child(2), div:nth-child(2)) .interest-rate .rate-num{
+  font-size:120px;
+  line-height:120px;
+}
+
+.product-detail-banner .hero-banner-content-wrap .interest-rates-wrapper:has(h1:nth-child(2), h2:nth-child(2), h3:nth-child(2), h4:nth-child(2), h5:nth-child(2), h6:nth-child(2), p:nth-child(2), div:nth-child(2)) .interest-rate .rate-percent{
+  font-size:66px;
+  line-height:72px;
+}
+
+.product-detail-banner .hero-banner-content-wrap .interest-rates-wrapper:has(h1:nth-child(2), h2:nth-child(2), h3:nth-child(2), h4:nth-child(2), h5:nth-child(2), h6:nth-child(2), p:nth-child(2), div:nth-child(2)) .interest-rate .rate-pa{
+  font-size:32px;
+  line-height:32px;
+}
+
+.product-detail-banner .hero-banner-content-wrap .interest-rates-wrapper + p{
+  color:var(--heading-default);
+}
+
+.product-detail-banner .hero-banner-content-wrap .interest-rate{
+  -moz-column-gap:2px;
+       column-gap:2px;
+  display:grid;
+  grid-template-columns:auto auto;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
+.product-detail-banner .hero-banner-content-wrap .interest-rate .rate-num{
+  color:var(--heading-default);
+  display:block;
+  font-family:var(--font-family-lg);
+  font-size:150px;
+  font-weight:var(--font-weight-rate);
+  grid-row:1/3;
+  line-height:120px;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
+.product-detail-banner .hero-banner-content-wrap .interest-rate .rate-percent{
+  color:var(--heading-default);
+  display:block;
+  font-family:var(--font-family-lg);
+  font-size:86px;
+  font-weight:var(--font-weight-rate);
+  line-height:72px;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
+.product-detail-banner .hero-banner-content-wrap .interest-rate .rate-pa{
+  color:var(--heading-default);
+  display:block;
+  font-family:var(--font-family-h1-std);
+  font-size:45px;
+  font-weight:var(--font-weight-rate-p-a);
+  letter-spacing:-1.8px;
+  line-height:54px;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
+.product-detail-banner .hero-banner-content-wrap p{
+  color:var(--body-default);
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-transform:initial;
+}
+
+.product-detail-banner.text-color-variation .hero-banner-content-wrap h1, .product-detail-banner.text-color-variation .hero-banner-content-wrap h2, .product-detail-banner.text-color-variation .hero-banner-content-wrap h3, .product-detail-banner.text-color-variation .hero-banner-content-wrap h4, .product-detail-banner.text-color-variation .hero-banner-content-wrap h5, .product-detail-banner.text-color-variation .hero-banner-content-wrap h6{
+  color:var(--heading-reverse-2);
+}
+
+.product-detail-banner.text-color-variation .hero-banner-content-wrap .interest-rate .rate-num, .product-detail-banner.text-color-variation .hero-banner-content-wrap .interest-rate .rate-percent, .product-detail-banner.text-color-variation .hero-banner-content-wrap .interest-rate .rate-pa{
+  color:var(--heading-reverse-2);
+}
+
+.product-detail-banner.text-color-variation .hero-banner-content-wrap p, .product-detail-banner.text-color-variation .hero-banner-content-wrap .interest-rates-wrapper + p{
+  color:var(--heading-reverse-2);
+}
+
+.product-detail-banner .hero-banner-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:16px;
+}
+
+.product-detail-banner .button{
+  background-color:var(--color-button-primary-default);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+  font-size:var(--font-size-h5);
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:8px;
+}
+
+.product-detail-banner .button:hover{
+  background-color:var(--color-button-primary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.product-detail-banner .button:active{
+  background-color:var(--color-button-primary-press);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.product-detail-banner .button:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.product-detail-banner .button.secondary{
+  background-color:var(--color-button-secondary-default);
+  border:none;
+  color:var(--color-button-text-stroke-default);
+  font-size:var(--font-size-h5);
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:8px;
+}
+
+.product-detail-banner .button.secondary:hover{
+  background-color:var(--color-button-secondary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-hover);
+}
+
+.product-detail-banner .button.secondary:active{
+  background-color:var(--color-button-secondary-press);
+  border:none;
+  color:var(--color-button-text-stroke-press);
+}
+
+.product-detail-banner .button.secondary:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.product-detail-banner .button.outlined{
+  background-color:var(--color-button-outlined-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-default);
+  color:var(--color-button-text-stroke-default);
+  font-size:var(--font-size-h5);
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:6px;
+}
+
+.product-detail-banner .button.outlined:hover{
+  background-color:var(--color-button-outlined-hover);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-hover);
+  color:var(--color-button-text-stroke-hover);
+}
+
+.product-detail-banner .button.outlined:active{
+  background-color:var(--color-button-outlined-press);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-press);
+  color:var(--color-button-text-stroke-press);
+}
+
+.product-detail-banner .button.outlined:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.product-detail-banner .button.outlined-reverse{
+  background-color:var(--color-button-outlined-reverse-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+  font-size:var(--font-size-h5);
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:6px;
+}
+
+.product-detail-banner .button.outlined-reverse:hover{
+  background-color:var(--color-button-outlined-reverse-hover);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.product-detail-banner .button.outlined-reverse:active{
+  background-color:var(--color-button-outlined-reverse-press);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.product-detail-banner .button.outlined-reverse:focus-visible{
+  box-shadow:0 0 0 2px var(--color-focus-default), 0 0 0 3px var(--color-focus-reversed);
+  outline:none;
+}
+
+.product-detail-banner .button.white{
+  background-color:var(--color-button-white-default);
+  border:none;
+  color:var(--color-button-text-stroke-default);
+  font-size:var(--font-size-h5);
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:8px;
+}
+
+.product-detail-banner .button.white:hover{
+  background-color:var(--color-button-white-hover);
+  border:none;
+  color:var(--color-button-text-stroke-hover);
+}
+
+.product-detail-banner .button.white:active{
+  background-color:var(--color-button-white-press);
+  border:none;
+  color:var(--color-button-text-stroke-press);
+}
+
+.product-detail-banner .button.white:focus-visible{
+  box-shadow:0 0 0 2px var(--color-focus-default), 0 0 0 3px var(--color-focus-reversed);
+  outline:none;
+}
+
+@media screen and (max-width: 1279px){
+  .product-detail-banner .hero-banner-content-wrap{
+    padding-inline:24px;
+  }
+}
+
+@media screen and (max-width: 1023px){
+  .product-detail-banner{
+    border-radius:0;
+  }
+
+  .product-detail-banner .desktop-media img{
+    border-radius:0;
+    min-height:500px;
+  }
+
+  .product-detail-banner .hero-banner-content-wrap{
+    bottom:64px;
+    justify-content:flex-end;
+    top:unset;
+  }
+
+  .product-detail-banner .hero-banner-content-wrap .interest-rate{
+    margin-top:0;
+  }
+
+  .product-detail-banner .hero-banner-content-wrap .interest-rate .rate-num{
+    font-size:120px;
+  }
+
+  .product-detail-banner .hero-banner-content-wrap .interest-rate .rate-percent{
+    font-size:62px;
+  }
+
+  .product-detail-banner .hero-banner-content-wrap p{
+    font-weight:var(--font-weight-body);
+  }
+}
+
+@media screen and (max-width: 767px){
+  .product-detail-banner:has(.mobile-media) .desktop-media{
+    display:none;
+  }
+
+  .product-detail-banner .mobile-media{
+    display:block;
+  }
+
+  .product-detail-banner .hero-banner-content-wrap{
+    bottom:40px;
+    padding-inline:16px;
+  }
+
+  .product-detail-banner .hero-banner-content-wrap .interest-rates-wrapper{
+    gap:24px;
+  }
+
+  .product-detail-banner .hero-banner-content-wrap .interest-rate .rate-pa{
+    font-size:32px;
+    line-height:32px;
+  }
+}

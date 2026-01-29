@@ -1,0 +1,143 @@
+@use '../../styles/base' as *;
+
+.section.compare-accounts {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include mobile {
+    gap: 24px
+  }
+
+  @include responsive-container;
+
+  .default-content-wrapper {
+    h1, h2, h3, h4, h5, h6 {
+      display: block;
+      margin-bottom: 16px;
+      color: $heading-default;
+
+      @include typo-heading1;
+    }
+
+    p {
+      color: $heading-default;
+
+      @include typo-body;
+
+      a {
+        color: $heading-default;
+        text-decoration: underline;
+      }
+    }
+
+    &:last-child {
+      p {
+        color: $body-default;
+      }
+    }
+  }
+
+  .compare-accounts.block {
+    overflow-x: auto;
+
+    .compare-accounts-cards {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+
+      @include tablet {
+        flex-direction: row;
+      }
+
+      .compare-accounts-card {
+        display: flex;
+        flex-direction: column;
+        min-width: 304px;
+        border-radius: $radius-card;
+        min-height: 100%;
+        flex: 1;
+
+        &.active {
+          background-color: $bg-reverse;
+          
+
+          h3, h5, p:has(.interest-rate), .interest-rate {
+            color: $heading-reverse;
+          }
+
+          h4, p {
+            color: $body-reverse;
+          }
+
+          a {
+            @include button('outlined-reverse')
+          }
+        }
+      }
+    }
+
+    .product-title {
+      padding: 32px 24px 8px;
+      border-bottom: 5px solid $heading-default;
+      color: $heading-default;
+
+      @include typo-heading3;
+    }
+
+    .product-description {
+      padding: 16px 24px 0;
+      color: $body-default;
+
+      @include typo-body;
+    }
+
+    .product-interest-pretitle {
+      padding: 16px 24px 0;
+      color: $heading-default;
+
+      @include typo-disclaimer;
+    }
+
+    .interest-rate {
+      display: block;
+      color: $heading-default;
+
+      @include typo-heading1-std;
+
+      .rate-pa {
+        @include typo-body;
+      }
+    }
+
+    .product-interest-rate {
+      padding: 0 !important;
+    }
+
+    p {
+      padding: 16px 24px 0;
+      color: $body-default;
+
+      @include typo-disclaimer;
+
+      &:has(.interest-rate) {
+        padding: 4px 24px 0;
+      }
+
+      &:has(a) {
+        margin-top: auto;
+        padding-bottom: 32px;
+      }
+    }
+
+    a {
+      display: block;
+      color: $heading-default;
+      padding-bottom: 2px;
+      border-bottom: 1px solid $heading-default;
+      width: fit-content;
+
+      @include typo-sm-body;
+    }
+  }
+}

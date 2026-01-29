@@ -1,0 +1,107 @@
+@use '../../styles/base' as *;
+
+.customer{
+    position: relative;
+    background: $gradient-2;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 20px;
+      width: 100%;
+      background-image: $gradient-after;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      left: 0;
+      bottom: 0;
+    }
+
+    .columns-wrapper{
+        @include responsive-container;
+
+        .block{
+            .columns-container{
+                gap: 32px;
+                align-items: stretch;
+
+                div{
+                    background: $bg-default;
+                    border-radius: $radius-card;
+                    padding: 40px 24px;
+                    display: flex;
+                    flex-direction: column;
+
+                    h1,h2,h3{
+                        @include typo-heading1;
+
+                        color: $heading-default;
+                        text-align: center;
+                        font-family: $secondary-font;
+                        font-style: normal;
+                        letter-spacing: 2px;
+                    }
+
+                    p{
+                        @include typo-body;
+
+                        color: $body-default;
+                        text-align: center;
+                        margin: 16px 0 32px;
+                    }
+
+                    p.button-container{
+                      display: flex;
+                      justify-content: center;
+                      margin: 0;
+                      gap: 10px;
+
+                      a {
+                        @include button('primary');
+                        @include typo-heading5;
+                      }
+                    }
+
+                    &:nth-child(2){
+                      p.button-container a {
+                        @include button('outlined');
+                      }
+                    }
+                }
+            }
+        }
+    }
+
+    .content-container{
+        @include responsive-container;
+        
+        .para-0{
+            @include typo-body;
+
+            color: $body-default-alt;
+            text-align: center;
+
+            a{
+                @include typo-body;
+
+                color: $link-default-alt;
+                text-decoration-line: underline;
+                text-decoration-style: solid;
+                text-decoration-skip-ink: auto;
+                text-decoration-thickness: auto;
+                text-underline-offset: auto;
+                text-underline-position: from-font;
+            }
+        }
+
+        .para-1{
+            @include typo-disclaimer;
+
+            margin-top: 16px;
+            color: $body-default-alt;
+            text-align: center;
+        }
+    }
+}

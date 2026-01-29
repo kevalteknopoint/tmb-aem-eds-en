@@ -26,10 +26,39 @@
           "description": "The label shown for this section in the Content Tree"
         },
         {
+          "component": "text",
+          "name": "id",
+          "label": "Section ID",
+          "description": "Unique identifier for this section (HTML ID)",
+          "validation": {
+            "regex": "^[a-zA-Z][\\w:.-]*$"
+          }
+        },
+        {
           "component": "multiselect",
           "name": "style",
           "label": "Style",
           "options": [
+            {
+              "name": "Top Spacing",
+              "value": "top-margin"
+            },
+            {
+              "name": "Bottom Spacing",
+              "value": "bottom-margin"
+            },
+            {
+              "name": "Top Inner Spacing",
+              "value": "top-padding"
+            },
+            {
+              "name": "Bottom Inner Spacing",
+              "value": "bottom-padding"
+            },
+            {
+              "name": "Bottom Partition",
+              "value": "bottom-partition"
+            },
             {
               "name": "secfirst",
               "value": "secfirst"
@@ -42,13 +71,37 @@
               "name": "quick-links",
               "value": "quick-links"
             },
-                        {
+            {
               "name": "momentum-teaser",
               "value": "momentum-teaser"
             },
             {
               "name": "momentum-section",
               "value": "momentum-section"
+            },
+            {
+              "name": "momentum-saver-section",
+              "value": "momentum-saver-section"
+            },
+            {
+              "name": "Momentum Image Saver",
+              "value": "momentum-image-saver"
+            },
+            {
+              "name": "Product Detail Variant",
+              "value": "image-swapping"
+            },
+            {
+              "name": "Left Percentage Section",
+              "value": "left-percentage-section"
+            },
+            {
+              "name": "Background Color Teal",
+              "value": "background-color-teal"
+            },
+            {
+              "name": "Bg Image Saver",
+              "value": "bg-image-saver"
             },
             {
               "name": "online-banking",
@@ -81,7 +134,7 @@
             {
               "name": "tmb-sub-footer",
               "value": "tmb-sub-footer"
-            },  
+            },
             {
               "name": "Bottom Spacer",
               "value": "spacer-bottom"
@@ -93,6 +146,163 @@
             {
               "name": "Hide Section",
               "value": "d-none"
+            },
+            {
+              "name": "faq-Looking",
+              "value": "faq-looking-for"
+            },
+            {
+              "name": "FAQ Landing Banner",
+              "value": "faq-landing-banner"
+            },
+            {
+              "name": "Faq container",
+              "value": "faq-container"
+            },
+            {
+              "name": "Faq question",
+              "value": "faq-question"
+            },
+            {
+              "name": "FAQ List",
+              "value": "faq-frequently-question"
+            },
+            {
+              "name": "FAQ Title",
+              "value": "faq-frequently-question-title"
+            },
+            {
+              "name": "FAQ Category List",
+              "value": "faq-frequently-question-list"
+            },
+            {
+              "name": "Faq-cant-find-looking-for",
+              "value": "faq-cant-find-looking-for"
+            },
+            {
+              "name": "Faq-cant-find-looking-for Variant",
+              "value": "faq-cant-find-looking-for-variant"
+            },
+            {
+              "name": "Section Wrapper",
+              "value": "section-wrapper"
+            },
+            {
+              "name": "Banking Good",
+              "value": "banking-goods"
+            },
+            {
+              "name": "Product Navigation",
+              "value": "product-navigation"
+            },
+            {
+              "name": "Rates Saver",
+              "value": "rates-saver"
+            },
+            {
+              "name": "Who can apply",
+              "value": "who-can-apply-section"
+            },
+            {
+              "name": "Customer",
+              "value": "customer"
+            },
+            {
+              "name": "FAQ Accordion",
+              "value": "faq-accordion"
+            },
+            {
+              "name": "Interest Table",
+              "value": "interest-table-section"
+            },
+            {
+              "name": "Product Navigation",
+              "value": "product-navigation"
+            },
+            {
+              "name": "Compare Accounts Cards",
+              "value": "compare-accounts"
+            },
+            {
+              "name": "News helpful",
+              "value": "news-helpful"
+            },
+            {
+              "name": "Overseas Variant",
+              "value": "overseas-variant"
+            },
+            {
+              "name": "Money Overseas",
+              "value": "money-overseas"
+            },
+            {
+              "name": "Money Overseas Variant",
+              "value": "money-overseas-variant"
+            },
+            {
+              "name": "News helpful homepage",
+              "value": "news-helpful-homepage"
+            },
+            {
+              "name": "Icon library",
+              "value": "icon-library"
+            },
+            {
+              "name": "looking-for-another-way",
+              "value": "looking-for-another-way"
+            },
+            {
+              "name": "Momentum Direct Variant",
+              "value": "momentum-direct-variant"
+            },
+            {
+              "name": "Circular Image",
+              "value": "circular-image "
+            },
+            {
+              "name": "Variation Border",
+              "value": "variation-border"
+            },
+            {
+              "name": "Milestones",
+              "value": "milestones"
+             
+            },
+            {
+               "name": "Rate Details",
+              "value": "rate-details"
+            },
+            {
+              "name": "Home Loan Explained",
+              "value": "home-loan-explained"
+            },
+            {
+              "name": "Table with icons",
+              "value": "table-with-icons"
+            },
+            {
+              "name": "Page Heading",
+              "value": "page-heading"
+            },
+            {
+              "name": "Legal TC Guide",
+              "value": "legal-tc-guide"
+            },
+            {
+              "name": "Online Banking Legal",
+              "value": "online-banking-legal"
+            },
+            {
+              "name": "faq-legal",
+              "value": "faq-legal"
+            },
+            {
+              "name": "faq-legal-table",
+              "value": "faq-legal-table"
+            },
+            {
+              "name": "legal-privacy",
+              "value": "legal-privacy"
             }
           ]
         }
@@ -116,7 +326,24 @@
         "bannervideo",
         "accordion",
         "banking-good",
-        "teachers-form-block"
+        "breadcrumb",
+        "faq-category",
+        "faq-detail",
+        "transformd-form",
+        "hero-banner",
+        "content-fragment",
+        "interest-table",
+        "icon-library",
+        "faq-productdetail",
+        "compare-accounts",
+        "stepper",
+        "tabs",
+        "interest-rates",
+        "page-heading",
+        "legal-tc-guide",
+        "faq-legal",
+        "faq-legal-table",
+        "legal-privacy"
       ]
     }
   ]

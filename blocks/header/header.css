@@ -1,18 +1,33 @@
-body{
-  margin-top:141px;
+.header-actions-wrap .login-btn-wrap .login-btn{
+  align-items:center;
+  background-color:var(--color-button-secondary-default);
+  border:none;
+  border-radius:var(--radius-button);
+  color:var(--color-button-text-stroke-default);
+  cursor:pointer;
+  display:flex;
+  font-family:var(--font-family-h5);
+  font-size:var(--font-size-h5);
+  font-weight:var(--font-weight-h5);
+  gap:16px;
+  justify-content:center;
+  line-height:var(--font-height-h5);
+  min-width:unset;
+  padding-block:8px;
+  padding-inline:24px;
+  text-align:center;
+  transition:all 0.3s ease-in-out;
+  width:-moz-fit-content;
+  width:fit-content;
 }
 
 .header.block{
-  background-color:var(--surface-light);
+  background-color:var(--color-pagination-secondary-nav);
   display:flex;
   flex-direction:column;
   height:-moz-fit-content;
   height:fit-content;
-  left:0;
-  position:fixed;
-  top:0;
   width:100%;
-  z-index:20;
 }
 
 .secondary-header-wrap{
@@ -22,7 +37,7 @@ body{
   margin-bottom:5px;
   margin-left:auto;
   margin-right:auto;
-  max-width:1440px;
+  max-width:calc(1440px - 0px);
   padding-inline:64px;
   width:100%;
 }
@@ -39,7 +54,7 @@ body{
 }
 
 .secondary-nav-list .secondary-nav-link{
-  color:var(--text-brand);
+  color:var(--color-header-nav-primary);
   display:block;
   font-size:14px;
   font-weight:400;
@@ -48,7 +63,7 @@ body{
 }
 
 .primary-header{
-  background-color:var(--surface-brand);
+  background-color:var(--color-header-nav);
 }
 
 .primary-header .primary-header-wrap{
@@ -57,7 +72,7 @@ body{
   justify-content:space-between;
   margin-left:auto;
   margin-right:auto;
-  max-width:1440px;
+  max-width:calc(1440px - 0px);
   padding-inline:64px;
   width:100%;
 }
@@ -112,7 +127,7 @@ body{
 }
 
 .primary-nav-list .primary-nav-item::after{
-  border-color:var(--text-inverse);
+  border-color:var(--color-header-nav-secondary);
   border-style:solid;
   border-width:2px 2px 0 0;
   bottom:4px;
@@ -135,7 +150,7 @@ body{
 }
 
 .primary-nav-list .primary-nav-link{
-  color:var(--text-inverse);
+  color:var(--color-header-nav-secondary);
   display:block;
   font-size:16px;
   font-weight:600;
@@ -152,14 +167,19 @@ body{
 }
 
 .header-actions-wrap .search-btn{
-  display:block;
-  height:auto;
-  max-width:36px;
+  align-items:center;
+  background-color:var(--color-header-frame);
+  border-radius:50%;
+  display:flex;
+  height:40px;
+  justify-content:center;
+  width:40px;
 }
 
-.header-actions-wrap .search-btn picture, .header-actions-wrap .search-btn img{
-  height:auto;
-  width:100%;
+.header-actions-wrap .search-btn svg{
+  color:var(--color-header-icon);
+  height:24px;
+  width:24px;
 }
 
 .header-actions-wrap .login-btn-wrap{
@@ -174,40 +194,21 @@ body{
   cursor:not-allowed;
 }
 
-.header-actions-wrap .login-btn-wrap .login-btn{
-  background-color:var(--surface-login-cta);
-  border-radius:20px;
-  color:var(--text-brand);
-  display:block;
-  font-size:16px;
-  font-weight:500;
-  line-height:24px;
-  min-width:100px;
-  padding:5.5px 16px;
-  text-align:center;
-  transition:all 0.3s ease-in-out;
-  width:-moz-fit-content;
-  width:fit-content;
-}
-
 .header-actions-wrap .login-btn-wrap .login-btn:hover{
-  background-color:var(--surface-accent-hover-cta);
-}
-
-.header-actions-wrap .login-btn-wrap .login-btn:focus-visible{
-  border:2px solid var(--surface-primary);
-  outline:2px solid var(--border-brand);
-  outline-offset:0;
-}
-
-.header-actions-wrap .login-btn-wrap .login-btn.disabled{
-  background-color:var(--surface-disabled-cta);
-  color:var(--text-disabled);
-  pointer-events:none;
+  background-color:var(--color-button-secondary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-hover);
 }
 
 .header-actions-wrap .login-btn-wrap .login-btn:active{
-  background-color:var(--surface-accent-active-cta);
+  background-color:var(--color-button-secondary-press);
+  border:none;
+  color:var(--color-button-text-stroke-press);
+}
+
+.header-actions-wrap .login-btn-wrap .login-btn:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
 }
 
 @media screen and (max-width: 1279px){
@@ -242,10 +243,6 @@ body{
 }
 
 @media screen and (max-width: 767px){
-  body{
-    margin-top:60px;
-  }
-
   .secondary-header-wrap{
     display:none;
     padding-inline:16px;

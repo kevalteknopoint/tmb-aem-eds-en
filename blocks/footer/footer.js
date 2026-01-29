@@ -1,3 +1,4 @@
+import './footer-analytics.js';
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
@@ -21,28 +22,28 @@ export default async function decorate(block) {
   //
 
   const teaserContent = document.querySelector(".tmb-footer .default-content-wrapper");
-  teaserContent.classList.add("tmb-footer-wrapper");
+  teaserContent?.classList.add("tmb-footer-wrapper");
 
   const subteaserContent = document.querySelector(".tmb-sub-footer .default-content-wrapper");
-  subteaserContent.classList.add("tmb-sub-footer-wrapper");
+  subteaserContent?.classList.add("tmb-sub-footer-wrapper");
 
   const content = document.querySelectorAll('.tmb-footer .default-content-wrapper p');
-  content.forEach((e, index) => {
-    e.classList.add(`para-${index + 1}`);
+  content?.forEach((e, index) => {
+    e.classList.add(`para-${index + 2}`);
   });
 
   const subcontent = document.querySelectorAll('.tmb-footer .tmb-footer-wrapper.default-content-wrapper p');
-  subcontent.forEach((e, index) => {
-    e.classList.add(`para-${index + 1}`);
+  subcontent?.forEach((e, index) => {
+    e.classList.add(`para-${index + 2}`);
   });
 
   const ul = document.querySelectorAll('.tmb-footer .tmb-footer-wrapper ul');
-  ul.forEach((e, index) => {
+  ul?.forEach((e, index) => {
     e.classList.add(`ul-${index + 1}`);
   });
 
   const subul = document.querySelectorAll('.tmb-sub-footer .tmb-sub-footer-wrapper ul');
-  subul.forEach((e, index) => {
+  subul?.forEach((e, index) => {
     e.classList.add(`ul-${index + 1}`);
   });
 
@@ -51,7 +52,11 @@ export default async function decorate(block) {
     + '.section.tmb-footer .tmb-footer-wrapper .para-1 .icon.icon-jump-to-top:not(.a11y-processed)'
   );
 
-  iconBtns.forEach((iconBtn) => {
+  const endContent = document.querySelector(".tmb-sub-footer .default-content-wrapper:last-child");
+  endContent?.classList.add("tmb-sub-footer-wrapper");
+  endContent?.querySelector('ul')?.classList?.add('ul-5');
+
+  iconBtns?.forEach((iconBtn) => {
     // ACCESSIBILITY
     iconBtn.setAttribute('role', 'button');
     iconBtn.setAttribute('tabindex', '0');

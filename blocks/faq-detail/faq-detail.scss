@@ -1,0 +1,239 @@
+@use '../../styles/base' as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.faq-heading-section {
+  @include responsive-container;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $heading-default;
+    font-family: $primary-font;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0;
+    padding: 32px 0;
+    max-width: 1440px;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 1;
+    transform: translateY(0);
+
+    @include tablet {
+      font-size: 32px;
+      line-height: 40px;
+      padding: 24px 0 0;
+    }
+
+    &[style*="none"] {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+}
+
+.section-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 74px;
+  position: relative;
+  align-items: start;
+  padding-block: 32px;
+
+  &:has(.right-section-wrapper) {
+    grid-template-columns: 1fr 392px;
+  }
+
+  .default-content-wrapper {
+    display: none;
+  }
+
+  @include responsive-container;
+
+  @include tablet {
+    padding-block: 24px;
+  }
+
+  .sub-section-wrapper h3[id] {
+    scroll-margin-top: 140px;
+  }
+
+  .sub-section-wrapper:not(.right-section-wrapper) {
+    grid-column: 1;
+    grid-row: auto;
+
+    h3 {
+      color: $body-default;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0;
+      padding: 0 0 30px;
+    }
+
+    h1, p, h2, h4, h5, h6, li {
+      color: $body-default;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      padding-bottom: 32px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-bottom: 32px;
+      list-style-position: outside;
+      padding-left: 24px;
+
+      li {
+        padding-bottom: 8px;
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    ol {
+      padding-bottom: 32px;
+      list-style-type: decimal;
+      list-style-position: inside;
+
+      li {
+        padding: 0;
+      }
+    }
+
+    a {
+      color: $link-default;
+      text-decoration: underline;
+      text-decoration-color: $link-default;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      margin-top: 16px;
+      height: auto;
+    }
+  }
+
+  .right-section-wrapper {
+    grid-column: 2;
+    grid-row: 1 / 100;
+    align-self: start;
+    margin-top: 0;
+    position: sticky;
+    top: 0;
+    height: max-content;
+    width: 326px;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $heading-default;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 36px;
+      letter-spacing: -1px;
+      padding: 12px 0;
+      border-bottom: 1px solid #00525b33; /* FIGMA TOKEN MISSING */
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+
+      &.hide-heading {
+        padding: 0;
+      }
+    }
+
+    p {
+      color: #565659; /* FIGMA TOKEN MISSING */
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0;
+      padding: 24px 0;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex: 1 0 0;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #00525b33; /* FIGMA TOKEN MISSING */
+
+      .faq-number {
+        display: block;
+        min-width: 28px;
+        width: fit-content;
+      }
+
+      a {
+        padding: 5px;
+        color: $body-default;
+        text-decoration: none;
+        transition: color 0.3s;
+        width: 100%;
+      }
+
+      a:hover {
+        text-decoration-line: underline;
+      }
+
+      a.active {
+        background-color: $color-footer-info;
+        transition: 0.3s;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: $body-default;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0;
+      }
+    }
+  }
+}
+
+.img-1-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  img {
+    width: 100%;
+  }
+}
+
+.img-2-grid, .img-4-grid, .img-6-grid {
+  max-width: 1328px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  img {
+    width: 100%;
+  }
+}
+
+@include tablet {
+  .section-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    .right-section-wrapper {
+      display: none;
+    }
+  }
+}

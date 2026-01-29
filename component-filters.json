@@ -21,7 +21,24 @@
       "bannervideo",
       "accordion",
       "banking-good",
-      "teachers-form-block"
+      "breadcrumb",
+      "faq-category",
+      "faq-detail",
+      "transformd-form",
+      "hero-banner",
+      "content-fragment",
+      "interest-table",
+      "icon-library",
+      "faq-productdetail",
+      "compare-accounts",
+      "stepper",
+      "tabs",
+      "interest-rates",
+      "page-heading",
+      "legal-tc-guide",
+      "faq-legal",
+      "faq-legal-table",
+      "legal-privacy"
     ]
   },
   {
@@ -35,6 +52,9 @@
     "components": [
       "banner-video-item"
     ]
+  },
+  {
+    "id": "breadcrumb"
   },
   {
     "id": "cards",
@@ -54,7 +74,45 @@
       "text",
       "image",
       "button",
-      "title"
+      "title",
+      "content-fragment",
+      "accordion"
+    ]
+  },
+  {
+    "id": "compare-accounts",
+    "components": [
+      "account-card"
+    ]
+  },
+  {
+    "id": "faq-productdetail",
+    "components": [
+      "faq-accordion-item"
+    ]
+  },
+  {
+    "id": "hero-banner",
+    "components": [
+      "banner"
+    ]
+  },
+  {
+    "id": "interest-rates",
+    "components": [
+      "rate-details"
+    ]
+  },
+  {
+    "id": "stepper",
+    "components": [
+      "stepper-item"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tabsitem"
     ]
   }
 ]

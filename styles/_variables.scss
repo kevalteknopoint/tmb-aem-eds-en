@@ -1,69 +1,346 @@
-/* ---------- BORDER VARIABLES ---------- */
-
-$border-primary: var(--border-primary); // colour/neutral/charcoal
-$border-brand: var(--border-brand); // colour/teal/corporate-teal
-$border-error: var(--border-error); // colour/red/red
-
-/* ---------- BORDER VARIABLES ---------- */
-
-/* ---------- TEXT VARIABLES ---------- */
-
-$text-primary: var(--text-primary); // colour/neutral/black
-$text-secondary: var(--text-secondary); // colour/neutral/dark-grey
-$text-inverse: var(--text-inverse); // colour/neutral/white
-$text-light: var(--text-light); // colour/yellow/cream
-$text-brand: var(--text-brand); // colour/teal/teal
-$text-brand-secondary: var(--text-brand-secondary); // colour/teal/dark-corporate-teal
-
-/* -------------------- */
-$text-primary-cta: var(--text-primary-cta); // colour/yellow/cream
-$text-secondary-cta: var(--text-secondary-cta); // colour/teal/teal
-$text-accent-cta: var(--text-accent-cta); // colour/teal/teal
-$text-disabled: var(--text-disabled); // colour/neutral/grey
-$text-error: var(--text-error); // colour/red/red
-
-/* -------------------- */
-$text-ghost-default: var(--text-ghost-default); // colour/teal/teal
-$text-ghost-hover: var(--text-ghost-hover); // colour/neutral/black
-$text-ghost-focused: var(--text-ghost-focused); // colour/neutral/black
-$text-ghost-disabled: var(--text-ghost-disabled); // colour/neutral/grey
-$text-ghost-active: var(--text-ghost-active); // colour/teal/dark-corporate-teal
-
-/* ---------- TEXT VARIABLES ---------- */
-
-
-/* ---------- SURFACE VARIABLES ---------- */
-
-$surface-primary: var(--surface-primary); // colour/neutral/cool-grey
-$surface-secondary: var(--surface-secondary); // colour/neutral/grey
-$surface-overlay: var(--surface-overlay); // colour/neutral/dark-grey-50
-$surface-brand: var(--surface-brand); // colour/teal/teal
-$surface-light: var(--surface-light); // colour/neutral/white
-$surface-login-cta: var(--surface-login-cta); // colour/yellow/cream
-
-/* -------------------- */
-$surface-primary-cta: var(--surface-primary-cta); // colour/teal/teal
-$surface-prim-hover-cta: var(--surface-prim-hover-cta); // colour/teal/dark-teal
-$surface-prim-active-cta: var(--surface-prim-active-cta); // colour/neutral/charcoal
-
-/* -------------------- */
-$surface-secondary-cta: var(--surface-secondary-cta); // colour/blue/grey-blue
-$surface-sec-hover-cta: var(--surface-sec-hover-cta); // colour/teal/dark-corporate-teal
-
-/* -------------------- */
-$surface-accent-cta: var(--surface-accent-cta); // colour/yellow/cream
-$surface-accent-hover-cta: var(--surface-accent-hover-cta); // colour/yellow/pale-lime
-$surface-accent-active-cta: var(--surface-accent-active-cta); // colour/yellow/pastel-yellow
-
-/* -------------------- */
-$surface-disabled-cta: var(--surface-disabled-cta); // colour/neutral/pale-grey
-$surface-highlight: var(--surface-highlight); // colour/teal/teal-10
-
-/* ---------- SURFACE VARIABLES ---------- */
-
-/* ---------- FONTS VARIABLES ---------- */
-
-$primary-font: var(--primary-font);
-$secondary-font: var(--secondary-font);
-
-/* ---------- FONTS VARIABLES ---------- */
+/* GENERATED VARIABLES */
+$bg-accent: var(--bg-accent);
+$bg-default: var(--bg-default);
+$bg-light: var(--bg-light);
+$bg-light-2: var(--bg-light-2);
+$bg-light-3: var(--bg-light-3);
+$bg-reverse: var(--bg-reverse);
+$bg-reverse-2: var(--bg-reverse-2);
+$bg-transparent: var(--bg-transparent);
+$body-accent: var(--body-accent);
+$body-default: var(--body-default);
+$body-light: var(--body-light);
+$body-light-2: var(--body-light-2);
+$body-light-3: var(--body-light-3);
+$body-reverse: var(--body-reverse);
+$body-reverse-2: var(--body-reverse-2);
+$body-transparent: var(--body-transparent);
+$burst-accent: var(--burst-accent);
+$burst-default: var(--burst-default);
+$burst-light: var(--burst-light);
+$burst-light-2: var(--burst-light-2);
+$burst-light-3: var(--burst-light-3);
+$burst-reverse: var(--burst-reverse);
+$burst-reverse-2: var(--burst-reverse-2);
+$burst-transparent: var(--burst-transparent);
+$carousel-card-fix: var(--carousel-card-fix);
+$carousel-fix-x: var(--carousel-fix-x);
+$col-1-2-2: var(--col-1-2-2);
+$col-1-4-4: var(--col-1-4-4);
+$color-button-outlined-default: var(--color-button-outlined-default);
+$color-button-outlined-hover: var(--color-button-outlined-hover);
+$color-button-outlined-press: var(--color-button-outlined-press);
+$color-button-outlined-reverse-default: var(--color-button-outlined-reverse-default);
+$color-button-outlined-reverse-hover: var(--color-button-outlined-reverse-hover);
+$color-button-outlined-reverse-press: var(--color-button-outlined-reverse-press);
+$color-button-primary-default: var(--color-button-primary-default);
+$color-button-primary-hover: var(--color-button-primary-hover);
+$color-button-primary-press: var(--color-button-primary-press);
+$color-button-secondary-default: var(--color-button-secondary-default);
+$color-button-secondary-hover: var(--color-button-secondary-hover);
+$color-button-secondary-press: var(--color-button-secondary-press);
+$color-button-text-stroke-default: var(--color-button-text-stroke-default);
+$color-button-text-stroke-hover: var(--color-button-text-stroke-hover);
+$color-button-text-stroke-press: var(--color-button-text-stroke-press);
+$color-button-text-stroke-reverse: var(--color-button-text-stroke-reverse);
+$color-button-white-default: var(--color-button-white-default);
+$color-button-white-hover: var(--color-button-white-hover);
+$color-button-white-press: var(--color-button-white-press);
+$color-focus-default: var(--color-focus-default);
+$color-focus-reversed: var(--color-focus-reversed);
+$color-footer-info: var(--color-footer-info);
+$color-header-frame: var(--color-header-frame);
+$color-header-icon: var(--color-header-icon);
+$color-header-icon-2: var(--color-header-icon-2);
+$color-header-light: var(--color-header-light);
+$color-header-nav: var(--color-header-nav);
+$color-header-nav-primary: var(--color-header-nav-primary);
+$color-header-nav-secondary: var(--color-header-nav-secondary);
+$color-header-search: var(--color-header-search);
+$color-pagination-secondary-nav: var(--color-pagination-secondary-nav);
+$color-pagination-selected: var(--color-pagination-selected);
+$color-pagination-surface: var(--color-pagination-surface);
+$color-pagination-unselected: var(--color-pagination-unselected);
+$color-placeholder-default: var(--color-placeholder-default);
+$color-placeholder-reverse: var(--color-placeholder-reverse);
+$color-placeholder-reverse-2: var(--color-placeholder-reverse-2);
+$color-variants-bg-accent: var(--color-variants-bg-accent);
+$color-variants-bg-default: var(--color-variants-bg-default);
+$color-variants-bg-light-1: var(--color-variants-bg-light-1);
+$color-variants-bg-light-2: var(--color-variants-bg-light-2);
+$color-variants-bg-light-3: var(--color-variants-bg-light-3);
+$color-variants-bg-light-4: var(--color-variants-bg-light-4);
+$color-variants-bg-promo: var(--color-variants-bg-promo);
+$color-variants-bg-reverse: var(--color-variants-bg-reverse);
+$color-variants-body-default: var(--color-variants-body-default);
+$color-variants-body-reverse: var(--color-variants-body-reverse);
+$color-variants-body-reverse-2: var(--color-variants-body-reverse-2);
+$color-variants-burst-default: var(--color-variants-burst-default);
+$color-variants-burst-reverse: var(--color-variants-burst-reverse);
+$color-variants-heading-default: var(--color-variants-heading-default);
+$color-variants-heading-reverse: var(--color-variants-heading-reverse);
+$color-variants-heading-reverse-2: var(--color-variants-heading-reverse-2);
+$color-variants-icon-accent: var(--color-variants-icon-accent);
+$color-variants-icon-default: var(--color-variants-icon-default);
+$color-variants-icon-reverse: var(--color-variants-icon-reverse);
+$color-variants-icon-reverse-2: var(--color-variants-icon-reverse-2);
+$color-variants-line-default: var(--color-variants-line-default);
+$color-variants-line-reverse: var(--color-variants-line-reverse);
+$color-variants-link-default: var(--color-variants-link-default);
+$color-variants-link-reverse: var(--color-variants-link-reverse);
+$color-variants-link-reverse-2: var(--color-variants-link-reverse-2);
+$color-variants-number-list-default: var(--color-variants-number-list-default);
+$color-variants-number-list-reverse: var(--color-variants-number-list-reverse);
+$color-variants-stroke-accent: var(--color-variants-stroke-accent);
+$color-variants-stroke-primary: var(--color-variants-stroke-primary);
+$color-variants-stroke-reversed: var(--color-variants-stroke-reversed);
+$color-variants-stroke-reversed-2: var(--color-variants-stroke-reversed-2);
+$color-variants-stroke-secondary: var(--color-variants-stroke-secondary);
+$desktop-visible: var(--desktop-visible);
+$device-width: var(--device-width);
+$font-d-height-body: var(--font-d-height-body);
+$font-d-height-disc: var(--font-d-height-disc);
+$font-d-height-h1: var(--font-d-height-h1);
+$font-d-height-h1-std: var(--font-d-height-h1-std);
+$font-d-height-h2: var(--font-d-height-h2);
+$font-d-height-h2-std: var(--font-d-height-h2-std);
+$font-d-height-h3: var(--font-d-height-h3);
+$font-d-height-h4: var(--font-d-height-h4);
+$font-d-height-h5: var(--font-d-height-h5);
+$font-d-height-intro: var(--font-d-height-intro);
+$font-d-height-lg: var(--font-d-height-lg);
+$font-d-height-sm-body: var(--font-d-height-sm-body);
+$font-d-size-body: var(--font-d-size-body);
+$font-d-size-disc: var(--font-d-size-disc);
+$font-d-size-h1: var(--font-d-size-h1);
+$font-d-size-h1-std: var(--font-d-size-h1-std);
+$font-d-size-h2: var(--font-d-size-h2);
+$font-d-size-h2-std: var(--font-d-size-h2-std);
+$font-d-size-h3: var(--font-d-size-h3);
+$font-d-size-h4: var(--font-d-size-h4);
+$font-d-size-h5: var(--font-d-size-h5);
+$font-d-size-intro: var(--font-d-size-intro);
+$font-d-size-lg: var(--font-d-size-lg);
+$font-d-size-sm-body: var(--font-d-size-sm-body);
+$font-family-body: var(--font-family-body);
+$font-family-body-bold: var(--font-family-body-bold);
+$font-family-disc: var(--font-family-disc);
+$font-family-h1: var(--font-family-h1);
+$font-family-h1-std: var(--font-family-h1-std);
+$font-family-h2: var(--font-family-h2);
+$font-family-h2-std: var(--font-family-h2-std);
+$font-family-h3: var(--font-family-h3);
+$font-family-h4: var(--font-family-h4);
+$font-family-h5: var(--font-family-h5);
+$font-family-intro: var(--font-family-intro);
+$font-family-lg: var(--font-family-lg);
+$font-family-sm-body: var(--font-family-sm-body);
+$font-height-body: var(--font-height-body);
+$font-height-disclaimer: var(--font-height-disclaimer);
+$font-height-h1: var(--font-height-h1);
+$font-height-h1-std: var(--font-height-h1-std);
+$font-height-h2: var(--font-height-h2);
+$font-height-h2-std: var(--font-height-h2-std);
+$font-height-h3: var(--font-height-h3);
+$font-height-h4: var(--font-height-h4);
+$font-height-h5: var(--font-height-h5);
+$font-height-intro: var(--font-height-intro);
+$font-height-lg: var(--font-height-lg);
+$font-height-sm-body: var(--font-height-sm-body);
+$font-letter-spacing-body: var(--font-letter-spacing-body);
+$font-letter-spacing-disc: var(--font-letter-spacing-disc);
+$font-letter-spacing-h1: var(--font-letter-spacing-h1);
+$font-letter-spacing-h1-std: var(--font-letter-spacing-h1-std);
+$font-letter-spacing-h2: var(--font-letter-spacing-h2);
+$font-letter-spacing-h2-std: var(--font-letter-spacing-h2-std);
+$font-letter-spacing-h3: var(--font-letter-spacing-h3);
+$font-letter-spacing-h4: var(--font-letter-spacing-h4);
+$font-letter-spacing-h5: var(--font-letter-spacing-h5);
+$font-letter-spacing-intro: var(--font-letter-spacing-intro);
+$font-letter-spacing-lg: var(--font-letter-spacing-lg);
+$font-letter-spacing-sm-body: var(--font-letter-spacing-sm-body);
+$font-m-height-body: var(--font-m-height-body);
+$font-m-height-disc: var(--font-m-height-disc);
+$font-m-height-h1: var(--font-m-height-h1);
+$font-m-height-h1-std: var(--font-m-height-h1-std);
+$font-m-height-h2: var(--font-m-height-h2);
+$font-m-height-h2-std: var(--font-m-height-h2-std);
+$font-m-height-h3: var(--font-m-height-h3);
+$font-m-height-h4: var(--font-m-height-h4);
+$font-m-height-h5: var(--font-m-height-h5);
+$font-m-height-intro: var(--font-m-height-intro);
+$font-m-height-lg: var(--font-m-height-lg);
+$font-m-height-sm-body: var(--font-m-height-sm-body);
+$font-m-size-body: var(--font-m-size-body);
+$font-m-size-disc: var(--font-m-size-disc);
+$font-m-size-h1: var(--font-m-size-h1);
+$font-m-size-h1-std: var(--font-m-size-h1-std);
+$font-m-size-h2: var(--font-m-size-h2);
+$font-m-size-h2-std: var(--font-m-size-h2-std);
+$font-m-size-h3: var(--font-m-size-h3);
+$font-m-size-h4: var(--font-m-size-h4);
+$font-m-size-h5: var(--font-m-size-h5);
+$font-m-size-intro: var(--font-m-size-intro);
+$font-m-size-lg: var(--font-m-size-lg);
+$font-m-size-sm-body: var(--font-m-size-sm-body);
+$font-size-body: var(--font-size-body);
+$font-size-disclaimer: var(--font-size-disclaimer);
+$font-size-h1: var(--font-size-h1);
+$font-size-h1-std: var(--font-size-h1-std);
+$font-size-h2: var(--font-size-h2);
+$font-size-h2-std: var(--font-size-h2-std);
+$font-size-h3: var(--font-size-h3);
+$font-size-h4: var(--font-size-h4);
+$font-size-h5: var(--font-size-h5);
+$font-size-intro: var(--font-size-intro);
+$font-size-lg: var(--font-size-lg);
+$font-size-sm-body: var(--font-size-sm-body);
+$font-t-height-body: var(--font-t-height-body);
+$font-t-height-disc: var(--font-t-height-disc);
+$font-t-height-h1: var(--font-t-height-h1);
+$font-t-height-h1-std: var(--font-t-height-h1-std);
+$font-t-height-h2: var(--font-t-height-h2);
+$font-t-height-h2-std: var(--font-t-height-h2-std);
+$font-t-height-h3: var(--font-t-height-h3);
+$font-t-height-h4: var(--font-t-height-h4);
+$font-t-height-h5: var(--font-t-height-h5);
+$font-t-height-intro: var(--font-t-height-intro);
+$font-t-height-lg: var(--font-t-height-lg);
+$font-t-height-sm-body: var(--font-t-height-sm-body);
+$font-t-size-body: var(--font-t-size-body);
+$font-t-size-disc: var(--font-t-size-disc);
+$font-t-size-h1: var(--font-t-size-h1);
+$font-t-size-h1-std: var(--font-t-size-h1-std);
+$font-t-size-h2: var(--font-t-size-h2);
+$font-t-size-h2-std: var(--font-t-size-h2-std);
+$font-t-size-h3: var(--font-t-size-h3);
+$font-t-size-h4: var(--font-t-size-h4);
+$font-t-size-h5: var(--font-t-size-h5);
+$font-t-size-intro: var(--font-t-size-intro);
+$font-t-size-lg: var(--font-t-size-lg);
+$font-t-size-sm-body: var(--font-t-size-sm-body);
+$font-weight-body: var(--font-weight-body);
+$font-weight-body-bold: var(--font-weight-body-bold);
+$font-weight-disc: var(--font-weight-disc);
+$font-weight-h1: var(--font-weight-h1);
+$font-weight-h1-std: var(--font-weight-h1-std);
+$font-weight-h2: var(--font-weight-h2);
+$font-weight-h2-std: var(--font-weight-h2-std);
+$font-weight-h3: var(--font-weight-h3);
+$font-weight-h4: var(--font-weight-h4);
+$font-weight-h5: var(--font-weight-h5);
+$font-weight-intro: var(--font-weight-intro);
+$font-weight-lg: var(--font-weight-lg);
+$font-weight-rate: var(--font-weight-rate);
+$font-weight-rate-p-a: var(--font-weight-rate-p-a);
+$font-weight-sm-body: var(--font-weight-sm-body);
+$gap-container-y: var(--gap-container-y);
+$gap-gap-0-24-80: var(--gap-gap-0-24-80);
+$guide-count: var(--guide-count);
+$guide-gutter: var(--guide-gutter);
+$guide-width: var(--guide-width);
+$heading-accent: var(--heading-accent);
+$heading-default: var(--heading-default);
+$heading-light: var(--heading-light);
+$heading-light-2: var(--heading-light-2);
+$heading-light-3: var(--heading-light-3);
+$heading-reverse: var(--heading-reverse);
+$heading-reverse-2: var(--heading-reverse-2);
+$heading-transparent: var(--heading-transparent);
+$icon-2-accent: var(--icon-2-accent);
+$icon-2-default: var(--icon-2-default);
+$icon-2-light: var(--icon-2-light);
+$icon-2-light-2: var(--icon-2-light-2);
+$icon-2-light-3: var(--icon-2-light-3);
+$icon-2-reverse: var(--icon-2-reverse);
+$icon-2-reverse-2: var(--icon-2-reverse-2);
+$icon-2-transparent: var(--icon-2-transparent);
+$icon-accent: var(--icon-accent);
+$icon-bg-accent: var(--icon-bg-accent);
+$icon-bg-default: var(--icon-bg-default);
+$icon-bg-light: var(--icon-bg-light);
+$icon-bg-light-2: var(--icon-bg-light-2);
+$icon-bg-light-3: var(--icon-bg-light-3);
+$icon-bg-reverse: var(--icon-bg-reverse);
+$icon-bg-reverse-2: var(--icon-bg-reverse-2);
+$icon-bg-transparent: var(--icon-bg-transparent);
+$icon-default: var(--icon-default);
+$icon-light: var(--icon-light);
+$icon-light-2: var(--icon-light-2);
+$icon-light-3: var(--icon-light-3);
+$icon-reverse: var(--icon-reverse);
+$icon-reverse-2: var(--icon-reverse-2);
+$icon-transparent: var(--icon-transparent);
+$info-well-accent: var(--info-well-accent);
+$info-well-default: var(--info-well-default);
+$info-well-light: var(--info-well-light);
+$info-well-light-2: var(--info-well-light-2);
+$info-well-light-3: var(--info-well-light-3);
+$info-well-reverse: var(--info-well-reverse);
+$info-well-reverse-2: var(--info-well-reverse-2);
+$info-well-transparent: var(--info-well-transparent);
+$jump-menu-fix: var(--jump-menu-fix);
+$layout-container-max: var(--layout-container-max);
+$layout-container-max-hero: var(--layout-container-max-hero);
+$lg-rate: var(--lg-rate);
+$line-accent: var(--line-accent);
+$line-default: var(--line-default);
+$line-light: var(--line-light);
+$line-light-2: var(--line-light-2);
+$line-light-3: var(--line-light-3);
+$line-reverse: var(--line-reverse);
+$line-reverse-2: var(--line-reverse-2);
+$line-transparent: var(--line-transparent);
+$link-accent: var(--link-accent);
+$link-default: var(--link-default);
+$link-light: var(--link-light);
+$link-light-2: var(--link-light-2);
+$link-light-3: var(--link-light-3);
+$link-reverse: var(--link-reverse);
+$link-reverse-2: var(--link-reverse-2);
+$link-transparent: var(--link-transparent);
+$mobile-tablet-visible: var(--mobile-tablet-visible);
+$mobile-visible: var(--mobile-visible);
+$number-list-accent: var(--number-list-accent);
+$number-list-default: var(--number-list-default);
+$number-list-light: var(--number-list-light);
+$number-list-light-2: var(--number-list-light-2);
+$number-list-light-3: var(--number-list-light-3);
+$number-list-reverse: var(--number-list-reverse);
+$number-list-reverse-2: var(--number-list-reverse-2);
+$number-list-transparent: var(--number-list-transparent);
+$padding-jump-container-x: var(--padding-jump-container-x);
+$padding-main-container-x: var(--padding-main-container-x);
+$padding-section-y: var(--padding-section-y);
+$radius-article-thumb: var(--radius-article-thumb);
+$radius-button: var(--radius-button);
+$radius-card: var(--radius-card);
+$radius-footer-card: var(--radius-footer-card);
+$radius-hero: var(--radius-hero-var);
+$radius-info-well: var(--radius-info-well);
+$radius-menu-link: var(--radius-menu-link);
+$space-2xl: var(--space-2xl);
+$space-2xs: var(--space-2xs);
+$space-3xl: var(--space-3xl);
+$space-3xs: var(--space-3xs);
+$space-lg: var(--space-lg);
+$space-md: var(--space-md);
+$space-sm: var(--space-sm);
+$space-xl: var(--space-xl);
+$space-xs: var(--space-xs);
+$spacer: var(--spacer);
+$stroke-accent: var(--stroke-accent);
+$stroke-button: var(--stroke-button);
+$stroke-default: var(--stroke-default);
+$stroke-light: var(--stroke-light);
+$stroke-light-2: var(--stroke-light-2);
+$stroke-light-3: var(--stroke-light-3);
+$stroke-reverse: var(--stroke-reverse);
+$stroke-reverse-2: var(--stroke-reverse-2);
+$stroke-transparent: var(--stroke-transparent);
+$tablet-desktop-visible: var(--tablet-desktop-visible);
+$tablet-visible: var(--tablet-visible);
+$width-logo: var(--width-logo);
+$width-logo-lg: var(--width-logo-lg);
+$width-logo-sm: var(--width-logo-sm);
+$width-thumbnail: var(--width-thumbnail);

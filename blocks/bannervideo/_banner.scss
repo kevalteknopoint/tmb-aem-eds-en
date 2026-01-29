@@ -1,28 +1,98 @@
+@use '../../styles/base' as *;
+
 .secfirst {
   .bannervideo-wrapper {
-    max-width: 100%;
     margin: 0 auto;
+    max-width: 100%;
     padding: 0;
 
     .bannervideo {
-      border-radius: 0 0 50px 50px;
-
       .swiper-slide {
-        position: relative;
         margin-right: 2px;
+        position: relative;
       }
 
-      .swiper-pagination {
-        .swiper-pagination-bullet {
-          width: 49px;
-          height: 12px;
-          border-radius: 40px;
-          opacity: 1;
-          background-color: #fff;
+      .outer-pagination-div {
+        display: flex;
+        justify-content: flex-end;
+        gap: 4px;
+        position: absolute;
+        left: 25%;
+        right: 0;
+        top: unset;
+        width: 100%;
+        z-index: 1;
+        bottom: 64px;
+
+        @include responsive-container(25%);
+
+        @include desktop {
+          left: unset;
+          width: fit-content;
+          margin-left: auto;
+          margin-right: 0;
         }
 
-        .swiper-pagination-bullet-active {
-          background: #00525b;
+        @include tablet {
+          position: absolute;
+          right: 0;
+          bottom: 16px;
+        }
+
+        .swiper-pagination {
+          position: static;
+          backdrop-filter: blur(18px);
+          -webkit-backdrop-filter: blur(18px);
+          align-items: center;
+          background: $bg-default;
+          border-radius: $radius-button;
+          display: flex;
+          gap: 10px;
+          height: 35px;
+          justify-content: center;
+          padding: 0 12px;
+          width: fit-content;
+
+          .swiper-pagination-bullet {
+            aspect-ratio: 1 / 1;
+            background: $bg-reverse;
+            border-radius: 40px;
+            box-shadow: 0 1px 4px 0 rgb(0 0 0 / 15%);
+            height: 4px;
+            opacity: 0.6;
+            width: 4px;
+            margin: 0;
+          }
+
+          .swiper-pagination-bullet-active {
+            opacity: 1;
+            aspect-ratio: 1 / 1;
+            border-radius: 40px;
+            box-shadow: 0 1px 4px 0 rgb(0 0 0 / 15%);
+            height: 8px;
+            width: 8px;
+          }
+        }
+
+        .play-btn {
+          display: grid;
+          place-items: center;
+          width: 35px;
+          height: 35px;
+          border-radius: $radius-button;
+          background-color: $bg-default;
+
+          svg {
+            display: block;
+            width: 24px;
+            height: 24px;
+            color: $color-pagination-selected;
+            filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.40));
+          }
+
+          @include tablet {
+            display: none;
+          }
         }
       }
     }
@@ -30,22 +100,10 @@
 
   .swiper-wrapper {
     height: 600px;
-  }
+    z-index: unset;
 
-  @media (max-width: 767px) {
-    .swiper-wrapper {
+    @include tablet {
       height: auto;
-    }
-
-    .bannervideo-wrapper {
-      .bannervideo {
-        .swiper-pagination {
-          .swiper-pagination-bullet {
-            width: 20px;
-            height: 7px;
-          }
-        }
-      }
     }
   }
 }

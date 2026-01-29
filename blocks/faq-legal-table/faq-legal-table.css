@@ -1,0 +1,100 @@
+.faq-legal-table{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
+}
+
+.faq-legal-table .columns-wrapper .block div div:has(ul) ul{
+  list-style:none;
+  margin:32px 0 0;
+  min-width:500px;
+  padding:0;
+}
+
+.faq-legal-table .columns-wrapper .block div div:has(ul) ul li{
+  border-bottom:1px solid rgb(0 0 0 / 20%);
+}
+
+.faq-legal-table .columns-wrapper .block div div:has(ul) ul li ul{
+  align-items:flex-start;
+  display:flex;
+  gap:32px;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.faq-legal-table .columns-wrapper .block div div:has(ul) ul li ul li{
+  align-items:center;
+  border-bottom:unset;
+  color:var(--body-default);
+  display:flex;
+  flex:1;
+  font-size:var(--font-size-body);
+  font-style:normal;
+  font-weight:400;
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  padding:12px 0;
+}
+
+.faq-legal-table .columns-wrapper .block div div:has(ul) ul li ul li:has(a) a{
+  color:var(--link-default);
+  font-size:var(--font-size-body);
+  font-style:normal;
+  font-weight:400;
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-decoration-line:underline;
+  -webkit-text-decoration-skip:ink;
+          text-decoration-skip-ink:auto;
+  text-decoration-style:solid;
+  text-decoration-thickness:auto;
+  text-underline-offset:auto;
+  text-underline-position:from-font;
+}
+
+.faq-legal-table .columns-wrapper .block div div:has(ul) ul li ul li:first-child{
+  border-bottom:unset;
+}
+
+.faq-legal-table .columns-wrapper .block div div:has(ul) ul li:first-child{
+  border-bottom:4px solid var(--heading-default);
+}
+
+.faq-legal-table .columns-wrapper .block div div:has(ul) ul li:first-child ul li{
+  color:var(--heading-default);
+  font-size:var(--font-size-h3);
+  font-style:normal;
+  font-weight:500;
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
+}
+
+.faq-legal-table .columns-wrapper .block div div:has(ul) ul li:last-child{
+  border-bottom:none;
+}
+
+@media screen and (max-width: 1279px){
+  .faq-legal-table{
+    padding-inline:24px;
+  }
+}
+
+@media screen and (max-width: 1023px){
+  .faq-legal-table .columns-wrapper .block div div:has(ul) ul{
+    min-width:150px;
+  }
+
+  .faq-legal-table .columns-wrapper .block div div:has(ul) ul li ul{
+    gap:16px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .faq-legal-table{
+    padding-inline:16px;
+  }
+}

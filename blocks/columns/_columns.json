@@ -34,6 +34,7 @@
           "value": "",
           "label": "Rows"
         }
+        
       ]
     }
   ],
@@ -50,7 +51,9 @@
         "text",
         "image",
         "button",
-        "title"
+        "title",
+        "content-fragment",
+        "accordion"
       ]
     }
   ]

@@ -1,119 +1,130 @@
-@use '../../styles/mixins' as *;
-@use '../../styles/variables' as *;
+@use '../../styles/base' as *;
 
 .quick-links-container {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1452px;
-  padding: 0 40px;
+  gap: 40px;
+
+  @include responsive-container;
 
   .quick-links-wrapper {
-
-    // Style for the paragraph containing the title and icons
-    & > .quick-links > div > div > p {
-      align-items: center;
-      color: #00525B;
+    & > .quick-links > div > div > p:not(:has(a)), & > .quick-links > div > div > p > a,
+    & > .quick-links > div > div > h1:not(:has(a)), & > .quick-links > div > div > h1 > a,
+    & > .quick-links > div > div > h2:not(:has(a)), & > .quick-links > div > div > h2 > a,
+    & > .quick-links > div > div > h3:not(:has(a)), & > .quick-links > div > div > h3 > a,
+    & > .quick-links > div > div > h4:not(:has(a)), & > .quick-links > div > div > h4 > a,
+    & > .quick-links > div > div > h5:not(:has(a)), & > .quick-links > div > div > h5 > a,
+    & > .quick-links > div > div > h6:not(:has(a)), & > .quick-links > div > div > h6 > a {
       display: flex;
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 700;
-      justify-content: space-between;
-      line-height: 32px;
-      margin-bottom: 24px;
-      text-transform: capitalize;
+      justify-content: flex-start;
+      gap: 16px;
+      align-items: center;
+      color: $link-default;
+
+      @include typo-heading3;
+
+      &:hover {
+        .quick-link-text::after {
+          left: 0;
+          right: unset;
+          width: 100%;
+        }
+
+        & > .icon:last-child svg {
+          margin-left: 48px;
+        }
+      }
+
+      .quick-link-text {
+        display: block;
+        position: relative;
+        padding-bottom: 4px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          height: 2px;
+          width: 0;
+          transition: all 0.2s ease-in-out;
+          background: $burst-default;
+        }
+      }
+
+      & > .icon {
+        &:first-child {
+          padding: 6.5px 0;
+
+          svg {
+            display: block;
+            min-width: 48px;
+            width: 48px;
+            height: 48px;
+          }
+        }
+
+        &:last-child svg {
+          display: block;
+          width: fit-content;
+          width: 19px;
+          height: 19px;
+          margin-left: 8px;
+          transition: all 0.3s ease-in-out;
+        }
+      }
     }
 
     & > .quick-links > div > div {
       position: relative;
     }
 
-    // Styles for the UL descendant, regardless of intermediate DIVs
     & > div > div > div > ul {
       margin-bottom: 0;
-      padding: 0 0 0 80px !important;
+      padding-left: 64px;
 
       & > li {
-        color: #00525B;
         display: flex;
-        font-size: 16px;
-        font-weight: 400;
         justify-content: space-between;
-        letter-spacing: -1%;
-        line-height: 100%;
-        list-style-type: none;
-        margin-bottom: 16px;
+        letter-spacing: 0;
+        padding: 6px 0 2px;
         vertical-align: bottom;
-        width: 316px;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
+        width: fit-content;
 
         & > a {
-          color: #000;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 24px;
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          width: fit-content;
+          color: $link-default;
           text-decoration: none;
+          padding-bottom: 2px;
+
+          @include typo-sm-body;
+
+          &:hover::after {
+            left: 0;
+            right: unset;
+            width: 100%;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            width: 0;
+            transition: all 0.2s ease-in-out;
+            background: $burst-default;
+          }
         }
       }
     }
   }
 
-  & > .quick-links-wrapper > .quick-links > div > div > p {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0;
-    padding-left: 80px;
-    position: relative;
-
-    & > .icon {
-      align-items: center;
-      display: flex;
-
-      &:first-child {
-        height: 64px;
-        left: 0;
-        position: absolute;
-        top: -2px;
-        width: 64px;
-
-        img {
-          width: 100%;
-        }
-      }
-
-      &:last-child {
-        display: none;
-        margin-left: auto;
-      }
-    }
-  }
-
-  // Media Queries nested inside .quick-links-container
-  @media (min-width: 1024px) and (max-width: 1430px) {
-    align-items: baseline;
-    gap: 80px 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
-    .quick-links-wrapper {
-      .quick-links > div > div > ul > li {
-        width: 100%;
-      }
-    }
-  }
-
-  @media screen and (max-width: 1023px) {
-    align-items: baseline;
-    gap: 80px 40px;
+  @include tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
@@ -129,52 +140,29 @@
     }
   }
 
-  @media screen and (max-width: 767px) {
+  @include mobile {
     display: grid;
-    flex-direction: column;
     grid-template-columns: 1fr;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px;
-    row-gap: unset;
+    gap: 32px;
 
     .quick-links-wrapper {
-      border-bottom: 1px solid #EDEDED;
       margin: unset;
       padding: unset;
-      width: -webkit-fill-available;
 
       // Targeting the title paragraph inside the container (re-overrides desktop style)
-      & > .quick-links > div > div > p {
+      & > .quick-links > div > div > p:not(:has(a)), & > .quick-links > div > div > p > a,
+      & > .quick-links > div > div > h1:not(:has(a)), & > .quick-links > div > div > h1 > a,
+      & > .quick-links > div > div > h2:not(:has(a)), & > .quick-links > div > div > h2 > a,
+      & > .quick-links > div > div > h3:not(:has(a)), & > .quick-links > div > div > h3 > a,
+      & > .quick-links > div > div > h4:not(:has(a)), & > .quick-links > div > div > h4 > a,
+      & > .quick-links > div > div > h5:not(:has(a)), & > .quick-links > div > div > h5 > a,
+      & > .quick-links > div > div > h6:not(:has(a)), & > .quick-links > div > div > h6 > a
+      {
         font-size: 20px;
         line-height: 45px;
-        margin: 10px 0;
-
-        & > .icon:first-child {
-          height: 48px;
-          width: 48px;
-        }
 
         & > .icon:last-child {
           display: block;
-          margin-left: auto;
-          transform: rotate(90deg);
-        }
-      }
-
-      // Styles for UL descendant (mobile collapsed state)
-      & > div > div > div > ul {
-        display: none;
-
-        &.active {
-          display: block;
-          margin-bottom: 15px;
-          width: auto;
-        }
-
-        & > li {
-          align-items: center;
-          width: 100%;
         }
       }
 
@@ -185,19 +173,7 @@
   }
 }
 
-// Global or High-Level Selectors (Lowest specificity)
-.icon {
-  height: unset;
-  width: unset;
-
-  @media screen and (max-width: 767px) {
-    height: unset;
-    width: unset;
-  }
-}
-
 .quick-links {
-  // Renamed icon-Flyout-menu-icon to icon-flyout-menu-icon (kebab-case fix)
   .icon.icon-flyout-menu-icon {
     img {
       transition: all 0.2s ease-in-out;

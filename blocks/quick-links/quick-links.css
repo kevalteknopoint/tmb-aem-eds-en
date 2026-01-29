@@ -1,26 +1,75 @@
 .quick-links-container{
-  align-items:center;
-  display:flex;
-  flex-wrap:wrap;
-  gap:80px;
+  display:grid;
+  gap:40px;
+  grid-template-columns:1fr 1fr 1fr;
   justify-content:space-between;
   margin-left:auto;
   margin-right:auto;
-  max-width:1452px;
-  padding:0 40px;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
 }
 
-.quick-links-container .quick-links-wrapper > .quick-links > div > div > p{
+.quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)), .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1:not(:has(a)), .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1 > a, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2:not(:has(a)), .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2 > a, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3:not(:has(a)), .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3 > a, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4:not(:has(a)), .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4 > a, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5:not(:has(a)), .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5 > a, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6:not(:has(a)), .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6 > a{
   align-items:center;
-  color:#00525B;
+  color:var(--link-default);
   display:flex;
-  font-size:24px;
-  font-style:normal;
-  font-weight:700;
-  justify-content:space-between;
-  line-height:32px;
-  margin-bottom:24px;
-  text-transform:capitalize;
+  font-family:var(--font-family-h3);
+  font-size:var(--font-size-h3);
+  font-weight:var(--font-weight-h3);
+  gap:16px;
+  justify-content:flex-start;
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
+  text-transform:initial;
+}
+
+.quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)):hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a:hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1:not(:has(a)):hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1 > a:hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2:not(:has(a)):hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2 > a:hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3:not(:has(a)):hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3 > a:hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4:not(:has(a)):hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4 > a:hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5:not(:has(a)):hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5 > a:hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6:not(:has(a)):hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6 > a:hover .quick-link-text::after{
+  left:0;
+  right:unset;
+  width:100%;
+}
+
+.quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)):hover > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a:hover > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1:not(:has(a)):hover > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1 > a:hover > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2:not(:has(a)):hover > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2 > a:hover > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3:not(:has(a)):hover > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3 > a:hover > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4:not(:has(a)):hover > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4 > a:hover > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5:not(:has(a)):hover > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5 > a:hover > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6:not(:has(a)):hover > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6 > a:hover > .icon:last-child svg{
+  margin-left:48px;
+}
+
+.quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)) .quick-link-text, .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a .quick-link-text, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1:not(:has(a)) .quick-link-text, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1 > a .quick-link-text, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2:not(:has(a)) .quick-link-text, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2 > a .quick-link-text, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3:not(:has(a)) .quick-link-text, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3 > a .quick-link-text, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4:not(:has(a)) .quick-link-text, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4 > a .quick-link-text, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5:not(:has(a)) .quick-link-text, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5 > a .quick-link-text, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6:not(:has(a)) .quick-link-text, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6 > a .quick-link-text{
+  display:block;
+  padding-bottom:4px;
+  position:relative;
+}
+
+.quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)) .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1:not(:has(a)) .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1 > a .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2:not(:has(a)) .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2 > a .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3:not(:has(a)) .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3 > a .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4:not(:has(a)) .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4 > a .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5:not(:has(a)) .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5 > a .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6:not(:has(a)) .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6 > a .quick-link-text::after{
+  background:var(--burst-default);
+  bottom:0;
+  content:"";
+  height:2px;
+  position:absolute;
+  right:0;
+  transition:all 0.2s ease-in-out;
+  width:0;
+}
+
+.quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)) > .icon:first-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a > .icon:first-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1:not(:has(a)) > .icon:first-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1 > a > .icon:first-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2:not(:has(a)) > .icon:first-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2 > a > .icon:first-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3:not(:has(a)) > .icon:first-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3 > a > .icon:first-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4:not(:has(a)) > .icon:first-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4 > a > .icon:first-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5:not(:has(a)) > .icon:first-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5 > a > .icon:first-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6:not(:has(a)) > .icon:first-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6 > a > .icon:first-child{
+  padding:6.5px 0;
+}
+
+.quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)) > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1:not(:has(a)) > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1 > a > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2:not(:has(a)) > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2 > a > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3:not(:has(a)) > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3 > a > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4:not(:has(a)) > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4 > a > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5:not(:has(a)) > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5 > a > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6:not(:has(a)) > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6 > a > .icon:first-child svg{
+  display:block;
+  height:48px;
+  min-width:48px;
+  width:48px;
+}
+
+.quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)) > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1:not(:has(a)) > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1 > a > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2:not(:has(a)) > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2 > a > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3:not(:has(a)) > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3 > a > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4:not(:has(a)) > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4 > a > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5:not(:has(a)) > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5 > a > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6:not(:has(a)) > .icon:last-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6 > a > .icon:last-child svg{
+  display:block;
+  height:19px;
+  margin-left:8px;
+  transition:all 0.3s ease-in-out;
+  width:-moz-fit-content;
+  width:fit-content;
+  width:19px;
 }
 
 .quick-links-container .quick-links-wrapper > .quick-links > div > div{
@@ -29,70 +78,51 @@
 
 .quick-links-container .quick-links-wrapper > div > div > div > ul{
   margin-bottom:0;
-  padding:0 0 0 80px !important;
+  padding-left:64px;
 }
 
 .quick-links-container .quick-links-wrapper > div > div > div > ul > li{
-  color:#00525B;
   display:flex;
-  font-size:16px;
-  font-weight:400;
   justify-content:space-between;
-  letter-spacing:-1%;
-  line-height:100%;
-  list-style-type:none;
-  margin-bottom:16px;
+  letter-spacing:0;
+  padding:6px 0 2px;
   vertical-align:bottom;
-  width:316px;
-}
-
-.quick-links-container .quick-links-wrapper > div > div > div > ul > li:last-child{
-  margin-bottom:0;
+  width:-moz-fit-content;
+  width:fit-content;
 }
 
 .quick-links-container .quick-links-wrapper > div > div > div > ul > li > a{
-  color:#000;
-  font-size:16px;
-  font-style:normal;
-  font-weight:400;
-  line-height:24px;
-  text-decoration:none;
-}
-
-.quick-links-container > .quick-links-wrapper > .quick-links > div > div > p{
-  align-items:center;
+  color:var(--link-default);
   display:flex;
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-weight:var(--font-weight-sm-body);
   justify-content:space-between;
-  margin-top:0;
-  padding-left:80px;
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
+  padding-bottom:2px;
   position:relative;
+  text-decoration:none;
+  text-transform:initial;
+  width:-moz-fit-content;
+  width:fit-content;
 }
 
-.quick-links-container > .quick-links-wrapper > .quick-links > div > div > p > .icon{
-  align-items:center;
-  display:flex;
-}
-
-.quick-links-container > .quick-links-wrapper > .quick-links > div > div > p > .icon:first-child{
-  height:64px;
+.quick-links-container .quick-links-wrapper > div > div > div > ul > li > a:hover::after{
   left:0;
-  position:absolute;
-  top:-2px;
-  width:64px;
-}
-
-.quick-links-container > .quick-links-wrapper > .quick-links > div > div > p > .icon:first-child img{
+  right:unset;
   width:100%;
 }
 
-.quick-links-container > .quick-links-wrapper > .quick-links > div > div > p > .icon:last-child{
-  display:none;
-  margin-left:auto;
-}
-
-.icon{
-  height:unset;
-  width:unset;
+.quick-links-container .quick-links-wrapper > div > div > div > ul > li > a::after{
+  background:var(--burst-default);
+  bottom:0;
+  content:"";
+  height:1px;
+  position:absolute;
+  right:0;
+  transition:all 0.2s ease-in-out;
+  width:0;
 }
 
 .quick-links .icon.icon-flyout-menu-icon img{
@@ -104,24 +134,15 @@
   transform:rotate(180deg);
 }
 
-@media (min-width: 1024px) and (max-width: 1430px){
+@media screen and (max-width: 1279px){
   .quick-links-container{
-    align-items:baseline;
-    display:grid;
-    gap:80px 40px;
-    grid-template-columns:1fr 1fr 1fr;
-  }
-
-  .quick-links-container .quick-links-wrapper .quick-links > div > div > ul > li{
-    width:100%;
+    padding-inline:24px;
   }
 }
 
 @media screen and (max-width: 1023px){
   .quick-links-container{
-    align-items:baseline;
     display:grid;
-    gap:80px 40px;
     grid-template-columns:1fr 1fr;
   }
 
@@ -138,60 +159,27 @@
 @media screen and (max-width: 767px){
   .quick-links-container{
     display:grid;
-    flex-direction:column;
+    gap:32px;
     grid-template-columns:1fr;
-    margin-left:auto;
-    margin-right:auto;
-    padding:0 20px;
-    row-gap:unset;
+    padding-inline:16px;
   }
 
   .quick-links-container .quick-links-wrapper{
-    border-bottom:1px solid #EDEDED;
     margin:unset;
     padding:unset;
-    width:-webkit-fill-available;
   }
 
-  .quick-links-container .quick-links-wrapper > .quick-links > div > div > p{
+  .quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)), .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1:not(:has(a)), .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1 > a, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2:not(:has(a)), .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2 > a, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3:not(:has(a)), .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3 > a, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4:not(:has(a)), .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4 > a, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5:not(:has(a)), .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5 > a, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6:not(:has(a)), .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6 > a{
     font-size:20px;
     line-height:45px;
-    margin:10px 0;
   }
 
-  .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > .icon:first-child{
-    height:48px;
-    width:48px;
-  }
-
-  .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > .icon:last-child{
+  .quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)) > .icon:last-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a > .icon:last-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1:not(:has(a)) > .icon:last-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1 > a > .icon:last-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2:not(:has(a)) > .icon:last-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2 > a > .icon:last-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3:not(:has(a)) > .icon:last-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3 > a > .icon:last-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4:not(:has(a)) > .icon:last-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4 > a > .icon:last-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5:not(:has(a)) > .icon:last-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5 > a > .icon:last-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6:not(:has(a)) > .icon:last-child, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6 > a > .icon:last-child{
     display:block;
-    margin-left:auto;
-    transform:rotate(90deg);
-  }
-
-  .quick-links-container .quick-links-wrapper > div > div > div > ul{
-    display:none;
-  }
-
-  .quick-links-container .quick-links-wrapper > div > div > div > ul.active{
-    display:block;
-    margin-bottom:15px;
-    width:auto;
-  }
-
-  .quick-links-container .quick-links-wrapper > div > div > div > ul > li{
-    align-items:center;
-    width:100%;
   }
 
   .quick-links-container .quick-links-wrapper .quick-links > div > div > ul{
     max-width:unset;
-  }
-
-  .icon{
-    height:unset;
-    width:unset;
   }
 
   .quick-links .quick-links > div > div > ul > li .icon-flyout-menu-icon{

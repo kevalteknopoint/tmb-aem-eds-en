@@ -114,21 +114,6 @@
           }
         },
         {
-          "title": "banking-good",
-          "id": "banking-good",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "banking-good",
-                  "model": "banking-good"
-                }
-              }
-            }
-          }
-        },
-        {
           "title": "BannerVideo",
           "id": "bannervideo",
           "plugins": {
@@ -145,7 +130,7 @@
           }
         },
         {
-          "title": "Banner Video Item",
+          "title": "Banner Image Item",
           "id": "banner-video-item",
           "plugins": {
             "xwalk": {
@@ -154,6 +139,37 @@
                 "template": {
                   "name": "banner-video-item",
                   "model": "banner-video-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Banner Video Item",
+          "id": "banner-video-item-2",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Banner Video Item 2",
+                  "model": "banner-video-item-2"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Breadcrumb",
+          "id": "breadcrumb",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Breadcrumb",
+                  "model": "breadcrumb",
+                  "filter": "breadcrumb"
                 }
               }
             }
@@ -206,6 +222,127 @@
           }
         },
         {
+          "title": "Compare Accounts",
+          "id": "compare-accounts",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Compare Accounts",
+                  "model": "compare-accounts",
+                  "filter": "compare-accounts"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Account Card",
+          "id": "account-card",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Account Card",
+                  "model": "account-card"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Content fragment",
+          "id": "content-fragment",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "content-fragment",
+                  "model": "aem-content-fragment"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "FAQ Category",
+          "id": "faq-category",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "faq-category",
+                  "model": "faq-category"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "FAQ  Category Item",
+          "id": "faq-category-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "faq-category-item",
+                  "model": "faq-category-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "FAQ Detail Page",
+          "id": "faq-detail",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "faq-detail",
+                  "model": "aem-content-fragment"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "FAQ Product Detail Page",
+          "id": "faq-productdetail",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "FAQ Product Detail",
+                  "filter": "faq-productdetail"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "FAQ Accordion Item",
+          "id": "faq-accordion-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "FAQ Accordion Item",
+                  "model": "faq-accordion-item"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Fragment",
           "id": "fragment",
           "plugins": {
@@ -215,6 +352,37 @@
                 "template": {
                   "name": "Fragment",
                   "model": "fragment"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Hero Banner",
+          "id": "hero-banner",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Hero Banner",
+                  "filter": "hero-banner",
+                  "model": "hero-banner"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Banner",
+          "id": "banner",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Banner",
+                  "model": "banner"
                 }
               }
             }
@@ -236,6 +404,37 @@
           }
         },
         {
+          "title": "Interest Rates",
+          "id": "interest-rates",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Interest Rates",
+                  "model": "interest-rates",
+                  "filter": "interest-rates"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Rate Details",
+          "id": "rate-details",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Rate Details",
+                  "model": "rate-details"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "quick-links",
           "id": "quick-links",
           "plugins": {
@@ -251,61 +450,93 @@
           }
         },
         {
-          "title": "Teachers form Block",
-          "id": "teachers-form-block",
+          "title": "Stepper",
+          "id": "stepper",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Teachers form Block",
-                  "filter": "teachers-form-block",
-                  "model": "teachers-form-block"
+                  "name": "Stepper",
+                  "model": "stepper",
+                  "filter": "stepper"
                 }
               }
             }
           }
         },
         {
-          "title": "tmb-footer",
-          "id": "tmb-footer",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "tmb-footer",
-                  "model": "tmb-footer"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Accordion Item",
-          "id": "footer-accordion-item",
+          "title": "Stepper Item",
+          "id": "stepper-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Accordion Item",
-                  "model": "footer-accordion-item"
+                  "name": "Stepper Item",
+                  "model": "stepper-item"
                 }
               }
             }
           }
         },
         {
-          "title": "Tmb Teaser",
-          "id": "tmb-teaser",
+          "title": "Tabs",
+          "id": "tabs",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Tmb Teaser",
-                  "model": "tmb-teaser"
+                  "name": "Tabs",
+                  "filter": "tabs",
+                  "model": "tabs"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Tabs item",
+          "id": "tabsitem",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Tabs item",
+                  "model": "tabsitem"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Teachers Calculator Block",
+          "id": "teachers-calculator-block",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Teachers Calculator Block",
+                  "filter": "teachers-calculator-block",
+                  "model": "teachers-calculator-block"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Transformd form",
+          "id": "transformd-form",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "transformd-form",
+                  "model": "transformd-form"
                 }
               }
             }

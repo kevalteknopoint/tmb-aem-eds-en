@@ -1,0 +1,135 @@
+@use '../../styles/base' as *;
+
+.product-navigation {
+  position: sticky;
+  top: 16px;
+  z-index: 2;
+  margin-top: -40px;
+
+  @include responsive-container;
+
+  @include tablet {
+    top: 0;
+    background: $color-pagination-secondary-nav;
+    margin-top: -20px;
+    box-shadow: 0 2px 3px 0 rgb(0 0 0 / 9%);
+    padding-inline: 0;
+  }
+
+  @include mobile {
+    margin-top: unset;
+  }
+
+  .default-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    background: $color-pagination-secondary-nav;
+    box-shadow: 0 2px 3px 0 rgb(0 0 0 / 9%);
+    border-radius: $radius-card;
+    padding: 20px 24px;
+
+    @include tablet {
+      box-shadow: none;
+      border-radius: 0;
+      padding: 20px 24px;
+    }
+
+    @include mobile {
+      overflow-x: auto;
+      padding: 11.5px 16px;
+    }
+
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 16px;
+      overflow-x: auto;
+      position: relative;
+
+      &.show-fade {
+        mask-image: linear-gradient(to right,
+        black calc(100% - 74.249px),
+        transparent 100%);
+        -webkit-mask-image: linear-gradient(to right,
+        black calc(100% - 74.249px),
+        transparent 100%);
+      }
+
+      &:has(li:first-child a:focus-visible) {
+        padding-left: 4px;
+      }
+
+      &:has(li:last-child a:focus-visible) {
+        padding-right: 4px;
+      }
+
+      @include mobile {
+        overflow-x: unset;
+      }
+
+      li {
+        padding: 4px 0;
+        border-radius: $radius-menu-link;
+
+        &:has(a:focus-visible) {
+          margin: 4px 0;
+          box-shadow: 0 0 0 1px $color-focus-reversed, 0 0 0 3px $color-focus-default;
+        }
+
+        a {
+          @include typo-sm-body;
+
+          display: block;
+          min-width: max-content;
+          position: relative;
+          padding: 4px 0;
+          
+          // font-size: 14px;
+          // line-height: 21px;
+          // font-weight: 400;
+          color: $color-header-nav-primary;
+
+          &:focus-visible {
+            outline: none;
+          }
+
+          &.active::after {
+            left: 0;
+            right: unset;
+            width: 100%;
+          }
+          
+          @include tablet-lg(min) {
+            &:hover::after {
+              left: 0;
+              right: unset;
+              width: 100%;
+            }
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            width: 0;
+            transition: all 0.2s ease-in-out;
+            background: $color-header-nav-primary;
+          }
+        }
+      }
+    }
+
+    .button-container {
+      min-width: fit-content;
+
+      a {
+        @include button('primary');
+      }
+    }
+  }
+}

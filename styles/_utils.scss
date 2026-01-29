@@ -1,4 +1,12 @@
-@use './mixins' as *;
+@use './base' as *;
+
+header {
+  min-height: 141px;
+
+  @include mobile {
+    min-height: 60px;
+  }
+}
 
 .d-none {
   display: none !important;
@@ -25,5 +33,78 @@
 
   @include mobile {
     margin-top: 40px;
+  }
+}
+
+.top-margin {
+  margin-top: 80px;
+
+  @include tablet-lg {
+    margin-top: 64px;
+  }
+
+  @include mobile {
+    margin-top: 40px;
+  }
+}
+
+.bottom-margin {
+  margin-bottom: 80px;
+
+  @include tablet-lg {
+    margin-bottom: 64px;
+  }
+
+  @include mobile {
+    margin-bottom: 40px;
+  }
+}
+
+.top-padding {
+  padding-top: 80px;
+
+  @include tablet-lg {
+    padding-top: 64px;
+  }
+
+  @include mobile {
+    padding-top: 40px;
+  }
+}
+
+.bottom-padding {
+  padding-bottom: 80px;
+
+  @include tablet-lg {
+    padding-bottom: 64px;
+  }
+
+  @include mobile {
+    padding-bottom: 40px;
+  }
+}
+
+.bottom-partition {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: calc($container-width - 128px);
+    width: 100%;
+    margin: 0 auto;
+    height: 1px;
+    background: $line-default;
+
+    @include tablet-lg {
+      max-width: calc(100% - 48px);
+    }
+
+    @include mobile {
+      max-width: calc(100% - 32px);
+    }
   }
 }

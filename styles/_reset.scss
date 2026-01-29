@@ -1,4 +1,4 @@
-@use 'variables' as *;
+@use 'base' as *;
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -10,6 +10,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   font-size: 100%;
 }
@@ -66,6 +67,10 @@ table {
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit;
+}
+
+sup, sub {
+  font-size: 0.7em;
 }
 
 :focus-visible {
