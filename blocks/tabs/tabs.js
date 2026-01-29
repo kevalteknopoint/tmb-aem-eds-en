@@ -1,6 +1,9 @@
 import { toClassName } from "../../scripts/aem.js";
+import { div } from "../../scripts/dom-helpers.js";
 
 export default async function decorate(block) {
+  if (window.location.origin.includes('author')) return;
+
   // build tablist
   const tablist = document.createElement("div");
   tablist.className = "tabs-list";
@@ -62,5 +65,5 @@ export default async function decorate(block) {
     tab.remove();
   });
 
-  block.prepend(tablist);
+  block.prepend(div({ class: 'tab-list-wrapper' }, tablist));
 }

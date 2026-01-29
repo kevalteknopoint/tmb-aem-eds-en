@@ -1,26 +1,18 @@
 @use '../../styles/base' as *;
 
 .home-loan-explained {
-  @include responsive-container;
-
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: calc(1440px - 0px);
-  padding-inline: 64px;
   width: 100%;
 
-  @include tablet-lg {
-    padding-inline: $padding-tablet;
-  }
-
   @include mobile {
-    padding-inline: $padding-mobile;
+    gap: 32px;
   }
 
   .default-content-wrapper {
+    @include responsive-container;
+
     h1,
     h2,
     h3 {
@@ -32,30 +24,43 @@
   }
 
   .tabs {
+    .tab-list-wrapper {
+      @include responsive-container;
+      
+      overflow-x: auto;
+    }
+    
     .tabs-list {
-      border: 1px solid $link-default;
-      display: flex;
-      align-items: center;
-      width: 471px;
-      border-radius: $radius-card;
-      overflow: hidden;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+      width: fit-content;
+      max-width: 100%;
 
       .tabs-tab {
         flex: 1;
-        padding: 8px 0;
+        padding: 8px 24px;
         background: #fff;
+        min-width: max-content;
         cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
+        border-top: 1px solid $link-default;
+        border-bottom: 1px solid $link-default;
         border-right: 1px solid $link-default;
 
+        &:first-child {
+          border-top-left-radius: $radius-card;
+          border-bottom-left-radius: $radius-card;
+        }
+        
         &:last-child {
-          border-right: 0;
+          border-top-right-radius: $radius-card;
+          border-bottom-right-radius: $radius-card;
         }
 
         p {
-          width: 157px;
           margin: 0;
           color: $heading-default;
         }
@@ -71,10 +76,14 @@
     }
 
     .tabs-panel {
-      margin-top: -1px;
-      padding: 24px;
+      @include responsive-container;
+
       overflow: auto;
-      padding-top: 32px;
+      margin-top: 40px;
+
+      @include mobile {
+        margin-top: 24px;
+      }
 
       &[aria-hidden='true'] {
         display: none;
@@ -85,6 +94,11 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 64px;
         row-gap: 16px;
+
+        @include tablet {
+          display: flex;
+          flex-direction: column;
+        }
 
         h3,
         h2 {
