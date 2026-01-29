@@ -1,3 +1,212 @@
-body{
-  overflow:auto;
+.momentum-saver-section .columns.block > div .button-container a:not(.secondary), .momentum-saver-section .columns.block > div .button-container a.secondary{
+  align-items:center;
+  border:none;
+  border-radius:var(--radius-button);
+  cursor:pointer;
+  display:flex;
+  font-family:var(--font-family-h5);
+  font-weight:var(--font-weight-h5);
+  gap:16px;
+  justify-content:center;
+  padding-inline:24px;
+  text-align:center;
+  transition:all 0.3s ease-in-out;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
+.momentum-saver-section .momentum-section-wrapper{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
+}
+
+.momentum-saver-section .default-content-wrapper{
+  margin-bottom:40px;
+}
+
+.momentum-saver-section .default-content-wrapper h1, .momentum-saver-section .default-content-wrapper h2, .momentum-saver-section .default-content-wrapper h3, .momentum-saver-section .default-content-wrapper h4, .momentum-saver-section .default-content-wrapper h5, .momentum-saver-section .default-content-wrapper h6{
+  color:var(--heading-default);
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  text-transform:initial;
+}
+
+.momentum-saver-section .default-content-wrapper p{
+  color:var(--body-default);
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  margin-top:16px;
+  text-transform:initial;
+}
+
+.momentum-saver-section .columns.block > div{
+  display:flex;
+  gap:80px;
+}
+
+.momentum-saver-section .columns.block > div div{
+  flex:unset;
+  order:unset;
+}
+
+.momentum-saver-section .columns.block > div div.columns-img-col{
+  flex:0 0 auto;
+}
+
+.momentum-saver-section .columns.block > div div.columns-img-col img{
+  border-radius:var(--radius-card);
+}
+
+.momentum-saver-section .columns.block > div h1, .momentum-saver-section .columns.block > div h2{
+  color:var(--heading-default);
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  margin-bottom:16px;
+  text-transform:initial;
+}
+
+.momentum-saver-section .columns.block > div h3, .momentum-saver-section .columns.block > div h4, .momentum-saver-section .columns.block > div h5, .momentum-saver-section .columns.block > div h6{
+  color:var(--heading-default);
+  font-family:var(--font-family-intro);
+  font-size:var(--font-size-intro);
+  font-weight:var(--font-weight-intro);
+  letter-spacing:var(--font-letter-spacing-intro);
+  line-height:var(--font-height-intro);
+  margin-bottom:16px;
+  text-transform:initial;
+}
+
+.momentum-saver-section .columns.block > div p{
+  color:var(--body-default);
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  margin-bottom:16px;
+  text-transform:initial;
+}
+
+.momentum-saver-section .columns.block > div a{
+  color:var(--link-default);
+  text-decoration:underline;
+}
+
+.momentum-saver-section .columns.block > div ul{
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  list-style:disc;
+  padding-left:24px;
+  text-transform:initial;
+}
+
+.momentum-saver-section .columns.block > div ul li{
+  margin-bottom:8px;
+}
+
+.momentum-saver-section .columns.block > div .button-container{
+  display:inline-block;
+  margin-bottom:0;
+  margin-right:8px;
+  margin-top:32px;
+}
+
+.momentum-saver-section .columns.block > div .button-container a:not(.secondary){
+  background-color:var(--color-button-primary-default);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+  font-size:var(--font-size-h5);
+  font-style:normal;
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:8px;
+  text-decoration:unset;
+}
+
+.momentum-saver-section .columns.block > div .button-container a:not(.secondary):hover{
+  background-color:var(--color-button-primary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.momentum-saver-section .columns.block > div .button-container a:not(.secondary):active{
+  background-color:var(--color-button-primary-press);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.momentum-saver-section .columns.block > div .button-container a:not(.secondary):focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.momentum-saver-section .columns.block > div .button-container a.secondary{
+  background-color:var(--color-button-outlined-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-default);
+  color:var(--color-button-text-stroke-default);
+  font-size:var(--font-size-h5);
+  font-style:normal;
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:6px;
+  text-decoration:unset;
+}
+
+.momentum-saver-section .columns.block > div .button-container a.secondary:hover{
+  background-color:var(--color-button-outlined-hover);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-hover);
+  color:var(--color-button-text-stroke-hover);
+}
+
+.momentum-saver-section .columns.block > div .button-container a.secondary:active{
+  background-color:var(--color-button-outlined-press);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-press);
+  color:var(--color-button-text-stroke-press);
+}
+
+.momentum-saver-section .columns.block > div .button-container a.secondary:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+@media screen and (max-width: 1279px){
+  .momentum-saver-section .momentum-section-wrapper{
+    padding-inline:24px;
+  }
+}
+
+@media screen and (max-width: 1023px){
+  .momentum-saver-section .columns.block > div{
+    flex-direction:column;
+    gap:32px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .momentum-saver-section .momentum-section-wrapper{
+    padding-inline:16px;
+  }
+
+  .momentum-saver-section .default-content-wrapper{
+    margin-bottom:24px;
+  }
+
+  .momentum-saver-section .columns.block > div{
+    gap:24px;
+  }
 }
