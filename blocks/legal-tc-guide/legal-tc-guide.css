@@ -50,6 +50,8 @@
   padding:8px 24px;
   text-align:center;
   text-decoration:none;
+  width:-moz-fit-content;
+  width:fit-content;
 }
 
 .legal-tc-guide .columns-wrapper .block div div p.button-container a span.icon svg{

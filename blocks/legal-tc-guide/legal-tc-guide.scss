@@ -63,6 +63,7 @@
                                 border: $stroke-button solid $color-button-text-stroke-default;
                                 border-radius: $radius-button;
                                 background: $color-button-outlined-default;
+                                width: fit-content;
 
                                span.icon {
                                     svg {
