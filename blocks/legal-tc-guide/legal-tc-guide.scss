@@ -33,7 +33,7 @@
                         font-size: $font-size-body;
                         font-weight: 400;
                         line-height: $font-height-body; 
-                        margin-bottom: 15px;
+                        margin-bottom: 16px;
 
                         @include mobile{
                             font-size: $font-size-body;
@@ -63,11 +63,18 @@
                                 border: $stroke-button solid $color-button-text-stroke-default;
                                 border-radius: $radius-button;
                                 background: $color-button-outlined-default;
+                                width: fit-content;
 
-                                span{
-                                    svg{
-                                        width: 18px;
-                                        height: 18px;
+                               span.icon {
+                                    svg {
+                                        width: 7px;
+                                        height: 12px;
+                                    }
+
+                                    &.icon-download-icon {
+                                        svg {
+                                        width: 11px;
+                                        }
                                     }
                                 }
                             }
@@ -136,7 +143,7 @@
                         }
                     }
 
-                    h3,h4,h5,h6{
+                    h3 {
                         color: $heading-default;
                         font-size: $font-size-h3;
                         font-weight: 500;
@@ -144,6 +151,18 @@
                         letter-spacing: $font-letter-spacing-h3;
                         margin-top: 40px;
                         margin-bottom: 12px;
+                        
+                        @include tablet {
+                            margin-top: 32px
+                        }
+
+                        @include mobile {
+                            margin-top: 24px
+                        }
+
+                        &:first-child{
+                            margin-top: 0;
+                        }
                     }
 
                     // &:has(ol){
@@ -186,6 +205,33 @@
                     //             }
                     //         }
                     // }
+
+                    h4 {
+                        @include typo-intro;
+
+                        color: $body-default;
+                        margin-top: 40px;
+
+                        @include mobile {
+                            margin-top: 24px;
+                        }
+
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                    }
+
+                    h5 {
+                        @include typo-sm-body;
+
+                        color: $body-default;
+                    }
+
+                    h6 {
+                        @include typo-disclaimer;
+
+                        color: $body-default;
+                    }
 
                     &:first-child{
                         max-width: 416px;
