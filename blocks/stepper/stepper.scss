@@ -3,10 +3,12 @@
 .stepper-container {
   @include responsive-container;
   
-  display: flex;
+  display: grid;
+  grid-template-columns: 439px auto;
   gap: 64px;
 
   @include tablet {
+    display: flex;
     flex-direction: column;
     gap: 32px;
   }
@@ -26,6 +28,11 @@
 
       color: $body-default;
       margin-bottom: 32px;
+
+      a {
+        color: $link-default;
+        text-decoration: underline;
+      }
     }
 
     .button-container {
@@ -34,6 +41,15 @@
 
       &:last-child {
         margin-right: 0;
+      }
+    }
+
+    &:last-child {
+      grid-column: 1 / 4;
+
+      p {
+        text-align: center;
+        margin-bottom: 0;
       }
     }
 
@@ -130,6 +146,7 @@
 ;
         position: absolute;
         top: 64px;
+        cursor: default;
 
         @include mobile {
           top: 40px;
