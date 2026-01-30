@@ -310,6 +310,7 @@
 }
 
 .image-swapping .columns.block > div, .momentum-app-badges .columns.block > div, .momentum-direct-variant .columns.block > div{
+  align-items:center;
   gap:80px;
 }
 
@@ -324,6 +325,10 @@
 
 .image-swapping .columns.block > div h3, .image-swapping .columns.block > div h4, .image-swapping .columns.block > div h5, .image-swapping .columns.block > div h6, .momentum-app-badges .columns.block > div h3, .momentum-app-badges .columns.block > div h4, .momentum-app-badges .columns.block > div h5, .momentum-app-badges .columns.block > div h6, .momentum-direct-variant .columns.block > div h3, .momentum-direct-variant .columns.block > div h4, .momentum-direct-variant .columns.block > div h5, .momentum-direct-variant .columns.block > div h6{
   margin-bottom:16px;
+}
+
+.momentum-app-badges a:has(svg){
+  display:inline-block;
 }
 
 .momentum-app-badges svg{

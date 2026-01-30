@@ -219,6 +219,7 @@
 
 .image-swapping, .momentum-app-badges, .momentum-direct-variant {
   .columns.block > div {
+    align-items: center;
     gap: 80px;
 
     @include tablet {
@@ -240,6 +241,10 @@
 }
 
 .momentum-app-badges {
+  a:has(svg) {
+    display: inline-block;
+  }
+
   svg {
     display: flex;
     justify-content: flex-start;
