@@ -1788,6 +1788,10 @@ html{
     gap:32px;
   }
 
+  .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-1 .cards-card-body ul li a{
+    font-size:16px;
+  }
+
   .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body{
     padding:40px 24px;
   }

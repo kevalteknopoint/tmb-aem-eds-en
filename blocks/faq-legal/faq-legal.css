@@ -47,6 +47,7 @@
   background:var(--bg-light);
   border-radius:44%;
   height:40px;
+  min-width:40px;
   padding:8px;
   width:40px;
 }
@@ -95,6 +96,10 @@
   text-decoration-thickness:auto;
   text-underline-offset:auto;
   text-underline-position:from-font;
+}
+
+.faq-legal.accordion-container .accordion-wrapper .accordion details:last-child{
+  border-bottom:none;
 }
 
 @media screen and (max-width: 1279px){
