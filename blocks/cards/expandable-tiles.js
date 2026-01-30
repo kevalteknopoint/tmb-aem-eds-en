@@ -42,7 +42,7 @@ export default function expandableTiles(block) {
       row.lastElementChild?.replaceWith(row.lastElementChild.firstElementChild);
     }
 
-    const textCol = row.lastElementChild;
+    const textCol = row.firstElementChild.nextElementSibling;
 
     imgCol.classList.add('tile-image');
     textCol.classList.add('tile-content');
@@ -50,22 +50,53 @@ export default function expandableTiles(block) {
     textCol.firstElementChild.classList.add('content-title');
     textCol?.querySelector('p:not(& a)')?.classList.add('content-description');
 
+    const allButtons = [];
+
     const btnElement = textCol?.querySelector('p:has(a)');
-    const anchorElement = btnElement?.querySelector('a');
-    const anchorLink = anchorElement?.getAttribute('href');
 
-    anchorElement?.replaceWith(
-      htmlToElement(`<span class="cta-link">${anchorElement.innerHTML}</span>`),
-    );
+    if (btnElement) allButtons.push(btnElement.querySelector('a'));
 
-    btnElement?.replaceWith(
-      htmlToElement(`<div class="content-cta">${btnElement.innerHTML}</div>`),
-    );
+    const otherBtns = row.querySelectorAll('div:nth-child(3), div:nth-child(4)');
+    otherBtns.forEach((btnDiv) => {
+      const btn = btnDiv.querySelector('a');
 
-    if (anchorLink) {
-      textCol.replaceWith(
-        htmlToElement(`<a href="${anchorLink}" class="tile-content">${textCol.innerHTML}</a>`),
-      );
+      if (btn.parentElement.tagName === 'EM') {
+        btn.classList.add('secondary');
+      } else {
+        btn.classList.add('primary');
+      }
+
+      allButtons.push(btn);
+    });
+
+    if (allButtons.length) {
+      const firstBtn = allButtons[0];
+      const anchorLink = firstBtn?.getAttribute('href');
+
+      const contentCtaDiv = div({ class: 'content-cta' });
+
+      allButtons.forEach((btn) => {
+        btn.classList.add('cta-link');
+        if (!btn?.textContent?.trim()) btn.classList.add('icon-btn');
+        contentCtaDiv.appendChild(btn);
+      });
+
+      textCol.appendChild(contentCtaDiv);
+
+      if (anchorLink) {
+        allButtons.forEach((btn) => {
+          const newBtn = htmlToElement(`<span>${btn.innerHTML}</span>`);
+          newBtn.classList.add(...btn.classList);
+          btn.replaceWith(newBtn);
+        });
+
+        textCol.replaceWith(
+          htmlToElement(`<a href="${anchorLink}" class="tile-content">${textCol.innerHTML}</a>`),
+        );
+      }
+
+      btnElement.remove();
+      otherBtns.forEach((btn) => btn.remove());
     }
 
     imgCol.querySelectorAll('picture > img').forEach((eachImg) => {

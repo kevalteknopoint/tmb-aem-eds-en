@@ -105,6 +105,24 @@
 
       color: $body-default;
       margin-bottom: 16px;
+
+      &:has(a):not(.button-container){
+        a{
+            color: $link-default;
+            font-size: $font-size-body;
+            font-style: normal;
+            font-weight: 400;
+            line-height: $font-height-body;
+            letter-spacing: $font-letter-spacing-body;
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            text-decoration-skip-ink: auto;
+            text-decoration-thickness: auto;
+            text-underline-offset: auto;
+            text-underline-position: from-font;
+        }
+       
+      }
     }
 
     ol {
@@ -128,39 +146,69 @@
 
       @include typo-body;
 
+      counter-increment: step-counter;
+      display: flex;
+      gap: 12px;
+      align-items: baseline;
+
+      &::before {
+        content: counter(step-counter);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 32px;
+        width: fit-content;
+        height: 32px;
+        border-radius: $radius-button;
+        border: 1px solid rgb(0 82 91 / 10%);
+        color: $heading-default;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
       p {
         margin-bottom: 0;
       }
 
-      &:not(&:has(p)),
-      &:has(p) p {
-        counter-increment: step-counter;
-        display: flex;
-        gap: 12px;
-        align-items: baseline;
-
+      &:has(p) {
+        display: block;
+        gap: unset;
+        counter-increment: unset;
+        align-items: unset;
+        
         &::before {
-          content: counter(step-counter);
+          content: unset;
+        }
+
+        p {
+          counter-increment: step-counter;
           display: flex;
-          justify-content: center;
-          align-items: center;
-          min-width: 32px;
-          width: fit-content;
-          height: 32px;
-          border-radius: $radius-button;
-          border: 1px solid rgb(0 82 91 / 10%);
-          color: $heading-default;
-          font-size: 16px;
-          font-weight: 500;
+          gap: 12px;
+          align-items: baseline;
+  
+          &::before {
+            content: counter(step-counter);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 32px;
+            width: fit-content;
+            height: 32px;
+            border-radius: $radius-button;
+            border: 1px solid rgb(0 82 91 / 10%);
+            color: $heading-default;
+            font-size: 16px;
+            font-weight: 500;
+          }
         }
       }
     }
 
     ul {
       padding: 16px;
-      background: var(--info-well, rgb(27 231 255 / 7%)); // Figma token missing
+      background: var(--info-well-default, rgb(27 231 255 / 7%)); // Figma token missing
       margin-bottom: 32px;
-      border-radius: 8px;
+      border-radius: $radius-info-well;
 
       &:last-child {
         margin-bottom: 0;
@@ -202,6 +250,8 @@
 
     .button-container {
       margin-bottom: 0;
+      display: flex;
+      gap: 10px;
 
       a {
         @include button('primary');
@@ -250,8 +300,7 @@
 
       div {
         h1,
-        h2,
-        h3 {
+        h2 {
           color: $heading-default;
           white-space: normal;
           overflow-wrap: break-word;
@@ -259,6 +308,17 @@
           width: 100%;
 
           @include typo-heading1;
+        }
+
+        h3,h4,h5,h6{
+          color: $heading-default;
+          white-space: normal;
+          overflow-wrap: break-word;
+          width: 100%;
+          max-width: unset;
+          margin-bottom: 16px;
+
+          @include typo-heading3;
         }
       }
 
@@ -281,7 +341,7 @@
         a {
           text-decoration: underline;
           text-underline-offset: 3px;
-          color: $heading-default;
+          color: $link-default;
         }
       }
 
@@ -290,7 +350,7 @@
           min-width: 32px;
           width: 32px;
           height: 32px;
-          color: $heading-default;
+          color: $icon-2-default;
         }
       }
     }

@@ -9,18 +9,19 @@
   @include responsive-container;
 
   .quick-links-wrapper {
-
-    & > .quick-links > div > div > p:not(:has(a)), & > .quick-links > div > div > p > a {
+    & > .quick-links > div > div > p:not(:has(a)), & > .quick-links > div > div > p > a,
+    & > .quick-links > div > div > h1:not(:has(a)), & > .quick-links > div > div > h1 > a,
+    & > .quick-links > div > div > h2:not(:has(a)), & > .quick-links > div > div > h2 > a,
+    & > .quick-links > div > div > h3:not(:has(a)), & > .quick-links > div > div > h3 > a,
+    & > .quick-links > div > div > h4:not(:has(a)), & > .quick-links > div > div > h4 > a,
+    & > .quick-links > div > div > h5:not(:has(a)), & > .quick-links > div > div > h5 > a,
+    & > .quick-links > div > div > h6:not(:has(a)), & > .quick-links > div > div > h6 > a {
       display: flex;
       justify-content: flex-start;
       gap: 16px;
       align-items: center;
       color: $link-default;
-      // font-size: 24px;
-      // font-weight: 500;
-      // line-height: 29px;
-      // margin-bottom: 8px;
-      // text-transform: capitalize;
+
       @include typo-heading3;
 
       &:hover {
@@ -97,11 +98,9 @@
           justify-content: space-between;
           width: fit-content;
           color: $link-default;
-          // font-size: 14px;
-          // font-weight: 400;
-          // line-height: 21px;
           text-decoration: none;
           padding-bottom: 2px;
+
           @include typo-sm-body;
 
           &:hover::after {
@@ -151,7 +150,14 @@
       padding: unset;
 
       // Targeting the title paragraph inside the container (re-overrides desktop style)
-      & > .quick-links > div > div > p:not(:has(a)), & > .quick-links > div > div > p > a {
+      & > .quick-links > div > div > p:not(:has(a)), & > .quick-links > div > div > p > a,
+      & > .quick-links > div > div > h1:not(:has(a)), & > .quick-links > div > div > h1 > a,
+      & > .quick-links > div > div > h2:not(:has(a)), & > .quick-links > div > div > h2 > a,
+      & > .quick-links > div > div > h3:not(:has(a)), & > .quick-links > div > div > h3 > a,
+      & > .quick-links > div > div > h4:not(:has(a)), & > .quick-links > div > div > h4 > a,
+      & > .quick-links > div > div > h5:not(:has(a)), & > .quick-links > div > div > h5 > a,
+      & > .quick-links > div > div > h6:not(:has(a)), & > .quick-links > div > div > h6 > a
+      {
         font-size: 20px;
         line-height: 45px;
 

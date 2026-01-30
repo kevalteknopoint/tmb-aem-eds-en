@@ -22,22 +22,6 @@
       "id": "breadcrumb",
       "fields": [
         {
-          "component": "multiselect",
-          "name": "classes",
-          "label": "Style",
-          "options": [
-            {
-              "name": "Alternate Variation",
-              "value": "alt-variation"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "breadcrumb",
-      "fields": [
-        {
           "component": "richtext",
           "name": "text",
           "value": "",

@@ -5,17 +5,17 @@
   padding: 32px 0;
 
   @media (max-width: 720px) {
-    padding: 40px 0px;
+    padding: 40px 0;
   }
 
   @media (max-width: 390px) {
-    padding: 40px 0px;
+    padding: 40px 0;
   }
 
   .accordion-wrapper{
     @include responsive-container;
-    .accordion {
 
+    .accordion {
       @include mobile {
         padding: 0;
       }
@@ -28,7 +28,8 @@
       }
 
       p {
-        margin: 0px;
+        margin: 0;
+
         // font-size: 16px;
         // font-weight: 500;
         // line-height: 24px;
@@ -37,13 +38,13 @@
 
       .accordion-item-label {
         @include typo-heading5;
+
         // font-weight: 700;
         // font-size: 24px;
         // line-height: 32px;
         position: relative;
         cursor: pointer;
         list-style: none;
-        overflow: auto;
         vertical-align: bottom;
         color: $heading-default;
         transition: background-color 0.2s;
@@ -75,6 +76,7 @@
         
         p {
           @include typo-body;
+
           // font-weight: 400;
           // font-size: 16px;
           // line-height: 24px;
@@ -85,7 +87,6 @@
 
       &[open] {
         summary {
-
           svg {
             transform: rotate(0deg);
           }
@@ -99,4 +100,108 @@
   }
   }
   
+}
+
+.faq-accordion{
+    @include responsive-container;
+
+    display: flex;
+    gap: 32px;
+
+    @include mobile{
+        flex-direction: column;
+    }
+
+    @include tablet{
+        flex-direction: column;
+    }
+
+    .default-content-wrapper{
+        min-width: 417px;
+
+        @include mobile{
+            min-width: unset;
+        }
+
+        h1,h2,h3,h4,h5,h6{
+            color: $heading-default;
+
+            @include typo-heading1;
+        }
+    }
+
+    .accordion-wrapper{
+        width: 100%;
+
+        .block{
+            .accordion-item{
+                border-bottom: 1px solid var(--line-default);
+                border-top: 1px solid var(--line-default);
+                padding: 16px 0;
+
+                &::-webkit-details-marker {
+                    display: none !important;
+                }
+
+                .accordion-item-label {
+                    list-style: none;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+
+                    // Safari Fix: Ensure the summary behaves like a block/flex item
+                    &::marker, &::-webkit-details-marker {
+                        display: none;
+                    }
+
+                    p {
+                        color: $color-button-primary-default;
+                        margin-top: 4px;
+
+                        @include typo-heading3
+                    }
+
+                    svg {
+                        color: $color-button-primary-default;
+                        min-width: 40px;
+                        width: 40px;
+                        height: 40px;
+                        padding: 8px;
+                        border-radius: 44px;
+                        background: $bg-light;
+                        cursor: pointer;
+                        margin-left: 32px;
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .accordion-item-body{
+                    margin-top: 8px;
+
+                    p {
+                      color: $body-default;  
+
+                      @include typo-body;
+                    }
+                }  
+
+                &[open] {
+                    summary {
+                        svg {
+                            transform: rotate(0deg);
+                        }              
+                    }
+                }
+
+                &.accordion-item:first-child{
+                    border-top: none;
+                    padding-top: 0;
+                }
+
+                &.accordion-item:last-child{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
 }

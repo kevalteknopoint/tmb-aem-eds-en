@@ -1,0 +1,67 @@
+@use '../../styles/base' as *;
+
+.section.legal-privacy.columns-container{
+    .columns-wrapper{
+        .block{
+            div{
+                div{
+                    &:has(ul){
+                            ul{
+                                margin-top: 10px;
+
+                                li{
+                                    color: #121212;
+                                    text-decoration: none;
+
+                                    &::marker{
+                                            color: #121212 !important;
+                                        }
+                                }
+                            }
+                    }
+
+                    h3,h4{
+                        &:first-child{
+                            margin-top: 0;
+                        }
+                    }
+
+                    h5{
+                        color: $body-default;
+                        font-size: $font-size-body;
+                        font-weight: 400;
+                        line-height: $font-height-body; /* 150% */
+                        letter-spacing: $font-letter-spacing-body;
+                    } 
+                    
+                    h6{
+                        color: $body-default;
+                        font-size: $font-size-disclaimer;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: $font-height-disclaimer; /* 150% */
+                        letter-spacing: $font-letter-spacing-disc;
+                        margin-top: unset;
+
+                        a{
+                            color: $link-default;
+                            font-size: $font-size-disclaimer;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: $font-height-disclaimer;
+                            letter-spacing: $font-letter-spacing-disc;
+                            text-decoration-line: underline;
+                            text-decoration-style: solid;
+                            text-decoration-skip-ink: auto;
+                            text-decoration-thickness: auto;
+                            text-underline-offset: auto;
+                            text-underline-position: from-font;
+                        }
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+}

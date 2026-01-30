@@ -72,6 +72,8 @@ import { injectIcon } from "../../scripts/aem.js";
 import { button, div } from "../../scripts/dom-helpers.js";
 
 export default function cardCarousel(block) {
+  if (window.location.origin.includes('author')) return;
+
   const slides = Array.from(block.children);
   slides.forEach((el) => {
     el.classList.add("swiper-slide");

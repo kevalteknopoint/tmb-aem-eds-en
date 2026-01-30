@@ -59,7 +59,7 @@ body:has(.product-detail-banner) {
     inset: 0;
     top: unset;
     bottom: 80px;
-    height: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -220,6 +220,33 @@ body:has(.product-detail-banner) {
       p, .interest-rates-wrapper + p {
         color: $heading-reverse-2;
       }
+    }
+  }
+
+  .hero-banner-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .button {
+    @include button('primary');
+
+    &.secondary {
+      @include button('secondary');
+    }
+
+    &.outlined {
+      @include button('outlined');
+    }
+
+    &.outlined-reverse {
+      @include button('outlined-reverse');
+    }
+
+    &.white {
+      @include button('white');
     }
   }
 }

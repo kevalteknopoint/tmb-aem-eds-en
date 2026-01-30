@@ -4,6 +4,12 @@
   @include responsive-container;
 
   .default-content-wrapper {
+    margin-bottom: 40px;
+
+    @include mobile {
+      margin-bottom: 24px;
+    }
+
     h1,
     h2,
     h3,
@@ -14,11 +20,11 @@
 
       text-align: center;
       color: $heading-default;
-      margin-bottom: 40px;
+    }
 
-      @include mobile {
-        margin-bottom: 24px;
-      }
+    p {
+      text-align: center;
+      margin-top: 16px;
     }
   }
 
@@ -128,6 +134,11 @@
   &.rates-saver {
     position: relative;
 
+    .default-content-wrapper {
+      max-width: 800px;
+      margin-inline: auto;
+    }
+
     .cards-wrapper .cards ul {
       grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
 
@@ -160,6 +171,12 @@
           p:not(p:has(.icon)) {
             padding: 0;
             margin: 0;
+
+            a {
+              color: $link-default;
+              text-decoration: underline;
+              text-underline-offset: 3px;
+            }
           }
         }
       }
@@ -184,7 +201,7 @@
       @include tablet {
         grid-template-columns: 1fr;
       }
-      
+
       li {
         @include tablet {
           flex-direction: row;
@@ -272,6 +289,44 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+// BORDER VARIATION
+
+.section.faq-cant-find-looking-for.variation-border {
+  .default-content-wrapper {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-align: left;
+    }
+  }
+
+  .cards-wrapper {
+    .cards {
+      ul {
+        li {
+          padding: 40px 24px;
+          border: 1px solid $line-default;
+          border-radius: 24px;
+
+          .cards-card-body {
+            p.button-container {
+                a {
+                  border: unset;
+                }
+              
+            }
+
+          }
+        }
+
       }
     }
   }

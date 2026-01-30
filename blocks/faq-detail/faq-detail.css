@@ -33,7 +33,7 @@ html{
 .section-wrapper{
   align-items:start;
   -moz-column-gap:74px;
-       gap:32px 74px;
+       column-gap:74px;
   display:grid;
   grid-template-columns:1fr;
   margin-left:auto;
@@ -82,13 +82,18 @@ html{
 }
 
 .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) ul{
-  list-style-position:inside;
+  list-style-position:outside;
   list-style-type:disc;
   padding-bottom:32px;
+  padding-left:24px;
 }
 
 .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) ul li{
-  padding:0;
+  padding-bottom:8px;
+}
+
+.section-wrapper .sub-section-wrapper:not(.right-section-wrapper) ul li:last-child{
+  padding-bottom:0;
 }
 
 .section-wrapper .sub-section-wrapper:not(.right-section-wrapper) ol{
@@ -118,7 +123,7 @@ html{
 .section-wrapper .right-section-wrapper{
   align-self:start;
   grid-column:2;
-  grid-row:1/span 1;
+  grid-row:1/100;
   height:-moz-max-content;
   height:max-content;
   margin-top:0;

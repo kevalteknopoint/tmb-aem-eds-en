@@ -1,0 +1,34 @@
+@use '../../styles/base' as *;
+
+body:has(.page-heading) {
+  .breadcrumb.block {
+    color: $link-default;
+    padding-block: 16px;
+  }
+}
+
+.page-heading{
+    @include responsive-container;
+
+    .default-content-wrapper{
+        h1,h2{
+            color: $heading-default;
+            font-family: $secondary-font;
+            font-size: $font-size-lg;
+            font-weight: 900;
+            line-height: $font-height-lg;
+            letter-spacing: $font-letter-spacing-lg;
+            text-transform: uppercase;
+        }
+
+        p{
+            color: #121212; // Missing figma token
+            font-size: $font-size-body;
+            font-style: normal;
+            font-weight: 400;
+            line-height: $font-height-body; /* 150% */
+            letter-spacing: $font-letter-spacing-body;
+            margin-top: 16px;
+        }
+    }
+}

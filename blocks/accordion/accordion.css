@@ -41,7 +41,6 @@
   letter-spacing:var(--font-letter-spacing-h5);
   line-height:var(--font-height-h5);
   list-style:none;
-  overflow:auto;
   overflow:hidden;
   position:relative;
   text-transform:initial;
@@ -84,9 +83,119 @@
   border-top:none;
 }
 
+.faq-accordion{
+  display:flex;
+  gap:32px;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
+}
+
+.faq-accordion .default-content-wrapper{
+  min-width:417px;
+}
+
+.faq-accordion .default-content-wrapper h1, .faq-accordion .default-content-wrapper h2, .faq-accordion .default-content-wrapper h3, .faq-accordion .default-content-wrapper h4, .faq-accordion .default-content-wrapper h5, .faq-accordion .default-content-wrapper h6{
+  color:var(--heading-default);
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  text-transform:initial;
+}
+
+.faq-accordion .accordion-wrapper{
+  width:100%;
+}
+
+.faq-accordion .accordion-wrapper .block .accordion-item{
+  border-bottom:1px solid var(--line-default);
+  border-top:1px solid var(--line-default);
+  padding:16px 0;
+}
+
+.faq-accordion .accordion-wrapper .block .accordion-item::-webkit-details-marker{
+  display:none !important;
+}
+
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label{
+  align-items:flex-start;
+  display:flex;
+  justify-content:space-between;
+  list-style:none;
+}
+
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label::marker, .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label::-webkit-details-marker{
+  display:none;
+}
+
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label p{
+  color:var(--color-button-primary-default);
+  font-family:var(--font-family-h3);
+  font-size:var(--font-size-h3);
+  font-weight:var(--font-weight-h3);
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
+  margin-top:4px;
+  text-transform:initial;
+}
+
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label svg{
+  background:var(--bg-light);
+  border-radius:44px;
+  color:var(--color-button-primary-default);
+  cursor:pointer;
+  height:40px;
+  margin-left:32px;
+  min-width:40px;
+  padding:8px;
+  transform:rotate(180deg);
+  width:40px;
+}
+
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body{
+  margin-top:8px;
+}
+
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body p{
+  color:var(--body-default);
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-transform:initial;
+}
+
+.faq-accordion .accordion-wrapper .block .accordion-item[open] summary svg{
+  transform:rotate(0deg);
+}
+
+.faq-accordion .accordion-wrapper .block .accordion-item.accordion-item:first-child{
+  border-top:none;
+  padding-top:0;
+}
+
+.faq-accordion .accordion-wrapper .block .accordion-item.accordion-item:last-child{
+  border-bottom:none;
+}
+
 @media screen and (max-width: 1279px){
   .tmb-acc-sec.accordion-container .accordion-wrapper{
     padding-inline:24px;
+  }
+
+  .faq-accordion{
+    padding-inline:24px;
+  }
+}
+
+@media screen and (max-width: 1023px){
+  .faq-accordion{
+    flex-direction:column;
   }
 }
 
@@ -102,6 +211,15 @@
   .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body{
     margin-top:18px;
     padding-right:24px;
+  }
+
+  .faq-accordion{
+    flex-direction:column;
+    padding-inline:16px;
+  }
+
+  .faq-accordion .default-content-wrapper{
+    min-width:unset;
   }
 }
 

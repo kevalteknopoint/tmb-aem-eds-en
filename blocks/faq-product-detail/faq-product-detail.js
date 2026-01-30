@@ -43,12 +43,14 @@ function renderFAQ(block, faq) {
 
 /* ---------- DECORATE ---------- */
 export default async function decorate(block) {
+  if (window.location.origin.includes("author")) return;
+
   const secwrapper = document.querySelector(".faq-product-detail-wrapper");
   if (!secwrapper) return;
 
   try {
     const placeholders = await fetchPlaceholders();
-    const graphqlUrl = `${placeholders.graphqlurl}faqShortContent;path=`;
+    const graphqlUrl = `${placeholders.graphqlUrl}faqShortContent;path=`;
 
     const newBlock = div({ class: "accordion-wrapper" });
     const accordion = div({
