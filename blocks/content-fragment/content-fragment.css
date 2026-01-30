@@ -7,7 +7,7 @@
   display:flex;
   font-family:var(--font-family-h5);
   font-weight:var(--font-weight-h5);
-  gap:16px;
+  gap:12px;
   justify-content:center;
   padding-inline:24px;
   text-align:center;
@@ -234,6 +234,11 @@
   outline:none;
 }
 
+.customer .columns-wrapper .block .columns-container div p.button-container a svg{
+  height:12px;
+  width:12px;
+}
+
 .customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a{
   background-color:var(--color-button-outlined-default);
   border:var(--stroke-button) solid var(--color-button-text-stroke-default);
@@ -259,6 +264,11 @@
 .customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
+}
+
+.customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a svg{
+  height:12px;
+  width:12px;
 }
 
 .customer .content-container{

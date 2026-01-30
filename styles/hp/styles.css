@@ -68,6 +68,15 @@ h1, h2, h3, h4, h5, h6{
   font-weight:inherit;
 }
 
+b{
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body-bold);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-transform:initial;
+}
+
 sup, sub{
   font-size:0.7em;
   line-height:0;

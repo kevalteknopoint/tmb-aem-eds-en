@@ -6,7 +6,7 @@
   display:flex;
   font-family:var(--font-family-h5);
   font-weight:var(--font-weight-h5);
-  gap:16px;
+  gap:12px;
   justify-content:center;
   padding-inline:24px;
   text-align:center;
@@ -165,6 +165,11 @@
   outline:none;
 }
 
+.momentum-saver-section .columns.block > div .button-container a:not(.secondary) svg, .momentum-image-saver .columns.block > div .button-container a:not(.secondary) svg, .image-swapping .columns.block > div .button-container a:not(.secondary) svg, .momentum-app-badges .columns.block > div .button-container a:not(.secondary) svg, .momentum-direct-variant .columns.block > div .button-container a:not(.secondary) svg{
+  height:12px;
+  width:12px;
+}
+
 .momentum-saver-section .columns.block > div .button-container a.secondary, .momentum-image-saver .columns.block > div .button-container a.secondary, .image-swapping .columns.block > div .button-container a.secondary, .momentum-app-badges .columns.block > div .button-container a.secondary, .momentum-direct-variant .columns.block > div .button-container a.secondary{
   background-color:var(--color-button-outlined-default);
   border:var(--stroke-button) solid var(--color-button-text-stroke-default);
@@ -192,6 +197,11 @@
 .momentum-saver-section .columns.block > div .button-container a.secondary:focus-visible, .momentum-image-saver .columns.block > div .button-container a.secondary:focus-visible, .image-swapping .columns.block > div .button-container a.secondary:focus-visible, .momentum-app-badges .columns.block > div .button-container a.secondary:focus-visible, .momentum-direct-variant .columns.block > div .button-container a.secondary:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
+}
+
+.momentum-saver-section .columns.block > div .button-container a.secondary svg, .momentum-image-saver .columns.block > div .button-container a.secondary svg, .image-swapping .columns.block > div .button-container a.secondary svg, .momentum-app-badges .columns.block > div .button-container a.secondary svg, .momentum-direct-variant .columns.block > div .button-container a.secondary svg{
+  height:12px;
+  width:12px;
 }
 
 .momentum-saver-section .columns.block > div .interest-rate, .momentum-image-saver .columns.block > div .interest-rate, .image-swapping .columns.block > div .interest-rate, .momentum-app-badges .columns.block > div .interest-rate, .momentum-direct-variant .columns.block > div .interest-rate{
@@ -266,6 +276,11 @@
   outline:none;
 }
 
+.momentum-image-saver.background-color-teal .columns.block > div .button-container a:not(.secondary) svg{
+  height:12px;
+  width:12px;
+}
+
 .momentum-image-saver.background-color-teal .columns.block > div .button-container a.secondary{
   background-color:var(--color-button-outlined-reverse-default);
   border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
@@ -293,6 +308,11 @@
 .momentum-image-saver.background-color-teal .columns.block > div .button-container a.secondary:focus-visible{
   box-shadow:0 0 0 2px var(--color-focus-default), 0 0 0 3px var(--color-focus-reversed);
   outline:none;
+}
+
+.momentum-image-saver.background-color-teal .columns.block > div .button-container a.secondary svg{
+  height:12px;
+  width:12px;
 }
 
 .momentum-image-saver .columns.block > div{
