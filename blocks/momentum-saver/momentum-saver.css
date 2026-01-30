@@ -314,11 +314,11 @@
 }
 
 .image-swapping .columns.block > div h1, .image-swapping .columns.block > div h2, .momentum-app-badges .columns.block > div h1, .momentum-app-badges .columns.block > div h2, .momentum-direct-variant .columns.block > div h1, .momentum-direct-variant .columns.block > div h2{
-  font-family:var(--font-family-h1-std);
-  font-size:var(--font-size-h1-std);
-  font-weight:var(--font-weight-h1-std);
-  letter-spacing:var(--font-letter-spacing-h1-std);
-  line-height:var(--font-height-h1-std);
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
   text-transform:initial;
 }
 
