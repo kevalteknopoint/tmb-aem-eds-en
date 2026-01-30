@@ -46,9 +46,9 @@
 .faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-label svg{
   background:var(--bg-light);
   border-radius:44%;
-  height:32px;
+  height:40px;
   padding:8px;
-  width:32px;
+  width:40px;
 }
 
 .faq-legal.accordion-container .accordion-wrapper .accordion details .accordion-item-body p{
