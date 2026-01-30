@@ -68,9 +68,13 @@
       margin-bottom: 16px;
       color: $body-default;
 
-      &:has(.interest-rate) + p {
-        color: $heading-default;
-        margin-bottom: 0;
+      &:has(.interest-rate) {
+        margin-bottom: 8px;
+
+        & + p {
+          color: $heading-default;
+          margin-bottom: 0;
+        }
       }
     }
 
@@ -178,6 +182,31 @@
 }
 
 .momentum-image-saver {
+  &.background-color-teal {
+    .columns.block > div {
+      h1, h2, h3, h4, h5, h6 {
+        color: $heading-reverse;
+      }
+
+      p, ul {
+        color: $body-reverse;
+      }
+
+      .button-container {
+        a:not(.secondary) {
+          @include button('secondary');
+        }
+        
+        a.secondary {
+          @include button('outlined-reverse');
+          
+          font-style: normal;
+          text-decoration: unset;
+        }
+      }
+    }
+  }
+
   .columns.block > div {
     gap: 24px;
     
@@ -223,5 +252,23 @@
     ul {
       list-style: none;
     }
+  }
+}
+
+.momentum-saver-section:has(.interest-rate) {
+  .columns.block {
+    background: $bg-default;
+    padding: 64px;
+    border-radius: $radius-card;
+
+    @include tablet {
+      padding: 40px 16px;
+    }
+  }
+}
+
+.momentum-saver-section, .momentum-image-saver {
+  &.background-color-teal {
+    background-color: $bg-reverse;
   }
 }

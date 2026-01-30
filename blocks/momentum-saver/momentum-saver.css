@@ -1,4 +1,4 @@
-.momentum-saver-section .columns.block > div .button-container a:not(.secondary), .momentum-image-saver .columns.block > div .button-container a:not(.secondary), .image-swapping .columns.block > div .button-container a:not(.secondary), .momentum-app-badges .columns.block > div .button-container a:not(.secondary), .momentum-direct-variant .columns.block > div .button-container a:not(.secondary), .momentum-saver-section .columns.block > div .button-container a.secondary, .momentum-image-saver .columns.block > div .button-container a.secondary, .image-swapping .columns.block > div .button-container a.secondary, .momentum-app-badges .columns.block > div .button-container a.secondary, .momentum-direct-variant .columns.block > div .button-container a.secondary{
+.momentum-saver-section .columns.block > div .button-container a:not(.secondary), .momentum-image-saver .columns.block > div .button-container a:not(.secondary), .image-swapping .columns.block > div .button-container a:not(.secondary), .momentum-app-badges .columns.block > div .button-container a:not(.secondary), .momentum-direct-variant .columns.block > div .button-container a:not(.secondary), .momentum-saver-section .columns.block > div .button-container a.secondary, .momentum-image-saver .columns.block > div .button-container a.secondary, .image-swapping .columns.block > div .button-container a.secondary, .momentum-app-badges .columns.block > div .button-container a.secondary, .momentum-direct-variant .columns.block > div .button-container a.secondary, .momentum-image-saver.background-color-teal .columns.block > div .button-container a:not(.secondary), .momentum-image-saver.background-color-teal .columns.block > div .button-container a.secondary{
   align-items:center;
   border:none;
   border-radius:var(--radius-button);
@@ -98,6 +98,10 @@
   line-height:var(--font-height-body);
   margin-bottom:16px;
   text-transform:initial;
+}
+
+.momentum-saver-section .columns.block > div p:has(.interest-rate), .momentum-image-saver .columns.block > div p:has(.interest-rate), .image-swapping .columns.block > div p:has(.interest-rate), .momentum-app-badges .columns.block > div p:has(.interest-rate), .momentum-direct-variant .columns.block > div p:has(.interest-rate){
+  margin-bottom:8px;
 }
 
 .momentum-saver-section .columns.block > div p:has(.interest-rate) + p, .momentum-image-saver .columns.block > div p:has(.interest-rate) + p, .image-swapping .columns.block > div p:has(.interest-rate) + p, .momentum-app-badges .columns.block > div p:has(.interest-rate) + p, .momentum-direct-variant .columns.block > div p:has(.interest-rate) + p{
@@ -227,6 +231,70 @@
   text-align:left;
 }
 
+.momentum-image-saver.background-color-teal .columns.block > div h1, .momentum-image-saver.background-color-teal .columns.block > div h2, .momentum-image-saver.background-color-teal .columns.block > div h3, .momentum-image-saver.background-color-teal .columns.block > div h4, .momentum-image-saver.background-color-teal .columns.block > div h5, .momentum-image-saver.background-color-teal .columns.block > div h6{
+  color:var(--heading-reverse);
+}
+
+.momentum-image-saver.background-color-teal .columns.block > div p, .momentum-image-saver.background-color-teal .columns.block > div ul{
+  color:var(--body-reverse);
+}
+
+.momentum-image-saver.background-color-teal .columns.block > div .button-container a:not(.secondary){
+  background-color:var(--color-button-secondary-default);
+  border:none;
+  color:var(--color-button-text-stroke-default);
+  font-size:var(--font-size-h5);
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:8px;
+}
+
+.momentum-image-saver.background-color-teal .columns.block > div .button-container a:not(.secondary):hover{
+  background-color:var(--color-button-secondary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-hover);
+}
+
+.momentum-image-saver.background-color-teal .columns.block > div .button-container a:not(.secondary):active{
+  background-color:var(--color-button-secondary-press);
+  border:none;
+  color:var(--color-button-text-stroke-press);
+}
+
+.momentum-image-saver.background-color-teal .columns.block > div .button-container a:not(.secondary):focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.momentum-image-saver.background-color-teal .columns.block > div .button-container a.secondary{
+  background-color:var(--color-button-outlined-reverse-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+  font-size:var(--font-size-h5);
+  font-style:normal;
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:6px;
+  text-decoration:unset;
+}
+
+.momentum-image-saver.background-color-teal .columns.block > div .button-container a.secondary:hover{
+  background-color:var(--color-button-outlined-reverse-hover);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.momentum-image-saver.background-color-teal .columns.block > div .button-container a.secondary:active{
+  background-color:var(--color-button-outlined-reverse-press);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.momentum-image-saver.background-color-teal .columns.block > div .button-container a.secondary:focus-visible{
+  box-shadow:0 0 0 2px var(--color-focus-default), 0 0 0 3px var(--color-focus-reversed);
+  outline:none;
+}
+
 .momentum-image-saver .columns.block > div{
   gap:24px;
 }
@@ -268,6 +336,16 @@
   list-style:none;
 }
 
+.momentum-saver-section:has(.interest-rate) .columns.block{
+  background:var(--bg-default);
+  border-radius:var(--radius-card);
+  padding:64px;
+}
+
+.momentum-saver-section.background-color-teal, .momentum-image-saver.background-color-teal{
+  background-color:var(--bg-reverse);
+}
+
 @media screen and (max-width: 1279px){
   .momentum-saver-section .momentum-section-wrapper, .momentum-image-saver .momentum-section-wrapper, .image-swapping .momentum-section-wrapper, .momentum-app-badges .momentum-section-wrapper, .momentum-direct-variant .momentum-section-wrapper{
     padding-inline:24px;
@@ -285,6 +363,10 @@
 
   .image-swapping .columns.block > div, .momentum-app-badges .columns.block > div, .momentum-direct-variant .columns.block > div{
     gap:32px;
+  }
+
+  .momentum-saver-section:has(.interest-rate) .columns.block{
+    padding:40px 16px;
   }
 }
 
