@@ -467,6 +467,22 @@ header{
   right:0;
   width:100%;
 }
+
+.top-partition{
+  position:relative;
+}
+.top-partition::before{
+  background:var(--line-default);
+  bottom:0;
+  content:"";
+  height:1px;
+  left:0;
+  margin:0 auto;
+  max-width:1312px;
+  position:absolute;
+  right:0;
+  width:100%;
+}
 @media screen and (max-width: 1439px){
   :root{
     --carousel-fix-x:64px;
@@ -489,6 +505,9 @@ header{
     padding-bottom:64px;
   }
   .bottom-partition::after{
+    max-width:calc(100% - 48px);
+  }
+  .top-partition::before{
     max-width:calc(100% - 48px);
   }
   :root{
@@ -603,6 +622,9 @@ header{
     padding-bottom:40px;
   }
   .bottom-partition::after{
+    max-width:calc(100% - 32px);
+  }
+  .top-partition::before{
     max-width:calc(100% - 32px);
   }
   :root{

@@ -56,6 +56,10 @@
               "value": "bottom-padding"
             },
             {
+              "name": "Top Partition",
+              "value": "top-partition"
+            },
+            {
               "name": "Bottom Partition",
               "value": "bottom-partition"
             },
@@ -72,14 +76,6 @@
               "value": "quick-links"
             },
             {
-              "name": "momentum-teaser",
-              "value": "momentum-teaser"
-            },
-            {
-              "name": "momentum-section",
-              "value": "momentum-section"
-            },
-            {
               "name": "momentum-saver-section",
               "value": "momentum-saver-section"
             },
@@ -88,8 +84,16 @@
               "value": "momentum-image-saver"
             },
             {
-              "name": "Product Detail Variant",
+              "name": "Momentum Saver Product Detail Variant",
               "value": "image-swapping"
+            },
+            {
+              "name": "Momentum Saver App Badges",
+              "value": "momentum-app-badges"
+            },
+            {
+              "name": "Momentum Checked Icon List",
+              "value": "momentum-direct-variant"
             },
             {
               "name": "Left Percentage Section",
@@ -250,10 +254,6 @@
             {
               "name": "looking-for-another-way",
               "value": "looking-for-another-way"
-            },
-            {
-              "name": "Momentum Direct Variant",
-              "value": "momentum-direct-variant"
             },
             {
               "name": "Circular Image",
