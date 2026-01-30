@@ -115,7 +115,7 @@ header {
   &::before {
     content: '';
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
     max-width: calc($container-width - 128px);

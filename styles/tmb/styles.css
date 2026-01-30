@@ -474,7 +474,6 @@ header{
 }
 .top-partition::before{
   background:var(--line-default);
-  bottom:0;
   content:"";
   height:1px;
   left:0;
@@ -482,6 +481,7 @@ header{
   max-width:1312px;
   position:absolute;
   right:0;
+  top:0;
   width:100%;
 }
 @media screen and (max-width: 1439px){
