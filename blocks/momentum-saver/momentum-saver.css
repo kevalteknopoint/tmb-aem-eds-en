@@ -190,6 +190,10 @@
   outline:none;
 }
 
+.momentum-saver-section .columns.block > div .interest-rate, .momentum-image-saver .columns.block > div .interest-rate, .image-swapping .columns.block > div .interest-rate, .momentum-app-badges .columns.block > div .interest-rate, .momentum-direct-variant .columns.block > div .interest-rate{
+  display:flex;
+}
+
 .momentum-saver-section .columns.block > div .rate-num, .momentum-image-saver .columns.block > div .rate-num, .image-swapping .columns.block > div .rate-num, .momentum-app-badges .columns.block > div .rate-num, .momentum-direct-variant .columns.block > div .rate-num{
   color:var(--heading-default);
   font-family:var(--font-family-lg);

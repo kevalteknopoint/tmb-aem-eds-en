@@ -111,6 +111,10 @@
       }
     }
 
+    .interest-rate {
+      display: flex;
+    }
+
     .rate-num {
       font-family: $font-family-lg;
       color: $heading-default;
