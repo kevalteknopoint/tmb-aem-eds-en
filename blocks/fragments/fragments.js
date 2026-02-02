@@ -112,30 +112,86 @@ export async function loadFragment(path) {
   return null;
 }
 
-export default async function decorate(block) {
-  const links = [...block.querySelectorAll("a")];
-  const allRows = [];
-  block.innerHTML = ''; 
+// export default async function decorate(block) {
+//   if (window.location.href.includes("author")) return;
+//   const links = [...block.querySelectorAll("a")];
+//   const allRows = [];
+//   block.innerHTML = ''; 
 
+//   for (const link of links) {
+//     const path = link.getAttribute("href") || link.textContent.trim();
+//     const fragment = await loadFragment(path);
+//     if (fragment) {
+//       const fragmentBlock = fragment.querySelector('.compare-accounts');
+//       if (fragmentBlock) {
+//         const wrapper = fragmentBlock.querySelector('.compare-accounts-wrapper');
+//         if (wrapper) {
+//           allRows.push(wrapper);
+//         } else {
+//           [...fragmentBlock.children].forEach(row => { 
+//             if (row.children.length > 0) allRows.push(row); 
+//           });
+//         }
+//       }
+//     }
+//   }
+
+//   if (allRows.length > 0) {
+//     await renderAllCards(block, allRows);
+//   }
+// }
+
+export default async function decorate(block) {
+  if (window.location.origin.includes('author')) return;
+  // 1. Check if we have already set up the containers
+  let resultsContainer = block.querySelector('.fragments-results-container');
+  console.log(resultsContainer);
+  let sourceWrapper = block.querySelector('.fragments-source-wrapper');
+
+  if (!resultsContainer) {
+    // This is the first run: Setup the structure
+    resultsContainer = document.createElement('div');
+    resultsContainer.classList.add('fragments-results-container');
+
+    sourceWrapper = document.createElement('div');
+    sourceWrapper.classList.add('fragments-source-wrapper');
+    sourceWrapper.style.display = 'none';
+    sourceWrapper.setAttribute('aria-hidden', 'true');
+
+    // Move existing rows into the hidden source wrapper
+    [...block.children].forEach(child => sourceWrapper.appendChild(child));
+
+    block.append(sourceWrapper);
+    block.append(resultsContainer);
+  }
+
+  // 2. Always get links from the sourceWrapper (the source of truth)
+  const links = [...sourceWrapper.querySelectorAll("a")];
+  const allRows = [];
+
+  // 3. Fetch Fragment Data
   for (const link of links) {
     const path = link.getAttribute("href") || link.textContent.trim();
     const fragment = await loadFragment(path);
     if (fragment) {
+      // Use your existing logic to find the fragment content
       const fragmentBlock = fragment.querySelector('.compare-accounts');
       if (fragmentBlock) {
-        const wrapper = fragmentBlock.querySelector('.compare-accounts-wrapper');
-        if (wrapper) {
-          allRows.push(wrapper);
+        const fragmentWrapper = fragmentBlock.querySelector('.compare-accounts-wrapper');
+        if (fragmentWrapper) {
+          allRows.push(fragmentWrapper.cloneNode(true)); // Use clone to avoid moving DOM nodes from fragments
         } else {
           [...fragmentBlock.children].forEach(row => { 
-            if (row.children.length > 0) allRows.push(row); 
+            if (row.children.length > 0) allRows.push(row.cloneNode(true)); 
           });
         }
       }
     }
   }
 
+  // 4. Clear and Render into the resultsContainer
   if (allRows.length > 0) {
-    await renderAllCards(block, allRows);
+    resultsContainer.innerHTML = ''; // Clear only the rendered output, not the source!
+    await renderAllCards(resultsContainer, allRows);
   }
 }
