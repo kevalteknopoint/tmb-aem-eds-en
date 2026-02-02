@@ -1,8 +1,5 @@
 {
   "project": "AEM XWalk Boilerplate",
   "editUrlLabel": "AEM Editor",
-  "editUrlPattern": "{{contentSourceUrl}}{{pathname}}?cmd=open",
-  "includes" : [
-    "/content/dam"
-  ]
+  "editUrlPattern": "{{contentSourceUrl}}{{pathname}}?cmd=open"
 }
