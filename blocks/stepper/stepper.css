@@ -496,6 +496,10 @@
     flex-direction:column;
     gap:32px;
   }
+
+  .stepper-container .default-content-wrapper{
+    min-width:unset;
+  }
 }
 
 @media screen and (max-width: 767px){

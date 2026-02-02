@@ -534,6 +534,8 @@
   }
 
   .momentum-saver-section.circular-image .columns.block > div{
+    align-items:flex-start;
+    flex-direction:column;
     gap:24px;
   }
 

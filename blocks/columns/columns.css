@@ -975,7 +975,7 @@
   }
 
   .money-overseas .overseas-columns-wrapper{
-    gap:16px;
+    gap:40px;
     padding:24px 0;
   }
 }
@@ -1062,5 +1062,9 @@
   .money-overseas .overseas-wrapper{
     margin-bottom:24px;
     padding-inline:16px;
+  }
+
+  .money-overseas .overseas-columns-wrapper{
+    gap:24px;
   }
 }
