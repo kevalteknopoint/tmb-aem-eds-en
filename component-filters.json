@@ -36,7 +36,12 @@
       "interest-rates",
       "account-card-copy",
       "multiple-fragment",
-      "fragments"
+      "fragments",
+      "page-heading",
+      "legal-tc-guide",
+      "faq-legal",
+      "faq-legal-table",
+      "legal-privacy"
     ]
   },
   {

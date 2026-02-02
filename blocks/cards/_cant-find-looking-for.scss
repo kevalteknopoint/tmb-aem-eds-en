@@ -4,6 +4,11 @@
   @include responsive-container;
 
   .default-content-wrapper {
+    margin-bottom: 40px;
+
+    @include mobile {
+      margin-bottom: 24px;
+    }
 
     h1,
     h2,
@@ -15,11 +20,11 @@
 
       text-align: center;
       color: $heading-default;
-      margin-bottom: 40px;
+    }
 
-      @include mobile {
-        margin-bottom: 24px;
-      }
+    p {
+      text-align: center;
+      margin-top: 16px;
     }
   }
 
@@ -130,10 +135,8 @@
     position: relative;
 
     .default-content-wrapper {
-      h1, h2, h3, h4, h5, h6 {
-        max-width: 800px;
-        margin-inline: auto;
-      }
+      max-width: 800px;
+      margin-inline: auto;
     }
 
     .cards-wrapper .cards ul {
@@ -154,7 +157,6 @@
         }
 
         .cards-card-body {
-
           h1,
           h2,
           h3,
@@ -183,7 +185,6 @@
 
   &.faq-cant-find-looking-for-variant {
     .default-content-wrapper {
-
       h1,
       h2,
       h3,
@@ -293,10 +294,10 @@
   }
 }
 
-//BORDER VARIATION
+// BORDER VARIATION
+
 .section.faq-cant-find-looking-for.variation-border {
   .default-content-wrapper {
-
     h1,
     h2,
     h3,

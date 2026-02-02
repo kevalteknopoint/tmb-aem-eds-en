@@ -102,8 +102,11 @@
         "component": "select",
         "name": "linkType",
         "label": "Type",
-        "value": "primary",
         "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
           {
             "name": "Primary",
             "value": "primary"
@@ -378,6 +381,30 @@
           {
             "name": "Table with icons",
             "value": "table-with-icons"
+          },
+          {
+            "name": "Page Heading",
+            "value": "page-heading"
+          },
+          {
+            "name": "Legal TC Guide",
+            "value": "legal-tc-guide"
+          },
+          {
+            "name": "Online Banking Legal",
+            "value": "online-banking-legal"
+          },
+          {
+            "name": "faq-legal",
+            "value": "faq-legal"
+          },
+          {
+            "name": "faq-legal-table",
+            "value": "faq-legal-table"
+          },
+          {
+            "name": "legal-privacy",
+            "value": "legal-privacy"
           }
         ]
       }
@@ -746,8 +773,11 @@
         "component": "select",
         "name": "button-style-linkType",
         "label": "Button Classes",
-        "value": "primary",
         "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
           {
             "name": "Primary",
             "value": "primary"
@@ -777,8 +807,11 @@
         "component": "select",
         "name": "button-2-style-linkType",
         "label": "Button Classes",
-        "value": "primary",
         "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
           {
             "name": "Primary",
             "value": "primary"
@@ -1527,7 +1560,7 @@
       {
         "component": "text",
         "name": "i-frame-link",
-        "label": "Enter calculator iframe link"
+        "label": "Enter calculator only URL for iframe"
       }
     ]
   },

@@ -279,6 +279,30 @@
             {
               "name": "Table with icons",
               "value": "table-with-icons"
+            },
+            {
+              "name": "Page Heading",
+              "value": "page-heading"
+            },
+            {
+              "name": "Legal TC Guide",
+              "value": "legal-tc-guide"
+            },
+            {
+              "name": "Online Banking Legal",
+              "value": "online-banking-legal"
+            },
+            {
+              "name": "faq-legal",
+              "value": "faq-legal"
+            },
+            {
+              "name": "faq-legal-table",
+              "value": "faq-legal-table"
+            },
+            {
+              "name": "legal-privacy",
+              "value": "legal-privacy"
             }
           ]
         }
@@ -317,7 +341,12 @@
         "interest-rates",
         "account-card-copy",
         "multiple-fragment",
-        "fragments"
+        "fragments",
+        "page-heading",
+        "legal-tc-guide",
+        "faq-legal",
+        "faq-legal-table",
+        "legal-privacy"
       ]
     }
   ]

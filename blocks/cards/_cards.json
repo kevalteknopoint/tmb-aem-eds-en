@@ -84,8 +84,11 @@
           "component": "select",
           "name": "button-style-linkType",
           "label": "Button Classes",
-          "value": "primary",
           "options": [
+            {
+              "name": "Default",
+              "value": ""
+            },
             {
               "name": "Primary",
               "value": "primary"
@@ -115,8 +118,11 @@
           "component": "select",
           "name": "button-2-style-linkType",
           "label": "Button Classes",
-          "value": "primary",
           "options": [
+            {
+              "name": "Default",
+              "value": ""
+            },
             {
               "name": "Primary",
               "value": "primary"
