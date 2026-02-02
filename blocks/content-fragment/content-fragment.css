@@ -1,5 +1,5 @@
 /* stylelint-disable no-empty-source */
-.customer .columns-wrapper .block .columns-container div p.button-container a, .customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a{
+.customer .columns-wrapper .block .columns-container div p.button-container a, .customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a, .who-can-apply-section .columns-wrapper .block .column-container div .button-container a:not(.secondary), .who-can-apply-section .columns-wrapper .block .column-container div .button-container a.secondary{
   align-items:center;
   border:none;
   border-radius:var(--radius-button);
@@ -16,7 +16,11 @@
   width:fit-content;
 }
 
-.who-can-apply-section{
+.who-can-apply-section.background-color-secondary{
+  background-color:var(--bg-light);
+}
+
+.who-can-apply-section .who-can-apply-section-wrapper{
   display:flex;
   flex-direction:column;
   gap:40px;
@@ -50,7 +54,10 @@
   display:block;
 }
 
-.who-can-apply-section .columns-wrapper .block .column-container div p{
+.who-can-apply-section .columns-wrapper .block .column-container div h3,
+.who-can-apply-section .columns-wrapper .block .column-container div h4,
+.who-can-apply-section .columns-wrapper .block .column-container div h5,
+.who-can-apply-section .columns-wrapper .block .column-container div h6{
   color:var(--heading-default);
   font-family:var(--font-family-h3);
   font-size:var(--font-size-h3);
@@ -58,6 +65,91 @@
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
   text-transform:initial;
+}
+
+.who-can-apply-section .columns-wrapper .block .column-container div p{
+  color:var(--body-default);
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-transform:initial;
+}
+
+.who-can-apply-section .columns-wrapper .block .column-container div .button-container{
+  display:inline-block;
+  margin-bottom:0;
+  margin-right:8px;
+  margin-top:32px;
+}
+
+.who-can-apply-section .columns-wrapper .block .column-container div .button-container a:not(.secondary){
+  background-color:var(--color-button-primary-default);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+  font-size:var(--font-size-h5);
+  font-style:normal;
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:8px;
+  text-decoration:unset;
+}
+
+.who-can-apply-section .columns-wrapper .block .column-container div .button-container a:not(.secondary):hover{
+  background-color:var(--color-button-primary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.who-can-apply-section .columns-wrapper .block .column-container div .button-container a:not(.secondary):active{
+  background-color:var(--color-button-primary-press);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.who-can-apply-section .columns-wrapper .block .column-container div .button-container a:not(.secondary):focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.who-can-apply-section .columns-wrapper .block .column-container div .button-container a:not(.secondary) svg{
+  height:12px;
+  width:12px;
+}
+
+.who-can-apply-section .columns-wrapper .block .column-container div .button-container a.secondary{
+  background-color:var(--color-button-outlined-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-default);
+  color:var(--color-button-text-stroke-default);
+  font-size:var(--font-size-h5);
+  font-style:normal;
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:6px;
+  text-decoration:unset;
+}
+
+.who-can-apply-section .columns-wrapper .block .column-container div .button-container a.secondary:hover{
+  background-color:var(--color-button-outlined-hover);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-hover);
+  color:var(--color-button-text-stroke-hover);
+}
+
+.who-can-apply-section .columns-wrapper .block .column-container div .button-container a.secondary:active{
+  background-color:var(--color-button-outlined-press);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-press);
+  color:var(--color-button-text-stroke-press);
+}
+
+.who-can-apply-section .columns-wrapper .block .column-container div .button-container a.secondary:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.who-can-apply-section .columns-wrapper .block .column-container div .button-container a.secondary svg{
+  height:12px;
+  width:12px;
 }
 
 .who-can-apply-section .columns-wrapper .block .column-container div ul{
@@ -320,7 +412,7 @@
 }
 
 @media screen and (max-width: 1279px){
-  .who-can-apply-section{
+  .who-can-apply-section .who-can-apply-section-wrapper{
     padding-inline:24px;
   }
 
@@ -334,7 +426,7 @@
 }
 
 @media screen and (max-width: 1023px){
-  .who-can-apply-section{
+  .who-can-apply-section .who-can-apply-section-wrapper{
     gap:40px;
   }
 
@@ -345,7 +437,7 @@
 }
 
 @media screen and (max-width: 767px){
-  .who-can-apply-section{
+  .who-can-apply-section .who-can-apply-section-wrapper{
     gap:24px;
     padding-inline:16px;
   }

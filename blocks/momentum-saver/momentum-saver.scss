@@ -277,4 +277,12 @@
   &.background-color-teal {
     background-color: $bg-reverse;
   }
+
+  &.background-color-secondary {
+    background-color: $bg-light;
+  }
+
+  &.background-color-gradient {
+    background: $gradient-1;
+  }
 }

@@ -100,8 +100,16 @@
               "value": "left-percentage-section"
             },
             {
-              "name": "Momentum Alternate Background",
+              "name": "Primary Section Background",
               "value": "background-color-teal"
+            },
+            {
+              "name": "Secondary Section Background",
+              "value": "background-color-secondary"
+            },
+            {
+              "name": "Gradient Section Background (TMB only)",
+              "value": "background-color-gradient"
             },
             {
               "name": "Bg Image Saver",

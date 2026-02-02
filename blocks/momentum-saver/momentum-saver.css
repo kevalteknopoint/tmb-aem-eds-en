@@ -372,6 +372,14 @@
   background-color:var(--bg-reverse);
 }
 
+.momentum-saver-section.background-color-secondary, .momentum-image-saver.background-color-secondary{
+  background-color:var(--bg-light);
+}
+
+.momentum-saver-section.background-color-gradient, .momentum-image-saver.background-color-gradient{
+  background:var(--gradient-1);
+}
+
 @media screen and (max-width: 1279px){
   .momentum-saver-section .momentum-section-wrapper, .momentum-image-saver .momentum-section-wrapper, .image-swapping .momentum-section-wrapper, .momentum-app-badges .momentum-section-wrapper, .momentum-direct-variant .momentum-section-wrapper{
     padding-inline:24px;
