@@ -8,7 +8,7 @@
   display:flex;
   font-family:var(--font-family-h5);
   font-weight:var(--font-weight-h5);
-  gap:16px;
+  gap:12px;
   justify-content:center;
   padding-inline:24px;
   text-align:center;
@@ -376,6 +376,11 @@
   outline:none;
 }
 
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button svg{
+  height:12px;
+  width:12px;
+}
+
 .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.primary{
   background-color:var(--color-button-primary-default);
   border:none;
@@ -401,6 +406,11 @@
 .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.primary:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.primary svg{
+  height:12px;
+  width:12px;
 }
 
 .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.secondary{
@@ -430,6 +440,11 @@
   outline:none;
 }
 
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.secondary svg{
+  height:12px;
+  width:12px;
+}
+
 .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.outlined{
   background-color:var(--color-button-outlined-default);
   border:var(--stroke-button) solid var(--color-button-text-stroke-default);
@@ -455,6 +470,11 @@
 .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.outlined:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.outlined svg{
+  height:12px;
+  width:12px;
 }
 
 .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.outlined-reverse{
@@ -484,6 +504,11 @@
   outline:none;
 }
 
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.outlined-reverse svg{
+  height:12px;
+  width:12px;
+}
+
 .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.white{
   background-color:var(--color-button-white-default);
   border:none;
@@ -509,6 +534,11 @@
 .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.white:focus-visible{
   box-shadow:0 0 0 2px var(--color-focus-default), 0 0 0 3px var(--color-focus-reversed);
   outline:none;
+}
+
+.swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container .button.white svg{
+  height:12px;
+  width:12px;
 }
 
 @media screen and (max-width: 1439px){

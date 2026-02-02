@@ -6,7 +6,7 @@
   display:flex;
   font-family:var(--font-family-h5);
   font-weight:var(--font-weight-h5);
-  gap:16px;
+  gap:12px;
   justify-content:center;
   padding-inline:24px;
   text-align:center;
@@ -103,6 +103,11 @@
   outline:none;
 }
 
+.stepper-container .default-content-wrapper .button svg{
+  height:12px;
+  width:12px;
+}
+
 .stepper-container .default-content-wrapper .button.secondary{
   background-color:var(--color-button-secondary-default);
   border:none;
@@ -128,6 +133,11 @@
 .stepper-container .default-content-wrapper .button.secondary:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
+}
+
+.stepper-container .default-content-wrapper .button.secondary svg{
+  height:12px;
+  width:12px;
 }
 
 .stepper-container .stepper-list{
@@ -341,6 +351,11 @@
   outline:none;
 }
 
+.stepper-container .stepper-item .stepper-actions .button svg{
+  height:12px;
+  width:12px;
+}
+
 .stepper-container .stepper-item .stepper-actions .button.secondary{
   background-color:var(--color-button-secondary-default);
   border:none;
@@ -366,6 +381,11 @@
 .stepper-container .stepper-item .stepper-actions .button.secondary:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
+}
+
+.stepper-container .stepper-item .stepper-actions .button.secondary svg{
+  height:12px;
+  width:12px;
 }
 
 .stepper-container .stepper-item .stepper-actions .button.outlined{
@@ -395,6 +415,11 @@
   outline:none;
 }
 
+.stepper-container .stepper-item .stepper-actions .button.outlined svg{
+  height:12px;
+  width:12px;
+}
+
 .stepper-container .stepper-item .stepper-actions .button.outlined-reverse{
   background-color:var(--color-button-outlined-reverse-default);
   border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
@@ -422,6 +447,11 @@
   outline:none;
 }
 
+.stepper-container .stepper-item .stepper-actions .button.outlined-reverse svg{
+  height:12px;
+  width:12px;
+}
+
 .stepper-container .stepper-item .stepper-actions .button.white{
   background-color:var(--color-button-white-default);
   border:none;
@@ -447,6 +477,11 @@
 .stepper-container .stepper-item .stepper-actions .button.white:focus-visible{
   box-shadow:0 0 0 2px var(--color-focus-default), 0 0 0 3px var(--color-focus-reversed);
   outline:none;
+}
+
+.stepper-container .stepper-item .stepper-actions .button.white svg{
+  height:12px;
+  width:12px;
 }
 
 @media screen and (max-width: 1279px){

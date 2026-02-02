@@ -4,6 +4,8 @@ import decorateCustomer from "./customer.js";
 import decorateMoneyOverseas from "./money-overseas.js";
 
 export default function decorate(block) {
+  if (window.location.origin.includes('author')) return;
+
   if (block.closest('.faq-landing-banner')) {
     decorateFaqBanner(block);
   } else if (block.closest('.who-can-apply-section')) {

@@ -159,6 +159,10 @@
             "value": "bottom-padding"
           },
           {
+            "name": "Top Partition",
+            "value": "top-partition"
+          },
+          {
             "name": "Bottom Partition",
             "value": "bottom-partition"
           },
@@ -175,15 +179,7 @@
             "value": "quick-links"
           },
           {
-            "name": "momentum-teaser",
-            "value": "momentum-teaser"
-          },
-          {
-            "name": "momentum-section",
-            "value": "momentum-section"
-          },
-          {
-            "name": "momentum-saver-section",
+            "name": "Momentum Saver Section",
             "value": "momentum-saver-section"
           },
           {
@@ -191,16 +187,32 @@
             "value": "momentum-image-saver"
           },
           {
-            "name": "Product Detail Variant",
+            "name": "Momentum Saver Product Detail Variant",
             "value": "image-swapping"
+          },
+          {
+            "name": "Momentum Saver App Badges",
+            "value": "momentum-app-badges"
+          },
+          {
+            "name": "Momentum Checked Icon List",
+            "value": "momentum-direct-variant"
           },
           {
             "name": "Left Percentage Section",
             "value": "left-percentage-section"
           },
           {
-            "name": "Background Color Teal",
+            "name": "Primary Section Background",
             "value": "background-color-teal"
+          },
+          {
+            "name": "Secondary Section Background",
+            "value": "background-color-secondary"
+          },
+          {
+            "name": "Gradient Section Background (TMB only)",
+            "value": "background-color-gradient"
           },
           {
             "name": "Bg Image Saver",
@@ -295,10 +307,6 @@
             "value": "banking-goods"
           },
           {
-            "name": "Product Navigation",
-            "value": "product-navigation"
-          },
-          {
             "name": "Rates Saver",
             "value": "rates-saver"
           },
@@ -353,10 +361,6 @@
           {
             "name": "looking-for-another-way",
             "value": "looking-for-another-way"
-          },
-          {
-            "name": "Momentum Direct Variant",
-            "value": "momentum-direct-variant"
           },
           {
             "name": "Circular Image",
