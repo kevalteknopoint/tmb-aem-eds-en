@@ -28,7 +28,7 @@ export default function expandableTiles(block) {
             ?.dispatchEvent(new Event('click'));
         }
       }
-    }, 3000);
+    }, 5000);
   };
 
   [...block.children].forEach((row, index) => {
