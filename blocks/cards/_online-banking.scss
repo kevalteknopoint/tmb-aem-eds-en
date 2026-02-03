@@ -1,16 +1,17 @@
-@use '../../styles/base' as *;
-@use '../../styles/variables';
-@use '../../styles/mixins';
+@use "../../styles/base" as *;
+@use "../../styles/variables";
+@use "../../styles/mixins";
 
 .section.online-banking {
   @include responsive-container;
 
-  @media (min-width: 766px) and (max-width: 980px) {
+
+  @include tablet{
     margin-left: auto;
     margin-right: auto;
   }
 
-  @media screen and (max-width: 767px) {
+  @include mobile{
     padding: 0 16px;
     margin-left: auto;
     margin-right: auto;
@@ -31,11 +32,8 @@
           min-height: 480px;
         }
 
-        // @media screen and (max-width: 1023px) {
-        //   min-height: unset;
-        // }
 
-        @media screen and (max-width: 767px) {
+        @include mobile{
           display: flex;
           gap: 18px;
           flex-direction: column;
@@ -58,131 +56,19 @@
               width: 100%;
             }
 
-            @media (min-width: 766px) and (max-width: 1220px) {
-              height: auto;
-              width: 95px;
-            }
-
-            @media (min-width: 766px) and (max-width: 820px) {
-              height: auto;
-              width: 75px;
-            }
-
-            @media (min-width: 766px) and (max-width: 980px) {
-              height: auto;
-              width: 90px;
-            }
-
-            @media screen and (max-width: 767px) {
-              height: auto;
-              width: 131px;
-            }
           }
         }
 
-        .banking-li-1 {
-          background-color: $bg-light-2;
-          border-radius: $radius-card;
-          min-height: 100%;
-          padding: 24px;
-
-          @media (min-width: 766px) and (max-width: 1220px) {
-            padding: 20px;
-            border-radius: $radius-card;
-          }
-
-          @media screen and (max-width: 767px) {
-            padding: 24px;
-            border-radius: $radius-card;
-          }
-
-          .cards-card-body {
-            margin: 0;
-
-            h1, h2, h3, h4, h5, h6 {
-              @include typo-heading1;
-
-              color: $heading-default;
-
-              @media (min-width: 766px) and (max-width: 1220px) {
-                font-size: 24px;
-                font-weight: 700;
-                line-height: 35px;
-              }
-
-              @media screen and (max-width: 767px) {
-                font-size: 38px;
-                line-height: 38px;
-              }
-            }
-
-            ul {
-              display: flex;
-              flex-direction: column;
-              gap: 22px;
-              margin-top: 32px;
-              padding: 0;
-
-              @media screen and (max-width: 767px) {
-                flex-direction: column;
-                gap: unset;
-                margin-top: 24px;
-              }
-
-              li {
-                padding: 0;
-                width: 100%;
-
-                @media (min-width: 766px) and (max-width: 1220px) {
-                  align-items: center;
-                }
-
-                @media (min-width: 766px) and (max-width: 980px) {
-                  // max-width: 300px;
-                  max-width: unset;
-                }
-
-                @media screen and (max-width: 767px) {
-                  padding: 10px 0;
-                }
-
-                a {
-                  @include typo-body;
-
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                  color: $body-accent;
-                  text-decoration: none;
-                  gap: 10px;
-
-                  @media (min-width: 766px) and (max-width: 1220px) {
-                    font-size: 13px;
-                  }
-
-                  svg {
-                    height: 24px;
-                    width: 12px;
-                    min-width: 12px;
-                  }
-                }
-              }
-            }
-          }
-        }
-
-        .banking-li-2,
-        .banking-li-3 {
+        li:has(.cards-card-image) {
           display: flex;
           flex-direction: column;
           min-height: 100%;
           overflow: hidden;
           width: 100%;
           border-top-left-radius: $radius-card;
-          border-top-right-radius:  $radius-card;
+          border-top-right-radius: $radius-card;
 
           @media (min-width: 766px) and (max-width: 1220px) {
-            // max-width: 300px;
             max-width: unset;
             width: 100%;
           }
@@ -191,9 +77,7 @@
             width: unset;
           }
 
-          @media screen and (max-width: 767px) {
-            // border-top-left-radius: $radius-card;
-            // border-top-right-radius:  $radius-card;
+          @include mobile{
             display: flex;
             flex-direction: column;
             margin: 0 auto;
@@ -219,20 +103,16 @@
               list-style-type: none;
               padding: 0;
 
-              h1,h2,h3,h4,h5,h6 {
+              h1,
+              h2,
+              h3,
+              h4,
+              h5,
+              h6 {
                 @include typo-heading3;
 
                 color: $heading-default;
 
-                @media (min-width: 766px) and (max-width: 1220px) {
-                  font-size: 15px;
-                  line-height: 20px;
-                }
-
-                @media screen and (max-width: 767px) {
-                  font-size: 20px;
-                  line-height: 24px;
-                }
               }
 
               p {
@@ -240,131 +120,181 @@
 
                 color: $body-accent;
 
-                @media (min-width: 766px) and (max-width: 1220px) {
-                  font-size: 12px;
-                  font-weight: 400;
-                  line-height: 18px;
-                }
               }
             }
 
-            @media screen and (max-width: 767px) {
-              height: unset;
-              padding: 20px;
-            }
-          }
-
-          .cards-card-image {
-            img {
-              border-top-left-radius: $radius-card;
-              border-top-right-radius: $radius-card;
-              height: 100%;
-              max-width: unset;
-              object-fit: cover;
-              object-position: center;
-              width: 100%;
-
-              @media screen and (max-width: 767px) {
-                width: 100%;
-              }
-            }
-          }
-        }
-
-        .banking-li-2 {
-          .cards-card-body {
             .card-bottom-2 {
               margin: auto 0 0;
               display: flex;
               flex-direction: column;
-              gap: 8px;
               list-style-type: none;
               padding: 0;
 
-              @media (min-width: 766px) and (max-width: 980px) {
-                margin-top: auto;
-              }
-
-              @media screen and (max-width: 767px) {
+              @include mobile{
                 margin-top: 24px;
               }
-            }
 
-            p {
-              margin: auto 0 0;
-              display: flex;
-              gap: 25px;
+              &.is-button-link {
+                p {
+                  display: flex;
+                  flex-direction: row;
+                  gap: 12px;
+                  margin: 0;
 
-              @media (min-width: 766px) and (max-width: 1220px) {
-                width: 115px;
-              }
+                  a.button {
+                    @include typo-heading5;
 
-              a {
-                @include typo-heading5;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    color: $link-accent;
+                    text-decoration: none;
+                    width: max-content;
 
-                align-items: center;
-                background: transparent;
-                color: $link-accent;
-                display: flex;
+                    svg {
+                      width: 18px;
+                      height: 18px;
+                    }
 
-                // font-size: 16px;
-                // font-style: normal;
-                // font-weight: 500;
-                gap: 8px;
-                
-                // line-height: 24px;
-                text-decoration: none;
-                width: max-content;
+                    @media (min-width: 766px) and (max-width: 1023px) {
+                      padding: 6px 18px 6px 0;
+                    }
 
-                @media screen and (max-width: 1023px) {
-                  padding: 6px 18px 6px 0;
-                }
-
-                @media screen and (max-width: 767px) {
-                  // border-radius: 11.25px;
-                  line-height: 13.5px;
-                  padding: 0;
-                }
-
-                svg {
-                  width: 18px;
-                  height: 18px;
+                    @include mobile{
+                      line-height: 13.5px;
+                    }
+                  }
                 }
               }
+
+              &.is-badge-link {
+                p {
+                  display: flex;
+                  flex-flow: row wrap;
+                  gap: 10px;
+                  margin: 0;
+
+                  a {
+                    display: block;
+                    width: 143px;
+                    height: 42px;
+
+                    svg {
+                      width: 100%;
+                      height: 100%;
+
+                      @include tablet{
+                        height: 42px;
+                      }
+                    }
+
+                    @include tablet{
+                      width: 115px;
+                      height: 42px;
+                    }
+
+                    @include mobile{
+                      width: 115px;
+                      height: 42px;
+                    }
+                  }
+                }
+              }
             }
+          }
+
+          @include mobile{
+            height: unset;
           }
         }
 
-        .banking-li-3 .cards-card-body {
-          @media screen and (max-width: 767px) {
-            padding: 30px 20px 15px;
+        li:not(:has(.cards-card-image)) {
+          background-color: $bg-light-2;
+          border-radius: $radius-card;
+          min-height: 100%;
+          padding: 24px;
+
+          @include tablet{
+            padding: 20px;
+            border-radius: $radius-card;
           }
 
-          .card-bottom-2 {
-            align-items: center;
-            display: flex;
-            gap: 10px;
-            list-style-type: none;
-            margin: auto 0 0;
-            padding: 0;
-
-            @media (min-width: 766px) and (max-width: 980px) {
-              margin-top: auto;
-            }
-
-            @media screen and (max-width: 767px) {
-              margin-top: 24px;
-            }
+          @include mobile{
+            padding: 24px;
+            border-radius: $radius-card;
           }
 
-          p {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+          .cards-card-body {
+            margin: 0;
 
-            svg {
-              width: 143px;
-              height: 42px;
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+              @include typo-heading1;
+
+              color: $heading-default;
+
+              @include tablet{
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 35px;
+              }
+
+              @include mobile{
+                font-size: 38px;
+                line-height: 38px;
+              }
+            }
+
+            ul {
+              display: flex;
+              flex-direction: column;
+              gap: 22px;
+              margin-top: 32px;
+              padding: 0;
+
+              @include mobile{
+                flex-direction: column;
+                gap: unset;
+                margin-top: 24px;
+              }
+
+              li {
+                padding: 0;
+                width: 100%;
+
+                @include tablet{
+                  align-items: center;
+                }
+
+                @media (min-width: 766px) and (max-width: 980px) {
+                  max-width: unset;
+                }
+
+                @include mobile{
+                  padding: 10px 0;
+                }
+
+                a {
+                  @include typo-body;
+
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  color: $body-accent;
+                  text-decoration: none;
+                  gap: 10px;
+
+                  svg {
+                    height: 24px;
+                    width: 12px;
+                    min-width: 12px;
+                  }
+                }
+              }
             }
           }
         }
@@ -379,17 +309,21 @@
   overflow: hidden;
   position: relative;
 
-  @media (min-width: 766px) and (max-width: 1220px) {
+  @include tablet{
     min-height: fit-content;
     height: fit-content;
   }
 
-  @media screen and (max-width: 767px) {
+  @include mobile{
     height: auto;
     min-height: unset;
   }
 
   picture {
     height: 100%;
+
+    img{
+      width: 100%;
+    }
   }
 }
