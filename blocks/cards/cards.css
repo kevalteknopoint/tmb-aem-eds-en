@@ -438,6 +438,10 @@
   width:max-content;
 }
 
+.section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-2.is-button-link p a.button:not(:has(svg)){
+  border-bottom:2px solid var(--link-default);
+}
+
 .section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-2.is-button-link p a.button svg{
   height:18px;
   width:18px;

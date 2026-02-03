@@ -177,6 +177,10 @@
                     text-decoration: none;
                     width: max-content;
 
+                    &:not(:has(svg)) {
+                      border-bottom: 2px solid $link-default;
+                    }
+
                     svg {
                       width: 18px;
                       height: 18px;
