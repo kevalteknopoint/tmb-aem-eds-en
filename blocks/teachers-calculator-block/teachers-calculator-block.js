@@ -17,7 +17,7 @@ export default function decorate(block) {
 
   // Create style element
   const style = document.createElement('style');
-  style.textContent = 'iframe {width: 1px;min-width: 100%;}';
+  style.textContent = 'iframe {width: 1px;min-width: 100%; min-height:800px}';
   
   // Create iframe element
   const iframe = document.createElement('iframe');
