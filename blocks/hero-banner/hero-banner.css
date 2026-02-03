@@ -387,6 +387,10 @@ body:has(.product-detail-banner) .breadcrumb.block{
     top:unset;
   }
 
+  .product-detail-banner .hero-banner-content-wrap .interest-rates-wrapper{
+    margin-top:0;
+  }
+
   .product-detail-banner .hero-banner-content-wrap .interest-rate{
     margin-top:0;
   }

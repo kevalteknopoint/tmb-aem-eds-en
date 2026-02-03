@@ -106,6 +106,10 @@ body:has(.product-detail-banner) {
       margin-top: 24px;
       margin-bottom: 8px;
 
+      @include tablet {
+        margin-top: 0px;
+      }
+
       @include mobile {
         gap: 24px;
       }
