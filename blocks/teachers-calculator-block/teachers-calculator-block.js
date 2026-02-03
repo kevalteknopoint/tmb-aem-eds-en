@@ -9,28 +9,31 @@ export default function decorate(block) {
   ];
   dataMapMoObj.addIndexed(block);
 
-  // const iframeAnchor = block.querySelector('.calculator-item1 .calculator-inner-item1 a');
-  // console.log("iframeAnchor",iframeAnchor);
-  const iframeLink = block ? block.innerText : '';
-
-  const cfg = { iframeLink };
-
-  // Clear existing block content
-  block.innerHTML = '';
-
-  if (cfg.iframeLink) {
-    const iframe = document.createElement('iframe');
-    iframe.src = `https://www.tmbank.com.au/ ${cfg.iframeLink}`;
-    iframe.style.border = 'none';
-    iframe.style.width = '100%';
-    iframe.style.height = '100%';
-    iframe.allow = 'fullscreen';
-    iframe.setAttribute('title', 'Embedded Form');
-
-    block.appendChild(iframe);
-  } else {
-    const msg = document.createElement('p');
-    msg.textContent = 'Please provide a valid iframe link in the editor.';
-    block.appendChild(msg);
-  }
+  // Create style element
+  const style = document.createElement('style');
+  style.textContent = 'iframe {width: 1px;min-width: 100%;}';
+  
+  // Create iframe element
+  const iframe = document.createElement('iframe');
+  iframe.id = 'termDepositTeachersMFrame';
+  iframe.src = 'https://calculators.gbst.com/clients/teachers_mutual_bank/html/term_deposit_react.html';
+  
+  // Create inline script for iframe resize
+  const inlineScript = document.createElement('script');
+  inlineScript.textContent = `
+    window.addEventListener('load', function () {
+      iFrameResize({}, '#termDepositTeachersMFrame');
+    });
+  `;
+  
+  // Create external script for iframe resizer library
+  const externalScript = document.createElement('script');
+  externalScript.src = 'https://calculators.gbst.com/clients/standard_suite/lib/iframeResizer.min.js';
+  
+  // Append elements to the block
+  block.appendChild(style);
+  block.appendChild(iframe);
+  block.appendChild(externalScript);
+  block.appendChild(inlineScript);
+ 
 }
