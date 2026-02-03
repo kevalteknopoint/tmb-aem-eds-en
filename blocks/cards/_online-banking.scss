@@ -139,7 +139,11 @@
                   display: flex;
                   flex-direction: row;
                   gap: 12px;
-                  margin: 0;
+                  margin: 24px 0 0;
+
+                  @include mobile {
+                    margin: 0
+                  }
 
                   a.button {
                     @include typo-heading5;
@@ -172,7 +176,11 @@
                   display: flex;
                   flex-flow: row wrap;
                   gap: 10px;
-                  margin: 0;
+                  margin: 24px 0 0;
+
+                  @include mobile {
+                    margin: 0
+                  }
 
                   a {
                     display: block;
@@ -305,8 +313,6 @@
 
 .cards-card-image {
   height: fit-content;
-  min-height: 250px;
-  overflow: hidden;
   position: relative;
 
   @include tablet{
