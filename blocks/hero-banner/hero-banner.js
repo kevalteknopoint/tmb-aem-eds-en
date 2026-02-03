@@ -134,7 +134,7 @@ export default function decorate(block) {
   Object.values(jsonMap).slice(5).forEach((cls) => block.querySelector(`.${cls}`)?.remove());
 
   setTimeout(() => {
-    const capsizeItems = document.querySelectorAll('.rate-num, .rate-percent, .rate-pa');
+    const capsizeItems = block.querySelectorAll('.rate-num, .rate-percent, .rate-pa');
     capsizeItems.forEach(applyCapsizeToElement);
-  }, 3000);
+  }, 1000);
 }
