@@ -5,7 +5,6 @@
 .section.online-banking {
   @include responsive-container;
 
-
   @include tablet{
     margin-left: auto;
     margin-right: auto;
@@ -15,6 +14,29 @@
     padding: 0 16px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .default-content-wrapper {
+    margin-bottom: 40px;
+
+    @include mobile {
+      margin-bottom: 24px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      @include typo-heading1;
+
+      color: $heading-default;
+      margin: 0 0 16px;
+      text-align: left;
+    }
+
+    p {
+      @include typo-body;
+
+      color: $body-default;
+      text-align: left;
+    }
   }
 
   .cards-wrapper {
@@ -139,7 +161,11 @@
                   display: flex;
                   flex-direction: row;
                   gap: 12px;
-                  margin: 0;
+                  margin: 24px 0 0;
+
+                  @include mobile {
+                    margin: 0
+                  }
 
                   a.button {
                     @include typo-heading5;
@@ -172,7 +198,11 @@
                   display: flex;
                   flex-flow: row wrap;
                   gap: 10px;
-                  margin: 0;
+                  margin: 24px 0 0;
+
+                  @include mobile {
+                    margin: 0
+                  }
 
                   a {
                     display: block;
@@ -305,8 +335,6 @@
 
 .cards-card-image {
   height: fit-content;
-  min-height: 250px;
-  overflow: hidden;
   position: relative;
 
   @include tablet{
