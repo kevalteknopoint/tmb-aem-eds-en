@@ -300,6 +300,33 @@
   width:100%;
 }
 
+.section.online-banking .default-content-wrapper{
+  margin-bottom:40px;
+}
+
+.section.online-banking .default-content-wrapper h1, .section.online-banking .default-content-wrapper h2, .section.online-banking .default-content-wrapper h3, .section.online-banking .default-content-wrapper h4, .section.online-banking .default-content-wrapper h5, .section.online-banking .default-content-wrapper h6{
+  color:var(--heading-default);
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  margin:0 0 16px;
+  text-align:left;
+  text-transform:initial;
+}
+
+.section.online-banking .default-content-wrapper p{
+  color:var(--body-default);
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-align:left;
+  text-transform:initial;
+}
+
 .section.online-banking .cards-wrapper .cards .banking-cards-ul{
   display:grid;
   gap:24px;
@@ -1963,6 +1990,10 @@ html{
     margin-right:auto;
     padding:0 16px;
     padding-inline:16px;
+  }
+
+  .section.online-banking .default-content-wrapper{
+    margin-bottom:24px;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul{
