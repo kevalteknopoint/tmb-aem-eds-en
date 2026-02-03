@@ -9,7 +9,7 @@
   font-family:var(--font-family-h5);
   font-size:var(--font-size-h5);
   font-weight:var(--font-weight-h5);
-  gap:16px;
+  gap:12px;
   justify-content:center;
   line-height:var(--font-height-h5);
   min-width:150px;
@@ -132,6 +132,11 @@
 .product-navigation .default-content-wrapper .button-container a:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
+}
+
+.product-navigation .default-content-wrapper .button-container a svg{
+  height:12px;
+  width:12px;
 }
 
 @media screen and (min-width: 1279px){

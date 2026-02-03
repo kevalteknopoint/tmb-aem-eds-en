@@ -122,7 +122,7 @@ $padding-mobile: 16px;
   text-align: center;
   font-family: $font-family-h5;
   font-weight: $font-weight-h5;
-  gap: 16px;
+  gap: 12px;
   cursor: pointer;
   border: none;
   border-radius: $radius-button;
@@ -232,6 +232,11 @@ $btn-variants: (
   &:focus-visible {
     outline: none;
     box-shadow: map.get($theme, 'focus-visible');
+  }
+
+  svg {
+    width: 12px;
+    height: 12px;
   }
 }
 

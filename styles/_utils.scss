@@ -108,3 +108,28 @@ header {
     }
   }
 }
+
+.top-partition {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: calc($container-width - 128px);
+    width: 100%;
+    margin: 0 auto;
+    height: 1px;
+    background: $line-default;
+
+    @include tablet-lg {
+      max-width: calc(100% - 48px);
+    }
+
+    @include mobile {
+      max-width: calc(100% - 32px);
+    }
+  }
+}
