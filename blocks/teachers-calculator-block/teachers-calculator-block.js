@@ -27,14 +27,18 @@ export default function decorate(block) {
   // Create inline script for iframe resize
   const inlineScript = document.createElement('script');
   inlineScript.textContent = `
-    window.addEventListener('load', function () {
-      iFrameResize({}, '#${iframeId}');
-    });
+    setTimeout(function () {
+      window.addEventListener('load', function () {
+        iFrameResize({}, '#${iframeId}');
+      });
+    }, 1000);
   `;
   
   // Create external script for iframe resizer library
   const externalScript = document.createElement('script');
   externalScript.src = iframeJsLink;
+
+  
   
   // Append elements to the block
   block.appendChild(style);
