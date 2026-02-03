@@ -12,6 +12,8 @@ export default function decorate(block) {
   const iframeId = block.querySelector(".calculator-item1 .calculator-sub-item1").innerText;
   const iframeLink = block.querySelector(".calculator-item2 .calculator-inner-item1 a").getAttribute("href");
   const iframeJsLink = block.querySelector(".calculator-item3 .calculator-inner-item1 a").getAttribute("href");
+  
+  block.innerHTML = "";
 
   // Create style element
   const style = document.createElement('style');
@@ -37,7 +39,7 @@ export default function decorate(block) {
   // Append elements to the block
   block.appendChild(style);
   block.appendChild(iframe);
-  block.appendChild(externalScript);
   block.appendChild(inlineScript);
+  block.appendChild(externalScript);
  
 }
