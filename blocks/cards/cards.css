@@ -8,7 +8,7 @@
   display:flex;
   font-family:var(--font-family-h5);
   font-weight:var(--font-weight-h5);
-  gap:16px;
+  gap:12px;
   justify-content:center;
   padding-inline:24px;
   text-align:center;
@@ -203,6 +203,11 @@
   outline:none;
 }
 
+.section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta .cta-link svg{
+  height:12px;
+  width:12px;
+}
+
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta .cta-link.secondary{
   background-color:var(--color-button-secondary-default);
   border:none;
@@ -228,6 +233,11 @@
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta .cta-link.secondary:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
+}
+
+.section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta .cta-link.secondary svg{
+  height:12px;
+  width:12px;
 }
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta .cta-link.icon-btn{
@@ -650,6 +660,11 @@
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container a:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
+}
+
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container a svg{
+  height:12px;
+  width:12px;
 }
 
 .section.faq-cant-find-looking-for.rates-saver{
@@ -1281,6 +1296,11 @@ html{
 .looking-for-another-way .cards-wrapper li .cards-card-body .card-button a:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
+}
+
+.looking-for-another-way .cards-wrapper li .cards-card-body .card-button a svg{
+  height:12px;
+  width:12px;
 }
 
 .milestones{

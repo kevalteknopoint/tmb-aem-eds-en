@@ -1,6 +1,6 @@
 .breadcrumb{
   align-items:center;
-  color:var(--body-default);
+  color:var(--link-default);
   display:flex;
   flex-wrap:wrap;
   font-size:14px;
@@ -10,9 +10,8 @@
   margin-left:auto;
   margin-right:auto;
   max-width:calc(1440px - 0px);
+  padding-block:16px;
   padding-inline:64px;
-  padding-bottom:32px;
-  padding-top:64px;
   text-transform:capitalize;
   width:100%;
 }
@@ -41,11 +40,5 @@
 @media screen and (max-width: 767px){
   .breadcrumb{
     padding-inline:16px;
-    padding-bottom:24px;
-    padding-top:24px;
-  }
-
-  .breadcrumb:has(img){
-    padding-top:44px;
   }
 }

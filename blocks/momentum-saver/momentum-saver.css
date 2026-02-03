@@ -1,4 +1,4 @@
-.momentum-saver-section .momentum-columns .momentum-second-content .button-container a, .momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content a, .momentum-image-saver.bg-image-saver .momentum-second-content .button-container a{
+.momentum-saver-section .columns.block > div .button-container a:not(.secondary), .momentum-image-saver .columns.block > div .button-container a:not(.secondary), .image-swapping .columns.block > div .button-container a:not(.secondary), .momentum-app-badges .columns.block > div .button-container a:not(.secondary), .momentum-direct-variant .columns.block > div .button-container a:not(.secondary), .momentum-saver-section .columns.block > div .button-container a.secondary, .momentum-image-saver .columns.block > div .button-container a.secondary, .image-swapping .columns.block > div .button-container a.secondary, .momentum-app-badges .columns.block > div .button-container a.secondary, .momentum-direct-variant .columns.block > div .button-container a.secondary, .momentum-image-saver.background-color-teal .columns.block > div .button-container a:not(.secondary), .momentum-image-saver.background-color-teal .columns.block > div .button-container a.secondary{
   align-items:center;
   border:none;
   border-radius:var(--radius-button);
@@ -6,7 +6,7 @@
   display:flex;
   font-family:var(--font-family-h5);
   font-weight:var(--font-weight-h5);
-  gap:16px;
+  gap:12px;
   justify-content:center;
   padding-inline:24px;
   text-align:center;
@@ -15,16 +15,7 @@
   width:fit-content;
 }
 
-.momentum-saver-section{
-  align-items:center;
-  background-color:#fff;
-  display:flex;
-  flex-flow:column wrap;
-  gap:80px;
-  justify-content:space-between;
-}
-
-.momentum-saver-section .columns-wrapper{
+.momentum-saver-section .momentum-section-wrapper, .momentum-image-saver .momentum-section-wrapper, .image-swapping .momentum-section-wrapper, .momentum-app-badges .momentum-section-wrapper, .momentum-direct-variant .momentum-section-wrapper{
   margin-left:auto;
   margin-right:auto;
   max-width:calc(1440px - 0px);
@@ -32,76 +23,54 @@
   width:100%;
 }
 
-.momentum-saver-section .momentum-columns{
-  border-radius:var(--radius-card);
-  display:flex;
-  padding:64px;
+.momentum-saver-section .default-content-wrapper, .momentum-image-saver .default-content-wrapper, .image-swapping .default-content-wrapper, .momentum-app-badges .default-content-wrapper, .momentum-direct-variant .default-content-wrapper{
+  margin-bottom:40px;
 }
 
-.momentum-saver-section .momentum-columns > div{
-  align-items:flex-start;
-  gap:40px;
-  order:unset;
-}
-
-.momentum-saver-section .momentum-columns .momentum-content{
-  display:grid;
-  grid-template-columns:1fr 3fr;
-  max-width:350px;
-  width:100%;
-}
-
-.momentum-saver-section .momentum-columns .momentum-content .rate-num{
+.momentum-saver-section .default-content-wrapper h1, .momentum-saver-section .default-content-wrapper h2, .momentum-saver-section .default-content-wrapper h3, .momentum-saver-section .default-content-wrapper h4, .momentum-saver-section .default-content-wrapper h5, .momentum-saver-section .default-content-wrapper h6, .momentum-image-saver .default-content-wrapper h1, .momentum-image-saver .default-content-wrapper h2, .momentum-image-saver .default-content-wrapper h3, .momentum-image-saver .default-content-wrapper h4, .momentum-image-saver .default-content-wrapper h5, .momentum-image-saver .default-content-wrapper h6, .image-swapping .default-content-wrapper h1, .image-swapping .default-content-wrapper h2, .image-swapping .default-content-wrapper h3, .image-swapping .default-content-wrapper h4, .image-swapping .default-content-wrapper h5, .image-swapping .default-content-wrapper h6, .momentum-app-badges .default-content-wrapper h1, .momentum-app-badges .default-content-wrapper h2, .momentum-app-badges .default-content-wrapper h3, .momentum-app-badges .default-content-wrapper h4, .momentum-app-badges .default-content-wrapper h5, .momentum-app-badges .default-content-wrapper h6, .momentum-direct-variant .default-content-wrapper h1, .momentum-direct-variant .default-content-wrapper h2, .momentum-direct-variant .default-content-wrapper h3, .momentum-direct-variant .default-content-wrapper h4, .momentum-direct-variant .default-content-wrapper h5, .momentum-direct-variant .default-content-wrapper h6{
   color:var(--heading-default);
-  font-family:var(--font-family-lg);
-  font-size:140px;
-  font-weight:var(--font-weight-rate);
-  line-height:120px;
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  text-transform:initial;
 }
 
-.momentum-saver-section .momentum-columns .momentum-content .rate-unit{
-  align-items:center;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  line-height:1;
-}
-
-.momentum-saver-section .momentum-columns .momentum-content .rate-percent{
-  color:var(--heading-default);
-  font-family:var(--font-family-lg);
-  font-size:80px;
-  font-weight:var(--font-weight-rate);
-  line-height:72px;
-}
-
-.momentum-saver-section .momentum-columns .momentum-content .rate-pa{
-  color:var(--heading-default);
-  font-family:var(--font-family-h1-std);
-  font-size:40px;
-  font-weight:var(--font-weight-rate-p-a);
-  line-height:28px;
-  text-align:left;
-}
-
-.momentum-saver-section .momentum-columns .momentum-content p{
-  color:var(--heading-default);
+.momentum-saver-section .default-content-wrapper p, .momentum-image-saver .default-content-wrapper p, .image-swapping .default-content-wrapper p, .momentum-app-badges .default-content-wrapper p, .momentum-direct-variant .default-content-wrapper p{
+  color:var(--body-default);
   font-family:var(--font-family-body);
   font-size:var(--font-size-body);
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
+  margin-top:16px;
   text-transform:initial;
-  width:100%;
 }
 
-.momentum-saver-section .momentum-columns .momentum-second-content h1,
-.momentum-saver-section .momentum-columns .momentum-second-content h2,
-.momentum-saver-section .momentum-columns .momentum-second-content h3{
+.momentum-saver-section .columns.block > div, .momentum-image-saver .columns.block > div, .image-swapping .columns.block > div, .momentum-app-badges .columns.block > div, .momentum-direct-variant .columns.block > div{
+  align-items:flex-start;
+  display:flex;
+  gap:40px;
+}
+
+.momentum-saver-section .columns.block > div div, .momentum-image-saver .columns.block > div div, .image-swapping .columns.block > div div, .momentum-app-badges .columns.block > div div, .momentum-direct-variant .columns.block > div div{
+  flex:unset;
+  order:unset;
+}
+
+.momentum-saver-section .columns.block > div div.columns-img-col, .momentum-image-saver .columns.block > div div.columns-img-col, .image-swapping .columns.block > div div.columns-img-col, .momentum-app-badges .columns.block > div div.columns-img-col, .momentum-direct-variant .columns.block > div div.columns-img-col{
+  flex:0 0 auto;
+}
+
+.momentum-saver-section .columns.block > div div.columns-img-col img, .momentum-image-saver .columns.block > div div.columns-img-col img, .image-swapping .columns.block > div div.columns-img-col img, .momentum-app-badges .columns.block > div div.columns-img-col img, .momentum-direct-variant .columns.block > div div.columns-img-col img{
+  border-radius:var(--radius-card);
+}
+
+.momentum-saver-section .columns.block > div h1, .momentum-saver-section .columns.block > div h2, .momentum-image-saver .columns.block > div h1, .momentum-image-saver .columns.block > div h2, .image-swapping .columns.block > div h1, .image-swapping .columns.block > div h2, .momentum-app-badges .columns.block > div h1, .momentum-app-badges .columns.block > div h2, .momentum-direct-variant .columns.block > div h1, .momentum-direct-variant .columns.block > div h2{
   color:var(--heading-default);
   font-family:var(--font-family-h1);
   font-size:var(--font-size-h1);
-  font-style:normal;
   font-weight:var(--font-weight-h1);
   letter-spacing:var(--font-letter-spacing-h1);
   line-height:var(--font-height-h1);
@@ -109,9 +78,7 @@
   text-transform:initial;
 }
 
-.momentum-saver-section .momentum-columns .momentum-second-content h4,
-.momentum-saver-section .momentum-columns .momentum-second-content h5,
-.momentum-saver-section .momentum-columns .momentum-second-content h6{
+.momentum-saver-section .columns.block > div h3, .momentum-saver-section .columns.block > div h4, .momentum-saver-section .columns.block > div h5, .momentum-saver-section .columns.block > div h6, .momentum-image-saver .columns.block > div h3, .momentum-image-saver .columns.block > div h4, .momentum-image-saver .columns.block > div h5, .momentum-image-saver .columns.block > div h6, .image-swapping .columns.block > div h3, .image-swapping .columns.block > div h4, .image-swapping .columns.block > div h5, .image-swapping .columns.block > div h6, .momentum-app-badges .columns.block > div h3, .momentum-app-badges .columns.block > div h4, .momentum-app-badges .columns.block > div h5, .momentum-app-badges .columns.block > div h6, .momentum-direct-variant .columns.block > div h3, .momentum-direct-variant .columns.block > div h4, .momentum-direct-variant .columns.block > div h5, .momentum-direct-variant .columns.block > div h6{
   color:var(--heading-default);
   font-family:var(--font-family-intro);
   font-size:var(--font-size-intro);
@@ -122,93 +89,167 @@
   text-transform:initial;
 }
 
-.momentum-saver-section .momentum-columns .momentum-second-content p{
+.momentum-saver-section .columns.block > div p, .momentum-image-saver .columns.block > div p, .image-swapping .columns.block > div p, .momentum-app-badges .columns.block > div p, .momentum-direct-variant .columns.block > div p{
   color:var(--body-default);
   font-family:var(--font-family-body);
   font-size:var(--font-size-body);
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  margin-bottom:24px;
+  margin-bottom:16px;
   text-transform:initial;
 }
 
-.momentum-saver-section .momentum-columns .momentum-second-content p:has(a){
-  display:flex;
-  gap:8px;
+.momentum-saver-section .columns.block > div p:has(.interest-rate), .momentum-image-saver .columns.block > div p:has(.interest-rate), .image-swapping .columns.block > div p:has(.interest-rate), .momentum-app-badges .columns.block > div p:has(.interest-rate), .momentum-direct-variant .columns.block > div p:has(.interest-rate){
+  margin-bottom:8px;
 }
 
-.momentum-saver-section .momentum-columns .momentum-second-content p:has(a) a{
-  display:block;
-  margin-top:32px;
+.momentum-saver-section .columns.block > div p:has(.interest-rate) + p, .momentum-image-saver .columns.block > div p:has(.interest-rate) + p, .image-swapping .columns.block > div p:has(.interest-rate) + p, .momentum-app-badges .columns.block > div p:has(.interest-rate) + p, .momentum-direct-variant .columns.block > div p:has(.interest-rate) + p{
+  color:var(--heading-default);
+  margin-bottom:0;
 }
 
-.momentum-saver-section .momentum-columns .momentum-second-content p:has(a) a span{
-  display:block;
+.momentum-saver-section .columns.block > div a, .momentum-image-saver .columns.block > div a, .image-swapping .columns.block > div a, .momentum-app-badges .columns.block > div a, .momentum-direct-variant .columns.block > div a{
+  color:var(--link-default);
+  text-decoration:underline;
 }
 
-.momentum-saver-section .momentum-columns .momentum-second-content p:has(a) a svg{
-  display:flex;
-  height:40px;
-  justify-content:flex-start;
-  width:135px;
+.momentum-saver-section .columns.block > div ul, .momentum-image-saver .columns.block > div ul, .image-swapping .columns.block > div ul, .momentum-app-badges .columns.block > div ul, .momentum-direct-variant .columns.block > div ul{
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  list-style:disc;
+  padding-left:24px;
+  text-transform:initial;
 }
 
-.momentum-saver-section .momentum-columns .momentum-second-content .button-container{
-  display:flex;
-  gap:15px;
-  margin-bottom:unset;
+.momentum-saver-section .columns.block > div ul li, .momentum-image-saver .columns.block > div ul li, .image-swapping .columns.block > div ul li, .momentum-app-badges .columns.block > div ul li, .momentum-direct-variant .columns.block > div ul li{
+  margin-bottom:8px;
 }
 
-.momentum-saver-section .momentum-columns .momentum-second-content .button-container a{
+.momentum-saver-section .columns.block > div .button-container, .momentum-image-saver .columns.block > div .button-container, .image-swapping .columns.block > div .button-container, .momentum-app-badges .columns.block > div .button-container, .momentum-direct-variant .columns.block > div .button-container{
+  display:inline-block;
+  margin-bottom:0;
+  margin-right:8px;
+  margin-top:24px;
+}
+
+.momentum-saver-section .columns.block > div .button-container a:not(.secondary), .momentum-image-saver .columns.block > div .button-container a:not(.secondary), .image-swapping .columns.block > div .button-container a:not(.secondary), .momentum-app-badges .columns.block > div .button-container a:not(.secondary), .momentum-direct-variant .columns.block > div .button-container a:not(.secondary){
   background-color:var(--color-button-primary-default);
   border:none;
   color:var(--color-button-text-stroke-reverse);
   font-size:var(--font-size-h5);
+  font-style:normal;
   line-height:var(--font-height-h5);
   min-width:150px;
   padding-block:8px;
+  text-decoration:unset;
 }
 
-.momentum-saver-section .momentum-columns .momentum-second-content .button-container a:hover{
+.momentum-saver-section .columns.block > div .button-container a:not(.secondary):hover, .momentum-image-saver .columns.block > div .button-container a:not(.secondary):hover, .image-swapping .columns.block > div .button-container a:not(.secondary):hover, .momentum-app-badges .columns.block > div .button-container a:not(.secondary):hover, .momentum-direct-variant .columns.block > div .button-container a:not(.secondary):hover{
   background-color:var(--color-button-primary-hover);
   border:none;
   color:var(--color-button-text-stroke-reverse);
 }
 
-.momentum-saver-section .momentum-columns .momentum-second-content .button-container a:active{
+.momentum-saver-section .columns.block > div .button-container a:not(.secondary):active, .momentum-image-saver .columns.block > div .button-container a:not(.secondary):active, .image-swapping .columns.block > div .button-container a:not(.secondary):active, .momentum-app-badges .columns.block > div .button-container a:not(.secondary):active, .momentum-direct-variant .columns.block > div .button-container a:not(.secondary):active{
   background-color:var(--color-button-primary-press);
   border:none;
   color:var(--color-button-text-stroke-reverse);
 }
 
-.momentum-saver-section .momentum-columns .momentum-second-content .button-container a:focus-visible{
+.momentum-saver-section .columns.block > div .button-container a:not(.secondary):focus-visible, .momentum-image-saver .columns.block > div .button-container a:not(.secondary):focus-visible, .image-swapping .columns.block > div .button-container a:not(.secondary):focus-visible, .momentum-app-badges .columns.block > div .button-container a:not(.secondary):focus-visible, .momentum-direct-variant .columns.block > div .button-container a:not(.secondary):focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
 }
 
-.momentum-saver-section.background-color-teal{
-  background-color:var(--bg-reverse);
+.momentum-saver-section .columns.block > div .button-container a:not(.secondary) svg, .momentum-image-saver .columns.block > div .button-container a:not(.secondary) svg, .image-swapping .columns.block > div .button-container a:not(.secondary) svg, .momentum-app-badges .columns.block > div .button-container a:not(.secondary) svg, .momentum-direct-variant .columns.block > div .button-container a:not(.secondary) svg{
+  height:12px;
+  width:12px;
 }
 
-.momentum-saver-section.background-color-teal .momentum-columns.background-color-white{
-  background-color:var(--bg-default);
+.momentum-saver-section .columns.block > div .button-container a.secondary, .momentum-image-saver .columns.block > div .button-container a.secondary, .image-swapping .columns.block > div .button-container a.secondary, .momentum-app-badges .columns.block > div .button-container a.secondary, .momentum-direct-variant .columns.block > div .button-container a.secondary{
+  background-color:var(--color-button-outlined-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-default);
+  color:var(--color-button-text-stroke-default);
+  font-size:var(--font-size-h5);
+  font-style:normal;
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:6px;
+  text-decoration:unset;
 }
 
-.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h1,
-.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2,
-.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h3,
-.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h4,
-.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h5,
-.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h6{
+.momentum-saver-section .columns.block > div .button-container a.secondary:hover, .momentum-image-saver .columns.block > div .button-container a.secondary:hover, .image-swapping .columns.block > div .button-container a.secondary:hover, .momentum-app-badges .columns.block > div .button-container a.secondary:hover, .momentum-direct-variant .columns.block > div .button-container a.secondary:hover{
+  background-color:var(--color-button-outlined-hover);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-hover);
+  color:var(--color-button-text-stroke-hover);
+}
+
+.momentum-saver-section .columns.block > div .button-container a.secondary:active, .momentum-image-saver .columns.block > div .button-container a.secondary:active, .image-swapping .columns.block > div .button-container a.secondary:active, .momentum-app-badges .columns.block > div .button-container a.secondary:active, .momentum-direct-variant .columns.block > div .button-container a.secondary:active{
+  background-color:var(--color-button-outlined-press);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-press);
+  color:var(--color-button-text-stroke-press);
+}
+
+.momentum-saver-section .columns.block > div .button-container a.secondary:focus-visible, .momentum-image-saver .columns.block > div .button-container a.secondary:focus-visible, .image-swapping .columns.block > div .button-container a.secondary:focus-visible, .momentum-app-badges .columns.block > div .button-container a.secondary:focus-visible, .momentum-direct-variant .columns.block > div .button-container a.secondary:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.momentum-saver-section .columns.block > div .button-container a.secondary svg, .momentum-image-saver .columns.block > div .button-container a.secondary svg, .image-swapping .columns.block > div .button-container a.secondary svg, .momentum-app-badges .columns.block > div .button-container a.secondary svg, .momentum-direct-variant .columns.block > div .button-container a.secondary svg{
+  height:12px;
+  width:12px;
+}
+
+.momentum-saver-section .columns.block > div .interest-rate, .momentum-image-saver .columns.block > div .interest-rate, .image-swapping .columns.block > div .interest-rate, .momentum-app-badges .columns.block > div .interest-rate, .momentum-direct-variant .columns.block > div .interest-rate{
+  display:flex;
+}
+
+.momentum-saver-section .columns.block > div .rate-num, .momentum-image-saver .columns.block > div .rate-num, .image-swapping .columns.block > div .rate-num, .momentum-app-badges .columns.block > div .rate-num, .momentum-direct-variant .columns.block > div .rate-num{
+  color:var(--heading-default);
+  font-family:var(--font-family-lg);
+  font-size:140px;
+  font-weight:var(--font-weight-rate);
+  line-height:120px;
+}
+
+.momentum-saver-section .columns.block > div .rate-unit, .momentum-image-saver .columns.block > div .rate-unit, .image-swapping .columns.block > div .rate-unit, .momentum-app-badges .columns.block > div .rate-unit, .momentum-direct-variant .columns.block > div .rate-unit{
+  align-items:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  line-height:1;
+}
+
+.momentum-saver-section .columns.block > div .rate-percent, .momentum-image-saver .columns.block > div .rate-percent, .image-swapping .columns.block > div .rate-percent, .momentum-app-badges .columns.block > div .rate-percent, .momentum-direct-variant .columns.block > div .rate-percent{
+  color:var(--heading-default);
+  font-family:var(--font-family-lg);
+  font-size:80px;
+  font-weight:var(--font-weight-rate);
+  line-height:72px;
+}
+
+.momentum-saver-section .columns.block > div .rate-pa, .momentum-image-saver .columns.block > div .rate-pa, .image-swapping .columns.block > div .rate-pa, .momentum-app-badges .columns.block > div .rate-pa, .momentum-direct-variant .columns.block > div .rate-pa{
+  color:var(--heading-default);
+  font-family:var(--font-family-h1-std);
+  font-size:40px;
+  font-weight:var(--font-weight-rate-p-a);
+  line-height:28px;
+  text-align:left;
+}
+
+.momentum-image-saver.background-color-teal .columns.block > div h1, .momentum-image-saver.background-color-teal .columns.block > div h2, .momentum-image-saver.background-color-teal .columns.block > div h3, .momentum-image-saver.background-color-teal .columns.block > div h4, .momentum-image-saver.background-color-teal .columns.block > div h5, .momentum-image-saver.background-color-teal .columns.block > div h6{
   color:var(--heading-reverse);
 }
 
-.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content p{
+.momentum-image-saver.background-color-teal .columns.block > div p, .momentum-image-saver.background-color-teal .columns.block > div ul{
   color:var(--body-reverse);
 }
 
-.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content a{
+.momentum-image-saver.background-color-teal .columns.block > div .button-container a:not(.secondary){
   background-color:var(--color-button-secondary-default);
   border:none;
   color:var(--color-button-text-stroke-default);
@@ -218,52 +259,68 @@
   padding-block:8px;
 }
 
-.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content a:hover{
+.momentum-image-saver.background-color-teal .columns.block > div .button-container a:not(.secondary):hover{
   background-color:var(--color-button-secondary-hover);
   border:none;
   color:var(--color-button-text-stroke-hover);
 }
 
-.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content a:active{
+.momentum-image-saver.background-color-teal .columns.block > div .button-container a:not(.secondary):active{
   background-color:var(--color-button-secondary-press);
   border:none;
   color:var(--color-button-text-stroke-press);
 }
 
-.momentum-saver-section.background-color-teal.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content a:focus-visible{
+.momentum-image-saver.background-color-teal .columns.block > div .button-container a:not(.secondary):focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
   outline:none;
 }
 
-.momentum-saver-section.momentum-image-saver .columns-wrapper{
-  margin-left:auto;
-  margin-right:auto;
-  max-width:calc(1440px - 0px);
-  padding-inline:64px;
-  width:100%;
+.momentum-image-saver.background-color-teal .columns.block > div .button-container a:not(.secondary) svg{
+  height:12px;
+  width:12px;
 }
 
-.momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns{
-  padding:0;
+.momentum-image-saver.background-color-teal .columns.block > div .button-container a.secondary{
+  background-color:var(--color-button-outlined-reverse-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+  font-size:var(--font-size-h5);
+  font-style:normal;
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:6px;
+  text-decoration:unset;
 }
 
-.momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div{
+.momentum-image-saver.background-color-teal .columns.block > div .button-container a.secondary:hover{
+  background-color:var(--color-button-outlined-reverse-hover);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.momentum-image-saver.background-color-teal .columns.block > div .button-container a.secondary:active{
+  background-color:var(--color-button-outlined-reverse-press);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.momentum-image-saver.background-color-teal .columns.block > div .button-container a.secondary:focus-visible{
+  box-shadow:0 0 0 2px var(--color-focus-default), 0 0 0 3px var(--color-focus-reversed);
+  outline:none;
+}
+
+.momentum-image-saver.background-color-teal .columns.block > div .button-container a.secondary svg{
+  height:12px;
+  width:12px;
+}
+
+.momentum-image-saver .columns.block > div{
   align-items:center;
   gap:24px;
 }
 
-.momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .columns-img-col{
-  max-width:519.5px;
-  width:100%;
-}
-
-.momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .columns-img-col img{
-  border-radius:var(--radius-card);
-}
-
-.momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h1,
-.momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h2,
-.momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content h3{
+.momentum-image-saver .columns.block > div h1, .momentum-image-saver .columns.block > div h2{
   font-family:var(--font-family-h1-std);
   font-size:var(--font-size-h1-std);
   font-weight:var(--font-weight-h1-std);
@@ -272,60 +329,12 @@
   text-transform:initial;
 }
 
-.momentum-image-saver.bg-image-saver{
-  background-color:var(--heading-default);
-}
-
-.momentum-image-saver.bg-image-saver .momentum-second-content h1,
-.momentum-image-saver.bg-image-saver .momentum-second-content h2,
-.momentum-image-saver.bg-image-saver .momentum-second-content h3,
-.momentum-image-saver.bg-image-saver .momentum-second-content h4,
-.momentum-image-saver.bg-image-saver .momentum-second-content h5,
-.momentum-image-saver.bg-image-saver .momentum-second-content h6,
-.momentum-image-saver.bg-image-saver .momentum-second-content p{
-  color:var(--body-reverse);
-}
-
-.momentum-image-saver.bg-image-saver .momentum-second-content .button-container a{
-  background-color:var(--color-button-secondary-default);
-  border:none;
-  color:var(--color-button-text-stroke-default);
-  font-size:var(--font-size-h5);
-  line-height:var(--font-height-h5);
-  min-width:150px;
-  padding-block:8px;
-}
-
-.momentum-image-saver.bg-image-saver .momentum-second-content .button-container a:hover{
-  background-color:var(--color-button-secondary-hover);
-  border:none;
-  color:var(--color-button-text-stroke-hover);
-}
-
-.momentum-image-saver.bg-image-saver .momentum-second-content .button-container a:active{
-  background-color:var(--color-button-secondary-press);
-  border:none;
-  color:var(--color-button-text-stroke-press);
-}
-
-.momentum-image-saver.bg-image-saver .momentum-second-content .button-container a:focus-visible{
-  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
-  outline:none;
-}
-
-.momentum-saver-section.image-swapping .columns-wrapper .momentum-columns > div{
-  flex-direction:row-reverse;
+.image-swapping .columns.block > div, .momentum-app-badges .columns.block > div, .momentum-direct-variant .columns.block > div{
+  align-items:center;
   gap:80px;
 }
 
-.momentum-saver-section.image-swapping .columns-wrapper .momentum-columns > div .columns-img-col{
-  max-width:unset;
-  width:50%;
-}
-
-.momentum-saver-section.image-swapping .columns-wrapper .momentum-columns > div .momentum-second-content h1,
-.momentum-saver-section.image-swapping .columns-wrapper .momentum-columns > div .momentum-second-content h2,
-.momentum-saver-section.image-swapping .columns-wrapper .momentum-columns > div .momentum-second-content h3{
+.image-swapping .columns.block > div h1, .image-swapping .columns.block > div h2, .momentum-app-badges .columns.block > div h1, .momentum-app-badges .columns.block > div h2, .momentum-direct-variant .columns.block > div h1, .momentum-direct-variant .columns.block > div h2{
   font-family:var(--font-family-h1);
   font-size:var(--font-size-h1);
   font-weight:var(--font-weight-h1);
@@ -334,116 +343,102 @@
   text-transform:initial;
 }
 
-.momentum-saver-section.image-swapping .columns-wrapper .momentum-columns > div .momentum-second-content p{
-  margin-bottom:0;
+.image-swapping .columns.block > div h3, .image-swapping .columns.block > div h4, .image-swapping .columns.block > div h5, .image-swapping .columns.block > div h6, .momentum-app-badges .columns.block > div h3, .momentum-app-badges .columns.block > div h4, .momentum-app-badges .columns.block > div h5, .momentum-app-badges .columns.block > div h6, .momentum-direct-variant .columns.block > div h3, .momentum-direct-variant .columns.block > div h4, .momentum-direct-variant .columns.block > div h5, .momentum-direct-variant .columns.block > div h6{
+  margin-bottom:16px;
 }
 
-.momentum-direct-variant .momentum-columns div .momentum-second-content ul{
-  align-items:flex-start;
+.momentum-app-badges a:has(svg){
+  display:inline-block;
+}
+
+.momentum-app-badges svg{
   display:flex;
-  flex-direction:column;
-  gap:16px;
-  margin-bottom:10px;
-  max-width:unset;
-  width:100%;
+  height:40px;
+  justify-content:flex-start;
+  width:135px;
 }
 
-.momentum-direct-variant .momentum-columns div .momentum-second-content ul li{
-  display:flex;
-  flex-direction:row;
+.momentum-direct-variant .columns.block > div ul{
+  list-style:none;
 }
 
-.momentum-direct-variant .momentum-columns div .momentum-second-content ul .icon-checkmark .icon-svg{
-  color:var(--heading-default);
-  height:32px;
-  margin-right:16px;
-  width:32px;
+.momentum-saver-section:has(.interest-rate) .columns.block{
+  background:var(--bg-default);
+  border-radius:var(--radius-card);
+  padding:64px;
 }
 
-.momentum-saver-section.circular-image .columns-wrapper .momentum-columns div{
-  gap:64px;
+.momentum-saver-section.background-color-teal, .momentum-image-saver.background-color-teal{
+  background-color:var(--bg-reverse);
 }
 
-.momentum-saver-section.circular-image .columns-wrapper .momentum-columns div .columns-img-col{
-  max-width:250px;
+.momentum-saver-section.background-color-secondary, .momentum-image-saver.background-color-secondary{
+  background-color:var(--bg-light);
+}
+
+.momentum-saver-section.background-color-gradient, .momentum-image-saver.background-color-gradient{
+  background:var(--gradient-1);
 }
 
 @media screen and (max-width: 1279px){
-  .momentum-saver-section .columns-wrapper{
+  .momentum-saver-section .momentum-section-wrapper, .momentum-image-saver .momentum-section-wrapper, .image-swapping .momentum-section-wrapper, .momentum-app-badges .momentum-section-wrapper, .momentum-direct-variant .momentum-section-wrapper{
     padding-inline:24px;
-  }
-
-  .momentum-saver-section.momentum-image-saver .columns-wrapper{
-    padding-inline:24px;
-  }
-
-  .momentum-direct-variant .momentum-columns div{
-    flex-direction:column-reverse;
   }
 }
 
 @media screen and (max-width: 1023px){
-  .momentum-saver-section .momentum-columns .momentum-content .rate-unit{
+  .momentum-saver-section .columns.block > div, .momentum-image-saver .columns.block > div, .image-swapping .columns.block > div, .momentum-app-badges .columns.block > div, .momentum-direct-variant .columns.block > div{
+    flex-direction:column;
+  }
+
+  .momentum-saver-section .columns.block > div .rate-unit, .momentum-image-saver .columns.block > div .rate-unit, .image-swapping .columns.block > div .rate-unit, .momentum-app-badges .columns.block > div .rate-unit, .momentum-direct-variant .columns.block > div .rate-unit{
     align-items:unset;
   }
 
-  .momentum-saver-section.momentum-image-saver .columns-wrapper .momentum-columns div .momentum-second-content{
-    display:block;
-  }
-
-  .momentum-saver-section.image-swapping .columns-wrapper .momentum-columns > div{
-    flex-direction:column-reverse;
+  .image-swapping .columns.block > div, .momentum-app-badges .columns.block > div, .momentum-direct-variant .columns.block > div{
     gap:32px;
   }
 
-  .momentum-saver-section.image-swapping .columns-wrapper .momentum-columns > div .columns-img-col{
-    max-width:unset;
-    width:100%;
+  .momentum-saver-section:has(.interest-rate) .columns.block{
+    padding:40px 16px;
   }
 }
 
 @media screen and (max-width: 767px){
-  .momentum-saver-section .columns-wrapper{
+  .momentum-saver-section .momentum-section-wrapper, .momentum-image-saver .momentum-section-wrapper, .image-swapping .momentum-section-wrapper, .momentum-app-badges .momentum-section-wrapper, .momentum-direct-variant .momentum-section-wrapper{
     padding-inline:16px;
   }
 
-  .momentum-saver-section .momentum-columns{
-    align-items:flex-start;
-    flex-direction:column;
-    padding:40px 16px;
+  .momentum-saver-section .default-content-wrapper, .momentum-image-saver .default-content-wrapper, .image-swapping .default-content-wrapper, .momentum-app-badges .default-content-wrapper, .momentum-direct-variant .default-content-wrapper{
+    margin-bottom:24px;
   }
 
-  .momentum-saver-section .momentum-columns .momentum-content .rate-num{
+  .momentum-saver-section .columns.block > div .rate-num, .momentum-image-saver .columns.block > div .rate-num, .image-swapping .columns.block > div .rate-num, .momentum-app-badges .columns.block > div .rate-num, .momentum-direct-variant .columns.block > div .rate-num{
     font-size:120px;
     font-style:normal;
     line-height:120px;
   }
 
-  .momentum-saver-section .momentum-columns .momentum-content .rate-percent{
+  .momentum-saver-section .columns.block > div .rate-percent, .momentum-image-saver .columns.block > div .rate-percent, .image-swapping .columns.block > div .rate-percent, .momentum-app-badges .columns.block > div .rate-percent, .momentum-direct-variant .columns.block > div .rate-percent{
     font-size:78px;
     line-height:72px;
   }
 
-  .momentum-saver-section .momentum-columns .momentum-second-content .button-container{
-    display:block;
-    margin-bottom:5px;
-  }
-
-  .momentum-saver-section.momentum-image-saver .columns-wrapper{
-    padding-inline:16px;
+  .image-swapping .columns.block > div, .momentum-app-badges .columns.block > div, .momentum-direct-variant .columns.block > div{
+    gap:24px;
   }
 }
 
 @media screen and (max-width: 400px){
-  .momentum-saver-section .momentum-columns .momentum-content .rate-num{
+  .momentum-saver-section .columns.block > div .rate-num, .momentum-image-saver .columns.block > div .rate-num, .image-swapping .columns.block > div .rate-num, .momentum-app-badges .columns.block > div .rate-num, .momentum-direct-variant .columns.block > div .rate-num{
     font-size:108px;
   }
 
-  .momentum-saver-section .momentum-columns .momentum-content .rate-percent{
+  .momentum-saver-section .columns.block > div .rate-percent, .momentum-image-saver .columns.block > div .rate-percent, .image-swapping .columns.block > div .rate-percent, .momentum-app-badges .columns.block > div .rate-percent, .momentum-direct-variant .columns.block > div .rate-percent{
     font-size:70px;
   }
 
-  .momentum-saver-section .momentum-columns .momentum-content .rate-pa{
+  .momentum-saver-section .columns.block > div .rate-pa, .momentum-image-saver .columns.block > div .rate-pa, .image-swapping .columns.block > div .rate-pa, .momentum-app-badges .columns.block > div .rate-pa, .momentum-direct-variant .columns.block > div .rate-pa{
     font-size:32px;
   }
 }
