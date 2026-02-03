@@ -9,6 +9,10 @@ export default function decorate(block) {
   ];
   dataMapMoObj.addIndexed(block);
 
+  const iframeId = block.querySelector(".form-item1 .form-inner-item1").innerText;
+  const iframeLink = block.querySelector(".form-item2 .form-inner-item1 a").getAttribute("href");
+  const iframeJsLink = block.querySelector(".form-item3 .form-inner-item1 a").getAttribute("href");
+
   // Create style element
   const style = document.createElement('style');
   style.textContent = 'iframe {width: 1px;min-width: 100%;}';
