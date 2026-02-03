@@ -363,7 +363,7 @@
             "value": "looking-for-another-way"
           },
           {
-            "name": "Circular Image",
+            "name": "Momentum Circular Image",
             "value": "circular-image "
           },
           {
@@ -383,7 +383,7 @@
             "value": "home-loan-explained"
           },
           {
-            "name": "Table with icons",
+            "name": "Table Section",
             "value": "table-with-icons"
           },
           {
@@ -1461,8 +1461,18 @@
     "fields": [
       {
         "component": "text",
-        "name": "i-frame-link",
-        "label": "Enter calculator only URL for iframe"
+        "name": "iframe-id",
+        "label": "Enter ID for iframe"
+      },
+      {
+        "component": "text",
+        "name": "iframe-link",
+        "label": "Enter iframe Link"
+      },
+      {
+        "component": "text",
+        "name": "iframe-js-link",
+        "label": "Enter JavaScript Link for Iframe"
       }
     ]
   },

@@ -15,6 +15,10 @@
 
   .default-content-wrapper {
     min-width: 384px;
+
+    @include tablet {
+      min-width: unset;
+    }
     
     h1, h2, h3, h4, h5, h6 {
       @include typo-heading1;

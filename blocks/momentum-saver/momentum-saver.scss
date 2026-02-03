@@ -122,25 +122,15 @@
     .rate-num {
       font-family: $font-family-lg;
       color: $heading-default;
-      font-size: 140px;
+      font-size: 150px;
       font-weight: $font-weight-rate;
       line-height: 120px;
-
-      @include mobile {
-        font-size: 120px;
-        font-style: normal;
-        line-height: 120px;
-      }
-
-      @media screen and (max-width: 400px) {
-        font-size: 108px;
-      }
     }
 
     .rate-unit {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       line-height: 1;
 
@@ -152,33 +142,38 @@
     .rate-percent {
       color: $heading-default;
       font-family: $font-family-lg;
-      font-size: 80px;
+      font-size: 86px;
       line-height: 72px;
       font-weight: $font-weight-rate;
-
-      @include mobile {
-        font-size: 78px;
-        line-height: 72px;
-      }
-
-      @media screen and (max-width: 400px) {
-        font-size: 70px;
-      }
     }
 
     .rate-pa {
       color: $heading-default;
       text-align: left;
-      font-size: 40px;
+      font-size: 45px;
       font-family: $font-family-h1-std;
       font-weight: $font-weight-rate-p-a;
-      line-height: 28px;
+      line-height: 54px;
+    }
 
-      @media screen and (max-width: 400px) {
+    @media (max-width: 400px) {
+      .rate-num {
+        font-size: 120px;
+        line-height: 120px;
+      }
+  
+      .rate-percent {
+        font-size: 66px;
+        line-height: 72px;
+      }
+  
+      .rate-pa {
         font-size: 32px;
+        line-height: 32px;
       }
     }
   }
+  
 }
 
 .momentum-image-saver {
@@ -217,7 +212,7 @@
   }
 }
 
-.image-swapping, .momentum-app-badges, .momentum-direct-variant {
+.image-swapping, .momentum-app-badges, .momentum-direct-variant, .circular-image {
   .columns.block > div {
     align-items: center;
     gap: 80px;
@@ -284,5 +279,71 @@
 
   &.background-color-gradient {
     background: $gradient-1;
+  }
+}
+
+.momentum-saver-section.circular-image {
+  .columns.block {
+    & > div {
+      gap: 64px;
+
+      @include tablet {
+        flex-direction: row;
+        gap: 32px;
+      }
+      
+      @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+      }
+    }
+  }
+
+  &.background-color-teal {
+    background: unset;
+
+    .columns.block {
+      padding: 80px 24px;
+      background: $bg-reverse;
+      border-radius: $radius-card;
+
+      @include tablet {
+        padding: 64px 24px;
+      }
+
+      @include mobile {
+        padding: 40px 16px;
+      }
+
+      & > div {
+        padding: 0 64px;
+
+        @include tablet {
+          padding: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+          color: $heading-reverse;
+        }
+
+        p, ul {
+          color: $body-reverse;
+        }
+
+        .button-container {
+          a:not(.secondary) {
+            @include button('secondary');
+          }
+          
+          a.secondary {
+            @include button('outlined-reverse');
+            
+            font-style: normal;
+            text-decoration: unset;
+          }
+        }
+      }
+    }
   }
 }

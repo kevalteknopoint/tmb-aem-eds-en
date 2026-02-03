@@ -1,4 +1,4 @@
-.momentum-saver-section .columns.block > div .button-container a:not(.secondary), .momentum-image-saver .columns.block > div .button-container a:not(.secondary), .image-swapping .columns.block > div .button-container a:not(.secondary), .momentum-app-badges .columns.block > div .button-container a:not(.secondary), .momentum-direct-variant .columns.block > div .button-container a:not(.secondary), .momentum-saver-section .columns.block > div .button-container a.secondary, .momentum-image-saver .columns.block > div .button-container a.secondary, .image-swapping .columns.block > div .button-container a.secondary, .momentum-app-badges .columns.block > div .button-container a.secondary, .momentum-direct-variant .columns.block > div .button-container a.secondary, .momentum-image-saver.background-color-teal .columns.block > div .button-container a:not(.secondary), .momentum-image-saver.background-color-teal .columns.block > div .button-container a.secondary{
+.momentum-saver-section .columns.block > div .button-container a:not(.secondary), .momentum-image-saver .columns.block > div .button-container a:not(.secondary), .image-swapping .columns.block > div .button-container a:not(.secondary), .momentum-app-badges .columns.block > div .button-container a:not(.secondary), .momentum-direct-variant .columns.block > div .button-container a:not(.secondary), .momentum-saver-section .columns.block > div .button-container a.secondary, .momentum-image-saver .columns.block > div .button-container a.secondary, .image-swapping .columns.block > div .button-container a.secondary, .momentum-app-badges .columns.block > div .button-container a.secondary, .momentum-direct-variant .columns.block > div .button-container a.secondary, .momentum-image-saver.background-color-teal .columns.block > div .button-container a:not(.secondary), .momentum-image-saver.background-color-teal .columns.block > div .button-container a.secondary, .momentum-saver-section.circular-image.background-color-teal .columns.block > div .button-container a:not(.secondary), .momentum-saver-section.circular-image.background-color-teal .columns.block > div .button-container a.secondary{
   align-items:center;
   border:none;
   border-radius:var(--radius-button);
@@ -211,7 +211,7 @@
 .momentum-saver-section .columns.block > div .rate-num, .momentum-image-saver .columns.block > div .rate-num, .image-swapping .columns.block > div .rate-num, .momentum-app-badges .columns.block > div .rate-num, .momentum-direct-variant .columns.block > div .rate-num{
   color:var(--heading-default);
   font-family:var(--font-family-lg);
-  font-size:140px;
+  font-size:150px;
   font-weight:var(--font-weight-rate);
   line-height:120px;
 }
@@ -220,14 +220,14 @@
   align-items:center;
   display:flex;
   flex-direction:column;
-  justify-content:center;
+  justify-content:flex-start;
   line-height:1;
 }
 
 .momentum-saver-section .columns.block > div .rate-percent, .momentum-image-saver .columns.block > div .rate-percent, .image-swapping .columns.block > div .rate-percent, .momentum-app-badges .columns.block > div .rate-percent, .momentum-direct-variant .columns.block > div .rate-percent{
   color:var(--heading-default);
   font-family:var(--font-family-lg);
-  font-size:80px;
+  font-size:86px;
   font-weight:var(--font-weight-rate);
   line-height:72px;
 }
@@ -235,9 +235,9 @@
 .momentum-saver-section .columns.block > div .rate-pa, .momentum-image-saver .columns.block > div .rate-pa, .image-swapping .columns.block > div .rate-pa, .momentum-app-badges .columns.block > div .rate-pa, .momentum-direct-variant .columns.block > div .rate-pa{
   color:var(--heading-default);
   font-family:var(--font-family-h1-std);
-  font-size:40px;
+  font-size:45px;
   font-weight:var(--font-weight-rate-p-a);
-  line-height:28px;
+  line-height:54px;
   text-align:left;
 }
 
@@ -329,12 +329,12 @@
   text-transform:initial;
 }
 
-.image-swapping .columns.block > div, .momentum-app-badges .columns.block > div, .momentum-direct-variant .columns.block > div{
+.image-swapping .columns.block > div, .momentum-app-badges .columns.block > div, .momentum-direct-variant .columns.block > div, .circular-image .columns.block > div{
   align-items:center;
   gap:80px;
 }
 
-.image-swapping .columns.block > div h1, .image-swapping .columns.block > div h2, .momentum-app-badges .columns.block > div h1, .momentum-app-badges .columns.block > div h2, .momentum-direct-variant .columns.block > div h1, .momentum-direct-variant .columns.block > div h2{
+.image-swapping .columns.block > div h1, .image-swapping .columns.block > div h2, .momentum-app-badges .columns.block > div h1, .momentum-app-badges .columns.block > div h2, .momentum-direct-variant .columns.block > div h1, .momentum-direct-variant .columns.block > div h2, .circular-image .columns.block > div h1, .circular-image .columns.block > div h2{
   font-family:var(--font-family-h1);
   font-size:var(--font-size-h1);
   font-weight:var(--font-weight-h1);
@@ -343,7 +343,7 @@
   text-transform:initial;
 }
 
-.image-swapping .columns.block > div h3, .image-swapping .columns.block > div h4, .image-swapping .columns.block > div h5, .image-swapping .columns.block > div h6, .momentum-app-badges .columns.block > div h3, .momentum-app-badges .columns.block > div h4, .momentum-app-badges .columns.block > div h5, .momentum-app-badges .columns.block > div h6, .momentum-direct-variant .columns.block > div h3, .momentum-direct-variant .columns.block > div h4, .momentum-direct-variant .columns.block > div h5, .momentum-direct-variant .columns.block > div h6{
+.image-swapping .columns.block > div h3, .image-swapping .columns.block > div h4, .image-swapping .columns.block > div h5, .image-swapping .columns.block > div h6, .momentum-app-badges .columns.block > div h3, .momentum-app-badges .columns.block > div h4, .momentum-app-badges .columns.block > div h5, .momentum-app-badges .columns.block > div h6, .momentum-direct-variant .columns.block > div h3, .momentum-direct-variant .columns.block > div h4, .momentum-direct-variant .columns.block > div h5, .momentum-direct-variant .columns.block > div h6, .circular-image .columns.block > div h3, .circular-image .columns.block > div h4, .circular-image .columns.block > div h5, .circular-image .columns.block > div h6{
   margin-bottom:16px;
 }
 
@@ -380,6 +380,98 @@
   background:var(--gradient-1);
 }
 
+.momentum-saver-section.circular-image .columns.block > div{
+  gap:64px;
+}
+
+.momentum-saver-section.circular-image.background-color-teal{
+  background:unset;
+}
+
+.momentum-saver-section.circular-image.background-color-teal .columns.block{
+  background:var(--bg-reverse);
+  border-radius:var(--radius-card);
+  padding:80px 24px;
+}
+
+.momentum-saver-section.circular-image.background-color-teal .columns.block > div{
+  padding:0 64px;
+}
+
+.momentum-saver-section.circular-image.background-color-teal .columns.block > div h1, .momentum-saver-section.circular-image.background-color-teal .columns.block > div h2, .momentum-saver-section.circular-image.background-color-teal .columns.block > div h3, .momentum-saver-section.circular-image.background-color-teal .columns.block > div h4, .momentum-saver-section.circular-image.background-color-teal .columns.block > div h5, .momentum-saver-section.circular-image.background-color-teal .columns.block > div h6{
+  color:var(--heading-reverse);
+}
+
+.momentum-saver-section.circular-image.background-color-teal .columns.block > div p, .momentum-saver-section.circular-image.background-color-teal .columns.block > div ul{
+  color:var(--body-reverse);
+}
+
+.momentum-saver-section.circular-image.background-color-teal .columns.block > div .button-container a:not(.secondary){
+  background-color:var(--color-button-secondary-default);
+  border:none;
+  color:var(--color-button-text-stroke-default);
+  font-size:var(--font-size-h5);
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:8px;
+}
+
+.momentum-saver-section.circular-image.background-color-teal .columns.block > div .button-container a:not(.secondary):hover{
+  background-color:var(--color-button-secondary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-hover);
+}
+
+.momentum-saver-section.circular-image.background-color-teal .columns.block > div .button-container a:not(.secondary):active{
+  background-color:var(--color-button-secondary-press);
+  border:none;
+  color:var(--color-button-text-stroke-press);
+}
+
+.momentum-saver-section.circular-image.background-color-teal .columns.block > div .button-container a:not(.secondary):focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.momentum-saver-section.circular-image.background-color-teal .columns.block > div .button-container a:not(.secondary) svg{
+  height:12px;
+  width:12px;
+}
+
+.momentum-saver-section.circular-image.background-color-teal .columns.block > div .button-container a.secondary{
+  background-color:var(--color-button-outlined-reverse-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+  font-size:var(--font-size-h5);
+  font-style:normal;
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:6px;
+  text-decoration:unset;
+}
+
+.momentum-saver-section.circular-image.background-color-teal .columns.block > div .button-container a.secondary:hover{
+  background-color:var(--color-button-outlined-reverse-hover);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.momentum-saver-section.circular-image.background-color-teal .columns.block > div .button-container a.secondary:active{
+  background-color:var(--color-button-outlined-reverse-press);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.momentum-saver-section.circular-image.background-color-teal .columns.block > div .button-container a.secondary:focus-visible{
+  box-shadow:0 0 0 2px var(--color-focus-default), 0 0 0 3px var(--color-focus-reversed);
+  outline:none;
+}
+
+.momentum-saver-section.circular-image.background-color-teal .columns.block > div .button-container a.secondary svg{
+  height:12px;
+  width:12px;
+}
+
 @media screen and (max-width: 1279px){
   .momentum-saver-section .momentum-section-wrapper, .momentum-image-saver .momentum-section-wrapper, .image-swapping .momentum-section-wrapper, .momentum-app-badges .momentum-section-wrapper, .momentum-direct-variant .momentum-section-wrapper{
     padding-inline:24px;
@@ -395,12 +487,25 @@
     align-items:unset;
   }
 
-  .image-swapping .columns.block > div, .momentum-app-badges .columns.block > div, .momentum-direct-variant .columns.block > div{
+  .image-swapping .columns.block > div, .momentum-app-badges .columns.block > div, .momentum-direct-variant .columns.block > div, .circular-image .columns.block > div{
     gap:32px;
   }
 
   .momentum-saver-section:has(.interest-rate) .columns.block{
     padding:40px 16px;
+  }
+
+  .momentum-saver-section.circular-image .columns.block > div{
+    flex-direction:row;
+    gap:32px;
+  }
+
+  .momentum-saver-section.circular-image.background-color-teal .columns.block{
+    padding:64px 24px;
+  }
+
+  .momentum-saver-section.circular-image.background-color-teal .columns.block > div{
+    padding:0;
   }
 }
 
@@ -413,32 +518,34 @@
     margin-bottom:24px;
   }
 
+  .image-swapping .columns.block > div, .momentum-app-badges .columns.block > div, .momentum-direct-variant .columns.block > div, .circular-image .columns.block > div{
+    gap:24px;
+  }
+
+  .momentum-saver-section.circular-image .columns.block > div{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:24px;
+  }
+
+  .momentum-saver-section.circular-image.background-color-teal .columns.block{
+    padding:40px 16px;
+  }
+}
+
+@media (max-width: 400px){
   .momentum-saver-section .columns.block > div .rate-num, .momentum-image-saver .columns.block > div .rate-num, .image-swapping .columns.block > div .rate-num, .momentum-app-badges .columns.block > div .rate-num, .momentum-direct-variant .columns.block > div .rate-num{
     font-size:120px;
-    font-style:normal;
     line-height:120px;
   }
 
   .momentum-saver-section .columns.block > div .rate-percent, .momentum-image-saver .columns.block > div .rate-percent, .image-swapping .columns.block > div .rate-percent, .momentum-app-badges .columns.block > div .rate-percent, .momentum-direct-variant .columns.block > div .rate-percent{
-    font-size:78px;
+    font-size:66px;
     line-height:72px;
-  }
-
-  .image-swapping .columns.block > div, .momentum-app-badges .columns.block > div, .momentum-direct-variant .columns.block > div{
-    gap:24px;
-  }
-}
-
-@media screen and (max-width: 400px){
-  .momentum-saver-section .columns.block > div .rate-num, .momentum-image-saver .columns.block > div .rate-num, .image-swapping .columns.block > div .rate-num, .momentum-app-badges .columns.block > div .rate-num, .momentum-direct-variant .columns.block > div .rate-num{
-    font-size:108px;
-  }
-
-  .momentum-saver-section .columns.block > div .rate-percent, .momentum-image-saver .columns.block > div .rate-percent, .image-swapping .columns.block > div .rate-percent, .momentum-app-badges .columns.block > div .rate-percent, .momentum-direct-variant .columns.block > div .rate-percent{
-    font-size:70px;
   }
 
   .momentum-saver-section .columns.block > div .rate-pa, .momentum-image-saver .columns.block > div .rate-pa, .image-swapping .columns.block > div .rate-pa, .momentum-app-badges .columns.block > div .rate-pa, .momentum-direct-variant .columns.block > div .rate-pa{
     font-size:32px;
+    line-height:32px;
   }
 }

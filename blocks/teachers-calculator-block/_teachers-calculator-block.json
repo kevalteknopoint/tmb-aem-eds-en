@@ -1,33 +1,43 @@
 {
-    "definitions": [
-        {
-          "title": "Teachers Calculator Block",
-          "id": "teachers-calculator-block",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Teachers Calculator Block",
-                  "filter":"teachers-calculator-block",
-                  "model": "teachers-calculator-block"
-                }
-              }
+  "definitions": [
+    {
+      "title": "Teachers Calculator Block",
+      "id": "teachers-calculator-block",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Teachers Calculator Block",
+              "filter": "teachers-calculator-block",
+              "model": "teachers-calculator-block"
             }
           }
         }
-    ],
-    "models": [
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "teachers-calculator-block",
+      "fields": [
         {
-            "id": "teachers-calculator-block",
-            "fields": [
-                {
-                    "component": "text",
-                    "name": "i-frame-link",
-                    "label": "Enter calculator only URL for iframe"
-                }
-            ]
+          "component": "text",
+          "name": "iframe-id",
+          "label": "Enter ID for iframe"
+        },
+        {
+          "component": "text",
+          "name": "iframe-link",
+          "label": "Enter iframe Link"
+        },
+        {
+          "component": "text",
+          "name": "iframe-js-link",
+          "label": "Enter JavaScript Link for Iframe"
         }
-    ],
-    "filters": []
+      ]
+    }
+  ],
+  "filters": []
 }

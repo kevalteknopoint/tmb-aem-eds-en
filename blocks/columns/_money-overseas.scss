@@ -66,7 +66,12 @@
 
     @include tablet-lg {
       padding: 24px 0;
-      gap: 16px;
+      gap: 40px;
+    }
+
+
+    @include mobile {
+      gap: 24px;
     }
 
     div {

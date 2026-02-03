@@ -1,6 +1,6 @@
 @import "../../libs/swiper/swiper-bundle.min.css";
 
-.looking-for-another-way .cards-wrapper li .cards-card-body .card-button a, .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container a, .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta .cta-link, .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta .cta-link.secondary{
+.looking-for-another-way .cards-wrapper li .cards-card-body .card-button a, .section.faq-cant-find-looking-for .default-content-wrapper .button-container a:not(.secondary), .section.faq-cant-find-looking-for .default-content-wrapper .button-container a.secondary, .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p.button-container a, .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta .cta-link, .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta .cta-link.secondary{
   align-items:center;
   border:none;
   border-radius:var(--radius-button);
@@ -520,6 +520,7 @@
 
 .section.faq-cant-find-looking-for .default-content-wrapper{
   margin-bottom:40px;
+  text-align:center;
 }
 
 .section.faq-cant-find-looking-for .default-content-wrapper h1,
@@ -541,6 +542,81 @@
 .section.faq-cant-find-looking-for .default-content-wrapper p{
   margin-top:16px;
   text-align:center;
+}
+
+.section.faq-cant-find-looking-for .default-content-wrapper .button-container{
+  display:inline-block;
+  margin-bottom:0;
+  margin-right:8px;
+  margin-top:40px;
+}
+
+.section.faq-cant-find-looking-for .default-content-wrapper .button-container a:not(.secondary){
+  background-color:var(--color-button-primary-default);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+  font-size:var(--font-size-h5);
+  font-style:normal;
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:8px;
+  text-decoration:unset;
+}
+
+.section.faq-cant-find-looking-for .default-content-wrapper .button-container a:not(.secondary):hover{
+  background-color:var(--color-button-primary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.section.faq-cant-find-looking-for .default-content-wrapper .button-container a:not(.secondary):active{
+  background-color:var(--color-button-primary-press);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.section.faq-cant-find-looking-for .default-content-wrapper .button-container a:not(.secondary):focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.section.faq-cant-find-looking-for .default-content-wrapper .button-container a:not(.secondary) svg{
+  height:12px;
+  width:12px;
+}
+
+.section.faq-cant-find-looking-for .default-content-wrapper .button-container a.secondary{
+  background-color:var(--color-button-outlined-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-default);
+  color:var(--color-button-text-stroke-default);
+  font-size:var(--font-size-h5);
+  font-style:normal;
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:6px;
+  text-decoration:unset;
+}
+
+.section.faq-cant-find-looking-for .default-content-wrapper .button-container a.secondary:hover{
+  background-color:var(--color-button-outlined-hover);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-hover);
+  color:var(--color-button-text-stroke-hover);
+}
+
+.section.faq-cant-find-looking-for .default-content-wrapper .button-container a.secondary:active{
+  background-color:var(--color-button-outlined-press);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-press);
+  color:var(--color-button-text-stroke-press);
+}
+
+.section.faq-cant-find-looking-for .default-content-wrapper .button-container a.secondary:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.section.faq-cant-find-looking-for .default-content-wrapper .button-container a.secondary svg{
+  height:12px;
+  width:12px;
 }
 
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul{
@@ -739,6 +815,32 @@
   text-underline-offset:3px;
 }
 
+.section.faq-cant-find-looking-for.variation-border.background-color-teal .default-content-wrapper h1,
+.section.faq-cant-find-looking-for.variation-border.background-color-teal .default-content-wrapper h2,
+.section.faq-cant-find-looking-for.variation-border.background-color-teal .default-content-wrapper h3,
+.section.faq-cant-find-looking-for.variation-border.background-color-teal .default-content-wrapper h4,
+.section.faq-cant-find-looking-for.variation-border.background-color-teal .default-content-wrapper h5,
+.section.faq-cant-find-looking-for.variation-border.background-color-teal .default-content-wrapper h6{
+  text-align:center;
+}
+
+.section.faq-cant-find-looking-for.variation-border.background-color-teal .cards-wrapper .cards ul li{
+  background-color:var(--bg-reverse);
+}
+
+.section.faq-cant-find-looking-for.variation-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h1, .section.faq-cant-find-looking-for.variation-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h2, .section.faq-cant-find-looking-for.variation-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h3, .section.faq-cant-find-looking-for.variation-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h4, .section.faq-cant-find-looking-for.variation-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h5, .section.faq-cant-find-looking-for.variation-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h6{
+  border-bottom:2px solid var(--link-reverse);
+  color:var(--link-reverse);
+}
+
+.section.faq-cant-find-looking-for.variation-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body p{
+  color:var(--body-reverse);
+}
+
+.section.faq-cant-find-looking-for.variation-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body p.button-container a{
+  border:unset;
+}
+
 .section.faq-cant-find-looking-for.variation-border .default-content-wrapper h1,
 .section.faq-cant-find-looking-for.variation-border .default-content-wrapper h2,
 .section.faq-cant-find-looking-for.variation-border .default-content-wrapper h3,
@@ -752,6 +854,10 @@
   border:1px solid var(--line-default);
   border-radius:24px;
   padding:40px 24px;
+}
+
+.section.faq-cant-find-looking-for.variation-border .cards-wrapper .cards ul li .cards-card-body h1:last-child, .section.faq-cant-find-looking-for.variation-border .cards-wrapper .cards ul li .cards-card-body h2:last-child, .section.faq-cant-find-looking-for.variation-border .cards-wrapper .cards ul li .cards-card-body h3:last-child, .section.faq-cant-find-looking-for.variation-border .cards-wrapper .cards ul li .cards-card-body h4:last-child, .section.faq-cant-find-looking-for.variation-border .cards-wrapper .cards ul li .cards-card-body h5:last-child, .section.faq-cant-find-looking-for.variation-border .cards-wrapper .cards ul li .cards-card-body h6:last-child{
+  margin-bottom:0;
 }
 
 .section.faq-cant-find-looking-for.variation-border .cards-wrapper .cards ul li .cards-card-body p.button-container a{
@@ -1675,6 +1781,10 @@ html{
     text-align:left;
   }
 
+  .section.faq-cant-find-looking-for.variation-border .cards-wrapper .cards ul li{
+    padding:40px 24px;
+  }
+
   .banking-goods .cards-wrapper .cards{
     overflow:auto;
     scrollbar-width:none;
@@ -1923,6 +2033,10 @@ html{
     margin-bottom:24px;
   }
 
+  .section.faq-cant-find-looking-for .default-content-wrapper .button-container{
+    margin-top:24px;
+  }
+
   .section.faq-cant-find-looking-for .cards-wrapper .cards ul{
     grid-template-columns:1fr;
   }
@@ -1950,6 +2064,10 @@ html{
 
   .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li{
     padding:0;
+  }
+
+  .section.faq-cant-find-looking-for.variation-border .cards-wrapper .cards ul li{
+    padding:40px 24px;
   }
 
   .banking-goods{
