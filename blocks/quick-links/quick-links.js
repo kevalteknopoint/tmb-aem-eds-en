@@ -1,3 +1,5 @@
+import './quick-links-analytics.js';
+
 export default async function decorate(block) {
   const wrapperNode = block.querySelector('p');
   let mainNode = wrapperNode;

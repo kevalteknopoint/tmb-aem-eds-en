@@ -4,7 +4,7 @@ export function minifyText(str) {
   return str?.trim()?.toLowerCase();
 }
 
-export function pageintialization(pageName, pageType, siteSection, sitesubSection, pageLanguage, pageId, pageTemplate, performanceTier, brand, webType, backtrackFlag, helpVisitFlag, implementationVersion, domInteractiveTime, domInteractiveTimeBucket, firstContentfulPaint, firstContentfulPaintBucket, httpStatusCode, httpStatusGroup, trackingVersion, implementationEnvironment, dataLayerReadyFlag, requiredFieldMissingFlag, testUserFlag, qaSessionFlag, product, primaryProductGroup, primaryProduct, multiProductFlag, personId, loginStatus, hasEverLoggedInFlag, visitorType) {
+export function pageIntialization(pageName, pageType, siteSection, sitesubSection, pageLanguage, pageId, pageTemplate, performanceTier, brand, webType, backtrackFlag, helpVisitFlag, implementationVersion, domInteractiveTime, domInteractiveTimeBucket, firstContentfulPaint, firstContentfulPaintBucket, httpStatusCode, httpStatusGroup, trackingVersion, implementationEnvironment, dataLayerReadyFlag, requiredFieldMissingFlag, testUserFlag, qaSessionFlag, product, primaryProductGroup, primaryProduct, multiProductFlag, personId, loginStatus, hasEverLoggedInFlag, visitorType) {
   window.adobeDataLayer.push({
     "event": "pageInitialization",
     "page": {
@@ -123,28 +123,28 @@ export function ctaInteraction(pageRegion, ctaText, ctaTitle, ctaSource, compone
     }
   });
 }
-export function bannerInteraction(pageRegion, ctaText, bannerName, bannerPosition, componentName, componentType, componentIndex, componentPersona, nextpageUrl, interactionType, linkType, requiredFieldMissingFlag, testUserFlag, qaSessionFlag, componentId, componentIdValidFlag) {
-  window.adobeDataLayer.push({
-    "event": "bannerInteraction",
-    "data": {
-      "pageRegion": pageRegion,
-      "ctaText": ctaText,
-      "bannerName": bannerName,
-      "bannerPosition": bannerPosition,
-      "componentName": componentName,
-      "componentType": componentType,
-      "componentIndex": componentIndex,
-      "componentPersona": componentPersona,
-      "nextpageUrl": nextpageUrl,
-      "interactionType": interactionType,
-      "linkType": linkType,
-      "requiredFieldMissingFlag": requiredFieldMissingFlag,
-      "testUserFlag": testUserFlag,
-      "qaSessionFlag": qaSessionFlag,
-      "componentId": componentId,
-      "componentIdValidFlag": componentIdValidFlag
-    }
-  });
+export function bannerInteraction(pageRegion,ctaText,bannerName,bannerPosition,componentName,componentType,componentIndex,componentPersona,nextpageUrl,interactionType,linkType,requiredFieldMissingFlag,testUserFlag,qaSessionFlag,componentId,componentIdValidFlag){
+    window.adobeDataLayer.push({
+        "event": "bannerInteraction",
+            "data":{
+                "pageRegion":pageRegion,
+                "ctaText":ctaText,
+                "bannerName":bannerName,
+                "bannerPosition":bannerPosition,
+                "componentName":componentName,
+                "componentType":componentType,
+                "componentIndex":componentIndex,
+                "componentPersona":componentPersona,
+                "nextpageUrl":nextpageUrl,
+                "interactionType":interactionType,
+                "linkType":linkType,
+                "requiredFieldMissingFlag":requiredFieldMissingFlag,  
+                "testUserFlag":testUserFlag,  
+                "qaSessionFlag":qaSessionFlag,   
+                "componentId":componentId,     
+                "componentIdValidFlag":componentIdValidFlag
+            }
+});
 }
 
 export function socialmediaClick(

@@ -1,5 +1,6 @@
 import { injectIcon, isTablet } from "../../scripts/aem.js";
 import { div } from "../../scripts/dom-helpers.js";
+import './banking-goods-analytics.js';
 
 export default function decorateBankingGoods(block) {
   const allListItems = block.querySelectorAll('li');
