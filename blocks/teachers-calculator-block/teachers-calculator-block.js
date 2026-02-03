@@ -9,9 +9,9 @@ export default function decorate(block) {
   ];
   dataMapMoObj.addIndexed(block);
 
-  const iframeId = block.querySelector(".form-item1 .form-inner-item1").innerText;
-  const iframeLink = block.querySelector(".form-item2 .form-inner-item1 a").getAttribute("href");
-  const iframeJsLink = block.querySelector(".form-item3 .form-inner-item1 a").getAttribute("href");
+  const iframeId = block.querySelector(".calculator-item1 .calculator-sub-item1").innerText;
+  const iframeLink = block.querySelector(".calculator-item2 .calculator-inner-item1 a").getAttribute("href");
+  const iframeJsLink = block.querySelector(".calculator-item3 .calculator-inner-item1 a").getAttribute("href");
 
   // Create style element
   const style = document.createElement('style');
@@ -19,20 +19,20 @@ export default function decorate(block) {
   
   // Create iframe element
   const iframe = document.createElement('iframe');
-  iframe.id = 'termDepositTeachersMFrame';
-  iframe.src = 'https://calculators.gbst.com/clients/teachers_mutual_bank/html/term_deposit_react.html';
+  iframe.id = iframeId;
+  iframe.src = iframeLink;
   
   // Create inline script for iframe resize
   const inlineScript = document.createElement('script');
   inlineScript.textContent = `
     window.addEventListener('load', function () {
-      iFrameResize({}, '#termDepositTeachersMFrame');
+      iFrameResize({}, '#${iframeId}');
     });
   `;
   
   // Create external script for iframe resizer library
   const externalScript = document.createElement('script');
-  externalScript.src = 'https://calculators.gbst.com/clients/standard_suite/lib/iframeResizer.min.js';
+  externalScript.src = iframeJsLink;
   
   // Append elements to the block
   block.appendChild(style);
