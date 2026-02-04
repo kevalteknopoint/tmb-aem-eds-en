@@ -36,7 +36,7 @@
       "interest-rates",
       "account-card-copy",
       "multiple-fragment",
-      "fragments",
+      "card-fragments",
       "page-heading",
       "legal-tc-guide",
       "faq-legal",
@@ -58,6 +58,12 @@
   },
   {
     "id": "breadcrumb"
+  },
+  {
+    "id": "card-fragments",
+    "components": [
+      "fragment-item"
+    ]
   },
   {
     "id": "cards",
@@ -92,12 +98,6 @@
     "id": "faq-productdetail",
     "components": [
       "faq-accordion-item"
-    ]
-  },
-  {
-    "id": "fragments",
-    "components": [
-      "fragment-item"
     ]
   },
   {
