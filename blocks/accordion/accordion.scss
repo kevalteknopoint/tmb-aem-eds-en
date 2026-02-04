@@ -1,4 +1,5 @@
 @use '../../styles/base' as *;
+@use '../faq-product-detail/faq-product-detail';
 
 .tmb-acc-sec.accordion-container {
   background: $color-footer-info;
@@ -12,7 +13,7 @@
     padding: 40px 0;
   }
 
-  .accordion-wrapper{
+  .accordion-wrapper {
     @include responsive-container;
 
     .accordion {
@@ -20,188 +21,122 @@
         padding: 0;
       }
 
-    details {
-      border: none;
+      details {
+        border: none;
 
-      & + details {
-        margin-top: 24px;
-      }
-
-      p {
-        margin: 0;
-
-        // font-size: 16px;
-        // font-weight: 500;
-        // line-height: 24px;
-        @include typo-heading5;
-      }
-
-      .accordion-item-label {
-        @include typo-heading5;
-
-        // font-weight: 700;
-        // font-size: 24px;
-        // line-height: 32px;
-        position: relative;
-        cursor: pointer;
-        list-style: none;
-        vertical-align: bottom;
-        color: $heading-default;
-        transition: background-color 0.2s;
-        display: flex;
-        justify-content: space-between;
-        gap: 16px;
-        overflow: hidden;
-
-        &::-webkit-details-marker {
-          display: none;
+        &+details {
+          margin-top: 24px;
         }
 
-        svg {
-          width: 24px;
-          height: 24px;
-          transition: all 0.3s ease-in-out;
-          transform: rotate(180deg);
-        }
-      }
-
-      .accordion-item-body {
-        margin-top: 16px;
-        padding-right: 48px;
-
-        @include mobile {
-          margin-top: 18px;
-          padding-right: 24px;
-        }
-        
         p {
-          @include typo-body;
-
-          // font-weight: 400;
-          // font-size: 16px;
-          // line-height: 24px;
           margin: 0;
-          color: $body-default;
-        }
-      }
 
-      &[open] {
-        summary {
+          // font-size: 16px;
+          // font-weight: 500;
+          // line-height: 24px;
+          @include typo-heading5;
+        }
+
+        .accordion-item-label {
+          @include typo-heading5;
+
+          position: relative;
+          cursor: pointer;
+          list-style: none;
+          vertical-align: bottom;
+          color: $heading-default;
+          transition: background-color 0.2s;
+          display: flex;
+          justify-content: space-between;
+          gap: 16px;
+          overflow: hidden;
+
+          &::-webkit-details-marker {
+            display: none;
+          }
+
           svg {
-            transform: rotate(0deg);
+            width: 24px;
+            height: 24px;
+            transition: all 0.3s ease-in-out;
+            transform: rotate(180deg);
           }
         }
 
         .accordion-item-body {
-          border-top: none;
+          margin-top: 16px;
+          padding-right: 48px;
+
+          @include mobile {
+            margin-top: 18px;
+            padding-right: 24px;
+          }
+
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            @include typo-heading3;
+
+            color: $heading-default;
+            margin-top: 40px;
+
+            &:first-child {
+              margin-top: 0;
+            }
+
+            @include mobile {
+              margin-top: 24px;
+            }
+          }
+
+          p {
+            @include typo-body;
+
+            margin: 0;
+            color: $body-default;
+
+            b {
+              @include typo-body-bold;
+            }
+          }
+
+          a {
+            color: $link-default;
+            text-decoration: underline;
+          }
+
+          ol,
+          ul {
+            margin-top: 16px;
+            list-style: decimal;
+            padding-left: 24px;
+
+            li {
+              margin-bottom: 8px;
+            }
+          }
+
+          ul {
+            list-style: disc;
+          }
+        }
+
+        &[open] {
+          summary {
+            svg {
+              transform: rotate(0deg);
+            }
+          }
+
+          .accordion-item-body {
+            border-top: none;
+          }
         }
       }
     }
   }
-  }
-  
-}
 
-.faq-accordion{
-    @include responsive-container;
-
-    display: flex;
-    gap: 32px;
-
-    @include mobile{
-        flex-direction: column;
-    }
-
-    @include tablet{
-        flex-direction: column;
-    }
-
-    .default-content-wrapper{
-        min-width: 417px;
-
-        @include mobile{
-            min-width: unset;
-        }
-
-        h1,h2,h3,h4,h5,h6{
-            color: $heading-default;
-
-            @include typo-heading1;
-        }
-    }
-
-    .accordion-wrapper{
-        width: 100%;
-
-        .block{
-            .accordion-item{
-                border-bottom: 1px solid var(--line-default);
-                border-top: 1px solid var(--line-default);
-                padding: 16px 0;
-
-                &::-webkit-details-marker {
-                    display: none !important;
-                }
-
-                .accordion-item-label {
-                    list-style: none;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-start;
-
-                    // Safari Fix: Ensure the summary behaves like a block/flex item
-                    &::marker, &::-webkit-details-marker {
-                        display: none;
-                    }
-
-                    p {
-                        color: $color-button-primary-default;
-                        margin-top: 4px;
-
-                        @include typo-heading3
-                    }
-
-                    svg {
-                        color: $color-button-primary-default;
-                        min-width: 40px;
-                        width: 40px;
-                        height: 40px;
-                        padding: 8px;
-                        border-radius: 44px;
-                        background: $bg-light;
-                        cursor: pointer;
-                        margin-left: 32px;
-                        transform: rotate(180deg);
-                    }
-                }
-
-                .accordion-item-body{
-                    margin-top: 8px;
-
-                    p {
-                      color: $body-default;  
-
-                      @include typo-body;
-                    }
-                }  
-
-                &[open] {
-                    summary {
-                        svg {
-                            transform: rotate(0deg);
-                        }              
-                    }
-                }
-
-                &.accordion-item:first-child{
-                    border-top: none;
-                    padding-top: 0;
-                }
-
-                &.accordion-item:last-child{
-                    border-bottom: none;
-                }
-            }
-        }
-    }
 }
