@@ -1,13 +1,45 @@
-import {
-  div, h3, h4, h5, p, a,
-} from '../../scripts/dom-helpers.js';
+import { div, h3, h4, h5, p, a, span } from "../../scripts/dom-helpers.js";
 
 export default function decorate(block) {
-  if (window.location.href.includes('author')) return;
-  const newBlock = div({ class: 'compare-accounts-cards' });
+  if (window.location.href.includes("author")) return;
+
+  const section = block.closest(".section.compare-accounts");
+  if (!section) return;
+
+  const wrapFragments = () => {
+    const wrappers = [...section.querySelectorAll(".fragment-wrapper")];
+
+    if (wrappers.length > 0 && !section.querySelector(".fragment-parent")) {
+      const fragmentParent = div({ class: "fragment-parent" });
+
+      wrappers[0].parentNode.insertBefore(fragmentParent, wrappers[0]);
+
+      wrappers.forEach((wrapper) => fragmentParent.appendChild(wrapper));
+
+      console.log("Fragments successfully wrapped!");
+      return true;
+    }
+    return false;
+  };
+
+  if (!wrapFragments()) {
+    const observer = new MutationObserver((mutations, obs) => {
+      const success = wrapFragments();
+      if (success) {
+        obs.disconnect();
+      }
+    });
+
+    observer.observe(section, {
+      childList: true,
+      subtree: true,
+    });
+  }
+
+  const cardsContainer = div({ class: "compare-accounts-cards" });
+
   [...block.children].forEach((row) => {
     const cells = Array.from(row.children);
-
     const [
       activeCardEl,
       titleEl,
@@ -22,66 +54,56 @@ export default function decorate(block) {
       buttonStyleEl,
     ] = cells;
 
-    const isActive = activeCardEl?.textContent.trim() === 'true';
+    const isActive = activeCardEl?.textContent.trim() === "true";
+
+    // Interest rate logic
+    const rawRate = interestRateEl?.textContent.trim() || "";
+    let rateContent;
+    if (rawRate.includes("%")) {
+      const num = rawRate.replace("%", "").trim();
+      rateContent = span(
+        { class: "interest-rate" },
+        span({ class: "rate-num" }, num),
+        span(
+          { class: "rate-unit" },
+          span({ class: "rate-percent" }, "%"),
+          span({ class: "rate-pa" }, "p.a."),
+        ),
+      );
+    } else {
+      rateContent = interestRateEl?.querySelector("*") || rawRate;
+    }
 
     const card = div(
       {
-        class: [
-          'compare-accounts-card',
-          isActive && 'active',
-        ].filter(Boolean),
+        class: ["compare-accounts-card", isActive && "active"].filter(Boolean),
       },
-
-      /* Product title */
-      h3(
-        { class: 'product-title' },
-        titleEl?.textContent.trim(),
-      ),
-
-      /* Product description */
-      h4(
-        { class: 'product-description' },
-        descriptionEl?.textContent.trim(),
-      ),
-
-      /* Interest pretitle */
+      h3({ class: "product-title" }, titleEl?.textContent.trim()),
+      h4({ class: "product-description" }, descriptionEl?.textContent.trim()),
       h5(
-        { class: 'product-interest-pretitle' },
+        { class: "product-interest-pretitle" },
         interestPretitleEl?.textContent.trim(),
       ),
-
-      /* Interest rate (keep authored markup) */
+      p({ class: "product-interest-rate" }, p(rateContent)),
+      p({ class: "product-disclaimer" }, disclaimerEl?.textContent.trim()),
       p(
-        { class: 'product-interest-rate' },
-        interestRateEl?.querySelector('*'),
-      ),
-
-      /* Disclaimer */
-      p(
-        { class: 'product-disclaimer' },
-        disclaimerEl?.textContent.trim(),
-      ),
-
-      /* CTA */
-      p(
-        { class: 'button-container' },
+        { class: "button-container" },
         a(
           {
-            href: buttonLinkEl?.textContent.trim() || '#',
+            href: buttonLinkEl?.textContent.trim() || "#",
             title: buttonTitleEl?.textContent.trim(),
-            target: buttonTargetEl?.textContent.trim() || '_self',
-            class: [
-              'button',
-              buttonStyleEl?.textContent.trim(),
-            ].filter(Boolean),
+            target: buttonTargetEl?.textContent.trim() || "_self",
+            class: ["button", buttonStyleEl?.textContent.trim()].filter(
+              Boolean,
+            ),
           },
           buttonTextEl?.textContent.trim(),
         ),
       ),
     );
-
-    newBlock.appendChild(card);
+    cardsContainer.appendChild(card);
   });
 
-  block.replaceChildren(newBlock);
+  const wrapper = div({ class: "compare-accounts-wrapper" }, cardsContainer);
+  block.replaceChildren(wrapper);
 }

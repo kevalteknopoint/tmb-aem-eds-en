@@ -344,7 +344,6 @@
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .cards-card-body .icon-badge-android-google-play-1{
   display:block;
   height:43px;
-  width:142px;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul .cards-card-body .icon-badge-app-store-1 img,
@@ -457,11 +456,11 @@
 .section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-2.is-badge-link p a{
   display:block;
   height:42px;
-  width:143px;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-2.is-badge-link p a svg{
   height:100%;
+  max-width:140px;
   width:100%;
 }
 
@@ -1709,7 +1708,6 @@ html{
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-2.is-badge-link p a{
     height:42px;
-    width:115px;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul li:not(:has(.cards-card-image)){
@@ -2033,7 +2031,6 @@ html{
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-2.is-badge-link p a{
     height:42px;
-    width:115px;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul li:not(:has(.cards-card-image)){
@@ -2214,5 +2211,12 @@ html{
 
   .section.online-banking-legal{
     padding-top:40px;
+  }
+}
+
+@media screen and (max-width: 375px){
+  .section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-2.is-badge-link p a svg{
+    height:35px;
+    width:115px;
   }
 }
