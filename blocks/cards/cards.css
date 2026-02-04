@@ -300,6 +300,33 @@
   width:100%;
 }
 
+.section.online-banking .default-content-wrapper{
+  margin-bottom:40px;
+}
+
+.section.online-banking .default-content-wrapper h1, .section.online-banking .default-content-wrapper h2, .section.online-banking .default-content-wrapper h3, .section.online-banking .default-content-wrapper h4, .section.online-banking .default-content-wrapper h5, .section.online-banking .default-content-wrapper h6{
+  color:var(--heading-default);
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  margin:0 0 16px;
+  text-align:left;
+  text-transform:initial;
+}
+
+.section.online-banking .default-content-wrapper p{
+  color:var(--body-default);
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-align:left;
+  text-transform:initial;
+}
+
 .section.online-banking .cards-wrapper .cards .banking-cards-ul{
   display:grid;
   gap:24px;
@@ -392,7 +419,7 @@
   display:flex;
   flex-direction:row;
   gap:12px;
-  margin:0;
+  margin:24px 0 0;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-2.is-button-link p a.button{
@@ -411,6 +438,10 @@
   width:max-content;
 }
 
+.section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-2.is-button-link p a.button:not(:has(svg)){
+  border-bottom:2px solid var(--link-default);
+}
+
 .section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-2.is-button-link p a.button svg{
   height:18px;
   width:18px;
@@ -420,7 +451,7 @@
   display:flex;
   flex-flow:row wrap;
   gap:10px;
-  margin:0;
+  margin:24px 0 0;
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-2.is-badge-link p a{
@@ -497,8 +528,6 @@
 .cards-card-image{
   height:-moz-fit-content;
   height:fit-content;
-  min-height:250px;
-  overflow:hidden;
   position:relative;
 }
 
@@ -1967,6 +1996,10 @@ html{
     padding-inline:16px;
   }
 
+  .section.online-banking .default-content-wrapper{
+    margin-bottom:24px;
+  }
+
   .section.online-banking .cards-wrapper .cards .banking-cards-ul{
     display:flex;
     flex-direction:column;
@@ -1986,8 +2019,16 @@ html{
     margin-top:24px;
   }
 
+  .section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-2.is-button-link p{
+    margin:0;
+  }
+
   .section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-2.is-button-link p a.button{
     line-height:13.5px;
+  }
+
+  .section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-2.is-badge-link p{
+    margin:0;
   }
 
   .section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-2.is-badge-link p a{
