@@ -1,6 +1,6 @@
 import './header-analytics.js';
 import { createOptimizedPicture, getMetadata } from '../../scripts/aem.js';
-import { div, ul, li, a, button } from '../../scripts/dom-helpers.js';
+import { div, ul, li, a, button, input, form } from '../../scripts/dom-helpers.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 export default async function decorate(block) {
@@ -77,9 +77,11 @@ export default async function decorate(block) {
   const logoNavWrap = div({ class: 'logo-nav-wrap' }, hamMenuBtn, logoWrap, primaryNavList);
 
   // Search button
+  const searchInp = input({ class: 'header-search-inp', name: 'headerSearch', id: 'headerSearch', placeholder: 'Start typing...' });
+  const searchForm = form({ class: 'header-search-form' }, searchInp);
   const searchIcon = col2.querySelector('svg');
   const searchBtn = button({ class: 'search-btn' }, searchIcon);
-  const searchBtnWrap = div({ class: 'search-btn-wrap' }, searchBtn);
+  const searchBtnWrap = div({ class: 'search-btn-wrap' }, searchForm, searchBtn);
 
   // Login button
   const loginLink = col2.querySelector('.button');
@@ -96,5 +98,20 @@ export default async function decorate(block) {
     )
   );
 
+  searchBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    newPrimarySection.classList.add('search-active');
+    searchInp.focus();
+  });
+
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('.search-btn-wrap')) return;
+
+    newPrimarySection.classList.remove('search-active');
+  });
+
   primaryContainer.replaceWith(newPrimarySection);
+
+  // Search Results Section
 }

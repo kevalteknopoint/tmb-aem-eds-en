@@ -409,6 +409,10 @@
           {
             "name": "legal-privacy",
             "value": "legal-privacy"
+          },
+          {
+            "name": "Search Results Section",
+            "value": "search-results-section"
           }
         ]
       }
@@ -844,98 +848,6 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
-      }
-    ]
-  },
-  {
-    "id": "account-card-copy",
-    "fields": [
-      {
-        "component": "boolean",
-        "label": "Active Product",
-        "name": "active-card",
-        "valueType": "boolean"
-      },
-      {
-        "component": "text",
-        "name": "product-title",
-        "label": "Product Title",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "product-description",
-        "label": "Product Description",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "product-interest-pretitle",
-        "label": "Product Interest Pretitle",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "product-interest-rate",
-        "label": "Product Interest Rate",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "product-disclaimer",
-        "label": "Product Disclaimer",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "product-button-text",
-        "label": "Product Button Text",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "product-button-title",
-        "label": "Product Button Title",
-        "valueType": "string"
-      },
-      {
-        "component": "aem-content",
-        "name": "product-button-link",
-        "label": "Product Button Link",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "select",
-        "name": "product-button-target",
-        "label": "Product Button Target",
-        "value": "_self",
-        "options": [
-          {
-            "name": "Same",
-            "value": "_self"
-          },
-          {
-            "name": "New",
-            "value": "_blank"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "name": "product-button-style",
-        "label": "Product Button Style",
-        "value": "outlined",
-        "options": [
-          {
-            "name": "Outlined Button",
-            "value": "outlined"
-          },
-          {
-            "name": "Secondary Button",
-            "value": "secondary"
-          }
-        ]
       }
     ]
   },

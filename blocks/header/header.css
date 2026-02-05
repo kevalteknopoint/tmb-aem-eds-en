@@ -77,6 +77,44 @@
   width:100%;
 }
 
+.primary-header.search-active .primary-nav-list{
+  display:none;
+}
+
+.primary-header.search-active .search-btn-wrap{
+  background-color:var(--icon-default);
+  border-radius:var(--radius-hero-var);
+  box-shadow:0 0 0 6px var(--icon-default);
+  margin-left:27px;
+  width:100%;
+}
+
+.primary-header.search-active .search-btn-wrap:has(input:focus){
+  box-shadow:0 0 0 2px var(--color-focus-default), 0 0 0 6px var(--icon-default);
+}
+
+.primary-header.search-active .search-btn-wrap .search-btn{
+  background-color:transparent;
+  height:33px;
+  margin:3.5px 4px 3.5px 0;
+  min-width:33px;
+  width:33px;
+}
+
+.primary-header.search-active .search-btn-wrap .search-btn svg{
+  color:var(--heading-default);
+  height:24px;
+  width:24px;
+}
+
+.primary-header.search-active .header-actions-wrap{
+  flex-grow:1;
+}
+
+.primary-header.search-active .header-search-form{
+  display:flex;
+}
+
 .ham-menu-btn-wrap{
   display:none;
   height:-moz-fit-content;
@@ -117,7 +155,6 @@
   display:flex;
   gap:16px;
   justify-content:flex-start;
-  padding:28px 0;
 }
 
 .primary-nav-list .primary-nav-item{
@@ -162,8 +199,33 @@
   display:flex;
   gap:24px;
   justify-content:flex-end;
+  padding:20px 0;
   width:-moz-fit-content;
   width:fit-content;
+}
+
+.header-actions-wrap .search-btn-wrap{
+  display:flex;
+  gap:8px;
+}
+
+.header-actions-wrap .header-search-form{
+  display:none;
+  width:100%;
+}
+
+.header-actions-wrap .header-search-form .header-search-inp{
+  border-radius:var(--radius-card);
+  color:var(--body-default);
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  outline:none;
+  padding:8px 0 8px 22px;
+  text-transform:initial;
+  width:100%;
 }
 
 .header-actions-wrap .search-btn{
@@ -173,6 +235,7 @@
   display:flex;
   height:40px;
   justify-content:center;
+  min-width:40px;
   width:40px;
 }
 
@@ -216,6 +279,15 @@
   width:12px;
 }
 
+.search-results-section{
+  height:100%;
+  left:0;
+  position:fixed;
+  top:133px;
+  width:100%;
+  z-index:3;
+}
+
 @media screen and (max-width: 1279px){
   .secondary-header-wrap{
     padding-inline:24px;
@@ -240,10 +312,6 @@
 
   .primary-nav-list{
     display:none;
-  }
-
-  .header-actions-wrap{
-    padding:22px 0;
   }
 }
 

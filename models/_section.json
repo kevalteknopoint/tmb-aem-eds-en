@@ -306,6 +306,10 @@
             {
               "name": "legal-privacy",
               "value": "legal-privacy"
+            },
+            {
+              "name": "Search Results Section",
+              "value": "search-results-section"
             }
           ]
         }
