@@ -12,6 +12,7 @@
 
     @include tablet {
       flex-direction: column;
+      align-items: flex-start;
       gap: 24px;
       padding: 64px 0;
     }
@@ -25,6 +26,7 @@
       @include typo-large-heading;
 
       min-width: 256px;
+      text-align: left;
       color: $heading-default;
     }
 
@@ -32,6 +34,8 @@
       display: flex;
       align-items: center;
       border-radius: $radius-card;
+      border: 1px solid $line-default;
+      width: 100%;
 
       .results-search-inp {
         @include typo-body;
@@ -54,24 +58,88 @@
         padding: 11.5px;
 
         svg {
+          color: $heading-default;
           min-width: 10px;
           width: 10px;
           height: 10px;
         }
       }
 
-      .search-btn {
-        min-width: 33px;
-        height: 33px;
-        width: 33px;
+      .results-search-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: $icon-bg-default;
         margin: 3.5px 4px 3.5px 0;
         border-radius: $radius-button;
 
         svg {
-          color: $heading-default;
+          margin: 4.5px;
+          color: $icon-default;
+          min-width: 24px;
           width: 24px;
           height: 24px;
+        }
+      }
+    }
+  }
+
+  .search-page-results-container {
+    .search-result-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 16px;
+      border-bottom: 1px solid $line-default;
+
+      .search-results-num, .search-page-details {
+        @include typo-sm-body;
+
+        color: $body-default;
+
+        b {
+          @include typo-sm-body-bold;
+        }
+      }
+    }
+
+    .search-results-list {
+      display: flex;
+      flex-direction: column;
+
+      .search-result-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 32px;
+        padding: 16px 0;
+        border-bottom: 1px solid $line-default;
+
+        .item-detail-section {
+          .item-title {
+            @include  typo-heading4;
+
+            display: block;
+            color: $heading-default;
+            margin-bottom: 4px;
+          }
+          
+          .item-desc {
+            @include typo-body;
+            
+            display: block;
+            color: $body-default;
+          }
+        }
+
+        .item-category-section {
+          .item-category {
+            @include typo-body;
+
+            color: $link-default;
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
       }
     }

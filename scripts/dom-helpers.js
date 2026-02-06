@@ -73,6 +73,7 @@ export function domEl(tag, ...items) {
 */
 export function div(...items) { return domEl('div', ...items); }
 export function p(...items) { return domEl('p', ...items); }
+export function b(...items) { return domEl('b', ...items); }
 export function a(...items) { return domEl('a', ...items); }
 export function h1(...items) { return domEl('h1', ...items); }
 export function h2(...items) { return domEl('h2', ...items); }

@@ -22,13 +22,16 @@
   letter-spacing:var(--font-letter-spacing-lg);
   line-height:var(--font-height-lg);
   min-width:256px;
+  text-align:left;
   text-transform:initial;
 }
 
 .search-results-page .default-content-wrapper .results-search-form{
   align-items:center;
+  border:1px solid var(--line-default);
   border-radius:var(--radius-card);
   display:flex;
+  width:100%;
 }
 
 .search-results-page .default-content-wrapper .results-search-form .results-search-inp{
@@ -59,24 +62,103 @@
 }
 
 .search-results-page .default-content-wrapper .results-search-form .results-cross-btn svg{
+  color:var(--heading-default);
   height:10px;
   min-width:10px;
   width:10px;
 }
 
-.search-results-page .default-content-wrapper .results-search-form .search-btn{
+.search-results-page .default-content-wrapper .results-search-form .results-search-btn{
+  align-items:center;
   background-color:var(--icon-bg-default);
   border-radius:var(--radius-button);
-  height:33px;
+  display:flex;
+  justify-content:center;
   margin:3.5px 4px 3.5px 0;
-  min-width:33px;
-  width:33px;
 }
 
-.search-results-page .default-content-wrapper .results-search-form .search-btn svg{
-  color:var(--heading-default);
+.search-results-page .default-content-wrapper .results-search-form .results-search-btn svg{
+  color:var(--icon-default);
   height:24px;
+  margin:4.5px;
+  min-width:24px;
   width:24px;
+}
+
+.search-results-page .search-page-results-container .search-result-details{
+  align-items:center;
+  border-bottom:1px solid var(--line-default);
+  display:flex;
+  justify-content:space-between;
+  padding-bottom:16px;
+}
+
+.search-results-page .search-page-results-container .search-result-details .search-results-num, .search-results-page .search-page-results-container .search-result-details .search-page-details{
+  color:var(--body-default);
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-weight:var(--font-weight-sm-body);
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
+  text-transform:initial;
+}
+
+.search-results-page .search-page-results-container .search-result-details .search-results-num b, .search-results-page .search-page-results-container .search-result-details .search-page-details b{
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-weight:var(--font-weight-body-bold);
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
+  text-transform:initial;
+}
+
+.search-results-page .search-page-results-container .search-results-list{
+  display:flex;
+  flex-direction:column;
+}
+
+.search-results-page .search-page-results-container .search-results-list .search-result-item{
+  align-items:flex-end;
+  border-bottom:1px solid var(--line-default);
+  display:flex;
+  gap:32px;
+  justify-content:space-between;
+  padding:16px 0;
+}
+
+.search-results-page .search-page-results-container .search-results-list .search-result-item .item-detail-section .item-title{
+  color:var(--heading-default);
+  display:block;
+  font-family:var(--font-family-h4);
+  font-size:var(--font-size-h4);
+  font-weight:var(--font-weight-h4);
+  letter-spacing:var(--font-letter-spacing-h4);
+  line-height:var(--font-height-h4);
+  margin-bottom:4px;
+  text-transform:initial;
+}
+
+.search-results-page .search-page-results-container .search-results-list .search-result-item .item-detail-section .item-desc{
+  color:var(--body-default);
+  display:block;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-transform:initial;
+}
+
+.search-results-page .search-page-results-container .search-results-list .search-result-item .item-category-section .item-category{
+  color:var(--link-default);
+  cursor:pointer;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-decoration:underline;
+  text-transform:initial;
 }
 
 /*! autoprefixer: ignore next */
@@ -92,6 +174,7 @@
 
 @media screen and (max-width: 1023px){
   .search-results-page .default-content-wrapper{
+    align-items:flex-start;
     flex-direction:column;
     gap:24px;
     padding:64px 0;
