@@ -54,6 +54,10 @@ export default function loadNonBlockLibs() {
       selector: '.legal-privacy',
       name: 'legal-privacy',
     },
+    {
+      selector: '.calculator',
+      name: 'calculator',
+    }
   ];
 
   blocks.forEach(({ selector, name }) => {
