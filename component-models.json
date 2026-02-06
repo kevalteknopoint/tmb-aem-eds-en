@@ -411,8 +411,12 @@
             "value": "legal-privacy"
           },
           {
-            "name": "Search Results Section",
+            "name": "Search Results Section (Header)",
             "value": "search-results-section"
+          },
+          {
+            "name": "Search Results Page",
+            "value": "search-results-page"
           }
         ]
       }

@@ -76,10 +76,16 @@ export default async function decorate(block) {
   const logoWrap = div({ class: 'logo-wrap' }, logoPic);
   const logoNavWrap = div({ class: 'logo-nav-wrap' }, hamMenuBtn, logoWrap, primaryNavList);
 
+  const crossIcon = col2.querySelector('p span:nth-child(2) svg');
+  const crossBtn = button({ class: 'search-cross-btn' }, crossIcon);
+
+  const backIcon = col2.querySelector('p span:nth-child(1) svg');
+  const backBtn = button({ class: 'search-back-btn' }, backIcon);
+
   // Search button
   const searchInp = input({ class: 'header-search-inp', name: 'headerSearch', id: 'headerSearch', placeholder: 'Start typing...' });
-  const searchForm = form({ class: 'header-search-form' }, searchInp);
-  const searchIcon = col2.querySelector('svg');
+  const searchForm = form({ class: 'header-search-form' }, backBtn, searchInp, crossBtn);
+  const searchIcon = col2.querySelector('p span:nth-child(3) svg');
   const searchBtn = button({ class: 'search-btn' }, searchIcon);
   const searchBtnWrap = div({ class: 'search-btn-wrap' }, searchForm, searchBtn);
 
@@ -98,6 +104,12 @@ export default async function decorate(block) {
     )
   );
 
+  crossBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    searchInp.value = '';
+  });
+
   searchBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -106,12 +118,23 @@ export default async function decorate(block) {
   });
 
   document.addEventListener('click', (e) => {
-    if (e.target.closest('.search-btn-wrap')) return;
+    if (!e.target.closest('.search-back-btn') && e.target.closest('.search-btn-wrap')) return;
 
+    e.preventDefault();
     newPrimarySection.classList.remove('search-active');
   });
 
   primaryContainer.replaceWith(newPrimarySection);
 
   // Search Results Section
+  const searchSection = block.querySelector('.search-results-section');
+  if (window.location.origin.includes('author')) searchSection?.classList.add('author-mode');
+
+  // Popular searches
+  const popularSearches = div({ class: 'popular-search-results' });
+  const contentWrapper = searchSection.querySelector('.default-content-wrapper');
+  popularSearches.append(contentWrapper);
+  searchSection.appendChild(popularSearches);
+
+  searchSection.insertAdjacentElement('afterbegin', div({ class: 'dynamic-search-results', id: 'dynamicSearchResults' }, contentWrapper.cloneNode(true)));
 }

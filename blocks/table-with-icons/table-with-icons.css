@@ -106,14 +106,14 @@
 }
 
 .table-with-icons .pipe-grid-row{
-  border-bottom:1px solid rgb(0 0 0 / 20%);
+  border-bottom:1px solid var(--line-default);
   display:grid;
   grid-template-columns:repeat(var(--cols), minmax(0, 1fr));
   padding:16px 0;
 }
 
 .table-with-icons .pipe-grid-row:first-child:not(.pipe-grid-header){
-  border-top:1px solid rgb(0 0 0 / 20%);
+  border-top:1px solid var(--line-default);
 }
 
 .table-with-icons .pipe-grid-header{
