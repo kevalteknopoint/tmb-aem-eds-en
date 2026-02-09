@@ -306,18 +306,6 @@
             {
               "name": "legal-privacy",
               "value": "legal-privacy"
-            },
-            {
-              "name": "red-alert",
-              "value": "red-alert"
-            },
-            {
-              "name": "blue-alert",
-              "value": "blue-alert"
-            },
-            {
-              "name": "yellow-alert",
-              "value": "yellow-alert"
             }
           ]
         }
