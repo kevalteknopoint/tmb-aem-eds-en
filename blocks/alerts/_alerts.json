@@ -50,14 +50,14 @@
           "valueType": "string"
         },
         {
-          "component": "text",
+          "component": "richtext",
           "name": "buttonText",
           "value": "",
           "label": "Button Text",
           "valueType": "string"
         },
         {
-          "component": "text",
+          "component": "richtext",
           "name": "buttonUrl",
           "value": "",
           "label": "Button URL",
