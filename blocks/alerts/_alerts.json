@@ -22,6 +22,38 @@
       "id": "alerts",
       "fields": [
         {
+          "component": "select",
+          "name": "alertColor",
+          "label": "Background Color",
+          "value": "info",
+          "options": [
+            {
+              "name": "Blue",
+              "value": "info"
+            },
+            {
+              "name": "Green",
+              "value": "success"
+            },
+            {
+              "name": "Orange",
+              "value": "warning"
+            },
+            {
+              "name": "Red",
+              "value": "error"
+            },
+            {
+              "name": "Purple",
+              "value": "purple"
+            },
+            {
+              "name": "Pink",
+              "value": "pink"
+            }
+          ]
+        },
+        {
           "component": "richtext",
           "name": "text",
           "value": "",

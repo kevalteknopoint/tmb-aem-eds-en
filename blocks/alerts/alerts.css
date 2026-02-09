@@ -59,3 +59,23 @@
 .alert.alert-error .alert-title{
   color:#c62828;
 }
+
+.alert.alert-purple{
+  background-color:#f3e5f5;
+  border-left-color:#9c27b0;
+  color:#6a1b9a;
+}
+
+.alert.alert-purple .alert-title{
+  color:#6a1b9a;
+}
+
+.alert.alert-pink{
+  background-color:#fce4ec;
+  border-left-color:#e91e63;
+  color:#ad1457;
+}
+
+.alert.alert-pink .alert-title{
+  color:#ad1457;
+}

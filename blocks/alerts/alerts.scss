@@ -21,6 +21,7 @@
         line-height: 1.5;
     }
 
+    /* Info - Blue */
     &.alert-info {
         background-color: #e3f2fd;
         border-left-color: #2196f3;
@@ -31,6 +32,7 @@
         }
     }
 
+    /* Success - Green */
     &.alert-success {
         background-color: #e8f5e9;
         border-left-color: #4caf50;
@@ -41,6 +43,7 @@
         }
     }
 
+    /* Warning - Orange */
     &.alert-warning {
         background-color: #fff3e0;
         border-left-color: #ff9800;
@@ -51,6 +54,7 @@
         }
     }
 
+    /* Error - Red */
     &.alert-error {
         background-color: #ffebee;
         border-left-color: #f44336;
@@ -58,6 +62,28 @@
 
         .alert-title {
             color: #c62828;
+        }
+    }
+
+    /* Purple */
+    &.alert-purple {
+        background-color: #f3e5f5;
+        border-left-color: #9c27b0;
+        color: #6a1b9a;
+
+        .alert-title {
+            color: #6a1b9a;
+        }
+    }
+
+    /* Pink */
+    &.alert-pink {
+        background-color: #fce4ec;
+        border-left-color: #e91e63;
+        color: #ad1457;
+
+        .alert-title {
+            color: #ad1457;
         }
     }
 }
