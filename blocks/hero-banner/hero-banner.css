@@ -65,7 +65,7 @@ body:has(.product-detail-banner) .breadcrumb.block{
 }
 
 .product-detail-banner .hero-banner-content-wrap .hero-banner-content{
-  max-width:640px;
+  max-width:660px;
 }
 
 .product-detail-banner .hero-banner-content-wrap h1, .product-detail-banner .hero-banner-content-wrap h2, .product-detail-banner .hero-banner-content-wrap h3{

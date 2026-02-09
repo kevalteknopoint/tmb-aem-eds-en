@@ -123,6 +123,8 @@ export default function expandableTiles(block) {
         const allSlides = document.querySelectorAll('.expandable-tile');
         allSlides?.forEach((slide) => slide.classList.remove('active'));
         bannerSlide?.classList.add('active');
+        clearInterval(autoplayTimeoutId);
+        autoplay();
 
         // if (bannerSlide?.classList.contains('active')) {
         //   bannerSlide?.classList.remove('active')
