@@ -53,6 +53,9 @@
     ]
   },
   {
+    "id": "alerts"
+  },
+  {
     "id": "bannervideo",
     "components": [
       "banner-video-item"

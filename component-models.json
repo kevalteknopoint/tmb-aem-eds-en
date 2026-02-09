@@ -473,6 +473,18 @@
     ]
   },
   {
+    "id": "alerts",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Alerts Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "bannervideo",
     "fields": [
       {
