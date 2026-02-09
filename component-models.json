@@ -492,18 +492,14 @@
         "valueType": "string"
       },
       {
-        "component": "richtext",
-        "name": "buttonText",
-        "value": "",
-        "label": "Button Text",
-        "valueType": "string"
+        "component": "aem-content",
+        "name": "close-button",
+        "label": "Close Button"
       },
       {
-        "component": "richtext",
-        "name": "buttonUrl",
-        "value": "",
-        "label": "Button URL",
-        "valueType": "string"
+        "component": "text",
+        "name": "close-button-text",
+        "label": "Close Button Text"
       }
     ]
   },
