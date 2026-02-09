@@ -29,27 +29,15 @@
           "options": [
             {
               "name": "Blue",
-              "value": "info"
-            },
-            {
-              "name": "Green",
-              "value": "success"
+              "value": ""
             },
             {
               "name": "Orange",
-              "value": "warning"
+              "value": ""
             },
             {
               "name": "Red",
-              "value": "error"
-            },
-            {
-              "name": "Purple",
-              "value": "purple"
-            },
-            {
-              "name": "Pink",
-              "value": "pink"
+              "value": ""
             }
           ]
         },
