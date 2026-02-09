@@ -22,9 +22,10 @@
       "id": "alerts",
       "fields": [
         {
-          "component": "multiselect",
+          "component": "select",
           "name": "classes",
           "label": "Background Color",
+          "value": "blue-alert",
           "options": [
             {
               "name": "Blue",

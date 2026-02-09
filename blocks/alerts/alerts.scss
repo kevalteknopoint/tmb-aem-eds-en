@@ -1,6 +1,5 @@
-@import '../../styles/_variables.scss';
 
-.alert {
+.alerts {
     padding: 16px;
     margin-bottom: 16px;
     border-radius: 4px;
@@ -9,52 +8,56 @@
     flex-direction: column;
     gap: 8px;
 
-    .alert-title {
+    /* Default - Blue */
+    background-color: #e3f2fd;
+    border-left-color: #2196f3;
+    color: #1565c0;
+
+    h4, p {
         margin: 0;
-        font-weight: 600;
-        font-size: 1rem;
     }
 
-    .alert-description {
-        margin: 0;
+    h4 {
+        font-weight: 600;
+        font-size: 1rem;
+        color: #1565c0;
+    }
+
+    p {
         font-size: 0.95rem;
         line-height: 1.5;
     }
 
-    /* Info - Blue */
-    &.alert-info {
+    /* Blue */
+    &.blue-alert {
         background-color: #e3f2fd;
         border-left-color: #2196f3;
         color: #1565c0;
 
-        .alert-title {
+        h4 {
             color: #1565c0;
         }
     }
 
-
-
-    /* Warning - Orange */
-    &.alert-warning {
+    /* Orange */
+    &.orange-alert {
         background-color: #fff3e0;
         border-left-color: #ff9800;
         color: #e65100;
 
-        .alert-title {
+        h4 {
             color: #e65100;
         }
     }
 
-    /* Error - Red */
-    &.alert-error {
+    /* Red */
+    &.red-alert {
         background-color: #ffebee;
         border-left-color: #f44336;
         color: #c62828;
 
-        .alert-title {
+        h4 {
             color: #c62828;
         }
     }
-
-
 }
