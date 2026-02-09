@@ -29,15 +29,15 @@
           "options": [
             {
               "name": "Blue",
-              "value": ""
+              "value": "blue-alert"
             },
             {
               "name": "Orange",
-              "value": ""
+              "value": "orange-alert"
             },
             {
               "name": "Red",
-              "value": ""
+              "value": "red-alert"
             }
           ]
         },
