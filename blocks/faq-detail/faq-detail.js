@@ -5,6 +5,17 @@ import {
 } from '../../scripts/dom-helpers.js';
 import { fetchPlaceholders } from '../../scripts/placeholders.js';
 
+function slugify(title) {
+  return title
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
+}
+
 export default async function decorate(block) {
   if (window.location.origin.includes("author")) return;
 
@@ -44,7 +55,7 @@ export default async function decorate(block) {
     // ========== Build Sections + Right Nav ==========
     // let numCount = 0;
     faq.faqContentReference.forEach((content) => {
-      const id = content.sectionTitle?.toLowerCase().replace(/\s+/g, "-");
+      const id = slugify(content.sectionTitle);
 
       if (content.sectionTitle) {
         rightSection = true;
