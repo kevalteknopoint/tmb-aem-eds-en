@@ -461,6 +461,37 @@
     ]
   },
   {
+    "id": "alerts",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Background Color",
+        "options": [
+          {
+            "name": "Blue",
+            "value": "blue-alert"
+          },
+          {
+            "name": "Orange",
+            "value": "orange-alert"
+          },
+          {
+            "name": "Red",
+            "value": "red-alert"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Alerts Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "bannervideo",
     "fields": [
       {
