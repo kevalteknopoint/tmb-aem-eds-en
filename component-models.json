@@ -464,10 +464,9 @@
     "id": "alerts",
     "fields": [
       {
-        "component": "select",
-        "name": "alertColor",
+        "component": "multiselect",
+        "name": "classes",
         "label": "Background Color",
-        "value": "info",
         "options": [
           {
             "name": "Blue",
