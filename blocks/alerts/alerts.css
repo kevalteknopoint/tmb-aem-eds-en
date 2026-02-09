@@ -26,6 +26,25 @@
   line-height:1.5;
 }
 
+.alerts .alert-button{
+  background-color:rgb(255 255 255 / 80%);
+  border:1px solid rgb(0 0 0 / 20%);
+  border-radius:4px;
+  color:inherit;
+  cursor:pointer;
+  display:inline-block;
+  font-weight:500;
+  margin-top:8px;
+  padding:8px 16px;
+  text-decoration:none;
+  transition:all 0.3s ease;
+}
+
+.alerts .alert-button:hover{
+  background-color:rgb(255 255 255);
+  box-shadow:0 2px 8px rgb(0 0 0 / 15%);
+}
+
 .alerts.blue-alert{
   background-color:#e3f2fd;
   border-left-color:#2196f3;

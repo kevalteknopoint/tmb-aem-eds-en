@@ -48,6 +48,20 @@
           "value": "",
           "label": "Alerts Text",
           "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "buttonText",
+          "value": "",
+          "label": "Button Text",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "buttonUrl",
+          "value": "",
+          "label": "Button URL",
+          "valueType": "string"
         }
       ]
     }
