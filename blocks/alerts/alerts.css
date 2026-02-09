@@ -1,4 +1,5 @@
 .alerts{
+  align-items:flex-start;
   background-color:#e3f2fd;
   border-left:4px solid;
   border-left-color:#2196f3;
@@ -7,8 +8,10 @@
   display:flex;
   flex-direction:column;
   gap:8px;
+  justify-content:space-between;
   margin-bottom:16px;
   padding:16px;
+  position:relative;
 }
 
 .alerts h4, .alerts p{
@@ -26,7 +29,15 @@
   line-height:1.5;
 }
 
+.alerts .alert-content{
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  gap:8px;
+}
+
 .alerts .alert-button{
+  align-self:flex-start;
   background-color:rgb(255 255 255 / 80%);
   border:1px solid rgb(0 0 0 / 20%);
   border-radius:4px;
@@ -43,6 +54,37 @@
 .alerts .alert-button:hover{
   background-color:rgb(255 255 255);
   box-shadow:0 2px 8px rgb(0 0 0 / 15%);
+}
+
+.alerts .alert-close{
+  align-items:center;
+  background:none;
+  border:none;
+  color:inherit;
+  cursor:pointer;
+  display:flex;
+  flex-shrink:0;
+  justify-content:center;
+  margin-left:8px;
+  min-height:32px;
+  min-width:32px;
+  opacity:0.6;
+  padding:4px 8px;
+  transition:opacity 0.2s ease;
+}
+
+.alerts .alert-close svg{
+  height:20px;
+  stroke-width:2.5;
+  width:20px;
+}
+
+.alerts .alert-close:hover{
+  opacity:1;
+}
+
+.alerts .alert-close:active{
+  opacity:0.8;
 }
 
 .alerts.blue-alert{

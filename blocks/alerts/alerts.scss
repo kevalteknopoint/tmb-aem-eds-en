@@ -28,6 +28,18 @@
         line-height: 1.5;
     }
 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+
+    .alert-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
     .alert-button {
         display: inline-block;
         padding: 8px 16px;
@@ -40,10 +52,42 @@
         color: inherit;
         border: 1px solid rgba(0, 0, 0, 0.2);
         cursor: pointer;
+        align-self: flex-start;
 
         &:hover {
             background-color: rgba(255, 255, 255, 1);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    .alert-close {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: inherit;
+        opacity: 0.6;
+        transition: opacity 0.2s ease;
+        min-width: 32px;
+        min-height: 32px;
+        margin-left: 8px;
+        flex-shrink: 0;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2.5;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &:active {
+            opacity: 0.8;
         }
     }
 
