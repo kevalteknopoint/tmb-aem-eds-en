@@ -25,7 +25,8 @@
           "component": "select",
           "name": "classes",
           "label": "Background Color",
-          "value": "blue-alert",
+          "value": "",
+          "valueType": "string",
           "options": [
             {
               "name": "Blue",
