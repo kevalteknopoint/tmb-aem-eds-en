@@ -1,14 +1,14 @@
 {
   "definitions": [
     {
-      "title": "BannerVideo",
+      "title": "Homepage Banner",
       "id": "bannervideo",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
-              "name": "bannervideo",
+              "name": "Homepage Banner",
               "filter": "bannervideo",
               "model": "bannervideo"
             }
@@ -24,7 +24,7 @@
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
             "template": {
-              "name": "banner-video-item",
+              "name": "Banner Image Item",
               "model": "banner-video-item"
             }
           }
@@ -39,7 +39,7 @@
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
             "template": {
-              "name": "Banner Video Item 2",
+              "name": "Banner Video Item",
               "model": "banner-video-item-2"
             }
           }

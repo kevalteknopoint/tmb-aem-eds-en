@@ -15,7 +15,6 @@
 //     const alertDiv = document.createElement("div");
 //     alertDiv.className = `alert alert-${alertColor}`;
 
-    
 //     // Apply color class ONLY to the alert div, not the section
 //     alertDiv.setAttribute('data-color', alertColor);
 

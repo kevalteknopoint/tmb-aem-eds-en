@@ -8,12 +8,12 @@ import { fetchPlaceholders } from '../../scripts/placeholders.js';
 function slugify(title) {
   return title
     .toLowerCase()
-    .normalize("NFD")                 // split accented letters (é → e + ́)
-    .replace(/[\u0300-\u036f]/g, "")  // remove accent marks
-    .replace(/[^a-z0-9\s-]/g, "")     // remove special characters
-    .trim()                           // trim leading/trailing spaces
-    .replace(/\s+/g, "-")             // replace spaces with hyphens
-    .replace(/-+/g, "-");             // collapse multiple hyphens
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
 }
 
 export default async function decorate(block) {
