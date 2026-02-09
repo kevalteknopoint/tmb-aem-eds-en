@@ -306,6 +306,18 @@
             {
               "name": "legal-privacy",
               "value": "legal-privacy"
+            },
+            {
+              "name": "red-alert",
+              "value": "red-alert"
+            },
+            {
+              "name": "blue-alert",
+              "value": "blue-alert"
+            },
+            {
+              "name": "yellow-alert",
+              "value": "yellow-alert"
             }
           ]
         }
@@ -350,7 +362,8 @@
         "faq-legal",
         "faq-legal-table",
         "legal-privacy",
-        "teachers-calculator-block"
+        "teachers-calculator-block",
+        "alerts"
       ]
     }
   ]
