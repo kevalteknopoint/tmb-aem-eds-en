@@ -64,7 +64,7 @@
     }
 
     .button.secondary {
-      @include button('secondary');
+      @include button('outlined');
     }
   }
 
@@ -173,6 +173,24 @@
       color: $heading-default;
       text-decoration: underline;
       text-underline-offset: 4px;
+
+      @include tablet{
+          padding: 12.5px 0;
+      }
+
+      @include mobile {
+        padding: 0;
+      }
+
+      p{
+        @include tablet{
+          @include typo-heading3;
+
+          color: $heading-default;
+        }
+        
+      }
+     
     }
 
     .step-collapse {
