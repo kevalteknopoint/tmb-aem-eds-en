@@ -2,7 +2,7 @@
 
 .stepper-container {
   @include responsive-container;
-  
+
   display: grid;
   grid-template-columns: 439px auto;
   gap: 64px;
@@ -19,8 +19,13 @@
     @include tablet {
       min-width: unset;
     }
-    
-    h1, h2, h3, h4, h5, h6 {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       @include typo-heading1;
 
       color: $heading-default;
@@ -64,7 +69,20 @@
     }
 
     .button.secondary {
-      @include button('secondary');
+      // @include button('secondary');
+      background-color: $color-button-outlined-default;
+      border: $stroke-button solid $color-button-text-stroke-default;
+      color: $color-button-text-stroke-default;
+      font-size: $font-size-h5;
+      line-height: $font-d-height-h5;
+      min-width: 150px;
+      padding-block: 6px;
+
+      &:hover {
+        border: $stroke-button solid $color-button-text-stroke-hover;  
+        background-color: $color-button-outlined-hover; 
+        color: $color-button-text-stroke-hover; 
+      }
     }
   }
 
@@ -135,19 +153,17 @@
       border: 1px solid $stroke-default;
       color: $icon-2-default;
       cursor: pointer;
-      
+
       &::after {
         content: '';
         width: 1px;
         height: calc(100% - 64px);
-        background: repeating-linear-gradient(
-          to bottom,
-          $icon-2-default,
-          $icon-2-default 6px,
-          transparent 6px,
-          transparent 10px
-        );
-;
+        background: repeating-linear-gradient(to bottom,
+            $icon-2-default,
+            $icon-2-default 6px,
+            transparent 6px,
+            transparent 10px);
+        ;
         position: absolute;
         top: 64px;
         cursor: default;
@@ -173,6 +189,10 @@
       color: $heading-default;
       text-decoration: underline;
       text-underline-offset: 4px;
+
+      @include mobile {
+        padding: unset;
+      }
     }
 
     .step-collapse {
@@ -204,7 +224,7 @@
 
     .stepper-tip {
       @include typo-body;
-      
+
       color: $body-default;
       background: $info-well-default;
       padding: 16px;
@@ -233,7 +253,12 @@
         }
       }
 
-      h1, h2, h3, h4, h5, h6 {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         @include typo-heading4;
 
         color: $heading-default;

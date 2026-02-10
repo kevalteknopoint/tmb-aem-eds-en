@@ -461,6 +461,53 @@
     ]
   },
   {
+    "id": "alerts",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Background Color",
+        "value": "",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Blue",
+            "value": "blue-alert"
+          },
+          {
+            "name": "Orange",
+            "value": "orange-alert"
+          },
+          {
+            "name": "Red",
+            "value": "red-alert"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Alerts Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "buttonText",
+        "value": "",
+        "label": "Button Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "buttonUrl",
+        "value": "",
+        "label": "Button URL",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "bannervideo",
     "fields": [
       {
@@ -515,7 +562,7 @@
         "component": "richtext",
         "name": "context",
         "value": "",
-        "label": "context-model",
+        "label": "Banner Content",
         "valueType": "string"
       },
       {
@@ -623,14 +670,14 @@
         "component": "aem-content",
         "name": "context_video",
         "value": "",
-        "label": "video",
+        "label": "Video",
         "valueType": "string"
       },
       {
         "component": "richtext",
         "name": "context",
         "value": "",
-        "label": "context-model",
+        "label": "Banner Content",
         "valueType": "string"
       },
       {
