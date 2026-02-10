@@ -68,7 +68,7 @@ body:has(.product-detail-banner) .breadcrumb.block{
   max-width:660px;
 }
 
-.product-detail-banner .hero-banner-content-wrap h1, .product-detail-banner .hero-banner-content-wrap h2, .product-detail-banner .hero-banner-content-wrap h3{
+.product-detail-banner .hero-banner-content-wrap .hero-sub-heading h1, .product-detail-banner .hero-banner-content-wrap .hero-sub-heading h2, .product-detail-banner .hero-banner-content-wrap .hero-sub-heading h3, .product-detail-banner .hero-banner-content-wrap .hero-sub-heading h4, .product-detail-banner .hero-banner-content-wrap .hero-sub-heading h5, .product-detail-banner .hero-banner-content-wrap .hero-sub-heading h6{
   color:var(--heading-default);
   font-family:var(--font-family-intro);
   font-size:var(--font-size-intro);
@@ -79,7 +79,7 @@ body:has(.product-detail-banner) .breadcrumb.block{
   text-transform:initial;
 }
 
-.product-detail-banner .hero-banner-content-wrap h4, .product-detail-banner .hero-banner-content-wrap h5, .product-detail-banner .hero-banner-content-wrap h6{
+.product-detail-banner .hero-banner-content-wrap .hero-heading h1, .product-detail-banner .hero-banner-content-wrap .hero-heading h2, .product-detail-banner .hero-banner-content-wrap .hero-heading h3, .product-detail-banner .hero-banner-content-wrap .hero-heading h4, .product-detail-banner .hero-banner-content-wrap .hero-heading h5, .product-detail-banner .hero-banner-content-wrap .hero-heading h6{
   color:var(--heading-default);
   font-family:var(--font-family-lg);
   font-size:var(--font-size-lg);
@@ -132,9 +132,15 @@ body:has(.product-detail-banner) .breadcrumb.block{
   line-height:32px;
 }
 
-.product-detail-banner .hero-banner-content-wrap .interest-rates-wrapper + p{
+.product-detail-banner .hero-banner-content-wrap .interest-rates-wrapper .rate-disclaimer{
   color:var(--heading-default);
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
   margin-top:16px;
+  text-transform:initial;
 }
 
 .product-detail-banner .hero-banner-content-wrap .interest-rate{
@@ -199,7 +205,7 @@ body:has(.product-detail-banner) .breadcrumb.block{
   color:var(--heading-reverse-2);
 }
 
-.product-detail-banner.text-color-variation .hero-banner-content-wrap p, .product-detail-banner.text-color-variation .hero-banner-content-wrap .interest-rates-wrapper + p{
+.product-detail-banner.text-color-variation .hero-banner-content-wrap p, .product-detail-banner.text-color-variation .hero-banner-content-wrap .interest-rates-wrapper .rate-disclaimer{
   color:var(--heading-reverse-2);
 }
 

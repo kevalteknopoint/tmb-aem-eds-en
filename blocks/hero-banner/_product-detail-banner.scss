@@ -80,18 +80,22 @@ body:has(.product-detail-banner) {
       max-width: 660px;
     }
 
-    h1, h2, h3 {
-      @include typo-intro;
-
-      color: $heading-default;
-      margin-bottom: 4px;
+    .hero-sub-heading {
+      h1, h2, h3, h4, h5, h6 {
+        @include typo-intro;
+        
+        color: $heading-default;
+        margin-bottom: 4px;
+      }
     }
 
-    h4, h5, h6 {
-      @include typo-large-heading;
+    .hero-heading {
+      h1, h2, h3, h4, h5, h6 {
+        @include typo-large-heading;
 
-      color: $heading-default;
-      padding-bottom: 16px;
+        color: $heading-default;
+        padding-bottom: 16px;
+      }
     }
 
     p:has(.interest-rate) {
@@ -139,7 +143,9 @@ body:has(.product-detail-banner) {
         }
       }
 
-      & + p {
+      .rate-disclaimer {
+        @include typo-body;
+
         color: $heading-default;
         margin-top: 16px;
       }
@@ -224,9 +230,10 @@ body:has(.product-detail-banner) {
         }
       }
       
-      p, .interest-rates-wrapper + p {
+      p, .interest-rates-wrapper .rate-disclaimer {
         color: $heading-reverse-2;
       }
+      
     }
   }
 
