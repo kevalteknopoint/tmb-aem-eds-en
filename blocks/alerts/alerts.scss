@@ -1,8 +1,9 @@
 @use '../../styles/base' as *;
 
 .alerts {
+     @include responsive-container;
+     
     display: flex;
-    max-width: 1440px;
     padding: 16px 64px;
     align-items: flex-start;
     gap: 12px;
@@ -27,9 +28,28 @@
         }
     }
 
-    .alert-icon {
-        width: 21px;
+    .icon {
+        display: flex;
+        padding: 4px 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+
+        // width: 21px;
         height: 21px;
+        aspect-ratio: 1/1;
+    }
+
+    .icon-close {
+        display: flex;
+        padding: 8px 0;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        width: 12px;
+        height: 12px;
+        flex-shrink: 0;
+        aspect-ratio: 1/1;
     }
 
     /* Blue */

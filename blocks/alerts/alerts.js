@@ -1,34 +1,18 @@
 export default function decorate(block) {
-  if (window.location.href.includes('author')) return;
+  if (window.location.href.includes("author")) return;
 
   [...block.children].forEach((row) => {
-    const inner = row.firstElementChild;
-    if (!inner) return;
-
-    const children = [...inner.children];
-    if (!children.length) return;
-
-    // first <p> = icon
-    const icon = children[0];
-
-    // create wrappers
-    const iconWrapper = document.createElement('div');
-    iconWrapper.className = 'alert-icon';
-
-    const textWrapper = document.createElement('div');
-    textWrapper.className = 'alert-text';
-
-    // move icon
-    iconWrapper.append(icon);
-
-    // move rest
-    children.slice(1).forEach((el) => textWrapper.append(el));
-
-    // clear and append inside inner
-    inner.textContent = '';
-    inner.append(iconWrapper, textWrapper);
-
-    row.append(iconWrapper, textWrapper);
-    inner.remove();
+    // if icon present
+    if (row.querySelector(".icon, svg")) {
+      if (
+        row.querySelector(".icon, svg").className.includes("icon-close-icon")
+      ) {
+        row.classList.add("icon-close");
+      } else {
+        row.classList.add("icon");
+      }
+    } else {
+      row.classList.add("alert-text");
+    }
   });
 }
