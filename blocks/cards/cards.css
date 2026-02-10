@@ -454,6 +454,7 @@
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-2.is-badge-link p a{
+  border-bottom:0;
   display:block;
   height:42px;
 }
@@ -1509,7 +1510,7 @@ html{
   width:10px;
 }
 
-.milestones .cards-wrapper .block .swiper-wrapper .swiper-slide div:last-child p{
+.milestones .cards-wrapper .block .swiper-wrapper .swiper-slide div > p{
   color:var(--body-reverse);
   font-family:var(--font-family-body);
   font-size:var(--font-size-body);
@@ -1519,7 +1520,7 @@ html{
   text-transform:initial;
 }
 
-.milestones .cards-wrapper .block .swiper-wrapper .swiper-slide div:last-child p:first-child{
+.milestones .cards-wrapper .block .swiper-wrapper .swiper-slide div > p:first-child{
   font-family:var(--font-family-h4);
   font-size:var(--font-size-h4);
   font-weight:var(--font-weight-h4);
