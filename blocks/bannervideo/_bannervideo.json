@@ -103,7 +103,7 @@
           "component": "richtext",
           "name": "context",
           "value": "",
-          "label": "context-model",
+          "label": "Banner Content",
           "valueType": "string"
         },
         {
@@ -211,14 +211,14 @@
           "component": "aem-content",
           "name": "context_video",
           "value": "",
-          "label": "video",
+          "label": "Video",
           "valueType": "string"
         },
         {
           "component": "richtext",
           "name": "context",
           "value": "",
-          "label": "context-model",
+          "label": "Banner Content",
           "valueType": "string"
         },
         {
