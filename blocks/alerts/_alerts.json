@@ -50,9 +50,17 @@
           "valueType": "string"
         },
         {
-          "component": "aem-content",
-          "name": "close-button",
-          "label": "Close Button"
+          "component": "title",
+          "name": "title",
+          "label": "Heading",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "title",
+          "value": "",
+          "label": "Heading"
         },
         {
           "component": "text",

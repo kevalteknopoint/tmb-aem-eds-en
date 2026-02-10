@@ -1,126 +1,49 @@
+@use '../../styles/base' as *;
 
 .alerts {
-    padding: 16px;
-    margin-bottom: 16px;
-    border-radius: 4px;
-    border-left: 4px solid;
     display: flex;
-    flex-direction: column;
-    gap: 8px;
-
-    /* Default - Blue */
-    background-color: #e3f2fd;
-    border-left-color: #2196f3;
-    color: #1565c0;
-
-    h4, p {
-        margin: 0;
-    }
-
-    h4 {
-        font-weight: 600;
-        font-size: 1rem;
-        color: #1565c0;
-    }
-
-    p {
-        font-size: 0.95rem;
-        line-height: 1.5;
-    }
-
-    display: flex;
-    justify-content: space-between;
+    max-width: 1440px;
+    padding: 16px 64px;
     align-items: flex-start;
-    position: relative;
+    gap: 12px;
+    align-self: stretch;
 
-    .alert-content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
+    .alert-text {
+        p {
+            color: #0B231F;
+            font-family: $font-family-sm-body ;
+            font-size: $font-size-sm-body ;
+            font-style: normal;
+            font-weight: 400;
+        }
 
-    .alert-button {
-        display: inline-block;
-        padding: 8px 16px;
-        margin-top: 8px;
-        border-radius: 4px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: all 0.3s ease;
-        background-color: rgba(255, 255, 255, 0.8);
-        color: inherit;
-        border: 1px solid rgba(0, 0, 0, 0.2);
-        cursor: pointer;
-        align-self: flex-start;
-
-        &:hover {
-            background-color: rgba(255, 255, 255, 1);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        h3,
+        h4 {
+            color: #0B231F;
+            font-family: $font-family-h5 ;
+            font-size: $font-size-h5 ;
+            font-style: normal;
+            font-weight: 500;
         }
     }
 
-    .alert-close {
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 4px 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: inherit;
-        opacity: 0.6;
-        transition: opacity 0.2s ease;
-        min-width: 32px;
-        min-height: 32px;
-        margin-left: 8px;
-        flex-shrink: 0;
-
-        svg {
-            width: 20px;
-            height: 20px;
-            stroke-width: 2.5;
-        }
-
-        &:hover {
-            opacity: 1;
-        }
-
-        &:active {
-            opacity: 0.8;
-        }
+    .alert-icon {
+        width: 21px;
+        height: 21px;
     }
 
     /* Blue */
     &.blue-alert {
-        background-color: #e3f2fd;
-        border-left-color: #2196f3;
-        color: #1565c0;
-
-        h4 {
-            color: #1565c0;
-        }
+        background-color: #F2F7FF;
     }
 
     /* Orange */
     &.orange-alert {
-        background-color: #fff3e0;
-        border-left-color: #ff9800;
-        color: #e65100;
-
-        h4 {
-            color: #e65100;
-        }
+        background-color: #FEF5F2;
     }
 
     /* Red */
     &.red-alert {
-        background-color: #ffebee;
-        border-left-color: #f44336;
-        color: #c62828;
-
-        h4 {
-            color: #c62828;
-        }
+        background-color: #FCF2F5;
     }
 }
