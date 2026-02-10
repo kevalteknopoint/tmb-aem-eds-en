@@ -26,7 +26,7 @@ export default function decorate(block) {
     if (buttonTextCell && buttonUrlCell) {
       const buttonText = buttonTextCell.textContent?.trim();
       const buttonUrl = buttonUrlCell.textContent?.trim();
-      
+
       if (buttonText && buttonUrl) {
         buttonEl = document.createElement('a');
         buttonEl.href = buttonUrl;
