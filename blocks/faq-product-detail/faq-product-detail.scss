@@ -17,6 +17,7 @@
 
   .default-content-wrapper {
     &:last-child:not(:nth-child(2)) {
+      margin-top: 16px;
       grid-column: 1 / -1;
       text-align: center;
     }

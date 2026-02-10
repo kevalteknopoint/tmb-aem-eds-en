@@ -2,7 +2,7 @@
 
 .stepper-container {
   @include responsive-container;
-  
+
   display: grid;
   grid-template-columns: 439px auto;
   gap: 64px;
@@ -19,8 +19,13 @@
     @include tablet {
       min-width: unset;
     }
-    
-    h1, h2, h3, h4, h5, h6 {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       @include typo-heading1;
 
       color: $heading-default;
@@ -135,19 +140,17 @@
       border: 1px solid $stroke-default;
       color: $icon-2-default;
       cursor: pointer;
-      
+
       &::after {
         content: '';
         width: 1px;
         height: calc(100% - 64px);
-        background: repeating-linear-gradient(
-          to bottom,
-          $icon-2-default,
-          $icon-2-default 6px,
-          transparent 6px,
-          transparent 10px
-        );
-;
+        background: repeating-linear-gradient(to bottom,
+            $icon-2-default,
+            $icon-2-default 6px,
+            transparent 6px,
+            transparent 10px);
+        ;
         position: absolute;
         top: 64px;
         cursor: default;
@@ -223,7 +226,7 @@
 
     .stepper-tip {
       @include typo-body;
-      
+
       color: $body-default;
       background: $info-well-default;
       padding: 16px;
@@ -252,7 +255,12 @@
         }
       }
 
-      h1, h2, h3, h4, h5, h6 {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         @include typo-heading4;
 
         color: $heading-default;

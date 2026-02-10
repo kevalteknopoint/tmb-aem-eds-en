@@ -30,7 +30,12 @@
   min-width:384px;
 }
 
-.stepper-container .default-content-wrapper h1, .stepper-container .default-content-wrapper h2, .stepper-container .default-content-wrapper h3, .stepper-container .default-content-wrapper h4, .stepper-container .default-content-wrapper h5, .stepper-container .default-content-wrapper h6{
+.stepper-container .default-content-wrapper h1,
+.stepper-container .default-content-wrapper h2,
+.stepper-container .default-content-wrapper h3,
+.stepper-container .default-content-wrapper h4,
+.stepper-container .default-content-wrapper h5,
+.stepper-container .default-content-wrapper h6{
   color:var(--heading-default);
   font-family:var(--font-family-h1);
   font-size:var(--font-size-h1);
@@ -300,7 +305,12 @@
   width:25px;
 }
 
-.stepper-container .stepper-item .stepper-tip h1, .stepper-container .stepper-item .stepper-tip h2, .stepper-container .stepper-item .stepper-tip h3, .stepper-container .stepper-item .stepper-tip h4, .stepper-container .stepper-item .stepper-tip h5, .stepper-container .stepper-item .stepper-tip h6{
+.stepper-container .stepper-item .stepper-tip h1,
+.stepper-container .stepper-item .stepper-tip h2,
+.stepper-container .stepper-item .stepper-tip h3,
+.stepper-container .stepper-item .stepper-tip h4,
+.stepper-container .stepper-item .stepper-tip h5,
+.stepper-container .stepper-item .stepper-tip h6{
   color:var(--heading-default);
   font-family:var(--font-family-h4);
   font-size:var(--font-size-h4);
