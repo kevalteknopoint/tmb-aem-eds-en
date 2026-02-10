@@ -486,14 +486,14 @@
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "icon",
         "value": "",
-        "label": "Alerts icon",
+        "label": "Alerts Icon",
         "valueType": "string"
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "description",
         "value": "",
         "label": "Alerts Text",
         "valueType": "string"
@@ -508,7 +508,8 @@
       {
         "component": "text",
         "name": "close-button-text",
-        "label": "Close Button Text"
+        "label": "Close Button Text",
+        "valueType": "string"
       }
     ]
   },
