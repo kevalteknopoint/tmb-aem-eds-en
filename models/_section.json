@@ -350,7 +350,9 @@
         "faq-legal",
         "faq-legal-table",
         "legal-privacy",
-        "calculator"
+        "calculator",
+        "teachers-calculator-block",
+        "alerts"
       ]
     }
   ]

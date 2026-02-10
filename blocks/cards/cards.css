@@ -105,6 +105,8 @@
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile.active .tile-content{
   opacity:1;
   pointer-events:all;
+  transition-delay:1s;
+  visibility:visible;
 }
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile.active .tile-image img{
@@ -143,7 +145,8 @@
   pointer-events:none;
   position:absolute;
   text-decoration:none;
-  transition:all 1s ease-in-out;
+  transition:opacity 0.4s ease-in-out, visibility 0s linear 0.4s;
+  visibility:hidden;
   width:calc(100% - 32px);
 }
 
@@ -243,6 +246,11 @@
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta .cta-link.icon-btn{
   min-width:unset;
   padding:8px;
+}
+
+.section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta .cta-link.icon-btn svg{
+  height:24px;
+  width:24px;
 }
 
 .section.expandable-tiles-section .cards-wrapper .cards.expandable-tiles.block .expandable-tile .tile-content .content-cta .icon{
@@ -454,6 +462,7 @@
 }
 
 .section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-2.is-badge-link p a{
+  border-bottom:0;
   display:block;
   height:42px;
 }
@@ -1479,7 +1488,6 @@ html{
   border:none;
   border-radius:unset;
   gap:0;
-  margin-right:unset !important;
   padding:32px 32px 0 0;
   position:relative;
 }
@@ -1509,7 +1517,7 @@ html{
   width:10px;
 }
 
-.milestones .cards-wrapper .block .swiper-wrapper .swiper-slide div:last-child p{
+.milestones .cards-wrapper .block .swiper-wrapper .swiper-slide div > p{
   color:var(--body-reverse);
   font-family:var(--font-family-body);
   font-size:var(--font-size-body);
@@ -1519,7 +1527,7 @@ html{
   text-transform:initial;
 }
 
-.milestones .cards-wrapper .block .swiper-wrapper .swiper-slide div:last-child p:first-child{
+.milestones .cards-wrapper .block .swiper-wrapper .swiper-slide div > p:first-child{
   font-family:var(--font-family-h4);
   font-size:var(--font-size-h4);
   font-weight:var(--font-weight-h4);
@@ -1974,6 +1982,7 @@ html{
     margin:16px;
     opacity:1;
     pointer-events:all;
+    visibility:visible;
     width:calc(100% - 32px);
   }
 
@@ -2200,8 +2209,7 @@ html{
 
   .milestones .cards-wrapper .block .swiper-wrapper .swiper-slide{
     display:block;
-    max-width:300px;
-    width:220px;
+    max-width:275px !important;
   }
 
   .milestones .cards-wrapper .block .nav-wrapper .swiper-button-next,

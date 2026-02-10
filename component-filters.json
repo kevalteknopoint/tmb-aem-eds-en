@@ -42,7 +42,9 @@
       "faq-legal",
       "faq-legal-table",
       "legal-privacy",
-      "calculator"
+      "calculator",
+      "teachers-calculator-block",
+      "alerts"
     ]
   },
   {
@@ -50,6 +52,9 @@
     "components": [
       "accordion-item"
     ]
+  },
+  {
+    "id": "alerts"
   },
   {
     "id": "bannervideo",
