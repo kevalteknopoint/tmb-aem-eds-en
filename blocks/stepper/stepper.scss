@@ -183,12 +183,13 @@
       }
 
       p{
-        @include tablet{
-          @include typo-heading3;
+        @include typo-heading3;
 
-          color: $heading-default;
-        }
+        color: $heading-default;
         
+        @include mobile {
+          padding-top: 5.5px;
+        }
       }
      
     }
