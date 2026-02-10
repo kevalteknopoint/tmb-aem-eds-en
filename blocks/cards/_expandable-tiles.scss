@@ -225,6 +225,11 @@
               &.icon-btn {
                 min-width: unset;
                 padding: 8px;
+
+                svg {
+                  width: 24px;
+                  height: 24px;
+                }
               }
             }
 
