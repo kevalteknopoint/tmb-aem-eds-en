@@ -33,6 +33,8 @@ const getText = (el, fallback = '') => el?.textContent?.trim() || fallback;
 const getLink = (el) => el?.querySelector('a');
 
 export default function decorate(block) {
+  if (window.location.origin.includes('author')) return;
+  
   const blockMainChild = block.querySelector(':scope > div');
   blockMainChild.classList.add('hero-banner-main');
 
