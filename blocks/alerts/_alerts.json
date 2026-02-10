@@ -34,7 +34,7 @@
           ]
         },
         {
-          "component": "richtext",
+          "component": "text",
           "name": "icon",
           "value": "",
           "label": "Alerts Icon",
