@@ -10,8 +10,6 @@
  * governing permissions and limitations under the License.
  */
 
-import { toCamelCase } from './aem.js';
-
 /**
  * Gets placeholders object.
  * @param {string} [prefix] Location of placeholders

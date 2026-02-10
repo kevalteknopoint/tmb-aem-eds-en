@@ -170,8 +170,7 @@ function loadPlaceholders() {
       if (isInterestRate) {
         value = value.replaceAll(/(\d+(?:\.\d+)?)(%)(p\.a\.)/g, `<span class="rate-num">$1</span><span class="rate-unit"><span class="rate-percent">$2</span><span class="rate-pa">$3</span></span>`);
       }
-      if(isInterestRate && (key === 'pl-compare-1' || key === 'pl-compare-2')) {
-        let a, b;
+      if (isInterestRate && (key === 'pl-compare-1' || key === 'pl-compare-2')) {
         value = value.replaceAll(/(\d+(?:\.\d+)?)(%)(p\.a\.)/g, `<span class="rate-num">$1</span><span class="rate-unit"><span class="rate-percent">$2</span><span class="rate-pa">$3</span></span>`);
       }
 
