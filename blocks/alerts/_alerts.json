@@ -46,13 +46,14 @@
           "component": "richtext",
           "name": "text",
           "value": "",
-          "label": "Alerts Text",
+          "label": "Alerts icon",
           "valueType": "string"
         },
         {
-          "component": "title",
-          "name": "title",
-          "label": "Heading",
+          "component": "richtext",
+          "name": "text",
+          "value": "",
+          "label": "Alerts Text",
           "valueType": "string"
         },
         {
