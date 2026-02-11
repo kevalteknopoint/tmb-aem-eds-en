@@ -69,20 +69,7 @@
     }
 
     .button.secondary {
-      // @include button('secondary');
-      background-color: $color-button-outlined-default;
-      border: $stroke-button solid $color-button-text-stroke-default;
-      color: $color-button-text-stroke-default;
-      font-size: $font-size-h5;
-      line-height: $font-d-height-h5;
-      min-width: 150px;
-      padding-block: 6px;
-
-      &:hover {
-        border: $stroke-button solid $color-button-text-stroke-hover;  
-        background-color: $color-button-outlined-hover; 
-        color: $color-button-text-stroke-hover; 
-      }
+      @include button('outlined');
     }
   }
 
@@ -190,9 +177,24 @@
       text-decoration: underline;
       text-underline-offset: 4px;
 
-      @include mobile {
-        padding: unset;
+      @include tablet{
+          padding: 12.5px 0;
       }
+
+      @include mobile {
+        padding: 0;
+      }
+
+      p{
+        @include typo-heading3;
+
+        color: $heading-default;
+        
+        @include mobile {
+          padding-top: 5.5px;
+        }
+      }
+     
     }
 
     .step-collapse {

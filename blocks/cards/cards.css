@@ -1488,7 +1488,6 @@ html{
   border:none;
   border-radius:unset;
   gap:0;
-  margin-right:unset !important;
   padding:32px 32px 0 0;
   position:relative;
 }
@@ -2210,8 +2209,7 @@ html{
 
   .milestones .cards-wrapper .block .swiper-wrapper .swiper-slide{
     display:block;
-    max-width:300px;
-    width:220px;
+    max-width:275px !important;
   }
 
   .milestones .cards-wrapper .block .nav-wrapper .swiper-button-next,
