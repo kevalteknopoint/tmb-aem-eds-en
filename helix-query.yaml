@@ -26,6 +26,6 @@ indices:
       ogDescription:
         select: head > meta[property="og:description"]
         value: attribute(el, "content")
-      category:
-        select: head > meta[name="category"]
+      tags:
+        select: head > meta[name="cq-tags"]
         value: attribute(el, "content")

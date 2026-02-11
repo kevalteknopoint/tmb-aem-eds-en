@@ -1,13 +1,47 @@
 import './header-analytics.js';
 import { createOptimizedPicture, getMetadata } from '../../scripts/aem.js';
-import { div, ul, li, a, button, input, form } from '../../scripts/dom-helpers.js';
+import { div, ul, li, a, button, input, form, h2 } from '../../scripts/dom-helpers.js';
 import { loadFragment } from '../fragment/fragment.js';
+
+function toCapitalCase(str) {
+  return str
+    .split(/[-_]+/) // split on one or more - or _
+    .filter(Boolean) // remove empty strings (extra separators)
+    .map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+    )
+    .join(' ');
+}
+
+function debounce(fn, delay) {
+  let timeoutId;
+  
+  return function (...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      fn.apply(this, args);
+    }, delay);
+  };
+}
+
+async function fetchQueryJson() {
+  try {
+    const basePath = getMetadata('base-path');
+    const queryRes = await fetch('/query-index.json');
+    const jsonRes = await queryRes.json();
+    window.searchData = jsonRes?.data?.filter((result) => result?.path?.startsWith(basePath));
+  } catch (error) {
+    console.log('Failed to fetch query-index: ', error);
+  }
+}
 
 export default async function decorate(block) {
   // load nav as fragment
   const navMeta = getMetadata('nav');
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
   const fragment = await loadFragment(navPath);
+
+  fetchQueryJson();
 
   block.innerHTML = fragment.innerHTML;
 
@@ -136,5 +170,52 @@ export default async function decorate(block) {
   popularSearches.append(contentWrapper);
   searchSection.appendChild(popularSearches);
 
-  searchSection.insertAdjacentElement('afterbegin', div({ class: 'dynamic-search-results', id: 'dynamicSearchResults' }, contentWrapper.cloneNode(true)));
+
+  const searchDataWrapper = div({ class: 'dynamic-search-results-wrapper' });
+
+  searchSection.insertAdjacentElement('afterbegin', searchDataWrapper);
+
+  // searchInp.addEventListener('input', debounce(function (e) {
+    
+  // }, 300));
+  
+  searchInp.addEventListener('input', function (e) {
+    const targetValue = e.target.value;
+
+    if (targetValue?.length < 3) {
+      searchDataWrapper.innerHTML = '';
+      return;
+    } 
+
+    const filteredResults = window.searchData?.filter((item) => item?.path?.toLowerCase()?.includes(targetValue?.toLowerCase()));
+
+    if (!filteredResults.length) {
+      searchDataWrapper.innerHTML = '';
+      return;
+    }
+    
+    populateSearchData(searchDataWrapper, filteredResults);
+  });
+}
+
+function populateSearchData(wrapper, data) {
+  wrapper.innerHTML = '';
+
+  const defaultWrapper = div({ class: 'default-content-wrapper' }, h2('Search Results'));
+
+  const dataUl = ul();
+
+  data.forEach((item) => {
+    const itemPath = item.path;
+    const splitPath = itemPath?.split('/');
+    const title = splitPath?.[splitPath.length - 1];
+    dataUl.appendChild(li(
+      a({ href: item.path }, toCapitalCase(title))
+    ));
+  });
+
+  defaultWrapper.appendChild(dataUl);
+
+  const dataWrapper = div({ class: 'dynamic-search-results', id: 'dynamicSearchResults' }, defaultWrapper);
+  wrapper.appendChild(dataWrapper);
 }

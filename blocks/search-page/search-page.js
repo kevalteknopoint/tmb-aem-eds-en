@@ -53,6 +53,17 @@ const dummyResults = [
   }
 ];
 
+function debounce(fn, delay) {
+  let timeoutId;
+  
+  return function (...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      fn.apply(this, args);
+    }, delay);
+  };
+}
+
 function populateResults(searchVal, results) {
   const resultDetailsDiv = div({ class: 'search-result-details' },
     p({ class: 'search-results-num' }, `${results.length} results for `, b(`${searchVal}`)),
@@ -102,6 +113,15 @@ function populateResults(searchVal, results) {
 
     searchInp.value = '';
   });
+
+  // searchInp.addEventListener('input', debounce(function (e) {
+    
+  // }, 300));
+  
+  searchInp.addEventListener('input', function (e) {
+
+  });
+
 
   const resultElements = populateResults('Card', dummyResults);
   const searchResultsContainer = div({ class: 'search-page-results-container', id: 'searchPageResults' }, ...resultElements);

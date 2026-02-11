@@ -346,6 +346,14 @@ html:has(.primary-header.search-active) .search-results-section{
   padding:0 !important;
 }
 
+.search-results-section .dynamic-search-results .default-content-wrapper{
+  margin-bottom:40px;
+}
+
+.search-results-section .dynamic-search-results .default-content-wrapper:last-child{
+  margin-bottom:0;
+}
+
 .search-results-section .dynamic-search-results .default-content-wrapper ul{
   grid-template-columns:1fr 1fr 1fr;
 }

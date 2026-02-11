@@ -371,6 +371,12 @@ html:has(.primary-header.search-active) {
     }
 
     .default-content-wrapper {
+      margin-bottom: 40px;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+
       ul {
         grid-template-columns: 1fr 1fr 1fr;
         
