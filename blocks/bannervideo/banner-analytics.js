@@ -5,4 +5,9 @@ document.addEventListener('click', (e) => {
     const secondaryLink = e.target.closest('.bannervideo-wrapper .button');
     bannerInteraction('', minifyText(secondaryLink?.textContent) , 'banking for teachers, owned by teachers','','','','','','','','banner-click','internal','','','','','');
   }   
+   if (e.target.closest('.bannervideo-wrapper .swiper-pagination-bullet')) {
+    const secondaryLink = e.target.closest('.bannervideo-wrapper .swiper-pagination-bullet');
+    let carouselPosition = secondaryLink.getAttribute("aria-label").replaceAll(/\D+/g, "")
+    bannerInteraction('', minifyText(secondaryLink?.textContent) , 'banking for teachers, owned by teachers',carouselPosition,'','','','','','','banner-click','internal','','','','','');
+  } 
 });
