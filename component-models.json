@@ -485,24 +485,23 @@
         ]
       },
       {
+        "component": "text",
+        "name": "icon",
+        "value": "",
+        "label": "Alerts Icon",
+        "valueType": "string"
+      },
+      {
         "component": "richtext",
-        "name": "text",
+        "name": "description",
         "value": "",
         "label": "Alerts Text",
         "valueType": "string"
       },
       {
         "component": "text",
-        "name": "buttonText",
-        "value": "",
-        "label": "Button Text",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "buttonUrl",
-        "value": "",
-        "label": "Button URL",
+        "name": "close-button-text",
+        "label": "Close Button Text",
         "valueType": "string"
       }
     ]

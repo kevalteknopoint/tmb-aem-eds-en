@@ -1,76 +1,75 @@
 .alerts{
-  background-color:#e3f2fd;
-  border-left:4px solid;
-  border-left-color:#2196f3;
-  border-radius:4px;
-  color:#1565c0;
+  align-items:flex-start;
+  align-self:stretch;
+  display:flex;
+  gap:12px;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding:16px 64px;
+  padding-inline:64px;
+  width:100%;
+}
+
+.alerts .alert-text p{
+  color:#0B231F;
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-style:normal;
+  font-weight:400;
+}
+
+.alerts .alert-text h3,
+.alerts .alert-text h4{
+  color:#0B231F;
+  font-family:var(--font-family-h5);
+  font-size:var(--font-size-h5);
+  font-style:normal;
+  font-weight:500;
+}
+
+.alerts .icon{
+  align-items:center;
+  aspect-ratio:1/1;
   display:flex;
   flex-direction:column;
   gap:8px;
-  margin-bottom:16px;
-  padding:16px;
+  height:21px;
+  padding:4px 0;
 }
 
-.alerts h4, .alerts p{
-  margin:0;
-}
-
-.alerts h4{
-  color:#1565c0;
-  font-size:1rem;
-  font-weight:600;
-}
-
-.alerts p{
-  font-size:0.95rem;
-  line-height:1.5;
-}
-
-.alerts .alert-button{
-  background-color:rgb(255 255 255 / 80%);
-  border:1px solid rgb(0 0 0 / 20%);
-  border-radius:4px;
-  color:inherit;
-  cursor:pointer;
-  display:inline-block;
-  font-weight:500;
-  margin-top:8px;
-  padding:8px 16px;
-  text-decoration:none;
-  transition:all 0.3s ease;
-}
-
-.alerts .alert-button:hover{
-  background-color:rgb(255 255 255);
-  box-shadow:0 2px 8px rgb(0 0 0 / 15%);
+.alerts .icon-close{
+  align-items:center;
+  aspect-ratio:1/1;
+  display:flex;
+  flex-shrink:0;
+  gap:8px;
+  height:12px;
+  justify-content:center;
+  padding:8px 0;
+  width:12px;
 }
 
 .alerts.blue-alert{
-  background-color:#e3f2fd;
-  border-left-color:#2196f3;
-  color:#1565c0;
-}
-
-.alerts.blue-alert h4{
-  color:#1565c0;
+  background-color:#F2F7FF;
 }
 
 .alerts.orange-alert{
-  background-color:#fff3e0;
-  border-left-color:#ff9800;
-  color:#e65100;
-}
-
-.alerts.orange-alert h4{
-  color:#e65100;
+  background-color:#FEF5F2;
 }
 
 .alerts.red-alert{
-  background-color:#ffebee;
-  border-left-color:#f44336;
-  color:#c62828;
+  background-color:#FCF2F5;
 }
 
-.alerts.red-alert h4{
-  color:#c62828;
+@media screen and (max-width: 1279px){
+  .alerts{
+    padding-inline:24px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .alerts{
+    padding-inline:16px;
+  }
 }
