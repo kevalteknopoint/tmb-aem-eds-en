@@ -1,0 +1,7 @@
+@use '../../styles/base' as *;
+
+.system-table {
+  @include responsive-container;
+  
+    background-color: green;
+}

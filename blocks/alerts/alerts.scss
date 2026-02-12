@@ -5,11 +5,14 @@
      
     display: flex;
     padding: 16px 64px;
-    align-items: flex-start;
+    align-items: baseline;
     gap: 12px;
+    border-radius: 16px;
     align-self: stretch;
 
     .alert-text {
+        width: 95%;
+
         p {
             color: #0B231F;
             font-family: $font-family-sm-body ;
@@ -50,6 +53,7 @@
         height: 12px;
         flex-shrink: 0;
         aspect-ratio: 1/1;
+        cursor: pointer;
     }
 
     /* Blue */
