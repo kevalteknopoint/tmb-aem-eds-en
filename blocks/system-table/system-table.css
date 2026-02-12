@@ -1,10 +1,78 @@
 .system-table{
-  background-color:green;
   margin-left:auto;
   margin-right:auto;
   max-width:calc(1440px - 0px);
   padding-inline:64px;
   width:100%;
+}
+
+.system-table .block div{
+  align-items:start;
+}
+
+.system-table .block div div h1, .system-table .block div div h2{
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
+  font-size:var(--font-size-h1);
+  font-weight:900;
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  text-transform:uppercase;
+}
+
+.system-table .block div div h1:first-child, .system-table .block div div h2:first-child{
+  width:416px;
+}
+
+.system-table .block div div:first-child{
+  flex:unset;
+}
+
+.system-table .block div div ul li ul li{
+  font-size:var(--font-size-body);
+  font-style:normal;
+  font-weight:400;
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+}
+
+.system-table .block div div ul li ul li.status-available, .system-table .block div div ul li ul li.status-unavailable, .system-table .block div div ul li ul li.status-interruptions{
+  align-items:center;
+  display:flex;
+  font-weight:bold;
+}
+
+.system-table .block div div ul li ul li.status-available::before, .system-table .block div div ul li ul li.status-unavailable::before, .system-table .block div div ul li ul li.status-interruptions::before{
+  border-radius:20px;
+  content:"";
+  display:inline-block;
+  height:10px;
+  margin-right:8px;
+  width:10px;
+}
+
+.system-table .block div div ul li ul li.status-available{
+  color:#28a745 !important;
+}
+
+.system-table .block div div ul li ul li.status-available::before{
+  background-color:#28a745;
+}
+
+.system-table .block div div ul li ul li.status-unavailable{
+  color:#dc3545 !important;
+}
+
+.system-table .block div div ul li ul li.status-unavailable::before{
+  background-color:#dc3545;
+}
+
+.system-table .block div div ul li ul li.status-interruptions{
+  color:#fd7e14 !important;
+}
+
+.system-table .block div div ul li ul li.status-interruptions::before{
+  background-color:#fd7e14;
 }
 
 @media screen and (max-width: 1279px){
@@ -16,5 +84,9 @@
 @media screen and (max-width: 767px){
   .system-table{
     padding-inline:16px;
+  }
+
+  .system-table .block div div ul li ul li{
+    align-items:baseline !important;
   }
 }
