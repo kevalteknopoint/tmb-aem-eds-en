@@ -187,7 +187,7 @@ export default async function decorate(block) {
       return;
     } 
 
-    const filteredResults = window.searchData?.filter((item) => item?.path?.toLowerCase()?.includes(targetValue?.toLowerCase()));
+    const filteredResults = window.searchData?.filter((item) => JSON.stringify(item)?.toLowerCase()?.includes(targetValue?.toLowerCase()));
 
     if (!filteredResults.length) {
       searchDataWrapper.innerHTML = '';
@@ -201,21 +201,48 @@ export default async function decorate(block) {
 function populateSearchData(wrapper, data) {
   wrapper.innerHTML = '';
 
-  const defaultWrapper = div({ class: 'default-content-wrapper' }, h2('Search Results'));
-
-  const dataUl = ul();
+  const taggedObj = {
+    default: []
+  }
 
   data.forEach((item) => {
-    const itemPath = item.path;
-    const splitPath = itemPath?.split('/');
-    const title = splitPath?.[splitPath.length - 1];
-    dataUl.appendChild(li(
-      a({ href: item.path }, toCapitalCase(title))
-    ));
-  });
+    if (!item.tags) return taggedObj.default.push(item);
 
-  defaultWrapper.appendChild(dataUl);
+    const firstTag = item.tags.split(',')?.[0];
+    if (!taggedObj.hasOwnProperty(firstTag)) taggedObj[firstTag] = [];
 
-  const dataWrapper = div({ class: 'dynamic-search-results', id: 'dynamicSearchResults' }, defaultWrapper);
+    taggedObj[firstTag].push(item);
+  })
+
+  const allWrappers = [];
+
+  for (const tag in taggedObj) {
+    if (!taggedObj[tag].length) return;
+    
+    let resultTitle = toCapitalCase(tag);
+
+    if (tag === 'default') {
+      resultTitle = 'Others'
+    }
+
+    const defaultWrapper = div({ class: 'default-content-wrapper' }, h2(resultTitle));
+    const dataUl = ul();
+
+    taggedObj[tag].forEach((item) => {
+      const itemPath = item.path;
+      const splitPath = itemPath?.split('/');
+      const title = item.title || item.ogTitle || splitPath?.[splitPath.length - 1];
+      dataUl.appendChild(li(
+        a({ href: item.path }, toCapitalCase(title))
+      ));
+    });
+
+    defaultWrapper.appendChild(dataUl);
+    allWrappers.push(defaultWrapper)
+  }
+
+  const reversedWrappers = allWrappers.reverse();
+
+  const dataWrapper = div({ class: 'dynamic-search-results', id: 'dynamicSearchResults' }, ...reversedWrappers);
   wrapper.appendChild(dataWrapper);
 }
