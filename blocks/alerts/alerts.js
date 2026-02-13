@@ -6,19 +6,16 @@ export default function decorate(block) {
 
     if (iconElement) {
       if (
-        row.querySelector(".icon-close-icon") ||
-        iconElement.classList.contains("icon-close-icon")
+        row.querySelector(".icon-close-icon") || iconElement.classList.contains("icon-close-icon")
       ) {
         row.classList.add("icon-close");
       } else {
         row.classList.add("icon");
       }
+    } else if (row.textContent.trim() !== "") {
+      row.classList.add("alert-text");
     } else {
-      if (row.textContent.trim() !== "") {
-        row.classList.add("alert-text");
-      } else {
-        row.remove();
-      }
+      row.remove();
     }
   });
 
