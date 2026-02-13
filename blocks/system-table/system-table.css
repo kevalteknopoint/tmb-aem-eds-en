@@ -86,6 +86,10 @@
     padding-inline:16px;
   }
 
+  .system-table .block div div h1:first-child, .system-table .block div div h2:first-child{
+    width:100%;
+  }
+
   .system-table .block div div ul li ul li{
     align-items:baseline !important;
   }
