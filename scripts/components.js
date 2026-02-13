@@ -54,6 +54,10 @@ export default function loadNonBlockLibs() {
       selector: '.legal-privacy',
       name: 'legal-privacy',
     },
+    {
+      selector: '.system-table',
+      name: 'system-table',
+    },
   ];
 
   blocks.forEach(({ selector, name }) => {
