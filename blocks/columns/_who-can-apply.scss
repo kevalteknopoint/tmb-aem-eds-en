@@ -147,11 +147,55 @@
         .accordion-item-body {
           margin-top: 8px;
 
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            @include typo-heading3;
+
+            color: $heading-default;
+            margin-top: 40px;
+
+            &:first-child {
+              margin-top: 0;
+            }
+
+            @include mobile {
+              margin-top: 24px;
+            }
+          }
+
           p {
             @include typo-body;
 
-            // font-size: 16px;
-            // line-height: 24px;
+            margin: 0;
+            color: $body-default;
+
+            b {
+              @include typo-body-bold;
+            }
+          }
+
+          a {
+            color: $link-default;
+            text-decoration: underline;
+          }
+
+          ol,
+          ul {
+            margin-top: 16px;
+            list-style: decimal;
+            padding-left: 24px;
+
+            li {
+              margin-bottom: 8px;
+            }
+          }
+
+          ul {
+            list-style: disc;
           }
         }
 

@@ -69,11 +69,14 @@ html {
         }
 
         .swiper-slide {
+          display: flex;
+          flex-direction: column;
           padding: 24px;
           border: 1px solid $line-default;
           border-radius: $radius-card;
           background: $bg-default;
           width: 304px;
+          height: auto;
           transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
           &:hover {
@@ -96,11 +99,28 @@ html {
               }
             }
 
+            h1, h2, h3, h4, h5, h6 {
+              @include typo-heading4;
+
+              margin-top: 16px;
+              color: $heading-default;
+            }
+
             p {
               color: $heading-default;
               padding: 16px 0 20px;
 
               @include typo-body;
+            }
+
+            &:has(h1, h2, h3, h4, h5, h6) {
+              p {
+                padding-top: 0;
+              }
+            }
+
+            div:has(> p.button-container) {
+              margin-top: auto;
             }
 
             p.button-container {

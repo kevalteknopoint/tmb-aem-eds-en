@@ -98,7 +98,7 @@
 .home-loan-explained .tabs .tabs-panel div{
   display:grid;
   gap:64px;
-  grid-template-columns:repeat(3, 1fr);
+  grid-template-columns:1fr 1fr 1fr;
   row-gap:16px;
 }
 

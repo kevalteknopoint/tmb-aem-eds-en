@@ -116,7 +116,7 @@
   justify-content: flex-start;
   align-items: center;
   padding: 28px 0;
-  gap: 16px;
+  gap: 24px;
 
   @include tablet {
     display: none;
@@ -125,9 +125,10 @@
   .primary-nav-item {
     display: block;
     position: relative;
-    padding-right: 26px;
+    /* padding-right: 26px; */
 
-    &::after {
+    // old arrow
+    /* &::after {
       content: '';
       right: 6px;
       top: 0;
@@ -150,7 +151,7 @@
         bottom: 0;
         transform: rotate(315deg);
       }
-    }
+    } */
   }
 
   .primary-nav-link {
@@ -159,6 +160,22 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0;
+      height: 1px;
+      background-color: $color-header-nav-secondary;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 }
 

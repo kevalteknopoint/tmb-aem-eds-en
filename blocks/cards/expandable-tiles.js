@@ -60,6 +60,8 @@ export default function expandableTiles(block) {
     otherBtns.forEach((btnDiv) => {
       const btn = btnDiv.querySelector('a');
 
+      if (!btn) return;
+
       if (btn.parentElement.tagName === 'EM') {
         btn.classList.add('secondary');
       } else {
