@@ -7,8 +7,9 @@
   margin-left:auto;
   margin-right:auto;
   max-width:calc(1440px - 0px);
-  padding:16px 64px;
   padding-inline:64px;
+  padding-bottom:16px;
+  padding-top:16px;
   width:100%;
 }
 
@@ -66,6 +67,10 @@
 
 .alerts.red-alert{
   background-color:#FCF2F5;
+}
+
+.alerts.red-alert:has(.icon.icon-close-icon) .icon-close-icon{
+  display:none;
 }
 
 @media screen and (max-width: 1279px){

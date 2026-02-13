@@ -4,11 +4,12 @@
      @include responsive-container;
      
     display: flex;
-    padding: 16px 64px;
     align-items: baseline;
     gap: 12px;
     border-radius: 16px;
     align-self: stretch;
+    padding-top: 16px;
+    padding-bottom: 16px;
 
     .alert-text {
         width: 95%;
@@ -69,5 +70,11 @@
     /* Red */
     &.red-alert {
         background-color: #FCF2F5;
+
+        &:has(.icon.icon-close-icon) {
+            .icon-close-icon {
+                display: none;
+            }
+        }   
     }
 }
