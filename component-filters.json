@@ -44,7 +44,8 @@
       "legal-privacy",
       "teachers-calculator-block",
       "alerts",
-      "system-table"
+      "system-table",
+      "mortage-insurance"
     ]
   },
   {
@@ -120,9 +121,7 @@
   },
   {
     "id": "mortage-insurance",
-    "components": [
-      "mortage-insurance-card"
-    ]
+    "components": []
   },
   {
     "id": "stepper",

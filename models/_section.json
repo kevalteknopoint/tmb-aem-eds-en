@@ -310,6 +310,10 @@
             {
               "name": "System Table",
               "value": "system-table"
+            },
+            {
+              "name": "Mortage Insurance",
+              "value": "mortage-insurance"
             }
           ]
         }
@@ -356,7 +360,8 @@
         "legal-privacy",
         "teachers-calculator-block",
         "alerts",
-        "system-table"
+        "system-table",
+        "mortage-insurance"
       ]
     }
   ]
