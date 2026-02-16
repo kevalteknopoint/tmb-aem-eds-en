@@ -55,7 +55,7 @@ export default async function decorate(block) {
     // ========== Build Sections + Right Nav ==========
     // let numCount = 0;
     faq.faqContentReference.forEach((content) => {
-      const id = slugify(content.sectionTitle);
+      const id = slugify(content.sectionTitle || '');
 
       if (content.sectionTitle) {
         rightSection = true;
