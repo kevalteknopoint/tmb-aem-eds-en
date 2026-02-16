@@ -54,48 +54,59 @@ export function pageIntialization(pageName, pageType, siteSection, sitesubSectio
   });
 }
 
-export function menuInteraction(
-  pageRegion,
-  leveloneMenu,
-  leveltwoMenu,
-  levelthreeMenu,
-  componentName,
-  componentType,
-  componentIndex
-) {
-  window.adobeDataLayer.push({
-    event: "menuInteraction",
-    data: {
-      pageRegion,
-      leveloneMenu,
-      leveltwoMenu,
-      levelthreeMenu,
-      componentName,
-      componentType,
-      componentIndex,
-    },
-  });
+export function menuInteraction(pageRegion,leveloneMenu,leveltwoMenu,levelthreeMenu,componentName,componentType,componentIndex,componentPersona,nextpageUrl,interactionType,linkType,requiredFieldMissingFlag,testUserFlag,qaSessionFlag,componentId,componentIdValidFlag){
+    window.adobeDataLayer.push({
+        "event": "menuInteraction",
+            "data":{
+                "pageRegion":pageRegion,
+                "leveloneMenu":leveloneMenu,
+                "leveltwoMenu":leveltwoMenu,
+                "levelthreeMenu":levelthreeMenu,
+                "componentName":componentName,    //Human-readable slug for this component.e.g. apply-now, learn-more, tools-and-resources, faqs
+                "componentType":componentType,   //UI pattern type.e.g. banner, tile-grid, rate-table, faq-accordion, form-section
+                "componentIndex":componentIndex,  //Index for multiple similar components on a page.e.g. 01, 02, 03
+                "componentPersona":componentPersona, //Intended persona / segment.e.g. first-home-buyer, teacher, health-professional, all-members
+                "nextpageUrl":nextpageUrl,
+                "interactionType":interactionType,   //Type of interaction fired.e.g. cta-click, menu-click, icon-click, faq-toggle, form-submit
+                "linkType":linkType,
+                "requiredFieldMissingFlag":requiredFieldMissingFlag,  //Yes if any required analytics fields missing on this hit.
+                "testUserFlag":testUserFlag,   //Yes for known internal/testing users; No for normal traffic.
+                "qaSessionFlag":qaSessionFlag,   //Yes if visit is part of QA session (to be filtered from prod dashboards).
+                "componentId":componentId,     //Full component ID following your naming pattern.e.g. tmb_web_home-loans_product-landing_your-way-plus_hero_banner_apply-now_01_bau-consider_first-home-buyer
+                "componentIdValidFlag":componentIdValidFlag //Yes if component_id conforms to naming convention; No if malformed/missing.
+            }
+});
 }
 
-export function faqInteraction(
-  pageRegion,
-  faqTitle,
-  ctaSource,
-  componentName,
-  componentType,
-  componentIndex
-) {
-  window.adobeDataLayer.push({
-    event: "faqInteraction",
-    data: {
-      pageRegion,
-      faqTitle,
-      ctaSource,
-      componentName,
-      componentType,
-      componentIndex,
-    },
-  });
+
+export function faqInteraction(pageRegion,faqTitle,ctaSource,componentName,componentType,componentIndex,componentPersona,interactionType,microengagementType,helpcontentId,helpContentType,faqAccordionToggleType,faqQuestionId,faqQuestionRank,searchSuccessFlag,searchResultClickPosition,searchResultType,requiredFieldMissingFlag,testUserFlag,qaSessionFlag,componentId,componentIdValidFlag){
+    window.adobeDataLayer.push({
+        "event": "faqInteraction",
+            "data":{
+                "pageRegion":pageRegion,
+                "faqTitle":faqTitle,
+                "ctaSource":ctaSource,
+                "componentName":componentName,
+                "componentType":componentType,
+                "componentIndex":componentIndex,
+                "componentPersona":componentPersona,
+                "interactionType":interactionType,
+                "microengagementType":microengagementType,
+                "helpcontentId":helpcontentId,
+                "helpContentType":helpContentType,
+                "faqAccordionToggleType":faqAccordionToggleType,
+                "faqQuestionId":faqQuestionId,
+                "faqQuestionRank":faqQuestionRank,
+                "searchSuccessFlag":searchSuccessFlag,
+                "searchResultClickPosition":searchResultClickPosition,
+                "searchResultType":searchResultType,
+                "requiredFieldMissingFlag":requiredFieldMissingFlag,  
+                "testUserFlag":testUserFlag,  
+                "qaSessionFlag":qaSessionFlag,   
+                "componentId":componentId,     
+                "componentIdValidFlag":componentIdValidFlag
+            }
+});
 }
 
 export function ctaInteraction(pageRegion, ctaText, ctaTitle, ctaSource, componentName, componentType, componentIndex, componentPersona, nextpageUrl, interactionType, linkType, navElementType, navLocation, requiredFieldMissingFlag, testUserFlag, qaSessionFlag, componentId, componentIdValidFlag) {
@@ -146,22 +157,124 @@ export function bannerInteraction(pageRegion,ctaText,bannerName,bannerPosition,c
             }
 });
 }
+export function bannerSearch(pageRegion,searchType,searchTerm,searchTermNormalized,searchResultCountBucket,searchRefinementFlag,componentName,componentType,componentIndex,componentPersona,interactionType,requiredFieldMissingFlag,testUserFlag,qaSessionFlag,componentId,componentIdValidFlag){
+    window.adobeDataLayer.push({
+        "event": "bannerSearch",
+            "data":{
+                "pageRegion":pageRegion,
+                "searchType":searchType,
+                "searchTerm":searchTerm,
+                "searchTermNormalized":searchTermNormalized,
+                "searchResultCountBucket":searchResultCountBucket,
+                "searchRefinementFlag":searchRefinementFlag,
+                "componentName":componentName,
+                "componentType":componentType,
+                "componentIndex":componentIndex,
+                "componentPersona":componentPersona,
+                "interactionType":interactionType,
+                "requiredFieldMissingFlag":requiredFieldMissingFlag,  
+                "testUserFlag":testUserFlag,  
+                "qaSessionFlag":qaSessionFlag,   
+                "componentId":componentId,     
+                "componentIdValidFlag":componentIdValidFlag
+            }
+});
+}
 
-export function socialmediaClick(
-  pageRegion,
-  iconName,
-  componentName,
-  componentType,
-  componentIndex
-) {
-  window.adobeDataLayer.push({
-    event: "socialmediaClick",
-    data: {
-      pageRegion,
-      iconName,
-      componentName,
-      componentType,
-      componentIndex,
-    },
-  });
+export function breadcrumbItemClick(pageRegion,ctaText,nextpageUrl,interactionType,linkType,navElementType,navLocation,breadcrumbTrail,breadcrumbDepth,componentName,componentType,componentIndex,componentPersona,requiredFieldMissingFlag,testUserFlag,qaSessionFlag,componentId,componentIdValidFlag){
+    window.adobeDataLayer.push({
+        "event": "breadcrumbItemClick",
+            "data":{
+                "pageRegion":pageRegion,
+                "ctaText":ctaText,
+                "nextpageUrl":nextpageUrl,
+                "interactionType":interactionType,
+                "linkType":linkType,
+                "navElementType":navElementType,
+                "navLocation":navLocation,
+                "breadcrumbTrail":breadcrumbTrail,
+                "breadcrumbDepth":breadcrumbDepth,
+                "componentName":componentName,
+                "componentType":componentType,
+                "componentIndex":componentIndex,
+                "componentPersona":componentPersona,
+                "requiredFieldMissingFlag":requiredFieldMissingFlag,  
+                "testUserFlag":testUserFlag,  
+                "qaSessionFlag":qaSessionFlag,   
+                "componentId":componentId,     
+                "componentIdValidFlag":componentIdValidFlag
+            }
+});
+}
+
+export function resetForm(pageRegion,componentName,componentType,componentIndex,componentPersona,interactionType,formId,formName,formType,formChannel,formProductGroup,formProduct,formVersion,requiredFieldMissingFlag,testUserFlag,qaSessionFlag,componentId,componentIdValidFlag){
+    window.adobeDataLayer.push({
+        "event": "resetForm",
+            "data":{
+                "pageRegion":pageRegion,
+                "componentName":componentName,
+                "componentType":componentType,
+                "componentIndex":componentIndex,
+                "componentPersona":componentPersona,
+                "interactionType":interactionType,
+                "formId":formId,
+                "formName":formName,
+                "formType":formType,
+                "formChannel":formChannel,
+                "formProductGroup":formProductGroup,
+                "formProduct":formProduct,
+                "formVersion":formVersion,
+                "requiredFieldMissingFlag":requiredFieldMissingFlag,  
+                "testUserFlag":testUserFlag,  
+                "qaSessionFlag":qaSessionFlag,   
+                "componentId":componentId,     
+                "componentIdValidFlag":componentIdValidFlag
+            }
+});
+}
+
+export function sideWidgetInteraction(pageRegion,ctaText,ctaTitle,ctaSource,componentName,componentType,componentIndex,componentPersona,nextpageUrl,interactionType,linkType,navElementType,navLocation,requiredFieldMissingFlag,testUserFlag,qaSessionFlag,componentId,componentIdValidFlag){
+    window.adobeDataLayer.push({
+        "event": "sideWidgetInteraction",
+            "data":{
+                "pageRegion":pageRegion,
+                "ctaText":ctaText,
+                "ctaTitle":ctaTitle,
+                "ctaSource":ctaSource,
+                "componentName":componentName,
+                "componentType":componentType,
+                "componentIndex":componentIndex,
+                "componentPersona":componentPersona,
+                "nextpageUrl":nextpageUrl,
+                "interactionType":interactionType,
+                "linkType":linkType,
+                "navElementType":navElementType,
+                "navLocation":navLocation,
+                "requiredFieldMissingFlag":requiredFieldMissingFlag,  
+                "testUserFlag":testUserFlag,  
+                "qaSessionFlag":qaSessionFlag,   
+                "componentId":componentId,     
+                "componentIdValidFlag":componentIdValidFlag
+            }
+});
+}
+
+export function socialmediaClick(pageRegion,iconName,componentName,componentType,componentIndex,componentPersona,interactionType,requiredFieldMissingFlag,testUserFlag,qaSessionFlag,componentId,componentIdValidFlag){
+    window.adobeDataLayer.push({
+        "event": "socialmediaClick",
+            "data":{
+                "pageRegion":pageRegion,
+                "iconName":iconName,
+                "componentName":componentName,
+                "componentType":componentType,
+                "componentIndex":componentIndex,
+                "componentPersona":componentPersona,
+                "interactionType":interactionType,
+                "requiredFieldMissingFlag":requiredFieldMissingFlag,  
+                "testUserFlag":testUserFlag,  
+                "qaSessionFlag":qaSessionFlag,   
+                "componentId":componentId,     
+                "componentIdValidFlag":componentIdValidFlag
+            }
+});
 }
