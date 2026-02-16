@@ -308,6 +308,14 @@
               "value": "legal-privacy"
             },
             {
+              "name": "Search Results Section (Header)",
+              "value": "search-results-section"
+            },
+            {
+              "name": "Search Results Page",
+              "value": "search-results-page"
+            },
+            {
               "name": "System Table",
               "value": "system-table"
             }

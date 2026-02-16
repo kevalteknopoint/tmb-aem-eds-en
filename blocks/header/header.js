@@ -1,13 +1,105 @@
 import './header-analytics.js';
-import { createOptimizedPicture, getMetadata } from '../../scripts/aem.js';
-import { div, ul, li, a, button } from '../../scripts/dom-helpers.js';
+import { createOptimizedPicture, getMetadata, injectIcon } from '../../scripts/aem.js';
+import { div, ul, li, a, button, input, form, h2, span } from '../../scripts/dom-helpers.js';
 import { loadFragment } from '../fragment/fragment.js';
+
+function toCapitalCase(str) {
+  return str
+    .split(/[-_]+/)
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
+}
+
+async function fetchQueryJson() {
+  try {
+    const basePath = getMetadata('base-path');
+    const queryRes = await fetch('/query-index.json');
+    const jsonRes = await queryRes.json();
+    window.searchData = jsonRes?.data?.filter((result) => result?.path?.startsWith(basePath));
+  } catch (error) {
+    console.log('Failed to fetch query-index: ', error);
+  }
+}
+
+function populateSearchData(wrapper, data) {
+  wrapper.innerHTML = '';
+
+  const taggedObj = {
+    default: []
+  };
+
+  data.forEach((item) => {
+    if (!item.tags) return taggedObj.default.push(item);
+
+    const firstTag = item.tags.split(',')?.[0];
+
+    if (!Object.prototype.hasOwnProperty.call(taggedObj, firstTag)) taggedObj[firstTag] = [];
+
+    taggedObj[firstTag].push(item);
+
+    return null;
+  });
+
+  const allWrappers = [];
+
+  Object.keys(taggedObj).forEach((tag) => {
+    if (!taggedObj[tag].length) return;
+
+    let resultTitle = toCapitalCase(tag);
+
+    if (tag === 'default') {
+      resultTitle = 'Others';
+    }
+
+    const defaultWrapper = div({ class: 'default-content-wrapper' }, h2(resultTitle));
+    const dataUl = ul();
+
+    taggedObj[tag].forEach((item) => {
+      const itemPath = item.path;
+      const splitPath = itemPath?.split('/');
+      const title = item.title || item.ogTitle || splitPath?.[splitPath.length - 1];
+      const link = a({ href: item.path }, toCapitalCase(title));
+      injectIcon('chevron-right-links', link);
+      dataUl.appendChild(li(
+        link
+      ));
+    });
+
+    defaultWrapper.appendChild(dataUl);
+    allWrappers.push(defaultWrapper);
+  });
+
+  const reversedWrappers = allWrappers.reverse();
+
+  const dataWrapper = div({ class: 'dynamic-search-results', id: 'dynamicSearchResults' }, ...reversedWrappers);
+  wrapper.appendChild(dataWrapper);
+}
+
+function showToast(message, timeout = 3000) {
+  const toast = div({ class: 'mui-toast-wrapper' },
+    span({ class: 'toast-message' }, message)
+  );
+
+  document.body.appendChild(toast);
+
+  setTimeout(() => toast.classList.add('visible'), 10);
+
+  // 3. Auto-remove logic
+  setTimeout(() => {
+    toast.classList.remove('visible');
+    toast.addEventListener('transitionend', () => toast.remove(), { once: true });
+  }, timeout);
+}
 
 export default async function decorate(block) {
   // load nav as fragment
   const navMeta = getMetadata('nav');
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
   const fragment = await loadFragment(navPath);
+  const searchPath = `${getMetadata('base-path')}/search-results`;
+
+  fetchQueryJson();
 
   block.innerHTML = fragment.innerHTML;
 
@@ -68,18 +160,26 @@ export default async function decorate(block) {
 
   // Column 2 - Logo + search + login
   const logoImg = col1.querySelector('picture > img');
-  const logoPic = createOptimizedPicture(logoImg?.src, logoImg?.alt, false, [
+  const logoPic = a({ href: `${getMetadata('base-path')}/` }, createOptimizedPicture(logoImg?.src, logoImg?.alt, false, [
     { media: '(min-width: 768px)', width: '195' },
     { width: '105' },
-  ]);
+  ]));
 
   const logoWrap = div({ class: 'logo-wrap' }, logoPic);
   const logoNavWrap = div({ class: 'logo-nav-wrap' }, hamMenuBtn, logoWrap, primaryNavList);
 
+  const crossIcon = col2.querySelector('p span:nth-child(2) svg');
+  const crossBtn = button({ class: 'search-cross-btn' }, crossIcon);
+
+  const backIcon = col2.querySelector('p span:nth-child(1) svg');
+  const backBtn = button({ class: 'search-back-btn' }, backIcon);
+
   // Search button
-  const searchIcon = col2.querySelector('svg');
+  const searchInp = input({ class: 'header-search-inp', name: 'headerSearch', id: 'headerSearch', placeholder: 'Start typing...' });
+  const searchForm = form({ class: 'header-search-form' }, backBtn, searchInp, crossBtn);
+  const searchIcon = col2.querySelector('p span:nth-child(3) svg');
   const searchBtn = button({ class: 'search-btn' }, searchIcon);
-  const searchBtnWrap = div({ class: 'search-btn-wrap' }, searchBtn);
+  const searchBtnWrap = div({ class: 'search-btn-wrap' }, searchForm, searchBtn);
 
   // Login button
   const loginLink = col2.querySelector('.button');
@@ -96,5 +196,63 @@ export default async function decorate(block) {
     )
   );
 
+  crossBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    searchInp.value = '';
+  });
+
+  searchBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    newPrimarySection.classList.add('search-active');
+    searchInp.focus();
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.search-back-btn') && e.target.closest('.search-btn-wrap')) return;
+
+    newPrimarySection.classList.remove('search-active');
+  });
+
   primaryContainer.replaceWith(newPrimarySection);
+
+  // Search Results Section
+  const searchSection = block.querySelector('.search-results-section');
+  if (window.location.origin.includes('author')) searchSection?.classList.add('author-mode');
+
+  // Popular searches
+  const popularSearches = div({ class: 'popular-search-results' });
+  const contentWrapper = searchSection.querySelector('.default-content-wrapper');
+  popularSearches.append(contentWrapper);
+  searchSection.appendChild(popularSearches);
+
+  const searchDataWrapper = div({ class: 'dynamic-search-results-wrapper' });
+
+  searchSection.insertAdjacentElement('afterbegin', searchDataWrapper);
+
+  searchForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    window.location.href = `${searchPath}?search=${searchInp.value}`;
+    showToast("Please wait you're being redirected...");
+  });
+
+  searchInp.addEventListener('input', (e) => {
+    const targetValue = e.target.value;
+
+    if (targetValue?.length < 3) {
+      searchDataWrapper.innerHTML = '';
+      return;
+    }
+
+    const filteredResults = window.searchData?.filter((item) => JSON.stringify(item)?.toLowerCase()?.includes(targetValue?.toLowerCase()));
+
+    if (!filteredResults.length) {
+      searchDataWrapper.innerHTML = '';
+      return;
+    }
+
+    populateSearchData(searchDataWrapper, filteredResults);
+  });
 }
