@@ -1,0 +1,99 @@
+@use '../../styles/base' as *;
+
+.system-table {
+  @include responsive-container;
+
+    .block{
+        div{
+            align-items: start;
+
+            div{
+                h1,h2{
+                    color: $heading-default;
+                    font-family: $secondary-font;
+                    font-size: $font-size-h1;
+                    font-weight: 900;
+                    letter-spacing: $font-letter-spacing-h1;
+                    line-height: $font-height-h1;
+                    text-transform: uppercase;
+
+                    &:first-child{
+                        width: 416px;
+
+                        @include mobile {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                &:first-child{
+                    flex: unset;
+                }
+
+                ul{
+                    li{
+                        ul{
+                            li {
+                                font-size: $font-size-body;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: $font-height-body;
+                                letter-spacing: $font-letter-spacing-body;
+                                 
+                                @include mobile {
+                                    align-items: baseline !important;
+                                }
+                                                        
+                                &.status-available,
+                                &.status-unavailable,
+                                &.status-interruptions {
+                                display: flex;
+                                align-items: center;
+                                font-weight: bold;
+
+                                &::before {
+                                        content: "";
+                                        display: inline-block;
+                                        width: 10px;
+                                        height: 10px;
+                                        border-radius: 20px;
+                                        margin-right: 8px;
+                                    }
+                                }
+
+                                &.status-available {
+                                    color: #28a745 !important;
+
+                                &::before { 
+                                    background-color: #28a745; 
+                                    }
+                                }
+
+                                &.status-unavailable {
+                                    color: #dc3545 !important;
+
+                                &::before { 
+                                    background-color: #dc3545;
+                                }
+                                }
+
+                                &.status-interruptions {
+                                    color: #fd7e14 !important;
+
+                                &::before { 
+                                    background-color: #fd7e14; 
+                                    }
+                                }
+                            
+
+
+
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

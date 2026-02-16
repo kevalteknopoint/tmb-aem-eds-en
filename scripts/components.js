@@ -57,7 +57,11 @@ export default function loadNonBlockLibs() {
     {
       selector: '.calculator',
       name: 'calculator',
-    }
+    },
+    {
+      selector: '.system-table',
+      name: 'system-table',
+    },
   ];
 
   blocks.forEach(({ selector, name }) => {

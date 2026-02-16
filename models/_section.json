@@ -306,6 +306,10 @@
             {
               "name": "legal-privacy",
               "value": "legal-privacy"
+            },
+            {
+              "name": "System Table",
+              "value": "system-table"
             }
           ]
         }
@@ -352,7 +356,8 @@
         "legal-privacy",
         "calculator",
         "teachers-calculator-block",
-        "alerts"
+        "alerts",
+        "system-table"
       ]
     }
   ]
