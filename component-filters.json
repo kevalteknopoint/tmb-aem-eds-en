@@ -36,12 +36,15 @@
       "interest-rates",
       "account-card-copy",
       "multiple-fragment",
-      "fragments",
+      "card-fragments",
       "page-heading",
       "legal-tc-guide",
       "faq-legal",
       "faq-legal-table",
-      "legal-privacy"
+      "legal-privacy",
+      "teachers-calculator-block",
+      "alerts",
+      "system-table"
     ]
   },
   {
@@ -51,6 +54,9 @@
     ]
   },
   {
+    "id": "alerts"
+  },
+  {
     "id": "bannervideo",
     "components": [
       "banner-video-item"
@@ -58,6 +64,12 @@
   },
   {
     "id": "breadcrumb"
+  },
+  {
+    "id": "card-fragments",
+    "components": [
+      "fragment-item"
+    ]
   },
   {
     "id": "cards",
@@ -92,12 +104,6 @@
     "id": "faq-productdetail",
     "components": [
       "faq-accordion-item"
-    ]
-  },
-  {
-    "id": "fragments",
-    "components": [
-      "fragment-item"
     ]
   },
   {

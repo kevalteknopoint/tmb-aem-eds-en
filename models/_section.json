@@ -314,6 +314,10 @@
             {
               "name": "Search Results Page",
               "value": "search-results-page"
+            },
+            {
+              "name": "System Table",
+              "value": "system-table"
             }
           ]
         }
@@ -352,12 +356,15 @@
         "interest-rates",
         "account-card-copy",
         "multiple-fragment",
-        "fragments",
+        "card-fragments",
         "page-heading",
         "legal-tc-guide",
         "faq-legal",
         "faq-legal-table",
-        "legal-privacy"
+        "legal-privacy",
+        "teachers-calculator-block",
+        "alerts",
+        "system-table"
       ]
     }
   ]

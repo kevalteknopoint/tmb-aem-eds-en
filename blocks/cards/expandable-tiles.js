@@ -60,6 +60,8 @@ export default function expandableTiles(block) {
     otherBtns.forEach((btnDiv) => {
       const btn = btnDiv.querySelector('a');
 
+      if (!btn) return;
+
       if (btn.parentElement.tagName === 'EM') {
         btn.classList.add('secondary');
       } else {
@@ -123,6 +125,8 @@ export default function expandableTiles(block) {
         const allSlides = document.querySelectorAll('.expandable-tile');
         allSlides?.forEach((slide) => slide.classList.remove('active'));
         bannerSlide?.classList.add('active');
+        clearInterval(autoplayTimeoutId);
+        autoplay();
 
         // if (bannerSlide?.classList.contains('active')) {
         //   bannerSlide?.classList.remove('active')

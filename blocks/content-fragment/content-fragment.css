@@ -209,13 +209,70 @@
   margin-top:8px;
 }
 
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h1,
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h2,
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h3,
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h4,
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h5,
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h6{
+  color:var(--heading-default);
+  font-family:var(--font-family-h3);
+  font-size:var(--font-size-h3);
+  font-weight:var(--font-weight-h3);
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
+  margin-top:40px;
+  text-transform:initial;
+}
+
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h1:first-child,
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h2:first-child,
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h3:first-child,
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h4:first-child,
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h5:first-child,
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h6:first-child{
+  margin-top:0;
+}
+
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body p{
+  color:var(--body-default);
   font-family:var(--font-family-body);
   font-size:var(--font-size-body);
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
+  margin:0;
   text-transform:initial;
+}
+
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body p b{
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body-bold);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-transform:initial;
+}
+
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body a{
+  color:var(--link-default);
+  text-decoration:underline;
+}
+
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body ol,
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body ul{
+  list-style:decimal;
+  margin-top:16px;
+  padding-left:24px;
+}
+
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body ol li,
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body ul li{
+  margin-bottom:8px;
+}
+
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body ul{
+  list-style:disc;
 }
 
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item[open] summary svg{
@@ -292,7 +349,7 @@
   display:flex;
   gap:10px;
   justify-content:center;
-  margin:0;
+  margin:auto 0 0;
 }
 
 .customer .columns-wrapper .block .columns-container div p.button-container a{
@@ -445,6 +502,15 @@
   .who-can-apply-section .columns-wrapper .block .column-container{
     gap:32px;
     grid-template-columns:1fr;
+  }
+
+  .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h1,
+  .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h2,
+  .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h3,
+  .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h4,
+  .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h5,
+  .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h6{
+    margin-top:24px;
   }
 
   .customer .columns-wrapper{
