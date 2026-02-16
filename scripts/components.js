@@ -58,6 +58,10 @@ export default function loadNonBlockLibs() {
       selector: '.system-table',
       name: 'system-table',
     },
+    {
+      selector: '.mortgage-insurance',
+      name: 'mortgage-insurance',
+    },
   ];
 
   blocks.forEach(({ selector, name }) => {

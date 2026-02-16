@@ -1,0 +1,28 @@
+@use '../../styles/base' as *;
+
+.section.mortage-insurance {
+  @include responsive-container;
+
+  .block{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .mortage-insurance-title {
+      color: $heading-default;
+      font-family: $secondary-font;
+      font-size: $font-size-lg;
+      font-weight: 900;
+      letter-spacing: $font-letter-spacing-lg;
+      line-height: $font-height-lg;
+    }
+
+    .mortage-insurance-description {
+      color: $body-default;
+      font-size: $font-size-sm-body;
+      font-weight: 400;
+      letter-spacing: $font-letter-spacing-sm-body;
+      line-height: $font-height-sm-body;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.section.mortage-insurance{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
+}
+
+.section.mortage-insurance .block{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.section.mortage-insurance .block .mortage-insurance-title{
+  color:var(--heading-default);
+  font-family:var(--secondary-font);
+  font-size:var(--font-size-lg);
+  font-weight:900;
+  letter-spacing:var(--font-letter-spacing-lg);
+  line-height:var(--font-height-lg);
+}
+
+.section.mortage-insurance .block .mortage-insurance-description{
+  color:var(--body-default);
+  font-size:var(--font-size-sm-body);
+  font-weight:400;
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
+}
+
+@media screen and (max-width: 1279px){
+  .section.mortage-insurance{
+    padding-inline:24px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .section.mortage-insurance{
+    padding-inline:16px;
+  }
+}

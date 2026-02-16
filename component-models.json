@@ -1341,7 +1341,6 @@
         "valueType": "date",
         "name": "date",
         "label": "Date",
-        "required": true,
         "placeholder": "YYYY-MM-DD",
         "displayFormat": null,
         "valueFormat": null
