@@ -5,23 +5,10 @@ import { loadFragment } from '../fragment/fragment.js';
 
 function toCapitalCase(str) {
   return str
-    .split(/[-_]+/) // split on one or more - or _
-    .filter(Boolean) // remove empty strings (extra separators)
-    .map(word => 
-      word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-    )
+    .split(/[-_]+/)
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(' ');
-}
-
-function debounce(fn, delay) {
-  let timeoutId;
-  
-  return function (...args) {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => {
-      fn.apply(this, args);
-    }, delay);
-  };
 }
 
 async function fetchQueryJson() {
@@ -40,26 +27,29 @@ function populateSearchData(wrapper, data) {
 
   const taggedObj = {
     default: []
-  }
+  };
 
   data.forEach((item) => {
     if (!item.tags) return taggedObj.default.push(item);
 
     const firstTag = item.tags.split(',')?.[0];
-    if (!taggedObj.hasOwnProperty(firstTag)) taggedObj[firstTag] = [];
+
+    if (!Object.prototype.hasOwnProperty.call(taggedObj, firstTag)) taggedObj[firstTag] = [];
 
     taggedObj[firstTag].push(item);
-  })
+
+    return null;
+  });
 
   const allWrappers = [];
 
-  for (const tag in taggedObj) {
+  Object.keys(taggedObj).forEach((tag) => {
     if (!taggedObj[tag].length) return;
-    
+
     let resultTitle = toCapitalCase(tag);
 
     if (tag === 'default') {
-      resultTitle = 'Others'
+      resultTitle = 'Others';
     }
 
     const defaultWrapper = div({ class: 'default-content-wrapper' }, h2(resultTitle));
@@ -69,7 +59,7 @@ function populateSearchData(wrapper, data) {
       const itemPath = item.path;
       const splitPath = itemPath?.split('/');
       const title = item.title || item.ogTitle || splitPath?.[splitPath.length - 1];
-      const link = a({ href: item.path }, toCapitalCase(title))
+      const link = a({ href: item.path }, toCapitalCase(title));
       injectIcon('chevron-right-links', link);
       dataUl.appendChild(li(
         link
@@ -77,8 +67,8 @@ function populateSearchData(wrapper, data) {
     });
 
     defaultWrapper.appendChild(dataUl);
-    allWrappers.push(defaultWrapper)
-  }
+    allWrappers.push(defaultWrapper);
+  });
 
   const reversedWrappers = allWrappers.reverse();
 
@@ -173,7 +163,7 @@ export default async function decorate(block) {
   const logoPic = a({ href: `${getMetadata('base-path')}/` }, createOptimizedPicture(logoImg?.src, logoImg?.alt, false, [
     { media: '(min-width: 768px)', width: '195' },
     { width: '105' },
-  ])) 
+  ]));
 
   const logoWrap = div({ class: 'logo-wrap' }, logoPic);
   const logoNavWrap = div({ class: 'logo-nav-wrap' }, hamMenuBtn, logoWrap, primaryNavList);
@@ -241,20 +231,20 @@ export default async function decorate(block) {
 
   searchSection.insertAdjacentElement('afterbegin', searchDataWrapper);
 
-  searchForm.addEventListener('submit', function(e) {
+  searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    location.href = `${searchPath}?search=${searchInp.value}`;
+    window.location.href = `${searchPath}?search=${searchInp.value}`;
     showToast("Please wait you're being redirected...");
-  })
-  
-  searchInp.addEventListener('input', function (e) {
+  });
+
+  searchInp.addEventListener('input', (e) => {
     const targetValue = e.target.value;
 
     if (targetValue?.length < 3) {
       searchDataWrapper.innerHTML = '';
       return;
-    } 
+    }
 
     const filteredResults = window.searchData?.filter((item) => JSON.stringify(item)?.toLowerCase()?.includes(targetValue?.toLowerCase()));
 
@@ -262,7 +252,7 @@ export default async function decorate(block) {
       searchDataWrapper.innerHTML = '';
       return;
     }
-    
+
     populateSearchData(searchDataWrapper, filteredResults);
   });
 }

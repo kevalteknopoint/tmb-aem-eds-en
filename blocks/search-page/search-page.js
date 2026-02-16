@@ -1,26 +1,27 @@
-import { injectIcon } from "../../scripts/aem.js";
+import { getMetadata, injectIcon } from "../../scripts/aem.js";
 import { a, b, button, div, form, input, li, p, span, ul } from "../../scripts/dom-helpers.js";
 
 const ITEMS_PER_PAGE = 10;
 const VISIBLE_PAGES = 4;
 
 function getQuery(key) {
-  const queryObj = Array.from(new URL(location.href).searchParams.entries()).reduce(
-    function (acc, v) {
+  const queryObj = Array.from(new URL(window.location.href).searchParams.entries()).reduce(
+    (acc, v) => {
       acc[v[0]] = decodeURIComponent(v[1]);
       return acc;
-    },
-    {}
-  );
+    }, {});
+
   if (key) return queryObj[key];
-};
+
+  return queryObj;
+}
 
 function toCapitalCase(str) {
   if (!str) return '';
   return str
     .split(/[-_]+/)
     .filter(Boolean)
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(' ');
 }
 
@@ -37,7 +38,7 @@ async function fetchQueryJson() {
 
 function renderSearchUI(container, searchVal, allResults, currentPage, onPageChange) {
   container.innerHTML = '';
-  
+
   if (!allResults.length) {
     container.appendChild(p({ class: 'no-results' }, `No results found for "${searchVal}"`));
     return;
@@ -71,7 +72,7 @@ function renderSearchUI(container, searchVal, allResults, currentPage, onPageCha
 
   if (totalPages > 1) {
     const pageNumWrap = ul({ class: 'search-page-num-wrap' });
-    
+
     let startPage = Math.max(1, currentPage - Math.floor(VISIBLE_PAGES / 2));
     let endPage = startPage + VISIBLE_PAGES - 1;
 
@@ -80,7 +81,7 @@ function renderSearchUI(container, searchVal, allResults, currentPage, onPageCha
       startPage = Math.max(1, endPage - VISIBLE_PAGES + 1);
     }
 
-    for (let i = startPage; i <= endPage; i++) {
+    for (let i = startPage; i <= endPage; i += 1) {
       const pageBtn = li({ class: `page-btn${i === currentPage ? ' active' : ''}` }, i);
       pageBtn.addEventListener('click', () => onPageChange(i));
       pageNumWrap.appendChild(pageBtn);
@@ -91,7 +92,7 @@ function renderSearchUI(container, searchVal, allResults, currentPage, onPageCha
 
     if (currentPage === 1) prevBtn.disabled = true;
     if (currentPage === totalPages) nextBtn.disabled = true;
-    
+
     injectIcon('chevron-right-circle', prevBtn);
     injectIcon('chevron-right-circle', nextBtn);
 
@@ -108,7 +109,7 @@ function renderSearchUI(container, searchVal, allResults, currentPage, onPageCha
 
   const searchPageSection = document.querySelector('.search-results-page');
   const searchResultsContainer = div({ class: 'search-page-results-container', id: 'searchPageResults' });
-  
+
   let currentFilteredData = [];
   let currentSearchTerm = '';
 
@@ -140,7 +141,7 @@ function renderSearchUI(container, searchVal, allResults, currentPage, onPageCha
       return;
     }
 
-    const rawResults = window.searchData?.filter((item) => 
+    const rawResults = window.searchData?.filter((item) =>
       JSON.stringify(item).toLowerCase().includes(currentSearchTerm.toLowerCase())
     ) || [];
 
@@ -166,7 +167,7 @@ function renderSearchUI(container, searchVal, allResults, currentPage, onPageCha
   });
 
   searchPageSection.appendChild(searchResultsContainer);
-  
+
   const searchVal = getQuery('search');
   if (searchVal) {
     searchInp.value = searchVal;
