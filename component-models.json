@@ -1324,6 +1324,40 @@
     ]
   },
   {
+    "id": "mortage-insurance",
+    "fields": [
+      {
+        "component": "title",
+        "name": "mortage-insurance-title",
+        "label": "Mortage Insurance Title",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "mortage-insurance-description",
+        "label": "Mortage Insurance Description",
+        "valueType": "string"
+      },
+      {
+        "id": "date-time",
+        "fields": [
+          {
+            "component": "date-time",
+            "label": "Date & Time",
+            "name": "date",
+            "valueType": "date"
+          }
+        ]
+      },
+      {
+        "component": "image",
+        "name": "mortage-insurance-image",
+        "label": "Mortage Insurance Image",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "quick-links",
     "fields": [
       {
