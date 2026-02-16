@@ -134,7 +134,7 @@ function renderSearchUI(container, searchVal, allResults, currentPage, onPageCha
   searchInp.addEventListener('input', (e) => {
     currentSearchTerm = e.target.value;
 
-    if (currentSearchTerm.length < 1) {
+    if (currentSearchTerm.length < 3) {
       searchResultsContainer.innerHTML = '';
       currentFilteredData = [];
       return;
