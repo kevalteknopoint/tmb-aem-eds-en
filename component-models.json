@@ -1338,9 +1338,13 @@
       },
       {
         "component": "date-time",
-        "label": "Date",
+        "valueType": "date",
         "name": "date",
-        "valueType": "date"
+        "label": "Date",
+        "required": true,
+        "placeholder": "YYYY-MM-DD",
+        "displayFormat": null,
+        "valueFormat": null
       },
       {
         "component": "reference",
