@@ -1,5 +1,29 @@
 @use '../../styles/base' as *;
 
+.mui-toast-wrapper {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px); /* Centered horizontally */
+  background-color: #323232;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 
+              0 6px 10px 0 rgb(0 0 0 / 14%);
+  font-size: 0.875rem;
+  z-index: 9999;
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.mui-toast-wrapper.visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
 html:has(.primary-header.search-active) {
   overflow: hidden;
 
@@ -97,6 +121,10 @@ html:has(.primary-header.search-active) {
 
     .header-actions-wrap {
       flex-grow: 1;
+
+      @include tablet {
+        padding: 20px 0;
+      }
     }
 
     .header-search-form {
@@ -363,8 +391,8 @@ html:has(.primary-header.search-active) {
   }
 
   @include mobile {
-    top: 65px;
-    padding-bottom: 65px;
+    top: 80px;
+    padding-bottom: 80px;
   }
 
   &:has(.dynamic-search-results:not(.no-data)) {

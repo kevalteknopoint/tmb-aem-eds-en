@@ -72,6 +72,7 @@
   align-items:center;
   background-color:var(--icon-bg-default);
   border-radius:var(--radius-button);
+  cursor:default;
   display:flex;
   justify-content:center;
   margin:3.5px 4px 3.5px 0;
@@ -83,6 +84,18 @@
   margin:4.5px;
   min-width:24px;
   width:24px;
+}
+
+.search-results-page .search-page-results-container .no-results{
+  color:var(--heading-default);
+  font-family:var(--font-family-h2-std);
+  font-size:var(--font-size-h2-std);
+  font-weight:var(--font-weight-h2-std);
+  letter-spacing:var(--font-letter-spacing-h2-std);
+  line-height:var(--font-height-h2-std);
+  margin:0 0 40px;
+  text-align:center;
+  text-transform:initial;
 }
 
 .search-results-page .search-page-results-container .search-result-details{
@@ -159,6 +172,66 @@
   line-height:var(--font-height-body);
   text-decoration:underline;
   text-transform:initial;
+}
+
+.search-results-page .search-pagination-wrapper{
+  align-items:center;
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  margin-top:16px;
+}
+
+.search-results-page .search-pagination-wrapper .page-prev-btn svg{
+  transform:rotate(180deg);
+}
+
+.search-results-page .search-pagination-wrapper .page-prev-btn, .search-results-page .search-pagination-wrapper .page-next-btn{
+  align-items:center;
+  color:var(--link-default);
+  display:flex;
+  height:40px;
+  justify-content:center;
+  min-width:40px;
+  width:40px;
+}
+
+.search-results-page .search-pagination-wrapper .page-prev-btn:disabled, .search-results-page .search-pagination-wrapper .page-next-btn:disabled{
+  opacity:0.15;
+}
+
+.search-results-page .search-pagination-wrapper .page-prev-btn svg, .search-results-page .search-pagination-wrapper .page-next-btn svg{
+  height:24px;
+  width:24px;
+}
+
+.search-results-page .search-pagination-wrapper .search-page-num-wrap{
+  align-items:center;
+  display:flex;
+  gap:16px;
+  justify-content:center;
+}
+
+.search-results-page .search-pagination-wrapper .search-page-num-wrap .page-btn{
+  align-items:center;
+  border-radius:var(--radius-button);
+  color:var(--body-default);
+  cursor:pointer;
+  display:flex;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  height:40px;
+  justify-content:center;
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  min-width:40px;
+  text-transform:initial;
+  width:40px;
+}
+
+.search-results-page .search-pagination-wrapper .search-page-num-wrap .page-btn.active{
+  background-color:var(--bg-light);
 }
 
 /*! autoprefixer: ignore next */

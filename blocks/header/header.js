@@ -1,6 +1,6 @@
 import './header-analytics.js';
-import { createOptimizedPicture, getMetadata } from '../../scripts/aem.js';
-import { div, ul, li, a, button, input, form, h2 } from '../../scripts/dom-helpers.js';
+import { createOptimizedPicture, getMetadata, injectIcon } from '../../scripts/aem.js';
+import { div, ul, li, a, button, input, form, h2, span } from '../../scripts/dom-helpers.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 function toCapitalCase(str) {
@@ -35,11 +35,79 @@ async function fetchQueryJson() {
   }
 }
 
+function populateSearchData(wrapper, data) {
+  wrapper.innerHTML = '';
+
+  const taggedObj = {
+    default: []
+  }
+
+  data.forEach((item) => {
+    if (!item.tags) return taggedObj.default.push(item);
+
+    const firstTag = item.tags.split(',')?.[0];
+    if (!taggedObj.hasOwnProperty(firstTag)) taggedObj[firstTag] = [];
+
+    taggedObj[firstTag].push(item);
+  })
+
+  const allWrappers = [];
+
+  for (const tag in taggedObj) {
+    if (!taggedObj[tag].length) return;
+    
+    let resultTitle = toCapitalCase(tag);
+
+    if (tag === 'default') {
+      resultTitle = 'Others'
+    }
+
+    const defaultWrapper = div({ class: 'default-content-wrapper' }, h2(resultTitle));
+    const dataUl = ul();
+
+    taggedObj[tag].forEach((item) => {
+      const itemPath = item.path;
+      const splitPath = itemPath?.split('/');
+      const title = item.title || item.ogTitle || splitPath?.[splitPath.length - 1];
+      const link = a({ href: item.path }, toCapitalCase(title))
+      injectIcon('chevron-right-links', link);
+      dataUl.appendChild(li(
+        link
+      ));
+    });
+
+    defaultWrapper.appendChild(dataUl);
+    allWrappers.push(defaultWrapper)
+  }
+
+  const reversedWrappers = allWrappers.reverse();
+
+  const dataWrapper = div({ class: 'dynamic-search-results', id: 'dynamicSearchResults' }, ...reversedWrappers);
+  wrapper.appendChild(dataWrapper);
+}
+
+function showToast(message, timeout = 3000) {
+  const toast = div({ class: 'mui-toast-wrapper' },
+    span({ class: 'toast-message' }, message)
+  );
+
+  document.body.appendChild(toast);
+
+  setTimeout(() => toast.classList.add('visible'), 10);
+
+  // 3. Auto-remove logic
+  setTimeout(() => {
+    toast.classList.remove('visible');
+    toast.addEventListener('transitionend', () => toast.remove(), { once: true });
+  }, timeout);
+}
+
 export default async function decorate(block) {
   // load nav as fragment
   const navMeta = getMetadata('nav');
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
   const fragment = await loadFragment(navPath);
+  const searchPath = `${getMetadata('base-path')}/search-results`;
 
   fetchQueryJson();
 
@@ -102,10 +170,10 @@ export default async function decorate(block) {
 
   // Column 2 - Logo + search + login
   const logoImg = col1.querySelector('picture > img');
-  const logoPic = createOptimizedPicture(logoImg?.src, logoImg?.alt, false, [
+  const logoPic = a({ href: `${getMetadata('base-path')}/` }, createOptimizedPicture(logoImg?.src, logoImg?.alt, false, [
     { media: '(min-width: 768px)', width: '195' },
     { width: '105' },
-  ]);
+  ])) 
 
   const logoWrap = div({ class: 'logo-wrap' }, logoPic);
   const logoNavWrap = div({ class: 'logo-nav-wrap' }, hamMenuBtn, logoWrap, primaryNavList);
@@ -154,7 +222,6 @@ export default async function decorate(block) {
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.search-back-btn') && e.target.closest('.search-btn-wrap')) return;
 
-    e.preventDefault();
     newPrimarySection.classList.remove('search-active');
   });
 
@@ -170,14 +237,16 @@ export default async function decorate(block) {
   popularSearches.append(contentWrapper);
   searchSection.appendChild(popularSearches);
 
-
   const searchDataWrapper = div({ class: 'dynamic-search-results-wrapper' });
 
   searchSection.insertAdjacentElement('afterbegin', searchDataWrapper);
 
-  // searchInp.addEventListener('input', debounce(function (e) {
-    
-  // }, 300));
+  searchForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    location.href = `${searchPath}?search=${searchInp.value}`;
+    showToast("Please wait you're being redirected...");
+  })
   
   searchInp.addEventListener('input', function (e) {
     const targetValue = e.target.value;
@@ -196,53 +265,4 @@ export default async function decorate(block) {
     
     populateSearchData(searchDataWrapper, filteredResults);
   });
-}
-
-function populateSearchData(wrapper, data) {
-  wrapper.innerHTML = '';
-
-  const taggedObj = {
-    default: []
-  }
-
-  data.forEach((item) => {
-    if (!item.tags) return taggedObj.default.push(item);
-
-    const firstTag = item.tags.split(',')?.[0];
-    if (!taggedObj.hasOwnProperty(firstTag)) taggedObj[firstTag] = [];
-
-    taggedObj[firstTag].push(item);
-  })
-
-  const allWrappers = [];
-
-  for (const tag in taggedObj) {
-    if (!taggedObj[tag].length) return;
-    
-    let resultTitle = toCapitalCase(tag);
-
-    if (tag === 'default') {
-      resultTitle = 'Others'
-    }
-
-    const defaultWrapper = div({ class: 'default-content-wrapper' }, h2(resultTitle));
-    const dataUl = ul();
-
-    taggedObj[tag].forEach((item) => {
-      const itemPath = item.path;
-      const splitPath = itemPath?.split('/');
-      const title = item.title || item.ogTitle || splitPath?.[splitPath.length - 1];
-      dataUl.appendChild(li(
-        a({ href: item.path }, toCapitalCase(title))
-      ));
-    });
-
-    defaultWrapper.appendChild(dataUl);
-    allWrappers.push(defaultWrapper)
-  }
-
-  const reversedWrappers = allWrappers.reverse();
-
-  const dataWrapper = div({ class: 'dynamic-search-results', id: 'dynamicSearchResults' }, ...reversedWrappers);
-  wrapper.appendChild(dataWrapper);
 }
