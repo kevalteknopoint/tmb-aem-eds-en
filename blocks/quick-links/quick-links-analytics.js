@@ -1,7 +1,7 @@
 import { ctaInteraction, minifyText } from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
-  if (e.target.closest('.quick-links-container').querySelector("ul li a")) {
+  if (e.target.closest('.quick-links-container')?.querySelector("ul li a")) {
     const secondaryLink = e.target.closest('.quick-links-container').querySelector("ul li a");
     const ctaLink = e.target.closest('.quick-links-container').querySelector("ul li a");
      const nextPageURL = e.target.closest('.quick-links-container').querySelector("ul li a")?.getAttribute("href");
