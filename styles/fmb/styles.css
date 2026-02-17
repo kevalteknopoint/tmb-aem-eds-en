@@ -626,7 +626,8 @@ header{
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   list-style-type:disc;
-  margin-bottom:16px;
+  margin-bottom:24px;
+  padding-left:24px;
   text-transform:initial;
 }
 .generic-body-copy ul li, .generic-body-copy ol li{
