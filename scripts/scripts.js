@@ -11,9 +11,10 @@ import {
   loadSections,
   loadCSS,
 } from './aem.js';
-import { pageIntialization } from './analytics/exports.js';
+import { pageIntialization,setPersona } from './analytics/exports.js'; 
 import { fetchPlaceholders } from './placeholders.js';
 import loadNonBlockLibs from './components.js';
+
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -175,16 +176,21 @@ function loadPlaceholders() {
   }
 }
 
+
+
 async function loadPage() {
+
   window.adobeDataLayer = window.adobeDataLayer || [];
 
   await fetchPlaceholders();
   loadPlaceholders();
 
   pageIntialization(document.title, getMetadata('page-type'), getMetadata('site-section'), '', 'english', '', getMetadata('brand'), getMetadata('web-type'), '', '', '', getMetadata('campaign-userjourney'), getMetadata('persona'), getMetadata('product'));
-
+setPersona();
   await loadEager(document);
   await loadLazy(document);
+
+
   try {
     const response = await fetch(`/icons/icon-sprite.svg`);
 
