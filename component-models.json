@@ -143,6 +143,10 @@
         "label": "Style",
         "options": [
           {
+            "name": "Box Container",
+            "value": "box-container"
+          },
+          {
             "name": "Top Spacing",
             "value": "top-margin"
           },
@@ -421,6 +425,10 @@
           {
             "name": "System Table",
             "value": "system-table"
+          },
+          {
+            "name": "Generic Body Copy",
+            "value": "generic-body-copy"
           }
         ]
       }
