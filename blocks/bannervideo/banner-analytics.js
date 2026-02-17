@@ -5,7 +5,7 @@ document.addEventListener('click', (e) => {
     const secondaryLink = e.target.closest('.bannervideo-wrapper .button');
     const nextPageURL = e.target.closest(".bannervideo-wrapper .button")?.getAttribute("href");
     const carouselPosition= e.target.closest('.bannervideo-wrapper .button').closest(".swiper-slide").getAttribute("aria-label").split(" / ")[0]
-    bannerInteraction('', minifyText(secondaryLink?.textContent) , 'banking for teachers, owned by teachers',carouselPosition,'bannervideo','bannervideo','',getPersona(),nextPageURL,'banner-click','internal','','','','','','');
+    bannerInteraction('', minifyText(secondaryLink?.textContent) , 'banking for teachers, owned by teachers',carouselPosition,'bannervideo','bannervideo','',getPersona(),nextPageURL,'banner-click','internal','','','','homepage-banner','','');
   }   
    if (e.target.closest('.bannervideo-wrapper .swiper-pagination-bullet')) {
     const secondaryLink = e.target.closest('.bannervideo-wrapper .swiper-pagination-bullet');
