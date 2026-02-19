@@ -417,6 +417,10 @@
           {
             "name": "Mortage Insurance",
             "value": "mortage-insurance"
+          },
+          {
+            "name": "Lenders Mortgage Insurance",
+            "value": "lenders-mortgage-insurance"
           }
         ]
       }

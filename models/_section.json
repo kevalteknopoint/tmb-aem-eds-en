@@ -314,6 +314,10 @@
             {
               "name": "Mortage Insurance",
               "value": "mortage-insurance"
+            },
+            {
+              "name": "Lenders Mortgage Insurance",
+              "value": "lenders-mortgage-insurance"
             }
           ]
         }
@@ -361,7 +365,8 @@
         "teachers-calculator-block",
         "alerts",
         "system-table",
-        "mortage-insurance"
+        "mortage-insurance",
+        "lenders-mortgage-insurance"
       ]
     }
   ]

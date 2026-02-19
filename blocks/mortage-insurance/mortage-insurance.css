@@ -12,7 +12,7 @@
   gap:16px;
 }
 
-.section.mortage-insurance .mortage-insurance.block .insurance-row-0 .insurance-content-0 p{
+.section.mortage-insurance .mortage-insurance.block .insurance-row-0 .insurance-content-0 h1, .section.mortage-insurance .mortage-insurance.block .insurance-row-0 .insurance-content-0 h2, .section.mortage-insurance .mortage-insurance.block .insurance-row-0 .insurance-content-0 h3{
   color:var(--heading-default);
   font-family:var(--secondary-font);
   font-size:var(--font-size-lg);
