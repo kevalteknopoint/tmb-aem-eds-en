@@ -320,8 +320,8 @@
               "value": "lenders-mortgage-insurance"
             },
             {
-              "name": "Embed Mortgage Insurance",
-              "value": "embed-mortgage-insurance"
+              "name": "Embed Iframe",
+              "value": "embed-iframe"
             }
           ]
         }
@@ -370,7 +370,7 @@
         "alerts",
         "system-table",
         "mortage-insurance",
-        "embed-mortgage-insurance"
+        "embed-iframe"
       ]
     }
   ]

@@ -46,7 +46,7 @@
       "alerts",
       "system-table",
       "mortage-insurance",
-      "embed-mortgage-insurance"
+      "embed-iframe"
     ]
   },
   {
@@ -103,7 +103,7 @@
     ]
   },
   {
-    "id": "embed-mortage-insurance",
+    "id": "embed-iframe",
     "components": []
   },
   {
