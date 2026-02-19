@@ -10,18 +10,28 @@
   }
 
   console.log('Decorating mortgage-insurance block', block);
-
-  // 3. Get the direct children (the rows)
-  // We use Array.from or spread because querySelectorAll returns a NodeList
   const rows = [...block.children];
 
   rows.forEach((row, idx) => {
-    // Add a unique class to each "row" container
     row.classList.add(`insurance-row-${idx}`);
-    // Optional: Add a class to the inner div for more specific styling
     const innerDiv = row.querySelector('div');
     if (innerDiv) {
       innerDiv.classList.add(`insurance-content-${idx}`);
+    }
+    if (idx === 1) {
+      const dateElement = row.querySelector('p');
+      if (dateElement) {
+        const rawDate = dateElement.textContent.trim();
+        const dateObj = new Date(rawDate);
+        if (!Number.isNaN(dateObj)) {
+          const formattedDate = new Intl.DateTimeFormat('en-GB', {
+            day: 'numeric',
+            month: 'short',
+            year: 'numeric'
+          }).format(dateObj);
+          dateElement.textContent = formattedDate;
+        }
+      }
     }
     console.log(`Decorated row ${idx}`, row);
   });

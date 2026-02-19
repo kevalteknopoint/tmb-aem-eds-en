@@ -1,42 +1,53 @@
 .section.mortage-insurance{
   margin-left:auto;
   margin-right:auto;
-  max-width:calc(1440px - 0px);
-  padding-inline:64px;
+  max-width:735px;
+  padding-inline:32px;
   width:100%;
 }
 
-.section.mortage-insurance .block{
+.section.mortage-insurance .mortage-insurance.block{
   display:flex;
   flex-direction:column;
   gap:16px;
 }
 
-.section.mortage-insurance .block .mortage-insurance-title{
+.section.mortage-insurance .mortage-insurance.block .insurance-row-0 .insurance-content-0 p{
   color:var(--heading-default);
   font-family:var(--secondary-font);
   font-size:var(--font-size-lg);
   font-weight:900;
   letter-spacing:var(--font-letter-spacing-lg);
   line-height:var(--font-height-lg);
+  text-transform:uppercase;
 }
 
-.section.mortage-insurance .block .mortage-insurance-description{
+.section.mortage-insurance .mortage-insurance.block .insurance-row-1 .insurance-content-1 p{
   color:var(--body-default);
+  font-family:var(--font-family-sm-body);
   font-size:var(--font-size-sm-body);
-  font-weight:400;
+  font-weight:var(--font-weight-sm-body);
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
+  text-transform:initial;
 }
 
-@media screen and (max-width: 1279px){
-  .section.mortage-insurance{
-    padding-inline:24px;
-  }
+.section.mortage-insurance .mortage-insurance.block .insurance-row-2 .insurance-content-2 p{
+  color:var(--body-default);
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-weight:var(--font-weight-sm-body);
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
+  text-transform:initial;
 }
 
-@media screen and (max-width: 767px){
-  .section.mortage-insurance{
-    padding-inline:16px;
-  }
+.section.mortage-insurance .mortage-insurance.block .insurance-row-3 .insurance-content-3 p{
+  color:var(--body-default);
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-weight:var(--font-weight-sm-body);
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
+  text-transform:initial;
 }

@@ -1,28 +1,60 @@
-@use '../../styles/base' as *;
+@use "../../styles/base" as *;
 
 .section.mortage-insurance {
-  @include responsive-container;
+  // @include responsive-container;
+  width: 100%;
+  max-width: 735px; 
+  padding-inline: 32px;
+  margin-left: auto;
+  margin-right: auto;
 
-  .block{
+  .mortage-insurance.block {
     display: flex;
     flex-direction: column;
     gap: 16px;
 
-    .mortage-insurance-title {
-      color: $heading-default;
-      font-family: $secondary-font;
-      font-size: $font-size-lg;
-      font-weight: 900;
-      letter-spacing: $font-letter-spacing-lg;
-      line-height: $font-height-lg;
+    .insurance-row-0 {
+      .insurance-content-0 {
+        p{
+          color: $heading-default;
+          font-family: $secondary-font;
+          font-size: $font-size-lg;
+          font-weight: 900;
+          letter-spacing: $font-letter-spacing-lg;
+          line-height: $font-height-lg;
+          text-transform: uppercase;
+        }
+      }
     }
 
-    .mortage-insurance-description {
-      color: $body-default;
-      font-size: $font-size-sm-body;
-      font-weight: 400;
-      letter-spacing: $font-letter-spacing-sm-body;
-      line-height: $font-height-sm-body;
+    .insurance-row-1 {
+      .insurance-content-1 {
+        p{
+          @include typo-sm-body;
+
+          color: $body-default;
+        }
+      }
+    }
+
+    .insurance-row-2 {
+      .insurance-content-2 {
+        p{
+          @include typo-sm-body;
+
+          color: $body-default;
+        }
+      }
+    }
+
+    .insurance-row-3 {
+      .insurance-content-3 {
+        p{
+          @include typo-sm-body;
+
+          color: $body-default;
+        }
+      }
     }
   }
 }

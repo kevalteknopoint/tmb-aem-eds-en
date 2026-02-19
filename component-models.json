@@ -1331,7 +1331,7 @@
     "id": "mortage-insurance",
     "fields": [
       {
-        "component": "text",
+        "component": "richtext",
         "name": "mortage-insurance-title",
         "label": "Mortage Insurance Title",
         "valueType": "string"
