@@ -45,7 +45,8 @@
       "teachers-calculator-block",
       "alerts",
       "system-table",
-      "mortage-insurance"
+      "mortage-insurance",
+      "embed-mortgage-insurance"
     ]
   },
   {
@@ -100,6 +101,10 @@
     "components": [
       "account-card"
     ]
+  },
+  {
+    "id": "embed-mortage-insurance",
+    "components": []
   },
   {
     "id": "faq-productdetail",

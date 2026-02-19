@@ -4,7 +4,46 @@
   width: 100%;
   max-width: 735px; 
   padding-inline: 32px;
-  margin-left: auto;
-  margin-right: auto; 
-  background-color: red; 
+  margin: 0 auto 40px;
+
+  h3,h4{
+    color: $heading-default;
+    font-family: $font-family-h4;
+    font-size: $font-size-h4;
+    font-style: normal;
+    font-weight: 500;
+    line-height: $font-height-h4;
+    letter-spacing: $font-letter-spacing-h4;
+    margin-bottom: 16px;
+  }
+
+  p{
+    color: $body-default;
+    font-family: $font-family-body;
+    font-size: $font-size-body;
+    font-style: normal;
+    font-weight: 400;
+    line-height: $font-height-body;
+    letter-spacing: $font-letter-spacing-body;
+  }
+
+  ul{
+    list-style-type: disc;
+    padding-left: 25px;
+    margin-top: 10px;
+
+    li{
+      color: $body-default;
+      font-family: $font-family-body;
+      font-size: $font-size-body;
+      font-style: normal;
+      font-weight: 400;
+      line-height: $font-height-body;
+      letter-spacing: $font-letter-spacing-body;
+
+      strong{
+        font-weight: 700;
+      }
+    }
+  }
 }

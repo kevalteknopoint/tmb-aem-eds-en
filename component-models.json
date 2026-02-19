@@ -421,6 +421,10 @@
           {
             "name": "Lenders Mortgage Insurance",
             "value": "lenders-mortgage-insurance"
+          },
+          {
+            "name": "Embed Mortgage Insurance",
+            "value": "embed-mortgage-insurance"
           }
         ]
       }
@@ -1019,6 +1023,17 @@
         "validation": {
           "rootPath": "/content/dam/tmb/content-fragments"
         }
+      }
+    ]
+  },
+  {
+    "id": "embed-mortage-insurance",
+    "fields": [
+      {
+        "component": "text",
+        "name": "embed-title-text",
+        "label": "Embed Title Text",
+        "valueType": "string"
       }
     ]
   },
