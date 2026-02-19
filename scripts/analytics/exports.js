@@ -287,7 +287,7 @@ export function getPageRegion(element) {
   const position = components.indexOf(currentComponent) + 1;
   const total = components.length;
 
-  if (!position || total === 0) return 'homepage-region-1';
+  if (!position || total === 0) return "top";
 
   const perRegion = Math.ceil(total / 3);
   const regionNumber = Math.ceil(position / perRegion);
