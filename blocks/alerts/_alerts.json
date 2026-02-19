@@ -30,7 +30,8 @@
           "options": [
             { "name": "Blue", "value": "blue-alert" },
             { "name": "Orange", "value": "orange-alert" },
-            { "name": "Red", "value": "red-alert" }
+            { "name": "Red", "value": "red-alert" },
+            { "name": "Container Width", "value": "alert-container" }
           ]
         },
         {

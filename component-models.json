@@ -481,6 +481,10 @@
           {
             "name": "Red",
             "value": "red-alert"
+          },
+          {
+            "name": "Container Width",
+            "value": "alert-container"
           }
         ]
       },

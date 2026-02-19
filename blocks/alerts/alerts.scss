@@ -1,69 +1,108 @@
 @use '../../styles/base' as *;
 
-.alerts {
-     @include responsive-container;
-     
-    display: flex;
-    padding: 16px 64px;
-    align-items: flex-start;
-    gap: 12px;
-    align-self: stretch;
-
-    .alert-text {
-        p {
-            color: #0B231F;
-            font-family: $font-family-sm-body ;
-            font-size: $font-size-sm-body ;
-            font-style: normal;
-            font-weight: 400;
-        }
-
-        h3,
-        h4 {
-            color: #0B231F;
-            font-family: $font-family-h5 ;
-            font-size: $font-size-h5 ;
-            font-style: normal;
-            font-weight: 500;
-        }
-    }
-
-    .icon {
-        display: flex;
-        padding: 4px 0;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-
-        // width: 21px;
-        height: 21px;
-        aspect-ratio: 1/1;
-    }
-
-    .icon-close {
-        display: flex;
-        padding: 8px 0;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        width: 12px;
-        height: 12px;
-        flex-shrink: 0;
-        aspect-ratio: 1/1;
-    }
-
-    /* Blue */
-    &.blue-alert {
+.alerts-wrapper {
+  &:has(.alerts.blue-alert) {
+    background-color: #F2F7FF;
+    
+    &:has(.alerts.alert-container) {
+      background-color: transparent;
+      
+      .alerts {
         background-color: #F2F7FF;
+      }
     }
+  }
 
-    /* Orange */
-    &.orange-alert {
+  &:has(.alerts.orange-alert) {
+    background-color: #FEF5F2;
+
+    &:has(.alerts.alert-container) {
+      background-color: transparent;
+      
+      .alerts {
         background-color: #FEF5F2;
+      }
+    }
+  }
+
+  &:has(.alerts.red-alert) {
+    background-color: #FCF2F5;
+
+    &:has(.alerts.alert-container) {
+      background-color: transparent;
+      
+      .alerts {
+        background-color: #FCF2F5;
+      }
+    }
+  }
+
+  &:has(.alerts.alert-container) {
+    @include responsive-container;
+
+    border-radius: 16px;
+    margin-bottom: 12px;
+    
+    .alerts {
+      border-radius: 16px;
+      padding-inline: 24px;
+    }
+  }
+  
+  &:has(.alerts:not(.alert-container)){
+    .alerts {
+      @include responsive-container;
+    }
+  }
+}
+
+
+.alerts {
+  display: flex;
+  padding: 16px 0;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+
+  .alert-text {
+    p {
+      @include typo-sm-body;
+      
+      color: $body-default;
     }
 
-    /* Red */
-    &.red-alert {
-        background-color: #FCF2F5;
+    h1, h2, h3, h4, h5, h6 {
+      @include typo-heading5;
+
+      color: $body-default;
+      margin-bottom: 4px;
     }
+  }
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      min-width: 21px;
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  .icon-close {
+    display: flex;
+    padding: 8px 0;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+
+    svg {
+      min-width: 12px;
+      min-height: 12px;
+      width: 12px;
+      height: 12px;
+    }
+  }
 }
