@@ -62,6 +62,10 @@ export default function loadNonBlockLibs() {
       selector: '.mortgage-insurance',
       name: 'mortgage-insurance',
     },
+    {
+      selector: '.lenders-mortgage-insurance',
+      name: 'lenders-mortgage-insurance',
+    },
   ];
 
   blocks.forEach(({ selector, name }) => {

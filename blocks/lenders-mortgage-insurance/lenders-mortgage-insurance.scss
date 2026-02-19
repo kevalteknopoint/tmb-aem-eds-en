@@ -1,9 +1,10 @@
 @use "../../styles/base" as *;
 
-.section.lenders-mortgage-insurance {  
+.lenders-mortgage-insurance {  
   width: 100%;
   max-width: 735px; 
   padding-inline: 32px;
   margin-left: auto;
-  margin-right: auto;  
+  margin-right: auto; 
+  background-color: red; 
 }
