@@ -96,12 +96,6 @@ export default function milestones(block) {
       observer: true,
       observeParents: true,
       resizeObserver: true,
-      breakpoints: {
-        0: { slidesPerView: "auto", spaceBetween: 16 },
-        640: { slidesPerView: "2.5", spaceBetween: 24 },
-        1024: { slidesPerView: "3.5", spaceBetween: 32 },
-        1400: { slidesPerView: 4.5, spaceBetween: 32 },
-      },
       on: {
         init() {
           this.update(); // Force update after init

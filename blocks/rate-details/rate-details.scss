@@ -129,9 +129,32 @@
           display: block;
           color: $body-default;
 
+          h1, h2, h3, h4, h5, h6 {
+            @include typo-heading3;
+
+            color: $heading-default;
+            margin-top: 40px;
+
+            &:first-child {
+              margin-top: 0;
+            }
+
+            @include mobile {
+              margin-top: 24px;
+            }
+          }
+
+          p {
+            margin-top: 16px;
+          }
+
           a {
             color: $link-default;
             text-decoration: underline;
+          }
+
+          b {
+            @include typo-body-bold;
           }
 
           ul {
@@ -142,6 +165,20 @@
             li {
               margin-bottom: 8px;
             }
+          }
+
+          ol {
+            padding-left: 24px;
+            list-style: decimal;
+            margin-top: 16px;
+
+            li {
+              margin-bottom: 8px;
+            }
+          }
+
+          .pipe-grid {
+            margin-top: 16px;
           }
         }
 
@@ -168,11 +205,11 @@
   .pipe-grid-row {
     display: grid;
     grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
-    border-bottom: 1px solid #00000033;
+    border-bottom: 1px solid $line-default;
     padding: 16px 0;
     
     &:first-child {
-      border-top: 1px solid #00000033;
+      border-top: 1px solid $line-default;
     }
   }
 

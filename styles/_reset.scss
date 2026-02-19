@@ -69,8 +69,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
+b {
+  @include typo-body-bold;
+}
+
 sup, sub {
   font-size: 0.7em;
+  line-height: 0;
 }
 
 :focus-visible {
@@ -89,4 +94,16 @@ sup, sub {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+h3, h4 {
+  @include typo-heading3;
+
+  color: $heading-default;
+}
+
+p {
+  @include typo-body;
+
+  color: $body-default;
 }

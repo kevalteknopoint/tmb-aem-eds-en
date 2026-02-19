@@ -50,7 +50,13 @@
 
 .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-2 p a{
   border-bottom:2px solid var(--link-accent);
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-weight:var(--font-weight-sm-body);
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
   padding:0;
+  text-transform:initial;
 }
 
 .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body{
@@ -65,5 +71,23 @@
 
   .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body{
     padding:40px 24px;
+  }
+
+  .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 h1, .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 h2, .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 h3, .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 h4, .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 h5, .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 h6{
+    font-size:var(--font-size-h3);
+    letter-spacing:var(--font-letter-spacing-h3);
+    line-height:var(--font-height-h3);
+  }
+
+  .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-2 .cards-card-body .card-bottom-1 p{
+    font-size:var(--font-size-body);
+    letter-spacing:var(--font-letter-spacing-body);
+    line-height:var(--font-height-body);
+  }
+}
+
+@media screen and (max-width: 767px){
+  .section.online-banking-legal{
+    padding-top:40px;
   }
 }

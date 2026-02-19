@@ -1,6 +1,11 @@
 @use '../../styles/base' as *;
 
-.who-can-apply-section{
+.who-can-apply-section {
+  &.background-color-secondary {
+    background-color: $bg-light;
+  }
+  
+  .who-can-apply-section-wrapper {
     @include responsive-container;
 
     display: flex;
@@ -8,133 +13,202 @@
     flex-direction: column;
     gap: 40px;
 
-    @include mobile{
-        gap: 24px;
+    @include mobile {
+      gap: 24px;
     }
 
-    @include tablet{
-        gap: 40px;
+    @include tablet {
+      gap: 40px;
     }
+  }
 
-    .default-content-wrapper{
-        h2{
-            @include typo-heading1;
+  .default-content-wrapper {
+    h2 {
+      @include typo-heading1;
+
+      color: $heading-default;
+      font-family: $secondary-font;
+
+      // font-size: 40px;
+      // line-height: 40px;
+      // letter-spacing: 2px;
+      // text-transform: uppercase;
+      text-align: left;
+    }
+  }
+
+  .columns-wrapper {
+    .block {
+      .column-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: baseline;
+
+        @include mobile {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+
+        @include tablet {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+
+        div {
+          display: block;
+
+          h3,
+          h4,
+          h5,
+          h6 {
+            @include typo-heading3;
 
             color: $heading-default;
-            font-family: $secondary-font;
+          }
 
-            // font-size: 40px;
-            // line-height: 40px;
-            // letter-spacing: 2px;
-            // text-transform: uppercase;
-            text-align: left;
-        }
-    }
+          p {
+            @include typo-body;
 
-    .columns-wrapper{
-        .block{
-            .column-container{
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 80px;
-                align-items: baseline;
+            color: $body-default;
+          }
 
-                @include mobile {
-                    grid-template-columns: 1fr;
-                    gap: 32px;
-                }
+          .button-container {
+            display: inline-block;
+            margin-top: 32px;
+            margin-right: 8px;
+            margin-bottom: 0;
 
-                @include tablet {
-                    grid-template-columns: 1fr;
-                    gap: 32px;
-                }
+            a:not(.secondary) {
+              @include button('primary');
 
-                div{
-                    display: block; // later removed once class added
-                        p{
-                            @include typo-heading3;
-
-                            color: $heading-default;
-
-                            // font-size: 24px;
-                            // font-weight: 500;
-                            // line-height: 29px
-                        }
-
-                        ul{
-                            margin-top: 16px;
-
-                            li{
-                                @include typo-body;
-
-                                margin-left: 25px;
-                                list-style: disc;
-                                color: $body-default;
-
-                                // font-size: 16px;
-                                // line-height: 24px;
-                            }
-                        }
-                    }
-                }
-            }
-    }
-
-    .accordion-wrapper{
-        .accordion{
-            .accordion-item{
-                border-bottom: 1px solid $line-default;
-                border-top: 1px solid $line-default;
-                padding: 16px 0;
-
-                .accordion-item-label{
-                    list-style: none;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-start;
-
-                    p {
-                        @include typo-heading3;
-
-                        color: $heading-default;
-                        margin-top: 4px;
-                    }
-
-                    svg{
-                        color: $color-button-primary-default;
-                        min-width: 40px;
-                        width: 40px;
-                        height: 40px;
-                        padding: 8px;
-                        border-radius: 44px;
-                        background: $bg-light;
-                        cursor: pointer;
-                        margin-left: 32px;
-                        transform: rotate(180deg);
-                    }
-                }
-
-                .accordion-item-body{
-                    margin-top: 8px;
-
-                    p{
-                        @include typo-body;
-                        
-                        // font-size: 16px;
-                        // line-height: 24px;
-                    }
-                }
-
-                    &[open] {
-                        summary {
-                        svg {
-                            transform: rotate(0deg);
-                        }
-                    }
-                }
+              font-style: normal;
+              text-decoration: unset;
             }
 
-           
+            a.secondary {
+              @include button('outlined');
+
+              font-style: normal;
+              text-decoration: unset;
+            }
+          }
+
+          ul {
+            margin-top: 16px;
+
+            li {
+              @include typo-body;
+
+              margin-left: 25px;
+              list-style: disc;
+              color: $body-default;
+            }
+          }
         }
+      }
     }
+  }
+
+  .accordion-wrapper {
+    .accordion {
+      .accordion-item {
+        border-bottom: 1px solid $line-default;
+        border-top: 1px solid $line-default;
+        padding: 16px 0;
+
+        .accordion-item-label {
+          list-style: none;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+
+          p {
+            @include typo-heading3;
+
+            color: $heading-default;
+            margin-top: 4px;
+          }
+
+          svg {
+            color: $color-button-primary-default;
+            min-width: 40px;
+            width: 40px;
+            height: 40px;
+            padding: 8px;
+            border-radius: 44px;
+            background: $bg-light;
+            cursor: pointer;
+            margin-left: 32px;
+            transform: rotate(180deg);
+          }
+        }
+
+        .accordion-item-body {
+          margin-top: 8px;
+
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            @include typo-heading3;
+
+            color: $heading-default;
+            margin-top: 40px;
+
+            &:first-child {
+              margin-top: 0;
+            }
+
+            @include mobile {
+              margin-top: 24px;
+            }
+          }
+
+          p {
+            @include typo-body;
+
+            margin: 0;
+            color: $body-default;
+
+            b {
+              @include typo-body-bold;
+            }
+          }
+
+          a {
+            color: $link-default;
+            text-decoration: underline;
+          }
+
+          ol,
+          ul {
+            margin-top: 16px;
+            list-style: decimal;
+            padding-left: 24px;
+
+            li {
+              margin-bottom: 8px;
+            }
+          }
+
+          ul {
+            list-style: disc;
+          }
+        }
+
+        &[open] {
+          summary {
+            svg {
+              transform: rotate(0deg);
+            }
+          }
+        }
+      }
+
+
+    }
+  }
 }

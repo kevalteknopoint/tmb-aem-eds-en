@@ -1,4 +1,5 @@
-import { div, source, video } from '../../scripts/dom-helpers.js';
+import { applyCapsizeToElement } from "../../libs/capsize/capsize.min.js";
+import { div, source, video } from "../../scripts/dom-helpers.js";
 
 const jsonMap = {
   1: 'desktop-media',
@@ -130,7 +131,10 @@ export default function decorate(block) {
   /* Replace original content safely */
   bannerContent.replaceWith(wrapperDiv);
 
-  Object.values(jsonMap)
-    .slice(5)
-    .forEach((cls) => block.querySelector(`.${cls}`)?.remove());
+  Object.values(jsonMap).slice(5).forEach((cls) => block.querySelector(`.${cls}`)?.remove());
+
+  setTimeout(() => {
+    const capsizeItems = block.querySelectorAll('.rate-num, .rate-percent, .rate-pa');
+    capsizeItems.forEach(applyCapsizeToElement);
+  }, 1000);
 }

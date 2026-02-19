@@ -5,6 +5,7 @@
 
   .default-content-wrapper {
     margin-bottom: 40px;
+    text-align: center;
 
     @include mobile {
       margin-bottom: 24px;
@@ -25,6 +26,31 @@
     p {
       text-align: center;
       margin-top: 16px;
+    }
+
+    .button-container {
+      display: inline-block;
+      margin-top: 40px;
+      margin-right: 8px;
+      margin-bottom: 0;
+
+      @include mobile {
+        margin-top: 24px;
+      }
+
+      a:not(.secondary) {
+        @include button('primary');
+
+        font-style: normal;
+        text-decoration: unset;
+      }
+      
+      a.secondary {
+        @include button('outlined');
+        
+        font-style: normal;
+        text-decoration: unset;
+      }
     }
   }
 
@@ -295,8 +321,47 @@
 }
 
 // BORDER VARIATION
-
 .section.faq-cant-find-looking-for.variation-border {
+  &.background-color-teal {
+    .default-content-wrapper {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-align: center;
+      }
+    }
+
+    .cards-wrapper {
+      .cards {
+        ul {
+          li {
+            background-color: $bg-reverse;
+
+            .cards-card-body {
+              h1, h2, h3, h4, h5, h6 {
+                color: $link-reverse;
+                border-bottom: 2px solid $link-reverse;
+              }
+
+              p {
+                color: $body-reverse;
+              }
+
+              p.button-container {
+                  a {
+                    border: unset;
+                  }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   .default-content-wrapper {
     h1,
     h2,
@@ -316,14 +381,26 @@
           border: 1px solid $line-default;
           border-radius: 24px;
 
+          @include tablet {
+            padding: 40px 24px;
+          }
+
+          @include mobile {
+            padding: 40px 24px;
+          }
+
           .cards-card-body {
+            h1, h2, h3, h4, h5, h6 {
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+
             p.button-container {
                 a {
                   border: unset;
                 }
-              
             }
-
           }
         }
 

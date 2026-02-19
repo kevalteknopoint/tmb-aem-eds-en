@@ -3,26 +3,16 @@
 .breadcrumb {
   @include responsive-container;
 
-  padding-top: 64px;
-  padding-bottom: 32px;
   font-size: 14px;
   line-height: 24px;
-  color: $body-default;
   font-weight: 400;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
   text-transform: capitalize;
-
-  @include mobile {
-    padding-top: 24px;
-    padding-bottom: 24px;
-
-    &:has(img) {
-      padding-top: 44px;
-    }
-  }
+  color: $link-default;
+  padding-block: 16px;
 
   a {
     display: flex;

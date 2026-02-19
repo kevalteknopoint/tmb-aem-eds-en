@@ -40,6 +40,10 @@
           "label": "Style",
           "options": [
             {
+              "name": "Box Container",
+              "value": "box-container"
+            },
+            {
               "name": "Top Spacing",
               "value": "top-margin"
             },
@@ -54,6 +58,10 @@
             {
               "name": "Bottom Inner Spacing",
               "value": "bottom-padding"
+            },
+            {
+              "name": "Top Partition",
+              "value": "top-partition"
             },
             {
               "name": "Bottom Partition",
@@ -72,15 +80,7 @@
               "value": "quick-links"
             },
             {
-              "name": "momentum-teaser",
-              "value": "momentum-teaser"
-            },
-            {
-              "name": "momentum-section",
-              "value": "momentum-section"
-            },
-            {
-              "name": "momentum-saver-section",
+              "name": "Momentum Saver Section",
               "value": "momentum-saver-section"
             },
             {
@@ -88,16 +88,32 @@
               "value": "momentum-image-saver"
             },
             {
-              "name": "Product Detail Variant",
+              "name": "Momentum Saver Product Detail Variant",
               "value": "image-swapping"
+            },
+            {
+              "name": "Momentum Saver App Badges",
+              "value": "momentum-app-badges"
+            },
+            {
+              "name": "Momentum Checked Icon List",
+              "value": "momentum-direct-variant"
             },
             {
               "name": "Left Percentage Section",
               "value": "left-percentage-section"
             },
             {
-              "name": "Background Color Teal",
+              "name": "Primary Section Background",
               "value": "background-color-teal"
+            },
+            {
+              "name": "Secondary Section Background",
+              "value": "background-color-secondary"
+            },
+            {
+              "name": "Gradient Section Background (TMB only)",
+              "value": "background-color-gradient"
             },
             {
               "name": "Bg Image Saver",
@@ -192,10 +208,6 @@
               "value": "banking-goods"
             },
             {
-              "name": "Product Navigation",
-              "value": "product-navigation"
-            },
-            {
               "name": "Rates Saver",
               "value": "rates-saver"
             },
@@ -252,11 +264,7 @@
               "value": "looking-for-another-way"
             },
             {
-              "name": "Momentum Direct Variant",
-              "value": "momentum-direct-variant"
-            },
-            {
-              "name": "Circular Image",
+              "name": "Momentum Circular Image",
               "value": "circular-image "
             },
             {
@@ -266,7 +274,6 @@
             {
               "name": "Milestones",
               "value": "milestones"
-             
             },
             {
                "name": "Rate Details",
@@ -277,7 +284,7 @@
               "value": "home-loan-explained"
             },
             {
-              "name": "Table with icons",
+              "name": "Table Section",
               "value": "table-with-icons"
             },
             {
@@ -303,6 +310,22 @@
             {
               "name": "legal-privacy",
               "value": "legal-privacy"
+            },
+            {
+              "name": "Search Results Section (Header)",
+              "value": "search-results-section"
+            },
+            {
+              "name": "Search Results Page",
+              "value": "search-results-page"
+            },
+            {
+              "name": "System Table",
+              "value": "system-table"
+            },
+            {
+              "name": "Generic Body Copy",
+              "value": "generic-body-copy"
             }
           ]
         }
@@ -339,11 +362,17 @@
         "stepper",
         "tabs",
         "interest-rates",
+        "account-card-copy",
+        "multiple-fragment",
+        "card-fragments",
         "page-heading",
         "legal-tc-guide",
         "faq-legal",
         "faq-legal-table",
-        "legal-privacy"
+        "legal-privacy",
+        "teachers-calculator-block",
+        "alerts",
+        "system-table"
       ]
     }
   ]

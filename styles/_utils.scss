@@ -108,3 +108,153 @@ header {
     }
   }
 }
+
+.top-partition {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: calc($container-width - 128px);
+    width: 100%;
+    margin: 0 auto;
+    height: 1px;
+    background: $line-default;
+
+    @include tablet-lg {
+      max-width: calc(100% - 48px);
+    }
+
+    @include mobile {
+      max-width: calc(100% - 32px);
+    }
+  }
+}
+
+.box-container {
+  @include responsive-container;
+}
+
+.generic-body-copy {
+  h1 {
+    @include typo-heading1;
+
+    color: $heading-default;
+    margin-bottom: 40px;
+
+    @include mobile {
+      margin-bottom: 24px;
+    }
+
+    &:has(& + p) {
+      margin-bottom: 16px;
+
+      @include mobile {
+        margin-bottom: 16px
+      }
+
+      & + p {
+        margin-bottom: 40px;
+
+        @include mobile {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+
+  h2 {
+    @include typo-heading2-std;
+
+    color: $heading-default;
+    margin-bottom: 24px;
+
+    &:not(:first-child) {
+      margin-top: 40px;
+
+      @include mobile {
+        margin-top: 24px;
+      }
+    }
+
+    &:has(& + p) {
+      margin-bottom: 16px;
+
+      & + p {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  h3 {
+    @include typo-heading3;
+
+    color: $heading-default;
+    margin-bottom: 16px;
+    margin-top: 24px;
+  }
+
+  h4 {
+    @include typo-heading4;
+
+    color: $heading-default;
+    margin-bottom: 16px;
+  }
+
+  h5 {
+    @include typo-heading5;
+
+    color: $heading-default;
+    margin-bottom: 16px;
+  }
+
+  h6 {
+    @include typo-disclaimer;
+
+    color: $body-default;
+  }
+
+  p {
+    @include typo-body;
+
+    margin-bottom: 16px;
+    color: $body-default;
+
+    a {
+      color: $link-default;
+      text-decoration: underline;
+    }
+
+    b {
+      @include typo-body-bold;
+    }
+  }
+
+  ul, ol {
+    @include typo-body;
+
+    margin-bottom: 24px;
+    list-style-type: disc;
+    padding-left: 24px;
+
+    li {
+      margin-bottom: 10px;
+
+      b {
+        @include typo-body-bold;
+      }
+
+      a {
+        text-decoration: underline;
+        color: $link-default;
+      }
+    }
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+}

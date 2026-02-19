@@ -1,3 +1,4 @@
+import { applyCapsizeToElement } from '../../libs/capsize/capsize.min.js';
 import { div } from '../../scripts/dom-helpers.js';
 
 function createGrid(block) {
@@ -68,9 +69,14 @@ function createGrid(block) {
   const allRateDetailSections = document.querySelectorAll('.rate-details');
 
   allRateDetailSections.forEach((section) => {
-    const contentWrappers = section.querySelectorAll('.default-content-wrapper');
+    const contentWrappers = section.querySelectorAll('.default-content-wrapper,.accordion-item-body');
     contentWrappers.forEach((wrapper) => {
       createGrid(wrapper);
     });
+
+    setTimeout(() => {
+      const capsizeItems = section.querySelectorAll('.rate-num, .rate-percent, .rate-pa');
+      capsizeItems.forEach(applyCapsizeToElement);
+    }, 1000);
   });
 }());

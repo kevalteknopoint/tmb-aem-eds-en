@@ -1,10 +1,29 @@
+.faq-accordion .default-content-wrapper .button-container a:not(.secondary), .faq-accordion .default-content-wrapper .button-container a.secondary{
+  align-items:center;
+  border:none;
+  border-radius:var(--radius-button);
+  cursor:pointer;
+  display:flex;
+  font-family:var(--font-family-h5);
+  font-weight:var(--font-weight-h5);
+  gap:12px;
+  justify-content:center;
+  padding-inline:24px;
+  text-align:center;
+  transition:all 0.3s ease-in-out;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
 .faq-product-detail-wrapper{
   width:100%;
 }
 
 .faq-accordion{
-  display:flex;
-  gap:32px;
+  -moz-column-gap:32px;
+       column-gap:32px;
+  display:grid;
+  grid-template-columns:417px auto;
   margin-left:auto;
   margin-right:auto;
   max-width:calc(1440px - 0px);
@@ -12,11 +31,18 @@
   width:100%;
 }
 
-.faq-accordion .default-content-wrapper{
-  min-width:417px;
+.faq-accordion .default-content-wrapper:last-child:not(:nth-child(2)){
+  grid-column:1/-1;
+  margin-top:16px;
+  text-align:center;
 }
 
-.faq-accordion .default-content-wrapper h1, .faq-accordion .default-content-wrapper h2, .faq-accordion .default-content-wrapper h3, .faq-accordion .default-content-wrapper h4, .faq-accordion .default-content-wrapper h5, .faq-accordion .default-content-wrapper h6{
+.faq-accordion .default-content-wrapper h1,
+.faq-accordion .default-content-wrapper h2,
+.faq-accordion .default-content-wrapper h3,
+.faq-accordion .default-content-wrapper h4,
+.faq-accordion .default-content-wrapper h5,
+.faq-accordion .default-content-wrapper h6{
   color:var(--heading-default);
   font-family:var(--font-family-h1);
   font-size:var(--font-size-h1);
@@ -24,6 +50,97 @@
   letter-spacing:var(--font-letter-spacing-h1);
   line-height:var(--font-height-h1);
   text-transform:initial;
+}
+
+.faq-accordion .default-content-wrapper p{
+  color:var(--body-default);
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  margin-top:16px;
+  text-transform:initial;
+}
+
+.faq-accordion .default-content-wrapper a{
+  color:var(--link-default);
+  text-decoration:underline;
+}
+
+.faq-accordion .default-content-wrapper .button-container{
+  display:inline-block;
+  margin-bottom:0;
+  margin-right:8px;
+  margin-top:24px;
+}
+
+.faq-accordion .default-content-wrapper .button-container a:not(.secondary){
+  background-color:var(--color-button-primary-default);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+  font-size:var(--font-size-h5);
+  font-style:normal;
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:8px;
+  text-decoration:unset;
+}
+
+.faq-accordion .default-content-wrapper .button-container a:not(.secondary):hover{
+  background-color:var(--color-button-primary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.faq-accordion .default-content-wrapper .button-container a:not(.secondary):active{
+  background-color:var(--color-button-primary-press);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.faq-accordion .default-content-wrapper .button-container a:not(.secondary):focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.faq-accordion .default-content-wrapper .button-container a:not(.secondary) svg{
+  height:12px;
+  width:12px;
+}
+
+.faq-accordion .default-content-wrapper .button-container a.secondary{
+  background-color:var(--color-button-outlined-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-default);
+  color:var(--color-button-text-stroke-default);
+  font-size:var(--font-size-h5);
+  font-style:normal;
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:6px;
+  text-decoration:unset;
+}
+
+.faq-accordion .default-content-wrapper .button-container a.secondary:hover{
+  background-color:var(--color-button-outlined-hover);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-hover);
+  color:var(--color-button-text-stroke-hover);
+}
+
+.faq-accordion .default-content-wrapper .button-container a.secondary:active{
+  background-color:var(--color-button-outlined-press);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-press);
+  color:var(--color-button-text-stroke-press);
+}
+
+.faq-accordion .default-content-wrapper .button-container a.secondary:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.faq-accordion .default-content-wrapper .button-container a.secondary svg{
+  height:12px;
+  width:12px;
 }
 
 .faq-accordion .accordion-wrapper{
@@ -110,17 +227,12 @@
 
 @media screen and (max-width: 1023px){
   .faq-accordion{
-    flex-direction:column;
+    grid-template-columns:auto;
   }
 }
 
 @media screen and (max-width: 767px){
   .faq-accordion{
-    flex-direction:column;
     padding-inline:16px;
-  }
-
-  .faq-accordion .default-content-wrapper{
-    min-width:unset;
   }
 }

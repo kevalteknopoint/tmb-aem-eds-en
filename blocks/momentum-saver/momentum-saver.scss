@@ -1,369 +1,349 @@
 @use '../../styles/base' as *;
 
-.momentum-saver-section {
-  align-items: center;
-  background-color: #fff;
-  display: flex;
-  flex-flow: column wrap;
-  gap: 80px;
-  justify-content: space-between;
-
-  .columns-wrapper {
+.momentum-saver-section, .momentum-image-saver, .image-swapping, .momentum-app-badges, .momentum-direct-variant {
+  .momentum-section-wrapper {
     @include responsive-container;
   }
 
-  .momentum-columns {
-    display: flex;
-    padding: 64px;
-    border-radius: $radius-card;
+  .default-content-wrapper {
+    margin-bottom: 40px;
 
     @include mobile {
-      padding: 40px 16px;
-      flex-direction: column;
-      align-items: flex-start;
+      margin-bottom: 24px;
     }
 
-    >div {
-      order: unset;
-      gap: 40px;
-      align-items: flex-start;
+    h1, h2, h3, h4, h5, h6 {
+      @include typo-heading1;
+
+      color: $heading-default;
     }
 
-    .momentum-content {
-      display: grid;
-      max-width: 350px;
-      width: 100%;
-      grid-template-columns: 1fr 3fr;
-
-      .rate-num {
-        font-family: $font-family-lg;
-        color: $heading-default;
-        font-size: 140px;
-        font-weight: $font-weight-rate;
-        line-height: 120px;
-
-        @include mobile {
-          font-size: 120px;
-          font-style: normal;
-          line-height: 120px;
-        }
-
-        @media screen and (max-width: 400px) {
-          font-size: 108px;
-        }
-      }
-
-      .rate-unit {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        line-height: 1;
-
-        @include tablet {
-          align-items: unset;
-        }
-      }
-
-      .rate-percent {
-        color: $heading-default;
-        font-family: $font-family-lg;
-        font-size: 80px;
-        line-height: 72px;
-        font-weight: $font-weight-rate;
-
-        @include mobile {
-          font-size: 78px;
-          line-height: 72px;
-        }
-
-        @media screen and (max-width: 400px) {
-          font-size: 70px;
-        }
-      }
-
-      .rate-pa {
-        color: $heading-default;
-        text-align: left;
-        font-size: 40px;
-        font-family: $font-family-h1-std;
-        font-weight: $font-weight-rate-p-a;
-        line-height: 28px;
-
-        @media screen and (max-width: 400px) {
-          font-size: 32px;
-        }
-      }
-
-      p {
-        color: $heading-default;
-        width: 100%;
-
-        @include typo-body;
-      }
-    }
-
-    .momentum-second-content {
-
-      h1,
-      h2,
-      h3 {
-        @include typo-heading1;
-
-        color: $heading-default;
-        font-style: normal;
-        margin-bottom: 16px;
-      }
-
-      h4,
-      h5,
-      h6 {
-        color: $heading-default;
-        margin-bottom: 4px;
-
-        @include typo-intro;
-      }
-
-      p {
-        color: $body-default;
-        margin-bottom: 24px;
-
-        @include typo-body;
-      }
-
-      p:has(a) {
-        display: flex;
-        gap: 8px;
-
-        a {
-          display: block;
-          margin-top: 32px;
-
-          span {
-            display: block;
-          }
-
-          svg {
-            // margin-top: 32px;
-            display: flex;
-            justify-content: flex-start;
-            width: 135px;
-            height: 40px;
-          }
-        }
-      }
-
-
-      .button-container {
-        margin-bottom: unset;
-        display: flex;
-        gap: 15px;
-        
-        @include mobile{
-          display: block;
-          margin-bottom: 5px
-        }
-
-        a {
-          @include button('primary');
-        }
-      }
-
-    }
-  }
-}
-
-// variant for section bg
-.momentum-saver-section.background-color-teal {
-  background-color: $bg-reverse;
-
-  .momentum-columns.background-color-white {
-    background-color: $bg-default;
-  }
-
-  &.momentum-image-saver {
-    .columns-wrapper .momentum-columns div .momentum-second-content {
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        color: $heading-reverse;
-      }
-
-      p {
-        color: $body-reverse;
-      }
-
-      a {
-        @include button('secondary');
-      }
-    }
-  }
-}
-
-
-// image variant 
-.momentum-saver-section.momentum-image-saver {
-  .columns-wrapper {
-    @include responsive-container;
-
-    .momentum-columns {
-      padding: 0;
-
-      div {
-        gap: 24px;
-        align-items: center;
-
-        .columns-img-col {
-          width: 100%;
-          max-width: 519.5px;
-
-          img {
-            border-radius: $radius-card;
-          }
-        }
-
-        .momentum-second-content {
-          @include tablet {
-            display: block;
-          }
-
-          h1,
-          h2,
-          h3 {
-            @include typo-heading1-std;
-          }
-        }
-      }
-    }
-  }
-
-
-}
-
-
-// bg variant
-.momentum-image-saver.bg-image-saver {
-  background-color: $heading-default;
-
-  .momentum-second-content {
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
     p {
-      color: $body-reverse;
+      @include typo-body;
+
+      color: $body-default;
+      margin-top: 16px;
+    }
+  }
+
+  .columns.block > div {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    div {
+      flex: unset;
+      order: unset;
+
+      &.columns-img-col {
+        flex: 0 0 auto;
+
+        img {
+          border-radius: $radius-card;
+        }
+      }
+    }
+
+    h1, h2 {
+      @include typo-heading1;
+
+      color: $heading-default;
+      margin-bottom: 16px;
+    }
+    
+    h3, h4, h5, h6 {
+      @include typo-intro;
+      
+      color: $heading-default;
+      margin-bottom: 4px;
+    }
+    
+    p {
+      @include typo-body;
+
+      margin-bottom: 16px;
+      color: $body-default;
+
+      &:has(.interest-rate) {
+        margin-bottom: 8px;
+
+        & + p {
+          color: $heading-default;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    a {
+      color: $link-default;
+      text-decoration: underline;
+    }
+
+    ul {
+      @include typo-body;
+
+      list-style: disc;
+      padding-left: 24px;
+
+      li {
+        margin-bottom: 8px;
+      }
     }
 
     .button-container {
-      a {
-        @include button('secondary')
+      display: inline-block;
+      margin-top: 24px;
+      margin-right: 8px;
+      margin-bottom: 0;
+
+      a:not(.secondary) {
+        @include button('primary');
+
+        font-style: normal;
+        text-decoration: unset;
       }
+      
+      a.secondary {
+        @include button('outlined');
+        
+        font-style: normal;
+        text-decoration: unset;
+      }
+    }
+
+    .interest-rate {
+      display: flex;
+    }
+
+    .rate-num {
+      font-family: $font-family-lg;
+      color: $heading-default;
+      font-size: 150px;
+      font-weight: $font-weight-rate;
+      line-height: 120px;
+    }
+
+    .rate-unit {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      line-height: 1;
+
+      @include tablet {
+        align-items: unset;
+      }
+    }
+
+    .rate-percent {
+      color: $heading-default;
+      font-family: $font-family-lg;
+      font-size: 86px;
+      line-height: 72px;
+      font-weight: $font-weight-rate;
+    }
+
+    .rate-pa {
+      color: $heading-default;
+      text-align: left;
+      font-size: 45px;
+      font-family: $font-family-h1-std;
+      font-weight: $font-weight-rate-p-a;
+      line-height: 54px;
+    }
+
+    @media (max-width: 400px) {
+      .rate-num {
+        font-size: 120px;
+        line-height: 120px;
+      }
+  
+      .rate-percent {
+        font-size: 66px;
+        line-height: 72px;
+      }
+  
+      .rate-pa {
+        font-size: 32px;
+        line-height: 32px;
+      }
+    }
+  }
+  
+}
+
+.momentum-image-saver {
+  &.background-color-teal {
+    .columns.block > div {
+      h1, h2, h3, h4, h5, h6 {
+        color: $heading-reverse;
+      }
+
+      p, ul {
+        color: $body-reverse;
+      }
+
+      .button-container {
+        a:not(.secondary) {
+          @include button('secondary');
+        }
+        
+        a.secondary {
+          @include button('outlined-reverse');
+          
+          font-style: normal;
+          text-decoration: unset;
+        }
+      }
+    }
+  }
+
+  .columns.block > div {
+    align-items: center;
+    gap: 24px;
+    
+    h1, h2 {
+      @include typo-heading1-std;
     }
   }
 }
 
-.momentum-saver-section.image-swapping {
-  .columns-wrapper {
-    .momentum-columns {
-      >div {
-        gap: 80px;
-        flex-direction: row-reverse;
+.image-swapping, .momentum-app-badges, .momentum-direct-variant, .circular-image {
+  .columns.block > div {
+    align-items: center;
+    gap: 80px;
 
-        @include tablet {
-          gap: 32px;
-          flex-direction: column-reverse;
-        }
+    @include tablet {
+      gap: 32px
+    }
 
-        .columns-img-col {
-          max-width: unset;
-          width: 50%;
+    @include mobile {
+      gap: 24px;
+    }
 
-          @include tablet {
-            width: 100%;
-            max-width: unset;
-          }
-        }
+    h1, h2 {
+      @include typo-heading1;
+    }
 
-        .momentum-second-content {
-
-          h1,
-          h2,
-          h3 {
-            @include typo-heading1;
-          }
-
-          p {
-            margin-bottom: 0;
-          }
-        }
-      }
+    h3, h4, h5, h6 {
+      margin-bottom: 16px;
     }
   }
 }
 
-// Everyday Direct account
+.momentum-app-badges {
+  a:has(svg) {
+    display: inline-block;
+  }
+
+  svg {
+    display: flex;
+    justify-content: flex-start;
+    width: 135px;
+    height: 40px;
+  }
+}
+
 .momentum-direct-variant {
-  .momentum-columns {
-    div {
-      @include tablet-lg {
-        flex-direction: column-reverse;
-      }
-
-      .momentum-second-content {
-        ul {
-          align-items: flex-start;
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-          margin-bottom: 10px;
-          max-width: unset;
-          width: 100%;
-
-          li {
-            display: flex;
-            flex-direction: row;
-          }
-
-          .icon-checkmark {
-            .icon-svg {
-              width: 32px;
-              height: 32px;
-              margin-right: 16px;
-              color: $heading-default;
-            }
-          }
-        }
-      }
+  .columns.block > div {
+    ul {
+      list-style: none;
     }
-
   }
 }
 
+.momentum-saver-section:has(.interest-rate) {
+  .columns.block {
+    background: $bg-default;
+    padding: 64px;
+    border-radius: $radius-card;
 
-//circular image variant
+    @include tablet {
+      padding: 40px 16px;
+    }
+  }
+}
+
+.momentum-saver-section, .momentum-image-saver {
+  &.background-color-teal {
+    background-color: $bg-reverse;
+  }
+
+  &.background-color-secondary {
+    background-color: $bg-light;
+  }
+
+  &.background-color-gradient {
+    background: $gradient-1;
+  }
+}
 
 .momentum-saver-section.circular-image {
+  .columns.block {
+    & > div {
+      gap: 64px;
 
-    .columns-wrapper {
-      .momentum-columns {
-        div {
-          gap: 64px;
-          .columns-img-col {
-            max-width: 250px;
+      @include tablet {
+        flex-direction: row;
+        gap: 32px;
+      }
+      
+      @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+      }
+    }
+  }
+
+  &.background-color-teal {
+    background: unset;
+
+    .columns.block {
+      padding: 80px 24px;
+      background: $bg-reverse;
+      border-radius: $radius-card;
+
+      @include tablet {
+        padding: 64px 24px;
+      }
+
+      @include mobile {
+        padding: 40px 16px;
+      }
+
+      & > div {
+        padding: 0 64px;
+
+        @include tablet {
+          padding: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+          color: $heading-reverse;
+        }
+
+        p, ul {
+          color: $body-reverse;
+        }
+
+        .button-container {
+          a:not(.secondary) {
+            @include button('secondary');
           }
-          .momentum-second-content{
-            // .button-container{
-            //      @include button('outlined');
-            // }
+          
+          a.secondary {
+            @include button('outlined-reverse');
+            
+            font-style: normal;
+            text-decoration: unset;
           }
         }
       }
     }
   }
+}

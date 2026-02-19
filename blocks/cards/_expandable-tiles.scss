@@ -121,8 +121,10 @@
           }
 
           .tile-content {
+            visibility: visible;
             opacity: 1;
             pointer-events: all;
+            transition-delay: 1s; 
           }
 
           .tile-image img {
@@ -163,16 +165,18 @@
           bottom: 0;
           display: block;
           width: calc(100% - 32px);
-          opacity: 0;
           padding: 24px;
           margin: 0 16px 16px;
           text-decoration: none;
           background-color: $bg-default;
           border-radius: $radius-card;
           pointer-events: none;
-          transition: all 1s ease-in-out;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.4s ease-in-out, visibility 0s linear 0.4s; 
           
           @include mobile {
+            visibility: visible;
             pointer-events: all;
             width: calc(100% - 32px);
             margin: 16px;
@@ -221,6 +225,11 @@
               &.icon-btn {
                 min-width: unset;
                 padding: 8px;
+
+                svg {
+                  width: 24px;
+                  height: 24px;
+                }
               }
             }
 

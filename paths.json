@@ -6,6 +6,7 @@
     "/content/tmb/placeholders:/placeholders.json"
   ],
   "includes": [
-    "/content/tmb/"
+    "/content/tmb/",    
+    "/content/dam/"
   ]
 }
