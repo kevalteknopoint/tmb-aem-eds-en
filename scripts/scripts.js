@@ -181,12 +181,12 @@ function loadPlaceholders() {
 async function loadPage() {
 
   window.adobeDataLayer = window.adobeDataLayer || [];
-
+setPersona();
   await fetchPlaceholders();
   loadPlaceholders();
 
   pageIntialization(document.title, getMetadata('page-type'), getMetadata('site-section'), '', 'english', '', getMetadata('brand'), getMetadata('web-type'), '', '', '', getMetadata('campaign-userjourney'), getMetadata('persona'), getMetadata('product'));
-setPersona();
+
   await loadEager(document);
   await loadLazy(document);
 
@@ -217,3 +217,6 @@ window.initAos = function initAos() {
 };
 
 loadPage();
+// Global list of all possible main homepage components
+
+

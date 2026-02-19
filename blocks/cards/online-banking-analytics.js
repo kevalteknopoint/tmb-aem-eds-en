@@ -1,8 +1,41 @@
-import { ctaInteraction, minifyText } from "../../scripts/analytics/exports.js";
+import { ctaInteraction, minifyText, getPageRegion, getPersona,getComponentIndex } from "../../scripts/analytics/exports.js";
 
+// document.addEventListener('click', (e) => {
+//   if (e.target.closest('.online-banking .banking-li-1').querySelector("ul li a")) {
+//     const secondaryLink = e.target.closest('.online-banking .banking-li-1').querySelector("ul li a");
+//     const pageRegion = getPageRegion(e.target.closest('.online-banking .banking-li-1').querySelector("ul li a"));
+//     ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent) , '', '','banking/savings/loans','','',getPersona(),'cta-click','internal','quick-link','in-content','','','','','','');
+//   }   
+// });
 document.addEventListener('click', (e) => {
-  if (e.target.closest('.online-banking .banking-li-1').querySelector("ul li a")) {
-    const secondaryLink = e.target.closest('.online-banking .banking-li-1').querySelector("ul li a");
-    ctaInteraction('', minifyText(secondaryLink?.textContent) , '', '','banking/savings/loans','','','','cta-click','internal','quick-link','in-content','','','','','','');
-  }   
+
+  const clickedAnchor = e.target.closest('.online-banking .banking-li-1 ul li a');
+  // const componentIndex = getComponentIndex(e.target.closest('.online-banking .banking-li-1 ul li a'));
+  // const ctaTitle =e.target.closest('.online-banking .banking-li-1 .cards-card-body').querySelector('h3');
+  
+  if (!clickedAnchor) return;
+
+  const pageRegion = getPageRegion(clickedAnchor);
+
+  ctaInteraction(
+    pageRegion,
+    minifyText(clickedAnchor.textContent),
+    // minifyText(ctaTitle.textContent),
+    '',
+    'banking/savings/loans',
+    '',
+    componentIndex,
+    getPersona(),
+    'cta-click',
+    'internal',
+    'quick-link',
+    'in-content',
+    '',
+    '',
+    '',
+    '',
+    'online-banking',
+    ''
+  );
+
 });

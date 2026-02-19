@@ -1,4 +1,5 @@
 import './banking-goods-analytics.js';
+import './online-banking-analytics.js';
 
 export default function decorateOnlineBanking(block) {
   const cardsUl = block.querySelector(".cards ul");

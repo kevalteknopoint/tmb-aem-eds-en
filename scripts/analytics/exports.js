@@ -3,7 +3,15 @@ export function minifyText(str) {
 
   return str?.trim()?.toLowerCase();
 }
-
+export const GLOBAL_COMPONENT_CLASSES = [
+  'bannervideo-wrapper',
+  'quick-links',
+  'online-banking',
+  'banking-goods',
+  'news-helpful',
+  'news-helpful-homepage',
+  'tmb-footer'
+];
 export function pageIntialization(pageName,pageType,siteSection,sitesubSection,pageLanguage,pageId,pageTemplate,performanceTier,brand,webType,backtrackFlag,helpVisitFlag,implementationVersion,domInteractiveTime,domInteractiveTimeBucket,firstContentfulPaint,firstContentfulPaintBucket,httpStatusCode,httpStatusGroup,trackingVersion,implementationEnvironment,dataLayerReadyFlag,requiredFieldMissingFlag,testUserFlag,qaSessionFlag,product,primaryProductGroup,primaryProduct,multiProductFlag,personId,loginStatus,hasEverLoggedInFlag,visitorType){
 window.adobeDataLayer.push({
     "event": "pageInitialization",
@@ -67,8 +75,14 @@ window.adobeDataLayer.push({
  
      const localPersona = localStorage.getItem('persona');
      if (!localPersona) return localStorage.setItem('persona', metaPersona);
+     if(personaSeq.includes(metaPersona))
+     {
+        localStorage.setItem('persona', metaPersona)
+     }else{
+        localStorage.setItem('persona', "")
+     }
  
-     if (personaSeq.indexOf(metaPersona) < personaSeq.indexOf(localPersona)) localStorage.setItem('persona', metaPersona);
+    //  if (personaSeq.indexOf(metaPersona) < personaSeq.indexOf(localPersona)) localStorage.setItem('persona', metaPersona);
    }
  
   export function getPersona() {
@@ -251,6 +265,48 @@ export function resetForm(pageRegion,componentName,componentType,componentIndex,
                 "componentIdValidFlag":componentIdValidFlag
             }
 });
+}
+function getAllComponents() {
+  return GLOBAL_COMPONENT_CLASSES
+    .flatMap(className => 
+      [...document.querySelectorAll(`.${className}`)]
+    )
+    .sort((a, b) =>
+      a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING
+        ? -1
+        : 1
+    );
+}
+export function getPageRegion(element) {
+
+  const components = getAllComponents();
+  const currentComponent = element.closest(
+    GLOBAL_COMPONENT_CLASSES.map(c => `.${c}`).join(',')
+  );
+
+  const position = components.indexOf(currentComponent) + 1;
+  const total = components.length;
+
+  if (!position || total === 0) return 'homepage-region-1';
+
+  const perRegion = Math.ceil(total / 3);
+  const regionNumber = Math.ceil(position / perRegion);
+  if(regionNumber == 1) return "top"
+    else if(regionNumber == 2) return "middle"
+    else return "bottom"
+//   return `homepage-region-${regionNumber}`;
+}
+export function getComponentIndex(element) {
+
+  const components = getAllComponents();
+
+  const currentComponent = element.closest(
+    GLOBAL_COMPONENT_CLASSES.map(c => `.${c}`).join(',')
+  );
+
+  const position = components.indexOf(currentComponent) + 1;
+
+  return position > 0 ? position : 1;
 }
 
 export function sideWidgetInteraction(pageRegion,ctaText,ctaTitle,ctaSource,componentName,componentType,componentIndex,componentPersona,nextpageUrl,interactionType,linkType,navElementType,navLocation,requiredFieldMissingFlag,testUserFlag,qaSessionFlag,componentId,componentIdValidFlag){
