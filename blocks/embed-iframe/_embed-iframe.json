@@ -21,10 +21,10 @@
     {
       "id": "embed-iframe",
       "fields": [
-        {
-          "component": "textarea",
-          "name": "textarea",
-          "label": "Text Area",
+       {
+          "component": "embed-textfield",
+          "name": "video-link",
+          "label": "YouTube or MP4 URL",
           "valueType": "string"
         }
       ]
