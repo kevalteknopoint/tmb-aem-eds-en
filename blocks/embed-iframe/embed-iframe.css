@@ -10,19 +10,8 @@
 }
 
 .section.embed-iframe .block iframe{
+  aspect-ratio:16/9;
   border-radius:var(--radius-card);
-  height:378px;
+  height:auto;
   width:100%;
-}
-
-@media screen and (max-width: 1023px){
-  .section.embed-iframe .block iframe{
-    height:418px;
-  }
-}
-
-@media screen and (max-width: 767px){
-  .section.embed-iframe .block iframe{
-    height:210px;
-  }
 }

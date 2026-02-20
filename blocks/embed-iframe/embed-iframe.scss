@@ -2,7 +2,7 @@
 
 .section.embed-iframe {  
   width: 100%;
-  max-width: 735px; 
+  max-width: 735px;
   padding-inline: 32px;
   margin: 0 auto 40px;
 
@@ -10,17 +10,10 @@
     padding-inline: unset;
 
     iframe{
+      aspect-ratio: 16 / 9;
       width: 100%;
-      height: 378px;
+      height: auto;
       border-radius: $radius-card;
-
-      @include tablet {
-        height: 418px;
-      }
-
-      @include mobile {
-        height: 210px;
-      }
     }
   }
 }
