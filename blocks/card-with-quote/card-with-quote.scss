@@ -1,5 +1,156 @@
 @use '../../styles/base' as *;
 
+.section:has(.card-with-quote.quote-background) {
+  background-color: $bg-light-3;
+}
+
 .card-with-quote {
-  display: flex;
+  &.quote-reversed-content {
+    .card-with-quote-block-wrapper {
+      flex-direction: row-reverse;
+
+      @include tablet {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  .card-with-quote-block-wrapper {
+    @include responsive-container;
+
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .card-with-quote-image {
+      flex: 0 0 auto;
+
+      img {
+        border-radius: $radius-card;
+      }
+    }
+
+    .card-with-quote-content {
+      @include tablet {
+        padding: 32px 0;
+      }
+
+      @include mobile {
+        padding: 24px 0;
+      }
+
+      h1, h2 {
+        @include typo-heading1;
+
+        margin-bottom: 16px;
+        color: $heading-default;;
+      }
+
+      h3, h4 {
+        @include typo-heading3;
+
+        color: $heading-default;
+        margin-bottom: 16px;
+      }
+
+      p {
+        @include typo-body;
+
+        color: $body-default;
+        margin-bottom: 16px;
+
+        a {
+          color: $link-default;
+          text-decoration: underline;
+        }
+
+        b {
+          @include typo-body-bold;
+        }
+      }
+
+      ul, ol {
+        @include typo-body;
+
+        list-style: disc;
+        color: $body-default;
+        padding-left: 24px;
+
+        li {
+          margin-bottom: 8px;
+        }
+      }
+
+      ol {
+        list-style: decimal;
+      }
+
+      .card-with-quote-quote {
+        margin-top: 16px;
+        padding-left: 32px;
+        border-left: 1px solid $heading-default;
+      }
+
+      .card-with-quote-quote-text {
+        @include typo-body;
+
+        font-style: italic;
+        margin-bottom: 10px;
+        color: $body-default;
+      }
+
+      .card-with-quote-author {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .card-with-quote-author-name, .card-with-quote-author-profession, .card-with-quote-author-extra {
+        @include typo-sm-body;
+
+        margin-bottom: 0;
+        color: $body-default;
+      }
+
+      .card-with-quote-author-name {
+        @include typo-sm-body-bold;
+      }
+
+      .card-with-quote-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 32px 0 0;
+      }
+
+      .button-container {
+        margin: 0;
+
+        .button {
+          @include button('primary');
+
+          &.secondary {
+            @include button('secondary');
+          }
+
+          &.outlined {
+            @include button('outlined');
+          }
+
+          &.outlined-reverse {
+            @include button('outlined-reverse');
+          }
+
+          &.white {
+            @include button('white');
+          }
+        }
+      }
+    }
+  }
 }

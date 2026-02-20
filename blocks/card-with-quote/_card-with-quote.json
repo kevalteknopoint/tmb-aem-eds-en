@@ -29,6 +29,10 @@
             {
               "name": "Reversed Content",
               "value": "quote-reversed-content"
+            },
+            {
+              "name": "With Background",
+              "value": "quote-background"
             }
           ]
         },
