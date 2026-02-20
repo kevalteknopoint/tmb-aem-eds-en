@@ -296,19 +296,21 @@ export function getPageRegion(element) {
     else return "bottom"
 //   return `homepage-region-${regionNumber}`;
 }
-export function getComponentIndex(element) {
+export function getComponentIndex(clickedElement) {
+  if (!clickedElement) return -1;
 
-  const components = getAllComponents();
+  const section = clickedElement.closest('.section');
+  if (!section) return -1;
 
-  const currentComponent = element.closest(
-    GLOBAL_COMPONENT_CLASSES.map(c => `.${c}`).join(',')
+  const main = section.closest('main');
+  if (!main) return -1;
+
+  const sections = Array.from(main.children).filter(child =>
+    child.classList.contains('section')
   );
 
-  const position = components.indexOf(currentComponent) + 1;
-
-  return position > 0 ? position : 1;
+  return sections.indexOf(section)+1;
 }
-
 export function sideWidgetInteraction(pageRegion,ctaText,ctaTitle,ctaSource,componentName,componentType,componentIndex,componentPersona,nextpageUrl,interactionType,linkType,navElementType,navLocation,requiredFieldMissingFlag,testUserFlag,qaSessionFlag,componentId,componentIdValidFlag){
     window.adobeDataLayer.push({
         "event": "sideWidgetInteraction",
