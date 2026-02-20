@@ -24,7 +24,7 @@
         {
           "component": "multiselect",
           "name": "classes",
-          "label": "Background Color",
+          "label": "Styles",
           "value": "",
           "valueType": "string",
           "options": [
