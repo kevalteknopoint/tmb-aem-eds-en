@@ -1,6 +1,8 @@
 @use '../../styles/base' as *;
 
 .alerts-wrapper {
+  margin-bottom: 2px;
+  
   &:has(.alerts.blue-alert) {
     background-color: #F2F7FF;
     

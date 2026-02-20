@@ -1,3 +1,7 @@
+.alerts-wrapper{
+  margin-bottom:2px;
+}
+
 .alerts-wrapper:has(.alerts.blue-alert){
   background-color:#F2F7FF;
 }
