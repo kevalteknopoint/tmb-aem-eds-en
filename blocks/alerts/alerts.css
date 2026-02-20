@@ -107,6 +107,7 @@
 }
 
 .alerts .icon-close svg{
+  cursor:pointer;
   height:12px;
   min-height:12px;
   min-width:12px;
