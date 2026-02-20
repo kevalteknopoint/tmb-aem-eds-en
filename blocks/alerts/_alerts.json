@@ -23,7 +23,7 @@
       "fields": [
         {
           "component": "multiselect",
-          "name": "style",
+          "name": "classes",
           "label": "Styles",
           "options": [
             { "name": "Blue", "value": "blue-alert" },
