@@ -30,8 +30,16 @@
     .card-with-quote-image {
       flex: 0 0 auto;
 
+      @include tablet {
+        width: 100%;
+      }
+
       img {
         border-radius: $radius-card;
+
+        @include tablet {
+          width: 100%;
+        }
       }
     }
 
