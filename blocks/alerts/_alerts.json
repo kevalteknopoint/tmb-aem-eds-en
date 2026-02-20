@@ -22,7 +22,7 @@
       "id": "alerts",
       "fields": [
         {
-          "component": "select",
+          "component": "multiselect",
           "name": "classes",
           "label": "Background Color",
           "value": "",
