@@ -119,6 +119,10 @@
             bottom: -24px;
           }
         }
+
+        &:last-child::after {
+          content: unset;
+        }
       }
     } 
   }

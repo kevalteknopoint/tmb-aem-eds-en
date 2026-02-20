@@ -184,6 +184,10 @@
   width:1px;
 }
 
+.aboutus-grid-content .columns.block > div:has(> div:nth-child(3)) > div:last-child::after{
+  content:unset;
+}
+
 @media screen and (max-width: 1279px){
   .aboutus-grid-content{
     padding-inline:24px;
