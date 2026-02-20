@@ -38,8 +38,6 @@
       padding-top: 24px; // Slightly smaller top padding on mobile
     }
 
-
-
     .block {
       @include mobile {
         padding-left: 0;
@@ -59,12 +57,10 @@
           border: none;
           border-radius: unset;
           position: relative;
-          margin-right: unset !important;
           padding: 32px 32px 0 0;
 
           @include mobile {
-            width: 220px; // Smaller slide width for mobile
-            max-width: 300px;
+            max-width: 275px !important;
           }
 
           &::before {
@@ -90,7 +86,7 @@
           div {
             &:first-child {
               position: absolute;
-              top: 0; //  22px - (dotHeight / 2)
+              top: 0; 
               left: 0;
               width: 10px;
               height: 10px;
@@ -98,17 +94,15 @@
               border-radius: 50%;
             }
 
-            &:last-child {
-              p {
-                @include typo-body;
+            > p {
+              @include typo-body;
 
-                color: $body-reverse;
+              color: $body-reverse;
 
-                &:first-child {
-                  @include typo-heading4;
+              &:first-child {
+                @include typo-heading4;
 
-                  margin-bottom: 16px;
-                }
+                margin-bottom: 16px;
               }
             }
           }

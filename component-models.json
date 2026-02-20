@@ -143,6 +143,10 @@
         "label": "Style",
         "options": [
           {
+            "name": "Box Container",
+            "value": "box-container"
+          },
+          {
             "name": "Top Spacing",
             "value": "top-margin"
           },
@@ -409,6 +413,22 @@
           {
             "name": "legal-privacy",
             "value": "legal-privacy"
+          },
+          {
+            "name": "Search Results Section (Header)",
+            "value": "search-results-section"
+          },
+          {
+            "name": "Search Results Page",
+            "value": "search-results-page"
+          },
+          {
+            "name": "System Table",
+            "value": "system-table"
+          },
+          {
+            "name": "Generic Body Copy",
+            "value": "generic-body-copy"
           }
         ]
       }
@@ -563,7 +583,7 @@
         "component": "richtext",
         "name": "context",
         "value": "",
-        "label": "context-model",
+        "label": "Banner Content",
         "valueType": "string"
       },
       {
@@ -671,14 +691,14 @@
         "component": "aem-content",
         "name": "context_video",
         "value": "",
-        "label": "video",
+        "label": "Video",
         "valueType": "string"
       },
       {
         "component": "richtext",
         "name": "context",
         "value": "",
-        "label": "context-model",
+        "label": "Banner Content",
         "valueType": "string"
       },
       {

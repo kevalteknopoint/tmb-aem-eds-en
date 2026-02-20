@@ -40,6 +40,10 @@
           "label": "Style",
           "options": [
             {
+              "name": "Box Container",
+              "value": "box-container"
+            },
+            {
               "name": "Top Spacing",
               "value": "top-margin"
             },
@@ -306,6 +310,22 @@
             {
               "name": "legal-privacy",
               "value": "legal-privacy"
+            },
+            {
+              "name": "Search Results Section (Header)",
+              "value": "search-results-section"
+            },
+            {
+              "name": "Search Results Page",
+              "value": "search-results-page"
+            },
+            {
+              "name": "System Table",
+              "value": "system-table"
+            },
+            {
+              "name": "Generic Body Copy",
+              "value": "generic-body-copy"
             }
           ]
         }
@@ -351,7 +371,8 @@
         "faq-legal-table",
         "legal-privacy",
         "teachers-calculator-block",
-        "alerts"
+        "alerts",
+        "system-table"
       ]
     }
   ]

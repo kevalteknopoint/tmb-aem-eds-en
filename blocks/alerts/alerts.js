@@ -20,4 +20,15 @@ export default function decorate(block) {
       }
     }
   });
+
+  const closeIcons = block.querySelectorAll(".icon-close");
+  closeIcons.forEach((icon) => {
+    icon.addEventListener("click", (event) => {
+      const alertDiv = event.currentTarget.closest(".alerts");
+
+      if (alertDiv) {
+        alertDiv.style.display = "none";
+      }
+    });
+  });
 }

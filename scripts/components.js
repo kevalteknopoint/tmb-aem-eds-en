@@ -19,7 +19,7 @@ export default function loadNonBlockLibs() {
       name: 'table',
     },
     {
-      selector: '.momentum-saver-section',
+      selector: '.momentum-saver-section, .momentum-image-saver, .image-swapping, .momentum-app-badges, .momentum-direct-variant, .circular-image',
       name: 'momentum-saver',
     },
     {
@@ -53,6 +53,14 @@ export default function loadNonBlockLibs() {
     {
       selector: '.legal-privacy',
       name: 'legal-privacy',
+    },
+    {
+      selector: '.search-results-page',
+      name: 'search-page',
+    },
+    {
+      selector: '.system-table',
+      name: 'system-table',
     },
   ];
 
