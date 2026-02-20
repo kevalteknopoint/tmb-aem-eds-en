@@ -72,6 +72,9 @@
     ]
   },
   {
+    "id": "card-with-quote"
+  },
+  {
     "id": "cards",
     "components": [
       "card"
