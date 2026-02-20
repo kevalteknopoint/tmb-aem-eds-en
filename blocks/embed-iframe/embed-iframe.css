@@ -1,6 +1,28 @@
-.embed-iframe{
+.section.embed-iframe{
   margin:0 auto 40px;
   max-width:735px;
   padding-inline:32px;
   width:100%;
+}
+
+.section.embed-iframe .block{
+  padding-inline:unset;
+}
+
+.section.embed-iframe .block iframe{
+  border-radius:var(--radius-card);
+  height:378px;
+  width:100%;
+}
+
+@media screen and (max-width: 1023px){
+  .section.embed-iframe .block iframe{
+    height:418px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .section.embed-iframe .block iframe{
+    height:210px;
+  }
 }
