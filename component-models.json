@@ -1030,9 +1030,9 @@
     "id": "embed-iframe",
     "fields": [
       {
-        "component": "embed-textfield",
+        "component": "text",
         "name": "video-link",
-        "label": "YouTube or MP4 URL",
+        "label": "Embed Link",
         "valueType": "string"
       }
     ]
