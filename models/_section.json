@@ -334,6 +334,10 @@
             {
               "name": "Forms Banner",
               "value": "form-banner"
+            },
+            {
+              "name": "About Us Columns Content (Governance Columns)",
+              "value": "aboutus-grid-content"
             }
           ]
         }
@@ -381,7 +385,8 @@
         "calculator",
         "teachers-calculator-block",
         "alerts",
-        "system-table"
+        "system-table",
+        "card-with-quote"
       ]
     }
   ]
