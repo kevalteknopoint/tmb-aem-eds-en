@@ -1,21 +1,23 @@
 export default function decorate(block) {
   if (window.location.href.includes("author")) return;
 
-  [...block.children].forEach((row) => {
-    const iconElement = row.querySelector(".icon, svg");
+  [...block.children].forEach((row, index) => {
+    if (row.querySelector('.icon svg') && index === 0) {
+      row.classList.add('icon');
+    } else if (index === 1) {
+      row.classList.add('alert-text');
+    } else if (index === 2) {
+      const closeIcon = row.querySelector('.icon svg');
+      if (closeIcon) {
+        row.classList.add('icon-close');
 
-    if (iconElement) {
-      if (
-        row.querySelector(".icon-close-icon") || iconElement.classList.contains("icon-close-icon")
-      ) {
-        row.classList.add("icon-close");
+        closeIcon.addEventListener('click', (e) => {
+          e.preventDefault();
+          row.closest('.alerts-wrapper')?.classList.add('d-none');
+        });
       } else {
-        row.classList.add("icon");
+        row.remove();
       }
-    } else if (row.textContent.trim() !== "") {
-      row.classList.add("alert-text");
-    } else {
-      row.remove();
     }
   });
 

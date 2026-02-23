@@ -484,11 +484,9 @@
     "id": "alerts",
     "fields": [
       {
-        "component": "select",
+        "component": "multiselect",
         "name": "classes",
-        "label": "Background Color",
-        "value": "",
-        "valueType": "string",
+        "label": "Styles",
         "options": [
           {
             "name": "Blue",
@@ -501,6 +499,10 @@
           {
             "name": "Red",
             "value": "red-alert"
+          },
+          {
+            "name": "Container Width",
+            "value": "alert-container"
           }
         ]
       },
