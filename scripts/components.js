@@ -59,6 +59,10 @@ export default function loadNonBlockLibs() {
       name: 'calculator',
     },
     {
+      selector: '.search-results-page',
+      name: 'search-page',
+    },
+    {
       selector: '.system-table',
       name: 'system-table',
     },

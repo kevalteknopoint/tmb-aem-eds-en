@@ -206,6 +206,7 @@ async function loadPage() {
   } catch (error) {
     console.error('Error loading SVG:', error);
   }
+
   loadNonBlockLibs();
   loadDelayed();
 }
