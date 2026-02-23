@@ -176,30 +176,25 @@ html:has(.primary-header.search-active) {
 }
 
 .ham-menu-btn-wrap {
-  height: fit-content;
   display: none;
 
   @include tablet {
     display: block;
-    padding: 6px;
-    background-color: #FFFFFF1A;
-    border-radius: 100%;
   }
 
   .ham-menu-btn {
-    display: block;
+    display: grid;
+    place-items: center;
     width: 40px;
     height: 40px;
+    background-color: $color-header-frame;
+    border-radius: 50%;
 
-    @include mobile {
-      width: 24px;
-      height: 24px;
-    }
-
-    picture, img {
-      display: block;
-      width: 100%;
-      height: 100%;
+    svg {
+      color: $color-header-icon;
+      width: 20px;
+      min-width: 20px;
+      height: 11px;
     }
   }
 }
@@ -211,11 +206,7 @@ html:has(.primary-header.search-active) {
   gap: 28px;
 
   @include tablet {
-    gap: 48px;
-  }
-
-  @include mobile {
-    gap: 8px;
+    gap: 16px;
   }
 
   .logo-wrap {
@@ -487,6 +478,105 @@ html:has(.primary-header.search-active) {
           }
         }
       }
+    }
+  }
+}
+
+.mobile-menu-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 61px;
+  left: 0;
+  z-index: 2;
+  padding: 20px 24px 64px;
+  overflow: auto;
+  background-color: $bg-reverse;
+  transform: translateX(100%);
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+  
+  @include mobile {
+    transform: translateX(-100%);
+  }
+
+  &.active {
+    transform: translateX(0);
+    pointer-events: all;
+  }
+
+  @include mobile {
+    top: 0;
+  }
+
+  .close-mobile-menu {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    display: grid;
+    place-items: center;
+    background-color: $color-header-frame;
+
+    svg {
+      width: 14px;
+      min-width: 14px;
+      height: 14px;
+      color: $color-header-icon;
+    }
+  }
+
+  .primary-nav-list {
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 44px;
+
+    @include mobile {
+      margin-top: 36px;
+      align-items: flex-start;
+      gap: 4px
+    }
+
+    .primary-nav-link {
+      @include typo-heading4;
+
+      padding: 10px 0;
+
+      @include mobile {
+        @include typo-body;
+      }
+    }
+  }
+
+  .secondary-nav-list {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0 0;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 16px;
+      width: 100%;
+      height: 1px;
+      background-color: $line-reverse;
+    }
+
+    @include mobile {
+      gap: 4px;
+      align-items: flex-start;
+    }
+
+    .secondary-nav-link {
+      @include typo-sm-body;
+
+      padding: 8px 0;
+      color: $body-reverse;
     }
   }
 }
