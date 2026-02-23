@@ -17,7 +17,18 @@
     margin-bottom: 16px;
   }
 
-  p{
+  h5{
+    color: $body-default;
+    font-size: $font-size-h5;
+    font-style: normal;
+    font-weight: 500;
+    line-height: $font-height-h5;
+    letter-spacing: $font-letter-spacing-h5;
+  }
+
+  p:has(:not(span)){
+    p{
+      margin-top: 0;
     color: $body-default;
     font-family: $font-family-body;
     font-size: $font-size-body;
@@ -25,12 +36,20 @@
     font-weight: 400;
     line-height: $font-height-body;
     letter-spacing: $font-letter-spacing-body;
+    margin-bottom: 10px;
+    }  
+  }
+  
+  p:has(span){
+    p{
+      display: flex;
+    }
   }
 
   ul{
     list-style-type: disc;
     padding-left: 25px;
-    margin-top: 10px;
+    margin: 10px 0;
 
     li{
       color: $body-default;
