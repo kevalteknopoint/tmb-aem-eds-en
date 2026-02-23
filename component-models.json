@@ -793,6 +793,32 @@
     ]
   },
   {
+    "id": "calculator",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Sum",
+            "value": "sum"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "input1",
+        "label": "Input 1"
+      },
+      {
+        "component": "text",
+        "name": "input2",
+        "label": "Input 2"
+      }
+    ]
+  },
+  {
     "id": "fragment-item",
     "fields": [
       {

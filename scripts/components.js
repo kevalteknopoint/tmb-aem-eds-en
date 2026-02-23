@@ -55,6 +55,10 @@ export default function loadNonBlockLibs() {
       name: 'legal-privacy',
     },
     {
+      selector: '.calculator',
+      name: 'calculator',
+    },
+    {
       selector: '.search-results-page',
       name: 'search-page',
     },
