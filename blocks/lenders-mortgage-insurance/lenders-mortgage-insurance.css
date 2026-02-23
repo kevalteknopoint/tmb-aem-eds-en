@@ -5,7 +5,8 @@
   width:100%;
 }
 
-.lenders-mortgage-insurance h3, .lenders-mortgage-insurance h4{
+.lenders-mortgage-insurance h3,
+.lenders-mortgage-insurance h4{
   color:var(--heading-default);
   font-family:var(--font-family-h4);
   font-size:var(--font-size-h4);
@@ -25,7 +26,7 @@
   line-height:var(--font-height-h5);
 }
 
-.lenders-mortgage-insurance p:has(:not(span)) p{
+.lenders-mortgage-insurance p{
   color:var(--body-default);
   font-family:var(--font-family-body);
   font-size:var(--font-size-body);
@@ -37,8 +38,69 @@
   margin-top:0;
 }
 
-.lenders-mortgage-insurance p:has(span) p{
+.lenders-mortgage-insurance p.button-container{
+  align-items:center;
+  background:var(--color-button-primary-default);
+  border-radius:var(--radius-button);
   display:flex;
+  gap:12px;
+  justify-content:center;
+  min-width:150px;
+  padding:8px 24px;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
+.lenders-mortgage-insurance p.button-container a{
+  color:var(--color-button-text-stroke-reverse);
+  font-family:var(--font-family-h5);
+  font-size:var(--font-size-h5);
+  font-style:normal;
+  font-weight:500;
+  letter-spacing:var(--font-letter-spacing-h5);
+  line-height:var(--font-height-h5);
+  text-align:left;
+}
+
+.lenders-mortgage-insurance .content-with-icon{
+  align-items:flex-start;
+  display:flex;
+  flex-direction:row;
+  gap:16px;
+  margin-bottom:12px;
+  max-width:unset;
+  width:100%;
+}
+
+.lenders-mortgage-insurance .content-with-icon .icon.icon-checkmark{
+  flex-shrink:0;
+  height:32px;
+  width:32px;
+}
+
+.lenders-mortgage-insurance .content-with-icon .icon.icon-checkmark svg{
+  display:block;
+  height:100%;
+  width:100%;
+}
+
+.lenders-mortgage-insurance .content-with-icon p{
+  color:var(--body-default);
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-style:normal;
+  font-weight:400;
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  margin:0;
+}
+
+.lenders-mortgage-insurance .content-with-icon:first-child{
+  margin-top:6px;
+}
+
+.lenders-mortgage-insurance .content-with-icon:last-child{
+  margin-bottom:16px;
 }
 
 .lenders-mortgage-insurance ul{
@@ -59,4 +121,43 @@
 
 .lenders-mortgage-insurance ul li strong{
   font-weight:700;
+}
+
+.lenders-mortgage-insurance ol{
+  counter-reset:step-counter;
+  list-style:none;
+  margin-bottom:32px;
+  margin-top:16px;
+  padding:0;
+}
+
+.lenders-mortgage-insurance ol li{
+  align-items:baseline;
+  color:var(--body-default);
+  counter-increment:step-counter;
+  display:flex;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  gap:12px;
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  margin-bottom:10px;
+  text-transform:initial;
+}
+
+.lenders-mortgage-insurance ol li::before{
+  align-items:center;
+  border:1px solid rgb(0 82 91 / 10%);
+  border-radius:var(--radius-button);
+  color:var(--heading-default);
+  content:counter(step-counter);
+  display:flex;
+  font-size:16px;
+  font-weight:500;
+  height:32px;
+  justify-content:center;
+  min-width:32px;
+  width:-moz-fit-content;
+  width:fit-content;
 }

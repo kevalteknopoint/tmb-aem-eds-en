@@ -1,12 +1,13 @@
 @use "../../styles/base" as *;
 
-.lenders-mortgage-insurance {  
+.lenders-mortgage-insurance {
   width: 100%;
-  max-width: 735px; 
+  max-width: 735px;
   padding-inline: 32px;
   margin: 0 auto 40px;
 
-  h3,h4{
+  h3,
+  h4 {
     color: $heading-default;
     font-family: $font-family-h4;
     font-size: $font-size-h4;
@@ -17,7 +18,7 @@
     margin-bottom: 16px;
   }
 
-  h5{
+  h5 {
     color: $body-default;
     font-size: $font-size-h5;
     font-style: normal;
@@ -26,9 +27,8 @@
     letter-spacing: $font-letter-spacing-h5;
   }
 
-  p:has(:not(span)){
-    p{
-      margin-top: 0;
+  p {
+    margin-top: 0;
     color: $body-default;
     font-family: $font-family-body;
     font-size: $font-size-body;
@@ -37,21 +37,79 @@
     line-height: $font-height-body;
     letter-spacing: $font-letter-spacing-body;
     margin-bottom: 10px;
-    }  
-  }
-  
-  p:has(span){
-    p{
+
+    &.button-container {
       display: flex;
+      min-width: 150px;
+      width: fit-content;
+      padding: 8px 24px;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      border-radius: $radius-button;
+      background: $color-button-primary-default;
+
+      a {
+        color: $color-button-text-stroke-reverse;
+        text-align: left;
+        font-family: $font-family-h5;
+        font-size: $font-size-h5;
+        font-style: normal;
+        font-weight: 500;
+        line-height: $font-height-h5; /* 150% */
+        letter-spacing: $font-letter-spacing-h5;
+      }
     }
   }
 
-  ul{
+  .content-with-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    max-width: unset;
+    width: 100%;
+    margin-bottom: 12px; // Adding space between items
+
+    .icon.icon-checkmark {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0; // Prevents the icon from squishing if text is long
+
+      svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    // Changed from .p to p (Element selector)
+    p {
+      margin: 0; // Reset margin so flex-alignment is pixel-perfect
+      color: $body-default;
+      font-family: $font-family-body;
+      font-size: $font-size-body;
+      font-style: normal;
+      font-weight: 400;
+      line-height: $font-height-body;
+      letter-spacing: $font-letter-spacing-body;
+    }
+
+    &:first-child {
+      margin-top: 6px;
+    }
+
+    &:last-child {
+      margin-bottom: 16px;
+    }
+  }
+
+  ul {
     list-style-type: disc;
     padding-left: 25px;
     margin: 10px 0;
 
-    li{
+    li {
       color: $body-default;
       font-family: $font-family-body;
       font-size: $font-size-body;
@@ -60,8 +118,47 @@
       line-height: $font-height-body;
       letter-spacing: $font-letter-spacing-body;
 
-      strong{
+      strong {
         font-weight: 700;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: step-counter;
+    list-style: none;
+    margin-bottom: 32px;
+    padding: 0;
+    margin-top: 16px;
+
+    li {
+      align-items: baseline;
+      color: var(--body-default);
+      counter-increment: step-counter;
+      display: flex;
+      font-family: var(--font-family-body);
+      font-size: var(--font-size-body);
+      font-weight: var(--font-weight-body);
+      gap: 12px;
+      letter-spacing: var(--font-letter-spacing-body);
+      line-height: var(--font-height-body);
+      margin-bottom: 10px;
+      text-transform: initial;
+
+      &::before {
+        align-items: center;
+        border: 1px solid rgb(0 82 91 / 10%);
+        border-radius: var(--radius-button);
+        color: var(--heading-default);
+        content: counter(step-counter);
+        display: flex;
+        font-size: 16px;
+        font-weight: 500;
+        height: 32px;
+        justify-content: center;
+        min-width: 32px;
+        width: -moz-fit-content;
+        width: fit-content;
       }
     }
   }
