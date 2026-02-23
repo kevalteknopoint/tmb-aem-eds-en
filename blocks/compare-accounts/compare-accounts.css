@@ -17,6 +17,7 @@
   padding-block:6px;
   padding-inline:24px;
   text-align:center;
+  text-decoration:unset;
   transition:all 0.3s ease-in-out;
   width:-moz-fit-content;
   width:fit-content;

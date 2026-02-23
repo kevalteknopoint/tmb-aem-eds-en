@@ -45,7 +45,8 @@
       "calculator",
       "teachers-calculator-block",
       "alerts",
-      "system-table"
+      "system-table",
+      "card-with-quote"
     ]
   },
   {
@@ -71,6 +72,9 @@
     "components": [
       "fragment-item"
     ]
+  },
+  {
+    "id": "card-with-quote"
   },
   {
     "id": "cards",
