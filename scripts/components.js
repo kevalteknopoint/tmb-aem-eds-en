@@ -66,6 +66,10 @@ export default function loadNonBlockLibs() {
       selector: '.system-table',
       name: 'system-table',
     },
+    {
+      selector: '.form-banner',
+      name: 'form-banner',
+    },
   ];
 
   blocks.forEach(({ selector, name }) => {

@@ -1,0 +1,8 @@
+.form-banner h1, .form-banner h2, .form-banner h3, .form-banner h4, .form-banner h5, .form-banner h6{
+  font-family:var(--font-family-lg);
+  font-size:var(--font-size-lg);
+  font-weight:var(--font-weight-lg);
+  letter-spacing:var(--font-letter-spacing-lg);
+  line-height:var(--font-height-lg);
+  text-transform:initial;
+}

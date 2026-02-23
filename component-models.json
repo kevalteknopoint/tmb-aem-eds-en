@@ -429,6 +429,14 @@
           {
             "name": "Generic Body Copy",
             "value": "generic-body-copy"
+          },
+          {
+            "name": "404 Page",
+            "value": "variant-404"
+          },
+          {
+            "name": "Forms Banner",
+            "value": "form-banner"
           }
         ]
       }

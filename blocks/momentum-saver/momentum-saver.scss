@@ -347,3 +347,46 @@
     }
   }
 }
+
+.variant-404 {
+  .columns.block > div {
+    align-items: center;
+    gap: 64px;
+
+    @include tablet {
+      gap: 32px
+    }
+
+    @include mobile {
+      gap: 32px;
+    }
+
+    h1, h2 {
+      @include typo-heading1;
+    }
+
+    h3, h4, h5, h6 {
+      margin-bottom: 16px;
+    }
+
+    &:has(picture) {
+      &:has(> p:nth-child(2)) {
+        p:has(picture):nth-child(1) {
+          display: block;
+
+          @include tablet {
+            display: none;
+          }
+        }
+
+        p:has(picture):nth-child(2) {
+          display: none;
+
+          @include tablet {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
