@@ -161,3 +161,27 @@
   width:-moz-fit-content;
   width:fit-content;
 }
+
+.lenders-mortgage-insurance.stepper-container{
+  grid-template-columns:1fr;
+}
+
+.lenders-mortgage-insurance.stepper-container .stepper .stepper-item::before{
+  content:unset;
+}
+
+.lenders-mortgage-insurance.stepper-container .stepper .stepper-item::before .stepper-body .step-collapse .stepper-content ol li{
+  counter-increment:unset;
+}
+
+.lenders-mortgage-insurance.stepper-container .stepper .stepper-item::before .stepper-body .step-collapse .stepper-content ol li::before{
+  content:unset;
+}
+
+.lenders-mortgage-insurance.stepper-container .stepper .stepper-item::before .stepper-body .step-collapse .stepper-content ul li{
+  counter-increment:unset;
+}
+
+.lenders-mortgage-insurance.stepper-container .stepper .stepper-item::before .stepper-body .step-collapse .stepper-content ul li::before{
+  content:unset;
+}

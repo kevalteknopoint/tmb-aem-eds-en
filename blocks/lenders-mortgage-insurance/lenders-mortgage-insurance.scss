@@ -163,3 +163,39 @@
     }
   }
 }
+
+.lenders-mortgage-insurance.stepper-container{
+  grid-template-columns: 1fr;
+
+  .stepper{
+    .stepper-item::before{
+      content: unset;
+
+      .stepper-body{
+        .step-collapse{
+          .stepper-content{
+            ol{
+              li{
+                counter-increment: unset;
+
+                &::before{
+                  content: unset;
+                }
+              }
+            }
+
+            ul{
+              li{
+                counter-increment: unset;
+
+                &::before{
+                  content: unset;
+                } 
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
