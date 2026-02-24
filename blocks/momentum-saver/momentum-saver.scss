@@ -347,3 +347,22 @@
     }
   }
 }
+
+.image-swapping.evergreen-image-swapping-variant{
+      margin: 0 auto 40px;
+    max-width: 735px;
+    padding-inline: 32px;
+    width: 100%;
+
+    .momentum-section-wrapper{
+      padding-inline: unset;
+
+      .columns-wrapper{
+        .block{
+          div{
+            gap: 32px;
+          }
+        }
+      }
+    }
+}
