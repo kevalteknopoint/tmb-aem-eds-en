@@ -1,7 +1,7 @@
 import { getMetadata, injectIcon } from "../../scripts/aem.js";
 import { a, li, span, ul, div, button } from "../../scripts/dom-helpers.js";
 import { fetchPlaceholders } from "../../scripts/placeholders.js";
-import './faq-category-analytics.js'
+import './faq-category-analytics.js';
 
 // Fetch Paginated FAQs from GraphQL
 async function fetchFaqs(tagValue, limit = 10, offset = 0) {
