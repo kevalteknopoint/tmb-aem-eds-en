@@ -1,5 +1,5 @@
 import './header-analytics.js';
-import { createOptimizedPicture, getMetadata, injectIcon } from '../../scripts/aem.js';
+import { createOptimizedPicture, getMetadata, injectIcon, isMobile, isTablet } from '../../scripts/aem.js';
 import { div, ul, li, a, button, input, form, h2, span } from '../../scripts/dom-helpers.js';
 import { loadFragment } from '../fragment/fragment.js';
 
@@ -124,19 +124,23 @@ export default async function decorate(block) {
   secondarySection.replaceWith(newSecondarySection);
 
   // --- HAM MENU BUTTON ---
-  const hamMenuImg = block.querySelector('.section.columns-container > .default-content-wrapper picture > img');
-  const optimizedHamMenuPic = createOptimizedPicture(
-    hamMenuImg.src,
-    hamMenuImg.alt,
-    false,
-    [{ media: "(min-width: 768px)", width: "40" }, { width: "24" }]
+  // const hamMenuImg = block.querySelector('.section.columns-container > .default-content-wrapper picture > img');
+  // const optimizedHamMenuPic = createOptimizedPicture(
+  //   hamMenuImg.src,
+  //   hamMenuImg.alt,
+  //   false,
+  //   [{ media: "(min-width: 768px)", width: "40" }, { width: "24" }]
+  // );
+
+  const hamBtnEle = button(
+    { class: 'ham-menu-btn' },
   );
+
+  injectIcon('ham-icon', hamBtnEle);
+
   const hamMenuBtn = div(
     { class: 'ham-menu-btn-wrap' },
-    button(
-      { class: 'ham-menu-btn' },
-      optimizedHamMenuPic,
-    )
+    hamBtnEle
   );
 
   // --- PRIMARY NAV + LOGO + SEARCH/LOGIN ---
@@ -217,6 +221,21 @@ export default async function decorate(block) {
 
   primaryContainer.replaceWith(newPrimarySection);
 
+  const primaryCopy = primaryNavList.cloneNode(true);
+  const secondaryCopy = secondaryList.cloneNode(true);
+
+  const closeBtn = button({ class: "close-mobile-menu" });
+  injectIcon('close-icon', closeBtn);
+
+  const mobileMenuSection = div({ class: "mobile-menu-wrapper" }, closeBtn, primaryCopy);
+
+  if (isMobile()) {
+    mobileMenuSection.appendChild(secondaryCopy);
+    block.appendChild(mobileMenuSection);
+  } else if (isTablet()) {
+    block.appendChild(mobileMenuSection);
+  }
+
   // Search Results Section
   const searchSection = block.querySelector('.search-results-section');
   if (window.location.origin.includes('author')) searchSection?.classList.add('author-mode');
@@ -254,5 +273,19 @@ export default async function decorate(block) {
     }
 
     populateSearchData(searchDataWrapper, filteredResults);
+  });
+
+  hamMenuBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    mobileMenuSection.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+
+  closeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    document.body.style.overflow = 'auto';
+    mobileMenuSection.classList.remove('active');
   });
 }
