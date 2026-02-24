@@ -344,8 +344,8 @@
               "value": "generic-body-copy"
             },
             {
-              "name": "Evergreen Stepper",
-              "value": "evergreen-stepper"
+              "name": "Stepper Evergreen",
+              "value": "stepper-evergreen"
             }
           ]
         }
