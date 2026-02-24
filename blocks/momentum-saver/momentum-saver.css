@@ -473,6 +473,44 @@
   width:12px;
 }
 
+.variant-404 .columns.block > div{
+  align-items:center;
+  gap:64px;
+  justify-content:space-between;
+}
+
+.variant-404 .columns.block > div h1, .variant-404 .columns.block > div h2{
+  font-family:var(--font-family-lg);
+  font-size:var(--font-size-lg);
+  font-weight:var(--font-weight-lg);
+  letter-spacing:var(--font-letter-spacing-lg);
+  line-height:var(--font-height-lg);
+  text-transform:initial;
+}
+
+.variant-404 .columns.block > div h3, .variant-404 .columns.block > div h4, .variant-404 .columns.block > div h5, .variant-404 .columns.block > div h6{
+  margin-bottom:16px;
+}
+
+.variant-404 .columns.block > div > div:has(picture):has(> p:nth-child(2)) p:has(picture):nth-child(1){
+  display:block;
+  margin:0;
+}
+
+.variant-404 .columns.block > div > div:has(picture):has(> p:nth-child(2)) p:has(picture):nth-child(2){
+  display:none;
+  margin:0;
+}
+
+.variant-404 + .section{
+  margin-top:32px;
+}
+
+.variant-404 + .section p a{
+  color:var(--link-default);
+  text-decoration:underline;
+}
+
 @media screen and (max-width: 1279px){
   .momentum-saver-section .momentum-section-wrapper, .momentum-image-saver .momentum-section-wrapper, .image-swapping .momentum-section-wrapper, .momentum-app-badges .momentum-section-wrapper, .momentum-direct-variant .momentum-section-wrapper{
     padding-inline:24px;
@@ -508,6 +546,23 @@
   .momentum-saver-section.circular-image.background-color-teal .columns.block > div{
     padding:0;
   }
+
+  .variant-404 .columns.block > div{
+    flex-direction:column-reverse;
+    gap:32px;
+  }
+
+  .variant-404 .columns.block > div > div:has(picture):has(> p:nth-child(2)) p:has(picture):nth-child(1){
+    display:none;
+  }
+
+  .variant-404 .columns.block > div > div:has(picture):has(> p:nth-child(2)) p:has(picture):nth-child(2){
+    display:block;
+  }
+
+  .variant-404 .columns.block > div p.button-container{
+    display:none;
+  }
 }
 
 @media screen and (max-width: 767px){
@@ -531,6 +586,10 @@
 
   .momentum-saver-section.circular-image.background-color-teal .columns.block{
     padding:40px 16px;
+  }
+
+  .variant-404 .columns.block > div{
+    gap:32px;
   }
 }
 

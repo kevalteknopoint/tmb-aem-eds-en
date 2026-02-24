@@ -67,6 +67,10 @@ export default function loadNonBlockLibs() {
       name: 'system-table',
     },
     {
+      selector: '.form-banner',
+      name: 'form-banner',
+    },
+    {
       selector: '.aboutus-grid-content',
       name: 'aboutus-grid-content'
     }

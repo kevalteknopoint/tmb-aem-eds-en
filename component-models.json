@@ -431,6 +431,14 @@
             "value": "generic-body-copy"
           },
           {
+            "name": "404 Page",
+            "value": "variant-404"
+          },
+          {
+            "name": "Forms Banner",
+            "value": "form-banner"
+          },
+          {
             "name": "About Us Columns Content (Governance Columns)",
             "value": "aboutus-grid-content"
           }
