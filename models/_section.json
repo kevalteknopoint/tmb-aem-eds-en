@@ -386,7 +386,8 @@
         "teachers-calculator-block",
         "alerts",
         "system-table",
-        "card-with-quote"
+        "card-with-quote",
+        "tmb-calculator-accordion"
       ]
     }
   ]
