@@ -4,7 +4,7 @@ import { div } from "../../scripts/dom-helpers.js";
 (function decorateMomentumSaver() {
   if (window.location.origin.includes('author')) return;
 
-  const momentumSaverSections = document.querySelectorAll('.momentum-saver-section, .momentum-image-saver, .image-swapping, .momentum-app-badges, .momentum-direct-variant, .circular-image');
+  const momentumSaverSections = document.querySelectorAll('.momentum-saver-section, .momentum-image-saver, .image-swapping, .momentum-app-badges, .momentum-direct-variant, .circular-image, .variant-404');
 
   momentumSaverSections.forEach((section) => {
     const newWrapper = div({ class: 'momentum-section-wrapper' });

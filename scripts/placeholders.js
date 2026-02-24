@@ -10,8 +10,6 @@
  * governing permissions and limitations under the License.
  */
 
-import { toCamelCase } from './aem.js';
-
 /**
  * Gets placeholders object.
  * @param {string} [prefix] Location of placeholders
@@ -33,7 +31,7 @@ export async function fetchPlaceholders(prefix = 'default') {
           json.data
             .filter((placeholder) => placeholder.Key)
             .forEach((placeholder) => {
-              placeholders[toCamelCase(placeholder.Key)] = placeholder.Text;
+              placeholders[placeholder.Key] = placeholder.Text;
             });
           window.placeholders[prefix] = placeholders;
           resolve(window.placeholders[prefix]);
