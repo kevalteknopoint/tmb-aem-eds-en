@@ -1849,6 +1849,11 @@
       },
       {
         "component": "text",
+        "name": "calc-item-title",
+        "label": "Enter title of accordion"
+      },
+      {
+        "component": "text",
         "name": "calc-item-iframe-id",
         "label": "Enter ID for iframe"
       },
