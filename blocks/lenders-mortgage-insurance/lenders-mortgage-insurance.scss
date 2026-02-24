@@ -131,7 +131,7 @@
     padding: 0;
     margin-top: 16px;
 
-    li {
+    & > li {
       align-items: baseline;
       color: var(--body-default);
       counter-increment: step-counter;
