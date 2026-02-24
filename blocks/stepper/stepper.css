@@ -153,6 +153,7 @@
 .stepper-container .stepper-item{
   display:flex;
   gap:24px;
+  margin-bottom:0;
   padding-bottom:24px;
   position:relative;
 }
