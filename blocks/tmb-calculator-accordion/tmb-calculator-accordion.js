@@ -1,5 +1,5 @@
 import { injectIcon } from "../../scripts/aem.js";
-import { details, summary } from "../../scripts/dom-helpers.js";
+import { details, div, summary } from "../../scripts/dom-helpers.js";
 import dataMapMoObj from "./datamap.js";
 
 function initializeIframeResize(iframeId) {
@@ -19,6 +19,8 @@ function initializeIframeResize(iframeId) {
 }
 
 export default function decorate(mainBlock) {
+  const singleExpansion = mainBlock.classList.contains("single-expansion");
+
   [...mainBlock.children].forEach((block) => {
     const isActive = block.firstElementChild?.textContent;
     const accordionTitle = block.querySelector('div:nth-child(2)');
@@ -42,12 +44,8 @@ export default function decorate(mainBlock) {
 
     // Extract values with validation
     const iframeIdElement = block.querySelector(".calculator-item1 .calculator-sub-item1",);
-    const iframeLinkElement = block.querySelector(
-      ".calculator-item2 .calculator-inner-item1 a",
-    );
-    const iframeJsLinkElement = block.querySelector(
-      ".calculator-item3 .calculator-inner-item1 a",
-    );
+    const iframeLinkElement = block.querySelector(".calculator-item2 .calculator-inner-item1",);
+    const iframeJsLinkElement = block.querySelector(".calculator-item3 .calculator-inner-item1",);
 
     if (!iframeIdElement || !iframeLinkElement || !iframeJsLinkElement) {
       console.error("Calculator block: Missing required elements");
@@ -75,8 +73,9 @@ export default function decorate(mainBlock) {
     iframe.style.minWidth = "100%";
     iframe.style.border = "0";
 
-    details.appendChild(iframe);
-    block.appendChild(details);
+    const accordionBody = div({ class: 'accordion-body' }, iframe);
+    detailsBlock.appendChild(accordionBody);
+    block.replaceWith(detailsBlock);
 
     // Load external script only once (check if already loaded)
     if (!window.iFrameResize) {
@@ -93,4 +92,16 @@ export default function decorate(mainBlock) {
       initializeIframeResize(iframeId);
     }
   });
+
+  if (singleExpansion) {
+    mainBlock.querySelectorAll('.accordion-item').forEach((item) => {
+      item.addEventListener('toggle', () => {
+        if (item.open) {
+          document.querySelectorAll('.accordion-item').forEach((other) => {
+            if (other !== item) other.removeAttribute('open');
+          });
+        }
+      });
+    });
+  }
 }
