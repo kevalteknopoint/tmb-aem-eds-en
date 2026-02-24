@@ -134,5 +134,11 @@
     "components": [
       "tabsitem"
     ]
+  },
+  {
+    "id": "tmb-calculator-accordion",
+    "components": [
+      "tmb-calculator-accordion-item"
+    ]
   }
 ]
