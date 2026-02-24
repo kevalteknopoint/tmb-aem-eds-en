@@ -167,6 +167,21 @@
 .lenders-mortgage-insurance.stepper-container{
   grid-template-columns: 1fr;
 
+  .default-content-wrapper{
+    p{
+      margin-bottom: unset;
+    }
+  }
+
+  .stepper-container{
+    .default-content-wrapper{
+    p{
+      margin-bottom: unset;
+    }
+  }
+  }
+  
+
   .stepper{
     .stepper-item::before{
       content: unset;

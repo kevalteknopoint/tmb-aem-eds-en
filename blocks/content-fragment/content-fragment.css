@@ -1,5 +1,5 @@
 /* stylelint-disable no-empty-source */
-.customer .columns-wrapper .block .columns-container div p.button-container a, .customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a, .who-can-apply-section .columns-wrapper .block .column-container div .button-container a:not(.secondary), .who-can-apply-section .columns-wrapper .block .column-container div .button-container a.secondary{
+.customer .columns-wrapper .block .columns-container div p.button-container a, .customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a, .lenders-mortgage-insurance.customer .default-content-wrapper p.button-container a, .who-can-apply-section .columns-wrapper .block .column-container div .button-container a:not(.secondary), .who-can-apply-section .columns-wrapper .block .column-container div .button-container a.secondary{
   align-items:center;
   border:none;
   border-radius:var(--radius-button);
@@ -466,6 +466,95 @@
   margin-top:16px;
   text-align:center;
   text-transform:initial;
+}
+
+.lenders-mortgage-insurance.customer{
+  background:var(--gradient-2);
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+  max-width:unset;
+  position:relative;
+}
+
+.lenders-mortgage-insurance.customer::after{
+  background-image:var(--gradient-after);
+  background-repeat:no-repeat;
+  background-size:100%;
+  bottom:0;
+  content:"";
+  height:20px;
+  left:0;
+  position:absolute;
+  width:100%;
+}
+
+.lenders-mortgage-insurance.customer .default-content-wrapper{
+  background:var(--bg-default);
+  border-radius:var(--radius-card);
+  margin:0 auto;
+  max-width:1312px;
+  padding:40px 24px;
+  text-align:center;
+  width:100%;
+}
+
+.lenders-mortgage-insurance.customer .default-content-wrapper h1{
+  color:var(--heading-default);
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-style:normal;
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  margin-bottom:16px;
+  text-align:center;
+  text-transform:uppercase;
+}
+
+.lenders-mortgage-insurance.customer .default-content-wrapper p.button-container{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  margin:32px auto 0;
+}
+
+.lenders-mortgage-insurance.customer .default-content-wrapper p.button-container a{
+  background-color:var(--color-button-primary-default);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+  font-family:var(--font-family-h5);
+  font-size:var(--font-size-h5);
+  font-weight:var(--font-weight-h5);
+  letter-spacing:var(--font-letter-spacing-h5);
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  min-width:unset;
+  padding:unset;
+  padding-block:8px;
+  text-transform:initial;
+}
+
+.lenders-mortgage-insurance.customer .default-content-wrapper p.button-container a:hover{
+  background-color:var(--color-button-primary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.lenders-mortgage-insurance.customer .default-content-wrapper p.button-container a:active{
+  background-color:var(--color-button-primary-press);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.lenders-mortgage-insurance.customer .default-content-wrapper p.button-container a:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.lenders-mortgage-insurance.customer .default-content-wrapper p.button-container a svg{
+  height:12px;
+  width:12px;
 }
 
 @media screen and (max-width: 1279px){
