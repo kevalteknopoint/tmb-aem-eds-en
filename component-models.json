@@ -449,6 +449,10 @@
           {
             "name": "Stepper Evergreen",
             "value": "stepper-evergreen"
+          },
+          {
+            "name": "Evergreen Image swapping Variant",
+            "value": "evergreen-image-swapping-variant"
           }
         ]
       }

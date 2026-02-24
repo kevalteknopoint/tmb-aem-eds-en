@@ -162,34 +162,14 @@
   width:fit-content;
 }
 
-.lenders-mortgage-insurance.stepper-container{
+.stepper-evergreen.stepper-container{
   grid-template-columns:1fr;
+  margin:0 auto 40px;
+  max-width:735px;
+  padding-inline:32px;
+  width:100%;
 }
 
-.lenders-mortgage-insurance.stepper-container .default-content-wrapper p{
+.stepper-evergreen.stepper-container .default-content-wrapper p{
   margin-bottom:unset;
-}
-
-.lenders-mortgage-insurance.stepper-container .stepper-container .default-content-wrapper p{
-  margin-bottom:unset;
-}
-
-.lenders-mortgage-insurance.stepper-container .stepper .stepper-item::before{
-  content:unset;
-}
-
-.lenders-mortgage-insurance.stepper-container .stepper .stepper-item::before .stepper-body .step-collapse .stepper-content ol li{
-  counter-increment:unset;
-}
-
-.lenders-mortgage-insurance.stepper-container .stepper .stepper-item::before .stepper-body .step-collapse .stepper-content ol li::before{
-  content:unset;
-}
-
-.lenders-mortgage-insurance.stepper-container .stepper .stepper-item::before .stepper-body .step-collapse .stepper-content ul li{
-  counter-increment:unset;
-}
-
-.lenders-mortgage-insurance.stepper-container .stepper .stepper-item::before .stepper-body .step-collapse .stepper-content ul li::before{
-  content:unset;
 }
