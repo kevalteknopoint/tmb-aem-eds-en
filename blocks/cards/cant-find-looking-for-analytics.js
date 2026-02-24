@@ -13,8 +13,8 @@ document.addEventListener('click', (e) => {
       const title = titleContainer?.querySelector('h1, h2, h3, h4, h5, h6');
       const ctaTitleEle = linkEle?.closest('.cards-card-body')?.querySelector('h1, h2, h3, h4, h5, h6');
       const pageRegion = getPageRegion(e.target.closest('.cards-wrapper')?.querySelector("ul li a"));
-      const componentIndex = getComponentIndex(e.target.closest('.cards-wrapper')?.querySelector("ul li a"));
-      const nextPageURL = target.closest('.button-container')?.getAttribute("href");
+      const componentIndex = getComponentIndex(e.target.closest('.cards-wrapper .button-container')?.querySelector("a"));
+      const nextPageURL = (e.target.closest('.cards-wrapper .button-container')?.getAttribute("href"));
 
       ctaInteraction(pageRegion, ctaText, minifyText(ctaTitleEle?.textContent), 'can’t find what you are looking for?', minifyText(title?.textContent), '', componentIndex,getPersona(),nextPageURL,'cta-click','external','in-page-nav','in-content','','','','can’t find what you are looking for?','');
     }
