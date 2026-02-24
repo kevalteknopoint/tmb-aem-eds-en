@@ -483,6 +483,7 @@ html:has(.primary-header.search-active) .search-results-section{
 }
 
 .mobile-menu-wrapper .secondary-nav-list{
+  align-items:flex-end;
   display:flex;
   flex-direction:column;
   padding:32px 0 0;

@@ -279,11 +279,13 @@ export default async function decorate(block) {
     e.preventDefault();
 
     mobileMenuSection.classList.add('active');
+    document.body.style.overflow = 'hidden';
   });
 
   closeBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
+    document.body.style.overflow = 'auto';
     mobileMenuSection.classList.remove('active');
   });
 }

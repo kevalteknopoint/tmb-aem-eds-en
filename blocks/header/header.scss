@@ -556,6 +556,7 @@ html:has(.primary-header.search-active) {
     flex-direction: column;
     padding: 32px 0 0;
     position: relative;
+    align-items: flex-end;
 
     &::before {
       content: '';
