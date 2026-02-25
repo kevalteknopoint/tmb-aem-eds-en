@@ -467,6 +467,22 @@
           }
         },
         {
+          "title": "Info Well",
+          "id": "info-well",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Info Well",
+                  "model": "info-well",
+                  "filter": "info-well"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Interest Rates",
           "id": "interest-rates",
           "plugins": {

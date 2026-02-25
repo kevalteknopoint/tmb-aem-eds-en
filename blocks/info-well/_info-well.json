@@ -1,0 +1,45 @@
+{
+  "definitions": [
+    {
+      "title": "Info Well",
+      "id": "info-well",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Info Well",
+              "model": "info-well",
+              "filter": "info-well"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "info-well",
+      "fields": [
+        {
+          "component": "text",
+          "name": "info-well-title",
+          "label": "Info Well Title",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "info-well-description",
+          "label": "Info Well Description",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "info-well",
+      "components": []
+    }
+  ]
+}

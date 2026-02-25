@@ -119,6 +119,10 @@
     ]
   },
   {
+    "id": "info-well",
+    "components": []
+  },
+  {
     "id": "interest-rates",
     "components": [
       "rate-details"
