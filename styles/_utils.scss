@@ -265,3 +265,10 @@ svg.icon-svg.icon-invert {
   padding: 10px;
   border-radius: 50%;
 }
+
+svg.icon-svg.icon-invert-bg {
+  background-color: $icon-bg-reverse !important;
+  color: $icon-reverse !important;
+  padding: 10px;
+  border-radius: 50%;
+}
