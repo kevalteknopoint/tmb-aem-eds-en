@@ -2,8 +2,8 @@ import { ctaInteraction, menuInteraction, minifyText, socialmediaClick, getCompo
 
 document.addEventListener('click', (e) => {
 // ✅ Define once here
-const pageRegion = getPageRegion();
-const componentIndex = getComponentIndex();
+ const pageRegion = getPageRegion(e.target.closest('.tmb-footer')?.querySelector("ul li a"));
+    const componentIndex = getComponentIndex(e.target.closest('.tmb-footer')?.querySelector("ul li a"));
 
 
 
