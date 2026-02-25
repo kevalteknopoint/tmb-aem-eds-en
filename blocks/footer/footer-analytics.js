@@ -1,6 +1,8 @@
 import { ctaInteraction, menuInteraction, minifyText, socialmediaClick, getComponentIndex,getPageRegion } from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
+    const pageRegion = getPageRegion(e.target.closest('.tmb-footer')?.querySelector("ul li a"));
+    const componentIndex = getComponentIndex(e.target.closest('.tmb-footer')?.querySelector("ul li a"));
   if (e.target.closest('.ul-4') || e.target.closest('.ul-9')) {
     const anchor = e.target.closest('a');
     if (!anchor) return;
@@ -19,7 +21,7 @@ document.addEventListener('click', (e) => {
       text = minifyText(closestLi?.querySelector('& > p')?.textContent);
     }
 
-    menuInteraction('', minifyText(text), minifyText(anchor.textContent), '', 'global footer', '', '');
+    menuInteraction(pageRegion, minifyText(text), minifyText(anchor.textContent), '', 'global footer', 'footer', componentIndex);
   }
 
   if (e.target.closest('.ul-16')) {
@@ -32,8 +34,7 @@ document.addEventListener('click', (e) => {
 
     socialmediaClick('', minifyText(iconName), 'global footer', '', '');
   }
-  pageRegion,iconName,componentName,componentType,componentIndex,componentPersona,interactionType,requiredFieldMissingFlag,testUserFlag,qaSessionFlag,componentId,componentIdValidFlag
-
+ 
   if (e.target.closest('.ul-17')) {
     const anchor = e.target.closest('a');
     if (!anchor) return;
