@@ -1,42 +1,26 @@
-import { ctaInteraction, menuInteraction, minifyText, socialmediaClick, getComponentIndex,getPageRegion,getPersona } from "../../scripts/analytics/exports.js";
+import { ctaInteraction, menuInteraction, minifyText, socialmediaClick, getComponentIndex,getPageRegion } from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
-// ✅ Define once here
- const pageRegion = getPageRegion(e.target.closest('.tmb-footer')?.querySelector("ul li a"));
-    const componentIndex = getComponentIndex(e.target.closest('.tmb-footer')?.querySelector("ul li a"));
-
-
-
   if (e.target.closest('.ul-4') || e.target.closest('.ul-9')) {
-
     const anchor = e.target.closest('a');
     if (!anchor) return;
 
-    const nextpageUrl = anchor.href || '';
+    const closestLi = anchor?.closest('ul')?.closest('li');
 
-    menuInteraction(
-      pageRegion,
-      '',
-      minifyText(anchor.textContent),
-      '',
-      'global footer',
-      'footer',
-      componentIndex,
-      getPersona(),
-      nextpageUrl,
-      'menu-click',
-      'internal',
-      '',
-      '',
-      '',
-      'footer',
-      ''
-    );
+    let text = "";
+
+    closestLi.childNodes.forEach((node) => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        text += minifyText(node.textContent);
+      }
+    });
+
+    if (!text && closestLi?.querySelector('& > p')) {
+      text = minifyText(closestLi?.querySelector('& > p')?.textContent);
+    }
+
+    menuInteraction('', minifyText(text), minifyText(anchor.textContent), '', 'global footer', '', '');
   }
-
-
-
-   
 
   if (e.target.closest('.ul-16')) {
     const anchor = e.target.closest('a');
@@ -46,7 +30,7 @@ document.addEventListener('click', (e) => {
     const iconClassString = icon.classList.toString();
     const iconName = iconClassString?.replaceAll('icon-', '')?.replaceAll('icon', '')?.replaceAll(' ', '');
 
-    socialmediaClick(pageRegion, minifyText(iconName), 'global footer', '', '');
+    socialmediaClick('', minifyText(iconName), 'global footer', '', '');
   }
   pageRegion,iconName,componentName,componentType,componentIndex,componentPersona,interactionType,requiredFieldMissingFlag,testUserFlag,qaSessionFlag,componentId,componentIdValidFlag
 
