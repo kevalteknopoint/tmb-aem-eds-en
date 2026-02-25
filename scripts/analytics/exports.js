@@ -317,10 +317,11 @@ export function getPageRegion(element) {
     else return "bottom"
 //   return `homepage-region-${regionNumber}`;
 }
+
 export function getComponentIndex(clickedElement) {
   if (!clickedElement) return -1;
 
-  const section = clickedElement.closest('.section');
+  const section = clickedElement.closest('.section[data-section-status]');
   if (!section) return -1;
 
   const main = section.closest('main');
@@ -332,6 +333,7 @@ export function getComponentIndex(clickedElement) {
 
   return sections.indexOf(section)+1;
 }
+
 export function sideWidgetInteraction(pageRegion,ctaText,ctaTitle,ctaSource,componentName,componentType,componentIndex,componentPersona,nextpageUrl,interactionType,linkType,navElementType,navLocation,requiredFieldMissingFlag,testUserFlag,qaSessionFlag,componentId,componentIdValidFlag){
     window.adobeDataLayer.push({
         "event": "sideWidgetInteraction",

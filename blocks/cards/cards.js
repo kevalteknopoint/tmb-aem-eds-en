@@ -7,11 +7,6 @@ import newsHelpful from "./news-helpful.js";
 import newsHomepage from "./news-homepage.js";
 import decorateLookingAnotherway from "./looking-for-anotherway.js";
 import milestones from "./milestones.js";
-import { tr } from "../../scripts/dom-helpers.js";
-
-const cardAnalyticsLoaded = {
-  'cant-find-looking-for': false
-};
 
 export default function decorate(block) {
   if (block.classList.contains("expandable-tiles")) {
@@ -52,19 +47,12 @@ export default function decorate(block) {
         decorateBankingGoods(block);
       } else if (block.closest('.looking-for-another-way')) {
         decorateLookingAnotherway(block);
+      } else if (block.closest(".faq-cant-find-looking-for")) {
+        import('./cant-find-looking-for-analytics.js');
       }
     });
   }
   if (block.closest(".news-helpful-homepage")) {
     newsHomepage(block);
-  }
-
-  try {
-    if (!cardAnalyticsLoaded['cant-find-looking-for'] && document.querySelector('.cant-find-looking-for')) {
-      import(`./cant-find-looking-for-analytics.js`);
-      cardAnalyticsLoaded["cant-find-looking-for"] = true;
-    }
-  } catch (error) {
-    console.log('Error loading analytics for cards');
   }
 }

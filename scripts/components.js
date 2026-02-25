@@ -55,6 +55,10 @@ export default function loadNonBlockLibs() {
       name: 'legal-privacy',
     },
     {
+      selector: '.calculator',
+      name: 'calculator',
+    },
+    {
       selector: '.search-results-page',
       name: 'search-page',
     },
@@ -62,12 +66,20 @@ export default function loadNonBlockLibs() {
       selector: '.system-table',
       name: 'system-table',
     },
+    {
+      selector: '.form-banner',
+      name: 'form-banner',
+    },
+    {
+      selector: '.aboutus-grid-content',
+      name: 'aboutus-grid-content'
+    }
   ];
 
-  blocks.forEach(({ selector, name }) => {
+  blocks.forEach(({ selector, name, noCss, noJs }) => {
     if (blockExists(selector)) {
-      import(`../blocks/${name}/${name}.js`);
-      loadCSS(`${window.hlx.codeBasePath}/blocks/${name}/${name}.css`);
+      if (!noJs) import(`../blocks/${name}/${name}.js`);
+      if (!noCss) loadCSS(`${window.hlx.codeBasePath}/blocks/${name}/${name}.css`);
     }
   });
 }
