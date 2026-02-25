@@ -31,7 +31,7 @@ document.addEventListener('click', (e) => {
     const linkEle = target.closest('a');
     const ctaText = minifyText(linkEle?.textContent);
 
-       if (target.closest('.faq-frequently-question-list')) {
+       if (target.closest('.faq-frequently-question-title', '.faq-frequently-question-list')) {
       const targetContainer = target.closest('.faq-frequently-question-list');
       const secondaryLink = e.target.closest('.faq-frequently-question-list .button-container .button');
       // const titleContainer = targetContainer?.previousElementSibling;
