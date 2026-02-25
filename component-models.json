@@ -453,6 +453,10 @@
           {
             "name": "Evergreen Image swapping Variant",
             "value": "evergreen-image-swapping-variant"
+          },
+          {
+            "name": "Info Well",
+            "value": "info-well"
           }
         ]
       }
