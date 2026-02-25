@@ -19,9 +19,10 @@ document.addEventListener('click', (e) => {
       text = minifyText(closestLi?.querySelector('& > p')?.textContent);
     }
 
-    menuInteraction(pageRegion, minifyText(text), minifyText(anchor.textContent), '', 'global footer', '', '');
+    menuInteraction(pageRegion, minifyText(text), minifyText(anchor.textContent), '', 'global footer', 'footer', componentIndex,getPersona(),nextpageUrl,'menu-click','internal','','','','footer','');
   }
-  
+  pageRegion,leveloneMenu,leveltwoMenu,levelthreeMenu,componentName,componentType,componentIndex,componentPersona,nextpageUrl,interactionType,linkType,requiredFieldMissingFlag,testUserFlag,qaSessionFlag,componentId,componentIdValidFlag
+   
 
   if (e.target.closest('.ul-16')) {
     const anchor = e.target.closest('a');
