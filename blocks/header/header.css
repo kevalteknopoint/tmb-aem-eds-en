@@ -356,6 +356,18 @@ html:has(.primary-header.search-active) .search-results-section{
   background-color:rgb(237 243 243 / 30.2%);
 }
 
+.search-results-section .no-results{
+  color:var(--heading-default);
+  font-family:var(--font-family-h2-std);
+  font-size:var(--font-size-h2-std);
+  font-weight:var(--font-weight-h2-std);
+  letter-spacing:var(--font-letter-spacing-h2-std);
+  line-height:var(--font-height-h2-std);
+  margin-top:40px;
+  text-align:center;
+  text-transform:initial;
+}
+
 .search-results-section .dynamic-search-results{
   padding:80px 0;
 }
@@ -558,6 +570,10 @@ html:has(.primary-header.search-active) .search-results-section{
 
   .header-actions-wrap .header-search-form .header-search-inp{
     padding-left:0;
+  }
+
+  .search-results-section .no-results{
+    margin-top:24px;
   }
 
   .search-results-section .dynamic-search-results{

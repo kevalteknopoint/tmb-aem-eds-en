@@ -1,6 +1,6 @@
 import './header-analytics.js';
 import { createOptimizedPicture, getMetadata, injectIcon, isMobile, isTablet } from '../../scripts/aem.js';
-import { div, ul, li, a, button, input, form, h2, span } from '../../scripts/dom-helpers.js';
+import { div, ul, li, a, button, input, form, h2, span, p } from '../../scripts/dom-helpers.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 function toCapitalCase(str) {
@@ -22,7 +22,9 @@ async function fetchQueryJson() {
   }
 }
 
-function populateSearchData(wrapper, data) {
+function populateSearchData(wrapper, data, defaultText) {
+  const basePath = getMetadata('base-path');
+
   wrapper.innerHTML = '';
 
   const taggedObj = {
@@ -30,13 +32,20 @@ function populateSearchData(wrapper, data) {
   };
 
   data.forEach((item) => {
-    if (!item.tags) return taggedObj.default.push(item);
+    const pagePath = item.path?.replace(basePath, '');
+    const splitPagePath = pagePath?.split('/');
 
-    const firstTag = item.tags.split(',')?.[0];
+    if (splitPagePath?.length === 2) return taggedObj.default.push(item);
 
-    if (!Object.prototype.hasOwnProperty.call(taggedObj, firstTag)) taggedObj[firstTag] = [];
+    const rootPath = `${basePath}/${splitPagePath?.[1]}`;
 
-    taggedObj[firstTag].push(item);
+    const rootPage = window.searchData?.find((page) => page.path === rootPath);
+
+    const rootTitle = rootPage.title || rootPage.ogTitle || toCapitalCase(splitPagePath?.[1]);
+
+    if (!Object.prototype.hasOwnProperty.call(taggedObj, rootTitle)) taggedObj[rootTitle] = [];
+
+    taggedObj[rootTitle].push(item);
 
     return null;
   });
@@ -49,7 +58,7 @@ function populateSearchData(wrapper, data) {
     let resultTitle = toCapitalCase(tag);
 
     if (tag === 'default') {
-      resultTitle = 'Others';
+      resultTitle = defaultText || 'Other Results';
     }
 
     const defaultWrapper = div({ class: 'default-content-wrapper' }, h2(resultTitle));
@@ -173,10 +182,10 @@ export default async function decorate(block) {
   const logoNavWrap = div({ class: 'logo-nav-wrap' }, hamMenuBtn, logoWrap, primaryNavList);
 
   const crossIcon = col2.querySelector('p span:nth-child(2) svg');
-  const crossBtn = button({ class: 'search-cross-btn' }, crossIcon);
+  const crossBtn = button({ class: 'search-cross-btn', type: 'button' }, crossIcon);
 
   const backIcon = col2.querySelector('p span:nth-child(1) svg');
-  const backBtn = button({ class: 'search-back-btn' }, backIcon);
+  const backBtn = button({ class: 'search-back-btn', type: 'button' }, backIcon);
 
   // Search button
   const searchInp = input({ class: 'header-search-inp', name: 'headerSearch', id: 'headerSearch', placeholder: 'Start typing...' });
@@ -200,6 +209,9 @@ export default async function decorate(block) {
     )
   );
 
+  primaryContainer.replaceWith(newPrimarySection);
+
+  // Search Clicks
   crossBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -214,13 +226,15 @@ export default async function decorate(block) {
   });
 
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('.search-back-btn') && e.target.closest('.search-btn-wrap')) return;
+    if (!e.target.closest('.search-back-btn') && (e.target.closest('.search-btn-wrap') || e.target.closest('.search-results-section'))) {
+      return;
+    }
 
+    if (e.target.closest('.search-back-btn')) e.preventDefault();
     newPrimarySection.classList.remove('search-active');
   });
 
-  primaryContainer.replaceWith(newPrimarySection);
-
+  // Mobile Menu
   const primaryCopy = primaryNavList.cloneNode(true);
   const secondaryCopy = secondaryList.cloneNode(true);
 
@@ -243,6 +257,11 @@ export default async function decorate(block) {
   // Popular searches
   const popularSearches = div({ class: 'popular-search-results' });
   const contentWrapper = searchSection.querySelector('.default-content-wrapper');
+  const defaultTextEle = contentWrapper?.querySelector('h2:has(+ h2)');
+  const defaultText = defaultTextEle?.textContent;
+
+  if (defaultText) defaultTextEle?.remove();
+
   popularSearches.append(contentWrapper);
   searchSection.appendChild(popularSearches);
 
@@ -257,6 +276,10 @@ export default async function decorate(block) {
     showToast("Please wait you're being redirected...");
   });
 
+  searchInp.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') searchForm?.dispatchEvent(new Event('submit'));
+  });
+
   searchInp.addEventListener('input', (e) => {
     const targetValue = e.target.value;
 
@@ -269,12 +292,14 @@ export default async function decorate(block) {
 
     if (!filteredResults.length) {
       searchDataWrapper.innerHTML = '';
+      searchDataWrapper.appendChild(p({ class: 'no-results' }, `No results found for "${targetValue}"`));
       return;
     }
 
-    populateSearchData(searchDataWrapper, filteredResults);
+    populateSearchData(searchDataWrapper, filteredResults, defaultText);
   });
 
+  // Mobile Menu Clicks
   hamMenuBtn.addEventListener('click', (e) => {
     e.preventDefault();
 

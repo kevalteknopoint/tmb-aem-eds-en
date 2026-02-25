@@ -391,6 +391,18 @@ html:has(.primary-header.search-active) {
       background-color: #EDF3F34D;
     }
   }
+  
+  .no-results {
+    @include typo-heading2-std;
+
+    color: $heading-default;
+    text-align: center;
+    margin-top: 40px;
+
+    @include tablet {
+      margin-top: 24px;
+    }
+  }
 
   .dynamic-search-results {
     padding: 80px 0;

@@ -29,3 +29,6 @@ indices:
       tags:
         select: head > meta[name="cq-tags"]
         value: attribute(el, "content")
+      keywords:
+        select: head > meta[name="keywords"]
+        value: attribute(el, "content")

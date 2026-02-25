@@ -135,6 +135,8 @@ function renderSearchUI(container, searchVal, allResults, currentPage, onPageCha
   searchInp.addEventListener('input', (e) => {
     currentSearchTerm = e.target.value;
 
+    const basePath = getMetadata('base-path');
+
     if (currentSearchTerm.length < 3) {
       searchResultsContainer.innerHTML = '';
       currentFilteredData = [];
@@ -146,13 +148,25 @@ function renderSearchUI(container, searchVal, allResults, currentPage, onPageCha
     ) || [];
 
     currentFilteredData = rawResults.map((item) => {
-      const firstTag = item.tags?.split(',')?.[0] || '';
+      const pagePath = item.path?.replace(basePath, '');
+      const splitPagePath = pagePath?.split('/');
+
+      let category = '';
+
+      if (splitPagePath?.length > 2) {
+        const rootPath = `${basePath}/${splitPagePath?.[1]}`;
+        const rootPage = window.searchData?.find((page) => page.path === rootPath);
+        const rootTitle = rootPage.title || rootPage.ogTitle || toCapitalCase(splitPagePath?.[1]);
+        category = rootTitle;
+      }
+
       const splitPath = item.path?.split('/') || [];
+
       return {
         title: item.title || item.ogTitle || toCapitalCase(splitPath[splitPath.length - 1]),
         desc: item.description || item.ogDescription,
         link: item.path,
-        category: toCapitalCase(firstTag)
+        category: toCapitalCase(category)
       };
     });
 
