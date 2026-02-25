@@ -56,15 +56,14 @@ import {
 
 document.addEventListener('click', (e) => {
 
-  // ✅ DEFINE THEM HERE
   const pageRegion = getPageRegion();
   const componentIndex = getComponentIndex();
-  const nextpageUrl = e.target.closest('a')?.href || '';
 
   if (e.target.closest('.ul-4') || e.target.closest('.ul-9')) {
     const anchor = e.target.closest('a');
     if (!anchor) return;
 
+    const nextpageUrl = anchor.href || '';
     const closestLi = anchor.closest('ul')?.closest('li');
 
     let text = "";
@@ -74,11 +73,6 @@ document.addEventListener('click', (e) => {
         text += minifyText(node.textContent);
       }
     });
-
-    // ❌ This selector is wrong: '& > p'
-    if (!text && closestLi?.querySelector(':scope > p')) {
-      text = minifyText(closestLi.querySelector(':scope > p')?.textContent);
-    }
 
     menuInteraction(
       pageRegion,
@@ -107,11 +101,10 @@ document.addEventListener('click', (e) => {
     const icon = anchor.querySelector('.icon');
     if (!icon) return;
 
-    const iconClassString = icon.classList.toString();
-    const iconName = iconClassString
-      ?.replaceAll('icon-', '')
-      ?.replaceAll('icon', '')
-      ?.replaceAll(' ', '');
+    const iconName = icon.className
+      .replaceAll('icon-', '')
+      .replaceAll('icon', '')
+      .replaceAll(' ', '');
 
     socialmediaClick(
       pageRegion,
