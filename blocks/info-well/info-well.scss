@@ -1,5 +1,9 @@
 @use '../../styles/base' as *;
 
-.info-well{
-  background: $bg-default;
+.info-well-container{
+  .info-well-wrapper{
+    .info-well{
+      background: $bg-default;
+    }
+  }
 }

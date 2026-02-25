@@ -457,6 +457,10 @@
           {
             "name": "Info Well",
             "value": "info-well"
+          },
+          {
+            "name": "customer-evergreen-variant",
+            "value": "customer-evergreen-variant"
           }
         ]
       }
