@@ -38,6 +38,13 @@ document.addEventListener('click', (e) => {
     'online-banking',
     ''
   );
-
+  if (e.target.closest('.online-banking banking-li-2')?.querySelector("card-bottom-2 a")) {
+    // const secondaryLink = e.target.closest('.quick-links-container').querySelector("card-bottom-2 a");
+    const pageRegion = getPageRegion(e.target.closest('.online-banking banking-li-2')?.querySelector("card-bottom-2 a"));
+    const componentIndex = getComponentIndex(e.target.closest('.online-banking banking-li-2')?.querySelector("card-bottom-2 a"));
+    const ctaLink = e.target.closest('.online-banking banking-li-2')?.querySelector("card-bottom-2 a");
+    const ctaTitle = e.target.closest('.online-banking banking-li-2').querySelector('banking-desc-1');
+    const nextPageURL = e.target.closest('.online-banking banking-li-2').querySelector("card-bottom-2 a")?.getAttribute("href");
+    ctaInteraction(pageRegion, minifyText(ctaLink?.textContent), minifyText(ctaTitle?.textContent), '', 'online-banking', 'cards-container', componentIndex, getPersona(), nextPageURL, 'cta-click', 'internal', 'quick-link', 'internal', '', '', '', 'online-banking', '');
+  }
 });
-

@@ -241,6 +241,27 @@ export function breadcrumbItemClick(pageRegion,ctaText,nextpageUrl,interactionTy
 });
 }
 
+export function downloadApp(pageRegion,iconName,ctaTitle,componentName,componentType,componentIndex,componentPersona,interactionType,linkType,navElementType,navLocation,componentId){
+    window.adobeDataLayer.push({
+        "event": "downloadApp",
+            "data":{
+                "pageRegion":pageRegion,
+                "iconName":iconName,
+                "ctaTitle":ctaTitle,                
+                "componentName":componentName,
+                "componentType":componentType,
+                "componentIndex":componentIndex,
+                "componentPersona":componentPersona,                
+                "interactionType":interactionType,
+                "linkType":linkType,
+                "navElementType":navElementType,
+                "navLocation":navLocation,                  
+                "componentId":componentId
+            }
+});
+}
+
+
 export function resetForm(pageRegion,componentName,componentType,componentIndex,componentPersona,interactionType,formId,formName,formType,formChannel,formProductGroup,formProduct,formVersion,requiredFieldMissingFlag,testUserFlag,qaSessionFlag,componentId,componentIdValidFlag){
     window.adobeDataLayer.push({
         "event": "resetForm",
