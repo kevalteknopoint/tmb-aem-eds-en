@@ -31,12 +31,12 @@ document.addEventListener('click', (e) => {
     const linkEle = target.closest('a');
     const ctaText = minifyText(linkEle?.textContent);
 
-       if (target.closest('.faq-frequently-question-title', '.faq-frequently-question-list')) {
+       if (target.closest( '.faq-frequently-question-list')) {
       const targetContainer = target.closest('.faq-frequently-question-list');
       const secondaryLink = e.target.closest('.faq-frequently-question-list .button-container .button');
       // const titleContainer = targetContainer?.previousElementSibling;
       const ctaTitle =e.target.closest('.faq-frequently-question-list').querySelector('h1, h2, h3, h4, h5, h6');
-      const ctaSourceEle = e.target.closest('.faq-frequently-question-title')?.querySelector('h1, h2, h3, h4, h5, h6');
+      const ctaSourceEle = document.querySelector('.faq-frequently-question-title')?.querySelector('h1, h2, h3, h4, h5, h6');
       const pageRegion = getPageRegion(e.target.closest('.faq-frequently-question-list .button-container .button'));
       const componentIndex = getComponentIndex(e.target.closest('.faq-frequently-question-list .button-container .button'));
       const nextPageURL = e.target.closest(".faq-frequently-question-list .button-container .button")?.getAttribute("href");
