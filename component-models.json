@@ -1363,12 +1363,6 @@
     "id": "info-well",
     "fields": [
       {
-        "component": "text",
-        "name": "info-well-title",
-        "label": "Info Well Title",
-        "valueType": "string"
-      },
-      {
         "component": "richtext",
         "name": "info-well-description",
         "label": "Info Well Description",

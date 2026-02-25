@@ -652,6 +652,40 @@
   width:12px;
 }
 
+.customer.customer-evergreen-variant{
+  background:var(--green-blue, linear-gradient(256deg, #1BE7FF 0%, #59FFA0 100%));
+  border-radius:var(--radius-card);
+  margin:0 auto 40px;
+  max-width:671px;
+  padding:32px 24px;
+  width:100%;
+}
+
+.customer.customer-evergreen-variant .columns-wrapper{
+  padding-inline:unset;
+}
+
+.customer.customer-evergreen-variant .columns-wrapper .block .columns-container div{
+  background:unset;
+  padding:unset;
+}
+
+.customer.customer-evergreen-variant .columns-wrapper .block .columns-container div h2, .customer.customer-evergreen-variant .columns-wrapper .block .columns-container div h3{
+  text-align:left;
+}
+
+.customer.customer-evergreen-variant .columns-wrapper .block .columns-container div p{
+  text-align:left;
+}
+
+.customer.customer-evergreen-variant .columns-wrapper .block .columns-container div p.button-container{
+  justify-content:start;
+}
+
+.customer.customer-evergreen-variant::after{
+  content:unset;
+}
+
 .money-overseas .overseas-columns{
   margin-left:auto;
   margin-right:auto;

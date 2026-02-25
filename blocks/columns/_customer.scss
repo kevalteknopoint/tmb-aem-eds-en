@@ -164,3 +164,43 @@
         }
     }
 }
+
+.customer.customer-evergreen-variant{
+    // background: unset;
+    margin: 0 auto 40px;
+    max-width: 671px;
+    padding: 32px 24px;
+    width: 100%;
+    border-radius: $radius-card;
+background: var(--green-blue, linear-gradient(256deg, #1BE7FF 0%, #59FFA0 100%));
+
+    .columns-wrapper{
+        padding-inline: unset;
+
+        .block{
+            .columns-container{
+                div{
+                    padding: unset;
+                    background: unset;
+
+                    h2,h3{
+                        text-align: left;
+                    }
+
+                    p{
+                        text-align: left;
+
+                        &.button-container{
+                            justify-content: start;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &::after{
+        content: unset;
+    }
+    
+}

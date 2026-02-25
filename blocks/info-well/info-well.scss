@@ -3,7 +3,33 @@
 .info-well-container{
   .info-well-wrapper{
     .info-well{
-      background: $bg-default;
+      background: rgba(27, 231, 255, 0.07);
+      padding: 16px;
+
+      h5{
+        @include typo-heading5;
+
+        color: $body-default;
+        margin-bottom: 10px;
+      }
+
+      p{
+        @include typo-body;
+
+        color: $body-default;
+
+        a{
+          @include typo-body;
+
+          color: $link-default;
+          text-decoration-line: underline;
+          text-decoration-style: solid;
+          text-decoration-skip-ink: auto;
+          text-decoration-thickness: auto;
+          text-underline-offset: auto;
+          text-underline-position: from-font;
+        }
+      }
     }
   }
 }
