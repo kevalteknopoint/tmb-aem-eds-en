@@ -1,4 +1,4 @@
-import { ctaInteraction, menuInteraction, minifyText, socialmediaClick } from "../../scripts/analytics/exports.js";
+import { ctaInteraction, menuInteraction, minifyText, socialmediaClick, getComponentIndex,getPageRegion,getPersona } from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
   if (e.target.closest('.ul-4') || e.target.closest('.ul-9')) {
@@ -19,8 +19,9 @@ document.addEventListener('click', (e) => {
       text = minifyText(closestLi?.querySelector('& > p')?.textContent);
     }
 
-    menuInteraction('', minifyText(text), minifyText(anchor.textContent), '', 'global footer', '', '');
+    menuInteraction(pageRegion, minifyText(text), minifyText(anchor.textContent), '', 'global footer', '', '');
   }
+  
 
   if (e.target.closest('.ul-16')) {
     const anchor = e.target.closest('a');
@@ -30,8 +31,9 @@ document.addEventListener('click', (e) => {
     const iconClassString = icon.classList.toString();
     const iconName = iconClassString?.replaceAll('icon-', '')?.replaceAll('icon', '')?.replaceAll(' ', '');
 
-    socialmediaClick('', minifyText(iconName), 'global footer', '', '');
+    socialmediaClick(pageRegion, minifyText(iconName), 'global footer', '', '');
   }
+  pageRegion,iconName,componentName,componentType,componentIndex,componentPersona,interactionType,requiredFieldMissingFlag,testUserFlag,qaSessionFlag,componentId,componentIdValidFlag
 
   if (e.target.closest('.ul-17')) {
     const anchor = e.target.closest('a');
