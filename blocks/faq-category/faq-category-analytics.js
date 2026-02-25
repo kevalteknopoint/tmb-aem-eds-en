@@ -13,7 +13,7 @@ document.addEventListener('click', (e) => {
       const ctaSourceEle = linkEle?.closest('.faq-items-list')?.parentElement?.querySelector('h1, h2, h3, h4, h5, h6');
       const pageRegion = getPageRegion(target.closest('.faq-link'));
       const componentIndex = getComponentIndex(target.closest('.faq-link'));
-      faqInteraction(pageRegion, faqTitle, minifyText(ctaSourceEle?.textContent), 'faq frequently', 'faq',componentIndex,getPersona(),'faq-toggle','faq-expand','FAQ_CARD_LIMITS','open','faq swift code','','','','','','','','faq','','','','faq');
+      faqInteraction(pageRegion, faqTitle, minifyText(ctaSourceEle?.textContent), 'faq frequently', 'faq',componentIndex,getPersona(),'faq-toggle','faq-expand','FAQ_CARD_LIMITS','open','','faq swift code','','','','','','','','','','','faq');
     } 
   
     else if (target.closest('.faq-frequently-question-list')) {
