@@ -94,6 +94,15 @@ import { div, h1, input, p } from "../../scripts/dom-helpers.js";
   allSymbols.forEach((sym) => {
     const iconP = p({ title: sym.id, class: sym.id });
     injectIcon(sym.id, iconP);
+
+    const iconPInvert = p({ title: `${sym.id}--invert`, class: `${sym.id}--invert` });
+    injectIcon(`${sym.id}`, iconPInvert, undefined, 'icon-invert');
+
+    const iconPInvertBg = p({ title: `${sym.id}--invert-bg`, class: `${sym.id}--invert-bg` });
+    injectIcon(`${sym.id}`, iconPInvertBg, undefined, 'icon-invert-bg');
+
+    newWrap.insertAdjacentElement('afterend', iconPInvertBg);
+    newWrap.insertAdjacentElement('afterend', iconPInvert);
     newWrap.insertAdjacentElement('afterend', iconP);
   });
 
