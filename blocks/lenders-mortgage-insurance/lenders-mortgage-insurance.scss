@@ -6,36 +6,59 @@
   padding-inline: 32px;
   margin: 0 auto 40px;
 
-  h3,
-  h4 {
+  h2{
+    @include typo-heading2;
+
     color: $heading-default;
-    font-family: $font-family-h4;
-    font-size: $font-size-h4;
-    font-style: normal;
+    margin-bottom: 16px;
     font-weight: 500;
-    line-height: $font-height-h4;
-    letter-spacing: $font-letter-spacing-h4;
+  }
+
+  h3{
+    @include typo-heading3;
+
+    color: $heading-default;
+    margin-bottom: 16px;
+  }
+
+  h4 {
+    @include typo-heading4;
+
+    color: $heading-default;
+
+    // font-family: $font-family-h4;
+    // font-size: $font-size-h4;
+    // font-style: normal;
+    // font-weight: 500;
+    // line-height: $font-height-h4;
+    // letter-spacing: $font-letter-spacing-h4;
     margin-bottom: 16px;
   }
 
   h5 {
+    @include typo-heading5;
+
     color: $body-default;
-    font-size: $font-size-h5;
-    font-style: normal;
-    font-weight: 500;
-    line-height: $font-height-h5;
-    letter-spacing: $font-letter-spacing-h5;
+
+    // font-size: $font-size-h5;
+    // font-style: normal;
+    // font-weight: 500;
+    // line-height: $font-height-h5;
+    // letter-spacing: $font-letter-spacing-h5;
   }
 
   p {
+    @include typo-body;
+
     margin-top: 0;
     color: $body-default;
-    font-family: $font-family-body;
-    font-size: $font-size-body;
-    font-style: normal;
-    font-weight: 400;
-    line-height: $font-height-body;
-    letter-spacing: $font-letter-spacing-body;
+
+    // font-family: $font-family-body;
+    // font-size: $font-size-body;
+    // font-style: normal;
+    // font-weight: 400;
+    // line-height: $font-height-body;
+    // letter-spacing: $font-letter-spacing-body;
     margin-bottom: 10px;
 
     &.button-container {
@@ -50,14 +73,17 @@
       background: $color-button-primary-default;
 
       a {
+        @include typo-heading5;
+
         color: $color-button-text-stroke-reverse;
         text-align: left;
-        font-family: $font-family-h5;
-        font-size: $font-size-h5;
-        font-style: normal;
-        font-weight: 500;
-        line-height: $font-height-h5; /* 150% */
-        letter-spacing: $font-letter-spacing-h5;
+
+        // font-family: $font-family-h5;
+        // font-size: $font-size-h5;
+        // font-style: normal;
+        // font-weight: 500;
+        // line-height: $font-height-h5; /* 150% */
+        // letter-spacing: $font-letter-spacing-h5;
       }
     }
   }

@@ -461,6 +461,10 @@
           {
             "name": "customer-evergreen-variant",
             "value": "customer-evergreen-variant"
+          },
+          {
+            "name": "evergreen Left menu",
+            "value": "evergreen-left-menu"
           }
         ]
       }
