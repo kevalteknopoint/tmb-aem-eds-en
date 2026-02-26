@@ -30,6 +30,38 @@
           text-underline-position: from-font;
         }
       }
+
+      ul{
+        list-style-type: none;
+        padding: unset;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        li{
+          ul{
+            align-items: flex-start;
+            display: flex;
+            gap: 16px;
+            list-style: none;
+            margin: 0;
+            padding: 0; 
+            flex-direction: row;
+
+            li{
+              @include typo-body;
+
+              &:first-child{
+                 @include typo-sm-body;
+
+                 font-weight: 600;
+                 max-width: 130px;
+                 width: 100%;
+               }
+            }
+          }
+        }
+      }
     }
   }
 }
