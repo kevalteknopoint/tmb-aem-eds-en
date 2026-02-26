@@ -74,6 +74,10 @@ export default function loadNonBlockLibs() {
       selector: '.evergreen-left-menu',
       name: 'evergreen-left-menu',
     },
+    {
+      selector: '.margin-bottom-unset',
+      name: 'margin-bottom-unset',
+    }
   ];
 
   blocks.forEach(({ selector, name }) => {
