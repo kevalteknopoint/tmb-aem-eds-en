@@ -70,6 +70,10 @@ export default function loadNonBlockLibs() {
       selector: '.lenders-mortgage-insurance',
       name: 'lenders-mortgage-insurance',
     },
+    {
+      selector: '.evergreen-left-menu',
+      name: 'evergreen-left-menu',
+    },
   ];
 
   blocks.forEach(({ selector, name }) => {
