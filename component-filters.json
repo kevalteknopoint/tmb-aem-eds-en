@@ -46,7 +46,8 @@
       "teachers-calculator-block",
       "alerts",
       "system-table",
-      "card-with-quote"
+      "card-with-quote",
+      "tmb-calculator-accordion"
     ]
   },
   {
@@ -133,6 +134,12 @@
     "id": "tabs",
     "components": [
       "tabsitem"
+    ]
+  },
+  {
+    "id": "tmb-calculator-accordion",
+    "components": [
+      "tmb-calculator-accordion-item"
     ]
   }
 ]

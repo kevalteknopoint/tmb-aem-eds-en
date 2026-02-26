@@ -1823,6 +1823,53 @@
     ]
   },
   {
+    "id": "tmb-calculator-accordion",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Single Item Expansion",
+            "value": "single-expansion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tmb-calculator-accordion-item",
+    "fields": [
+      {
+        "component": "boolean",
+        "label": "Default Open",
+        "name": "tmb-calculator-accordion-item-open",
+        "valueType": "boolean"
+      },
+      {
+        "component": "text",
+        "name": "calc-item-title",
+        "label": "Enter title of accordion"
+      },
+      {
+        "component": "text",
+        "name": "calc-item-iframe-id",
+        "label": "Enter ID for iframe"
+      },
+      {
+        "component": "text",
+        "name": "calc-item-iframe-link",
+        "label": "Enter iframe Link"
+      },
+      {
+        "component": "text",
+        "name": "calc-item-iframe-js-link",
+        "label": "Enter JavaScript Link for Iframe"
+      }
+    ]
+  },
+  {
     "id": "transformd-form",
     "fields": [
       {

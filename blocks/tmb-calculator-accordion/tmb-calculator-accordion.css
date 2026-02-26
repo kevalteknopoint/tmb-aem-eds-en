@@ -1,0 +1,91 @@
+.tmb-calculator-accordion{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
+}
+
+.tmb-calculator-accordion .accordion-item{
+  border-bottom:1px solid var(--line-default);
+  border-top:1px solid var(--line-default);
+  padding:16px 0;
+}
+
+.tmb-calculator-accordion .accordion-item::-webkit-details-marker{
+  display:none !important;
+}
+
+.tmb-calculator-accordion .accordion-item .accordion-item-label{
+  align-items:flex-start;
+  display:flex;
+  justify-content:space-between;
+  list-style:none;
+}
+
+.tmb-calculator-accordion .accordion-item .accordion-item-label::marker, .tmb-calculator-accordion .accordion-item .accordion-item-label::-webkit-details-marker{
+  display:none;
+}
+
+.tmb-calculator-accordion .accordion-item .accordion-item-label p{
+  color:var(--color-button-primary-default);
+  font-family:var(--font-family-h3);
+  font-size:var(--font-size-h3);
+  font-weight:var(--font-weight-h3);
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
+  margin-top:4px;
+  text-transform:initial;
+}
+
+.tmb-calculator-accordion .accordion-item .accordion-item-label svg{
+  background:var(--bg-light);
+  border-radius:44px;
+  color:var(--color-button-primary-default);
+  cursor:pointer;
+  height:40px;
+  margin-left:32px;
+  min-width:40px;
+  padding:8px;
+  transform:rotate(180deg);
+  width:40px;
+}
+
+.tmb-calculator-accordion .accordion-item .accordion-body{
+  margin-top:40px;
+}
+
+.tmb-calculator-accordion .accordion-item[open] summary svg{
+  transform:rotate(0deg);
+}
+
+.tmb-calculator-accordion .accordion-item.accordion-item:first-child{
+  border-top:none;
+  padding-top:0;
+}
+
+.tmb-calculator-accordion .accordion-item.accordion-item:last-child{
+  border-bottom:none;
+}
+
+@media screen and (max-width: 1279px){
+  .tmb-calculator-accordion{
+    padding-inline:24px;
+  }
+}
+
+@media screen and (max-width: 1023px){
+  .tmb-calculator-accordion .accordion-item .accordion-body{
+    margin-top:24px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .tmb-calculator-accordion{
+    padding-inline:16px;
+  }
+
+  .tmb-calculator-accordion .accordion-item .accordion-body{
+    margin-top:16px;
+  }
+}
