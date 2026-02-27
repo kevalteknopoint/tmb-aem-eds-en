@@ -1,9 +1,24 @@
 @use '../../styles/base' as *;
 
+.evergreen-right-sticky {
+  height: fit-content;
+  position: sticky;
+  top: 24px;
+
+  @include tablet-lg {
+    display: none;
+  }
+}
+
 .evergreen-left-menu {
-  max-width: 273px;
-  padding-right: 16px;
   width: 100%;
+  height: fit-content;
+  position: sticky;
+  top: 24px;
+
+  @include tablet-lg {
+    display: none;
+  }
 
   .default-content-wrapper{
     display: flex;
@@ -22,13 +37,14 @@
         @include typo-sm-body;
 
         padding: 8px 12px 8px 24px;
+        border-left: 1px solid $line-default;
 
         a{
           color: $body-default;
         }
 
         &.active{
-          border-left: 1px solid $line-default;     
+          border-left: 1px solid $heading-default;     
 
           a{
             color: $heading-default;
@@ -40,5 +56,16 @@
 
   @include tablet{
     display: none;
+  }
+}
+
+.evergreen-grid-wrapper {
+  @include responsive-container;
+
+  display: grid;
+  grid-template-columns: 273px minmax(0, 1fr) 304px;
+
+  @include tablet-lg {
+    grid-template-columns: auto;
   }
 }

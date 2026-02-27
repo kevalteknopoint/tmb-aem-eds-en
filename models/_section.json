@@ -354,23 +354,23 @@
             {
               "name": "Info Well",
               "value": "info-well"
-             },
+            },
             {
               "name": "customer-evergreen-variant",
               "value": "customer-evergreen-variant"
-             },
-             {
+            },
+            {
               "name": "evergreen Left menu",
               "value": "evergreen-left-menu"
-             },
-             {
+            },
+            {
               "name": "Evergreen Right Sticky",
               "value": "evergreen-right-sticky"
-             },
-              {
-                "name": "Margin Bottom Unset",
-                "value": "margin-bottom-unset"
-              }
+            },
+            {
+              "name": "Margin Bottom Unset",
+              "value": "margin-bottom-unset"
+            }
           ]
         }
       ]

@@ -8,6 +8,10 @@
   margin-left: auto;
   margin-right: auto;
 
+  @include tablet-lg {
+    padding-inline: 0
+  }
+
   .mortage-insurance.block {
     display: flex;
     flex-direction: column;
@@ -29,10 +33,14 @@
 
     .insurance-row-1 {
       .insurance-content-1 {
-        p{
+        p {
           @include typo-sm-body;
 
           color: $body-default;
+        }
+
+        .word-separator {
+          color: $line-default;  
         }
       }
     }

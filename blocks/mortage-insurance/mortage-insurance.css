@@ -32,6 +32,10 @@
   text-transform:initial;
 }
 
+.section.mortage-insurance .mortage-insurance.block .insurance-row-1 .insurance-content-1 .word-separator{
+  color:var(--line-default);
+}
+
 .section.mortage-insurance .mortage-insurance.block .insurance-row-2 .insurance-content-2 p{
   color:var(--body-default);
   font-family:var(--font-family-sm-body);
@@ -50,4 +54,10 @@
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
   text-transform:initial;
+}
+
+@media screen and (max-width: 1279px){
+  .section.mortage-insurance{
+    padding-inline:0;
+  }
 }

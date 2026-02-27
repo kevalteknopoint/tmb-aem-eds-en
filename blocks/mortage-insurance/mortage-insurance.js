@@ -29,7 +29,7 @@
             month: 'short',
             year: 'numeric'
           }).format(dateObj);
-          dateElement.textContent = formattedDate;
+          dateElement.textContent = formattedDate?.toUpperCase();
         }
       }
     }

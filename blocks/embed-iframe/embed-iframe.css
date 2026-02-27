@@ -5,6 +5,10 @@
   width:100%;
 }
 
+.section.embed-iframe .video-wrapper{
+  font-size:0;
+}
+
 .section.embed-iframe .block{
   padding-inline:unset;
 }
@@ -14,4 +18,10 @@
   border-radius:var(--radius-card);
   height:auto;
   width:100%;
+}
+
+@media screen and (max-width: 1279px){
+  .section.embed-iframe{
+    padding-inline:0;
+  }
 }

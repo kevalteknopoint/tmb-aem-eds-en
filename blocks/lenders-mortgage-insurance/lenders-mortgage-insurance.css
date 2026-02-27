@@ -7,12 +7,12 @@
 
 .lenders-mortgage-insurance h2{
   color:var(--heading-default);
-  font-family:var(--font-family-h2);
-  font-size:var(--font-size-h2);
-  font-weight:var(--font-weight-h2);
+  font-family:var(--font-family-h2-std);
+  font-size:var(--font-size-h2-std);
+  font-weight:var(--font-weight-h2-std);
   font-weight:500;
-  letter-spacing:var(--font-letter-spacing-h2);
-  line-height:var(--font-height-h2);
+  letter-spacing:var(--font-letter-spacing-h2-std);
+  line-height:var(--font-height-h2-std);
   margin-bottom:16px;
   text-transform:initial;
 }
@@ -95,13 +95,14 @@
   width:100%;
 }
 
-.lenders-mortgage-insurance .content-with-icon .icon.icon-checkmark{
+.lenders-mortgage-insurance .content-with-icon .icon{
   flex-shrink:0;
   height:32px;
   width:32px;
 }
 
-.lenders-mortgage-insurance .content-with-icon .icon.icon-checkmark svg{
+.lenders-mortgage-insurance .content-with-icon .icon svg{
+  color:var(--icon-2-default);
   display:block;
   height:100%;
   width:100%;
@@ -186,6 +187,7 @@
 }
 
 .stepper-evergreen.stepper-container{
+  gap:40px;
   grid-template-columns:1fr;
   margin:0 auto 40px;
   max-width:735px;
@@ -193,6 +195,35 @@
   width:100%;
 }
 
+.stepper-evergreen.stepper-container .default-content-wrapper h1, .stepper-evergreen.stepper-container .default-content-wrapper h2, .stepper-evergreen.stepper-container .default-content-wrapper h3, .stepper-evergreen.stepper-container .default-content-wrapper h4, .stepper-evergreen.stepper-container .default-content-wrapper h5, .stepper-evergreen.stepper-container .default-content-wrapper h6{
+  font-family:var(--font-family-h2-std);
+  font-size:var(--font-size-h2-std);
+  font-weight:var(--font-weight-h2-std);
+  letter-spacing:var(--font-letter-spacing-h2-std);
+  line-height:var(--font-height-h2-std);
+  text-transform:initial;
+}
+
 .stepper-evergreen.stepper-container .default-content-wrapper p{
   margin-bottom:unset;
+}
+
+.stepper-evergreen.stepper-container .stepper-item.is-active .stepper-title p{
+  font-weight:700;
+}
+
+@media screen and (max-width: 1279px){
+  .lenders-mortgage-insurance{
+    padding-inline:0;
+  }
+
+  .stepper-evergreen.stepper-container{
+    padding-inline:0;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .stepper-evergreen.stepper-container{
+    gap:24px;
+  }
 }

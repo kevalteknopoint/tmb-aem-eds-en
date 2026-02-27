@@ -491,6 +491,10 @@
   .momentum-saver-section .momentum-section-wrapper, .momentum-image-saver .momentum-section-wrapper, .image-swapping .momentum-section-wrapper, .momentum-app-badges .momentum-section-wrapper, .momentum-direct-variant .momentum-section-wrapper{
     padding-inline:24px;
   }
+
+  .image-swapping.evergreen-image-swapping-variant{
+    padding-inline:0;
+  }
 }
 
 @media screen and (max-width: 1023px){
