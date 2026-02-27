@@ -1,4 +1,5 @@
 import { div, input } from "../../scripts/dom-helpers.js";
+import './faq-banner-analytics.js';
 
 export default function decorateFaqBanner(block) {
   // Get the inner wrapper (the first div inside .columns.block)

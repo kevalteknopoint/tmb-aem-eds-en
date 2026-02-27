@@ -1,4 +1,9 @@
+import { executeAnalytics } from './customer-analytics.js';
+
+window.customerAnalyticsLoaded = false;
+
 export default async function decorateCustomer(block) {
+  if (!window.customerAnalyticsLoaded) executeAnalytics();
   // 1. Target the columns wrapper and add 'columns-container' class
   // This targets the div that immediately wraps the column cells
   const columnsRow = block.querySelector(".columns > div");

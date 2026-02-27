@@ -307,7 +307,7 @@ export function resetForm(pageRegion, componentName, componentType, componentInd
         }
     });
 }
-function getAllComponents() {
+export function getAllComponents() {
     return GLOBAL_COMPONENT_CLASSES
         .flatMap(className =>
             [...document.querySelectorAll(`.${className}`)]
@@ -318,32 +318,27 @@ function getAllComponents() {
                 : 1
         );
 }
-export function getPageRegion(element) {
+export const getPageRegion = (element) => {
+  if (!element) return '';
 
-    const components = getAllComponents();
-    let currentComponent;
-    try {
-        currentComponent = element.closest(
-            GLOBAL_COMPONENT_CLASSES.map(c => `.${c}`).join(',')
-        );
+  const section = element.closest('.section');
+  if (!section) return '';
 
-    } catch (error) {
-        void error
-    }
-    if (currentComponent) {
-        const position = components.indexOf(currentComponent) + 1;
-        const total = components.length;
+  const rect = section.getBoundingClientRect();
+  const sectionTop = rect.top + window.scrollY;
 
-        if (!position || total === 0) return "top";
+  const pageHeight = document.documentElement.scrollHeight;
 
-        const perRegion = Math.ceil(total / 3);
-        const regionNumber = Math.ceil(position / perRegion);
-        if (regionNumber == 1) return "top"
-        else if (regionNumber == 2) return "middle"
-        else return "bottom"
-    }
-    //   return `homepage-region-${regionNumber}`;
-}
+  const positionRatio = sectionTop / pageHeight;
+
+  if (positionRatio <= 0.33) {
+    return 'top';
+  } else if (positionRatio <= 0.66) {
+    return 'middle';
+  } else {
+    return 'bottom';
+  }
+};
 
 export function getComponentIndex(clickedElement) {
     if (!clickedElement) return -1;
