@@ -260,6 +260,27 @@ export function downloadApp(pageRegion, iconName, ctaTitle, componentName, compo
     });
 }
 
+//this function will fire when user click on any sub menu
+export function subMenuClick(pageRegion,menuText,componentName,componentType,componentIndex,componentPersona,nextpageUrl,interactionType,navElementType,navLocation,linkType,componentId){
+    window.adobeDataLayer.push({
+        "event": "subMenuClick",
+            "data":{
+                "pageRegion":pageRegion,
+                "menuText":menuText,
+                "componentName":componentName,    
+                "componentType":componentType,  
+                "componentIndex":componentIndex,  
+                "componentPersona":componentPersona,
+                "nextpageUrl":nextpageUrl,
+                "interactionType":interactionType,
+                "navElementType":navElementType,
+                "navLocation":navLocation,  
+                "linkType":linkType,                
+                "componentId":componentId                
+            }
+});
+}
+
 
 export function resetForm(pageRegion, componentName, componentType, componentIndex, componentPersona, interactionType, formId, formName, formType, formChannel, formProductGroup, formProduct, formVersion, requiredFieldMissingFlag, testUserFlag, qaSessionFlag, componentId, componentIdValidFlag) {
     window.adobeDataLayer.push({
