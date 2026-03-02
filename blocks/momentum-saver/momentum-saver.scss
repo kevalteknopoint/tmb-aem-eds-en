@@ -367,8 +367,10 @@
           div{
             gap: 32px;
 
-            .columns-img-col {
-              width: 100%;
+            @include tablet-lg {
+              .columns-img-col {
+                width: 100%;
+              }
             }
           }
         }

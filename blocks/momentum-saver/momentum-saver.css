@@ -487,10 +487,6 @@
   gap:32px;
 }
 
-.image-swapping.evergreen-image-swapping-variant .momentum-section-wrapper .columns-wrapper .block div .columns-img-col{
-  width:100%;
-}
-
 @media screen and (max-width: 1279px){
   .momentum-saver-section .momentum-section-wrapper, .momentum-image-saver .momentum-section-wrapper, .image-swapping .momentum-section-wrapper, .momentum-app-badges .momentum-section-wrapper, .momentum-direct-variant .momentum-section-wrapper{
     padding-inline:24px;
@@ -499,6 +495,10 @@
   .image-swapping.evergreen-image-swapping-variant{
     max-width:unset;
     padding-inline:0;
+  }
+
+  .image-swapping.evergreen-image-swapping-variant .momentum-section-wrapper .columns-wrapper .block div .columns-img-col{
+    width:100%;
   }
 }
 
