@@ -410,6 +410,16 @@ html:has(.primary-header.search-active) {
   display: none;
 }
 
+/*! autoprefixer: ignore next */
+.primary-header.search-active .header-actions-wrap .search-btn-wrap:has(.header-search-inp:not(:placeholder-shown)) .search-btn {
+  background-color: $icon-bg-default;
+}
+
+/*! autoprefixer: ignore next */
+.primary-header.search-active .header-actions-wrap .search-btn-wrap:has(.header-search-inp:not(:placeholder-shown)) .search-btn svg {
+  color: $color-header-icon;
+}
+
 .search-results-section {
   display: none;
   position: fixed;

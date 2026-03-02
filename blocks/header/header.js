@@ -221,6 +221,11 @@ export default async function decorate(block) {
   searchBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
+    if (document.querySelector('.primary-header.search-active')) {
+      searchForm?.dispatchEvent(new Event('submit'));
+      return;
+    }
+
     newPrimarySection.classList.add('block-items');
     setTimeout(() => {
       newPrimarySection.classList.add('search-active');
@@ -278,8 +283,11 @@ export default async function decorate(block) {
   searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
+    if (!searchInp.value || searchInp.value.length < 3) return showToast('Please enter your query with atleast 3 characters');
+
     window.location.href = `${searchPath}?search=${searchInp.value}`;
     showToast("Please wait you're being redirected...");
+    return null;
   });
 
   searchInp.addEventListener('keypress', (e) => {
