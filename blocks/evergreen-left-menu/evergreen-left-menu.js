@@ -106,7 +106,13 @@ function calculateReadingTime(wordCount) {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
+        if (entries.every((ent) => !ent.isIntersecting)) {
+          leftMenuUl?.querySelectorAll('li')?.forEach((link) => link.classList.remove("active"));
+          return;
+        }
+
         if (!entry.isIntersecting) return;
+
         const { id } = entry.target;
         leftMenuUl?.querySelectorAll('li')?.forEach((link) => link.classList.remove("active"));
         const active = document.querySelector(`a[href="#${id}"].left-menu-item-link`)?.parentElement;
@@ -115,7 +121,7 @@ function calculateReadingTime(wordCount) {
     },
     {
       threshold: 0.2,
-      rootMargin: "340px 0px 0px 0px",
+      rootMargin: "0px 0px 0px 0px",
     }
   );
 
