@@ -3,6 +3,18 @@ import { createOptimizedPicture, getMetadata, injectIcon, isMobile, isTablet } f
 import { div, ul, li, a, button, input, form, h2, span, p } from '../../scripts/dom-helpers.js';
 import { loadFragment } from '../fragment/fragment.js';
 
+function debounce(callback, delay = 300) {
+  let timeoutId;
+
+  return function innerFn(...args) {
+    clearTimeout(timeoutId);
+
+    timeoutId = setTimeout(() => {
+      callback.apply(this, args);
+    }, delay);
+  };
+}
+
 function toCapitalCase(str) {
   return str
     .split(/[-_]+/)
@@ -16,7 +28,7 @@ async function fetchQueryJson() {
     const basePath = getMetadata('base-path');
     const queryRes = await fetch('/query-index.json');
     const jsonRes = await queryRes.json();
-    window.searchData = jsonRes?.data?.filter((result) => result?.path?.startsWith(basePath));
+    window.searchData = jsonRes?.data?.filter((result) => result?.path?.startsWith(basePath) && !result?.robots?.includes('noindex') && !result?.robots?.includes('nofollow'));
   } catch (error) {
     console.log('Failed to fetch query-index: ', error);
   }
@@ -32,16 +44,19 @@ function populateSearchData(wrapper, data, defaultText) {
   };
 
   data.forEach((item) => {
+    if (item.path === basePath) return null;
+
     const pagePath = item.path?.replace(basePath, '');
     const splitPagePath = pagePath?.split('/');
 
-    if (splitPagePath?.length === 2) return taggedObj.default.push(item);
+    if (splitPagePath?.length <= 2) return taggedObj.default.push(item);
 
     const rootPath = `${basePath}/${splitPagePath?.[1]}`;
-
     const rootPage = window.searchData?.find((page) => page.path === rootPath);
 
-    const rootTitle = rootPage.title || rootPage.ogTitle || toCapitalCase(splitPagePath?.[1]);
+    if (!rootPage) return taggedObj.default.push(item);
+
+    const rootTitle = rootPage?.title || rootPage?.ogTitle || toCapitalCase(splitPagePath?.[1]);
 
     if (!Object.prototype.hasOwnProperty.call(taggedObj, rootTitle)) taggedObj[rootTitle] = [];
 
@@ -226,6 +241,8 @@ export default async function decorate(block) {
       return;
     }
 
+    window.scrollTo(0, 0);
+
     newPrimarySection.classList.add('block-items');
     setTimeout(() => {
       newPrimarySection.classList.add('search-active');
@@ -294,7 +311,7 @@ export default async function decorate(block) {
     if (e.key === 'Enter') searchForm?.dispatchEvent(new Event('submit'));
   });
 
-  searchInp.addEventListener('input', (e) => {
+  searchInp.addEventListener('input', debounce((e) => {
     const targetValue = e.target.value;
 
     if (targetValue?.length < 3) {
@@ -311,7 +328,7 @@ export default async function decorate(block) {
     }
 
     populateSearchData(searchDataWrapper, filteredResults, defaultText);
-  });
+  }, 300));
 
   // Mobile Menu Clicks
   hamMenuBtn.addEventListener('click', (e) => {

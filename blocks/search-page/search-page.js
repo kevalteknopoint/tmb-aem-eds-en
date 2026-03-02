@@ -4,6 +4,27 @@ import { a, b, button, div, form, input, li, p, span, ul } from "../../scripts/d
 const ITEMS_PER_PAGE = 10;
 const VISIBLE_PAGES = 4;
 
+function highlightText(fullText, searchText) {
+  if (!searchText) return fullText;
+
+  const escaped = searchText.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // escape regex
+  const regex = new RegExp(`(${escaped})`, "gi");
+
+  return fullText.replace(regex, `<span class="highlight">$1</span>`);
+}
+
+function debounce(callback, delay = 300) {
+  let timeoutId;
+
+  return function innerFn(...args) {
+    clearTimeout(timeoutId);
+
+    timeoutId = setTimeout(() => {
+      callback.apply(this, args);
+    }, delay);
+  };
+}
+
 function getQuery(key) {
   const queryObj = Array.from(new URL(window.location.href).searchParams.entries()).reduce(
     (acc, v) => {
@@ -30,7 +51,7 @@ async function fetchQueryJson() {
     const basePath = getMetadata('base-path');
     const queryRes = await fetch('/query-index.json');
     const jsonRes = await queryRes.json();
-    window.searchData = jsonRes?.data?.filter((result) => result?.path?.startsWith(basePath));
+    window.searchData = jsonRes?.data?.filter((result) => result?.path?.startsWith(basePath) && !result?.robots?.includes('noindex') && !result?.robots?.includes('nofollow'));
   } catch (error) {
     console.error(error);
   }
@@ -55,15 +76,18 @@ function renderSearchUI(container, searchVal, allResults, currentPage, onPageCha
 
   const resultsList = div({ class: 'search-results-list' });
   currentResults.forEach((res) => {
+    const mainTitle = a({ class: 'item-title', href: res.link });
+    mainTitle.innerHTML += highlightText(res.title, searchVal);
+
     resultsList.appendChild(
       div({ class: 'search-result-item' },
         div({ class: 'item-detail-section' },
-          a({ class: 'item-title', href: res.link }, res.title),
-          span({ class: 'item-desc' }, res.desc)
+          mainTitle,
+          res.desc ? span({ class: 'item-desc' }, res.desc) : ''
         ),
-        div({ class: 'item-category-section' },
+        res.category ? div({ class: 'item-category-section' },
           a({ class: 'item-category', href: res.link }, res.category)
-        ),
+        ) : '',
       )
     );
   });
@@ -132,7 +156,7 @@ function renderSearchUI(container, searchVal, allResults, currentPage, onPageCha
 
   searchForm.addEventListener('submit', (e) => e.preventDefault());
 
-  searchInp.addEventListener('input', (e) => {
+  searchInp.addEventListener('input', debounce((e) => {
     currentSearchTerm = e.target.value;
 
     const basePath = getMetadata('base-path');
@@ -156,7 +180,7 @@ function renderSearchUI(container, searchVal, allResults, currentPage, onPageCha
       if (splitPagePath?.length > 2) {
         const rootPath = `${basePath}/${splitPagePath?.[1]}`;
         const rootPage = window.searchData?.find((page) => page.path === rootPath);
-        const rootTitle = rootPage.title || rootPage.ogTitle || toCapitalCase(splitPagePath?.[1]);
+        const rootTitle = rootPage?.title || rootPage?.ogTitle || toCapitalCase(splitPagePath?.[1]);
         category = rootTitle;
       }
 
@@ -171,7 +195,7 @@ function renderSearchUI(container, searchVal, allResults, currentPage, onPageCha
     });
 
     handlePageChange(1);
-  });
+  }, 300));
 
   crossBtn.addEventListener('click', (e) => {
     e.preventDefault();
