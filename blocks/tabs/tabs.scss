@@ -10,7 +10,7 @@
     gap: 32px;
   }
 
-  .default-content-wrapper {
+  & > .default-content-wrapper {
     @include responsive-container;
 
     h1,
