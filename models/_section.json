@@ -338,6 +338,10 @@
             {
               "name": "About Us Columns Content (Governance Columns)",
               "value": "aboutus-grid-content"
+            },
+            {
+              "name": "Tab Panel",
+              "value": "tabs-panel"
             }
           ]
         }

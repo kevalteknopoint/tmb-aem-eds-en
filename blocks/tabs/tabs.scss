@@ -76,46 +76,9 @@
     }
 
     .tabs-panel {
-      @include responsive-container;
-
-      overflow: auto;
-      margin-top: 40px;
-
-      @include mobile {
-        margin-top: 24px;
-      }
-
       &[aria-hidden='true'] {
         display: none;
       }
-
-      div {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 64px;
-        row-gap: 16px;
-
-        @include tablet {
-          display: flex;
-          flex-direction: column;
-        }
-
-        h3,
-        h2 {
-          color: $heading-light;
-        
-          @include typo-heading3;
-
-          grid-row: 1;
-        }
-
-        p {
-          grid-row: 2;
-          color: black;
-          font-size: 16px;
-        }
-      }
-
     }
   }
 }
