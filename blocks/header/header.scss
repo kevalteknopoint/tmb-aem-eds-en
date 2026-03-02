@@ -88,6 +88,22 @@ html:has(.primary-header.search-active) {
     .header-search-form {
       display: flex;
     }
+
+    .primary-nav-list {
+      opacity: 0;
+    }
+
+    @include tablet {
+      .logo-nav-wrap {
+        opacity: 0;
+      }
+    }
+
+    @include mobile {
+      .login-btn-wrap {
+        opacity: 0;
+      }
+    }
   }
 
   &.search-active {
@@ -190,6 +206,8 @@ html:has(.primary-header.search-active) {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
   gap: 28px;
 
   @include tablet {
@@ -217,6 +235,8 @@ html:has(.primary-header.search-active) {
   align-items: center;
   padding: 28px 0;
   gap: 24px;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
 
   @include tablet {
     display: none;
@@ -372,6 +392,8 @@ html:has(.primary-header.search-active) {
     justify-content: center;
     align-items: center;
     width: fit-content;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
 
     &:has(.disabled) {
       cursor: not-allowed;
