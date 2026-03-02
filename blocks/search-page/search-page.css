@@ -140,6 +140,8 @@
 }
 
 .search-results-page .search-page-results-container .search-results-list .search-result-item .item-detail-section{
+  flex:1;
+  min-width:0;
   width:100%;
 }
 
