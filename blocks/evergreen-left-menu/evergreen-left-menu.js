@@ -1,5 +1,24 @@
 import { a, div, li, ul } from "../../scripts/dom-helpers.js";
 
+// function createRootMarginOverlay(rootMargin) {
+//   const margins = rootMargin.split(" ").map((v) => parseInt(v, 10));
+
+//   const overlay = document.createElement("div");
+//   overlay.style.position = "fixed";
+//   overlay.style.pointerEvents = "none";
+//   overlay.style.border = "2px dashed red";
+//   overlay.style.zIndex = "9999";
+//   overlay.style.width = `99%`;
+//   overlay.style.margin = '0 auto';
+
+//   overlay.style.top = `${margins[0]}px`;
+//   overlay.style.right = `${margins[1]}px`;
+//   overlay.style.bottom = `${margins[2]}px`;
+//   overlay.style.left = `${margins[3]}px`;
+
+//   document.body.appendChild(overlay);
+// }
+
 function slugify(title) {
   return title
     .toLowerCase()
@@ -70,7 +89,18 @@ function calculateReadingTime(wordCount) {
   allHeadings.forEach((head) => {
     const slugId = slugify(head.textContent || '');
     head.id = slugId;
-    leftMenuUl.appendChild(li({ class: 'left-menu-item' }, a({ class: 'left-menu-item-link', href: `#${slugId}` }, head.textContent)));
+    const headLink = a({ class: 'left-menu-item-link', href: `#${slugId}` }, head.textContent);
+    leftMenuUl.appendChild(li({ class: 'left-menu-item' }, headLink));
+
+    headLink.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const linkedHeading = document.querySelector(`.evergreen-main-content h2#${slugId}, .evergreen-main-content h3#${slugId}`);
+      window.scrollTo({
+        top: linkedHeading.offsetTop - 340,
+        behavior: 'smooth'
+      });
+    });
   });
 
   const observer = new IntersectionObserver(
@@ -84,10 +114,12 @@ function calculateReadingTime(wordCount) {
       });
     },
     {
-      threshold: 0.4,
-      rootMargin: "-141px 0px -40% 0px",
+      threshold: 0.2,
+      rootMargin: "340px 0px 0px 0px",
     }
   );
+
+  // createRootMarginOverlay("340px 0px 0px 0px");
 
   allHeadings.forEach((head) => observer.observe(head));
 }());

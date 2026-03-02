@@ -591,7 +591,7 @@
 }
 
 .customer.customer-evergreen-variant .columns-wrapper .block .columns-container div p.button-container a{
-  background-color:var(--color-button-secondary-default);
+  background-color:var(--color-button-white-default);
   border:none;
   color:var(--color-button-text-stroke-default);
   font-size:var(--font-size-h5);
@@ -601,19 +601,19 @@
 }
 
 .customer.customer-evergreen-variant .columns-wrapper .block .columns-container div p.button-container a:hover{
-  background-color:var(--color-button-secondary-hover);
+  background-color:var(--color-button-white-hover);
   border:none;
   color:var(--color-button-text-stroke-hover);
 }
 
 .customer.customer-evergreen-variant .columns-wrapper .block .columns-container div p.button-container a:active{
-  background-color:var(--color-button-secondary-press);
+  background-color:var(--color-button-white-press);
   border:none;
   color:var(--color-button-text-stroke-press);
 }
 
 .customer.customer-evergreen-variant .columns-wrapper .block .columns-container div p.button-container a:focus-visible{
-  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  box-shadow:0 0 0 2px var(--color-focus-default), 0 0 0 3px var(--color-focus-reversed);
   outline:none;
 }
 

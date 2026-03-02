@@ -201,7 +201,7 @@
               justify-content: start;
 
               a {
-                @include button('secondary');
+                @include button('white');
               }
             }
           }
