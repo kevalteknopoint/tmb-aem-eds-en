@@ -221,7 +221,10 @@ export default async function decorate(block) {
   searchBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
-    newPrimarySection.classList.add('search-active');
+    newPrimarySection.classList.add('block-items');
+    setTimeout(() => {
+      newPrimarySection.classList.add('search-active');
+    });
     searchInp.focus();
   });
 
@@ -232,6 +235,9 @@ export default async function decorate(block) {
 
     if (e.target.closest('.search-back-btn')) e.preventDefault();
     newPrimarySection.classList.remove('search-active');
+    setTimeout(() => {
+      newPrimarySection.classList.remove('block-items');
+    }, 350);
   });
 
   // Mobile Menu

@@ -84,6 +84,12 @@ html:has(.primary-header.search-active) {
     @include responsive-container;
   }
 
+  &.block-items {
+    .header-search-form {
+      display: flex;
+    }
+  }
+
   &.search-active {
     .primary-nav-list {
       display: none;
@@ -128,36 +134,17 @@ html:has(.primary-header.search-active) {
     }
 
     .header-search-form {
-      display: flex;
+      width: 100%;
       align-items: center;
 
       .search-back-btn {
-        display: none;
-
         @include tablet {
           display: block;
-          padding-left: 16px;
-          margin-right: 16px;
-        }
-        
-        svg {
-          width: 13.6px;
-          height: 13.6px;
-          color: $heading-default;
         }
       }
 
       .search-cross-btn {
         display: block;
-        width: fit-content;
-        height: fit-content;
-        padding: 11.5px;
-
-        svg {
-          min-width: 10px;
-          width: 10px;
-          height: 10px;
-        }
       }
     }
 
@@ -306,11 +293,20 @@ html:has(.primary-header.search-active) {
 
   .search-btn-wrap {
     display: flex;
+    min-width: 40px;
+    width: 40px;
+    transition: all 0.3s ease-in-out;
+
+    @include mobile {
+      min-width: 24px;
+      width: 24px;
+    }
   }
 
   .header-search-form{
     display: none;
-    width: 100%;
+    width: 0;
+    transition: width 0.5s ease;
 
     .header-search-inp {
       @include typo-body;
@@ -323,6 +319,33 @@ html:has(.primary-header.search-active) {
 
       @include tablet {
         padding-left: 0;
+      }
+    }
+
+    .search-back-btn {
+      display: none;
+
+      @include tablet {
+        padding-left: 16px;
+        margin-right: 16px;
+      }
+      
+      svg {
+        width: 13.6px;
+        height: 13.6px;
+        color: $heading-default;
+      }
+    }
+
+    .search-cross-btn {
+      width: fit-content;
+      height: fit-content;
+      padding: 11.5px;
+
+      svg {
+        min-width: 10px;
+        width: 10px;
+        height: 10px;
       }
     }
   }

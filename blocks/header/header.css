@@ -108,6 +108,10 @@ html:has(.primary-header.search-active) .search-results-section{
   width:100%;
 }
 
+.primary-header.block-items .header-search-form{
+  display:flex;
+}
+
 .primary-header.search-active .primary-nav-list{
   display:none;
 }
@@ -144,32 +148,11 @@ html:has(.primary-header.search-active) .search-results-section{
 
 .primary-header.search-active .header-search-form{
   align-items:center;
-  display:flex;
-}
-
-.primary-header.search-active .header-search-form .search-back-btn{
-  display:none;
-}
-
-.primary-header.search-active .header-search-form .search-back-btn svg{
-  color:var(--heading-default);
-  height:13.6px;
-  width:13.6px;
+  width:100%;
 }
 
 .primary-header.search-active .header-search-form .search-cross-btn{
   display:block;
-  height:-moz-fit-content;
-  height:fit-content;
-  padding:11.5px;
-  width:-moz-fit-content;
-  width:fit-content;
-}
-
-.primary-header.search-active .header-search-form .search-cross-btn svg{
-  height:10px;
-  min-width:10px;
-  width:10px;
 }
 
 .ham-menu-btn-wrap{
@@ -258,11 +241,15 @@ html:has(.primary-header.search-active) .search-results-section{
 
 .header-actions-wrap .search-btn-wrap{
   display:flex;
+  min-width:40px;
+  transition:all 0.3s ease-in-out;
+  width:40px;
 }
 
 .header-actions-wrap .header-search-form{
   display:none;
-  width:100%;
+  transition:width 0.5s ease;
+  width:0;
 }
 
 .header-actions-wrap .header-search-form .header-search-inp{
@@ -277,6 +264,30 @@ html:has(.primary-header.search-active) .search-results-section{
   padding:8px 0 8px 22px;
   text-transform:initial;
   width:100%;
+}
+
+.header-actions-wrap .header-search-form .search-back-btn{
+  display:none;
+}
+
+.header-actions-wrap .header-search-form .search-back-btn svg{
+  color:var(--heading-default);
+  height:13.6px;
+  width:13.6px;
+}
+
+.header-actions-wrap .header-search-form .search-cross-btn{
+  height:-moz-fit-content;
+  height:fit-content;
+  padding:11.5px;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
+.header-actions-wrap .header-search-form .search-cross-btn svg{
+  height:10px;
+  min-width:10px;
+  width:10px;
 }
 
 .header-actions-wrap .search-btn{
@@ -548,8 +559,6 @@ html:has(.primary-header.search-active) .search-results-section{
 
   .primary-header.search-active .header-search-form .search-back-btn{
     display:block;
-    margin-right:16px;
-    padding-left:16px;
   }
 
   .primary-header.search-active .logo-nav-wrap{
@@ -570,6 +579,11 @@ html:has(.primary-header.search-active) .search-results-section{
 
   .header-actions-wrap .header-search-form .header-search-inp{
     padding-left:0;
+  }
+
+  .header-actions-wrap .header-search-form .search-back-btn{
+    margin-right:16px;
+    padding-left:16px;
   }
 
   .search-results-section .no-results{
@@ -609,6 +623,11 @@ html:has(.primary-header.search-active) .search-results-section{
 
   .header-actions-wrap{
     padding:12.5px 0;
+  }
+
+  .header-actions-wrap .search-btn-wrap{
+    min-width:24px;
+    width:24px;
   }
 
   .search-results-section{
