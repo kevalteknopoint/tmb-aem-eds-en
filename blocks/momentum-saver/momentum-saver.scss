@@ -364,10 +364,16 @@
 
       .columns-wrapper{
         .block{
-          div{
+          & > div{
             gap: 32px;
 
-            @include tablet-lg {
+            @include tablet {
+              flex-direction: row;
+            }
+
+            @include mobile {
+              flex-direction: column;
+
               .columns-img-col {
                 width: 100%;
               }
