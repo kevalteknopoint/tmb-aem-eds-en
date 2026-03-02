@@ -257,6 +257,27 @@ header {
   ol {
     list-style-type: decimal;
   }
+
+  .button-container {
+    display: inline-block;
+    margin-top: 24px;
+    margin-right: 8px;
+    margin-bottom: 0;
+
+    a:not(.secondary) {
+      @include button('primary');
+
+      font-style: normal;
+      text-decoration: unset;
+    }
+    
+    a.secondary {
+      @include button('outline');
+
+      font-style: normal;
+      text-decoration: unset;
+    }
+  }
 }
 
 .margin-bottom-unset{
