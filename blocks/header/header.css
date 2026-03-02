@@ -48,6 +48,10 @@ html:has(.primary-header.search-active){
   overflow:hidden;
 }
 
+html:has(.primary-header.search-active) body{
+  overflow:hidden;
+}
+
 html:has(.primary-header.search-active) .search-results-section{
   display:block;
 }

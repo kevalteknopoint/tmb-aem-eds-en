@@ -27,6 +27,10 @@
 html:has(.primary-header.search-active) {
   overflow: hidden;
 
+  body {
+    overflow: hidden;
+  }
+
   .search-results-section {
     display: block;
   }
