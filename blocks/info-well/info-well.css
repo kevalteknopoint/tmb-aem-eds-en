@@ -1,5 +1,6 @@
 .info-well-container .info-well-wrapper .info-well{
-  background:rgb(27 231 255 / 7%);
+  background:var(--info-well-default);
+  border-radius:var(--radius-info-well);
   padding:16px;
 }
 

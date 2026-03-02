@@ -355,7 +355,8 @@
     width: 100%;
 
     @include tablet-lg {
-      padding-inline: 0
+      padding-inline: 0;
+      max-width: unset;
     }
 
     .momentum-section-wrapper{
@@ -365,6 +366,10 @@
         .block{
           div{
             gap: 32px;
+
+            .columns-img-col {
+              width: 100%;
+            }
           }
         }
       }

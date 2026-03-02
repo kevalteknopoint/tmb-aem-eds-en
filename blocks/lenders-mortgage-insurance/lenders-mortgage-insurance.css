@@ -214,10 +214,12 @@
 
 @media screen and (max-width: 1279px){
   .lenders-mortgage-insurance{
+    max-width:unset;
     padding-inline:0;
   }
 
   .stepper-evergreen.stepper-container{
+    max-width:unset;
     padding-inline:0;
   }
 }

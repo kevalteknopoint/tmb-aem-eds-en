@@ -36,6 +36,10 @@
   color:var(--line-default);
 }
 
+.section.mortage-insurance .mortage-insurance.block .insurance-row-2 .insurance-content-2 img{
+  width:100%;
+}
+
 .section.mortage-insurance .mortage-insurance.block .insurance-row-2 .insurance-content-2 p{
   color:var(--body-default);
   font-family:var(--font-family-sm-body);
@@ -58,6 +62,7 @@
 
 @media screen and (max-width: 1279px){
   .section.mortage-insurance{
+    max-width:unset;
     padding-inline:0;
   }
 }

@@ -1,6 +1,7 @@
 .evergreen-right-sticky{
   height:-moz-fit-content;
   height:fit-content;
+  margin-top:340px !important;
   position:sticky;
   top:24px;
 }
@@ -8,6 +9,7 @@
 .evergreen-left-menu{
   height:-moz-fit-content;
   height:fit-content;
+  margin-top:340px;
   position:sticky;
   top:24px;
   width:100%;

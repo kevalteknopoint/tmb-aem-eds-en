@@ -9,7 +9,8 @@
   margin-right: auto;
 
   @include tablet-lg {
-    padding-inline: 0
+    padding-inline: 0;
+    max-width: unset;
   }
 
   .mortage-insurance.block {
@@ -47,7 +48,11 @@
 
     .insurance-row-2 {
       .insurance-content-2 {
-        p{
+        img {
+          width: 100%;
+        }
+        
+        p {
           @include typo-sm-body;
 
           color: $body-default;

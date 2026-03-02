@@ -3,7 +3,8 @@
 .info-well-container{
   .info-well-wrapper{
     .info-well{
-      background: rgba(27, 231, 255, 0.07);
+      background: $info-well-default;
+      border-radius: $radius-info-well;
       padding: 16px;
 
       h5{
