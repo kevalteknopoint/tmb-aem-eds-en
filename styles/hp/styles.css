@@ -653,6 +653,20 @@ header{
   margin-bottom:unset;
 }
 
+svg.icon-svg.icon-invert{
+  background-color:var(--icon-bg-default) !important;
+  border-radius:50%;
+  color:var(--icon-default) !important;
+  padding:10px;
+}
+
+svg.icon-svg.icon-invert-bg{
+  background-color:var(--icon-bg-reverse) !important;
+  border-radius:50%;
+  color:var(--icon-reverse) !important;
+  padding:10px;
+}
+
 @media screen and (max-width: 1439px){
   :root{
     --carousel-fix-x:64px;

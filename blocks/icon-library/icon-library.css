@@ -85,6 +85,10 @@
   text-transform:initial;
 }
 
+.icon-library p:has(.icon-invert-bg){
+  background-color:var(--bg-reverse);
+}
+
 .icon-library p svg{
   color:var(--icon-reverse);
   height:40px;

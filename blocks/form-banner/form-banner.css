@@ -1,0 +1,44 @@
+.form-banner{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
+}
+
+.form-banner .default-content-wrapper{
+  max-width:980px;
+}
+
+.form-banner h1, .form-banner h2, .form-banner h3, .form-banner h4, .form-banner h5, .form-banner h6{
+  color:var(--heading-default);
+  font-family:var(--font-family-lg);
+  font-size:var(--font-size-lg);
+  font-weight:var(--font-weight-lg);
+  letter-spacing:var(--font-letter-spacing-lg);
+  line-height:var(--font-height-lg);
+  text-transform:initial;
+}
+
+.form-banner p{
+  color:var(--body-default);
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  margin-top:16px;
+  text-transform:initial;
+}
+
+@media screen and (max-width: 1279px){
+  .form-banner{
+    padding-inline:24px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .form-banner{
+    padding-inline:16px;
+  }
+}

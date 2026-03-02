@@ -42,13 +42,16 @@
       "faq-legal",
       "faq-legal-table",
       "legal-privacy",
+      "calculator",
       "teachers-calculator-block",
       "alerts",
       "system-table",
       "mortage-insurance",
       "embed-iframe",
       "info-well",
-      "evergreen-left-menu"
+      "evergreen-left-menu",
+      "card-with-quote",
+      "tmb-calculator-accordion"
     ]
   },
   {
@@ -74,6 +77,9 @@
     "components": [
       "fragment-item"
     ]
+  },
+  {
+    "id": "card-with-quote"
   },
   {
     "id": "cards",
@@ -144,6 +150,12 @@
     "id": "tabs",
     "components": [
       "tabsitem"
+    ]
+  },
+  {
+    "id": "tmb-calculator-accordion",
+    "components": [
+      "tmb-calculator-accordion-item"
     ]
   }
 ]

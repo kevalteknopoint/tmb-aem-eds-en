@@ -370,6 +370,18 @@
             {
               "name": "Margin Bottom Unset",
               "value": "margin-bottom-unset"
+            },
+            {
+              "name": "404 Page",
+              "value": "variant-404"
+            },
+            {
+              "name": "Forms Banner",
+              "value": "form-banner"
+            },
+            {
+              "name": "About Us Columns Content (Governance Columns)",
+              "value": "aboutus-grid-content"
             }
           ]
         }
@@ -414,13 +426,16 @@
         "faq-legal",
         "faq-legal-table",
         "legal-privacy",
+        "calculator",
         "teachers-calculator-block",
         "alerts",
         "system-table",
         "mortage-insurance",
         "embed-iframe",
         "info-well",
-        "evergreen-left-menu"
+        "evergreen-left-menu",
+        "card-with-quote",
+        "tmb-calculator-accordion"
       ]
     }
   ]

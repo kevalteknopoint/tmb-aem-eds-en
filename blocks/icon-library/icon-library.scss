@@ -58,6 +58,8 @@
   }
 
   p {
+    @include typo-disclaimer;
+
     display: flex;
     cursor: pointer;
     flex-direction: column-reverse;
@@ -68,7 +70,9 @@
     padding: 24px;
     gap: 8px;
 
-    @include typo-disclaimer;
+    &:has(.icon-invert-bg) {
+      background-color: $bg-reverse;
+    }
 
     svg {
       width: 40px;
