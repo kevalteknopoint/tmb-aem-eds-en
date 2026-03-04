@@ -27,6 +27,10 @@
 html:has(.primary-header.search-active) {
   overflow: hidden;
 
+  body {
+    overflow: hidden;
+  }
+
   .search-results-section {
     display: block;
   }
@@ -84,6 +88,28 @@ html:has(.primary-header.search-active) {
     @include responsive-container;
   }
 
+  &.block-items {
+    .header-search-form {
+      display: flex;
+    }
+
+    .primary-nav-list {
+      opacity: 0;
+    }
+
+    @include tablet {
+      .logo-nav-wrap {
+        opacity: 0;
+      }
+    }
+
+    @include mobile {
+      .login-btn-wrap {
+        opacity: 0;
+      }
+    }
+  }
+
   &.search-active {
     .primary-nav-list {
       display: none;
@@ -128,36 +154,17 @@ html:has(.primary-header.search-active) {
     }
 
     .header-search-form {
-      display: flex;
+      width: 100%;
       align-items: center;
 
       .search-back-btn {
-        display: none;
-
         @include tablet {
           display: block;
-          padding-left: 16px;
-          margin-right: 16px;
-        }
-        
-        svg {
-          width: 13.6px;
-          height: 13.6px;
-          color: $heading-default;
         }
       }
 
       .search-cross-btn {
         display: block;
-        width: fit-content;
-        height: fit-content;
-        padding: 11.5px;
-
-        svg {
-          min-width: 10px;
-          width: 10px;
-          height: 10px;
-        }
       }
     }
 
@@ -203,6 +210,8 @@ html:has(.primary-header.search-active) {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
   gap: 28px;
 
   @include tablet {
@@ -230,6 +239,8 @@ html:has(.primary-header.search-active) {
   align-items: center;
   padding: 28px 0;
   gap: 24px;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
 
   @include tablet {
     display: none;
@@ -306,11 +317,20 @@ html:has(.primary-header.search-active) {
 
   .search-btn-wrap {
     display: flex;
+    min-width: 40px;
+    width: 40px;
+    transition: all 0.3s ease-in-out;
+
+    @include mobile {
+      min-width: 24px;
+      width: 24px;
+    }
   }
 
   .header-search-form{
     display: none;
-    width: 100%;
+    width: 0;
+    transition: width 0.5s ease;
 
     .header-search-inp {
       @include typo-body;
@@ -323,6 +343,34 @@ html:has(.primary-header.search-active) {
 
       @include tablet {
         padding-left: 0;
+      }
+    }
+
+    .search-back-btn {
+      display: none;
+
+      @include tablet {
+        padding-left: 16px;
+        margin-right: 16px;
+      }
+      
+      svg {
+        width: 13.6px;
+        height: 13.6px;
+        color: $heading-default;
+      }
+    }
+
+    .search-cross-btn {
+      width: fit-content;
+      height: fit-content;
+      padding: 11.5px;
+
+      svg {
+        color: $heading-default;
+        min-width: 10px;
+        width: 10px;
+        height: 10px;
       }
     }
   }
@@ -349,6 +397,8 @@ html:has(.primary-header.search-active) {
     justify-content: center;
     align-items: center;
     width: fit-content;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
 
     &:has(.disabled) {
       cursor: not-allowed;
@@ -363,6 +413,16 @@ html:has(.primary-header.search-active) {
 /*! autoprefixer: ignore next */
 .header-actions-wrap .header-search-form:has(.header-search-inp:placeholder-shown) .search-cross-btn {
   display: none;
+}
+
+/*! autoprefixer: ignore next */
+.primary-header.search-active .header-actions-wrap .search-btn-wrap:has(.header-search-inp:not(:placeholder-shown)) .search-btn {
+  background-color: $icon-bg-default;
+}
+
+/*! autoprefixer: ignore next */
+.primary-header.search-active .header-actions-wrap .search-btn-wrap:has(.header-search-inp:not(:placeholder-shown)) .search-btn svg {
+  color: $color-header-icon;
 }
 
 .search-results-section {
@@ -389,6 +449,18 @@ html:has(.primary-header.search-active) {
   &:has(.dynamic-search-results:not(.no-data)) {
     .popular-search-results {
       background-color: #EDF3F34D;
+    }
+  }
+  
+  .no-results {
+    @include typo-heading2-std;
+
+    color: $heading-default;
+    text-align: center;
+    margin-top: 40px;
+
+    @include tablet {
+      margin-top: 24px;
     }
   }
 
