@@ -451,9 +451,17 @@ function decorateIcon(span) {
     .find((c) => c.startsWith('icon-'))
     .substring(5);
 
+  let iconType = '';
+
+  if (iconName?.includes('--invert-bg')) {
+    iconType = ' icon-invert-bg';
+  } else if (iconName?.includes('--invert')) {
+    iconType = ' icon-invert';
+  }
+
   span.innerHTML = `
-    <svg class="icon-svg${iconName?.includes('--invert') ? ' icon-invert' : ''}">
-      <use href="#${iconName?.replace('--invert', '')}"></use>
+    <svg class="icon-svg${iconType}">
+      <use href="#${iconName?.replace('--invert-bg', '')?.replace('--invert', '')}"></use>
     </svg>
   `;
 }
