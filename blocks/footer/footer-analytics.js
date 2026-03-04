@@ -1,8 +1,10 @@
-import { ctaInteraction, menuInteraction, minifyText, socialmediaClick, getComponentIndex,getPageRegion } from "../../scripts/analytics/exports.js";
+import { ctaInteraction, menuInteraction, minifyText, socialmediaClick, getComponentIndex,getPageRegion ,getPersona} from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
     const pageRegion = getPageRegion(e.target.closest('.tmb-footer')?.querySelector("ul li a"));
     const componentIndex = getComponentIndex(e.target.closest('.tmb-footer')?.querySelector("ul li a"));
+    // const getPersona = getComponentIndex(e.target.closest('.tmb-footer')?.querySelector("ul li a"));
+    const nextPageURL = getComponentIndex(e.target.closest('.tmb-footer')?.querySelector("ul li a"));
   if (e.target.closest('.ul-4') || e.target.closest('.ul-9')) {
     const anchor = e.target.closest('a');
     if (!anchor) return;
@@ -21,7 +23,7 @@ document.addEventListener('click', (e) => {
       text = minifyText(closestLi?.querySelector('& > p')?.textContent);
     }
 
-    menuInteraction(pageRegion, minifyText(text), minifyText(anchor.textContent), '', 'global footer', 'footer', componentIndex);
+    menuInteraction(pageRegion, minifyText(text), minifyText(anchor.textContent), '', 'global footer', 'footer', componentIndex,getPersona(),nextPageURL,'menu-click','internal','','','','footer','');
   }
 
   if (e.target.closest('.ul-16')) {

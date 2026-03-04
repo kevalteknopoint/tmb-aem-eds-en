@@ -70,7 +70,8 @@
 import Swiper from "../../libs/swiper/swiper-bundle.min.js";
 import { injectIcon } from "../../scripts/aem.js";
 import { button, div } from "../../scripts/dom-helpers.js";
-import './news-homepage-analytics.js'
+import './news-homepage-analytics.js';
+import './news-helpful-analytics.js';
 export default function cardCarousel(block) {
   if (window.location.origin.includes('author')) return;
 

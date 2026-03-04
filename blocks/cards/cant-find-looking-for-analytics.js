@@ -18,5 +18,17 @@ document.addEventListener('click', (e) => {
 
       ctaInteraction(pageRegion, ctaText, minifyText(ctaTitleEle?.textContent), 'can’t find what you are looking for?', minifyText(title?.textContent), '', componentIndex, getPersona(), nextPageURL, 'cta-click', 'external', 'in-page-nav', 'in-content', '', '', '', 'can’t find what you are looking for?', '');
     }
+    if (target.closest('.faq-cant-find-looking-for.faq-cant-find-looking-for-variant')) {
+      const targetContainer = target.closest('.faq-cant-find-looking-for.faq-cant-find-looking-for-variant');
+      const titleContainer = targetContainer?.querySelector('.default-content-wrapper');
+      const title = titleContainer?.querySelector('h1, h2, h3, h4, h5, h6');
+      const ctaTitleEle = linkEle?.closest('.cards-card-body')?.querySelector('h1, h2, h3, h4, h5, h6');
+      const pageRegion = getPageRegion(linkEle);
+      const componentIndex = getComponentIndex(linkEle);
+      const nextPageURL = (linkEle)?.getAttribute("href");
+
+      ctaInteraction(pageRegion, ctaText, minifyText(ctaTitleEle?.textContent), 'WAYS TO GET IN TOUCH', minifyText(title?.textContent), '', componentIndex, getPersona(), nextPageURL, 'cta-click', 'external', 'in-page-nav', 'in-content', '', '', '', 'WAYS TO GET IN TOUCH', '');
+    }
+    
   }
 });
