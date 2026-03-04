@@ -67,6 +67,18 @@ export default function loadNonBlockLibs() {
       name: 'system-table',
     },
     {
+      selector: '.mortgage-insurance',
+      name: 'mortgage-insurance',
+    },
+    {
+      selector: '.lenders-mortgage-insurance',
+      name: 'lenders-mortgage-insurance',
+    },
+    {
+      selector: '.evergreen-left-menu',
+      name: 'evergreen-left-menu',
+    },
+    {
       selector: '.form-banner',
       name: 'form-banner',
     },

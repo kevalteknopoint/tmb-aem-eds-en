@@ -1,0 +1,61 @@
+{
+  "definitions": [
+    {
+      "title": "Mortage Insurance",
+      "id": "mortage-insurance",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Mortage Insurance",
+              "model": "mortage-insurance",
+              "filter": "mortage-insurance"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "mortage-insurance",
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "mortage-insurance-title",
+          "label": "Mortage Insurance Title",
+          "valueType": "string"
+        },
+        {
+          "component": "date-time",
+          "valueType": "date",
+          "name": "date",
+          "label": "Date",
+          "placeholder": "YYYY-MM-DD",
+          "displayFormat": null,
+          "valueFormat": null
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "richtext",
+          "name": "mortage-insurance-description",
+          "label": "Mortage Insurance Description",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "mortage-insurance",
+      "components": []
+    }
+  ]
+}

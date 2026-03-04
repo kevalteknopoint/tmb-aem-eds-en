@@ -427,8 +427,52 @@
             "value": "system-table"
           },
           {
+            "name": "Mortage Insurance",
+            "value": "mortage-insurance"
+          },
+          {
+            "name": "Lenders Mortgage Insurance",
+            "value": "lenders-mortgage-insurance"
+          },
+          {
+            "name": "Lenders Mortgage Insurance Check",
+            "value": "lenders-mortgage-insurance-check"
+          },
+          {
+            "name": "Embed Iframe",
+            "value": "embed-iframe"
+          },
+          {
             "name": "Generic Body Copy",
             "value": "generic-body-copy"
+          },
+          {
+            "name": "Stepper Evergreen",
+            "value": "stepper-evergreen"
+          },
+          {
+            "name": "Evergreen Image swapping Variant",
+            "value": "evergreen-image-swapping-variant"
+          },
+          {
+            "name": "Info Well",
+            "value": "info-well"
+          },
+          {
+            "name": "customer-evergreen-variant",
+            "value": "customer-evergreen-variant"
+          },
+          {
+            "name": "evergreen Left menu",
+            "value": "evergreen-left-menu"
+          },
+          {
+            "name": "Evergreen Right Sticky",
+            "value": "evergreen-right-sticky"
+          },
+          {
+            "name": "Margin Bottom Unset",
+            "value": "margin-bottom-unset"
           },
           {
             "name": "404 Page",
@@ -1301,6 +1345,17 @@
     ]
   },
   {
+    "id": "embed-iframe",
+    "fields": [
+      {
+        "component": "text",
+        "name": "video-link",
+        "label": "Embed Link",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "faq-category",
     "fields": [
       {
@@ -1587,6 +1642,17 @@
     ]
   },
   {
+    "id": "info-well",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "info-well-description",
+        "label": "Info Well Description",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "rate-details",
     "fields": [
       {
@@ -1605,6 +1671,39 @@
         "component": "text",
         "name": "rate-disclaimer",
         "label": "Rate Disclaimer",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "mortage-insurance",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "mortage-insurance-title",
+        "label": "Mortage Insurance Title",
+        "valueType": "string"
+      },
+      {
+        "component": "date-time",
+        "valueType": "date",
+        "name": "date",
+        "label": "Date",
+        "placeholder": "YYYY-MM-DD",
+        "displayFormat": null,
+        "valueFormat": null
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "mortage-insurance-description",
+        "label": "Mortage Insurance Description",
         "valueType": "string"
       }
     ]
