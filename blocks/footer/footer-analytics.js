@@ -1,13 +1,14 @@
 import { ctaInteraction, menuInteraction, minifyText, socialmediaClick, getComponentIndex,getPageRegion ,getPersona} from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
-    const pageRegion = getPageRegion(e.target.closest('.tmb-footer')?.querySelector("ul li a"));
-    const componentIndex = getComponentIndex(e.target.closest('.tmb-footer')?.querySelector("ul li a"));
-    // const getPersona = getComponentIndex(e.target.closest('.tmb-footer')?.querySelector("ul li a"));
-    const nextPageURL = getComponentIndex(e.target.closest('.tmb-footer')?.querySelector("ul li a"));
+
   if (e.target.closest('.ul-4') || e.target.closest('.ul-9')) {
     const anchor = e.target.closest('a');
     if (!anchor) return;
+
+    const pageRegion = getPageRegion(anchor);
+    const componentIndex = getComponentIndex(anchor);
+    const nextPageURL = anchor?.getAttribute('href') || '';
 
     const closestLi = anchor?.closest('ul')?.closest('li');
 
@@ -19,8 +20,8 @@ document.addEventListener('click', (e) => {
       }
     });
 
-    if (!text && closestLi?.querySelector('& > p')) {
-      text = minifyText(closestLi?.querySelector('& > p')?.textContent);
+    if (!text && closestLi?.querySelector(':scope > p')) {
+      text = minifyText(closestLi?.querySelector(':scope > p')?.textContent);
     }
 
     menuInteraction(pageRegion, minifyText(text), minifyText(anchor.textContent), '', 'global footer', 'footer', componentIndex,getPersona(),nextPageURL,'menu-click','internal','','','','footer','');
