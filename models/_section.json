@@ -40,6 +40,10 @@
           "label": "Style",
           "options": [
             {
+              "name": "Box Container",
+              "value": "box-container"
+            },
+            {
               "name": "Top Spacing",
               "value": "top-margin"
             },
@@ -308,8 +312,76 @@
               "value": "legal-privacy"
             },
             {
+              "name": "Search Results Section (Header)",
+              "value": "search-results-section"
+            },
+            {
+              "name": "Search Results Page",
+              "value": "search-results-page"
+            },
+            {
               "name": "System Table",
               "value": "system-table"
+            },
+            {
+              "name": "Mortage Insurance",
+              "value": "mortage-insurance"
+            },
+            {
+              "name": "Lenders Mortgage Insurance",
+              "value": "lenders-mortgage-insurance"
+            },
+            {
+              "name": "Lenders Mortgage Insurance Check",
+              "value": "lenders-mortgage-insurance-check"
+            },
+            {
+              "name": "Embed Iframe",
+              "value": "embed-iframe"
+            },
+            {
+              "name": "Generic Body Copy",
+              "value": "generic-body-copy"
+            },
+            {
+              "name": "Stepper Evergreen",
+              "value": "stepper-evergreen"
+            },
+            {
+              "name": "Evergreen Image swapping Variant",
+              "value": "evergreen-image-swapping-variant"
+            },
+            {
+              "name": "Info Well",
+              "value": "info-well"
+            },
+            {
+              "name": "customer-evergreen-variant",
+              "value": "customer-evergreen-variant"
+            },
+            {
+              "name": "evergreen Left menu",
+              "value": "evergreen-left-menu"
+            },
+            {
+              "name": "Evergreen Right Sticky",
+              "value": "evergreen-right-sticky"
+            },
+            {
+              "name": "Margin Bottom Unset",
+              "value": "margin-bottom-unset"
+            },
+            {
+              "name": "404 Page",
+              "value": "variant-404"
+            },
+            {
+              "name": "Forms Banner",
+              "value": "form-banner"
+            },
+            {
+              "name": "About Us Columns Content (Governance Columns)",
+              "value": "aboutus-grid-content"
             }
           ]
         }
@@ -354,9 +426,16 @@
         "faq-legal",
         "faq-legal-table",
         "legal-privacy",
+        "calculator",
         "teachers-calculator-block",
         "alerts",
-        "system-table"
+        "system-table",
+        "mortage-insurance",
+        "embed-iframe",
+        "info-well",
+        "evergreen-left-menu",
+        "card-with-quote",
+        "tmb-calculator-accordion"
       ]
     }
   ]

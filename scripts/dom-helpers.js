@@ -73,6 +73,7 @@ export function domEl(tag, ...items) {
 */
 export function div(...items) { return domEl('div', ...items); }
 export function p(...items) { return domEl('p', ...items); }
+export function b(...items) { return domEl('b', ...items); }
 export function a(...items) { return domEl('a', ...items); }
 export function h1(...items) { return domEl('h1', ...items); }
 export function h2(...items) { return domEl('h2', ...items); }
@@ -107,3 +108,5 @@ export function tbody(...items) { return domEl('tbody', ...items); }
 export function th(...items) { return domEl('th', ...items); }
 export function tr(...items) { return domEl('tr', ...items); }
 export function td(...items) { return domEl('td', ...items); }
+export function summary(...items) { return domEl('summary', ...items); }
+export function details(...items) { return domEl('details', ...items); }

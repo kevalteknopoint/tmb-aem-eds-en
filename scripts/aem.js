@@ -451,9 +451,17 @@ function decorateIcon(span) {
     .find((c) => c.startsWith('icon-'))
     .substring(5);
 
+  let iconType = '';
+
+  if (iconName?.includes('--invert-bg')) {
+    iconType = ' icon-invert-bg';
+  } else if (iconName?.includes('--invert')) {
+    iconType = ' icon-invert';
+  }
+
   span.innerHTML = `
-    <svg class="icon-svg">
-      <use href="#${iconName}"></use>
+    <svg class="icon-svg${iconType}">
+      <use href="#${iconName?.replace('--invert-bg', '')?.replace('--invert', '')}"></use>
     </svg>
   `;
 }
@@ -464,9 +472,9 @@ function decorateIcon(span) {
  * @param {Element} [ele] element where inside the icon will be injected
  * @param {string} [position] position to where the icon needs to be injected (default is before the end of the element)
  */
-function injectIcon(id, ele, position = 'beforeend') {
+function injectIcon(id, ele, position = 'beforeend', version = '') {
   ele?.insertAdjacentHTML(position, `
-    <svg class="icon">
+    <svg class="icon icon-svg ${version}">
       <use href="#${id}"></use>
     </svg>
   `);

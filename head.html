@@ -15,4 +15,8 @@
 </script>
 <script src="/scripts/aem.js" type="module"></script>
 <script src="/scripts/scripts.js" type="module"></script>
-<script src="https://assets.adobedtm.com/fb921698a526/6931f2c56d94/launch-10ebe48cc381-development.min.js"></script>
+<script>
+  const launchScript = document.createElement('script');
+  launchScript.src = `${getMetadata("analytics-script") || 'https://assets.adobedtm.com/fb921698a526/6931f2c56d94/launch-10ebe48cc381-development.min.js'}`;
+  document.head.appendChild(launchScript);
+</script>

@@ -143,6 +143,10 @@
         "label": "Style",
         "options": [
           {
+            "name": "Box Container",
+            "value": "box-container"
+          },
+          {
             "name": "Top Spacing",
             "value": "top-margin"
           },
@@ -411,8 +415,76 @@
             "value": "legal-privacy"
           },
           {
+            "name": "Search Results Section (Header)",
+            "value": "search-results-section"
+          },
+          {
+            "name": "Search Results Page",
+            "value": "search-results-page"
+          },
+          {
             "name": "System Table",
             "value": "system-table"
+          },
+          {
+            "name": "Mortage Insurance",
+            "value": "mortage-insurance"
+          },
+          {
+            "name": "Lenders Mortgage Insurance",
+            "value": "lenders-mortgage-insurance"
+          },
+          {
+            "name": "Lenders Mortgage Insurance Check",
+            "value": "lenders-mortgage-insurance-check"
+          },
+          {
+            "name": "Embed Iframe",
+            "value": "embed-iframe"
+          },
+          {
+            "name": "Generic Body Copy",
+            "value": "generic-body-copy"
+          },
+          {
+            "name": "Stepper Evergreen",
+            "value": "stepper-evergreen"
+          },
+          {
+            "name": "Evergreen Image swapping Variant",
+            "value": "evergreen-image-swapping-variant"
+          },
+          {
+            "name": "Info Well",
+            "value": "info-well"
+          },
+          {
+            "name": "customer-evergreen-variant",
+            "value": "customer-evergreen-variant"
+          },
+          {
+            "name": "evergreen Left menu",
+            "value": "evergreen-left-menu"
+          },
+          {
+            "name": "Evergreen Right Sticky",
+            "value": "evergreen-right-sticky"
+          },
+          {
+            "name": "Margin Bottom Unset",
+            "value": "margin-bottom-unset"
+          },
+          {
+            "name": "404 Page",
+            "value": "variant-404"
+          },
+          {
+            "name": "Forms Banner",
+            "value": "form-banner"
+          },
+          {
+            "name": "About Us Columns Content (Governance Columns)",
+            "value": "aboutus-grid-content"
           }
         ]
       }
@@ -468,11 +540,9 @@
     "id": "alerts",
     "fields": [
       {
-        "component": "select",
+        "component": "multiselect",
         "name": "classes",
-        "label": "Background Color",
-        "value": "",
-        "valueType": "string",
+        "label": "Styles",
         "options": [
           {
             "name": "Blue",
@@ -485,6 +555,10 @@
           {
             "name": "Red",
             "value": "red-alert"
+          },
+          {
+            "name": "Container Width",
+            "value": "alert-container"
           }
         ]
       },
@@ -777,12 +851,268 @@
     ]
   },
   {
+    "id": "calculator",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Sum",
+            "value": "sum"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "input1",
+        "label": "Input 1"
+      },
+      {
+        "component": "text",
+        "name": "input2",
+        "label": "Input 2"
+      }
+    ]
+  },
+  {
     "id": "fragment-item",
     "fields": [
       {
         "component": "aem-content",
         "name": "reference",
         "label": "Reference"
+      }
+    ]
+  },
+  {
+    "id": "card-with-quote",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Reversed Content",
+            "value": "quote-reversed-content"
+          },
+          {
+            "name": "With Background",
+            "value": "quote-background"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "card-quote-img",
+        "label": "Card Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "card-quote-img-alt",
+        "label": "Card Image Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "quote-card-content",
+        "label": "Content",
+        "value": ""
+      },
+      {
+        "component": "container",
+        "label": "Expand Quote Fields",
+        "name": "quote-content-container",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text",
+            "name": "quote-content-text",
+            "label": "Quote",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "quote-author-img",
+            "label": "Quote Author Image",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "quote-author-img-alt",
+            "label": "Quote Author Alt",
+            "value": ""
+          },
+          {
+            "component": "text",
+            "name": "quote-author-name",
+            "label": "Quote Author Name",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "quote-author-profession",
+            "label": "Quote Author Profession",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "quote-author-extra",
+            "label": "Quote Author Other Information",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Expand Button 1 Fields",
+        "name": "quote-card-button-1-container",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text",
+            "name": "quote-card-btn-1-text",
+            "label": "Button 1 Text",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "quote-card-btn-1-title",
+            "label": "Button 1 Title",
+            "valueType": "string"
+          },
+          {
+            "component": "aem-content",
+            "name": "quote-card-btn-1-link",
+            "label": "Button 1 Link",
+            "valueType": "string"
+          },
+          {
+            "component": "select",
+            "name": "quote-card-btn-1-target",
+            "label": "Button 1 Target",
+            "value": "_self",
+            "options": [
+              {
+                "name": "Same",
+                "value": "_self"
+              },
+              {
+                "name": "New",
+                "value": "_blank"
+              }
+            ]
+          },
+          {
+            "component": "select",
+            "name": "quote-card-btn-1-style",
+            "label": "Button 1 Style",
+            "value": "primary",
+            "options": [
+              {
+                "name": "Primary Button",
+                "value": "primary"
+              },
+              {
+                "name": "Secondary Button",
+                "value": "secondary"
+              },
+              {
+                "name": "Outlined Button",
+                "value": "outlined"
+              },
+              {
+                "name": "Outlined Reverse Button",
+                "value": "outlined-reverse"
+              },
+              {
+                "name": "White Button",
+                "value": "white"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Expand Button 2 Fields",
+        "name": "quote-card-button-2-container",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text",
+            "name": "quote-card-btn-2-text",
+            "label": "Button 2 Text",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "quote-card-btn-2-title",
+            "label": "Button 2 Title",
+            "valueType": "string"
+          },
+          {
+            "component": "aem-content",
+            "name": "quote-card-btn-2-link",
+            "label": "Button 2 Link",
+            "valueType": "string"
+          },
+          {
+            "component": "select",
+            "name": "quote-card-btn-2-target",
+            "label": "Button 2 Target",
+            "value": "_self",
+            "options": [
+              {
+                "name": "Same",
+                "value": "_self"
+              },
+              {
+                "name": "New",
+                "value": "_blank"
+              }
+            ]
+          },
+          {
+            "component": "select",
+            "name": "quote-card-btn-2-style",
+            "label": "Button 2 Style",
+            "value": "outlined",
+            "options": [
+              {
+                "name": "Primary Button",
+                "value": "primary"
+              },
+              {
+                "name": "Secondary Button",
+                "value": "secondary"
+              },
+              {
+                "name": "Outlined Button",
+                "value": "outlined"
+              },
+              {
+                "name": "Outlined Reverse Button",
+                "value": "outlined-reverse"
+              },
+              {
+                "name": "White Button",
+                "value": "white"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -1011,6 +1341,17 @@
         "validation": {
           "rootPath": "/content/dam/tmb/content-fragments"
         }
+      }
+    ]
+  },
+  {
+    "id": "embed-iframe",
+    "fields": [
+      {
+        "component": "text",
+        "name": "video-link",
+        "label": "Embed Link",
+        "valueType": "string"
       }
     ]
   },
@@ -1301,6 +1642,17 @@
     ]
   },
   {
+    "id": "info-well",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "info-well-description",
+        "label": "Info Well Description",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "rate-details",
     "fields": [
       {
@@ -1319,6 +1671,39 @@
         "component": "text",
         "name": "rate-disclaimer",
         "label": "Rate Disclaimer",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "mortage-insurance",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "mortage-insurance-title",
+        "label": "Mortage Insurance Title",
+        "valueType": "string"
+      },
+      {
+        "component": "date-time",
+        "valueType": "date",
+        "name": "date",
+        "label": "Date",
+        "placeholder": "YYYY-MM-DD",
+        "displayFormat": null,
+        "valueFormat": null
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "mortage-insurance-description",
+        "label": "Mortage Insurance Description",
         "valueType": "string"
       }
     ]
@@ -1532,6 +1917,53 @@
       {
         "component": "text",
         "name": "iframe-js-link",
+        "label": "Enter JavaScript Link for Iframe"
+      }
+    ]
+  },
+  {
+    "id": "tmb-calculator-accordion",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Single Item Expansion",
+            "value": "single-expansion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tmb-calculator-accordion-item",
+    "fields": [
+      {
+        "component": "boolean",
+        "label": "Default Open",
+        "name": "tmb-calculator-accordion-item-open",
+        "valueType": "boolean"
+      },
+      {
+        "component": "text",
+        "name": "calc-item-title",
+        "label": "Enter title of accordion"
+      },
+      {
+        "component": "text",
+        "name": "calc-item-iframe-id",
+        "label": "Enter ID for iframe"
+      },
+      {
+        "component": "text",
+        "name": "calc-item-iframe-link",
+        "label": "Enter iframe Link"
+      },
+      {
+        "component": "text",
+        "name": "calc-item-iframe-js-link",
         "label": "Enter JavaScript Link for Iframe"
       }
     ]

@@ -95,11 +95,11 @@
   .pipe-grid-row {
     display: grid;
     grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
-    border-bottom: 1px solid #00000033;
+    border-bottom: 1px solid $line-default;
     padding: 16px 0;
 
     &:first-child:not(.pipe-grid-header) {
-      border-top: 1px solid #00000033;
+      border-top: 1px solid $line-default;
     }
   }
 
