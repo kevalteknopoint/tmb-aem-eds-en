@@ -1,4 +1,10 @@
+import "./legal-tc-guide-analytics.js"
 (function decorateLegalTcGuide() {
+
+  // const script = document.createElement("script");
+  // script.src = "legal-tc-guide-analytics.js";
+  // script.async = true;
+  // document.head.appendChild(script);
   // 1. Target the component block
   const block = document.querySelector('.legal-tc-guide');
   if (!block) return;
@@ -27,4 +33,5 @@
       }
     });
   }
+
 }());

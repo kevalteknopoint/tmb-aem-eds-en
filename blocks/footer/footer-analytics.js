@@ -34,13 +34,15 @@ document.addEventListener('click', (e) => {
     const iconClassString = icon.classList.toString();
     const iconName = iconClassString?.replaceAll('icon-', '')?.replaceAll('icon', '')?.replaceAll(' ', '');
 
-    socialmediaClick('', minifyText(iconName), 'global footer', '', '');
+    socialmediaClick(pageRegion, minifyText(iconName), 'global footer', 'footer', componentIndex,getPersona(),'socialmedia-click','','','','global footer','');
   }
- 
-  if (e.target.closest('.ul-17')) {
+
+if (e.target.closest('.ul-17')) {
     const anchor = e.target.closest('a');
     if (!anchor) return;
+
     const anchorLi = anchor?.closest('li');
-    ctaInteraction('', minifyText(anchorLi?.textContent), '', '', 'global footer', '', '');
-  }
+
+    ctaInteraction(pageRegion, minifyText(anchorLi?.textContent),minifyText(anchor?.getAttribute('title')), 'socialmedia-click', 'global footer', 'footer', componentIndex, getPersona(),nextPageURL,'cta-click','internal','link','footer','','','','global footer','');
+  } 
 });
