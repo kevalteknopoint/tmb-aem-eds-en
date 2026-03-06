@@ -717,6 +717,35 @@ const isTabletLg = () => window.matchMedia('screen and (max-width: 1279px)').mat
 const isDesktop = () => window.matchMedia('screen and (max-width: 1439px)').matches;
 const isDesktopLg = () => window.matchMedia('screen and (min-width: 1440px)').matches;
 
+function camelToKebab(str) {
+  return str.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+}
+
+function loadPlaceholders() {
+  if (window.placeholders?.default && Object.keys(window.placeholders?.default)?.length) {
+    Object.keys(window.placeholders.default).forEach((key) => {
+      let value = window.placeholders.default[key];
+
+      const rateRegex = /(\d+(?:\.\d+)?)(%)(?:\s*(p\.a\.))?/g;
+
+      const isInterestRate = rateRegex.test(value);
+
+      if (isInterestRate) {
+        value = value.replaceAll(rateRegex, (_, num, percent, pa) => `
+            <span class="rate-num">${num}</span>
+            <span class="rate-unit">
+              <span class="rate-percent">${percent}</span>
+              <span class="rate-pa">${pa || 'p.a.'}</span>
+            </span>
+          `
+        );
+      }
+
+      document.body.innerHTML = document.body.innerHTML.replaceAll(`~${key}~`, `<span class="${camelToKebab(key)}${isInterestRate ? ' interest-rate' : ''}">${value}</span>`);
+    });
+  }
+}
+
 init();
 
 export {
@@ -750,4 +779,6 @@ export {
   isTabletLg,
   isDesktop,
   isDesktopLg,
+  camelToKebab,
+  loadPlaceholders
 };
