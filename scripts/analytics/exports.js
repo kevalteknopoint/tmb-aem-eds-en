@@ -401,3 +401,82 @@ export function socialmediaClick(pageRegion, iconName, componentName, componentT
         }
     });
 }
+
+export function searchInitiate(pageRegion,componentName,componentType,componentIndex,componentPersona,interactionType,componentId){
+    window.adobeDataLayer.push({
+        "event": "searchInitiate",
+            "data":{
+                "pageRegion":pageRegion,
+                "componentName":componentName,
+                "componentType":componentType,
+                "componentIndex":componentIndex,
+                "componentPersona":componentPersona,              
+                "interactionType":interactionType,                  
+                "componentId":componentId
+            }
+});
+}
+
+//this function will fire when user click on popular searches
+export function popularSearchClick(pageRegion, componentName, componentType, componentIndex, componentPersona, componentId, nextpageUrl, interactionType, navElementType, navLocation, searchType, searchTerm, ctaTitle) {
+  window.adobeDataLayer.push({
+    "event": "popularSearchClick",
+    "data": {
+      "pageRegion": pageRegion,
+      "componentName": componentName,
+      "componentType": componentType,
+      "componentIndex": componentIndex,
+      "componentPersona": componentPersona,
+      "componentId": componentId,
+      "nextpageUrl": nextpageUrl,
+      "interactionType": interactionType,
+      "navElementType": navElementType,
+      "navLocation": navLocation,
+      "searchType": searchType,
+      "searchTerm": searchTerm,
+      "ctaTitle": ctaTitle
+    }
+  });
+}
+
+//this export function will fire when user click on suggested searches
+export function suggestedSearchClick(pageRegion, componentName, componentType, componentIndex, componentPersona, componentId, nextpageUrl, interactionType, navElementType, navLocation, searchType, searchTerm, selectedSearchTerm, ctaTitle) {
+  window.adobeDataLayer.push({
+    "event": "suggestedSearchClick",
+    "data": {
+      "pageRegion": pageRegion,
+      "componentName": componentName,
+      "componentType": componentType,
+      "componentIndex": componentIndex,
+      "componentPersona": componentPersona,
+      "componentId": componentId,
+      "nextpageUrl": nextpageUrl,
+      "interactionType": interactionType,
+      "navElementType": navElementType,
+      "navLocation": navLocation,
+      "searchType": searchType,
+      "searchTerm": searchTerm,
+      "selectedSearchTerm": selectedSearchTerm,
+      "ctaTitle": ctaTitle
+    }
+  });
+}
+
+//this export function will fire when user perform any internal search
+export function internalSearch(pageRegion, componentName, componentType, componentIndex, componentPersona, componentId, interactionType, searchType, searchTerm, noofSearchResults) {
+  window.adobeDataLayer.push({
+    "event": "internalSearch",
+    "data": {
+      "pageRegion": pageRegion,
+      "componentName": componentName,
+      "componentType": componentType,
+      "componentIndex": componentIndex,
+      "componentPersona": componentPersona,
+      "componentId": componentId,
+      "interactionType": interactionType,
+      "searchType": searchType,
+      "searchTerm": searchTerm,
+      "noofSearchResults": noofSearchResults
+    }
+  });
+}
