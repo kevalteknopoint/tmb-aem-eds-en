@@ -3,7 +3,7 @@ import { ctaInteraction, minifyText, getComponentIndex, getPageRegion, getPerson
 document.addEventListener('click', (e) => {
   const { target } = e;
 
-  if (target.closest('a') && target.closest('.button-container')) {
+  if (target.closest('a')) {
     const linkEle = target.closest('a');
     const ctaText = minifyText(linkEle?.textContent);
 
@@ -29,6 +29,5 @@ document.addEventListener('click', (e) => {
 
       ctaInteraction(pageRegion, ctaText, minifyText(ctaTitleEle?.textContent), 'WAYS TO GET IN TOUCH', minifyText(title?.textContent), '', componentIndex, getPersona(), nextPageURL, 'cta-click', 'external', 'in-page-nav', 'in-content', '', '', '', 'WAYS TO GET IN TOUCH', '');
     }
-    
   }
 });
