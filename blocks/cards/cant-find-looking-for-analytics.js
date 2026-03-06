@@ -16,7 +16,7 @@ document.addEventListener('click', (e) => {
       const componentIndex = getComponentIndex(linkEle);
       const nextPageURL = (linkEle)?.getAttribute("href");
 
-      ctaInteraction(pageRegion, ctaText, minifyText(ctaTitleEle?.textContent), 'can’t find what you are looking for?', minifyText(title?.textContent), '', componentIndex, getPersona(), nextPageURL, 'cta-click', 'external', 'in-page-nav', 'in-content', '', '', '', 'can’t find what you are looking for?', '');
+      ctaInteraction(pageRegion, ctaText, minifyText(ctaTitleEle?.textContent), 'cant find what you are looking for?', minifyText(title?.textContent), '', componentIndex, getPersona(), nextPageURL, 'cta-click', 'external', 'in-page-nav', 'in-content', '', '', '', 'cant find what you are looking for?', '');
     }
     if (target.closest('.faq-cant-find-looking-for.faq-cant-find-looking-for-variant')) {
       const targetContainer = target.closest('.faq-cant-find-looking-for.faq-cant-find-looking-for-variant');

@@ -10,19 +10,22 @@ import { ctaInteraction, minifyText, getPersona, getPageRegion, getComponentInde
       const nextPageURL = e.target.closest(".compare-accounts a")?.getAttribute("href");
       ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent) , 'customer', 'customer','customer',componentIndex,getPersona(),nextPageURL,'cta-link','internal','quick-link','in-content','','','','','','','','');
     } 
-        if (e.target.closest('.customer .compare-accounts-wrapper .button-container')) {
-      const secondaryLink = e.target.closest('.customer .compare-accounts-wrapper .button-container a');
-      const pageRegion = getPageRegion(e.target.closest('.customer .compare-accounts-wrapper .button-container a'));
-       const componentIndex = getComponentIndex(e.target.closest('.customer .compare-accounts-wrapper .button-container a'));
+        if (e.target.closest('.compare-accounts-wrapper .button-container')) {
+      const secondaryLink = e.target.closest('.compare-accounts-wrapper .button-container a');
+      const pageRegion = getPageRegion(e.target.closest('.compare-accounts-wrapper .button-container a'));
+       const componentIndex = getComponentIndex(e.target.closest('.compare-accounts-wrapper .button-container a'));
        const ctaTitle =e.target.closest('.customer').querySelector("h1,h2,h3,h4");
-      const nextPageURL = e.target.closest(".customer .compare-accounts-wrapper .button-container a")?.getAttribute("href");
+       
+      const nextPageURL = e.target.closest(".compare-accounts-wrapper .button-container a")?.getAttribute("href");
       ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent) , 'customer', 'customer','customer',componentIndex,getPersona(),nextPageURL,'cta-link','internal','quick-link','in-content','','','','','','','','');
     }  
-            if (e.target.closest('.customer .default-content-wrapper')) {
-      const secondaryLink = e.target.closest('.customer .default-content-wrapper a');
-      const pageRegion = getPageRegion(e.target.closest('.customer .default-content-wrapper a'));
-       const componentIndex = getComponentIndex(e.target.closest('.customer .default-content-wrapper a'));
-      const nextPageURL = e.target.closest(".customer .default-content-wrapper a")?.getAttribute("href");
+            if (e.target.closest('.compare-accounts .default-content-wrapper')) {
+      const secondaryLink = e.target.closest('.compare-accounts .default-content-wrapper a');
+      const pageRegion = getPageRegion(e.target.closest('.compare-accounts .default-content-wrapper a'));
+       const componentIndex = getComponentIndex(e.target.closest('.compare-accounts .default-content-wrapper a'));
+      const nextPageURL = e.target.closest(".compare-accounts .default-content-wrapper a")?.getAttribute("href");
+  
+      
       ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), '', 'customer', 'customer','customer',componentIndex,getPersona(),nextPageURL,'cta-link','internal','quick-link','in-content','','','','','','','','');
     }    
   });

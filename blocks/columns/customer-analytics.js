@@ -13,6 +13,8 @@ export function executeAnalytics() {
         if (e.target.closest('.customer .content-container')) {
       const secondaryLink = e.target.closest('.customer .content-container a');
       const pageRegion = getPageRegion(e.target.closest('.customer .content-container a'));
+      console.log("Click");
+      
        const componentIndex = getComponentIndex(e.target.closest('.customer .content-container a'));
        const ctaTitle =e.target.closest('.customer').querySelector("h1,h2,h3,h4");
       const nextPageURL = e.target.closest(".customer .content-container a")?.getAttribute("href");
