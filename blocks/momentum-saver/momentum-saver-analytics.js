@@ -5,8 +5,7 @@ document.addEventListener('click', (e) => {
     const secondaryLink = e.target.closest('.momentum-saver-section .button-container .button');
     const pageRegion = getPageRegion(e.target.closest('.momentum-saver-section .button-container .button'));
      const componentIndex = getComponentIndex(e.target.closest('.momentum-saver-section .button-container .button'));
-     const ctaTitle =e.target.closest('.momentum-saver-section').querySelector("h2");
-     console.log("click occured from first");
+     const ctaTitle =e.target.closest('.momentum-saver-section').querySelector("h1,h2,h3,h4,h5,h6");
      
     const nextPageURL = e.target.closest(".momentum-saver-section .button-container .button")?.getAttribute("href");
     ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent) , '', 'momentum-saver-section','columns-container',componentIndex,getPersona(),nextPageURL,'cta-link','internal','quick-link','in-content','','','','momentum-saver','','','','');
