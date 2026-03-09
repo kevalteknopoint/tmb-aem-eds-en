@@ -62,7 +62,7 @@ function calculateReadingTime(wordCount) {
 
   leftMenuUl.innerHTML = '';
 
-  if (!leftMenu || !rightMenu) return;
+  if (!leftMenu) return;
 
   const allSections = document.querySelectorAll('main .section');
   const sectionClasses = ['mortage-insurance', 'lenders-mortgage-insurance', 'embed-iframe', 'customer-evergreen-variant', 'evergreen-image-swapping-variant', 'stepper-evergreen'];
