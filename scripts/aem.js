@@ -721,7 +721,7 @@ function camelToKebab(str) {
   return str.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 }
 
-function loadPlaceholders() {
+function loadPlaceholders(block) {
   if (window.placeholders?.default && Object.keys(window.placeholders?.default)?.length) {
     Object.keys(window.placeholders.default).forEach((key) => {
       let value = window.placeholders.default[key];
@@ -741,7 +741,9 @@ function loadPlaceholders() {
         );
       }
 
-      document.body.innerHTML = document.body.innerHTML.replaceAll(`~${key}~`, `<span class="${camelToKebab(key)}${isInterestRate ? ' interest-rate' : ''}">${value}</span>`);
+      const updateHtml = block || document.body;
+
+      updateHtml.innerHTML = updateHtml.innerHTML.replaceAll(`~${key}~`, `<span class="${camelToKebab(key)}${isInterestRate ? ' interest-rate' : ''}">${value}</span>`);
     });
   }
 }
