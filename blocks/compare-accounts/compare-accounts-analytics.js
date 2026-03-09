@@ -13,22 +13,19 @@ document.addEventListener('click', (e) => {
   //   ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent) , 'customer', 'customer','customer',componentIndex,getPersona(),nextPageURL,'cta-link','internal','quick-link','in-content','','','','','','','','');
   // } 
   if (e.target.closest('.compare-accounts-wrapper .button-container')) {
+     const ctaSource = e.target.closest('.card-fragments-container').querySelector("#explore-other-ways-to-save");
     const secondaryLink = e.target.closest('.compare-accounts-wrapper .button-container a');
     const pageRegion = getPageRegion(e.target.closest('.compare-accounts-wrapper .button-container a'));
     const componentIndex = getComponentIndex(e.target.closest('.compare-accounts-wrapper .button-container a'));
     const ctaTitle = e.target.closest('.compare-accounts-card').querySelector("h1,h2,h3,h4");
-
     const nextPageURL = e.target.closest(".compare-accounts-wrapper .button-container a")?.getAttribute("href");
-    ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), 'customer', 'customer', 'customer', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', '', '', '', '', '');
+    ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), minifyText(ctaSource.textContent), 'customer', 'customer', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', '', '', '', '', '');
   }
   if (e.target.closest('.compare-accounts.card-fragments-container .default-content-wrapper')) {
-    console.log("fisrdftgyrt");
     const secondaryLink = e.target.closest('.compare-accounts.card-fragments-container .default-content-wrapper a');
     const pageRegion = getPageRegion(e.target.closest('.compare-accounts.card-fragments-container .default-content-wrapper a'));
     const componentIndex = getComponentIndex(e.target.closest('.compare-accounts.card-fragments-container .default-content-wrapper a'));
     const nextPageURL = e.target.closest(".compare-accounts.card-fragments-container .default-content-wrapper a")?.getAttribute("href");
-
-    ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), '', 'customer', 'customer', 'customer', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', '', '', '', '', '');
+    ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), '', '', 'customer', 'customer', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', '', '', '', '', '');
   }
 });
-
