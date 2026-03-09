@@ -15,9 +15,13 @@ import { div } from "../../scripts/dom-helpers.js";
 
     section.appendChild(newWrapper);
 
-    setTimeout(() => {
-      const capsizeItems = section.querySelectorAll('.rate-num, .rate-percent, .rate-pa');
-      capsizeItems.forEach(applyCapsizeToElement);
-    }, 1000);
+    try {
+      setTimeout(() => {
+        const capsizeItems = section.querySelectorAll('.rate-num, .rate-percent, .rate-pa');
+        capsizeItems.forEach(applyCapsizeToElement);
+      }, 1000);
+    } catch (error) {
+      console.log(error);
+    }
   });
 }());
