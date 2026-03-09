@@ -33,47 +33,46 @@ document.addEventListener('click', (e) => {
   const linkEle = target.closest('a');
   const ctaText = minifyText(linkEle?.textContent);
 
-  if (target.closest('.faq-frequently-question-list')) {
+ if (target.closest('.faq-frequently-question-list')) {
 
-    const listSection = target.closest('.faq-frequently-question-list');
+  const listSection = target.closest('.faq-frequently-question-list');
 
-    const secondaryLink = listSection.querySelector('.button-container .button');
+  const secondaryLink = listSection.querySelector('.button-container .button');
 
-    const ctaTitle = listSection.querySelector('h1, h2, h3, h4, h5, h6');
+  const cardWrapper = linkEle.closest('.faq-category-wrapper');
+  const ctaTitle = cardWrapper?.querySelector('h1, h2, h3, h4, h5, h6');
 
- 
-    const ctaSourceEle = listSection
-      ?.previousElementSibling
-      ?.classList.contains('faq-frequently-question-title')
-        ? listSection.previousElementSibling.querySelector('h1, h2, h3, h4, h5, h6')
-        : document.querySelector('.faq-frequently-question-title h1, .faq-frequently-question-title h2, .faq-frequently-question-title h3, .faq-frequently-question-title h4, .faq-frequently-question-title h5, .faq-frequently-question-title h6');
+  const ctaSourceEle = listSection
+    ?.previousElementSibling
+    ?.classList.contains('faq-frequently-question-title')
+      ? listSection.previousElementSibling.querySelector('h1, h2, h3, h4, h5, h6')
+      : document.querySelector('.faq-frequently-question-title h1, .faq-frequently-question-title h2, .faq-frequently-question-title h3, .faq-frequently-question-title h4, .faq-frequently-question-title h5, .faq-frequently-question-title h6');
 
-    const pageRegion = getPageRegion(linkEle);
-    const componentIndex = getComponentIndex(linkEle);
-    const nextPageURL = linkEle?.getAttribute('href');
+  const pageRegion = getPageRegion(linkEle);
+  const componentIndex = getComponentIndex(linkEle);
+  const nextPageURL = linkEle?.getAttribute('href');
 
-    ctaInteraction(
-      pageRegion,
-      minifyText(secondaryLink?.textContent),
-      minifyText(ctaTitle?.textContent),
-      minifyText(ctaSourceEle?.textContent), //  "QUESTIONS BY CATEGORY"
-      'faq category',
-      'faq',
-      componentIndex,
-      getPersona(),
-      nextPageURL,
-      'cta-click',
-      'internal',
-      'in-page-nav',
-      'in-content',
-      '',
-      '',
-      '',
-      'faq',
-      ''
-    );
-
-  } else if (target.closest('.faq-cant-find-looking-for')) {
+  ctaInteraction(
+    pageRegion,
+    minifyText(linkEle?.textContent),
+    minifyText(ctaTitle?.textContent),
+    minifyText(ctaSourceEle?.textContent),
+    'faq category',
+    'faq',
+    componentIndex,
+    getPersona(),
+    nextPageURL,
+    'cta-click',
+    'internal',
+    'in-page-nav',
+    'in-content',
+    '',
+    '',
+    '',
+    'faq',
+    ''
+  );
+}else if (target.closest('.faq-cant-find-looking-for')) {
 
     const targetContainer = target.closest('.faq-cant-find-looking-for');
     const titleContainer = targetContainer?.querySelector('.default-content-wrapper');
