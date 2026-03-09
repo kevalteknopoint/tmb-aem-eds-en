@@ -1,6 +1,6 @@
-import "./legal-tc-guide-analytics.js"
-(function decorateLegalTcGuide() {
+import "./legal-tc-guide-analytics.js";
 
+(function decorateLegalTcGuide() {
   // const script = document.createElement("script");
   // script.src = "legal-tc-guide-analytics.js";
   // script.async = true;
@@ -33,5 +33,4 @@ import "./legal-tc-guide-analytics.js"
       }
     });
   }
-
 }());

@@ -1,7 +1,6 @@
-import { ctaInteraction, menuInteraction, minifyText, socialmediaClick, getComponentIndex,getPageRegion ,getPersona} from "../../scripts/analytics/exports.js";
+import { ctaInteraction, menuInteraction, minifyText, socialmediaClick, getComponentIndex, getPageRegion, getPersona } from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
-
   if (e.target.closest('.ul-4') || e.target.closest('.ul-9')) {
     const anchor = e.target.closest('a');
     if (!anchor) return;
@@ -24,7 +23,7 @@ document.addEventListener('click', (e) => {
       text = minifyText(closestLi?.querySelector(':scope > p')?.textContent);
     }
 
-    menuInteraction(pageRegion, minifyText(text), minifyText(anchor.textContent), '', 'global footer', 'footer', componentIndex,getPersona(),nextPageURL,'menu-click','internal','','','','footer','');
+    menuInteraction(pageRegion, minifyText(text), minifyText(anchor.textContent), '', 'global footer', 'footer', componentIndex, getPersona(), nextPageURL, 'menu-click', 'internal', '', '', '', 'footer', '');
   }
 
   if (e.target.closest('.ul-16')) {
@@ -35,15 +34,15 @@ document.addEventListener('click', (e) => {
     const iconClassString = icon.classList.toString();
     const iconName = iconClassString?.replaceAll('icon-', '')?.replaceAll('icon', '')?.replaceAll(' ', '');
 
-    socialmediaClick(pageRegion, minifyText(iconName), 'global footer', 'footer', componentIndex,getPersona(),'socialmedia-click','','','','global footer','');
+    socialmediaClick(pageRegion, minifyText(iconName), 'global footer', 'footer', componentIndex, getPersona(), 'socialmedia-click', '', '', '', 'global footer', '');
   }
 
-if (e.target.closest('.ul-17')) {
+  if (e.target.closest('.ul-17')) {
     const anchor = e.target.closest('a');
     if (!anchor) return;
 
     const anchorLi = anchor?.closest('li');
 
-    ctaInteraction(pageRegion, minifyText(anchorLi?.textContent),minifyText(anchor?.getAttribute('title')), 'socialmedia-click', 'global footer', 'footer', componentIndex, getPersona(),nextPageURL,'cta-click','internal','link','footer','','','','global footer','');
-  } 
+    ctaInteraction(pageRegion, minifyText(anchorLi?.textContent), minifyText(anchor?.getAttribute('title')), 'socialmedia-click', 'global footer', 'footer', componentIndex, getPersona(), nextPageURL, 'cta-click', 'internal', 'link', 'footer', '', '', '', 'global footer', '');
+  }
 });

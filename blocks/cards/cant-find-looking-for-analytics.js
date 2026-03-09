@@ -16,7 +16,7 @@ document.addEventListener('click', (e) => {
       const componentIndex = getComponentIndex(linkEle);
       const nextPageURL = (linkEle)?.getAttribute("href");
       console.log('rtyu');
-      
+
       ctaInteraction(pageRegion, ctaText, minifyText(ctaTitleEle?.textContent), 'cant find what you are looking for?', minifyText(title?.textContent), '', componentIndex, getPersona(), nextPageURL, 'cta-click', 'external', 'in-page-nav', 'in-content', '', '', '', 'cant find what you are looking for?', '');
     }
     if (e.target.closest('.faq-cant-find-looking-for.faq-cant-find-looking-for-variant:not(.rates-saver)')) {
@@ -27,7 +27,6 @@ document.addEventListener('click', (e) => {
       const pageRegion = getPageRegion(linkEle);
       const componentIndex = getComponentIndex(linkEle);
       const nextPageURL = (linkEle)?.getAttribute("href");
-      console.log('dfghj')
       ctaInteraction(pageRegion, ctaText, minifyText(ctaTitleEle?.textContent), 'WAYS TO GET IN TOUCH', minifyText(title?.textContent), '', componentIndex, getPersona(), nextPageURL, 'cta-click', 'external', 'in-page-nav', 'in-content', '', '', '', 'WAYS TO GET IN TOUCH', '');
     }
   }

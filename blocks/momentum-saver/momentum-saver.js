@@ -1,6 +1,6 @@
 import { applyCapsizeToElement } from "../../libs/capsize/capsize.min.js";
 import { div } from "../../scripts/dom-helpers.js";
-import './momentum-saver-analytics.js'
+import './momentum-saver-analytics.js';
 
 (function decorateMomentumSaver() {
   if (window.location.origin.includes('author')) return;

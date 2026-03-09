@@ -1,5 +1,5 @@
 import { isMobile } from "../../scripts/aem.js";
-import './product-navigation-analytics.js'
+import './product-navigation-analytics.js';
 
 function isElementInView(container, element, percentVisible = 1) {
   const containerRect = container.getBoundingClientRect();

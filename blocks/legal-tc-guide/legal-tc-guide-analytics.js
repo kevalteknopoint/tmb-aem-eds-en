@@ -1,8 +1,6 @@
 import { ctaInteraction, minifyText, getPersona, getPageRegion, getComponentIndex } from "../../scripts/analytics/exports.js";
 
-
-document.addEventListener('click', function (e) {
-
+document.addEventListener('click', (e) => {
   const link = e.target.closest('.legal-tc-guide a');
   if (!link) return;
 
@@ -39,6 +37,4 @@ document.addEventListener('click', function (e) {
     'legaltc',
     ''
   );
-
 });
-

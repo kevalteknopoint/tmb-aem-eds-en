@@ -1,4 +1,4 @@
-import { executeAnalytics } from './customer-analytics.js';
+import executeAnalytics from './customer-analytics.js';
 
 window.customerAnalyticsLoaded = false;
 
