@@ -54,7 +54,7 @@ document.addEventListener('click', (e) => {
     ctaInteraction(
       pageRegion,
       minifyText(button.textContent),
-      minifyText(button.getAttribute('title')),  // <-- fixed here
+      '',
       'cta-click',
       'navigation',
       'navigation',
