@@ -3,12 +3,13 @@ import { ctaInteraction, minifyText , getPersona, getPageRegion, getComponentInd
 document.addEventListener('click', (e) => {
   if (e.target.closest('.news-helpful-homepage.news-helpful .button-container')) {
     // const secondaryLink = e.target.closest('.news-helpful-homepage.news-helpful .button-container .button');
+    const ctaSource = e.target.closest('.news-helpful-homepage').querySelector("h1,h2,h3,h4,h5,h6");
      const componentIndex = getComponentIndex(e.target.closest('.news-helpful-homepage.news-helpful .button-container .button'));
      const nextPageURL = e.target.closest('.news-helpful-homepage.news-helpful .button-container .button')?.getAttribute("href");
       const ctaLink = e.target.closest('.news-helpful-homepage.news-helpful .button-container .button');
     const ctaTitle =e.target.closest('.news-helpful-homepage.news-helpful').querySelector('p');
      const pageRegion = getPageRegion(e.target.closest('.news-helpful-homepage.news-helpful .button-container .button'));
-    ctaInteraction(pageRegion, minifyText(ctaLink?.textContent),minifyText(ctaTitle?.textContent)  , 'cta-click', 'read more','news-helpful',componentIndex,getPersona(),nextPageURL,'cta-link','internal','quick-link','in-content','','','','news-info-homepage','','','');
+    ctaInteraction(pageRegion, minifyText(ctaLink?.textContent),minifyText(ctaTitle?.textContent)  , minifyText(ctaSource?.textContent), 'read more','news-helpful',componentIndex,getPersona(),nextPageURL,'cta-link','internal','quick-link','in-content','','','','news-info-homepage','','','');
   }   
 });
 
