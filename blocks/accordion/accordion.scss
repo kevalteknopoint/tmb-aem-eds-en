@@ -38,8 +38,6 @@
         }
 
         .accordion-item-label {
-          @include typo-heading5;
-
           position: relative;
           cursor: pointer;
           list-style: none;
@@ -50,6 +48,12 @@
           justify-content: space-between;
           gap: 16px;
           overflow: hidden;
+
+          p {
+            @include typo-heading5;
+            
+            color: $heading-default;
+          }
 
           &::-webkit-details-marker {
             display: none;

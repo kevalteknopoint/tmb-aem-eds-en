@@ -255,19 +255,23 @@
   color:var(--heading-default);
   cursor:pointer;
   display:flex;
-  font-family:var(--font-family-h5);
-  font-size:var(--font-size-h5);
-  font-weight:var(--font-weight-h5);
   gap:16px;
   justify-content:space-between;
-  letter-spacing:var(--font-letter-spacing-h5);
-  line-height:var(--font-height-h5);
   list-style:none;
   overflow:hidden;
   position:relative;
-  text-transform:initial;
   transition:background-color 0.2s;
   vertical-align:bottom;
+}
+
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-label p{
+  color:var(--heading-default);
+  font-family:var(--font-family-h5);
+  font-size:var(--font-size-h5);
+  font-weight:var(--font-weight-h5);
+  letter-spacing:var(--font-letter-spacing-h5);
+  line-height:var(--font-height-h5);
+  text-transform:initial;
 }
 
 .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-label::-webkit-details-marker{

@@ -1,0 +1,28 @@
+@use "../../styles/base" as *;
+
+.section.embed-iframe {  
+  width: 100%;
+  max-width: 735px;
+  padding-inline: 32px;
+  margin: 0 auto 40px;
+  
+  @include tablet-lg {
+    padding-inline: 0;
+    max-width: unset;
+  }
+
+  .video-wrapper {
+    font-size: 0;
+  }
+
+  .block{
+    padding-inline: unset;
+
+    iframe{
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      height: auto;
+      border-radius: $radius-card;
+    }
+  }
+}

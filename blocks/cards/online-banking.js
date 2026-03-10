@@ -1,4 +1,6 @@
 export default function decorateOnlineBanking(block) {
+  if (window.location.origin.includes('author')) return;
+
   const cardsUl = block.querySelector(".cards ul");
   if (!cardsUl) return;
 

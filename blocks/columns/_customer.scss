@@ -1,107 +1,217 @@
 @use '../../styles/base' as *;
 
-.customer{
-    position: relative;
-    background: $gradient-2;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+.customer {
+  position: relative;
+  background: $gradient-2;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 
-    &::after {
-      content: '';
-      position: absolute;
-      height: 20px;
-      width: 100%;
-      background-image: $gradient-after;
-      background-repeat: no-repeat;
-      background-size: 100%;
-      left: 0;
-      bottom: 0;
-    }
+  &::after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    background-image: $gradient-after;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    left: 0;
+    bottom: 0;
+  }
 
-    .columns-wrapper{
-        @include responsive-container;
+  .columns-wrapper {
+    @include responsive-container;
 
-        .block{
-            .columns-container{
-                gap: 32px;
-                align-items: stretch;
+    .block {
+      .columns-container {
+        gap: 32px;
+        align-items: stretch;
 
-                div{
-                    background: $bg-default;
-                    border-radius: $radius-card;
-                    padding: 40px 24px;
-                    display: flex;
-                    flex-direction: column;
+        div {
+          background: $bg-default;
+          border-radius: $radius-card;
+          padding: 40px 24px;
+          display: flex;
+          flex-direction: column;
 
-                    h1,h2,h3{
-                        @include typo-heading1;
+          h1,
+          h2,
+          h3 {
+            @include typo-heading1;
 
-                        color: $heading-default;
-                        text-align: center;
-                        font-family: $secondary-font;
-                        font-style: normal;
-                        letter-spacing: 2px;
-                    }
+            color: $heading-default;
+            text-align: center;
+            font-family: $secondary-font;
+            font-style: normal;
+            letter-spacing: 2px;
+          }
 
-                    p{
-                        @include typo-body;
-
-                        color: $body-default;
-                        text-align: center;
-                        margin: 16px 0 32px;
-                    }
-
-                    p.button-container{
-                      display: flex;
-                      justify-content: center;
-                      margin: auto 0 0;
-                      gap: 10px;
-
-                      a {
-                        @include button('primary');
-                        @include typo-heading5;
-                      }
-                    }
-
-                    &:nth-child(2){
-                      p.button-container a {
-                        @include button('outlined');
-                      }
-                    }
-                }
-            }
-        }
-    }
-
-    .content-container{
-        @include responsive-container;
-        
-        .para-0{
+          p {
             @include typo-body;
 
-            color: $body-default-alt;
+            color: $body-default;
             text-align: center;
+            margin: 16px 0 32px;
+          }
 
-            a{
-                @include typo-body;
+          p.button-container {
+            display: flex;
+            justify-content: center;
+            margin: auto 0 0;
+            gap: 10px;
 
-                color: $link-default-alt;
-                text-decoration-line: underline;
-                text-decoration-style: solid;
-                text-decoration-skip-ink: auto;
-                text-decoration-thickness: auto;
-                text-underline-offset: auto;
-                text-underline-position: from-font;
+            a {
+              @include button('primary');
+              @include typo-heading5;
             }
-        }
+          }
 
-        .para-1{
-            @include typo-disclaimer;
-
-            margin-top: 16px;
-            color: $body-default-alt;
-            text-align: center;
+          &:nth-child(2) {
+            p.button-container a {
+              @include button('outlined');
+            }
+          }
         }
+      }
     }
+  }
+
+  .content-container {
+    @include responsive-container;
+
+    .para-0 {
+      @include typo-body;
+
+      color: $body-default-alt;
+      text-align: center;
+
+      a {
+        @include typo-body;
+
+        color: $link-default-alt;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: auto;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+      }
+    }
+
+    .para-1 {
+      @include typo-disclaimer;
+
+      margin-top: 16px;
+      color: $body-default-alt;
+      text-align: center;
+    }
+  }
+}
+
+.lenders-mortgage-insurance.customer {
+  position: relative;
+  background: $gradient-2;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: unset;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    background-image: $gradient-after;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    left: 0;
+    bottom: 0;
+  }
+
+  .default-content-wrapper {
+    max-width: 1312px;
+    margin: 0 auto;
+    background: $bg-default;
+    border-radius: $radius-card;
+    width: 100%;
+    text-align: center;
+    padding: 40px 24px;
+
+    h1 {
+      color: $heading-default;
+      text-align: center;
+      font-family: $font-family-h1;
+      font-size: $font-size-h1;
+      font-style: normal;
+      font-weight: $font-weight-h1;
+      line-height: $font-height-h1;
+      /* 100% */
+      letter-spacing: $font-letter-spacing-h1;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    p.button-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 32px auto 0;
+
+      a {
+        @include button('primary');
+        @include typo-heading5;
+
+        min-width: unset;
+        padding: unset;
+      }
+    }
+  }
+}
+
+.customer.customer-evergreen-variant {
+  margin: 0 auto;
+  max-width: 671px;
+  padding: 32px 24px;
+  width: 100%;
+  border-radius: $radius-card;
+  background: var(--green-blue, linear-gradient(256deg, #1BE7FF 0%, #59FFA0 100%));
+
+  @include tablet-lg {
+    max-width: unset;
+  }
+
+  .columns-wrapper {
+    padding-inline: unset;
+
+    .block {
+      .columns-container {
+        div {
+          padding: unset;
+          background: unset;
+
+          h2,
+          h3 {
+            text-align: left;
+          }
+
+          p {
+            text-align: left;
+
+            &.button-container {
+              justify-content: start;
+
+              a {
+                @include button('white');
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &::after {
+    content: unset;
+  }
+
 }

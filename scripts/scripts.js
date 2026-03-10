@@ -10,6 +10,7 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  loadPlaceholders,
 } from './aem.js';
 import { pageIntialization } from './analytics/exports.js';
 import { fetchPlaceholders } from './placeholders.js';
@@ -156,35 +157,6 @@ function loadDelayed() {
     document.body.appendChild(script);
   });
   // load anything that can be postponed to the latest here
-}
-
-function camelToKebab(str) {
-  return str.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
-}
-
-function loadPlaceholders() {
-  if (window.placeholders?.default && Object.keys(window.placeholders?.default)?.length) {
-    Object.keys(window.placeholders.default).forEach((key) => {
-      let value = window.placeholders.default[key];
-
-      const rateRegex = /(\d+(?:\.\d+)?)(%)(?:\s*(p\.a\.))?/g;
-
-      const isInterestRate = rateRegex.test(value);
-
-      if (isInterestRate) {
-        value = value.replaceAll(rateRegex, (_, num, percent, pa) => `
-            <span class="rate-num">${num}</span>
-            <span class="rate-unit">
-              <span class="rate-percent">${percent}</span>
-              <span class="rate-pa">${pa || 'p.a.'}</span>
-            </span>
-          `
-        );
-      }
-
-      document.body.innerHTML = document.body.innerHTML.replaceAll(`~${key}~`, `<span class="${camelToKebab(key)}${isInterestRate ? ' interest-rate' : ''}">${value}</span>`);
-    });
-  }
 }
 
 async function loadPage() {

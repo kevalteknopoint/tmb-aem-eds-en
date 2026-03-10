@@ -473,6 +473,21 @@
   width:12px;
 }
 
+.image-swapping.evergreen-image-swapping-variant{
+  margin:0 auto 40px;
+  max-width:735px;
+  padding-inline:32px;
+  width:100%;
+}
+
+.image-swapping.evergreen-image-swapping-variant .momentum-section-wrapper{
+  padding-inline:unset;
+}
+
+.image-swapping.evergreen-image-swapping-variant .momentum-section-wrapper .columns-wrapper .block > div{
+  gap:32px;
+}
+
 .variant-404 .columns.block > div{
   align-items:center;
   gap:64px;
@@ -515,6 +530,11 @@
   .momentum-saver-section .momentum-section-wrapper, .momentum-image-saver .momentum-section-wrapper, .image-swapping .momentum-section-wrapper, .momentum-app-badges .momentum-section-wrapper, .momentum-direct-variant .momentum-section-wrapper{
     padding-inline:24px;
   }
+
+  .image-swapping.evergreen-image-swapping-variant{
+    max-width:unset;
+    padding-inline:0;
+  }
 }
 
 @media screen and (max-width: 1023px){
@@ -545,6 +565,10 @@
 
   .momentum-saver-section.circular-image.background-color-teal .columns.block > div{
     padding:0;
+  }
+
+  .image-swapping.evergreen-image-swapping-variant .momentum-section-wrapper .columns-wrapper .block > div{
+    flex-direction:row;
   }
 
   .variant-404 .columns.block > div{
@@ -586,6 +610,14 @@
 
   .momentum-saver-section.circular-image.background-color-teal .columns.block{
     padding:40px 16px;
+  }
+
+  .image-swapping.evergreen-image-swapping-variant .momentum-section-wrapper .columns-wrapper .block > div{
+    flex-direction:column;
+  }
+
+  .image-swapping.evergreen-image-swapping-variant .momentum-section-wrapper .columns-wrapper .block > div .columns-img-col{
+    width:100%;
   }
 
   .variant-404 .columns.block > div{
