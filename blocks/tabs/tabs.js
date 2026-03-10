@@ -18,7 +18,7 @@ export default async function decorate(block) {
     tabList.appendChild(tabButton);
 
     tabButton.addEventListener("click", () => {
-      const tabPanel = document.getElementById(`${tabId}--panel`);
+      const tabPanel = document.querySelectorAll(`#${tabId}--panel`);
 
       tabPanels.querySelectorAll("[role=tabpanel]").forEach((panel) => {
         panel.setAttribute("aria-hidden", "true");
@@ -28,7 +28,7 @@ export default async function decorate(block) {
         btn.setAttribute("aria-selected", "false");
       });
 
-      tabPanel.setAttribute("aria-hidden", "false");
+      tabPanel.forEach((panel) => panel.setAttribute("aria-hidden", "false"));
       tabButton.setAttribute("aria-selected", "true");
     });
   });

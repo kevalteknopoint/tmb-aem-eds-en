@@ -315,6 +315,10 @@
             "value": "rates-saver"
           },
           {
+            "name": "Rates Saver Left Aligned",
+            "value": "left-aligned"
+          },
+          {
             "name": "Who can apply",
             "value": "who-can-apply-section"
           },
