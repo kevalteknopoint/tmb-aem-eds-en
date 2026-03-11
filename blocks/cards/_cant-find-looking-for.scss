@@ -429,6 +429,10 @@
             background-color: $bg-reverse;
 
             .cards-card-body {
+              >p{
+                line-height: 0;
+                color: $link-reverse;
+              }
               h1, h2, h3, h4, h5, h6 {
                 color: $link-reverse;
                 border-bottom: none;
@@ -470,6 +474,7 @@
             h1, h2, h3, h4, h5, h6 {
               &:last-child {
                 margin-bottom: 0;
+                margin-top: 4px;
               }
             }
 

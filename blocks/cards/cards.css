@@ -915,6 +915,11 @@
   background-color:var(--bg-reverse);
 }
 
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body > p{
+  color:var(--link-reverse);
+  line-height:0;
+}
+
 .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h1, .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h2, .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h3, .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h4, .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h5, .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h6{
   border-bottom:none;
   color:var(--link-reverse);
@@ -937,6 +942,7 @@
 
 .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body h1:last-child, .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body h2:last-child, .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body h3:last-child, .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body h4:last-child, .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body h5:last-child, .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body h6:last-child{
   margin-bottom:0;
+  margin-top:4px;
 }
 
 .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body p.button-container a{
