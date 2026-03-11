@@ -274,6 +274,10 @@
               "value": "circular-image "
             },
             {
+              "name": "Momentum Impact",
+              "value": "momentum-impact"
+            },
+            {
               "name": "Variation Border",
               "value": "variation-border"
             },
@@ -282,7 +286,7 @@
               "value": "milestones"
             },
             {
-               "name": "Rate Details",
+              "name": "Rate Details",
               "value": "rate-details"
             },
             {
