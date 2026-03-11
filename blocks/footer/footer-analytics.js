@@ -33,6 +33,8 @@ document.addEventListener('click', (e) => {
     const icon = anchor.querySelector('.icon');
     const iconClassString = icon.classList.toString();
     const iconName = iconClassString?.replaceAll('icon-', '')?.replaceAll('icon', '')?.replaceAll(' ', '');
+    const pageRegion = getPageRegion(anchor);
+    const componentIndex = getComponentIndex(anchor);
 
     socialmediaClick(pageRegion, minifyText(iconName), 'global footer', 'footer', componentIndex, getPersona(), 'socialmedia-click', '', '', '', 'global footer', '');
   }
@@ -42,6 +44,9 @@ document.addEventListener('click', (e) => {
     if (!anchor) return;
 
     const anchorLi = anchor?.closest('li');
+    const pageRegion = getPageRegion(anchor);
+    const componentIndex = getComponentIndex(anchor);
+    const nextPageURL = anchor?.getAttribute('href') || '';
 
     ctaInteraction(pageRegion, minifyText(anchorLi?.textContent), minifyText(anchor?.getAttribute('title')), 'socialmedia-click', 'global footer', 'footer', componentIndex, getPersona(), nextPageURL, 'cta-click', 'internal', 'link', 'footer', '', '', '', 'global footer', '');
   }

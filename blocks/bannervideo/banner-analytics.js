@@ -48,6 +48,10 @@ document.addEventListener("click", (e) => {
     const secondaryLink = e.target.closest(
       ".bannervideo-wrapper .swiper-pagination-bullet",
     );
+    const bannerName = e.target
+      .closest(".bannervideo-wrapper")
+      .querySelector("h1,h2,h3,h4,h5,h6")
+      ?.getAttribute("id");
     const carouselPosition = secondaryLink
       .getAttribute("aria-label")
       .replaceAll(/\D+/g, "");
