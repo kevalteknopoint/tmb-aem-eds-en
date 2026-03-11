@@ -792,10 +792,29 @@
   text-decoration:underline;
 }
 
-.momentum-impact .columns.block > div > div:has(img){
+.momentum-impact .momentum-section-wrapper .columns.block{
+  position:relative;
+}
+
+.momentum-impact .momentum-section-wrapper .columns.block > div::after{
+  background:var(--line-default);
+  bottom:0;
+  content:"";
+  display:flex;
+  gap:32px;
+  height:100%;
+  left:0;
+  margin:0 auto;
+  position:absolute;
+  right:0;
+  width:1px;
+}
+
+.momentum-impact .momentum-section-wrapper .columns.block > div > div:has(img){
   align-items:center;
   display:flex;
   gap:24px;
+  margin-left:32px;
 }
 
 @media screen and (max-width: 1279px){

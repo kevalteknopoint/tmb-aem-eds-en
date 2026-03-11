@@ -200,6 +200,7 @@
 .momentum-image-saver {
   &.background-color-teal {
     .columns.block>div {
+
       h1,
       h2,
       h3,
@@ -301,7 +302,7 @@
       padding: 40px 16px;
     }
 
-    & > div > div:not(:has(.interest-rate)):first-child {
+    &>div>div:not(:has(.interest-rate)):first-child {
       flex: 0 0 auto;
     }
   }
@@ -420,7 +421,7 @@
           @include mobile {
             flex-direction: column;
 
-            & > div:has(img) {
+            &>div:has(img) {
               width: 100%;
             }
           }
@@ -501,13 +502,33 @@
 }
 
 .momentum-impact {
-  .columns.block {
-    & > div {
-      & > div:has(img) {
-        display: flex;
-        align-items: center;
-        gap: 24px;
+  .momentum-section-wrapper {
+    .columns.block {
+      position: relative;
+      &>div {
+        &::after {
+          background: var(--line-default);
+          bottom: 0;
+          content: "";
+          height: 100%;
+          left: 0;
+          margin: 0 auto;
+          // max-width: 1312px;
+          position: absolute;
+          right: 0;
+          width: 1px;
+          gap: 32px;
+          display: flex;
+        }
+
+        &>div:has(img) {
+          display: flex;
+          align-items: center;
+          gap: 24px;
+          margin-left: 32px;
+        }
       }
     }
   }
+
 }
