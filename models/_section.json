@@ -35,6 +35,12 @@
           }
         },
         {
+          "component": "reference",
+          "name": "section-bg-img",
+          "label": "Background Image",
+          "multi": false
+        },
+        {
           "component": "multiselect",
           "name": "style",
           "label": "Style",
