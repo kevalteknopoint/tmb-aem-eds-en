@@ -6,7 +6,7 @@
 .momentum-image-saver .columns.block > div .button-container a.secondary,
 .image-swapping .columns.block > div .button-container a.secondary,
 .momentum-app-badges .columns.block > div .button-container a.secondary,
-.momentum-direct-variant .columns.block > div .button-container a.secondary, .momentum-image-saver.background-color-teal .columns.block > div .button-container a:not(.secondary), .momentum-image-saver.background-color-teal .columns.block > div .button-container a.secondary, .momentum-saver-section.circular-image.background-color-teal .columns.block > div .button-container a:not(.secondary), .momentum-saver-section.circular-image.background-color-teal .columns.block > div .button-container a.secondary{
+.momentum-direct-variant .columns.block > div .button-container a.secondary, .momentum-image-saver.background-color-teal .columns.block > div .button-container a:not(.secondary), .momentum-image-saver.background-color-teal .columns.block > div .button-container a.secondary, .momentum-saver-section.circular-image.background-color-teal .columns.block > div .button-container a:not(.secondary), .momentum-saver-section.circular-image.background-color-teal .columns.block > div .button-container a.secondary, .momentum-corporate-variation .columns.block > div .button-container a:not(.secondary), .momentum-corporate-variation .columns.block > div .button-container a.secondary{
   align-items:center;
   border:none;
   border-radius:var(--radius-button);
@@ -24,11 +24,11 @@
   width:fit-content;
 }
 
-.momentum-saver-section .momentum-section-wrapper,
-.momentum-image-saver .momentum-section-wrapper,
-.image-swapping .momentum-section-wrapper,
-.momentum-app-badges .momentum-section-wrapper,
-.momentum-direct-variant .momentum-section-wrapper{
+.momentum-saver-section:not(.momentum-corporate-variation) .momentum-section-wrapper,
+.momentum-image-saver:not(.momentum-corporate-variation) .momentum-section-wrapper,
+.image-swapping:not(.momentum-corporate-variation) .momentum-section-wrapper,
+.momentum-app-badges:not(.momentum-corporate-variation) .momentum-section-wrapper,
+.momentum-direct-variant:not(.momentum-corporate-variation) .momentum-section-wrapper{
   margin-left:auto;
   margin-right:auto;
   max-width:calc(1440px - 0px);
@@ -792,6 +792,102 @@
   text-decoration:underline;
 }
 
+.momentum-corporate-variation{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
+}
+
+.momentum-corporate-variation .momentum-section-wrapper{
+  border-radius:var(--radius-card);
+  padding:32px;
+}
+
+.momentum-corporate-variation .columns.block .columns-img-col{
+  border-right:1px solid #fff;
+  padding:2px 71px 2px 29px;
+}
+
+.momentum-corporate-variation .columns.block > div{
+  gap:64px;
+}
+
+.momentum-corporate-variation .columns.block > div h1, .momentum-corporate-variation .columns.block > div h2, .momentum-corporate-variation .columns.block > div h3, .momentum-corporate-variation .columns.block > div h4, .momentum-corporate-variation .columns.block > div h5, .momentum-corporate-variation .columns.block > div h6{
+  color:var(--heading-reverse);
+}
+
+.momentum-corporate-variation .columns.block > div p, .momentum-corporate-variation .columns.block > div ul{
+  color:var(--body-reverse);
+}
+
+.momentum-corporate-variation .columns.block > div .button-container a:not(.secondary){
+  background-color:var(--color-button-secondary-default);
+  border:none;
+  color:var(--color-button-text-stroke-default);
+  font-size:var(--font-size-h5);
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:8px;
+}
+
+.momentum-corporate-variation .columns.block > div .button-container a:not(.secondary):hover{
+  background-color:var(--color-button-secondary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-hover);
+}
+
+.momentum-corporate-variation .columns.block > div .button-container a:not(.secondary):active{
+  background-color:var(--color-button-secondary-press);
+  border:none;
+  color:var(--color-button-text-stroke-press);
+}
+
+.momentum-corporate-variation .columns.block > div .button-container a:not(.secondary):focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.momentum-corporate-variation .columns.block > div .button-container a:not(.secondary) svg{
+  height:12px;
+  width:12px;
+}
+
+.momentum-corporate-variation .columns.block > div .button-container a.secondary{
+  background-color:var(--color-button-outlined-reverse-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+  font-size:var(--font-size-h5);
+  font-style:normal;
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:6px;
+  text-decoration:unset;
+}
+
+.momentum-corporate-variation .columns.block > div .button-container a.secondary:hover{
+  background-color:var(--color-button-outlined-reverse-hover);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.momentum-corporate-variation .columns.block > div .button-container a.secondary:active{
+  background-color:var(--color-button-outlined-reverse-press);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.momentum-corporate-variation .columns.block > div .button-container a.secondary:focus-visible{
+  box-shadow:0 0 0 2px var(--color-focus-default), 0 0 0 3px var(--color-focus-reversed);
+  outline:none;
+}
+
+.momentum-corporate-variation .columns.block > div .button-container a.secondary svg{
+  height:12px;
+  width:12px;
+}
+
 .momentum-impact .columns.block > div > div:has(img){
   align-items:center;
   display:flex;
@@ -799,17 +895,21 @@
 }
 
 @media screen and (max-width: 1279px){
-  .momentum-saver-section .momentum-section-wrapper,
-  .momentum-image-saver .momentum-section-wrapper,
-  .image-swapping .momentum-section-wrapper,
-  .momentum-app-badges .momentum-section-wrapper,
-  .momentum-direct-variant .momentum-section-wrapper{
+  .momentum-saver-section:not(.momentum-corporate-variation) .momentum-section-wrapper,
+  .momentum-image-saver:not(.momentum-corporate-variation) .momentum-section-wrapper,
+  .image-swapping:not(.momentum-corporate-variation) .momentum-section-wrapper,
+  .momentum-app-badges:not(.momentum-corporate-variation) .momentum-section-wrapper,
+  .momentum-direct-variant:not(.momentum-corporate-variation) .momentum-section-wrapper{
     padding-inline:24px;
   }
 
   .image-swapping.evergreen-image-swapping-variant{
     max-width:unset;
     padding-inline:0;
+  }
+
+  .momentum-corporate-variation{
+    padding-inline:24px;
   }
 }
 
@@ -874,14 +974,45 @@
   .variant-404 .columns.block > div p.button-container{
     display:none;
   }
+
+  .momentum-corporate-variation{
+    border-radius:0;
+    padding-inline:0;
+  }
+
+  .momentum-corporate-variation .momentum-section-wrapper{
+    border-radius:0;
+    padding:40px 16px;
+  }
+
+  .momentum-corporate-variation .columns.block{
+    text-align:center;
+  }
+
+  .momentum-corporate-variation .columns.block .columns-img-col{
+    border-right:0;
+    height:175px;
+    padding:0;
+    width:175px;
+  }
+
+  .momentum-corporate-variation .columns.block .columns-img-col picture, .momentum-corporate-variation .columns.block .columns-img-col img{
+    height:175px;
+    margin:0 auto;
+    width:auto;
+  }
+
+  .momentum-corporate-variation .columns.block > div{
+    gap:24px;
+  }
 }
 
 @media screen and (max-width: 767px){
-  .momentum-saver-section .momentum-section-wrapper,
-  .momentum-image-saver .momentum-section-wrapper,
-  .image-swapping .momentum-section-wrapper,
-  .momentum-app-badges .momentum-section-wrapper,
-  .momentum-direct-variant .momentum-section-wrapper{
+  .momentum-saver-section:not(.momentum-corporate-variation) .momentum-section-wrapper,
+  .momentum-image-saver:not(.momentum-corporate-variation) .momentum-section-wrapper,
+  .image-swapping:not(.momentum-corporate-variation) .momentum-section-wrapper,
+  .momentum-app-badges:not(.momentum-corporate-variation) .momentum-section-wrapper,
+  .momentum-direct-variant:not(.momentum-corporate-variation) .momentum-section-wrapper{
     padding-inline:16px;
   }
 
@@ -920,6 +1051,14 @@
 
   .variant-404 .columns.block > div{
     gap:32px;
+  }
+
+  .momentum-corporate-variation{
+    padding-inline:16px;
+  }
+
+  .momentum-corporate-variation .columns.block > div{
+    gap:16px;
   }
 }
 
