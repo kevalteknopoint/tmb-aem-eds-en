@@ -378,7 +378,11 @@
           },
           {
             "name": "Momentum Corporate Variation",
-            "value": "momentum-corporate-variation "
+            "value": "momentum-corporate-variation"
+          },
+          {
+            "name": "Momentum Impact",
+            "value": "momentum-impact"
           },
           {
             "name": "Variation Border",
