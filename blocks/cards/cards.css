@@ -902,6 +902,15 @@
   border:unset;
 }
 
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .default-content-wrapper h1,
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .default-content-wrapper h2,
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .default-content-wrapper h3,
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .default-content-wrapper h4,
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .default-content-wrapper h5,
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .default-content-wrapper h6{
+  text-align:center;
+}
+
 .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li{
   background-color:var(--bg-reverse);
 }
@@ -909,6 +918,29 @@
 .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h1, .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h2, .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h3, .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h4, .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h5, .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h6{
   border-bottom:none;
   color:var(--link-reverse);
+}
+
+.section.faq-cant-find-looking-for.variation-non-border .default-content-wrapper h1,
+.section.faq-cant-find-looking-for.variation-non-border .default-content-wrapper h2,
+.section.faq-cant-find-looking-for.variation-non-border .default-content-wrapper h3,
+.section.faq-cant-find-looking-for.variation-non-border .default-content-wrapper h4,
+.section.faq-cant-find-looking-for.variation-non-border .default-content-wrapper h5,
+.section.faq-cant-find-looking-for.variation-non-border .default-content-wrapper h6{
+  text-align:left;
+}
+
+.section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li{
+  border:none;
+  border-radius:24px;
+  padding:40px 24px;
+}
+
+.section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body h1:last-child, .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body h2:last-child, .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body h3:last-child, .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body h4:last-child, .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body h5:last-child, .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body h6:last-child{
+  margin-bottom:0;
+}
+
+.section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body p.button-container a{
+  border:unset;
 }
 
 .banking-goods{
@@ -1852,6 +1884,10 @@ html{
     padding:40px 24px;
   }
 
+  .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li{
+    padding:40px 24px;
+  }
+
   .banking-goods .cards-wrapper .cards{
     overflow:auto;
     scrollbar-width:none;
@@ -2146,6 +2182,10 @@ html{
   }
 
   .section.faq-cant-find-looking-for.variation-border .cards-wrapper .cards ul li{
+    padding:40px 24px;
+  }
+
+  .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li{
     padding:40px 24px;
   }
 
