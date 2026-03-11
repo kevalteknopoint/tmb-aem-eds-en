@@ -749,6 +749,12 @@ svg.icon-svg.icon-invert-bg{
   padding:10px;
 }
 
+.section.section-with-bg{
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
 @media screen and (max-width: 1439px){
   :root{
     --carousel-fix-x:64px;

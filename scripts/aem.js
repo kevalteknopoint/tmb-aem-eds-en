@@ -527,6 +527,9 @@ function decorateSections(main) {
           styles.forEach((style) => section.classList.add(style));
         } else if (key === 'id') {
           section.id = toClassName(meta.id?.trim());
+        } else if (key === 'section-bg-img') {
+          section.style.backgroundImage = `url(${meta[key]})`;
+          section.classList?.add('section-with-bg');
         } else {
           section.dataset[toCamelCase(key)] = meta[key];
         }
