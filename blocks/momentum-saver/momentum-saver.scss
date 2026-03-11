@@ -39,7 +39,7 @@
       flex: unset;
       order: unset;
 
-      &.columns-img-col {
+      &:has(picture, img) {
         flex: 0 0 auto;
 
         img {
@@ -53,6 +53,10 @@
 
       color: $heading-default;
       margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 0
+      }
     }
     
     h3, h4, h5, h6 {
@@ -60,6 +64,10 @@
       
       color: $heading-default;
       margin-bottom: 4px;
+
+      &:last-child {
+        margin-bottom: 0
+      }
     }
     
     p {
@@ -256,7 +264,7 @@
   }
 }
 
-.momentum-saver-section:has(.interest-rate) {
+.momentum-saver-section:not(.columns.block:has(img)) {
   .columns.block {
     background: $bg-default;
     padding: 64px;
@@ -264,6 +272,10 @@
 
     @include tablet {
       padding: 40px 16px;
+    }
+
+    & > div > div:not(:has(.interest-rate)):first-child {
+      flex: 0 0 auto;
     }
   }
 }
@@ -374,7 +386,7 @@
             @include mobile {
               flex-direction: column;
 
-              .columns-img-col {
+              & > div:has(img) {
                 width: 100%;
               }
             }
