@@ -519,6 +519,9 @@
           width: 1px;
           gap: 32px;
           display: flex;
+          @include tablet{
+            content: unset;
+          }
         }
 
         &>div:has(img) {
@@ -526,6 +529,16 @@
           align-items: center;
           gap: 24px;
           margin-left: 32px;
+          @include tablet{
+            flex-direction: column;
+            margin-left: unset;
+            width: 100%;
+          }
+          p{
+            @include tablet {
+              width: 100%;
+            }
+          }
         }
       }
     }

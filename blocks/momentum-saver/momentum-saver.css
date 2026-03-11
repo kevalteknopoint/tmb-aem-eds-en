@@ -893,6 +893,20 @@
   .variant-404 .columns.block > div p.button-container{
     display:none;
   }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div::after{
+    content:unset;
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div > div:has(img){
+    flex-direction:column;
+    margin-left:unset;
+    width:100%;
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div > div:has(img) p{
+    width:100%;
+  }
 }
 
 @media screen and (max-width: 767px){
