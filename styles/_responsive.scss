@@ -1,6 +1,7 @@
 @use 'mixins' as *;
 
 :root {
+  --alert-close-x: 32px;
   --carousel-card-fix: 304px;
   --carousel-fix-x: 244px;
   --col-1-2-2: 640px;
@@ -13,7 +14,7 @@
   --font-height-h2-std: var(--font-d-height-h2-std);
   --font-height-h2: var(--font-d-height-h2);
   --font-height-h3: var(--font-d-height-h3);
-  --font-height-h4: var(--font-d-height-h4);
+  --font-height-h4: var(--font-t-height-h4);
   --font-height-h5: var(--font-d-height-h5);
   --font-height-intro: var(--font-d-height-intro);
   --font-height-lg: var(--font-d-height-lg);
@@ -38,10 +39,15 @@
   --jump-menu-fix: 40px;
   --padding-jump-container-x: var(--space-sm);
   --padding-main-container-x: var(--space-xl);
+  --padding-promo-x: var(--space-2xl);
   --padding-section-y: var(--space-2xl);
-  --radius-hero-var: var(--radius-hero);
+  --radius-hero: var(--radius-hero);
   --spacer: var(--space-sm);
+  --step-gap: var(--space-sm);
+  --step-title-padding: 16px;
+  --step-width: var(--space-xl);
   --width-logo: var(--width-logo-lg);
+  --width-step: var(--space-xl);
   --width-thumbnail: 250px;
 }
 
@@ -50,12 +56,13 @@
     --carousel-fix-x: 64px;
     --device-width: 1344px;
     --guide-width: 72px;
-    --radius-hero-var: 0px;
+    --radius-hero: 0px;
   }
 }
 
 @include tablet-lg {
   :root {
+    --alert-close-x: 24px;
     --carousel-card-fix: 280px;
     --carousel-fix-x: 0px;
     --col-1-2-2: 520px;
@@ -90,15 +97,18 @@
     --guide-width: 112px;
     --jump-menu-fix: 64px;
     --padding-main-container-x: var(--space-sm);
+    --padding-promo-x: var(--space-md);
     --padding-section-y: var(--space-xl);
-    --radius-hero-var: 0px;
+    --radius-hero: 0px;
     --spacer: 0px;
+    --width-step: var(--space-lg);
     --width-thumbnail: 175px;
   }
 }
 
 @include tablet {
   :root {
+    --alert-close-x: 24px;
     --carousel-card-fix: 264px;
     --carousel-fix-x: var(--space-sm);
     --col-1-2-2: 360px;
@@ -133,15 +143,18 @@
     --guide-width: 72px;
     --jump-menu-fix: 64px;
     --padding-main-container-x: var(--space-sm);
+    --padding-promo-x: var(--space-md);
     --padding-section-y: var(--space-xl);
-    --radius-hero-var: 0px;
+    --radius-hero: 0px;
     --spacer: 0px;
+    --width-step: var(--space-lg);
     --width-thumbnail: 175px;
   }
 }
 
 @include mobile {
   :root {
+    --alert-close-x: 16px;
     --carousel-card-fix: 300px;
     --carousel-fix-x: var(--space-xs);
     --col-1-2-2: 528px;
@@ -179,16 +192,22 @@
     --jump-menu-fix: 64px;
     --padding-jump-container-x: var(--space-xs);
     --padding-main-container-x: var(--space-xs);
+    --padding-promo-x: var(--space-sm);
     --padding-section-y: var(--space-lg);
-    --radius-hero-var: 0px;
+    --radius-hero: 0px;
     --spacer: 0px;
+    --step-gap: var(--space-xs);
+    --step-title-padding: 5px;
+    --step-width: var(--space-lg);
     --width-logo: var(--width-logo-sm);
+    --width-step: var(--space-lg);
     --width-thumbnail: 175px;
   }
 }
 
 @include mobile-s {
   :root {
+    --alert-close-x: 16px;
     --carousel-card-fix: 300px;
     --carousel-fix-x: var(--space-xs);
     --col-1-2-2: 368px;
@@ -225,10 +244,15 @@
     --jump-menu-fix: 64px;
     --padding-jump-container-x: var(--space-xs);
     --padding-main-container-x: var(--space-xs);
+    --padding-promo-x: var(--space-sm);
     --padding-section-y: var(--space-lg);
-    --radius-hero-var: 0px;
+    --radius-hero: 0px;
     --spacer: 0px;
+    --step-gap: var(--space-xs);
+    --step-title-padding: 5px;
+    --step-width: var(--space-lg);
     --width-logo: var(--width-logo-sm);
+    --width-step: var(--space-lg);
     --width-thumbnail: 175px;
   }
 }
