@@ -902,6 +902,15 @@
   border:unset;
 }
 
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li{
+  background-color:var(--bg-reverse);
+}
+
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h1, .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h2, .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h3, .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h4, .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h5, .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h6{
+  border-bottom:none;
+  color:var(--link-reverse);
+}
+
 .banking-goods{
   margin-left:auto;
   margin-right:auto;

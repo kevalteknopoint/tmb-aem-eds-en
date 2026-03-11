@@ -375,6 +375,10 @@
             "value": "variation-border"
           },
           {
+            "name": "Variation Non Border",
+            "value": "variation-non-border"
+          },
+          {
             "name": "Milestones",
             "value": "milestones"
           },

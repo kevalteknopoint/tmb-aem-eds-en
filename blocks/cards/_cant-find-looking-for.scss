@@ -408,3 +408,25 @@
     }
   }
 }
+
+// NON BORDER VARIATION
+.section.faq-cant-find-looking-for.variation-non-border{
+  &.background-color-teal{
+      .cards-wrapper {
+      .cards {
+        ul {
+          li {
+            background-color: $bg-reverse;
+
+            .cards-card-body {
+              h1, h2, h3, h4, h5, h6 {
+                color: $link-reverse;
+                border-bottom: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
