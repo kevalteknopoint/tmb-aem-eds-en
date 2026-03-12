@@ -235,10 +235,13 @@ html:has(.primary-header.search-active) .search-results-section{
 .primary-nav-list .primary-nav-link{
   color:var(--color-header-nav-secondary);
   display:block;
-  font-size:16px;
-  font-weight:600;
-  line-height:24px;
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
   position:relative;
+  text-transform:initial;
 }
 
 .primary-nav-list .primary-nav-link::after{
@@ -386,15 +389,20 @@ html:has(.primary-header.search-active) .search-results-section{
   color:var(--color-header-icon);
 }
 
+header:has(.secondary-header) .search-results-section{
+  padding-bottom:141px;
+  top:141px;
+}
+
 .search-results-section{
   background:#fff;
   display:none;
   height:100%;
   left:0;
   overflow-y:auto;
-  padding-bottom:141px;
+  padding-bottom:80px;
   position:fixed;
-  top:141px;
+  top:80px;
   width:100%;
   z-index:3;
 }
@@ -536,11 +544,11 @@ html:has(.primary-header.search-active) .search-results-section{
 }
 
 .mobile-menu-wrapper .primary-nav-list .primary-nav-link{
-  font-family:var(--font-family-body);
-  font-size:var(--font-size-body);
-  font-weight:var(--font-weight-body);
-  letter-spacing:var(--font-letter-spacing-body);
-  line-height:var(--font-height-body);
+  font-family:var(--font-family-h4);
+  font-size:var(--font-size-h4);
+  font-weight:var(--font-weight-h4);
+  letter-spacing:var(--font-letter-spacing-h4);
+  line-height:var(--font-height-h4);
   padding:10px 0;
   text-transform:initial;
 }
@@ -615,6 +623,7 @@ html:has(.primary-header.search-active) .search-results-section{
 
   .logo-nav-wrap{
     gap:16px;
+    padding:20px 0;
   }
 
   .primary-nav-list{
@@ -676,6 +685,11 @@ html:has(.primary-header.search-active) .search-results-section{
   .header-actions-wrap .search-btn-wrap{
     min-width:24px;
     width:24px;
+  }
+
+  header:has(.secondary-header) .search-results-section{
+    padding-bottom:80px;
+    top:80px;
   }
 
   .search-results-section{

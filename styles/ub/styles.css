@@ -507,7 +507,7 @@ p{
   text-transform:initial;
 }
 
-header{
+header:has(.secondary-header){
   min-height:141px;
 }
 
