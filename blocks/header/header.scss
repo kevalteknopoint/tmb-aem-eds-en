@@ -613,7 +613,7 @@ html:has(.primary-header.search-active) {
     }
 
     .primary-nav-link {
-      @include typo-heading4;
+      @include typo-body;
 
       padding: 10px 0;
 
