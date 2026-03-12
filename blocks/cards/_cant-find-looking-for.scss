@@ -318,6 +318,29 @@
       }
     }
   }
+
+  &.left-aligned {
+    .cards-wrapper .cards ul {
+      grid-template-columns: 1fr 1fr 1fr;
+      
+      @include tablet {
+        grid-template-columns: 1fr;
+      }
+      
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+
+      * {
+        text-align: left !important;
+      }
+
+      .icon {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 // BORDER VARIATION

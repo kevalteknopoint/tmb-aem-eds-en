@@ -868,6 +868,19 @@
   text-underline-offset:3px;
 }
 
+.section.faq-cant-find-looking-for.left-aligned .cards-wrapper .cards ul{
+  grid-template-columns:1fr 1fr 1fr;
+}
+
+.section.faq-cant-find-looking-for.left-aligned .cards-wrapper .cards ul *{
+  text-align:left !important;
+}
+
+.section.faq-cant-find-looking-for.left-aligned .cards-wrapper .cards ul .icon{
+  margin-left:0;
+  margin-right:0;
+}
+
 .section.faq-cant-find-looking-for.variation-border.background-color-teal .default-content-wrapper h1,
 .section.faq-cant-find-looking-for.variation-border.background-color-teal .default-content-wrapper h2,
 .section.faq-cant-find-looking-for.variation-border.background-color-teal .default-content-wrapper h3,
@@ -1854,6 +1867,10 @@ html{
     text-align:left;
   }
 
+  .section.faq-cant-find-looking-for.left-aligned .cards-wrapper .cards ul{
+    grid-template-columns:1fr;
+  }
+
   .section.faq-cant-find-looking-for.variation-border .cards-wrapper .cards ul li{
     padding:40px 24px;
   }
@@ -2149,6 +2166,10 @@ html{
 
   .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant .cards-wrapper .cards ul li{
     padding:0;
+  }
+
+  .section.faq-cant-find-looking-for.left-aligned .cards-wrapper .cards ul{
+    grid-template-columns:1fr;
   }
 
   .section.faq-cant-find-looking-for.variation-border .cards-wrapper .cards ul li{

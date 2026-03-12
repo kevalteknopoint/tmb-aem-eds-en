@@ -60,7 +60,7 @@ export default function decorate(block) {
     const rawRate = interestRateEl?.textContent.trim() || "";
     let rateContent;
     if (rawRate.includes("%")) {
-      const num = rawRate.replace("%", "").trim();
+      const num = rawRate.replace("%", "")?.replace('p.a.', '').trim();
       rateContent = span(
         { class: "interest-rate" },
         span({ class: "rate-num" }, num),
