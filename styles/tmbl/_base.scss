@@ -2,7 +2,7 @@
 @import '../../libs/aos/aos.min.css';
 
 :root {
-  --bsb: 812 -472; /* from "BSB" */
+  --bsb: 'String value'; /* from "BSB" */
   --color-alert-critical-banner: #fcf2f5; /* from "color/alert/critical/banner" */
   --color-alert-critical-icon-bg: #c4043f; /* from "color/alert/critical/icon-bg" */
   --color-alert-critical-icon: #ffffff; /* from "color/alert/critical/icon" */
@@ -14,80 +14,80 @@
   --color-alert-warning-icon-bg: #eb4600; /* from "color/alert/warning/icon-bg" */
   --color-alert-warning-icon: #ffffff; /* from "color/alert/warning/icon" */
   --color-button-outlined-default: #ffffff03; /* from "color/button/outlined/default" */
-  --color-button-outlined-hover: #1729831a; /* from "color/button/outlined/hover" */
-  --color-button-outlined-press: #17298333; /* from "color/button/outlined/press" */
+  --color-button-outlined-hover: #00354b1a; /* from "color/button/outlined/hover" */
+  --color-button-outlined-press: #00354b33; /* from "color/button/outlined/press" */
   --color-button-outlined-reverse-default: #ffffff03; /* from "color/button/outlined-reverse/default" */
   --color-button-outlined-reverse-hover: #0000000d; /* from "color/button/outlined-reverse/hover" */
   --color-button-outlined-reverse-press: #0000001a; /* from "color/button/outlined-reverse/press" */
-  --color-button-primary-default: #172983; /* from "color/button/primary/default" */
-  --color-button-primary-hover: #162573; /* from "color/button/primary/hover" */
-  --color-button-primary-press: #101b55; /* from "color/button/primary/press" */
-  --color-button-secondary-default: #a2daf3; /* from "color/button/secondary/default" */
-  --color-button-secondary-hover: #7ccaed; /* from "color/button/secondary/hover" */
-  --color-button-secondary-press: #57bbe8; /* from "color/button/secondary/press" */
-  --color-button-text-stroke-default: #172983; /* from "color/button/text-stroke/default" */
-  --color-button-text-stroke-hover: #162573; /* from "color/button/text-stroke/hover" */
-  --color-button-text-stroke-press: #101b55; /* from "color/button/text-stroke/press" */
+  --color-button-primary-default: #00354b; /* from "color/button/primary/default" */
+  --color-button-primary-hover: #002c3e; /* from "color/button/primary/hover" */
+  --color-button-primary-press: #001f2c; /* from "color/button/primary/press" */
+  --color-button-secondary-default: #f1eee8; /* from "color/button/secondary/default" */
+  --color-button-secondary-hover: #dcd6c8; /* from "color/button/secondary/hover" */
+  --color-button-secondary-press: #cbc5b9; /* from "color/button/secondary/press" */
+  --color-button-text-stroke-default: #00354b; /* from "color/button/text-stroke/default" */
+  --color-button-text-stroke-hover: #002c3e; /* from "color/button/text-stroke/hover" */
+  --color-button-text-stroke-press: #001f2c; /* from "color/button/text-stroke/press" */
   --color-button-text-stroke-reverse: #ffffff; /* from "color/button/text-stroke/reverse" */
   --color-button-white-default: #ffffff; /* from "color/button/white/default" */
-  --color-button-white-hover: #d4eefc; /* from "color/button/white/hover" */
-  --color-button-white-press: #d4eefc; /* from "color/button/white/press" */
-  --color-focus-default: #00589e; /* from "color/focus/default" */
+  --color-button-white-hover: #dde2e4; /* from "color/button/white/hover" */
+  --color-button-white-press: #c4cfd3; /* from "color/button/white/press" */
+  --color-focus-default: #447fa2; /* from "color/focus/default" */
   --color-focus-reversed: #ffffff; /* from "color/focus/reversed" */
-  --color-footer-bg: #172983; /* from "color/footer/bg" */
-  --color-footer-info: #17298312; /* from "color/footer/info" */
-  --color-footer-link: #172983; /* from "color/footer/link" */
+  --color-footer-bg: #00354b; /* from "color/footer/bg" */
+  --color-footer-info: #00354b12; /* from "color/footer/info" */
+  --color-footer-link: #00354b; /* from "color/footer/link" */
   --color-footer-rectangle: #ffffff; /* from "color/footer/rectangle" */
   --color-footer-reverse-text: #ffffff; /* from "color/footer/reverse-text" */
-  --color-footer-text: #525257; /* from "color/footer/text" */
-  --color-header-frame: #f7f7f7; /* from "color/header/frame" */
-  --color-header-icon-2: #172983; /* from "color/header/icon-2" */
-  --color-header-icon: #003764; /* from "color/header/icon" */
-  --color-header-light: #d4eefc; /* from "color/header/light" */
-  --color-header-nav-primary: #172983; /* from "color/header/nav/primary" */
-  --color-header-nav-secondary: #172983; /* from "color/header/nav/secondary" */
-  --color-header-nav: #ffffff; /* from "color/header/nav" */
-  --color-header-search: #f7f7f7; /* from "color/header/search" */
-  --color-milestone-timeline-dot: #d4eefc; /* from "color/milestone/timeline-dot" */
-  --color-pagination-secondary-nav: #f7f7f7; /* from "color/pagination/secondary-nav" */
-  --color-pagination-selected: #172983; /* from "color/pagination/selected" */
-  --color-pagination-surface: #ffffff; /* from "color/pagination/surface" */
-  --color-pagination-unselected: #17298399; /* from "color/pagination/unselected" */
-  --color-placeholder-default: #17298399; /* from "color/placeholder/default" */
+  --color-footer-text: #ffffff; /* from "color/footer/text" */
+  --color-header-frame: #002c3e; /* from "color/header/frame" */
+  --color-header-icon-2: #00354b; /* from "color/header/icon-2" */
+  --color-header-icon: #ffffff; /* from "color/header/icon" */
+  --color-header-light: #dcd6c8; /* from "color/header/light" */
+  --color-header-nav-primary: #00354b; /* from "color/header/nav/primary" */
+  --color-header-nav-secondary: #ffffff; /* from "color/header/nav/secondary" */
+  --color-header-nav: #00354b; /* from "color/header/nav" */
+  --color-header-search: #002c3e; /* from "color/header/search" */
+  --color-milestone-timeline-dot: #f1eee8; /* from "color/milestone/timeline-dot" */
+  --color-pagination-secondary-nav: #ffffff; /* from "color/pagination/secondary-nav" */
+  --color-pagination-selected: #00525b; /* from "color/pagination/selected" */
+  --color-pagination-surface: #00525be5; /* from "color/pagination/surface" */
+  --color-pagination-unselected: #00525be5; /* from "color/pagination/unselected" */
+  --color-placeholder-default: #1a171b99; /* from "color/placeholder/default" */
   --color-placeholder-reverse-2: #ffffff4d; /* from "color/placeholder/reverse-2" */
   --color-placeholder-reverse: #ffffff99; /* from "color/placeholder/reverse" */
-  --color-variants-bg-accent: #f7c0b3; /* from "color/variants/bg/accent" */
+  --color-variants-bg-accent: #eff9f0; /* from "color/variants/bg/accent" */
   --color-variants-bg-default: #ffffff; /* from "color/variants/bg/default" */
-  --color-variants-bg-light-1: #f7f7f7; /* from "color/variants/bg/light-1" */
-  --color-variants-bg-light-2: #d4eefc; /* from "color/variants/bg/light-2" */
-  --color-variants-bg-light-3: #a2daf3; /* from "color/variants/bg/light-3" */
-  --color-variants-bg-light-4: #d4eefc; /* from "color/variants/bg/light-4" */
-  --color-variants-bg-promo: #172983; /* from "color/variants/bg/promo" */
-  --color-variants-bg-reverse: #172983; /* from "color/variants/bg/reverse" */
-  --color-variants-body-default: #525257; /* from "color/variants/body/default" */
-  --color-variants-body-reverse-2: #d4eefc; /* from "color/variants/body/reverse-2" */
+  --color-variants-bg-light-1: #f1eee8; /* from "color/variants/bg/light-1" */
+  --color-variants-bg-light-2: #eff9f0; /* from "color/variants/bg/light-2" */
+  --color-variants-bg-light-3: #f1eee8; /* from "color/variants/bg/light-3" */
+  --color-variants-bg-light-4: #f1eee8; /* from "color/variants/bg/light-4" */
+  --color-variants-bg-promo: #00354b; /* from "color/variants/bg/promo" */
+  --color-variants-bg-reverse: #00354b; /* from "color/variants/bg/reverse" */
+  --color-variants-body-default: #222222; /* from "color/variants/body/default" */
+  --color-variants-body-reverse-2: #f1eee8; /* from "color/variants/body/reverse-2" */
   --color-variants-body-reverse: #ffffff; /* from "color/variants/body/reverse" */
-  --color-variants-burst-default: #f7c0b3; /* from "color/variants/burst/default" */
-  --color-variants-burst-reverse: #172983; /* from "color/variants/burst/reverse" */
-  --color-variants-heading-default: #172983; /* from "color/variants/heading/default" */
-  --color-variants-heading-reverse-2: #d4eefc; /* from "color/variants/heading/reverse-2" */
+  --color-variants-burst-default: #b91a4d; /* from "color/variants/burst/default" */
+  --color-variants-burst-reverse: #00354b; /* from "color/variants/burst/reverse" */
+  --color-variants-heading-default: #00354b; /* from "color/variants/heading/default" */
+  --color-variants-heading-reverse-2: #f1eee8; /* from "color/variants/heading/reverse-2" */
   --color-variants-heading-reverse: #ffffff; /* from "color/variants/heading/reverse" */
-  --color-variants-icon-accent: #f7c0b3; /* from "color/variants/icon/accent" */
-  --color-variants-icon-default: #172983; /* from "color/variants/icon/default" */
-  --color-variants-icon-reverse-2: #d4eefc; /* from "color/variants/icon/reverse-2" */
+  --color-variants-icon-accent: #b91a4d; /* from "color/variants/icon/accent" */
+  --color-variants-icon-default: #00354b; /* from "color/variants/icon/default" */
+  --color-variants-icon-reverse-2: #f1eee8; /* from "color/variants/icon/reverse-2" */
   --color-variants-icon-reverse: #ffffff; /* from "color/variants/icon/reverse" */
   --color-variants-line-default: #00000033; /* from "color/variants/line/default" */
   --color-variants-line-reverse: #ffffff1a; /* from "color/variants/line/reverse" */
-  --color-variants-link-default: #172983; /* from "color/variants/link/default" */
-  --color-variants-link-reverse-2: #d4eefc; /* from "color/variants/link/reverse-2" */
+  --color-variants-link-default: #00354b; /* from "color/variants/link/default" */
+  --color-variants-link-reverse-2: #f1eee8; /* from "color/variants/link/reverse-2" */
   --color-variants-link-reverse: #ffffff; /* from "color/variants/link/reverse" */
-  --color-variants-number-list-default: #1729831a; /* from "color/variants/number-list/default" */
+  --color-variants-number-list-default: #00354b1a; /* from "color/variants/number-list/default" */
   --color-variants-number-list-reverse: #ffffff1a; /* from "color/variants/number-list/reverse" */
-  --color-variants-stroke-accent: #f7c0b3; /* from "color/variants/stroke/accent" */
-  --color-variants-stroke-primary: #172983; /* from "color/variants/stroke/primary" */
+  --color-variants-stroke-accent: #dde2e4; /* from "color/variants/stroke/accent" */
+  --color-variants-stroke-primary: #00525b; /* from "color/variants/stroke/primary" */
   --color-variants-stroke-reversed-2: #ffffff; /* from "color/variants/stroke/reversed-2" */
   --color-variants-stroke-reversed: #ffffff; /* from "color/variants/stroke/reversed" */
-  --color-variants-stroke-secondary: #525257; /* from "color/variants/stroke/secondary" */
+  --color-variants-stroke-secondary: #0b231f; /* from "color/variants/stroke/secondary" */
   --font-d-height-body: 24px; /* from "font/--D/height/body" */
   --font-d-height-disc: 18px; /* from "font/--D/height/disc" */
   --font-d-height-h1-std: 44px; /* from "font/--D/height/h1-std" */
@@ -97,8 +97,8 @@
   --font-d-height-h3: 29px; /* from "font/--D/height/h3" */
   --font-d-height-h4: 24px; /* from "font/--D/height/h4" */
   --font-d-height-h5: 24px; /* from "font/--D/height/h5" */
-  --font-d-height-intro: 36px; /* from "font/--D/height/intro" */
-  --font-d-height-lg: 64px; /* from "font/--D/height/lg" */
+  --font-d-height-intro: 30px; /* from "font/--D/height/intro" */
+  --font-d-height-lg: 60px; /* from "font/--D/height/lg" */
   --font-d-height-sm-body: 21px; /* from "font/--D/height/sm-body" */
   --font-d-size-body: 16px; /* from "font/--D/size/body" */
   --font-d-size-disc: 12px; /* from "font/--D/size/disc" */
@@ -115,11 +115,11 @@
   --font-family-body-bold: var(--primary-font); /* from "font/family/body-bold" */
   --font-family-body: var(--primary-font); /* from "font/family/body" */
   --font-family-disc: var(--primary-font); /* from "font/family/disc" */
-  --font-family-h1-std: var(--secondary-font); /* from "font/family/h1-std" */
+  --font-family-h1-std: var(--primary-font); /* from "font/family/h1-std" */
   --font-family-h1: var(--secondary-font); /* from "font/family/h1" */
-  --font-family-h2-std: var(--secondary-font); /* from "font/family/h2-std" */
+  --font-family-h2-std: var(--primary-font); /* from "font/family/h2-std" */
   --font-family-h2: var(--secondary-font); /* from "font/family/h2" */
-  --font-family-h3: var(--primary-font); /* from "font/family/h3" */
+  --font-family-h3: var(--secondary-font); /* from "font/family/h3" */
   --font-family-h4: var(--primary-font); /* from "font/family/h4" */
   --font-family-h5: var(--primary-font); /* from "font/family/h5" */
   --font-family-intro: var(--primary-font); /* from "font/family/intro" */
@@ -127,15 +127,15 @@
   --font-family-sm-body: var(--primary-font); /* from "font/family/sm-body" */
   --font-letter-spacing-body: 0px; /* from "font/letter-spacing/body" */
   --font-letter-spacing-disc: 0px; /* from "font/letter-spacing/disc" */
-  --font-letter-spacing-h1-std: -1px; /* from "font/letter-spacing/h1-std" */
-  --font-letter-spacing-h1: -1px; /* from "font/letter-spacing/h1" */
-  --font-letter-spacing-h2-std: 0px; /* from "font/letter-spacing/h2-std" */
-  --font-letter-spacing-h2: -1px; /* from "font/letter-spacing/h2" */
+  --font-letter-spacing-h1-std: 0px; /* from "font/letter-spacing/h1-std" */
+  --font-letter-spacing-h1: 1px; /* from "font/letter-spacing/h1" */
+  --font-letter-spacing-h2-std: 1px; /* from "font/letter-spacing/h2-std" */
+  --font-letter-spacing-h2: 0px; /* from "font/letter-spacing/h2" */
   --font-letter-spacing-h3: 0px; /* from "font/letter-spacing/h3" */
   --font-letter-spacing-h4: 0px; /* from "font/letter-spacing/h4" */
   --font-letter-spacing-h5: 0px; /* from "font/letter-spacing/h5" */
   --font-letter-spacing-intro: 0px; /* from "font/letter-spacing/intro" */
-  --font-letter-spacing-lg: -1px; /* from "font/letter-spacing/lg" */
+  --font-letter-spacing-lg: 0px; /* from "font/letter-spacing/lg" */
   --font-letter-spacing-sm-body: 0px; /* from "font/letter-spacing/sm-body" */
   --font-m-height-body: 24px; /* from "font/--M/height/body" */
   --font-m-height-disc: 18px; /* from "font/--M/height/disc" */
@@ -146,7 +146,7 @@
   --font-m-height-h3: 29px; /* from "font/--M/height/h3" */
   --font-m-height-h4: 24px; /* from "font/--M/height/h4" */
   --font-m-height-h5: 24px; /* from "font/--M/height/h5" */
-  --font-m-height-intro: 36px; /* from "font/--M/height/intro" */
+  --font-m-height-intro: 30px; /* from "font/--M/height/intro" */
   --font-m-height-lg: 48px; /* from "font/--M/height/lg" */
   --font-m-height-sm-body: 21px; /* from "font/--M/height/sm-body" */
   --font-m-size-body: 16px; /* from "font/--M/size/body" */
@@ -185,36 +185,36 @@
   --font-t-size-intro: 24px; /* from "font/--T/size/intro" */
   --font-t-size-lg: 52px; /* from "font/--T/size/lg" */
   --font-t-size-sm-body: 14px; /* from "font/--T/size/sm-body" */
-  --font-weight-body-bold: 600; /* from "font/weight/body-bold" */
+  --font-weight-body-bold: 700; /* from "font/weight/body-bold" */
   --font-weight-body: 400; /* from "font/weight/body" */
   --font-weight-disc: 400; /* from "font/weight/disc" */
   --font-weight-h1-std: 500; /* from "font/weight/h1-std" */
-  --font-weight-h1: 500; /* from "font/weight/h1" */
+  --font-weight-h1: 600; /* from "font/weight/h1" */
   --font-weight-h2-std: 500; /* from "font/weight/h2-std" */
-  --font-weight-h2: 500; /* from "font/weight/h2" */
-  --font-weight-h3: 500; /* from "font/weight/h3" */
+  --font-weight-h2: 600; /* from "font/weight/h2" */
+  --font-weight-h3: Semibold; /* from "font/weight/h3" */
   --font-weight-h4: 500; /* from "font/weight/h4" */
   --font-weight-h5: 500; /* from "font/weight/h5" */
   --font-weight-intro: 400; /* from "font/weight/intro" */
-  --font-weight-lg: 500; /* from "font/weight/lg" */
+  --font-weight-lg: 600; /* from "font/weight/lg" */
   --font-weight-rate-p-a: 400; /* from "font/weight/rate-p-a" */
-  --font-weight-rate: 900; /* from "font/weight/rate" */
+  --font-weight-rate: 600; /* from "font/weight/rate" */
   --font-weight-sm-body: 400; /* from "font/weight/sm-body" */
   --lg-rate: 150px; /* from "lg-rate" */
-  --local-number: '1800 472 265'; /* from "local-number" */
-  --overseas-number: '+61 2 9735 9151'; /* from "overseas-number" */
+  --local-number: 'String value'; /* from "local-number" */
+  --overseas-number: 'String value'; /* from "overseas-number" */
   --radius-alert-section: 16px; /* from "radius/alert-section" */
-  --radius-article-thumb: 10px; /* from "radius/article-thumb" */
-  --radius-button: 24px; /* from "radius/button" */
-  --radius-card: 24px; /* from "radius/card" */
-  --radius-footer-card: 12px; /* from "radius/footer-card" */
-  --radius-hero: 40px; /* from "radius/hero" */
-  --radius-info-well: 8px; /* from "radius/info-well" */
-  --radius-menu-link: 0px; /* from "radius/menu-link" */
+  --radius-article-thumb: 0px; /* from "radius/article-thumb" */
+  --radius-button: 0px; /* from "radius/button" */
+  --radius-card: 0px; /* from "radius/card" */
+  --radius-footer-card: 0px; /* from "radius/footer-card" */
+  --radius-hero: 0px; /* from "radius/hero" */
+  --radius-info-well: 0px; /* from "radius/info-well" */
+  --radius-menu-link: 4px; /* from "radius/menu-link" */
   --stroke-alert-page: 2px; /* from "stroke/alert-page" */
-  --stroke-button: 2px; /* from "stroke/button" */
-  --width-logo-lg: 150px; /* from "width/logo/lg" */
-  --width-logo-sm: 100px; /* from "width/logo/sm" */
+  --stroke-button: 1px; /* from "stroke/button" */
+  --width-logo-lg: 196px; /* from "width/logo/lg" */
+  --width-logo-sm: 150px; /* from "width/logo/sm" */
 
   /* --- VARIANTS (Mapped) --- */
   --bg-accent: var(--color-variants-bg-default);

@@ -16,19 +16,34 @@
   width:fit-content;
 }
 
+:root{
+  --layout-container-max-hero:1728px;
+  --layout-container-max:1440px;
+  --space-2xl:80px;
+  --space-2xs:12px;
+  --space-3xl:96px;
+  --space-3xs:8px;
+  --space-4xs:4px;
+  --space-lg:40px;
+  --space-md:32px;
+  --space-sm:24px;
+  --space-xl:64px;
+  --space-xs:16px;
+}
+
 body:has(.product-detail-banner) .breadcrumb.block{
   color:var(--link-default);
   padding-block:16px;
 }
 
 .product-detail-banner{
-  border-radius:var(--radius-hero-var);
+  border-radius:var(--radius-hero);
   margin:0 auto;
   max-width:1728px;
 }
 
 .product-detail-banner .desktop-media img{
-  border-radius:var(--radius-hero-var);
+  border-radius:var(--radius-hero);
   height:-moz-fit-content;
   height:fit-content;
   min-height:524px;
