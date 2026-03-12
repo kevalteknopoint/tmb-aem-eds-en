@@ -128,24 +128,27 @@ export default async function decorate(block) {
   block.innerHTML = fragment.innerHTML;
 
   // --- SECONDARY NAV ---
-  const secondarySection = block.querySelector('.section:first-child');
-  const secondaryListItems = [...secondarySection.querySelectorAll('ul > li')];
+  const secondarySection = block.querySelector('.section:first-child:not(.columns-container)');
+  let secondaryList;
+  if (secondarySection) {
+    const secondaryListItems = [...secondarySection.querySelectorAll('ul > li')];
 
-  const secondaryList = ul(
-    { class: 'secondary-nav-list' },
-    ...secondaryListItems.map((liItem) => {
-      const link = liItem.querySelector('a');
-      return li(
-        { class: 'secondary-nav-item' },
-        a({ class: 'secondary-nav-link', href: link.href, title: link.title }, link.textContent)
-      );
-    })
-  );
+    secondaryList = ul(
+      { class: 'secondary-nav-list' },
+      ...secondaryListItems.map((liItem) => {
+        const link = liItem.querySelector('a');
+        return li(
+          { class: 'secondary-nav-item' },
+          a({ class: 'secondary-nav-link', href: link.href, title: link.title }, link.textContent)
+        );
+      })
+    );
 
-  const newSecondarySection = div({ class: 'section secondary-header' },
-    div({ class: 'secondary-header-wrap' }, secondaryList)
-  );
-  secondarySection.replaceWith(newSecondarySection);
+    const newSecondarySection = div({ class: 'section secondary-header' },
+      div({ class: 'secondary-header-wrap' }, secondaryList)
+    );
+    secondarySection.replaceWith(newSecondarySection);
+  }
 
   // --- HAM MENU BUTTON ---
   // const hamMenuImg = block.querySelector('.section.columns-container > .default-content-wrapper picture > img');
@@ -209,12 +212,17 @@ export default async function decorate(block) {
   const searchBtn = button({ class: 'search-btn' }, searchIcon);
   const searchBtnWrap = div({ class: 'search-btn-wrap' }, searchForm, searchBtn);
 
+  const searchLoginWrap = div({ class: 'header-actions-wrap' });
+
+  if (searchIcon) searchLoginWrap.appendChild(searchBtnWrap);
+
   // Login button
   const loginLink = col2.querySelector('.button');
-  const loginBtn = a({ class: 'login-btn', href: loginLink.href, title: loginLink.title }, loginLink.textContent);
-  const loginBtnWrap = div({ class: 'login-btn-wrap' }, loginBtn);
-
-  const searchLoginWrap = div({ class: 'header-actions-wrap' }, searchBtnWrap, loginBtnWrap);
+  if (loginLink) {
+    const loginBtn = a({ class: 'login-btn', href: loginLink.href, title: loginLink.title }, loginLink.textContent);
+    const loginBtnWrap = div({ class: 'login-btn-wrap' }, loginBtn);
+    searchLoginWrap.appendChild(loginBtnWrap);
+  }
 
   const newPrimarySection = div(
     { class: 'section primary-header' },
@@ -264,7 +272,9 @@ export default async function decorate(block) {
 
   // Mobile Menu
   const primaryCopy = primaryNavList.cloneNode(true);
-  const secondaryCopy = secondaryList.cloneNode(true);
+  let secondaryCopy;
+
+  if (secondaryList) secondaryCopy = secondaryList.cloneNode(true);
 
   const closeBtn = button({ class: "close-mobile-menu" });
   injectIcon('close-icon', closeBtn);
@@ -272,7 +282,7 @@ export default async function decorate(block) {
   const mobileMenuSection = div({ class: "mobile-menu-wrapper" }, closeBtn, primaryCopy);
 
   if (isMobile()) {
-    mobileMenuSection.appendChild(secondaryCopy);
+    if (secondaryCopy) mobileMenuSection.appendChild(secondaryCopy);
     block.appendChild(mobileMenuSection);
   } else if (isTablet()) {
     block.appendChild(mobileMenuSection);
@@ -284,18 +294,18 @@ export default async function decorate(block) {
 
   // Popular searches
   const popularSearches = div({ class: 'popular-search-results' });
-  const contentWrapper = searchSection.querySelector('.default-content-wrapper');
+  const contentWrapper = searchSection?.querySelector('.default-content-wrapper');
   const defaultTextEle = contentWrapper?.querySelector('h2:has(+ h2)');
   const defaultText = defaultTextEle?.textContent;
 
   if (defaultText) defaultTextEle?.remove();
 
   popularSearches.append(contentWrapper);
-  searchSection.appendChild(popularSearches);
+  searchSection?.appendChild(popularSearches);
 
   const searchDataWrapper = div({ class: 'dynamic-search-results-wrapper' });
 
-  searchSection.insertAdjacentElement('afterbegin', searchDataWrapper);
+  searchSection?.insertAdjacentElement('afterbegin', searchDataWrapper);
 
   searchForm.addEventListener('submit', (e) => {
     e.preventDefault();

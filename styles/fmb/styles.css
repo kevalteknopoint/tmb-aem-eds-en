@@ -507,7 +507,7 @@ p{
   text-transform:initial;
 }
 
-header{
+header:has(.secondary-header){
   min-height:141px;
 }
 
@@ -786,6 +786,12 @@ svg.icon-svg.icon-invert-bg{
   border-radius:50%;
   color:var(--icon-reverse) !important;
   padding:10px;
+}
+
+.section-with-bg{
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
 }
 
 @media screen and (max-width: 1439px){

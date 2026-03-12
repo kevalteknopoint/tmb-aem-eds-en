@@ -216,6 +216,7 @@ html:has(.primary-header.search-active) {
 
   @include tablet {
     gap: 16px;
+    padding: 20px 0;
   }
 
   .logo-wrap {
@@ -279,11 +280,10 @@ html:has(.primary-header.search-active) {
   }
 
   .primary-nav-link {
+    @include typo-body;
+
     display: block;
     color: $color-header-nav-secondary;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
     position: relative;
 
     &::after {
@@ -425,16 +425,28 @@ html:has(.primary-header.search-active) {
   color: $color-header-icon;
 }
 
+header:has(.secondary-header) {
+  .search-results-section {
+    top: 141px;
+    padding-bottom: 141px;
+
+    @include mobile {
+      top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+}
+
 .search-results-section {
   display: none;
   position: fixed;
-  top: 141px;
+  top: 80px;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 3;
   background: #fff;
-  padding-bottom: 141px;
+  padding-bottom: 80px;
   overflow-y: auto;
 
   &.author-mode {

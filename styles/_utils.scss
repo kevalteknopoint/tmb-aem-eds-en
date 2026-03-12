@@ -1,7 +1,9 @@
 @use './base' as *;
 
 header {
-  min-height: 141px;
+  &:has(.secondary-header) {
+    min-height: 141px;
+  }
 
   @include mobile {
     min-height: 60px;
@@ -296,4 +298,10 @@ svg.icon-svg.icon-invert-bg {
   color: $icon-reverse !important;
   padding: 10px;
   border-radius: 50%;
+}
+
+.section-with-bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -35,6 +35,12 @@
           }
         },
         {
+          "component": "reference",
+          "name": "section-bg-img",
+          "label": "Background Image",
+          "multi": false
+        },
+        {
           "component": "multiselect",
           "name": "style",
           "label": "Style",
@@ -268,6 +274,14 @@
               "value": "circular-image "
             },
             {
+              "name": "Momentum Corporate Variation",
+              "value": "momentum-corporate-variation"
+            },
+            {
+              "name": "Momentum Impact",
+              "value": "momentum-impact"
+            },
+            {
               "name": "Variation Border",
               "value": "variation-border"
             },
@@ -276,7 +290,7 @@
               "value": "milestones"
             },
             {
-               "name": "Rate Details",
+              "name": "Rate Details",
               "value": "rate-details"
             },
             {
