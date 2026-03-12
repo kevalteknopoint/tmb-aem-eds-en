@@ -749,7 +749,7 @@ svg.icon-svg.icon-invert-bg{
   padding:10px;
 }
 
-.section.section-with-bg{
+.section-with-bg{
   background-position:center;
   background-repeat:no-repeat;
   background-size:cover;

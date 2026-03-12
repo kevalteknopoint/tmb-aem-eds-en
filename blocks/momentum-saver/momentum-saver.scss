@@ -5,8 +5,10 @@
 .image-swapping,
 .momentum-app-badges,
 .momentum-direct-variant {
-  .momentum-section-wrapper {
-    @include responsive-container;
+  &:not(.momentum-corporate-variation) {
+    .momentum-section-wrapper {
+      @include responsive-container;
+    }
   }
 
   .default-content-wrapper {
@@ -200,7 +202,6 @@
 .momentum-image-saver {
   &.background-color-teal {
     .columns.block>div {
-
       h1,
       h2,
       h3,
@@ -501,10 +502,87 @@
   }
 }
 
+.momentum-corporate-variation {
+  @include responsive-container;
+
+  @include tablet {
+    padding-inline: 0;
+    border-radius: 0;
+  }
+
+  .momentum-section-wrapper {
+    padding: 32px;
+    border-radius: $radius-card;
+
+    @include tablet {
+      border-radius: 0;
+      padding: 40px 16px;
+    }
+  }
+
+  .columns.block {
+    @include tablet {
+      text-align: center;
+    }
+
+    .columns-img-col {
+      padding: 2px 71px 2px 29px;
+      border-right: 1px solid #fff;
+      
+      @include tablet {
+        border-right: 0;
+        padding: 0;
+        width: 175px;
+        height: 175px;
+
+        picture, img {
+          height: 175px;
+          width: auto;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    &>div {
+      gap: 64px;
+
+      @include tablet {
+        gap: 24px;
+      }
+
+      @include mobile {
+        gap: 16px;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        color: $heading-reverse;
+      }
+
+      p, ul {
+        color: $body-reverse;
+      }
+
+      .button-container {
+        a:not(.secondary) {
+          @include button('secondary');
+        }
+
+        a.secondary {
+          @include button('outlined-reverse');
+
+          font-style: normal;
+          text-decoration: unset;
+        }
+      }
+    }
+  }
+}
+
 .momentum-impact {
   .momentum-section-wrapper {
     .columns.block {
       position: relative;
+
       &>div {
         &::after {
           background: var(--line-default);
@@ -513,12 +591,12 @@
           height: 100%;
           left: 0;
           margin: 0 auto;
-          // max-width: 1312px;
           position: absolute;
           right: 0;
           width: 1px;
           gap: 32px;
           display: flex;
+
           @include tablet{
             content: unset;
           }
@@ -529,11 +607,13 @@
           align-items: center;
           gap: 24px;
           margin-left: 32px;
+
           @include tablet{
             flex-direction: column;
             margin-left: unset;
             width: 100%;
           }
+
           p{
             @include tablet {
               width: 100%;
