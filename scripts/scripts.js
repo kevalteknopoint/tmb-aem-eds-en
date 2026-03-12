@@ -11,6 +11,7 @@ import {
   loadSections,
   loadCSS,
   loadPlaceholders,
+  loadDmImages,
 } from './aem.js';
 import { pageIntialization } from './analytics/exports.js';
 import { fetchPlaceholders } from './placeholders.js';
@@ -164,6 +165,7 @@ async function loadPage() {
 
   await fetchPlaceholders();
   loadPlaceholders();
+  loadDmImages();
 
   pageIntialization(document.title, getMetadata('page-type'), getMetadata('site-section'), '', 'english', '', getMetadata('brand'), getMetadata('web-type'), '', '', '', getMetadata('campaign-userjourney'), getMetadata('persona'), getMetadata('product'));
 

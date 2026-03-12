@@ -10,6 +10,8 @@
  * governing permissions and limitations under the License.
  */
 
+import { img as domImg, picture as domPicture } from "./dom-helpers.js";
+
 /* eslint-env browser */
 function sampleRUM(checkpoint, data) {
   // eslint-disable-next-line max-len
@@ -751,6 +753,16 @@ function loadPlaceholders(block) {
   }
 }
 
+function loadDmImages(block) {
+  const allAnchorTags = (block || document).querySelectorAll('a');
+  allAnchorTags.forEach((anchor) => {
+    if (anchor.href.includes(window.placeholders.default.dmDomain)) {
+      const imgEle = domPicture(domImg({ class: 'dm-img', src: anchor.href, alt: 'DM Image' }));
+      anchor.replaceWith(imgEle);
+    }
+  });
+}
+
 init();
 
 export {
@@ -785,5 +797,6 @@ export {
   isDesktop,
   isDesktopLg,
   camelToKebab,
-  loadPlaceholders
+  loadPlaceholders,
+  loadDmImages
 };
