@@ -15,10 +15,35 @@ export default async function decorate(block) {
     const body = document.createElement('div');
     body.className = 'nav-card-body';
 
-    if (mainContent) body.append(mainContent);
-    if (providedBy) body.append(providedBy);
-    if (logo) body.append(logo);
-    if (description) body.append(description);
+    // header
+    if (mainContent) {
+      mainContent.classList.add('card-header');
+      body.append(mainContent);
+    }
+
+    // wrapper for provider + logo
+    const providerWrapper = document.createElement('div');
+    providerWrapper.className = 'card-provider-wrapper';
+
+    if (providedBy) {
+      providedBy.classList.add('card-provider');
+      providerWrapper.append(providedBy);
+    }
+
+    if (logo) {
+      logo.classList.add('card-logo');
+      providerWrapper.append(logo);
+    }
+
+    if (providerWrapper.children.length) {
+      body.append(providerWrapper);
+    }
+
+    // description
+    if (description) {
+      description.classList.add('card-description');
+      body.append(description);
+    }
 
     card.innerHTML = '';
 
