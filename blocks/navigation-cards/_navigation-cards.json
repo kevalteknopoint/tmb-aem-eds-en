@@ -34,44 +34,28 @@
     ],
     "models": [
         {
-            "id": "navigation-cards",
-            "fields": [
-                {
-                    "component": "multiselect",
-                    "name": "classes",
-                    "label": "Style",
-                    "options": [
-                        {
-                            "name": "Expandable Tiles",
-                            "value": "expandable-tiles"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "id": "navigation-card",
             "fields": [
-        {
-          "component": "richtext",
-          "name": "navigation-main-content",
-          "label": "Navigation main content",
-          "valueType": "string"
-        },
-        {
-          "component": "reference",
-          "valueType": "string",
-          "name": "image",
-          "label": "Image",
-          "multi": false
-        },
-        {
-          "component": "richtext",
-          "name": "navigation-below-content",
-          "label": "navigation below content",
-          "valueType": "string"
-        }
-      ]
+                {
+                    "component": "richtext",
+                    "name": "navigation-main-content",
+                    "label": "Navigation main content",
+                    "valueType": "string"
+                },
+                {
+                    "component": "reference",
+                    "valueType": "string",
+                    "name": "image",
+                    "label": "Image",
+                    "multi": false
+                },
+                {
+                    "component": "richtext",
+                    "name": "navigation-below-content",
+                    "label": "navigation below content",
+                    "valueType": "string"
+                }
+            ]
         }
     ],
     "filters": [
