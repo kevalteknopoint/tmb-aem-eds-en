@@ -44,10 +44,10 @@
         font-style: normal;
         text-decoration: unset;
       }
-      
+
       a.secondary {
         @include button('outlined');
-        
+
         font-style: normal;
         text-decoration: unset;
       }
@@ -183,6 +183,7 @@
         }
 
         .cards-card-body {
+
           h1,
           h2,
           h3,
@@ -211,6 +212,7 @@
 
   &.faq-cant-find-looking-for-variant {
     .default-content-wrapper {
+
       h1,
       h2,
       h3,
@@ -324,6 +326,7 @@
 .section.faq-cant-find-looking-for.variation-border {
   &.background-color-teal {
     .default-content-wrapper {
+
       h1,
       h2,
       h3,
@@ -341,7 +344,13 @@
             background-color: $bg-reverse;
 
             .cards-card-body {
-              h1, h2, h3, h4, h5, h6 {
+
+              h1,
+              h2,
+              h3,
+              h4,
+              h5,
+              h6 {
                 color: $link-reverse;
                 border-bottom: 2px solid $link-reverse;
               }
@@ -351,9 +360,9 @@
               }
 
               p.button-container {
-                  a {
-                    border: unset;
-                  }
+                a {
+                  border: unset;
+                }
               }
             }
           }
@@ -363,6 +372,7 @@
   }
 
   .default-content-wrapper {
+
     h1,
     h2,
     h3,
@@ -390,16 +400,22 @@
           }
 
           .cards-card-body {
-            h1, h2, h3, h4, h5, h6 {
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
               &:last-child {
                 margin-bottom: 0;
               }
             }
 
             p.button-container {
-                a {
-                  border: unset;
-                }
+              a {
+                border: unset;
+              }
             }
           }
         }
@@ -410,9 +426,10 @@
 }
 
 // NON BORDER VARIATION
-.section.faq-cant-find-looking-for.variation-non-border{
-  &.background-color-teal{
-     .default-content-wrapper {
+.section.faq-cant-find-looking-for.variation-non-border {
+  &.background-color-teal {
+    .default-content-wrapper {
+
       h1,
       h2,
       h3,
@@ -422,18 +439,25 @@
         text-align: center;
       }
     }
-      .cards-wrapper {
+
+    .cards-wrapper {
       .cards {
         ul {
           li {
             background-color: $bg-reverse;
 
             .cards-card-body {
-              >p{
+              >p {
                 line-height: 0;
                 color: $link-reverse;
               }
-              h1, h2, h3, h4, h5, h6 {
+
+              h1,
+              h2,
+              h3,
+              h4,
+              h5,
+              h6 {
                 color: $link-reverse;
                 border-bottom: none;
               }
@@ -443,7 +467,9 @@
       }
     }
   }
-   .default-content-wrapper {
+
+  .default-content-wrapper {
+
     h1,
     h2,
     h3,
@@ -471,7 +497,13 @@
           }
 
           .cards-card-body {
-            h1, h2, h3, h4, h5, h6 {
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
               &:last-child {
                 margin-bottom: 0;
                 margin-top: 4px;
@@ -479,9 +511,9 @@
             }
 
             p.button-container {
-                a {
-                  border: unset;
-                }
+              a {
+                border: unset;
+              }
             }
           }
         }
@@ -490,9 +522,11 @@
     }
   }
 }
-  .section.faq-cant-find-looking-for{
-    &.faq-cant-find-looking-for-variant.white-non-border {
+
+.section.faq-cant-find-looking-for {
+  &.faq-cant-find-looking-for-variant.white-non-border {
     .default-content-wrapper {
+
       h1,
       h2,
       h3,
@@ -558,6 +592,11 @@
             }
           }
 
+          >p {
+            line-height: 0;
+            color: $link-default;
+          }
+
           h1,
           h2,
           h3,
@@ -568,7 +607,11 @@
             margin: 0 auto 16px;
             padding: 10px 0 6px;
             color: $link-default;
-            // border-bottom: 2px solid $link-default;
+            border-bottom: unset !important;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
 
             @include typo-heading3;
 
@@ -599,4 +642,5 @@
         }
       }
     }
-    }}
+  }
+}
