@@ -1720,10 +1720,20 @@
     "id": "navigation-card",
     "fields": [
       {
+        "component": "text",
+        "name": "icon-text",
+        "label": "Icon Text"
+      },
+      {
         "component": "richtext",
         "name": "navigation-main-content",
         "label": "Navigation main content",
         "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "image-text",
+        "label": "Image Text"
       },
       {
         "component": "reference",
