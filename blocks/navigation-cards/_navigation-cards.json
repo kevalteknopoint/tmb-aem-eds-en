@@ -53,97 +53,36 @@
             "id": "navigation-card",
             "fields": [
                 {
-                    "component": "navigatin card text",
-                    "name": "navigation card text",
-                    "label": "Navigation Card Text",
-                    "valueType": "string"
+                    "component": "reference",
+                    "valueType": "string",
+                    "name": "aside-image",
+                    "label": "Aside Image",
+                    "multi": false
                 },
                 {
                     "component": "richtext",
-                    "name": "text",
-                    "label": "Text",
+                    "name": "main-text",
+                    "label": "Main Text",
+                    "valueType": "string"
+                },
+                {
+                    "component": "text",
+                    "name": "navigation-card-text",
+                    "label": "Navigation Card Text",
                     "valueType": "string"
                 },
                 {
                     "component": "reference",
                     "valueType": "string",
-                    "name": "image",
-                    "label": "Image",
+                    "name": "picture-image",
+                    "label": "Picture Image",
                     "multi": false
                 },
                 {
                     "component": "richtext",
-                    "name": "navigation card text",
-                    "label": "Navigation Card Text",
+                    "name": "navigation-text",
+                    "label": "Navigation Text",
                     "valueType": "string"
-                },
-                {
-                    "component": "aem-content",
-                    "name": "button-link",
-                    "label": "Button Link"
-                },
-                {
-                    "component": "text",
-                    "name": "button-linkText",
-                    "label": "Button Text"
-                },
-                {
-                    "component": "text",
-                    "name": "button-linkTitle",
-                    "label": "Button Title"
-                },
-                {
-                    "component": "select",
-                    "name": "button-style-linkType",
-                    "label": "Button Classes",
-                    "options": [
-                        {
-                            "name": "Default",
-                            "value": ""
-                        },
-                        {
-                            "name": "Primary",
-                            "value": "primary"
-                        },
-                        {
-                            "name": "Secondary",
-                            "value": "secondary"
-                        }
-                    ]
-                },
-                {
-                    "component": "aem-content",
-                    "name": "button-2-link",
-                    "label": "Button Link 2"
-                },
-                {
-                    "component": "text",
-                    "name": "button-2-linkText",
-                    "label": "Button Text 2"
-                },
-                {
-                    "component": "text",
-                    "name": "button-2-linkTitle",
-                    "label": "Button Title 2"
-                },
-                {
-                    "component": "select",
-                    "name": "button-2-style-linkType",
-                    "label": "Button Classes",
-                    "options": [
-                        {
-                            "name": "Default",
-                            "value": ""
-                        },
-                        {
-                            "name": "Primary",
-                            "value": "primary"
-                        },
-                        {
-                            "name": "Secondary",
-                            "value": "secondary"
-                        }
-                    ]
                 }
             ]
         }
