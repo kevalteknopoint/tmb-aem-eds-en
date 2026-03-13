@@ -406,6 +406,7 @@
         "title",
         "hero",
         "cards",
+        "navigation-cards",
         "columns",
         "fragment",
         "quick-links",

@@ -48,5 +48,8 @@
     "stylelint": "^16.23.1",
     "stylelint-config-standard-scss": "^16.0.0",
     "stylelint-scss": "^6.12.1"
+  },
+  "dependencies": {
+    "install": "^0.13.0"
   }
 }
