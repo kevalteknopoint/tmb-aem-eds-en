@@ -1,3 +1,18 @@
+:root{
+  --layout-container-max-hero:1728px;
+  --layout-container-max:1440px;
+  --space-2xl:80px;
+  --space-2xs:12px;
+  --space-3xl:96px;
+  --space-3xs:8px;
+  --space-4xs:4px;
+  --space-lg:40px;
+  --space-md:32px;
+  --space-sm:24px;
+  --space-xl:64px;
+  --space-xs:16px;
+}
+
 .home-loan-explained{
   display:flex;
   flex-direction:column;
@@ -5,7 +20,7 @@
   width:100%;
 }
 
-.home-loan-explained .default-content-wrapper{
+.home-loan-explained > .default-content-wrapper{
   margin-left:auto;
   margin-right:auto;
   max-width:calc(1440px - 0px);
@@ -13,9 +28,9 @@
   width:100%;
 }
 
-.home-loan-explained .default-content-wrapper h1,
-.home-loan-explained .default-content-wrapper h2,
-.home-loan-explained .default-content-wrapper h3{
+.home-loan-explained > .default-content-wrapper h1,
+.home-loan-explained > .default-content-wrapper h2,
+.home-loan-explained > .default-content-wrapper h3{
   color:var(--heading-light);
   font-family:var(--font-family-h1);
   font-size:var(--font-size-h1);
@@ -81,63 +96,17 @@
   color:var(--icon-default);
 }
 
-.home-loan-explained .tabs .tabs-panel{
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:40px;
-  max-width:calc(1440px - 0px);
-  overflow:auto;
-  padding-inline:64px;
-  width:100%;
-}
-
 .home-loan-explained .tabs .tabs-panel[aria-hidden="true"]{
   display:none;
 }
 
-.home-loan-explained .tabs .tabs-panel div{
-  display:grid;
-  gap:64px;
-  grid-template-columns:1fr 1fr 1fr;
-  row-gap:16px;
-}
-
-.home-loan-explained .tabs .tabs-panel div h3,
-.home-loan-explained .tabs .tabs-panel div h2{
-  color:var(--heading-light);
-  font-family:var(--font-family-h3);
-  font-size:var(--font-size-h3);
-  font-weight:var(--font-weight-h3);
-  grid-row:1;
-  letter-spacing:var(--font-letter-spacing-h3);
-  line-height:var(--font-height-h3);
-  text-transform:initial;
-}
-
-.home-loan-explained .tabs .tabs-panel div p{
-  color:black;
-  font-size:16px;
-  grid-row:2;
-}
-
 @media screen and (max-width: 1279px){
-  .home-loan-explained .default-content-wrapper{
+  .home-loan-explained > .default-content-wrapper{
     padding-inline:24px;
   }
 
   .home-loan-explained .tabs .tab-list-wrapper{
     padding-inline:24px;
-  }
-
-  .home-loan-explained .tabs .tabs-panel{
-    padding-inline:24px;
-  }
-}
-
-@media screen and (max-width: 1023px){
-  .home-loan-explained .tabs .tabs-panel div{
-    display:flex;
-    flex-direction:column;
   }
 }
 
@@ -146,16 +115,11 @@
     gap:32px;
   }
 
-  .home-loan-explained .default-content-wrapper{
+  .home-loan-explained > .default-content-wrapper{
     padding-inline:16px;
   }
 
   .home-loan-explained .tabs .tab-list-wrapper{
-    padding-inline:16px;
-  }
-
-  .home-loan-explained .tabs .tabs-panel{
-    margin-top:24px;
     padding-inline:16px;
   }
 }

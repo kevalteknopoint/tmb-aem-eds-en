@@ -1,4 +1,4 @@
-.money-overseas .overseas-columns-wrapper .button-container a, .money-overseas-variant .overseas-columns .overseas-columns-wrapper .button-container a, .customer .columns-wrapper .block .columns-container div p.button-container a, .customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a, .who-can-apply-section .columns-wrapper .block .column-container div .button-container a:not(.secondary), .who-can-apply-section .columns-wrapper .block .column-container div .button-container a.secondary{
+.money-overseas .overseas-columns-wrapper .button-container a, .money-overseas-variant .overseas-columns .overseas-columns-wrapper .button-container a, .customer .columns-wrapper .block .columns-container div p.button-container a, .customer .columns-wrapper .block .columns-container div:nth-child(2) p.button-container a, .lenders-mortgage-insurance.customer .default-content-wrapper p.button-container a, .customer.customer-evergreen-variant .columns-wrapper .block .columns-container div p.button-container a, .who-can-apply-section .columns-wrapper .block .column-container div .button-container a:not(.secondary), .who-can-apply-section .columns-wrapper .block .column-container div .button-container a.secondary{
   align-items:center;
   border:none;
   border-radius:var(--radius-button);
@@ -14,6 +14,21 @@
   transition:all 0.3s ease-in-out;
   width:-moz-fit-content;
   width:fit-content;
+}
+
+:root{
+  --layout-container-max-hero:1728px;
+  --layout-container-max:1440px;
+  --space-2xl:80px;
+  --space-2xs:12px;
+  --space-3xl:96px;
+  --space-3xs:8px;
+  --space-4xs:4px;
+  --space-lg:40px;
+  --space-md:32px;
+  --space-sm:24px;
+  --space-xl:64px;
+  --space-xs:16px;
 }
 
 .faq-landing-banner{
@@ -416,7 +431,9 @@
   padding:40px 24px;
 }
 
-.customer .columns-wrapper .block .columns-container div h1, .customer .columns-wrapper .block .columns-container div h2, .customer .columns-wrapper .block .columns-container div h3{
+.customer .columns-wrapper .block .columns-container div h1,
+.customer .columns-wrapper .block .columns-container div h2,
+.customer .columns-wrapper .block .columns-container div h3{
   color:var(--heading-default);
   font-family:var(--secondary-font);
   font-size:var(--font-size-h1);
@@ -562,6 +579,162 @@
   margin-top:16px;
   text-align:center;
   text-transform:initial;
+}
+
+.lenders-mortgage-insurance.customer{
+  background:var(--gradient-2);
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+  max-width:unset;
+  position:relative;
+}
+
+.lenders-mortgage-insurance.customer::after{
+  background-image:var(--gradient-after);
+  background-repeat:no-repeat;
+  background-size:100%;
+  bottom:0;
+  content:"";
+  height:20px;
+  left:0;
+  position:absolute;
+  width:100%;
+}
+
+.lenders-mortgage-insurance.customer .default-content-wrapper{
+  background:var(--bg-default);
+  border-radius:var(--radius-card);
+  margin:0 auto;
+  max-width:1312px;
+  padding:40px 24px;
+  text-align:center;
+  width:100%;
+}
+
+.lenders-mortgage-insurance.customer .default-content-wrapper h1{
+  color:var(--heading-default);
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-style:normal;
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  margin-bottom:16px;
+  text-align:center;
+  text-transform:uppercase;
+}
+
+.lenders-mortgage-insurance.customer .default-content-wrapper p.button-container{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  margin:32px auto 0;
+}
+
+.lenders-mortgage-insurance.customer .default-content-wrapper p.button-container a{
+  background-color:var(--color-button-primary-default);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+  font-family:var(--font-family-h5);
+  font-size:var(--font-size-h5);
+  font-weight:var(--font-weight-h5);
+  letter-spacing:var(--font-letter-spacing-h5);
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  min-width:unset;
+  padding:unset;
+  padding-block:8px;
+  text-transform:initial;
+}
+
+.lenders-mortgage-insurance.customer .default-content-wrapper p.button-container a:hover{
+  background-color:var(--color-button-primary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.lenders-mortgage-insurance.customer .default-content-wrapper p.button-container a:active{
+  background-color:var(--color-button-primary-press);
+  border:none;
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.lenders-mortgage-insurance.customer .default-content-wrapper p.button-container a:focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.lenders-mortgage-insurance.customer .default-content-wrapper p.button-container a svg{
+  height:12px;
+  width:12px;
+}
+
+.customer.customer-evergreen-variant{
+  background:var(--green-blue, linear-gradient(256deg, #1BE7FF 0%, #59FFA0 100%));
+  border-radius:var(--radius-card);
+  margin:0 auto;
+  max-width:671px;
+  padding:32px 24px;
+  width:100%;
+}
+
+.customer.customer-evergreen-variant .columns-wrapper{
+  padding-inline:unset;
+}
+
+.customer.customer-evergreen-variant .columns-wrapper .block .columns-container div{
+  background:unset;
+  padding:unset;
+}
+
+.customer.customer-evergreen-variant .columns-wrapper .block .columns-container div h2,
+.customer.customer-evergreen-variant .columns-wrapper .block .columns-container div h3{
+  text-align:left;
+}
+
+.customer.customer-evergreen-variant .columns-wrapper .block .columns-container div p{
+  text-align:left;
+}
+
+.customer.customer-evergreen-variant .columns-wrapper .block .columns-container div p.button-container{
+  justify-content:start;
+}
+
+.customer.customer-evergreen-variant .columns-wrapper .block .columns-container div p.button-container a{
+  background-color:var(--color-button-white-default);
+  border:none;
+  color:var(--color-button-text-stroke-default);
+  font-size:var(--font-size-h5);
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:8px;
+}
+
+.customer.customer-evergreen-variant .columns-wrapper .block .columns-container div p.button-container a:hover{
+  background-color:var(--color-button-white-hover);
+  border:none;
+  color:var(--color-button-text-stroke-hover);
+}
+
+.customer.customer-evergreen-variant .columns-wrapper .block .columns-container div p.button-container a:active{
+  background-color:var(--color-button-white-press);
+  border:none;
+  color:var(--color-button-text-stroke-press);
+}
+
+.customer.customer-evergreen-variant .columns-wrapper .block .columns-container div p.button-container a:focus-visible{
+  box-shadow:0 0 0 2px var(--color-focus-default), 0 0 0 3px var(--color-focus-reversed);
+  outline:none;
+}
+
+.customer.customer-evergreen-variant .columns-wrapper .block .columns-container div p.button-container a svg{
+  height:12px;
+  width:12px;
+}
+
+.customer.customer-evergreen-variant::after{
+  content:unset;
 }
 
 .money-overseas .overseas-columns{
@@ -1038,6 +1211,10 @@
 
   .customer .content-container{
     padding-inline:24px;
+  }
+
+  .customer.customer-evergreen-variant{
+    max-width:unset;
   }
 
   .money-overseas .overseas-columns{

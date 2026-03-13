@@ -2,6 +2,17 @@
 @import '../../libs/aos/aos.min.css';
 
 :root {
+  --bsb: 802 -825; /* from "BSB" */
+  --color-alert-critical-banner: #fcf2f5; /* from "color/alert/critical/banner" */
+  --color-alert-critical-icon-bg: #c4043f; /* from "color/alert/critical/icon-bg" */
+  --color-alert-critical-icon: #ffffff; /* from "color/alert/critical/icon" */
+  --color-alert-general-banner: #f2f7ff; /* from "color/alert/general/banner" */
+  --color-alert-general-icon-bg: #0063ff; /* from "color/alert/general/icon-bg" */
+  --color-alert-general-icon: #ffffff; /* from "color/alert/general/icon" */
+  --color-alert-stroke: #ffffff; /* from "color/alert/stroke" */
+  --color-alert-warning-banner: #fef5f2; /* from "color/alert/warning/banner" */
+  --color-alert-warning-icon-bg: #eb4600; /* from "color/alert/warning/icon-bg" */
+  --color-alert-warning-icon: #ffffff; /* from "color/alert/warning/icon" */
   --color-button-outlined-default: #ffffff03; /* from "color/button/outlined/default" */
   --color-button-outlined-hover: #0037641a; /* from "color/button/outlined/hover" */
   --color-button-outlined-press: #00376433; /* from "color/button/outlined/press" */
@@ -23,7 +34,12 @@
   --color-button-white-press: #c4cfd8; /* from "color/button/white/press" */
   --color-focus-default: #2f7eb0; /* from "color/focus/default" */
   --color-focus-reversed: #ffffff; /* from "color/focus/reversed" */
+  --color-footer-bg: #003764; /* from "color/footer/bg" */
   --color-footer-info: #00376412; /* from "color/footer/info" */
+  --color-footer-link: #003764; /* from "color/footer/link" */
+  --color-footer-rectangle: #ffffff; /* from "color/footer/rectangle" */
+  --color-footer-reverse-text: #ffffff; /* from "color/footer/reverse-text" */
+  --color-footer-text: #565659; /* from "color/footer/text" */
   --color-header-frame: #00294b; /* from "color/header/frame" */
   --color-header-icon-2: #003764; /* from "color/header/icon-2" */
   --color-header-icon: #ffffff; /* from "color/header/icon" */
@@ -32,6 +48,7 @@
   --color-header-nav-secondary: #ffffff; /* from "color/header/nav/secondary" */
   --color-header-nav: #003764; /* from "color/header/nav" */
   --color-header-search: #00294b; /* from "color/header/search" */
+  --color-milestone-timeline-dot: #c4cfd8; /* from "color/milestone/timeline-dot" */
   --color-pagination-secondary-nav: #ffffff; /* from "color/pagination/secondary-nav" */
   --color-pagination-selected: #003764; /* from "color/pagination/selected" */
   --color-pagination-surface: #ffffff; /* from "color/pagination/surface" */
@@ -184,6 +201,9 @@
   --font-weight-rate: 900; /* from "font/weight/rate" */
   --font-weight-sm-body: 400; /* from "font/weight/sm-body" */
   --lg-rate: 150px; /* from "lg-rate" */
+  --local-number: '1800 800 225'; /* from "local-number" */
+  --overseas-number: '+61 2 9735 9225'; /* from "overseas-number" */
+  --radius-alert-section: 16px; /* from "radius/alert-section" */
   --radius-article-thumb: 0px; /* from "radius/article-thumb" */
   --radius-button: 2px; /* from "radius/button" */
   --radius-card: 0px; /* from "radius/card" */
@@ -191,12 +211,13 @@
   --radius-hero: 0px; /* from "radius/hero" */
   --radius-info-well: 0px; /* from "radius/info-well" */
   --radius-menu-link: 0px; /* from "radius/menu-link" */
+  --stroke-alert-page: 2px; /* from "stroke/alert-page" */
   --stroke-button: 2px; /* from "stroke/button" */
   --width-logo-lg: 150px; /* from "width/logo/lg" */
   --width-logo-sm: 100px; /* from "width/logo/sm" */
 
   /* --- VARIANTS (Mapped) --- */
-  --bg-accent: var(--color-variants-bg-accent);
+  --bg-accent: var(--color-variants-bg-default);
   --bg-default: var(--color-variants-bg-default);
   --bg-light-2: var(--color-variants-bg-light-2);
   --bg-light-3: var(--color-variants-bg-light-3);
@@ -237,7 +258,7 @@
   --icon-2-reverse: var(--color-variants-icon-reverse);
   --icon-2-transparent: var(--color-variants-heading-default);
   --icon-accent: var(--color-variants-icon-accent);
-  --icon-bg-accent: var(--color-variants-bg-reverse);
+  --icon-bg-accent: var(--color-variants-bg-light-4);
   --icon-bg-default: var(--color-variants-bg-reverse);
   --icon-bg-light-2: var(--color-variants-bg-default);
   --icon-bg-light-3: var(--color-variants-bg-default);
@@ -252,7 +273,7 @@
   --icon-reverse-2: var(--color-variants-icon-default);
   --icon-reverse: var(--color-variants-icon-default);
   --icon-transparent: var(--color-variants-icon-accent);
-  --info-well-accent: #ffffff1a;
+  --info-well-accent: var(--color-variants-bg-light-4);
   --info-well-default: var(--color-variants-bg-light-4);
   --info-well-light-2: #ffffff4d;
   --info-well-light-3: #ffffff1a;
@@ -276,7 +297,7 @@
   --link-reverse-2: var(--color-variants-link-reverse-2);
   --link-reverse: var(--color-variants-link-reverse);
   --link-transparent: var(--color-variants-link-default);
-  --number-list-accent: var(--color-variants-number-list-reverse);
+  --number-list-accent: var(--color-variants-number-list-default);
   --number-list-default: var(--color-variants-number-list-default);
   --number-list-light-2: var(--color-variants-number-list-default);
   --number-list-light-3: var(--color-variants-number-list-default);
@@ -284,7 +305,7 @@
   --number-list-reverse-2: var(--color-variants-number-list-reverse);
   --number-list-reverse: var(--color-variants-number-list-reverse);
   --number-list-transparent: var(--color-variants-number-list-default);
-  --stroke-accent: var(--color-variants-stroke-accent);
+  --stroke-accent: var(--color-variants-stroke-primary);
   --stroke-default: var(--color-variants-stroke-primary);
   --stroke-light-2: var(--color-variants-stroke-primary);
   --stroke-light-3: var(--color-variants-stroke-primary);

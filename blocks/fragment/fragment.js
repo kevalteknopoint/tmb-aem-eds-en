@@ -9,6 +9,8 @@ import {
 } from '../../scripts/scripts.js';
 
 import {
+  loadDmImages,
+  loadPlaceholders,
   loadSections,
 } from '../../scripts/aem.js';
 
@@ -53,6 +55,8 @@ export default async function decorate(block) {
       block.classList.add(...fragmentSection.classList);
       // block.classList.remove('section');
       block.replaceChildren(...fragmentSection.childNodes);
+      loadPlaceholders(block);
+      loadDmImages(block);
     }
   }
 }

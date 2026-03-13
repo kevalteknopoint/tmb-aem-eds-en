@@ -18,6 +18,21 @@
   width:fit-content;
 }
 
+:root{
+  --layout-container-max-hero:1728px;
+  --layout-container-max:1440px;
+  --space-2xl:80px;
+  --space-2xs:12px;
+  --space-3xl:96px;
+  --space-3xs:8px;
+  --space-4xs:4px;
+  --space-lg:40px;
+  --space-md:32px;
+  --space-sm:24px;
+  --space-xl:64px;
+  --space-xs:16px;
+}
+
 .section.expandable-tiles-section{
   background:var(--gradient-1);
 }
@@ -853,6 +868,19 @@
   text-underline-offset:3px;
 }
 
+.section.faq-cant-find-looking-for.left-aligned .cards-wrapper .cards ul{
+  grid-template-columns:1fr 1fr 1fr;
+}
+
+.section.faq-cant-find-looking-for.left-aligned .cards-wrapper .cards ul *{
+  text-align:left !important;
+}
+
+.section.faq-cant-find-looking-for.left-aligned .cards-wrapper .cards ul .icon{
+  margin-left:0;
+  margin-right:0;
+}
+
 .section.faq-cant-find-looking-for.variation-border.background-color-teal .default-content-wrapper h1,
 .section.faq-cant-find-looking-for.variation-border.background-color-teal .default-content-wrapper h2,
 .section.faq-cant-find-looking-for.variation-border.background-color-teal .default-content-wrapper h3,
@@ -899,6 +927,53 @@
 }
 
 .section.faq-cant-find-looking-for.variation-border .cards-wrapper .cards ul li .cards-card-body p.button-container a{
+  border:unset;
+}
+
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .default-content-wrapper h1,
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .default-content-wrapper h2,
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .default-content-wrapper h3,
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .default-content-wrapper h4,
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .default-content-wrapper h5,
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .default-content-wrapper h6{
+  text-align:center;
+}
+
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li{
+  background-color:var(--bg-reverse);
+}
+
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body > p{
+  color:var(--link-reverse);
+  line-height:0;
+}
+
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h1, .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h2, .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h3, .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h4, .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h5, .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h6{
+  border-bottom:none;
+  color:var(--link-reverse);
+}
+
+.section.faq-cant-find-looking-for.variation-non-border .default-content-wrapper h1,
+.section.faq-cant-find-looking-for.variation-non-border .default-content-wrapper h2,
+.section.faq-cant-find-looking-for.variation-non-border .default-content-wrapper h3,
+.section.faq-cant-find-looking-for.variation-non-border .default-content-wrapper h4,
+.section.faq-cant-find-looking-for.variation-non-border .default-content-wrapper h5,
+.section.faq-cant-find-looking-for.variation-non-border .default-content-wrapper h6{
+  text-align:left;
+}
+
+.section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li{
+  border:none;
+  border-radius:24px;
+  padding:40px 24px;
+}
+
+.section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body h1:last-child, .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body h2:last-child, .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body h3:last-child, .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body h4:last-child, .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body h5:last-child, .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body h6:last-child{
+  margin-bottom:0;
+  margin-top:4px;
+}
+
+.section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li .cards-card-body p.button-container a{
   border:unset;
 }
 
@@ -1839,7 +1914,15 @@ html{
     text-align:left;
   }
 
+  .section.faq-cant-find-looking-for.left-aligned .cards-wrapper .cards ul{
+    grid-template-columns:1fr;
+  }
+
   .section.faq-cant-find-looking-for.variation-border .cards-wrapper .cards ul li{
+    padding:40px 24px;
+  }
+
+  .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li{
     padding:40px 24px;
   }
 
@@ -2136,7 +2219,15 @@ html{
     padding:0;
   }
 
+  .section.faq-cant-find-looking-for.left-aligned .cards-wrapper .cards ul{
+    grid-template-columns:1fr;
+  }
+
   .section.faq-cant-find-looking-for.variation-border .cards-wrapper .cards ul li{
+    padding:40px 24px;
+  }
+
+  .section.faq-cant-find-looking-for.variation-non-border .cards-wrapper .cards ul li{
     padding:40px 24px;
   }
 

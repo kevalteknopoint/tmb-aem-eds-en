@@ -10,6 +10,8 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  loadPlaceholders,
+  loadDmImages,
 } from './aem.js';
 import { pageIntialization, setPersona } from './analytics/exports.js';
 import { fetchPlaceholders } from './placeholders.js';
@@ -158,27 +160,6 @@ function loadDelayed() {
   // load anything that can be postponed to the latest here
 }
 
-function camelToKebab(str) {
-  return str.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
-}
-
-function loadPlaceholders() {
-  if (window.placeholders?.default && Object.keys(window.placeholders?.default)?.length) {
-    Object.keys(window.placeholders.default).forEach((key) => {
-      let value = window.placeholders.default[key];
-      const isInterestRate = /(\d+(?:\.\d+)?)(%)(p\.a\.)/g.test(value);
-      if (isInterestRate) {
-        value = value.replaceAll(/(\d+(?:\.\d+)?)(%)(p\.a\.)/g, `<span class="rate-num">$1</span><span class="rate-unit"><span class="rate-percent">$2</span><span class="rate-pa">$3</span></span>`);
-      }
-      if (isInterestRate && (key === 'pl-compare-1' || key === 'pl-compare-2')) {
-        value = value.replaceAll(/(\d+(?:\.\d+)?)(%)(p\.a\.)/g, `<span class="rate-num">$1</span><span class="rate-unit"><span class="rate-percent">$2</span><span class="rate-pa">$3</span></span>`);
-      }
-
-      document.body.innerHTML = document.body.innerHTML.replaceAll(`~${key}~`, `<span class="${camelToKebab(key)}${isInterestRate ? ' interest-rate' : ''}">${value}</span>`);
-    });
-  }
-}
-
 function getPerformanceTier() {
   return new Promise((resolve) => {
     let lcpValue = null;
@@ -262,6 +243,7 @@ async function loadPage() {
 
   await fetchPlaceholders();
   loadPlaceholders();
+  loadDmImages();
 
   await loadEager(document);
   await loadLazy(document);

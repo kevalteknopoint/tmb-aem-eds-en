@@ -125,12 +125,19 @@
         border-bottom: 1px solid $line-default;
 
         .item-detail-section {
+          width: 100%;
+          flex: 1;
+          min-width: 0;
+
           .item-title {
-            @include  typo-heading4;
+            @include typo-heading4;
 
             display: block;
             color: $heading-default;
-            margin-bottom: 4px;
+
+            .highlight {
+              font-weight: 700;
+            }
           }
           
           .item-desc {
@@ -138,10 +145,16 @@
             
             display: block;
             color: $body-default;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-top: 4px;
           }
         }
 
         .item-category-section {
+          min-width: max-content;
+
           .item-category {
             @include typo-body;
 

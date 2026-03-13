@@ -10,6 +10,8 @@
  * governing permissions and limitations under the License.
  */
 
+import { img as domImg, picture as domPicture } from "./dom-helpers.js";
+
 /* eslint-env browser */
 function sampleRUM(checkpoint, data) {
   // eslint-disable-next-line max-len
@@ -451,9 +453,17 @@ function decorateIcon(span) {
     .find((c) => c.startsWith('icon-'))
     .substring(5);
 
+  let iconType = '';
+
+  if (iconName?.includes('--invert-bg')) {
+    iconType = ' icon-invert-bg';
+  } else if (iconName?.includes('--invert')) {
+    iconType = ' icon-invert';
+  }
+
   span.innerHTML = `
-    <svg class="icon-svg">
-      <use href="#${iconName}"></use>
+    <svg class="icon-svg${iconType}">
+      <use href="#${iconName?.replace('--invert-bg', '')?.replace('--invert', '')}"></use>
     </svg>
   `;
 }
@@ -464,9 +474,9 @@ function decorateIcon(span) {
  * @param {Element} [ele] element where inside the icon will be injected
  * @param {string} [position] position to where the icon needs to be injected (default is before the end of the element)
  */
-function injectIcon(id, ele, position = 'beforeend') {
+function injectIcon(id, ele, position = 'beforeend', version = '') {
   ele?.insertAdjacentHTML(position, `
-    <svg class="icon">
+    <svg class="icon icon-svg ${version}">
       <use href="#${id}"></use>
     </svg>
   `);
@@ -519,6 +529,9 @@ function decorateSections(main) {
           styles.forEach((style) => section.classList.add(style));
         } else if (key === 'id') {
           section.id = toClassName(meta.id?.trim());
+        } else if (key === 'section-bg-img') {
+          section.style.backgroundImage = `url(${meta[key]})`;
+          section.classList?.add('section-with-bg');
         } else {
           section.dataset[toCamelCase(key)] = meta[key];
         }
@@ -709,6 +722,47 @@ const isTabletLg = () => window.matchMedia('screen and (max-width: 1279px)').mat
 const isDesktop = () => window.matchMedia('screen and (max-width: 1439px)').matches;
 const isDesktopLg = () => window.matchMedia('screen and (min-width: 1440px)').matches;
 
+function camelToKebab(str) {
+  return str.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+}
+
+function loadPlaceholders(block) {
+  if (window.placeholders?.default && Object.keys(window.placeholders?.default)?.length) {
+    Object.keys(window.placeholders.default).forEach((key) => {
+      let value = window.placeholders.default[key];
+
+      const rateRegex = /(\d+(?:\.\d+)?)(%)(?:\s*(p\.a\.))?/g;
+
+      const isInterestRate = rateRegex.test(value);
+
+      if (isInterestRate) {
+        value = value.replaceAll(rateRegex, (_, num, percent, pa) => `
+            <span class="rate-num">${num}</span>
+            <span class="rate-unit">
+              <span class="rate-percent">${percent}</span>
+              <span class="rate-pa">${pa || 'p.a.'}</span>
+            </span>
+          `
+        );
+      }
+
+      const updateHtml = block || document.body;
+
+      updateHtml.innerHTML = updateHtml.innerHTML.replaceAll(`~${key}~`, `<span class="${camelToKebab(key)}${isInterestRate ? ' interest-rate' : ''}">${value}</span>`);
+    });
+  }
+}
+
+function loadDmImages(block) {
+  const allAnchorTags = (block || document).querySelectorAll('a');
+  allAnchorTags.forEach((anchor) => {
+    if (anchor.href.includes(window.placeholders.default.dmDomain)) {
+      const imgEle = domPicture(domImg({ class: 'dm-img', src: anchor.href, alt: 'DM Image' }));
+      anchor.replaceWith(imgEle);
+    }
+  });
+}
+
 init();
 
 export {
@@ -742,4 +796,7 @@ export {
   isTabletLg,
   isDesktop,
   isDesktopLg,
+  camelToKebab,
+  loadPlaceholders,
+  loadDmImages
 };

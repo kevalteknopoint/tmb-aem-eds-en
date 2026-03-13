@@ -35,6 +35,12 @@
           }
         },
         {
+          "component": "reference",
+          "name": "section-bg-img",
+          "label": "Background Image",
+          "multi": false
+        },
+        {
           "component": "multiselect",
           "name": "style",
           "label": "Style",
@@ -212,6 +218,10 @@
               "value": "rates-saver"
             },
             {
+              "name": "Rates Saver Left Aligned",
+              "value": "left-aligned"
+            },
+            {
               "name": "Who can apply",
               "value": "who-can-apply-section"
             },
@@ -268,15 +278,27 @@
               "value": "circular-image "
             },
             {
+              "name": "Momentum Corporate Variation",
+              "value": "momentum-corporate-variation"
+            },
+            {
+              "name": "Momentum Impact",
+              "value": "momentum-impact"
+            },
+            {
               "name": "Variation Border",
               "value": "variation-border"
+            },
+            {
+              "name": "Variation Non Border",
+              "value": "variation-non-border"
             },
             {
               "name": "Milestones",
               "value": "milestones"
             },
             {
-               "name": "Rate Details",
+              "name": "Rate Details",
               "value": "rate-details"
             },
             {
@@ -324,8 +346,52 @@
               "value": "system-table"
             },
             {
+              "name": "Mortage Insurance",
+              "value": "mortage-insurance"
+            },
+            {
+              "name": "Lenders Mortgage Insurance",
+              "value": "lenders-mortgage-insurance"
+            },
+            {
+              "name": "Lenders Mortgage Insurance Check",
+              "value": "lenders-mortgage-insurance-check"
+            },
+            {
+              "name": "Embed Iframe",
+              "value": "embed-iframe"
+            },
+            {
               "name": "Generic Body Copy",
               "value": "generic-body-copy"
+            },
+            {
+              "name": "Stepper Evergreen",
+              "value": "stepper-evergreen"
+            },
+            {
+              "name": "Evergreen Image swapping Variant",
+              "value": "evergreen-image-swapping-variant"
+            },
+            {
+              "name": "Info Well",
+              "value": "info-well"
+            },
+            {
+              "name": "customer-evergreen-variant",
+              "value": "customer-evergreen-variant"
+            },
+            {
+              "name": "evergreen Left menu",
+              "value": "evergreen-left-menu"
+            },
+            {
+              "name": "Evergreen Right Sticky",
+              "value": "evergreen-right-sticky"
+            },
+            {
+              "name": "Margin Bottom Unset",
+              "value": "margin-bottom-unset"
             },
             {
               "name": "404 Page",
@@ -338,6 +404,10 @@
             {
               "name": "About Us Columns Content (Governance Columns)",
               "value": "aboutus-grid-content"
+            },
+            {
+              "name": "Tab Panel",
+              "value": "tabs-panel"
             }
           ]
         }
@@ -386,7 +456,12 @@
         "teachers-calculator-block",
         "alerts",
         "system-table",
-        "card-with-quote"
+        "mortage-insurance",
+        "embed-iframe",
+        "info-well",
+        "evergreen-left-menu",
+        "card-with-quote",
+        "tmb-calculator-accordion"
       ]
     }
   ]

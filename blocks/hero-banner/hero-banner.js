@@ -133,8 +133,12 @@ export default function decorate(block) {
 
   Object.values(jsonMap).slice(5).forEach((cls) => block.querySelector(`.${cls}`)?.remove());
 
-  setTimeout(() => {
-    const capsizeItems = block.querySelectorAll('.rate-num, .rate-percent, .rate-pa');
-    capsizeItems.forEach(applyCapsizeToElement);
-  }, 1000);
+  try {
+    setTimeout(() => {
+      const capsizeItems = block.querySelectorAll('.rate-num, .rate-percent, .rate-pa');
+      capsizeItems.forEach(applyCapsizeToElement);
+    }, 1000);
+  } catch (error) {
+    console.log(error);
+  }
 }

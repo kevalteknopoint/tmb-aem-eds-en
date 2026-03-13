@@ -1,7 +1,9 @@
 @use './base' as *;
 
 header {
-  min-height: 141px;
+  &:has(.secondary-header) {
+    min-height: 141px;
+  }
 
   @include mobile {
     min-height: 60px;
@@ -257,4 +259,49 @@ header {
   ol {
     list-style-type: decimal;
   }
+
+  .button-container {
+    display: inline-block;
+    margin-top: 24px;
+    margin-right: 8px;
+    margin-bottom: 0;
+
+    a:not(.secondary) {
+      @include button('primary');
+
+      font-style: normal;
+      text-decoration: unset;
+    }
+    
+    a.secondary {
+      @include button('outline');
+
+      font-style: normal;
+      text-decoration: unset;
+    }
+  }
+}
+
+.margin-bottom-unset{
+  margin-bottom: unset;
+}
+
+svg.icon-svg.icon-invert {
+  background-color: $icon-bg-default !important;
+  color: $icon-default !important;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+svg.icon-svg.icon-invert-bg {
+  background-color: $icon-bg-reverse !important;
+  color: $icon-reverse !important;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.section-with-bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -108,3 +108,6 @@ export function tbody(...items) { return domEl('tbody', ...items); }
 export function th(...items) { return domEl('th', ...items); }
 export function tr(...items) { return domEl('tr', ...items); }
 export function td(...items) { return domEl('td', ...items); }
+export function summary(...items) { return domEl('summary', ...items); }
+export function details(...items) { return domEl('details', ...items); }
+export function picture(...items) { return domEl('picture', ...items); }

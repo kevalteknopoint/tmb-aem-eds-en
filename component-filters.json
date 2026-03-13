@@ -46,7 +46,12 @@
       "teachers-calculator-block",
       "alerts",
       "system-table",
-      "card-with-quote"
+      "mortage-insurance",
+      "embed-iframe",
+      "info-well",
+      "evergreen-left-menu",
+      "card-with-quote",
+      "tmb-calculator-accordion"
     ]
   },
   {
@@ -106,6 +111,10 @@
     ]
   },
   {
+    "id": "embed-iframe",
+    "components": []
+  },
+  {
     "id": "faq-productdetail",
     "components": [
       "faq-accordion-item"
@@ -118,10 +127,18 @@
     ]
   },
   {
+    "id": "info-well",
+    "components": []
+  },
+  {
     "id": "interest-rates",
     "components": [
       "rate-details"
     ]
+  },
+  {
+    "id": "mortage-insurance",
+    "components": []
   },
   {
     "id": "stepper",
@@ -133,6 +150,12 @@
     "id": "tabs",
     "components": [
       "tabsitem"
+    ]
+  },
+  {
+    "id": "tmb-calculator-accordion",
+    "components": [
+      "tmb-calculator-accordion-item"
     ]
   }
 ]
