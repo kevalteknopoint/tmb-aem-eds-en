@@ -276,6 +276,10 @@
               "value": "variation-non-border"
             },
             {
+              "name": "White Non Border",
+              "value": ".white-non-border"
+            },
+            {
               "name": "Milestones",
               "value": "milestones"
             },
