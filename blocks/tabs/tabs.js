@@ -1,4 +1,4 @@
-import { button, div, p } from "../../scripts/dom-helpers.js";
+import { button, div } from "../../scripts/dom-helpers.js";
 
 export default async function decorate(block) {
   if (window.location.origin.includes('author')) return;
@@ -9,9 +9,8 @@ export default async function decorate(block) {
   const currentPanelIds = [];
 
   [...block.children].forEach((tabItem, index) => {
-    const tabTitle = tabItem.firstElementChild?.textContent;
     const tabId = tabItem.lastElementChild?.textContent;
-    const tabButton = button({ class: 'tabs-tab', type: 'button', role: 'tab', id: `${tabId}--tab`, 'aria-controls': `${tabId}--panel`, 'aria-selected': index === 0 ? 'true' : 'false' }, p(tabTitle));
+    const tabButton = button({ class: 'tabs-tab', type: 'button', role: 'tab', id: `${tabId}--tab`, 'aria-controls': `${tabId}--panel`, 'aria-selected': index === 0 ? 'true' : 'false' }, tabItem.firstElementChild?.querySelector('p'));
 
     currentPanelIds.push(`${tabId}--panel`);
 

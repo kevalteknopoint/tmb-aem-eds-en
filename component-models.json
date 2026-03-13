@@ -511,6 +511,10 @@
           {
             "name": "Tab Panel",
             "value": "tabs-panel"
+          },
+          {
+            "name": "Tabbed Navigation",
+            "value": "tabbed-navigation"
           }
         ]
       }
@@ -1977,15 +1981,15 @@
         "component": "select",
         "name": "tab-content-button-style",
         "label": "Tab Content Button Style",
-        "value": "outlined",
+        "value": "primary",
         "options": [
+          {
+            "name": "Primary Button",
+            "value": "primary"
+          },
           {
             "name": "Outlined Button",
             "value": "outlined"
-          },
-          {
-            "name": "Secondary Button",
-            "value": "secondary"
           }
         ]
       }

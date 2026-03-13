@@ -408,6 +408,10 @@
             {
               "name": "Tab Panel",
               "value": "tabs-panel"
+            },
+            {
+              "name": "Tabbed Navigation",
+              "value": "tabbed-navigation"
             }
           ]
         }

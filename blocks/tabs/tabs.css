@@ -100,6 +100,82 @@
   display:none;
 }
 
+.tabbed-navigation{
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+  width:100%;
+}
+
+.tabbed-navigation > .default-content-wrapper{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  padding-inline:64px;
+  width:100%;
+}
+
+.tabbed-navigation > .default-content-wrapper h1,
+.tabbed-navigation > .default-content-wrapper h2,
+.tabbed-navigation > .default-content-wrapper h3{
+  color:var(--heading-light);
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  text-transform:initial;
+}
+
+.tabbed-navigation .tabs{
+  display:flex;
+  gap:80px;
+  justify-content:space-between;
+}
+
+.tabbed-navigation .tabs .tab-list-wrapper{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(1440px - 0px);
+  max-width:449px;
+  overflow-x:auto;
+  padding-inline:64px;
+  width:100%;
+}
+
+.tabbed-navigation .tabs .tabs-list{
+  display:flex;
+  flex-direction:column;
+}
+
+.tabbed-navigation .tabs .tabs-list .tabs-tab{
+  border-radius:var(--radius-card);
+}
+
+.tabbed-navigation .tabs .tabs-list .tabs-tab p{
+  align-items:center;
+  display:flex;
+  gap:24px;
+  justify-content:center;
+}
+
+.tabbed-navigation .tabs .tabs-list .tabs-tab p svg{
+  height:64px;
+  width:64px;
+}
+
+.tabbed-navigation .tabs .tabs-list .tabs-tab[aria-selected="true"]{
+  background-color:var(--heading-default);
+}
+
+.tabbed-navigation .tabs .tabs-list .tabs-tab[aria-selected="true"] p{
+  color:var(--icon-default);
+}
+
+.tabbed-navigation .tabs .tabs-panel[aria-hidden="true"]{
+  display:none;
+}
+
 @media screen and (max-width: 1279px){
   .home-loan-explained > .default-content-wrapper{
     padding-inline:24px;
@@ -107,6 +183,30 @@
 
   .home-loan-explained .tabs .tab-list-wrapper{
     padding-inline:24px;
+  }
+
+  .tabbed-navigation > .default-content-wrapper{
+    padding-inline:24px;
+  }
+
+  .tabbed-navigation .tabs .tab-list-wrapper{
+    padding-inline:24px;
+  }
+}
+
+@media screen and (max-width: 1023px){
+  .tabbed-navigation .tabs{
+    flex-direction:column;
+    gap:64px;
+  }
+
+  .tabbed-navigation .tabs .tab-list-wrapper{
+    max-width:unset;
+  }
+
+  .tabbed-navigation .tabs .tabs-list .tabs-tab p{
+    flex-direction:column;
+    gap:8px;
   }
 }
 
@@ -121,5 +221,27 @@
 
   .home-loan-explained .tabs .tab-list-wrapper{
     padding-inline:16px;
+  }
+
+  .tabbed-navigation{
+    gap:24px;
+  }
+
+  .tabbed-navigation > .default-content-wrapper{
+    padding-inline:16px;
+  }
+
+  .tabbed-navigation .tabs{
+    gap:40px;
+  }
+
+  .tabbed-navigation .tabs .tab-list-wrapper{
+    padding-inline:16px;
+  }
+
+  .tabbed-navigation .tabs .tabs-list .tabs-tab p svg{
+    height:48px;
+    padding:4px;
+    width:48px;
   }
 }

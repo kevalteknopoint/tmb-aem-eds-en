@@ -101,6 +101,10 @@ import { div, h1, input, p } from "../../scripts/dom-helpers.js";
     const iconPInvertBg = p({ title: `${sym.id}--invert-bg`, class: `${sym.id}--invert-bg` });
     injectIcon(`${sym.id}`, iconPInvertBg, undefined, 'icon-invert-bg');
 
+    const iconPAccent = p({ title: `${sym.id}--accent`, class: `${sym.id}--accent` });
+    injectIcon(`${sym.id}`, iconPAccent, undefined, 'icon-accent');
+
+    newWrap.insertAdjacentElement('afterend', iconPAccent);
     newWrap.insertAdjacentElement('afterend', iconPInvertBg);
     newWrap.insertAdjacentElement('afterend', iconPInvert);
     newWrap.insertAdjacentElement('afterend', iconP);

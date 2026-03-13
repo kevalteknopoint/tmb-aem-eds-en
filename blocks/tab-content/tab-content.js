@@ -1,3 +1,4 @@
+import { applyCapsizeToElement } from "../../libs/capsize/capsize.min.js";
 import { a, div } from "../../scripts/dom-helpers.js";
 
 export default function decorate(block) {
@@ -16,7 +17,7 @@ export default function decorate(block) {
   [...block.children].forEach((child) => {
     child.classList.add('tab-content-item');
     [...child.children].forEach((content, index) => {
-      content?.classList.add(jsonMap[index + 1]);
+      content?.classList.add(jsonMap[index]);
     });
 
     // Tab Body Handling
@@ -29,6 +30,15 @@ export default function decorate(block) {
       tabBody?.replaceWith(tabBodyWrap);
       tabRate?.remove();
       tabImage?.remove();
+
+      try {
+        setTimeout(() => {
+          const capsizeItems = child.querySelectorAll('.rate-num, .rate-percent, .rate-pa');
+          capsizeItems.forEach(applyCapsizeToElement);
+        }, 1000);
+      } catch (error) {
+        console.log(error);
+      }
     } else if (tabImage) {
       const tabBodyWrap = div({ class: 'tab-body-wrap' }, tabBody?.cloneNode(true), tabImage?.cloneNode(true));
       tabBody?.replaceWith(tabBodyWrap);
@@ -44,7 +54,9 @@ export default function decorate(block) {
     const tabBtnStyle = child?.querySelector('.tab-content-button-style');
 
     const tabBtn = a({ href: tabBtnLink?.textContent, class: tabBtnStyle?.textContent, target: tabBtnTarget?.textContent, title: tabBtnTitle?.textContent }, tabBtnText?.textContent);
-    tabBtnText.replaceWith(tabBtn);
+    const tabBtnWrap = div({ class: 'tab-content-actions' }, tabBtn);
+
+    tabBtnText.replaceWith(tabBtnWrap);
 
     tabBtnTitle?.remove();
     tabBtnLink?.remove();
