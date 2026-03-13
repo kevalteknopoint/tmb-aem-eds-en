@@ -150,7 +150,7 @@
   {
     "id": "tab-content",
     "components": [
-      "tab-content"
+      "tab-content-item"
     ]
   },
   {

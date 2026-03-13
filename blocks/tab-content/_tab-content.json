@@ -93,7 +93,7 @@
   "filters": [
     {
       "id": "tab-content",
-      "components": ["tab-content"]
+      "components": ["tab-content-item"]
     }
   ]
 }
