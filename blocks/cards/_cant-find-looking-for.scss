@@ -45,10 +45,10 @@
         font-style: normal;
         text-decoration: unset;
       }
-      
+
       a.secondary {
         @include button('outlined');
-        
+
         font-style: normal;
         text-decoration: unset;
       }
@@ -184,6 +184,7 @@
         }
 
         .cards-card-body {
+
           h1,
           h2,
           h3,
@@ -212,6 +213,7 @@
 
   &.faq-cant-find-looking-for-variant {
     .default-content-wrapper {
+
       h1,
       h2,
       h3,
@@ -348,6 +350,7 @@
 .section.faq-cant-find-looking-for.variation-border {
   &.background-color-teal {
     .default-content-wrapper {
+
       h1,
       h2,
       h3,
@@ -365,7 +368,13 @@
             background-color: $bg-reverse;
 
             .cards-card-body {
-              h1, h2, h3, h4, h5, h6 {
+
+              h1,
+              h2,
+              h3,
+              h4,
+              h5,
+              h6 {
                 color: $link-reverse;
                 border-bottom: 2px solid $link-reverse;
               }
@@ -375,9 +384,9 @@
               }
 
               p.button-container {
-                  a {
-                    border: unset;
-                  }
+                a {
+                  border: unset;
+                }
               }
             }
           }
@@ -387,6 +396,7 @@
   }
 
   .default-content-wrapper {
+
     h1,
     h2,
     h3,
@@ -414,16 +424,22 @@
           }
 
           .cards-card-body {
-            h1, h2, h3, h4, h5, h6 {
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
               &:last-child {
                 margin-bottom: 0;
               }
             }
 
             p.button-container {
-                a {
-                  border: unset;
-                }
+              a {
+                border: unset;
+              }
             }
           }
         }
@@ -434,9 +450,10 @@
 }
 
 // NON BORDER VARIATION
-.section.faq-cant-find-looking-for.variation-non-border{
-  &.background-color-teal{
-     .default-content-wrapper {
+.section.faq-cant-find-looking-for.variation-non-border {
+  &.background-color-teal {
+    .default-content-wrapper {
+
       h1,
       h2,
       h3,
@@ -446,18 +463,25 @@
         text-align: center;
       }
     }
-      .cards-wrapper {
+
+    .cards-wrapper {
       .cards {
         ul {
           li {
             background-color: $bg-reverse;
 
             .cards-card-body {
-              >p{
+              >p {
                 line-height: 0;
                 color: $link-reverse;
               }
-              h1, h2, h3, h4, h5, h6 {
+
+              h1,
+              h2,
+              h3,
+              h4,
+              h5,
+              h6 {
                 color: $link-reverse;
                 border-bottom: none;
               }
@@ -467,7 +491,9 @@
       }
     }
   }
-   .default-content-wrapper {
+
+  .default-content-wrapper {
+
     h1,
     h2,
     h3,
@@ -495,7 +521,13 @@
           }
 
           .cards-card-body {
-            h1, h2, h3, h4, h5, h6 {
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
               &:last-child {
                 margin-bottom: 0;
                 margin-top: 4px;
@@ -503,13 +535,135 @@
             }
 
             p.button-container {
-                a {
-                  border: unset;
-                }
+              a {
+                border: unset;
+              }
             }
           }
         }
 
+      }
+    }
+  }
+}
+
+.section.faq-cant-find-looking-for {
+  &.faq-cant-find-looking-for-variant.white-non-border {
+    .default-content-wrapper {
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        @include tablet {
+          text-align: left;
+        }
+      }
+    }
+
+    .cards-wrapper .cards ul {
+      @include tablet {
+        grid-template-columns: 1fr;
+      }
+
+      li {
+        @include tablet {
+          flex-direction: row;
+          gap: 16px;
+        }
+
+        @include mobile {
+          padding: 0;
+        }
+
+        .cards-card-image,
+        svg {
+          margin-bottom: 16px;
+
+          @include tablet {
+            margin-bottom: 0;
+
+            img {
+              width: 48px;
+              height: 48px;
+            }
+          }
+        }
+
+        @include tablet {
+          svg {
+            width: 48px;
+            height: 48px;
+          }
+        }
+
+        .cards-card-body {
+          @include tablet {
+            &:has(svg) {
+              display: grid;
+              grid-template-columns: auto 2fr;
+              column-gap: 16px;
+            }
+
+            &:first-child {
+              display: none;
+            }
+
+            p:has(svg) {
+              grid-row: 1 / 10;
+            }
+          }
+
+          >p {
+            line-height: 0;
+            color: $link-default;
+          }
+
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            width: fit-content;
+            margin: 0 auto 16px;
+            padding: 10px 0 6px;
+            color: $link-default;
+            border-bottom: unset !important;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            @include typo-heading3;
+
+            @include tablet {
+              margin: 0 0 16px;
+              text-align: left;
+            }
+          }
+
+          p:not(p:has(.icon)) {
+            padding: 0;
+            margin-bottom: 16px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            @include tablet {
+              text-align: left;
+            }
+
+            a {
+              color: $link-default;
+              text-decoration: underline;
+              text-underline-offset: 3px;
+            }
+          }
+        }
       }
     }
   }
