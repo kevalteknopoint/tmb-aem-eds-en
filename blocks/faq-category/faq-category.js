@@ -51,7 +51,7 @@ export default async function decorate(block) {
     const faqs = await fetchFaqs(tagValue, limitValue ? parseInt(limitValue, 10) : 10, 0);
 
     const faqList = ul({ class: "faq-items-list" });
-    faqs.forEach((item) => {
+    faqs.forEach((item, index) => {
       const icon = span({ class: "faq-link-icon" });
       injectIcon('chevron-right-links-default', icon);
       let faqUrl = item?.faqPageUrl?._path?.replace(/\/content\/[A-Za-z]+\//, '/');
@@ -65,7 +65,7 @@ export default async function decorate(block) {
         li(
           { class: "faq-item" },
           a(
-            { class: "faq-link", href: faqUrl },
+            { class: "faq-link", href: faqUrl, "data-index": index },
             item.question,
             icon
           )
@@ -130,7 +130,7 @@ export default async function decorate(block) {
       return;
     }
 
-    faqs.forEach((item) => {
+    faqs.forEach((item, index) => {
       const icon = span({ class: "faq-link-icon" });
       injectIcon('chevron-right-links-default', icon);
       let faqUrl = item?.faqPageUrl?._path?.replace(/\/content\/[A-Za-z]+\//, '/');
@@ -144,7 +144,7 @@ export default async function decorate(block) {
         li(
           { class: "faq-item" },
           a(
-            { class: "faq-link", href: faqUrl },
+            { class: "faq-link", href: faqUrl, "data-index": index },
             item.question,
             icon
           )

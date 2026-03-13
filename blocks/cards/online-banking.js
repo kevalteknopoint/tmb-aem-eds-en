@@ -1,3 +1,6 @@
+import './banking-goods-analytics.js';
+import './online-banking-analytics.js';
+
 export default function decorateOnlineBanking(block) {
   if (window.location.origin.includes('author')) return;
 

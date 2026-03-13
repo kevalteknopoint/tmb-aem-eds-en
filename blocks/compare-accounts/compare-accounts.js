@@ -1,4 +1,5 @@
 import { div, h3, h4, h5, p, a, span } from "../../scripts/dom-helpers.js";
+import './compare-accounts-analytics.js';
 
 export default function decorate(block) {
   if (window.location.href.includes("author")) return;

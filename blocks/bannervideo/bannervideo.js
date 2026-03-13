@@ -1,6 +1,7 @@
 import Swiperblock from "../../libs/swiper/swiper-bundle.min.js";
 import { injectIcon } from "../../scripts/aem.js";
 import appendclasses from "../../scripts/constatnt-classes.js";
+import './banner-analytics.js';
 
 function createSwiper(block) {
   if (!block.classList.contains("swiper")) {

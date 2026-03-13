@@ -1,5 +1,6 @@
 import { getMetadata } from "../../scripts/aem.js";
 import { img } from "../../scripts/dom-helpers.js";
+import './breadcrumb-analytics.js';
 
 function htmlToElement(htmlString) {
   if (!htmlString) return document.createElement('div');

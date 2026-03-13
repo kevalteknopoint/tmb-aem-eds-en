@@ -7,6 +7,7 @@ import newsHelpful from "./news-helpful.js";
 import newsHomepage from "./news-homepage.js";
 import decorateLookingAnotherway from "./looking-for-anotherway.js";
 import milestones from "./milestones.js";
+import './cant-find-looking-for-analytics.js';
 
 export default function decorate(block) {
   if (block.classList.contains("expandable-tiles")) {
@@ -47,6 +48,8 @@ export default function decorate(block) {
         decorateBankingGoods(block);
       } else if (block.closest('.looking-for-another-way')) {
         decorateLookingAnotherway(block);
+      } else if (block.closest(".faq-cant-find-looking-for")) {
+        import('./cant-find-looking-for-analytics.js');
       }
     });
   }
