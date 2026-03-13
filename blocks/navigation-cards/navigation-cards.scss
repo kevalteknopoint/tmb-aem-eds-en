@@ -1,178 +1,184 @@
 @use '../../styles/base' as *;
 
 .navigation-cards-container {
-    @include responsive-container;
+  @include responsive-container;
 
-    .default-content-wrapper {
-        margin-bottom: 40px;
-        text-align: left;
+  .default-content-wrapper {
+    margin-bottom: 40px;
+    text-align: left;
 
-        @include mobile {
-            margin-bottom: 24px;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            @include typo-heading1;
-
-            color: $heading-default;
-        }
-
-        p {
-            margin-top: 16px;
-            max-width: 800px;
-        }
-
-        .button-container {
-            display: inline-block;
-            margin-top: 40px;
-            margin-right: 8px;
-            margin-bottom: 0;
-
-            @include mobile {
-                margin-top: 24px;
-            }
-
-            a:not(.secondary) {
-                @include button('primary');
-
-                font-style: normal;
-                text-decoration: unset;
-            }
-
-            a.secondary {
-                @include button('outlined');
-
-                font-style: normal;
-                text-decoration: unset;
-            }
-        }
+    @include mobile {
+      margin-bottom: 24px;
     }
 
-    .navigation-cards.block {
-        display: grid;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include typo-heading1;
 
-        /* responsive grid */
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 24px;
-        align-items: stretch;
+      color: $heading-default;
     }
 
-    .nav-card {
-        position: relative;
-        background: #fff;
-        border: 1px solid #e5e7eb;
-        border-radius: 12px;
-
-        /* makes card rectangular */
-        min-height: 240px;
-
-        padding: 40px 24px;
-        text-align: center;
-
-        display: grid;
-        grid-template-rows: auto 1fr;
-
-        transition: all .25s ease;
-
-        &:hover {
-            border-color: #d1d5db;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        &:focus-within {
-            outline: 2px solid #00a3ad;
-            outline-offset: 3px;
-        }
+    p {
+      margin-top: 16px;
+      max-width: 800px;
     }
 
-    /* external icon */
-    .nav-card>div:first-child {
-        position: absolute;
-        top: 16px;
-        right: 16px;
+    .button-container {
+      display: inline-block;
+      margin-top: 40px;
+      margin-right: 8px;
+      margin-bottom: 0;
 
-        svg {
-            width: 16px;
-            height: 16px;
-            color: #00000080;
-        }
+      @include mobile {
+        margin-top: 24px;
+      }
+
+      a:not(.secondary) {
+        @include button('primary');
+
+        font-style: normal;
+        text-decoration: unset;
+      }
+
+      a.secondary {
+        @include button('outlined');
+
+        font-style: normal;
+        text-decoration: unset;
+      }
+    }
+  }
+
+  .navigation-cards.block {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(304px, 1fr));
+    gap: 32px;
+    align-items: stretch;
+
+    @include tablet {
+      gap: 24px;
     }
 
-    .nav-card-body {
-        display: grid;
-        grid-template-rows: auto auto 1fr;
-        align-items: start;
-        justify-items: center;
-        width: 100%;
+    @include mobile {
+      gap: 16px;
+    }
+  }
+
+  .nav-card {
+    position: relative;
+    background: $bg-default;
+    border: 1px solid $line-default;
+    border-radius: $radius-card;
+    padding: 40px 24px;
+    text-align: center;
+    display: grid;
+    transition: all .25s ease;
+
+    &:hover {
+      border-color: $link-default;
+      box-shadow: 0 2px 16px 0 rgb(0 0 0 / 10%);
+
+      & > div:first-child svg {
+        color: $link-default;
+      }
     }
 
-    /* icon circle */
-    .card-header .icon {
-        background: #e6f4f6;
-        border-radius: 50%;
-        padding: 16px;
-        margin-bottom: 12px;
-        display: inline-flex;
-
-        svg {
-            width: 28px;
-            height: 28px;
-            stroke: #0e6f7a;
-        }
+    &:focus-visible {
+      box-shadow: 0 0 0 2px $color-focus-reversed, 0 0 0 6px $color-focus-default;
     }
 
-    //   .card-header p {
-    //     font-size: 14px;
-    //     color: #4b5563;
-    //     margin: 4px 0;
-    //     // display: inline-flex;
-    //   }
-
-    .card-header h3 {
-        @include typo-heading3;
-        color: #005f67;
-        margin: 0 0 20px;
-    }
-
-
-    /* provider + logo wrapper */
-    .card-provider-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        padding-top: 32px;
-
-        width: 100%;
-        border-top: 1px solid #e5e7eb;
-        // margin-top: 12px;
-        // padding-top: 12px;
-    }
-
-    .card-provider p {
-        font-size: 12px;
-        color: #00000080;
-    }
-
-    .card-logo img {
-        height: 20px;
-        margin: 0;
-    }
-
-    .card-description {
-        @include typo-sm-body;
-        color: #4b5563;
-        // max-width: 260px;
+    &:has(.card-description) {
+      .card-provider-wrapper {
+        border-top: 1px solid $line-default;
+        padding-top: 28px;
         margin-top: 12px;
+      }
+    }
+  }
+
+  /* external icon */
+  .nav-card>div:first-child {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      color: #00000080;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  .nav-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* icon circle */
+  .card-header .icon {
+    display: block;
+    margin-bottom: 16px;
+
+    svg {
+      width: 96px;
+      height: 96px;
+      color: $icon-reverse;
+    }
+  }
+
+  .card-header {
+    p {
+      @include typo-body;
+
+      color: $heading-default;
+      margin-bottom: 4px;
     }
 
-    .card-description a {
-        color: #007e8a;
-        text-decoration: underline;
+    h3 {
+      @include typo-heading3;
+      
+      color: $heading-default;
+      margin-bottom: 16px;
     }
+  }
+
+  /* provider + logo wrapper */
+  .card-provider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .card-provider p {
+    @include typo-sm-body;
+
+    color: #00000080;
+  }
+
+  .card-logo img {
+    width: auto;
+    height: 20px;
+    margin: 0;
+  }
+
+  .card-description {
+    @include typo-disclaimer;
+
+    color: $body-default;
+    margin-top: 16px;
+  }
+
+  .card-description a {
+    color: $link-default;
+    text-decoration: underline;
+  }
 }
