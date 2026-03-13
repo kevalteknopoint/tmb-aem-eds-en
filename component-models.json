@@ -1736,35 +1736,22 @@
     "id": "navigation-card",
     "fields": [
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "aside-image",
-        "label": "Aside Image",
-        "multi": false
-      },
-      {
         "component": "richtext",
-        "name": "main-text",
-        "label": "Main Text",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "navigation-card-text",
-        "label": "Navigation Card Text",
+        "name": "navigation-main-content",
+        "label": "Navigation main content",
         "valueType": "string"
       },
       {
         "component": "reference",
         "valueType": "string",
-        "name": "picture-image",
-        "label": "Picture Image",
+        "name": "image",
+        "label": "Image",
         "multi": false
       },
       {
         "component": "richtext",
-        "name": "navigation-text",
-        "label": "Navigation Text",
+        "name": "navigation-below-content",
+        "label": "navigation below content",
         "valueType": "string"
       }
     ]
