@@ -1,7 +1,7 @@
 {
     "definitions": [
         {
-            "title": "Navigation-Cards",
+            "title": "Navigation Cards",
             "id": "Navigation-Cards",
             "plugins": {
                 "xwalk": {
@@ -17,7 +17,7 @@
             }
         },
         {
-            "title": "Navigation-Card",
+            "title": "Navigation Card",
             "id": "Navigation-Card",
             "plugins": {
                 "xwalk": {
