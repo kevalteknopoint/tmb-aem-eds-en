@@ -14,53 +14,79 @@ export default function decorate(block) {
     'tab-content-button-style'
   ];
 
-  [...block.children].forEach((child) => {
-    child.classList.add('tab-content-item');
-    [...child.children].forEach((content, index) => {
-      content?.classList.add(jsonMap[index]);
+  [...block.children].forEach((row) => {
+    row.classList.add('tab-content-item');
+
+    [...row.children].forEach((col, index) => {
+      if (jsonMap[index]) {
+        col.classList.add(jsonMap[index]);
+      }
     });
 
-    // Tab Body Handling
-    const tabBody = child?.querySelector('.tab-content-body');
-    const tabRate = child?.querySelector('.tab-content-rate');
-    const tabImage = child?.querySelector('.tab-content-image');
+    const tabBody = row.querySelector('.tab-content-body');
+    const tabRate = row.querySelector('.tab-content-rate');
+    const tabImage = row.querySelector('.tab-content-image');
 
-    if (tabRate) {
-      const tabBodyWrap = div({ class: 'tab-body-wrap' }, tabBody?.cloneNode(true), tabRate?.cloneNode(true));
-      tabBody?.replaceWith(tabBodyWrap);
+    const isEmpty = (el) => !el || (el.innerHTML.trim() === '' && !el.querySelector('img'));
+
+    if (tabBody && (!isEmpty(tabRate) || !isEmpty(tabImage))) {
+      const mediaElement = !isEmpty(tabRate) ? tabRate : tabImage;
+
+      const tabBodyWrap = div({ class: 'tab-body-wrap' });
+      // Move existing content into the wrapper rather than cloning to preserve event listeners if any
+      tabBodyWrap.append(tabBody.cloneNode(true));
+      tabBodyWrap.append(mediaElement.cloneNode(true));
+
+      tabBody.replaceWith(tabBodyWrap);
+
       tabRate?.remove();
       tabImage?.remove();
 
-      try {
-        setTimeout(() => {
-          const capsizeItems = child.querySelectorAll('.rate-num, .rate-percent, .rate-pa');
-          capsizeItems.forEach(applyCapsizeToElement);
-        }, 1000);
-      } catch (error) {
-        console.log(error);
+      if (!isEmpty(tabRate)) {
+        try {
+          setTimeout(() => {
+            const capsizeItems = row.querySelectorAll('.rate-num, .rate-percent, .rate-pa');
+            if (capsizeItems.length > 0) {
+              capsizeItems.forEach(applyCapsizeToElement);
+            }
+          }, 1000);
+        } catch (error) {
+          console.error('Capsize error:', error);
+        }
       }
-    } else if (tabImage) {
-      const tabBodyWrap = div({ class: 'tab-body-wrap' }, tabBody?.cloneNode(true), tabImage?.cloneNode(true));
-      tabBody?.replaceWith(tabBodyWrap);
-      tabRate?.remove();
-      tabImage?.remove();
     }
 
-    // Tab button rendering
-    const tabBtnText = child?.querySelector('.tab-content-button-text');
-    const tabBtnTitle = child?.querySelector('.tab-content-button-title');
-    const tabBtnLink = child?.querySelector('.tab-content-button-link');
-    const tabBtnTarget = child?.querySelector('.tab-content-button-target');
-    const tabBtnStyle = child?.querySelector('.tab-content-button-style');
+    const btnText = row.querySelector('.tab-content-button-text');
+    const btnLink = row.querySelector('.tab-content-button-link');
 
-    const tabBtn = a({ href: tabBtnLink?.textContent, class: tabBtnStyle?.textContent, target: tabBtnTarget?.textContent, title: tabBtnTitle?.textContent }, tabBtnText?.textContent);
-    const tabBtnWrap = div({ class: 'tab-content-actions' }, tabBtn);
+    if (!isEmpty(btnText) || !isEmpty(btnLink)) {
+      const btnTitle = row.querySelector('.tab-content-button-title')?.textContent.trim() || '';
+      const href = btnLink?.querySelector('a')?.href || btnLink?.textContent.trim() || '#';
+      const target = row.querySelector('.tab-content-button-target')?.textContent.trim() || '_self';
+      const style = row.querySelector('.tab-content-button-style')?.textContent.trim() || 'primary';
 
-    tabBtnText.replaceWith(tabBtnWrap);
+      const tabBtn = a({
+        href,
+        class: `button ${style}`,
+        target,
+        title: btnTitle
+      }, btnText?.textContent.trim() || 'Learn More');
 
-    tabBtnTitle?.remove();
-    tabBtnLink?.remove();
-    tabBtnTarget?.remove();
-    tabBtnStyle?.remove();
+      const tabBtnWrap = div({ class: 'tab-content-actions' }, tabBtn);
+
+      if (btnText) {
+        btnText.replaceWith(tabBtnWrap);
+      } else {
+        row.append(tabBtnWrap);
+      }
+    }
+
+    const metadataSelectors = [
+      '.tab-content-button-title',
+      '.tab-content-button-link',
+      '.tab-content-button-target',
+      '.tab-content-button-style'
+    ];
+    metadataSelectors.forEach((selector) => row.querySelector(selector)?.remove());
   });
 }
