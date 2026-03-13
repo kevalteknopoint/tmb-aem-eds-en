@@ -303,6 +303,10 @@
             "value": "faq-cant-find-looking-for-variant"
           },
           {
+            "name": "navigation-cards-container",
+            "value": "navigation-cards-container"
+          },
+          {
             "name": "Section Wrapper",
             "value": "section-wrapper"
           },

@@ -1,4 +1,117 @@
 @use '../../styles/base' as *;
-.navigation-cards{
-    color: red;
+.navigation-cards-container {
+
+  .navigation-cards.block {
+    display: grid;
+
+    // auto adjusts number of cards per row
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 24px;
+    width: 100%;
+  }
+}
+
+
+/* CARD */
+.nav-card {
+  position: relative;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e3e7ea;
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: all 0.25s ease;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #cfd8dc;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  }
+
+  &:focus-within {
+    outline: 2px solid #00a3ad;
+    outline-offset: 3px;
+  }
+}
+
+
+/* EXTERNAL ICON */
+.nav-card .icon-external-link {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: #6b7b86;
+  }
+}
+
+
+/* BODY */
+.nav-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+/* VEHICLE ICON CIRCLE */
+.nav-card-body .icon {
+  background: #e7f4f6;
+  border-radius: 50%;
+  padding: 14px;
+  margin-bottom: 12px;
+
+  svg {
+    width: 28px;
+    height: 28px;
+    fill: #007e8a;
+  }
+}
+
+
+/* TITLE */
+.nav-card-body h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #003a44;
+}
+
+
+/* TEXT */
+.nav-card-body p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #6b7b86;
+}
+
+
+/* LOGO */
+.nav-card-body picture {
+  margin: 8px 0 12px;
+
+  img {
+    height: 22px;
+    width: auto;
+  }
+}
+
+
+/* LINK */
+.nav-card-body a {
+  color: #007e8a;
+  text-decoration: underline;
+
+  &:focus-visible {
+    outline: 2px solid #00a3ad;
+    outline-offset: 2px;
+  }
 }
