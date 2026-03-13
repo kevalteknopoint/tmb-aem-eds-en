@@ -1911,6 +1911,74 @@
     ]
   },
   {
+    "id": "tab-content-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "tab-content-header",
+        "label": "Tab Content Heading",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "tab-content-body",
+        "label": "Tab Content Body",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "tab-content-button-text",
+        "label": "Tab Content Button Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "tab-content-button-title",
+        "label": "Tab Content Button Title",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "tab-content-button-link",
+        "label": "Tab Content Button Link",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "select",
+        "name": "tab-content-button-target",
+        "label": "Tab Content Button Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "tab-content-button-style",
+        "label": "Tab Content Button Style",
+        "value": "outlined",
+        "options": [
+          {
+            "name": "Outlined Button",
+            "value": "outlined"
+          },
+          {
+            "name": "Secondary Button",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "tabsitem",
     "fields": [
       {
