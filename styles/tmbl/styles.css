@@ -788,6 +788,13 @@ svg.icon-svg.icon-invert-bg{
   padding:10px;
 }
 
+svg.icon-svg.icon-accent{
+  background-color:var(--icon-bg-accent) !important;
+  border-radius:50%;
+  color:var(--icon-2-accent) !important;
+  padding:10px;
+}
+
 .section-with-bg{
   background-position:center;
   background-repeat:no-repeat;

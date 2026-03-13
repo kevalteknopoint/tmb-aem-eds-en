@@ -408,6 +408,10 @@
             {
               "name": "Tab Panel",
               "value": "tabs-panel"
+            },
+            {
+              "name": "Tabbed Navigation",
+              "value": "tabbed-navigation"
             }
           ]
         }
@@ -461,7 +465,8 @@
         "info-well",
         "evergreen-left-menu",
         "card-with-quote",
-        "tmb-calculator-accordion"
+        "tmb-calculator-accordion",
+        "tab-content"
       ]
     }
   ]

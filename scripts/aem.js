@@ -459,11 +459,13 @@ function decorateIcon(span) {
     iconType = ' icon-invert-bg';
   } else if (iconName?.includes('--invert')) {
     iconType = ' icon-invert';
+  } else if (iconName?.includes('--accent')) {
+    iconType = ' icon-accent';
   }
 
   span.innerHTML = `
     <svg class="icon-svg${iconType}">
-      <use href="#${iconName?.replace('--invert-bg', '')?.replace('--invert', '')}"></use>
+      <use href="#${iconName?.replace('--invert-bg', '')?.replace('--invert', '')?.replace('--accent', '')}"></use>
     </svg>
   `;
 }
