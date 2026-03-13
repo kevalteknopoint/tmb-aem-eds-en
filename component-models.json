@@ -1926,6 +1926,19 @@
         "valueType": "string"
       },
       {
+        "component": "richtext",
+        "name": "tab-content-rate",
+        "label": "Tab Content Rate Item",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "tab-content-image",
+        "label": "Tab Content Body Image",
+        "multi": false
+      },
+      {
         "component": "text",
         "name": "tab-content-button-text",
         "label": "Tab Content Button Text",
