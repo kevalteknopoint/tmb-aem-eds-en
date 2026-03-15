@@ -35,12 +35,20 @@ export default async function decorate(block) {
   allPanels.forEach((panel) => {
     if (!currentPanelIds?.includes(`${panel.id}--panel`)) return;
 
-    panel.setAttribute('id', `${panel.id}--panel`);
-    panel.setAttribute('aria-hidden', 'false');
-    panel.setAttribute('aria-labelledby', `${panel.id}--tab`);
-    panel.setAttribute('role', 'tabpanel');
+    const innerPanelWrap = tabPanels.querySelector(`#${panel.id}--panel`);
 
-    tabPanels.appendChild(panel);
+    panel?.classList.remove('tabs-panel');
+
+    if (!innerPanelWrap) {
+      const tabPanel = div({ class: 'tabs-panel' }, panel);
+      tabPanel.setAttribute('id', `${panel.id}--panel`);
+      tabPanel.setAttribute('aria-hidden', 'false');
+      tabPanel.setAttribute('aria-labelledby', `${panel.id}--tab`);
+      tabPanel.setAttribute('role', 'tabpanel');
+      tabPanels.appendChild(tabPanel);
+    } else {
+      innerPanelWrap.appendChild(panel);
+    }
   });
 
   block.innerHTML = '';
