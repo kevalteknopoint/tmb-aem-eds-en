@@ -82,7 +82,7 @@
       border-color: $link-default;
       box-shadow: 0 2px 16px 0 rgb(0 0 0 / 10%);
 
-      & > div:first-child svg {
+      & > div.card-external-icon svg {
         color: $link-default;
       }
     }
@@ -101,7 +101,7 @@
   }
 
   /* external icon */
-  .nav-card>div:first-child {
+  .nav-card>div.card-external-icon {
     position: absolute;
     top: 16px;
     right: 16px;
@@ -117,7 +117,6 @@
   .nav-card-body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
 

@@ -1,16 +1,25 @@
 export default async function decorate(block) {
   const cards = [...block.children];
 
+  const isEmpty = (el) => !el || !el.textContent.trim() && !el.querySelector('img, a, picture, span.icon');
+
   cards.forEach((card) => {
     card.classList.add('nav-card');
 
     const sections = [...card.children];
 
-    const externalIcon = sections[0];
-    const mainContent = sections[1];
-    const providedBy = sections[2];
-    const logo = sections[3];
-    const description = sections[4];
+    let externalIcon = sections[0];
+    let mainContent = sections[1];
+    let providedBy = sections[2];
+    let logo = sections[3];
+    let description = sections[4];
+
+    // remove empty sections
+    if (isEmpty(externalIcon)) externalIcon = null;
+    if (isEmpty(mainContent)) mainContent = null;
+    if (isEmpty(providedBy)) providedBy = null;
+    if (isEmpty(logo)) logo = null;
+    if (isEmpty(description)) description = null;
 
     const body = document.createElement('div');
     body.className = 'nav-card-body';
@@ -21,7 +30,7 @@ export default async function decorate(block) {
       body.append(mainContent);
     }
 
-    // wrapper for provider + logo
+    // provider + logo wrapper
     const providerWrapper = document.createElement('div');
     providerWrapper.className = 'card-provider-wrapper';
 
@@ -35,7 +44,7 @@ export default async function decorate(block) {
       providerWrapper.append(logo);
     }
 
-    if (providerWrapper.children.length) {
+    if (providerWrapper.children.length > 0) {
       body.append(providerWrapper);
     }
 
@@ -47,7 +56,11 @@ export default async function decorate(block) {
 
     card.innerHTML = '';
 
-    if (externalIcon) card.append(externalIcon);
+    if (externalIcon) {
+      externalIcon.classList.add('card-external-icon');
+      card.append(externalIcon);
+    }
+
     card.append(body);
 
     const link = description?.querySelector('a');

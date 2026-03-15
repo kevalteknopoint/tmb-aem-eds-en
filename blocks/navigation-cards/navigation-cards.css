@@ -147,7 +147,7 @@
   box-shadow:0 2px 16px 0 rgb(0 0 0 / 10%);
 }
 
-.navigation-cards-container .nav-card:hover > div:first-child svg{
+.navigation-cards-container .nav-card:hover > div.card-external-icon svg{
   color:var(--link-default);
 }
 
@@ -161,13 +161,13 @@
   padding-top:28px;
 }
 
-.navigation-cards-container .nav-card > div:first-child{
+.navigation-cards-container .nav-card > div.card-external-icon{
   position:absolute;
   right:16px;
   top:16px;
 }
 
-.navigation-cards-container .nav-card > div:first-child svg{
+.navigation-cards-container .nav-card > div.card-external-icon svg{
   color:rgb(0 0 0 / 50.2%);
   height:16px;
   transition:all 0.3s ease-in-out;
@@ -178,7 +178,6 @@
   align-items:center;
   display:flex;
   flex-direction:column;
-  justify-content:center;
 }
 
 .navigation-cards-container .card-header .icon{
