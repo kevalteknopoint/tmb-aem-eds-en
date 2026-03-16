@@ -2,9 +2,9 @@
 
 
 .section.faq-cant-find-looking-for {
-  @include responsive-container;
-
   .default-content-wrapper {
+    @include responsive-container;
+
     margin-bottom: 40px;
     text-align: center;
 
@@ -56,6 +56,8 @@
   }
 
   .cards-wrapper {
+    @include responsive-container;
+
     .cards {
       ul {
         display: grid;
