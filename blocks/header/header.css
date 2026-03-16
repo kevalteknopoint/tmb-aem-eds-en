@@ -241,7 +241,7 @@ html:has(.primary-header.search-active) .search-results-section{
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   position:relative;
-  text-transform:--body-case;
+  text-transform:var(--body-case);
 }
 
 .primary-nav-list .primary-nav-link::after{
@@ -292,7 +292,7 @@ html:has(.primary-header.search-active) .search-results-section{
   line-height:var(--font-height-body);
   outline:none;
   padding:8px 0 8px 22px;
-  text-transform:--body-case;
+  text-transform:var(--body-case);
   width:100%;
 }
 
@@ -424,7 +424,7 @@ header:has(.secondary-header) .search-results-section{
   line-height:var(--font-height-h2-std);
   margin-top:40px;
   text-align:center;
-  text-transform:--heading2-std-case;
+  text-transform:var(--heading2-std-case);
 }
 
 .search-results-section .dynamic-search-results{
@@ -467,7 +467,7 @@ header:has(.secondary-header) .search-results-section{
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
   margin-bottom:11px;
-  text-transform:--heading3-case;
+  text-transform:var(--heading3-case);
 }
 
 .search-results-section .default-content-wrapper ul{
@@ -489,7 +489,7 @@ header:has(.secondary-header) .search-results-section{
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   padding:12px 0 14px;
-  text-transform:--body-case;
+  text-transform:var(--body-case);
 }
 
 .search-results-section .default-content-wrapper ul li a svg{
@@ -550,7 +550,7 @@ header:has(.secondary-header) .search-results-section{
   letter-spacing:var(--font-letter-spacing-h4);
   line-height:var(--font-height-h4);
   padding:10px 0;
-  text-transform:--heading4-case;
+  text-transform:var(--heading4-case);
 }
 
 .mobile-menu-wrapper .secondary-nav-list{
@@ -579,7 +579,7 @@ header:has(.secondary-header) .search-results-section{
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
   padding:8px 0;
-  text-transform:--sm-body-case;
+  text-transform:var(--sm-body-case);
 }
 
 @media screen and (max-width: 1279px){
@@ -736,7 +736,7 @@ header:has(.secondary-header) .search-results-section{
     font-weight:var(--font-weight-body);
     letter-spacing:var(--font-letter-spacing-body);
     line-height:var(--font-height-body);
-    text-transform:--body-case;
+    text-transform:var(--body-case);
   }
 
   .mobile-menu-wrapper .secondary-nav-list{

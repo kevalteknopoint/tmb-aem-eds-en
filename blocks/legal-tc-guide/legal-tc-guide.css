@@ -154,7 +154,7 @@
   letter-spacing:var(--font-letter-spacing-intro);
   line-height:var(--font-height-intro);
   margin-top:40px;
-  text-transform:--intro-case;
+  text-transform:var(--intro-case);
 }
 
 .legal-tc-guide .columns-wrapper .block div div h4:first-child{
@@ -168,7 +168,7 @@
   font-weight:var(--font-weight-sm-body);
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
-  text-transform:--sm-body-case;
+  text-transform:var(--sm-body-case);
 }
 
 .legal-tc-guide .columns-wrapper .block div div h6{
@@ -178,7 +178,7 @@
   font-weight:var(--font-weight-disc);
   letter-spacing:var(--font-letter-spacing-disc);
   line-height:var(--font-height-disclaimer);
-  text-transform:--disclaimer-case;
+  text-transform:var(--disclaimer-case);
 }
 
 .legal-tc-guide .columns-wrapper .block div div:first-child{

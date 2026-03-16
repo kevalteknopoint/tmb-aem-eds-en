@@ -29,7 +29,7 @@
   letter-spacing:var(--font-letter-spacing-h1);
   line-height:var(--font-height-h1);
   margin-bottom:40px;
-  text-transform:--heading1-case;
+  text-transform:var(--heading1-case);
 }
 
 .interest-table-section .default-content-wrapper .ul-0{
@@ -47,7 +47,7 @@
   line-height:var(--font-height-h3);
   margin:0 0 16px;
   text-decoration:none;
-  text-transform:--heading3-case;
+  text-transform:var(--heading3-case);
   width:50%;
 }
 
@@ -72,7 +72,7 @@
   line-height:var(--font-height-body);
   list-style:none;
   padding:16px 8px 16px 0;
-  text-transform:--body-case;
+  text-transform:var(--body-case);
   width:50%;
 }
 
@@ -97,7 +97,7 @@
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
   padding:40px 0 16px;
-  text-transform:--heading3-case;
+  text-transform:var(--heading3-case);
 }
 
 .interest-table-section .default-content-wrapper p{
@@ -108,7 +108,7 @@
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   padding-top:16px;
-  text-transform:--body-case;
+  text-transform:var(--body-case);
 }
 
 .interest-table-section .default-content-wrapper p a{
@@ -126,7 +126,7 @@
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
   padding-top:16px;
-  text-transform:--sm-body-case;
+  text-transform:var(--sm-body-case);
 }
 
 .interest-table-section .default-content-wrapper h5 a{
@@ -144,7 +144,7 @@
   letter-spacing:var(--font-letter-spacing-disc);
   line-height:var(--font-height-disclaimer);
   padding-top:16px;
-  text-transform:--disclaimer-case;
+  text-transform:var(--disclaimer-case);
 }
 
 .interest-table-section .default-content-wrapper h6 a{

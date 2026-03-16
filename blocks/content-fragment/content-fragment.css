@@ -56,7 +56,7 @@
   letter-spacing:var(--font-letter-spacing-h1);
   line-height:var(--font-height-h1);
   text-align:left;
-  text-transform:--heading1-case;
+  text-transform:var(--heading1-case);
 }
 
 .who-can-apply-section .columns-wrapper .block .column-container{
@@ -80,7 +80,7 @@
   font-weight:var(--font-weight-h3);
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
-  text-transform:--heading3-case;
+  text-transform:var(--heading3-case);
 }
 
 .who-can-apply-section .columns-wrapper .block .column-container div p{
@@ -90,7 +90,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:--body-case;
+  text-transform:var(--body-case);
 }
 
 .who-can-apply-section .columns-wrapper .block .column-container div .button-container{
@@ -181,7 +181,7 @@
   line-height:var(--font-height-body);
   list-style:disc;
   margin-left:25px;
-  text-transform:--body-case;
+  text-transform:var(--body-case);
 }
 
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item{
@@ -205,7 +205,7 @@
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
   margin-top:4px;
-  text-transform:--heading3-case;
+  text-transform:var(--heading3-case);
 }
 
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-label svg{
@@ -238,7 +238,7 @@
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
   margin-top:40px;
-  text-transform:--heading3-case;
+  text-transform:var(--heading3-case);
 }
 
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h1:first-child,
@@ -258,7 +258,7 @@
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   margin:0;
-  text-transform:--body-case;
+  text-transform:var(--body-case);
 }
 
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body p b{
@@ -267,7 +267,7 @@
   font-weight:var(--font-weight-body-bold);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:--body-bold-case;
+  text-transform:var(--body-bold-case);
 }
 
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body a{
@@ -348,7 +348,7 @@
   letter-spacing:2px;
   line-height:var(--font-height-h1);
   text-align:center;
-  text-transform:--heading1-case;
+  text-transform:var(--heading1-case);
 }
 
 .customer .columns-wrapper .block .columns-container div p{
@@ -360,7 +360,7 @@
   line-height:var(--font-height-body);
   margin:16px 0 32px;
   text-align:center;
-  text-transform:--body-case;
+  text-transform:var(--body-case);
 }
 
 .customer .columns-wrapper .block .columns-container div p.button-container{
@@ -381,7 +381,7 @@
   line-height:var(--font-height-h5);
   min-width:150px;
   padding-block:8px;
-  text-transform:--heading5-case;
+  text-transform:var(--heading5-case);
 }
 
 .customer .columns-wrapper .block .columns-container div p.button-container a:hover{
@@ -454,7 +454,7 @@
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   text-align:center;
-  text-transform:--body-case;
+  text-transform:var(--body-case);
 }
 
 .customer .content-container .para-0 a{
@@ -469,7 +469,7 @@
           text-decoration-skip-ink:auto;
   text-decoration-style:solid;
   text-decoration-thickness:auto;
-  text-transform:--body-case;
+  text-transform:var(--body-case);
   text-underline-offset:auto;
   text-underline-position:from-font;
 }
@@ -483,7 +483,7 @@
   line-height:var(--font-height-disclaimer);
   margin-top:16px;
   text-align:center;
-  text-transform:--disclaimer-case;
+  text-transform:var(--disclaimer-case);
 }
 
 .lenders-mortgage-insurance.customer{
@@ -550,7 +550,7 @@
   min-width:unset;
   padding:unset;
   padding-block:8px;
-  text-transform:--heading5-case;
+  text-transform:var(--heading5-case);
 }
 
 .lenders-mortgage-insurance.customer .default-content-wrapper p.button-container a:hover{

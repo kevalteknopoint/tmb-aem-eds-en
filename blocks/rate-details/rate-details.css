@@ -66,7 +66,7 @@
   letter-spacing:var(--font-letter-spacing-h1);
   line-height:var(--font-height-h1);
   margin-bottom:16px;
-  text-transform:--heading1-case;
+  text-transform:var(--heading1-case);
 }
 
 .rate-details .columns-wrapper p{
@@ -77,7 +77,7 @@
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   margin-bottom:32px;
-  text-transform:--body-case;
+  text-transform:var(--body-case);
 }
 
 .rate-details .columns-wrapper .button-container{
@@ -187,7 +187,7 @@
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
   margin-top:4px;
-  text-transform:--heading3-case;
+  text-transform:var(--heading3-case);
 }
 
 .rate-details .accordion-wrapper .block .accordion-item .accordion-item-label svg{
@@ -212,7 +212,7 @@
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   margin-top:8px;
-  text-transform:--body-case;
+  text-transform:var(--body-case);
 }
 
 .rate-details .accordion-wrapper .block .accordion-item .accordion-item-body h1, .rate-details .accordion-wrapper .block .accordion-item .accordion-item-body h2, .rate-details .accordion-wrapper .block .accordion-item .accordion-item-body h3, .rate-details .accordion-wrapper .block .accordion-item .accordion-item-body h4, .rate-details .accordion-wrapper .block .accordion-item .accordion-item-body h5, .rate-details .accordion-wrapper .block .accordion-item .accordion-item-body h6{
@@ -223,7 +223,7 @@
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
   margin-top:40px;
-  text-transform:--heading3-case;
+  text-transform:var(--heading3-case);
 }
 
 .rate-details .accordion-wrapper .block .accordion-item .accordion-item-body h1:first-child, .rate-details .accordion-wrapper .block .accordion-item .accordion-item-body h2:first-child, .rate-details .accordion-wrapper .block .accordion-item .accordion-item-body h3:first-child, .rate-details .accordion-wrapper .block .accordion-item .accordion-item-body h4:first-child, .rate-details .accordion-wrapper .block .accordion-item .accordion-item-body h5:first-child, .rate-details .accordion-wrapper .block .accordion-item .accordion-item-body h6:first-child{
@@ -245,7 +245,7 @@
   font-weight:var(--font-weight-body-bold);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:--body-bold-case;
+  text-transform:var(--body-bold-case);
 }
 
 .rate-details .accordion-wrapper .block .accordion-item .accordion-item-body ul{
@@ -307,7 +307,7 @@
   font-weight:var(--font-weight-h3);
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
-  text-transform:--heading3-case;
+  text-transform:var(--heading3-case);
 }
 
 .rate-details .pipe-grid-cell{
@@ -317,7 +317,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:--body-case;
+  text-transform:var(--body-case);
 }
 
 .rate-details .default-content-wrapper p{

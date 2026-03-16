@@ -104,7 +104,7 @@
   min-width:max-content;
   padding:4px 0;
   position:relative;
-  text-transform:--sm-body-case;
+  text-transform:var(--sm-body-case);
 }
 
 .product-navigation .default-content-wrapper ul li a:focus-visible{

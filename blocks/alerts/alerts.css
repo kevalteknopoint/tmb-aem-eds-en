@@ -91,7 +91,7 @@
   font-weight:var(--font-weight-sm-body);
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
-  text-transform:--sm-body-case;
+  text-transform:var(--sm-body-case);
 }
 
 .alerts .alert-text h1, .alerts .alert-text h2, .alerts .alert-text h3, .alerts .alert-text h4, .alerts .alert-text h5, .alerts .alert-text h6{
@@ -102,7 +102,7 @@
   letter-spacing:var(--font-letter-spacing-h5);
   line-height:var(--font-height-h5);
   margin-bottom:4px;
-  text-transform:--heading5-case;
+  text-transform:var(--heading5-case);
 }
 
 .alerts .icon{

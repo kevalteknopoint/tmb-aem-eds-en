@@ -37,7 +37,7 @@
   font-weight:var(--font-weight-h1);
   letter-spacing:var(--font-letter-spacing-h1);
   line-height:var(--font-height-h1);
-  text-transform:--heading1-case;
+  text-transform:var(--heading1-case);
 }
 
 .home-loan-explained .tabs .tab-list-wrapper{
@@ -124,7 +124,7 @@
   font-weight:var(--font-weight-h1);
   letter-spacing:var(--font-letter-spacing-h1);
   line-height:var(--font-height-h1);
-  text-transform:--heading1-case;
+  text-transform:var(--heading1-case);
 }
 
 .tabbed-navigation .tabs{
@@ -221,7 +221,7 @@
   justify-content:flex-start;
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
-  text-transform:--heading3-case;
+  text-transform:var(--heading3-case);
 }
 
 .tabbed-navigation .tabs .tabs-list .tabs-tab p svg{
@@ -299,7 +299,7 @@
     justify-content:center;
     letter-spacing:var(--font-letter-spacing-disc);
     line-height:var(--font-height-disclaimer);
-    text-transform:--disclaimer-case;
+    text-transform:var(--disclaimer-case);
   }
 }
 

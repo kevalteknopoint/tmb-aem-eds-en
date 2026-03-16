@@ -27,7 +27,7 @@
   letter-spacing:var(--font-letter-spacing-h5);
   line-height:var(--font-height-h5);
   margin-bottom:10px;
-  text-transform:--heading5-case;
+  text-transform:var(--heading5-case);
 }
 
 .info-well-container .info-well-wrapper .info-well p{
@@ -37,7 +37,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:--body-case;
+  text-transform:var(--body-case);
 }
 
 .info-well-container .info-well-wrapper .info-well p a{
@@ -52,7 +52,7 @@
           text-decoration-skip-ink:auto;
   text-decoration-style:solid;
   text-decoration-thickness:auto;
-  text-transform:--body-case;
+  text-transform:var(--body-case);
   text-underline-offset:auto;
   text-underline-position:from-font;
 }
@@ -81,7 +81,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:--body-case;
+  text-transform:var(--body-case);
 }
 
 .info-well-container .info-well-wrapper .info-well ul li ul li:first-child{
@@ -92,6 +92,6 @@
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
   max-width:130px;
-  text-transform:--sm-body-case;
+  text-transform:var(--sm-body-case);
   width:100%;
 }

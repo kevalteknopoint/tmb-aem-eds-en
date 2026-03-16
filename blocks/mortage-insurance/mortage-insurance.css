@@ -44,7 +44,7 @@
   font-weight:var(--font-weight-sm-body);
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
-  text-transform:--sm-body-case;
+  text-transform:var(--sm-body-case);
 }
 
 .section.mortage-insurance .mortage-insurance.block .insurance-row-1 .insurance-content-1 .word-separator{
@@ -62,7 +62,7 @@
   font-weight:var(--font-weight-sm-body);
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
-  text-transform:--sm-body-case;
+  text-transform:var(--sm-body-case);
 }
 
 .section.mortage-insurance .mortage-insurance.block .insurance-row-3 .insurance-content-3 p{
@@ -72,7 +72,7 @@
   font-weight:var(--font-weight-sm-body);
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
-  text-transform:--sm-body-case;
+  text-transform:var(--sm-body-case);
 }
 
 @media screen and (max-width: 1279px){

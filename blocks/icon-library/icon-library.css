@@ -43,7 +43,7 @@
   font-weight:var(--font-weight-h1);
   letter-spacing:var(--font-letter-spacing-h1);
   line-height:var(--font-height-h1);
-  text-transform:--heading1-case;
+  text-transform:var(--heading1-case);
   text-transform:uppercase;
 }
 
@@ -79,7 +79,7 @@
   line-height:var(--font-height-sm-body);
   outline:none;
   padding:4px;
-  text-transform:--sm-body-case;
+  text-transform:var(--sm-body-case);
 }
 
 .icon-library p{
@@ -98,7 +98,7 @@
   letter-spacing:var(--font-letter-spacing-disc);
   line-height:var(--font-height-disclaimer);
   padding:24px;
-  text-transform:--disclaimer-case;
+  text-transform:var(--disclaimer-case);
 }
 
 .icon-library p:has(.icon-invert-bg){
