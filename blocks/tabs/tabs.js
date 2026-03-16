@@ -1,4 +1,4 @@
-import { button, div, p } from "../../scripts/dom-helpers.js";
+import { button, div } from "../../scripts/dom-helpers.js";
 
 export default async function decorate(block) {
   if (window.location.origin.includes('author')) return;
@@ -9,9 +9,8 @@ export default async function decorate(block) {
   const currentPanelIds = [];
 
   [...block.children].forEach((tabItem, index) => {
-    const tabTitle = tabItem.firstElementChild?.textContent;
     const tabId = tabItem.lastElementChild?.textContent;
-    const tabButton = button({ class: 'tabs-tab', type: 'button', role: 'tab', id: `${tabId}--tab`, 'aria-controls': `${tabId}--panel`, 'aria-selected': index === 0 ? 'true' : 'false' }, p(tabTitle));
+    const tabButton = button({ class: 'tabs-tab', type: 'button', role: 'tab', id: `${tabId}--tab`, 'aria-controls': `${tabId}--panel`, 'aria-selected': index === 0 ? 'true' : 'false' }, tabItem.firstElementChild?.querySelector('p'));
 
     currentPanelIds.push(`${tabId}--panel`);
 
@@ -36,12 +35,20 @@ export default async function decorate(block) {
   allPanels.forEach((panel) => {
     if (!currentPanelIds?.includes(`${panel.id}--panel`)) return;
 
-    panel.setAttribute('id', `${panel.id}--panel`);
-    panel.setAttribute('aria-hidden', 'false');
-    panel.setAttribute('aria-labelledby', `${panel.id}--tab`);
-    panel.setAttribute('role', 'tabpanel');
+    const innerPanelWrap = tabPanels.querySelector(`#${panel.id}--panel`);
 
-    tabPanels.appendChild(panel);
+    panel?.classList.remove('tabs-panel');
+
+    if (!innerPanelWrap) {
+      const tabPanel = div({ class: 'tabs-panel' }, panel);
+      tabPanel.setAttribute('id', `${panel.id}--panel`);
+      tabPanel.setAttribute('aria-hidden', 'false');
+      tabPanel.setAttribute('aria-labelledby', `${panel.id}--tab`);
+      tabPanel.setAttribute('role', 'tabpanel');
+      tabPanels.appendChild(tabPanel);
+    } else {
+      innerPanelWrap.appendChild(panel);
+    }
   });
 
   block.innerHTML = '';

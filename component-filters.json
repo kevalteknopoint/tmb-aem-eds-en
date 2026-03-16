@@ -51,7 +51,8 @@
       "info-well",
       "evergreen-left-menu",
       "card-with-quote",
-      "tmb-calculator-accordion"
+      "tmb-calculator-accordion",
+      "tab-content"
     ]
   },
   {
@@ -144,6 +145,12 @@
     "id": "stepper",
     "components": [
       "stepper-item"
+    ]
+  },
+  {
+    "id": "tab-content",
+    "components": [
+      "tab-content-item"
     ]
   },
   {
