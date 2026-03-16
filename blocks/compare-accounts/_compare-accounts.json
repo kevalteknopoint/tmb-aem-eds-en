@@ -49,7 +49,7 @@
           "valueType": "string"
         },
         {
-          "component": "richtext",
+          "component": "text",
           "name": "product-description",
           "label": "Product Description",
           "valueType": "string"
@@ -67,7 +67,7 @@
           "valueType": "string"
         },
         {
-          "component": "text",
+          "component": "richtext",
           "name": "product-disclaimer",
           "label": "Product Disclaimer",
           "valueType": "string"
