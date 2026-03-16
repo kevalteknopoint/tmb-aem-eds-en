@@ -6,7 +6,7 @@ import './faq-category-analytics.js';
 // Fetch Paginated FAQs from GraphQL
 async function fetchFaqs(tagValue, limit = 10, offset = 0) {
   try {
-    const placeholders = await fetchPlaceholders();
+    const placeholders = await fetchPlaceholders('dev', 'dev-placeholders.json');
     const res = await fetch(
       `${placeholders.graphqlUrl}faqListByTags;tagValue=${tagValue};limit=${limit};offset=${offset}`
     );
@@ -21,7 +21,7 @@ async function fetchFaqs(tagValue, limit = 10, offset = 0) {
 // Fetch ALL FAQs from GraphQL
 async function fetchAllFaqsByTag(tagValue) {
   try {
-    const placeholders = await fetchPlaceholders();
+    const placeholders = await fetchPlaceholders('dev', 'dev-placeholders.json');
     const res = await fetch(
       `${placeholders.graphqlUrl}allFaqsByTag;tagValue=${tagValue}`
     );
