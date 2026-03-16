@@ -1291,7 +1291,7 @@
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "product-description",
         "label": "Product Description",
         "valueType": "string"
