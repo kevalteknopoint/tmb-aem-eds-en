@@ -22,7 +22,7 @@ export default async function decorate(block) {
   const secwrapper = document?.querySelector(".section-wrapper");
   if (!secwrapper) return;
 
-  const placeholders = await fetchPlaceholders();
+  const placeholders = await fetchPlaceholders('dev', 'dev-placeholders.json');
 
   const graphqlUrl = `${placeholders.graphqlUrl}faqDetailByPath;path=`;
 

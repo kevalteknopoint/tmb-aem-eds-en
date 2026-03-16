@@ -758,7 +758,7 @@ function loadPlaceholders(block) {
 function loadDmImages(block) {
   const allAnchorTags = (block || document).querySelectorAll('a');
   allAnchorTags.forEach((anchor) => {
-    if (anchor.href.includes(window.placeholders.default.dmDomain)) {
+    if (anchor.href.includes(window.placeholders.dev.dmDomain)) {
       const imgEle = domPicture(domImg({ class: 'dm-img', src: anchor.href, alt: 'DM Image' }));
       anchor.replaceWith(imgEle);
     }

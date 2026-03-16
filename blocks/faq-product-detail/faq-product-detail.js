@@ -49,7 +49,7 @@ export default async function decorate(block) {
   if (!secwrapper) return;
 
   try {
-    const placeholders = await fetchPlaceholders();
+    const placeholders = await fetchPlaceholders('dev', 'dev-placeholders.json');
     const graphqlUrl = `${placeholders.graphqlUrl}faqShortContent;path=`;
 
     const newBlock = div({ class: "accordion-wrapper" });
