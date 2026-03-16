@@ -206,6 +206,10 @@
               "value": "faq-cant-find-looking-for-variant"
             },
             {
+              "name": "navigation-cards-container",
+              "value": "navigation-cards-container"
+            },
+            {
               "name": "Section Wrapper",
               "value": "section-wrapper"
             },
@@ -292,6 +296,10 @@
             {
               "name": "Variation Non Border",
               "value": "variation-non-border"
+            },
+            {
+              "name": "White Non Border",
+              "value": ".white-non-border"
             },
             {
               "name": "Milestones",
@@ -428,6 +436,7 @@
         "title",
         "hero",
         "cards",
+        "navigation-cards",
         "columns",
         "fragment",
         "quick-links",

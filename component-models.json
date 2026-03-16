@@ -309,6 +309,10 @@
             "value": "faq-cant-find-looking-for-variant"
           },
           {
+            "name": "navigation-cards-container",
+            "value": "navigation-cards-container"
+          },
+          {
             "name": "Section Wrapper",
             "value": "section-wrapper"
           },
@@ -395,6 +399,10 @@
           {
             "name": "Variation Non Border",
             "value": "variation-non-border"
+          },
+          {
+            "name": "White Non Border",
+            "value": ".white-non-border"
           },
           {
             "name": "Milestones",
@@ -1734,6 +1742,40 @@
         "component": "richtext",
         "name": "mortage-insurance-description",
         "label": "Mortage Insurance Description",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "navigation-card",
+    "fields": [
+      {
+        "component": "text",
+        "name": "icon-text",
+        "label": "Icon Text"
+      },
+      {
+        "component": "richtext",
+        "name": "navigation-main-content",
+        "label": "Navigation main content",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "image-text",
+        "label": "Image Text"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "navigation-below-content",
+        "label": "navigation below content",
         "valueType": "string"
       }
     ]
