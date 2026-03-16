@@ -20,7 +20,7 @@ export async function fetchPlaceholders(prefix = 'default', urlKey = 'placeholde
   window.placeholders = window.placeholders || {};
   if (!window.placeholders[prefix]) {
     window.placeholders[prefix] = new Promise((resolve) => {
-      fetch(`${prefix === 'default' ? '' : prefix}/${urlKey}`)
+      fetch(`${prefix === 'default' || prefix === 'dev' ? '' : prefix}/${urlKey}`)
         .then((resp) => {
           if (resp.ok) {
             return resp.json();
