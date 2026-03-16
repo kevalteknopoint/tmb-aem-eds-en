@@ -150,11 +150,15 @@
               "value": "banking-container"
             },
             {
-              "name": "tmb-footer",
+              "name": "TMB Footer Logo",
               "value": "tmb-footer"
             },
             {
-              "name": "tmb-sub-footer",
+              "name": "TMB Footer Links",
+              "value": "tmb-mid-footer"
+            },
+            {
+              "name": "TMB Footer Disclaimers",
               "value": "tmb-sub-footer"
             },
             {
