@@ -242,6 +242,7 @@ async function loadPage() {
   pageAnalytics();
 
   await fetchPlaceholders();
+  await fetchPlaceholders('default', 'dev-placeholders.json');
   loadPlaceholders();
   loadDmImages();
 
