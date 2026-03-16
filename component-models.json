@@ -873,7 +873,17 @@
         "name": "text",
         "value": "",
         "label": "Breadcrumb Text",
-        "valueType": "string"
+        "valueType": "string",
+        "rte": {
+          "toolbar": {
+            "alignment": [
+              "left",
+              "center",
+              "right",
+              "justify"
+            ]
+          }
+        }
       },
       {
         "component": "multiselect",

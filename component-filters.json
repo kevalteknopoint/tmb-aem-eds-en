@@ -6,17 +6,6 @@
     ]
   },
   {
-    "id": "richtext",
-    "rte": {
-      "toolbar": {
-        "alignment": ["left", "center", "right", "justify"]
-      }
-    },
-    "components": [
-      "richtext"
-    ]
-  },
-  {
     "id": "section",
     "components": [
       "text",
@@ -83,7 +72,17 @@
     ]
   },
   {
-    "id": "breadcrumb"
+    "id": "breadcrumb",
+    "rte": {
+      "toolbar": {
+        "alignment": [
+          "left",
+          "center",
+          "right",
+          "justify"
+        ]
+      }
+    }
   },
   {
     "id": "card-fragments",
