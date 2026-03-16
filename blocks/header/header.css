@@ -342,10 +342,10 @@ html:has(.primary-header.search-active) .search-results-section{
   align-items:center;
   display:flex;
   justify-content:center;
+  min-width:-moz-max-content;
+  min-width:max-content;
   opacity:1;
   transition:all 0.3s ease-in-out;
-  width:-moz-fit-content;
-  width:fit-content;
 }
 
 .header-actions-wrap .login-btn-wrap:has(.disabled){
