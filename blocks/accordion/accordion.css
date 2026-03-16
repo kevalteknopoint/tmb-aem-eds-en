@@ -65,7 +65,7 @@
   font-weight:var(--font-weight-h1);
   letter-spacing:var(--font-letter-spacing-h1);
   line-height:var(--font-height-h1);
-  text-transform:initial;
+  text-transform:--heading1-case;
 }
 
 .faq-accordion .default-content-wrapper p{
@@ -76,7 +76,7 @@
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   margin-top:16px;
-  text-transform:initial;
+  text-transform:--body-case;
 }
 
 .faq-accordion .default-content-wrapper a{
@@ -192,7 +192,7 @@
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
   margin-top:4px;
-  text-transform:initial;
+  text-transform:--heading3-case;
 }
 
 .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label svg{
@@ -219,7 +219,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:initial;
+  text-transform:--body-case;
 }
 
 .faq-accordion .accordion-wrapper .block .accordion-item[open] summary svg{
@@ -263,7 +263,7 @@
   letter-spacing:var(--font-letter-spacing-h5);
   line-height:var(--font-height-h5);
   margin:0;
-  text-transform:initial;
+  text-transform:--heading5-case;
 }
 
 .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-label{
@@ -286,7 +286,7 @@
   font-weight:var(--font-weight-h5);
   letter-spacing:var(--font-letter-spacing-h5);
   line-height:var(--font-height-h5);
-  text-transform:initial;
+  text-transform:--heading5-case;
 }
 
 .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-label::-webkit-details-marker{
@@ -318,7 +318,7 @@
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
   margin-top:40px;
-  text-transform:initial;
+  text-transform:--heading3-case;
 }
 
 .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h1:first-child,
@@ -338,7 +338,7 @@
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   margin:0;
-  text-transform:initial;
+  text-transform:--body-case;
 }
 
 .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body p b{
@@ -347,7 +347,7 @@
   font-weight:var(--font-weight-body-bold);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:initial;
+  text-transform:--body-bold-case;
 }
 
 .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body a{

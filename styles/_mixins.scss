@@ -248,7 +248,7 @@ $text-styles: (
     'weight': $font-weight-lg,
     'height': $font-height-lg,
     'spacing': $font-letter-spacing-lg,
-    'case': initial
+    'case': $large-heading-case
   ),
   'heading1': (
     'family': $font-family-h1,
@@ -256,7 +256,7 @@ $text-styles: (
     'weight': $font-weight-h1,
     'height': $font-height-h1,
     'spacing': $font-letter-spacing-h1,
-    'case': initial
+    'case': $heading1-case
   ),
   'heading1-std': (
     'family': $font-family-h1-std,
@@ -264,7 +264,7 @@ $text-styles: (
     'weight': $font-weight-h1-std,
     'height': $font-height-h1-std,
     'spacing': $font-letter-spacing-h1-std,
-    'case': initial
+    'case': $heading1-std-case
   ),
   'heading2': (
     'family': $font-family-h2,
@@ -272,7 +272,7 @@ $text-styles: (
     'weight': $font-weight-h2,
     'height': $font-height-h2,
     'spacing': $font-letter-spacing-h2,
-    'case': initial
+    'case': $heading2-case
   ),
   'heading2-std': (
     'family': $font-family-h2-std,
@@ -280,7 +280,7 @@ $text-styles: (
     'weight': $font-weight-h2-std,
     'height': $font-height-h2-std,
     'spacing': $font-letter-spacing-h2-std,
-    'case': initial
+    'case': $heading2-std-case
   ),
   'heading3': (
     'family': $font-family-h3,
@@ -288,7 +288,7 @@ $text-styles: (
     'weight': $font-weight-h3,
     'height': $font-height-h3,
     'spacing': $font-letter-spacing-h3,
-    'case': initial
+    'case': $heading3-case
   ),
   'intro': (
     'family': $font-family-intro,
@@ -296,7 +296,7 @@ $text-styles: (
     'weight': $font-weight-intro,
     'height': $font-height-intro,
     'spacing': $font-letter-spacing-intro,
-    'case': initial
+    'case': $intro-case
   ),
   'heading4': (
     'family': $font-family-h4,
@@ -304,7 +304,7 @@ $text-styles: (
     'weight': $font-weight-h4,
     'height': $font-height-h4,
     'spacing': $font-letter-spacing-h4,
-    'case': initial
+    'case': $heading4-case
   ),
   'heading5': (
     'family': $font-family-h5,
@@ -312,7 +312,7 @@ $text-styles: (
     'weight': $font-weight-h5,
     'height': $font-height-h5,
     'spacing': $font-letter-spacing-h5,
-    'case': initial
+    'case': $heading5-case
   ),
   'body': (
     'family': $font-family-body,
@@ -320,7 +320,7 @@ $text-styles: (
     'weight': $font-weight-body,
     'height': $font-height-body,
     'spacing': $font-letter-spacing-body,
-    'case': initial
+    'case': $body-case
   ),
   'body-bold': (
     'family': $font-family-body,
@@ -328,7 +328,7 @@ $text-styles: (
     'weight': $font-weight-body-bold,
     'height': $font-height-body,
     'spacing': $font-letter-spacing-body,
-    'case': initial
+    'case': $body-bold-case
   ),
   'sm-body': (
     'family': $font-family-sm-body,
@@ -336,7 +336,7 @@ $text-styles: (
     'weight': $font-weight-sm-body,
     'height': $font-height-sm-body,
     'spacing': $font-letter-spacing-sm-body,
-    'case': initial
+    'case': $sm-body-case
   ),
   'sm-body-bold': (
     'family': $font-family-sm-body,
@@ -344,7 +344,7 @@ $text-styles: (
     'weight': $font-weight-body-bold,
     'height': $font-height-sm-body,
     'spacing': $font-letter-spacing-sm-body,
-    'case': initial
+    'case': $sm-body-bold-case
   ),
   'disclaimer': (
     'family': $font-family-disc,
@@ -352,7 +352,7 @@ $text-styles: (
     'weight': $font-weight-disc,
     'height': $font-height-disclaimer,
     'spacing': $font-letter-spacing-disc,
-    'case': initial
+    'case': $disclaimer-case
   ),
 );
 

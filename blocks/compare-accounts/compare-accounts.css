@@ -58,7 +58,7 @@
   letter-spacing:var(--font-letter-spacing-h1);
   line-height:var(--font-height-h1);
   margin-bottom:16px;
-  text-transform:initial;
+  text-transform:--heading1-case;
 }
 
 .section.compare-accounts .default-content-wrapper p{
@@ -68,7 +68,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:initial;
+  text-transform:--body-case;
 }
 
 .section.compare-accounts .default-content-wrapper p a{
@@ -142,7 +142,7 @@
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
   padding:32px 24px 8px;
-  text-transform:initial;
+  text-transform:--heading3-case;
 }
 
 .section.compare-accounts .compare-accounts.block .product-description{
@@ -153,7 +153,7 @@
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   padding:16px 24px 0;
-  text-transform:initial;
+  text-transform:--body-case;
 }
 
 .section.compare-accounts .compare-accounts.block .product-interest-pretitle{
@@ -164,7 +164,7 @@
   letter-spacing:var(--font-letter-spacing-disc);
   line-height:var(--font-height-disclaimer);
   padding:16px 24px 0;
-  text-transform:initial;
+  text-transform:--disclaimer-case;
 }
 
 .section.compare-accounts .compare-accounts.block .interest-rate{
@@ -175,7 +175,7 @@
   font-weight:var(--font-weight-h1-std);
   letter-spacing:var(--font-letter-spacing-h1-std);
   line-height:var(--font-height-h1-std);
-  text-transform:initial;
+  text-transform:--heading1-std-case;
 }
 
 .section.compare-accounts .compare-accounts.block .interest-rate .rate-pa{
@@ -184,7 +184,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:initial;
+  text-transform:--body-case;
 }
 
 .section.compare-accounts .compare-accounts.block .product-interest-rate{
@@ -199,7 +199,7 @@
   letter-spacing:var(--font-letter-spacing-disc);
   line-height:var(--font-height-disclaimer);
   padding:16px 24px 0;
-  text-transform:initial;
+  text-transform:--disclaimer-case;
 }
 
 .section.compare-accounts .compare-accounts.block p:has(.interest-rate){
@@ -221,7 +221,7 @@
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
   padding-bottom:2px;
-  text-transform:initial;
+  text-transform:--sm-body-case;
   width:-moz-fit-content;
   width:fit-content;
 }

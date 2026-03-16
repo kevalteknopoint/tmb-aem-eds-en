@@ -198,7 +198,7 @@
   font-weight:var(--font-weight-h1);
   letter-spacing:var(--font-letter-spacing-h1);
   line-height:var(--font-height-h1);
-  text-transform:initial;
+  text-transform:--heading1-case;
 }
 
 .inner-section1 > p{
@@ -216,7 +216,7 @@
   text-decoration:underline;
   text-decoration-color:var(--link-accent);
   text-decoration-thickness:2px;
-  text-transform:initial;
+  text-transform:--sm-body-case;
   text-underline-offset:4px;
 }
 
@@ -342,7 +342,7 @@
   letter-spacing:var(--font-letter-spacing-lg);
   line-height:var(--font-height-lg);
   max-width:560px;
-  text-transform:initial;
+  text-transform:--large-heading-case;
 }
 
 .swiperinnerdiv > div:nth-child(1) > p{
@@ -353,7 +353,7 @@
   letter-spacing:var(--font-letter-spacing-h4);
   line-height:var(--font-height-h4);
   max-width:560px;
-  text-transform:initial;
+  text-transform:--heading4-case;
 }
 
 .swiperinnerdiv > div:nth-child(1):nth-child(1) > p.button-container{
@@ -633,7 +633,7 @@
     line-height:var(--font-height-h4);
     margin:0 0 20px;
     padding:0;
-    text-transform:initial;
+    text-transform:--heading4-case;
   }
 
   .bannervideo-container .bannervideo-wrapper .mob-swiper p > a{
@@ -649,7 +649,7 @@
     text-decoration:underline;
     text-decoration-color:var(--link-accent);
     text-decoration-thickness:2px;
-    text-transform:initial;
+    text-transform:--sm-body-case;
     text-underline-offset:4px;
   }
 

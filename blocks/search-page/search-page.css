@@ -38,7 +38,7 @@
   line-height:var(--font-height-lg);
   min-width:256px;
   text-align:left;
-  text-transform:initial;
+  text-transform:--large-heading-case;
 }
 
 .search-results-page .default-content-wrapper .results-search-form{
@@ -59,7 +59,7 @@
   line-height:var(--font-height-body);
   outline:none;
   padding:8px 0 8px 16px;
-  text-transform:initial;
+  text-transform:--body-case;
   width:100%;
 }
 
@@ -110,7 +110,7 @@
   line-height:var(--font-height-h2-std);
   margin:0 0 40px;
   text-align:center;
-  text-transform:initial;
+  text-transform:--heading2-std-case;
 }
 
 .search-results-page .search-page-results-container .search-result-details{
@@ -128,7 +128,7 @@
   font-weight:var(--font-weight-sm-body);
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
-  text-transform:initial;
+  text-transform:--sm-body-case;
 }
 
 .search-results-page .search-page-results-container .search-result-details .search-results-num b, .search-results-page .search-page-results-container .search-result-details .search-page-details b{
@@ -137,7 +137,7 @@
   font-weight:var(--font-weight-body-bold);
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
-  text-transform:initial;
+  text-transform:--sm-body-bold-case;
 }
 
 .search-results-page .search-page-results-container .search-results-list{
@@ -168,7 +168,7 @@
   font-weight:var(--font-weight-h4);
   letter-spacing:var(--font-letter-spacing-h4);
   line-height:var(--font-height-h4);
-  text-transform:initial;
+  text-transform:--heading4-case;
 }
 
 .search-results-page .search-page-results-container .search-results-list .search-result-item .item-detail-section .item-title .highlight{
@@ -186,7 +186,7 @@
   margin-top:4px;
   overflow:hidden;
   text-overflow:ellipsis;
-  text-transform:initial;
+  text-transform:--body-case;
   white-space:nowrap;
 }
 
@@ -204,7 +204,7 @@
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   text-decoration:underline;
-  text-transform:initial;
+  text-transform:--body-case;
 }
 
 .search-results-page .search-pagination-wrapper{
@@ -259,7 +259,7 @@
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   min-width:40px;
-  text-transform:initial;
+  text-transform:--body-case;
   width:40px;
 }
 

@@ -50,7 +50,7 @@
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
   margin-top:4px;
-  text-transform:initial;
+  text-transform:--heading3-case;
 }
 
 .tmb-calculator-accordion .accordion-item .accordion-item-label svg{

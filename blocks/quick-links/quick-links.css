@@ -36,7 +36,7 @@
   justify-content:flex-start;
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
-  text-transform:initial;
+  text-transform:--heading3-case;
 }
 
 .quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)):hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a:hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1:not(:has(a)):hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1 > a:hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2:not(:has(a)):hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2 > a:hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3:not(:has(a)):hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3 > a:hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4:not(:has(a)):hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4 > a:hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5:not(:has(a)):hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5 > a:hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6:not(:has(a)):hover .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6 > a:hover .quick-link-text::after{
@@ -118,7 +118,7 @@
   padding-bottom:2px;
   position:relative;
   text-decoration:none;
-  text-transform:initial;
+  text-transform:--sm-body-case;
   width:-moz-fit-content;
   width:fit-content;
 }

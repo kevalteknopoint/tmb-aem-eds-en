@@ -59,7 +59,7 @@
   letter-spacing:var(--font-letter-spacing-h1);
   line-height:var(--font-height-h1);
   margin-bottom:16px;
-  text-transform:initial;
+  text-transform:--heading1-case;
 }
 
 .stepper-container .default-content-wrapper p{
@@ -70,7 +70,7 @@
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   margin-bottom:32px;
-  text-transform:initial;
+  text-transform:--body-case;
 }
 
 .stepper-container .default-content-wrapper p a{
@@ -215,7 +215,7 @@
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   min-width:64px;
-  text-transform:initial;
+  text-transform:--body-case;
   width:64px;
 }
 
@@ -239,7 +239,7 @@
   line-height:var(--font-height-h3);
   padding:17.5px 0;
   text-decoration:underline;
-  text-transform:initial;
+  text-transform:--heading3-case;
   text-underline-offset:4px;
 }
 
@@ -250,7 +250,7 @@
   font-weight:var(--font-weight-h3);
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
-  text-transform:initial;
+  text-transform:--heading3-case;
 }
 
 .stepper-container .stepper-item .step-collapse{
@@ -266,7 +266,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:initial;
+  text-transform:--body-case;
 }
 
 .stepper-container .stepper-item .stepper-content a{
@@ -295,7 +295,7 @@
   line-height:var(--font-height-body);
   margin-top:16px;
   padding:16px;
-  text-transform:initial;
+  text-transform:--body-case;
 }
 
 .stepper-container .stepper-item .stepper-tip:has(.icon){
@@ -336,7 +336,7 @@
   line-height:var(--font-height-h4);
   margin-bottom:4px;
   padding:8px 0;
-  text-transform:initial;
+  text-transform:--heading4-case;
 }
 
 .stepper-container .stepper-item .stepper-tip a{

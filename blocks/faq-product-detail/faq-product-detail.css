@@ -65,7 +65,7 @@
   font-weight:var(--font-weight-h1);
   letter-spacing:var(--font-letter-spacing-h1);
   line-height:var(--font-height-h1);
-  text-transform:initial;
+  text-transform:--heading1-case;
 }
 
 .faq-accordion .default-content-wrapper p{
@@ -76,7 +76,7 @@
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   margin-top:16px;
-  text-transform:initial;
+  text-transform:--body-case;
 }
 
 .faq-accordion .default-content-wrapper a{
@@ -192,7 +192,7 @@
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
   margin-top:4px;
-  text-transform:initial;
+  text-transform:--heading3-case;
 }
 
 .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-label svg{
@@ -219,7 +219,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:initial;
+  text-transform:--body-case;
 }
 
 .faq-accordion .accordion-wrapper .block .accordion-item[open] summary svg{
