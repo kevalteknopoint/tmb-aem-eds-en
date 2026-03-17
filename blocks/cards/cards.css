@@ -1643,6 +1643,7 @@ html{
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
+  max-width:800px;
   text-transform:var(--body-case);
 }
 

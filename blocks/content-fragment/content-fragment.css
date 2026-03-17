@@ -347,6 +347,7 @@
   letter-spacing:var(--font-letter-spacing-h1);
   letter-spacing:2px;
   line-height:var(--font-height-h1);
+  margin-bottom:16px;
   text-align:center;
   text-transform:var(--heading1-case);
 }
@@ -358,7 +359,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  margin:16px 0 32px;
+  margin:0 0 32px;
   text-align:center;
   text-transform:var(--body-case);
 }

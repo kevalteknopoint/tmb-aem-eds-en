@@ -33,7 +33,6 @@
   font-weight:900;
   letter-spacing:var(--font-letter-spacing-h1);
   line-height:var(--font-height-h1);
-  text-transform:uppercase;
 }
 
 .legal-tc-guide .columns-wrapper .block div div p{

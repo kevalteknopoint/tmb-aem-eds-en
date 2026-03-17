@@ -32,9 +32,9 @@
   --space-xs:16px;
   --primary-font:"Benton Sans", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
   --secondary-font:"Benton Modern Display", system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
-  --gradient-1:var(--bg-light-2);
-  --gradient-2:var(--bg-light-2);
-  --gradient-after:linear-gradient(var(--bg-light-2), var(--bg-light-2));
+  --gradient-1:var(--bg-light);
+  --gradient-2:var(--bg-light);
+  --gradient-after:linear-gradient(var(--bg-light), var(--bg-light));
   --body-default-alt:var(--body-default);
   --link-default-alt:var(--link-default);
   --large-heading-case:initial;
@@ -477,6 +477,7 @@ table{
 h1, h2, h3, h4, h5, h6{
   font-size:inherit;
   font-weight:inherit;
+  text-wrap:balance;
 }
 
 b{
@@ -519,6 +520,7 @@ p{
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   text-transform:var(--body-case);
+  text-wrap:pretty;
 }
 
 header:has(.secondary-header){
@@ -755,25 +757,25 @@ header:has(.secondary-header){
   width:12px;
 }
 .generic-body-copy .button-container a.secondary{
-  background-color:var(--color-button-primary-default);
-  border:none;
-  color:var(--color-button-text-stroke-reverse);
+  background-color:var(--color-button-outlined-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-default);
+  color:var(--color-button-text-stroke-default);
   font-size:var(--font-size-h5);
   font-style:normal;
   line-height:var(--font-height-h5);
   min-width:150px;
-  padding-block:8px;
+  padding-block:6px;
   text-decoration:unset;
 }
 .generic-body-copy .button-container a.secondary:hover{
-  background-color:var(--color-button-primary-hover);
-  border:none;
-  color:var(--color-button-text-stroke-reverse);
+  background-color:var(--color-button-outlined-hover);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-hover);
+  color:var(--color-button-text-stroke-hover);
 }
 .generic-body-copy .button-container a.secondary:active{
-  background-color:var(--color-button-primary-press);
-  border:none;
-  color:var(--color-button-text-stroke-reverse);
+  background-color:var(--color-button-outlined-press);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-press);
+  color:var(--color-button-text-stroke-press);
 }
 .generic-body-copy .button-container a.secondary:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);

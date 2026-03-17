@@ -17,9 +17,10 @@
     }
 
     p {
-      color: $color-variants-heading-reverse;
-
       @include typo-body;
+
+      color: $color-variants-heading-reverse;
+      max-width: 800px;
 
       &:last-child {
         display: block;
