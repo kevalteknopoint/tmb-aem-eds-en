@@ -19,7 +19,14 @@ if (modifledPartials.length > 0) {
   await run('git add component-models.json component-definition.json component-filters.json');
 }
 
-console.log('Building CSS...');
-const cssOutput = await run('npm run build:css --silent');
-console.log(cssOutput);
-await run('git add *.css **/*.css');
+// check if css/scss files changed
+const modifiedStyles = modifiedFiles.filter((file) =>
+  file.match(/\.(css|scss)$/)
+);
+
+if (modifiedStyles.length > 0) {
+  console.log("Building CSS...");
+  const cssOutput = await run("npm run build:css --silent");
+  console.log(cssOutput);
+  await run("git add *.css **/*.css");
+}

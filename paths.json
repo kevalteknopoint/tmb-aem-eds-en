@@ -3,7 +3,8 @@
     "/content/tmb/:/",
     "/content/tmb/configuration:/.helix/config.json",
     "/content/tmb/metadata:/metadata.json",
-    "/content/tmb/placeholders:/placeholders.json"
+    "/content/tmb/placeholders:/placeholders.json",
+    "/content/tmb/headers:/headers.json"
   ],
   "includes": [
     "/content/tmb/",    
