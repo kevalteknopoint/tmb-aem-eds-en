@@ -35,6 +35,11 @@
             justify-content: flex-start;
             flex-direction: column;
 
+            a {
+              text-decoration: underline;
+              color: $link-default;
+            }
+
             li{
                 ul{
                     display: flex;

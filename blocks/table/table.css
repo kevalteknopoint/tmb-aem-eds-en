@@ -57,6 +57,11 @@
   justify-content:flex-start;
 }
 
+.interest-table-section .default-content-wrapper .ul-1 a{
+  color:var(--link-default);
+  text-decoration:underline;
+}
+
 .interest-table-section .default-content-wrapper .ul-1 li ul{
   display:flex;
   justify-content:flex-start;
