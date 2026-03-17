@@ -1,4 +1,8 @@
 <svg id="icon-sprite" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="chevron-up-square" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 7" fill="none">
+    <path d="M6 0L12 5.95745L10.95 7L6 2.08511L1.05 7L0 5.95745L6 0Z" fill="currentColor"/>
+  </symbol>
+
   <symbol id="quick-link-border-tmbl" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
     <mask id="path-1-inside-1_2001_12510" fill="white"><path d="M0 0H48V48H0V0Z"/></mask>
     <path d="M0 48H4V0H0H-4V48H0Z" fill="#B91A4D" mask="url(#path-1-inside-1_2001_12510)"/>
