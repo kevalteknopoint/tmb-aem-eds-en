@@ -394,6 +394,10 @@ header:has(.secondary-header) .search-results-section{
   top:141px;
 }
 
+header:has(.secondary-header) .mobile-menu-wrapper{
+  top:61px;
+}
+
 .search-results-section{
   background:#fff;
   display:none;
@@ -505,7 +509,7 @@ header:has(.secondary-header) .search-results-section{
   padding:20px 24px 64px;
   pointer-events:none;
   position:fixed;
-  top:61px;
+  top:0;
   transform:translateX(100%);
   transition:all 0.3s ease-in-out;
   width:100%;

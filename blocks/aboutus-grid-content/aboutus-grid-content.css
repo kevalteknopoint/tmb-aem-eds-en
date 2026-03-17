@@ -57,6 +57,15 @@
   text-transform:var(--heading1-case);
 }
 
+.aboutus-grid-content .columns.block > div > div h4, .aboutus-grid-content .columns.block > div > div h5, .aboutus-grid-content .columns.block > div > div h6{
+  font-family:var(--font-family-intro);
+  font-size:var(--font-size-intro);
+  font-weight:var(--font-weight-intro);
+  letter-spacing:var(--font-letter-spacing-intro);
+  line-height:var(--font-height-intro);
+  text-transform:var(--intro-case);
+}
+
 .aboutus-grid-content .columns.block > div > div p{
   color:var(--body-default);
   font-family:var(--font-family-body);
