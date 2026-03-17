@@ -189,6 +189,7 @@
   .product-navigation{
     margin-top:unset;
     padding-inline:16px;
+    padding-inline:0;
   }
 
   .product-navigation .default-content-wrapper{
