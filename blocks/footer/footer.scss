@@ -6,6 +6,11 @@
   &.tmbl {
     .footer-panel {
       background-color: transparent;
+      padding-top: 16px;
+
+      @include mobile {
+        padding-top: 0;
+      }
 
       .footer-links {
         padding: 0;

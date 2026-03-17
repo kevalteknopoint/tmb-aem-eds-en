@@ -37,6 +37,7 @@
 
 .footer.block.tmbl .footer-panel{
   background-color:transparent;
+  padding-top:16px;
 }
 
 .footer.block.tmbl .footer-panel .footer-links{
@@ -474,6 +475,10 @@
 }
 
 @media screen and (max-width: 767px){
+  .footer.block.tmbl .footer-panel{
+    padding-top:0;
+  }
+
   .footer.block.tmbl .footer-bottom .footer-bottom-cols .footer-acknowledgement{
     flex-direction:column;
   }
