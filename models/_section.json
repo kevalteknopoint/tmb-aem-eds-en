@@ -155,7 +155,15 @@
             },
             {
               "name": "TMB Footer Links",
-              "value": "tmb-mid-footer"
+              "value": "tmb-footer-links"
+            },
+            {
+              "name": "TMB Footer Icon Links",
+              "value": "tmb-footer-icon-links"
+            },
+            {
+              "name": "TMB Footer Contact",
+              "value": "tmb-footer-contact"
             },
             {
               "name": "TMB Footer Disclaimers",
