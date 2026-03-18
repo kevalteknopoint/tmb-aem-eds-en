@@ -320,11 +320,6 @@ html:has(.primary-header.search-active) {
     min-width: 40px;
     width: 40px;
     transition: all 0.3s ease-in-out;
-
-    @include mobile {
-      min-width: 24px;
-      width: 24px;
-    }
   }
 
   .header-search-form{

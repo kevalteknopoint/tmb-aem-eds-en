@@ -682,11 +682,6 @@ header:has(.secondary-header) .search-results-section{
     padding:12.5px 0;
   }
 
-  .header-actions-wrap .search-btn-wrap{
-    min-width:24px;
-    width:24px;
-  }
-
   header:has(.secondary-header) .search-results-section{
     padding-bottom:80px;
     top:80px;
