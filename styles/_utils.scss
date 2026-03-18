@@ -274,7 +274,7 @@ header {
     }
     
     a.secondary {
-      @include button('outline');
+      @include button('outlined');
 
       font-style: normal;
       text-decoration: unset;

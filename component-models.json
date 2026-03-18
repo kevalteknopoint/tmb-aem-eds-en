@@ -253,11 +253,23 @@
             "value": "banking-container"
           },
           {
-            "name": "tmb-footer",
+            "name": "TMB Footer Logo",
             "value": "tmb-footer"
           },
           {
-            "name": "tmb-sub-footer",
+            "name": "TMB Footer Links",
+            "value": "tmb-footer-links"
+          },
+          {
+            "name": "TMB Footer Icon Links",
+            "value": "tmb-footer-icon-links"
+          },
+          {
+            "name": "TMB Footer Contact",
+            "value": "tmb-footer-contact"
+          },
+          {
+            "name": "TMB Footer Disclaimers",
             "value": "tmb-sub-footer"
           },
           {
@@ -1309,7 +1321,7 @@
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "product-disclaimer",
         "label": "Product Disclaimer",
         "valueType": "string"

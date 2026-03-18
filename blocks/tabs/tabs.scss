@@ -123,10 +123,10 @@
     .tab-list-wrapper {      
       overflow-x: auto;
       width: 100%;
-      max-width: 449px;
+      min-width: 449px;
 
       @include tablet {
-        max-width: unset;
+        min-width: unset;
         width: unset;
       }
     }

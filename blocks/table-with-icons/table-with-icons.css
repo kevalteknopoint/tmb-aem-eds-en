@@ -30,7 +30,7 @@
   letter-spacing:var(--font-letter-spacing-h1);
   line-height:var(--font-height-h1);
   margin-bottom:40px;
-  text-transform:initial;
+  text-transform:var(--heading1-case);
 }
 
 .table-with-icons:has(h1 + p, h2 + p) h1, .table-with-icons:has(h1 + p, h2 + p) h2{
@@ -51,7 +51,7 @@
   line-height:var(--font-height-h3);
   margin-bottom:16px;
   padding:24px 0 16px;
-  text-transform:initial;
+  text-transform:var(--heading3-case);
 }
 
 .table-with-icons h5{
@@ -63,7 +63,7 @@
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
   padding-top:16px;
-  text-transform:initial;
+  text-transform:var(--sm-body-case);
 }
 
 .table-with-icons h5 a{
@@ -81,7 +81,7 @@
   letter-spacing:var(--font-letter-spacing-disc);
   line-height:var(--font-height-disclaimer);
   padding-top:16px;
-  text-transform:initial;
+  text-transform:var(--disclaimer-case);
 }
 
 .table-with-icons h6 a{
@@ -97,7 +97,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:initial;
+  text-transform:var(--body-case);
 }
 
 .table-with-icons p a{
@@ -147,7 +147,7 @@
   line-height:var(--font-height-h3);
   margin-bottom:0;
   padding:0;
-  text-transform:initial;
+  text-transform:var(--heading3-case);
 }
 
 .table-with-icons .pipe-grid-cell{
@@ -160,7 +160,7 @@
   justify-content:center;
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:initial;
+  text-transform:var(--body-case);
 }
 
 .table-with-icons .pipe-grid-cell:first-child{

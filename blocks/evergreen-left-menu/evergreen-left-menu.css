@@ -44,7 +44,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:initial;
+  text-transform:var(--body-case);
 }
 
 .evergreen-left-menu .default-content-wrapper ul li{
@@ -55,7 +55,7 @@
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
   padding:8px 12px 8px 24px;
-  text-transform:initial;
+  text-transform:var(--sm-body-case);
 }
 
 .evergreen-left-menu .default-content-wrapper ul li a{
