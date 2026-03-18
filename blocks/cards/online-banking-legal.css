@@ -71,7 +71,7 @@
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
   padding:0;
-  text-transform:initial;
+  text-transform:var(--sm-body-case);
 }
 
 .section.online-banking-legal .cards-wrapper .cards .banking-cards-ul .banking-li-3 .cards-card-body{

@@ -18,6 +18,7 @@
 
   @include mobile {
     margin-top: unset;
+    padding-inline: 0;
   }
 
   .default-content-wrapper {

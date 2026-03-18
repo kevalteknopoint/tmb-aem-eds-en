@@ -435,6 +435,10 @@ header:has(.secondary-header) {
       padding-bottom: 80px;
     }
   }
+
+  .mobile-menu-wrapper {
+    top: 61px;
+  }
 }
 
 .search-results-section {
@@ -570,7 +574,7 @@ header:has(.secondary-header) {
   position: fixed;
   width: 100%;
   height: 100%;
-  top: 61px;
+  top: 0;
   left: 0;
   z-index: 2;
   padding: 20px 24px 64px;

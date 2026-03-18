@@ -67,6 +67,7 @@ table {
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit;
+  text-wrap: balance;
 }
 
 b {
@@ -106,4 +107,5 @@ p {
   @include typo-body;
 
   color: $body-default;
+  text-wrap: pretty;
 }

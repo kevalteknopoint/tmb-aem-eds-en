@@ -56,7 +56,7 @@
   font-weight:var(--font-weight-h1);
   letter-spacing:var(--font-letter-spacing-h1);
   line-height:var(--font-height-h1);
-  text-transform:initial;
+  text-transform:var(--heading1-case);
 }
 
 .navigation-cards-container .default-content-wrapper p{
@@ -214,7 +214,7 @@
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   margin-bottom:4px;
-  text-transform:initial;
+  text-transform:var(--body-case);
 }
 
 .navigation-cards-container .card-header h3{
@@ -225,7 +225,7 @@
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
   margin-bottom:16px;
-  text-transform:initial;
+  text-transform:var(--heading3-case);
 }
 
 .navigation-cards-container .card-provider-wrapper{
@@ -243,7 +243,7 @@
   font-weight:var(--font-weight-sm-body);
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
-  text-transform:initial;
+  text-transform:var(--sm-body-case);
 }
 
 .navigation-cards-container .card-logo img{
@@ -260,7 +260,7 @@
   letter-spacing:var(--font-letter-spacing-disc);
   line-height:var(--font-height-disclaimer);
   margin-top:16px;
-  text-transform:initial;
+  text-transform:var(--disclaimer-case);
 }
 
 .navigation-cards-container .card-description a{
