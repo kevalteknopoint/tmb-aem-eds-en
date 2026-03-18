@@ -130,7 +130,7 @@
   letter-spacing:var(--font-letter-spacing-h5);
   line-height:var(--font-height-h5);
   margin-bottom:24px;
-  text-transform:initial;
+  text-transform:var(--heading5-case);
 }
 
 .footer-panel .footer-links ul li:has(h1, h2, h3, h4, h5, h6) h1, .footer-panel .footer-links ul li:has(h1, h2, h3, h4, h5, h6) h2, .footer-panel .footer-links ul li:has(h1, h2, h3, h4, h5, h6) h3, .footer-panel .footer-links ul li:has(h1, h2, h3, h4, h5, h6) h4, .footer-panel .footer-links ul li:has(h1, h2, h3, h4, h5, h6) h5, .footer-panel .footer-links ul li:has(h1, h2, h3, h4, h5, h6) h6{
@@ -140,7 +140,7 @@
   font-weight:var(--font-weight-h5);
   letter-spacing:var(--font-letter-spacing-h5);
   line-height:var(--font-height-h5);
-  text-transform:initial;
+  text-transform:var(--heading5-case);
 }
 
 .footer-panel .footer-links ul li{
@@ -151,7 +151,7 @@
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   margin-bottom:4px;
-  text-transform:initial;
+  text-transform:var(--body-case);
 }
 
 .footer-panel .footer-links ul li:last-child{
@@ -172,7 +172,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:initial;
+  text-transform:var(--body-case);
 }
 
 .footer-panel .footer-links ul li a:has(svg){
@@ -200,7 +200,7 @@
   letter-spacing:var(--font-letter-spacing-h5);
   line-height:var(--font-height-h5);
   margin-bottom:4px;
-  text-transform:initial;
+  text-transform:var(--heading5-case);
 }
 
 .footer-panel .footer-meta ul li:has(h1, h2, h3, h4, h5, h6) h1, .footer-panel .footer-meta ul li:has(h1, h2, h3, h4, h5, h6) h2, .footer-panel .footer-meta ul li:has(h1, h2, h3, h4, h5, h6) h3, .footer-panel .footer-meta ul li:has(h1, h2, h3, h4, h5, h6) h4, .footer-panel .footer-meta ul li:has(h1, h2, h3, h4, h5, h6) h5, .footer-panel .footer-meta ul li:has(h1, h2, h3, h4, h5, h6) h6{
@@ -210,7 +210,7 @@
   font-weight:var(--font-weight-h5);
   letter-spacing:var(--font-letter-spacing-h5);
   line-height:var(--font-height-h5);
-  text-transform:initial;
+  text-transform:var(--heading5-case);
 }
 
 .footer-panel .footer-meta ul li{
@@ -241,7 +241,7 @@
   letter-spacing:var(--font-letter-spacing-h5);
   line-height:var(--font-height-h5);
   padding:8px 0;
-  text-transform:initial;
+  text-transform:var(--heading5-case);
 }
 
 .footer-panel .footer-contact{
@@ -270,7 +270,7 @@
   gap:8px;
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:initial;
+  text-transform:var(--body-case);
 }
 
 .footer-panel .footer-contact .footer-contact-text svg{
@@ -350,7 +350,7 @@
   font-weight:var(--font-weight-sm-body);
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
-  text-transform:initial;
+  text-transform:var(--sm-body-case);
 }
 
 .footer-bottom .footer-legal ul{
@@ -366,7 +366,7 @@
   font-weight:var(--font-weight-sm-body);
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
-  text-transform:initial;
+  text-transform:var(--sm-body-case);
 }
 
 .footer-bottom .footer-legal ul li a{
@@ -376,7 +376,7 @@
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
   text-decoration:underline;
-  text-transform:initial;
+  text-transform:var(--sm-body-case);
 }
 
 .footer-bottom .footer-bottom-cols{
@@ -407,7 +407,7 @@
   font-weight:var(--font-weight-disc);
   letter-spacing:var(--font-letter-spacing-disc);
   line-height:var(--font-height-disclaimer);
-  text-transform:initial;
+  text-transform:var(--disclaimer-case);
 }
 
 .footer-bottom .footer-bottom-cols .footer-badges{
@@ -431,7 +431,7 @@
   letter-spacing:var(--font-letter-spacing-disc);
   line-height:var(--font-height-disclaimer);
   margin-bottom:8px;
-  text-transform:initial;
+  text-transform:var(--disclaimer-case);
 }
 
 .footer-bottom .footer-disclaimer p:last-child{
