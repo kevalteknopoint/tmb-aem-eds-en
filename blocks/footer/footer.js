@@ -2,82 +2,177 @@ import './footer-analytics.js';
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
-/**
- * loads and decorates the footer
- * @param {Element} block The footer block element
- */
 export default async function decorate(block) {
-  // load footer as fragment
+  const theme = getMetadata('theme');
   const footerMeta = getMetadata('footer');
-  const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
+  const footerPath = footerMeta
+    ? new URL(footerMeta, window.location).pathname
+    : '/footer';
+
   const fragment = await loadFragment(footerPath);
 
-  // decorate footer DOM
-  block.textContent = '';
+  block.classList.add(theme, 'top-padding', 'bottom-padding');
+
   const footer = document.createElement('div');
-  while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
+  footer.className = 'tmb-footer';
 
-  block.append(footer);
+  const getSection = (cls) =>
+    fragment.querySelector(`.section.${cls}`);
 
-  //
+  const unwrapColumns = (section) => {
+    if (!section) return null;
+    return section.querySelector('.columns > div');
+  };
 
-  const teaserContent = document.querySelector(".tmb-footer .default-content-wrapper");
-  teaserContent?.classList.add("tmb-footer-wrapper");
+  /* =========================
+     TOP BAR
+  ========================== */
+  const topSection = getSection('tmb-footer');
+  const topContent = unwrapColumns(topSection);
 
-  const subteaserContent = document.querySelector(".tmb-sub-footer .default-content-wrapper");
-  subteaserContent?.classList.add("tmb-sub-footer-wrapper");
+  if (topContent) {
+    const topBar = document.createElement('div');
+    topBar.className = 'footer-top';
 
-  const content = document.querySelectorAll('.tmb-footer .default-content-wrapper p');
-  content?.forEach((e, index) => {
-    e.classList.add(`para-${index + 2}`);
-  });
+    const [logoCol, actionCol] = [...topContent.children];
 
-  const subcontent = document.querySelectorAll('.tmb-footer .tmb-footer-wrapper.default-content-wrapper p');
-  subcontent?.forEach((e, index) => {
-    e.classList.add(`para-${index + 2}`);
-  });
+    if (logoCol) {
+      logoCol.classList.add('footer-logo');
+      topBar.append(logoCol);
+    }
 
-  const ul = document.querySelectorAll('.tmb-footer .tmb-footer-wrapper ul');
-  ul?.forEach((e, index) => {
-    e.classList.add(`ul-${index + 1}`);
-  });
+    if (actionCol) {
+      actionCol.classList.add('footer-top-actions');
+      topBar.append(actionCol);
+    }
 
-  const subul = document.querySelectorAll('.tmb-sub-footer .tmb-sub-footer-wrapper ul');
-  subul?.forEach((e, index) => {
-    e.classList.add(`ul-${index + 1}`);
-  });
+    footer.append(topBar);
+  }
 
-  const iconBtns = document.querySelectorAll(
-    '.section.tmb-footer .tmb-footer-wrapper .para-1 .icon.icon-tmb-btn:not(.a11y-processed), '
-    + '.section.tmb-footer .tmb-footer-wrapper .para-1 .icon.icon-jump-to-top:not(.a11y-processed)'
-  );
+  /* =========================
+     WHITE PANEL WRAPPER
+  ========================== */
+  const panel = document.createElement('div');
+  panel.className = 'footer-panel';
 
-  const endContent = document.querySelector(".tmb-sub-footer .default-content-wrapper:last-child");
-  endContent?.classList.add("tmb-sub-footer-wrapper");
-  endContent?.querySelector('ul')?.classList?.add('ul-5');
+  let hasPanelContent = false;
 
-  iconBtns?.forEach((iconBtn) => {
-    // ACCESSIBILITY
-    iconBtn.setAttribute('role', 'button');
-    iconBtn.setAttribute('tabindex', '0');
-    iconBtn.setAttribute('aria-label', 'Scroll to top of page');
+  /* ===== LINKS ===== */
+  const linksSection = getSection('tmb-footer-links');
+  const linksContent = unwrapColumns(linksSection);
 
-    // Add a flag class to mark this element as processed.
-    iconBtn.classList.add('a11y-processed');
-    iconBtn.addEventListener('keydown', function iconBtnClick(event) {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        this.click();
-      }
+  if (linksContent) {
+    const linksWrapper = document.createElement('div');
+    linksWrapper.className = 'footer-links';
+
+    [...linksContent.children].forEach((col) => {
+      if (!col.textContent.trim()) return;
+      col.classList.add('footer-col');
+      linksWrapper.append(col);
     });
 
-    iconBtn.addEventListener('click', () => {
-      // scroll-to-top action.
-      window.scroll({
-        top: 0,
-        left: 0,
-        behavior: "smooth"
+    if (linksWrapper.children.length) {
+      panel.append(linksWrapper);
+      hasPanelContent = true;
+    }
+  }
+
+  /* ===== META (BSB / HELP / etc) ===== */
+  const iconSection = getSection('tmb-footer-icon-links');
+  const iconContent = unwrapColumns(iconSection);
+
+  if (iconContent) {
+    const metaRow = document.createElement('div');
+    metaRow.className = 'footer-meta';
+
+    [...iconContent.children].forEach((col) => {
+      if (!col.textContent.trim()) return;
+      col.classList.add('footer-meta-item');
+      metaRow.append(col);
+    });
+
+    if (metaRow.children.length) {
+      panel.append(metaRow);
+      hasPanelContent = true;
+    }
+  }
+
+  /* ===== CONTACT STRIP ===== */
+  const contactSection = getSection('tmb-footer-contact');
+  const contactContent = unwrapColumns(contactSection);
+
+  if (contactContent) {
+    const contactBar = document.createElement('div');
+    contactBar.className = 'footer-contact';
+
+    const [text, socials, cta] = [...contactContent.children];
+
+    if (text) {
+      text.classList.add('footer-contact-text');
+      contactBar.append(text);
+    }
+
+    if (socials) {
+      socials.classList.add('footer-social');
+      contactBar.append(socials);
+    }
+
+    if (cta) {
+      cta.classList.add('footer-cta');
+      contactBar.append(cta);
+    }
+
+    panel.append(contactBar);
+    hasPanelContent = true;
+  }
+
+  // Append panel only if something exists
+  if (hasPanelContent) {
+    footer.append(panel);
+  }
+
+  /* =========================
+     SUB FOOTER
+  ========================== */
+  const subFooter = getSection('tmb-sub-footer');
+
+  if (subFooter) {
+    const subWrapper = document.createElement('div');
+    subWrapper.className = 'footer-bottom';
+
+    const legalBlocks = subFooter.querySelectorAll(
+      '.default-content-wrapper'
+    );
+
+    if (legalBlocks[0]) {
+      legalBlocks[0].classList.add('footer-legal');
+      subWrapper.append(legalBlocks[0]);
+    }
+
+    const cols = unwrapColumns(subFooter);
+    if (cols) {
+      const bottomCols = document.createElement('div');
+      bottomCols.className = 'footer-bottom-cols';
+
+      [...cols.children].forEach((col, i) => {
+        col.classList.add(
+          i === 0 ? 'footer-acknowledgement' : 'footer-badges'
+        );
+        bottomCols.append(col);
       });
-    });
-  });
+
+      subWrapper.append(bottomCols);
+    }
+
+    if (legalBlocks.length > 1) {
+      const last = legalBlocks[legalBlocks.length - 1];
+      last.classList.add('footer-disclaimer');
+      subWrapper.append(last);
+    }
+
+    footer.append(subWrapper);
+  }
+
+  block.textContent = '';
+  block.append(footer);
 }
