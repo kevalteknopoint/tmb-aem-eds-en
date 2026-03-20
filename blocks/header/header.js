@@ -110,6 +110,7 @@ function showToast(message, timeout = 3000) {
   setTimeout(() => toast.classList.add('visible'), 10);
 
   // 3. Auto-remove logic
+  // --- test commit ----
   setTimeout(() => {
     toast.classList.remove('visible');
     toast.addEventListener('transitionend', () => toast.remove(), { once: true });
