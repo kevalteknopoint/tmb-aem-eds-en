@@ -82,42 +82,32 @@ document.addEventListener('click', (e) => {
     }
   }
       
-    if (target.closest('.section-wrapper.faq-detail-container')) {
-      const listSection = target.closest('.section-wrapper.faq-detail-container .sub-section-wrapper a');
+   const linkEle = target.closest('.sub-section-wrapper a');
 
-      const cardWrapper = linkEle.closest('.faq-category-wrapper');
-      const ctaTitle = cardWrapper?.querySelector('h1, h2, h3, h4, h5, h6');
+if (linkEle && linkEle.closest('.section-wrapper.faq-detail-container')) {
 
-      const ctaSourceEle = listSection
-        ?.previousElementSibling
-        ?.classList.contains('faq-frequently-question-title')
-        ? listSection.previousElementSibling.querySelector('h1, h2, h3, h4, h5, h6')
-        : document.querySelector('.faq-frequently-question-title h1, .faq-frequently-question-title h2, .faq-frequently-question-title h3, .faq-frequently-question-title h4, .faq-frequently-question-title h5, .faq-frequently-question-title h6');
+  const ctaText = minifyText(linkEle.textContent);
 
-      const pageRegion = getPageRegion(linkEle);
-      const componentIndex = getComponentIndex(linkEle);
-      const nextPageURL = linkEle?.getAttribute('href');
+  const pageRegion = getPageRegion(linkEle);
+  const componentIndex = getComponentIndex(linkEle);
+  const nextPageURL = linkEle.getAttribute('href');
 
-      downloadDocument(
-        pageRegion,
-        minifyText(linkEle?.textContent),
-        minifyText(ctaTitle?.textContent),
-        minifyText(ctaSourceEle?.textContent),
-        'faq category',
-        'faq',
-        componentIndex,
-        getPersona(),
-        nextPageURL,
-        'cta-click',
-        'internal',
-        'in-page-nav',
-        'in-content',
-        '',
-        '',
-        '',
-        'faq',
-        ''
-      );
-    }
+  downloadDocument(
+    pageRegion, 
+    'faq category',
+    'faq',
+    componentIndex,
+    getPersona(),
+    '',
+    nextPageURL,
+    '',
+    '',
+    '',
+    ctaText, // CTA text (clicked value),
+    'pdf',
+    'download'
+  );
+}
+
+
 });
- 
