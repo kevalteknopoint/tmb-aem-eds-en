@@ -8,6 +8,12 @@
     return meta || "";
   }
 
+  const faviconLink = document.createElement('link');
+  faviconLink.rel = 'icon';
+  faviconLink.href = `${getMetadata("favicon") || '/favicon.ico'}`;
+  document.head.appendChild(faviconLink);
+</script>
+<script>
   const stylesheetLink = document.createElement('link');
   stylesheetLink.rel = 'stylesheet';
   stylesheetLink.href = `/styles/${getMetadata("theme") || 'tmb'}/styles.css`;

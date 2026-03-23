@@ -54,7 +54,9 @@ $padding-mobile: 16px;
 
 /* ---------- MEDIA MIXINS UPDATED ---------- */
 @mixin respond($breakpoint, $mode: max) {
-  @media screen and (#{$mode}-width: #{$breakpoint}px) {
+  $adjusted-breakpoint: if($mode == min, $breakpoint + 1, $breakpoint);
+
+  @media screen and (#{$mode}-width: #{$adjusted-breakpoint}px) {
     @content;
   }
 }

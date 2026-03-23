@@ -231,6 +231,7 @@
 
 .stepper-container .stepper-item .stepper-title{
   color:var(--heading-default);
+  cursor:pointer;
   display:block;
   font-family:var(--font-family-h3);
   font-size:var(--font-size-h3);

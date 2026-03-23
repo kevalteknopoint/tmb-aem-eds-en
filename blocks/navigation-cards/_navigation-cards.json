@@ -64,6 +64,12 @@
                     "name": "navigation-below-content",
                     "label": "navigation below content",
                     "valueType": "string"
+                },
+                {
+                  "component": "aem-content",
+                  "name": "navigation-card-link",
+                  "label": "Navigation Card Link",
+                  "valueType": "string"
                 }
             ]
         }

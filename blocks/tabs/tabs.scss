@@ -105,11 +105,13 @@
   }
 
   .tabs {
-    @include responsive-container;
-
     display: flex;
     justify-content: space-between;
     gap: 80px;
+
+    @include tablet(min) {
+      @include responsive-container;
+    }
 
     @include tablet {
       flex-direction: column;
@@ -122,8 +124,8 @@
 
     .tab-list-wrapper {      
       overflow-x: auto;
-      width: 100%;
       min-width: 449px;
+      width: fit-content;
 
       @include tablet {
         min-width: unset;
@@ -137,6 +139,8 @@
       width: 100%;
 
       @include tablet {
+        @include responsive-container;
+
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: 1fr;
@@ -150,6 +154,10 @@
         outline: none;
 
         @include tablet {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
           padding: 24px 8px;
           min-width: 86px;
         }
@@ -230,6 +238,7 @@
           align-items: center;
           gap: 24px;
           color: $heading-default;
+          text-align: left;
 
           @include tablet {
             @include typo-disclaimer;
@@ -237,16 +246,21 @@
             justify-content: center;
             flex-direction: column;
             gap: 8px;
+            text-align: center;
           }
 
           svg {
             transition: all 0.3s ease-in-out;
+            min-width: 64px;
+            min-height: 64px;
             width: 64px;
             height: 64px;
 
             @include mobile {
               width: 48px;
               height: 48px;
+              min-width: 48px;
+              min-height: 48px;
               padding: 4px;
             }
           }
@@ -255,6 +269,10 @@
     }
 
     .tabs-panels {
+      @include tablet {
+        @include responsive-container;
+      }
+
       .tab-content-container:not(:last-child) {
         padding-bottom: 32px;
         border-bottom: 1px solid $line-light-3;
