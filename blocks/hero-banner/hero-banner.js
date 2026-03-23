@@ -6,17 +6,18 @@ const jsonMap = {
   2: 'desktop-img-alt',
   3: 'mobile-media',
   4: 'mobile-img-alt',
-  5: 'content',
-  6: 'btn-1-text',
-  7: 'btn-1-title',
-  8: 'btn-1-link',
-  9: 'btn-1-target',
-  10: 'btn-1-style',
-  11: 'btn-2-text',
-  12: 'btn-2-title',
-  13: 'btn-2-link',
-  14: 'btn-2-target',
-  15: 'btn-2-style',
+  5: 'bg-classes',
+  6: 'content',
+  7: 'btn-1-text',
+  8: 'btn-1-title',
+  9: 'btn-1-link',
+  10: 'btn-1-target',
+  11: 'btn-1-style',
+  12: 'btn-2-text',
+  13: 'btn-2-title',
+  14: 'btn-2-link',
+  15: 'btn-2-target',
+  16: 'btn-2-style',
 };
 
 const videoRegex = /\.(mp4|mov|wmv|avi|mkv|flv|webm|mpeg|mpg|m4v|3gp|3g2|ogv|ts|m2ts|mts)(\?.*)?$/i;
@@ -64,6 +65,42 @@ export default function decorate(block) {
     mobileMedia?.remove();
   }
   mobileAlt?.remove();
+
+  /* ---------------- check for media class and add new class for css style on banner ---------------- */
+  const hasDesktopMedia = desktopMedia && desktopMedia.querySelector('img, picture');
+  const hasMobileMedia = mobileMedia && mobileMedia.querySelector('img, picture');
+
+  if (hasDesktopMedia || hasMobileMedia) {
+    blockMainChild.classList.add('has-media');
+  } else {
+    blockMainChild.classList.add('no-media');
+  }
+
+  /* ---------------- Banner Background ---------------- */
+  const bgContainer = block.querySelector('.bg-classes');
+  if (bgContainer) {
+    // Find the P tag inside that container
+    const pTag = bgContainer.querySelector('p');
+    if (pTag) {
+      // Get the text (e.g., 'bg-dark-teal') and trim any whitespace
+      const className = pTag.textContent.trim();
+
+      // Add this class to the main block element
+      if (className && blockMainChild) {
+        blockMainChild.classList.add(className);
+      }
+
+      // Remove the P tag from the DOM
+      pTag.remove();
+    } else {
+      bgContainer.remove();
+    }
+
+    // If the container 'bg-classes' is now empty, remove it too
+    if (bgContainer.innerHTML.trim() === '') {
+      bgContainer.remove();
+    }
+  }
 
   /* ---------------- Content ---------------- */
   const bannerContent = block.querySelector('.content');
