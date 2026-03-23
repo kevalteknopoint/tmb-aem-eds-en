@@ -14,6 +14,7 @@
       "title",
       "hero",
       "cards",
+      "navigation-cards",
       "columns",
       "fragment",
       "quick-links",
@@ -51,7 +52,8 @@
       "info-well",
       "evergreen-left-menu",
       "card-with-quote",
-      "tmb-calculator-accordion"
+      "tmb-calculator-accordion",
+      "tab-content"
     ]
   },
   {
@@ -141,9 +143,21 @@
     "components": []
   },
   {
+    "id": "navigation-cards",
+    "components": [
+      "navigation-card"
+    ]
+  },
+  {
     "id": "stepper",
     "components": [
       "stepper-item"
+    ]
+  },
+  {
+    "id": "tab-content",
+    "components": [
+      "tab-content-item"
     ]
   },
   {

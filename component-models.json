@@ -253,11 +253,23 @@
             "value": "banking-container"
           },
           {
-            "name": "tmb-footer",
+            "name": "TMB Footer Logo",
             "value": "tmb-footer"
           },
           {
-            "name": "tmb-sub-footer",
+            "name": "TMB Footer Links",
+            "value": "tmb-footer-links"
+          },
+          {
+            "name": "TMB Footer Icon Links",
+            "value": "tmb-footer-icon-links"
+          },
+          {
+            "name": "TMB Footer Contact",
+            "value": "tmb-footer-contact"
+          },
+          {
+            "name": "TMB Footer Disclaimers",
             "value": "tmb-sub-footer"
           },
           {
@@ -307,6 +319,10 @@
           {
             "name": "Faq-cant-find-looking-for Variant",
             "value": "faq-cant-find-looking-for-variant"
+          },
+          {
+            "name": "navigation-cards-container",
+            "value": "navigation-cards-container"
           },
           {
             "name": "Section Wrapper",
@@ -395,6 +411,10 @@
           {
             "name": "Variation Non Border",
             "value": "variation-non-border"
+          },
+          {
+            "name": "White Non Border",
+            "value": ".white-non-border"
           },
           {
             "name": "Milestones",
@@ -511,6 +531,10 @@
           {
             "name": "Tab Panel",
             "value": "tabs-panel"
+          },
+          {
+            "name": "Tabbed Navigation",
+            "value": "tabbed-navigation"
           }
         ]
       }
@@ -1297,7 +1321,7 @@
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "product-disclaimer",
         "label": "Product Disclaimer",
         "valueType": "string"
@@ -1735,6 +1759,40 @@
     ]
   },
   {
+    "id": "navigation-card",
+    "fields": [
+      {
+        "component": "text",
+        "name": "icon-text",
+        "label": "Icon Text"
+      },
+      {
+        "component": "richtext",
+        "name": "navigation-main-content",
+        "label": "Navigation main content",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "image-text",
+        "label": "Image Text"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "navigation-below-content",
+        "label": "navigation below content",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "quick-links",
     "fields": [
       {
@@ -1905,6 +1963,87 @@
           {
             "name": "White Button",
             "value": "white"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tab-content-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "tab-content-header",
+        "label": "Tab Content Heading",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "tab-content-body",
+        "label": "Tab Content Body",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "tab-content-rate",
+        "label": "Tab Content Rate Item",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "tab-content-image",
+        "label": "Tab Content Body Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "tab-content-button-text",
+        "label": "Tab Content Button Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "tab-content-button-title",
+        "label": "Tab Content Button Title",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "tab-content-button-link",
+        "label": "Tab Content Button Link",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "select",
+        "name": "tab-content-button-target",
+        "label": "Tab Content Button Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "tab-content-button-style",
+        "label": "Tab Content Button Style",
+        "value": "primary",
+        "options": [
+          {
+            "name": "Primary Button",
+            "value": "primary"
+          },
+          {
+            "name": "Outlined Button",
+            "value": "outlined"
           }
         ]
       }

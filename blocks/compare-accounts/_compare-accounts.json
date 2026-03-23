@@ -67,7 +67,7 @@
           "valueType": "string"
         },
         {
-          "component": "text",
+          "component": "richtext",
           "name": "product-disclaimer",
           "label": "Product Disclaimer",
           "valueType": "string"

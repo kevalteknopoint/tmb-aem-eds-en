@@ -274,7 +274,7 @@ header {
     }
     
     a.secondary {
-      @include button('outline');
+      @include button('outlined');
 
       font-style: normal;
       text-decoration: unset;
@@ -296,6 +296,13 @@ svg.icon-svg.icon-invert {
 svg.icon-svg.icon-invert-bg {
   background-color: $icon-bg-reverse !important;
   color: $icon-reverse !important;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+svg.icon-svg.icon-accent {
+  background-color: $icon-bg-accent !important;
+  color: $icon-2-accent !important;
   padding: 10px;
   border-radius: 50%;
 }

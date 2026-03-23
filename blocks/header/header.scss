@@ -320,11 +320,6 @@ html:has(.primary-header.search-active) {
     min-width: 40px;
     width: 40px;
     transition: all 0.3s ease-in-out;
-
-    @include mobile {
-      min-width: 24px;
-      width: 24px;
-    }
   }
 
   .header-search-form{
@@ -396,7 +391,7 @@ html:has(.primary-header.search-active) {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: fit-content;
+    min-width: max-content;
     opacity: 1;
     transition: all 0.3s ease-in-out;
 
@@ -434,6 +429,10 @@ header:has(.secondary-header) {
       top: 80px;
       padding-bottom: 80px;
     }
+  }
+
+  .mobile-menu-wrapper {
+    top: 61px;
   }
 }
 
@@ -570,7 +569,7 @@ header:has(.secondary-header) {
   position: fixed;
   width: 100%;
   height: 100%;
-  top: 61px;
+  top: 0;
   left: 0;
   z-index: 2;
   padding: 20px 24px 64px;

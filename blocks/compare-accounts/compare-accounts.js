@@ -75,6 +75,8 @@ export default function decorate(block) {
       rateContent = interestRateEl?.querySelector("*") || rawRate;
     }
 
+    disclaimerEl?.classList.add('product-disclaimer');
+
     const card = div(
       {
         class: ["compare-accounts-card", isActive && "active"].filter(Boolean),
@@ -86,7 +88,7 @@ export default function decorate(block) {
         interestPretitleEl?.textContent.trim(),
       ),
       p({ class: "product-interest-rate" }, p(rateContent)),
-      p({ class: "product-disclaimer" }, disclaimerEl?.textContent.trim()),
+      disclaimerEl || '',
       p(
         { class: "button-container" },
         a(

@@ -150,11 +150,23 @@
               "value": "banking-container"
             },
             {
-              "name": "tmb-footer",
+              "name": "TMB Footer Logo",
               "value": "tmb-footer"
             },
             {
-              "name": "tmb-sub-footer",
+              "name": "TMB Footer Links",
+              "value": "tmb-footer-links"
+            },
+            {
+              "name": "TMB Footer Icon Links",
+              "value": "tmb-footer-icon-links"
+            },
+            {
+              "name": "TMB Footer Contact",
+              "value": "tmb-footer-contact"
+            },
+            {
+              "name": "TMB Footer Disclaimers",
               "value": "tmb-sub-footer"
             },
             {
@@ -204,6 +216,10 @@
             {
               "name": "Faq-cant-find-looking-for Variant",
               "value": "faq-cant-find-looking-for-variant"
+            },
+            {
+              "name": "navigation-cards-container",
+              "value": "navigation-cards-container"
             },
             {
               "name": "Section Wrapper",
@@ -292,6 +308,10 @@
             {
               "name": "Variation Non Border",
               "value": "variation-non-border"
+            },
+            {
+              "name": "White Non Border",
+              "value": ".white-non-border"
             },
             {
               "name": "Milestones",
@@ -408,6 +428,10 @@
             {
               "name": "Tab Panel",
               "value": "tabs-panel"
+            },
+            {
+              "name": "Tabbed Navigation",
+              "value": "tabbed-navigation"
             }
           ]
         }
@@ -424,6 +448,7 @@
         "title",
         "hero",
         "cards",
+        "navigation-cards",
         "columns",
         "fragment",
         "quick-links",
@@ -461,7 +486,8 @@
         "info-well",
         "evergreen-left-menu",
         "card-with-quote",
-        "tmb-calculator-accordion"
+        "tmb-calculator-accordion",
+        "tab-content"
       ]
     }
   ]

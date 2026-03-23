@@ -16,11 +16,11 @@
  * @returns {object} Window placeholders object
  */
 // eslint-disable-next-line import/prefer-default-export
-export async function fetchPlaceholders(prefix = 'default') {
+export async function fetchPlaceholders(prefix = 'default', urlKey = 'placeholders.json') {
   window.placeholders = window.placeholders || {};
   if (!window.placeholders[prefix]) {
     window.placeholders[prefix] = new Promise((resolve) => {
-      fetch(`${prefix === 'default' ? '' : prefix}/placeholders.json`)
+      fetch(`${prefix === 'default' || prefix === 'dev' ? '' : prefix}/${urlKey}`)
         .then((resp) => {
           if (resp.ok) {
             return resp.json();

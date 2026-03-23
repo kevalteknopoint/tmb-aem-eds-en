@@ -37,6 +37,20 @@
   --gradient-after:linear-gradient(46.23deg, #59ffa0 1.03%, #1be7ff 98.97%);
   --body-default-alt:var(--body-default);
   --link-default-alt:var(--link-default);
+  --large-heading-case:uppercase;
+  --heading1-case:uppercase;
+  --heading1-std-case:initial;
+  --heading2-case:uppercase;
+  --heading2-std-case:initial;
+  --heading3-case:initial;
+  --intro-case:initial;
+  --heading4-case:initial;
+  --heading5-case:initial;
+  --body-case:initial;
+  --body-bold-case:initial;
+  --sm-body-case:initial;
+  --sm-body-bold-case:initial;
+  --disclaimer-case:initial;
   --bsb:812 -170;
   --color-alert-critical-banner:#fcf2f5;
   --color-alert-critical-icon-bg:#c4043f;
@@ -463,6 +477,7 @@ table{
 h1, h2, h3, h4, h5, h6{
   font-size:inherit;
   font-weight:inherit;
+  text-wrap:balance;
 }
 
 b{
@@ -471,7 +486,7 @@ b{
   font-weight:var(--font-weight-body-bold);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:initial;
+  text-transform:var(--body-bold-case);
 }
 
 sup, sub{
@@ -494,7 +509,7 @@ h3, h4{
   font-weight:var(--font-weight-h3);
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
-  text-transform:initial;
+  text-transform:var(--heading3-case);
 }
 
 p{
@@ -504,7 +519,8 @@ p{
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:initial;
+  text-transform:var(--body-case);
+  text-wrap:pretty;
 }
 
 header:has(.secondary-header){
@@ -587,7 +603,7 @@ header:has(.secondary-header){
   letter-spacing:var(--font-letter-spacing-h1);
   line-height:var(--font-height-h1);
   margin-bottom:40px;
-  text-transform:initial;
+  text-transform:var(--heading1-case);
 }
 .generic-body-copy h1:has(.generic-body-copy h1 + p){
   margin-bottom:16px;
@@ -603,7 +619,7 @@ header:has(.secondary-header){
   letter-spacing:var(--font-letter-spacing-h2-std);
   line-height:var(--font-height-h2-std);
   margin-bottom:24px;
-  text-transform:initial;
+  text-transform:var(--heading2-std-case);
 }
 .generic-body-copy h2:not(:first-child){
   margin-top:40px;
@@ -623,7 +639,7 @@ header:has(.secondary-header){
   line-height:var(--font-height-h3);
   margin-bottom:16px;
   margin-top:24px;
-  text-transform:initial;
+  text-transform:var(--heading3-case);
 }
 .generic-body-copy h4{
   color:var(--heading-default);
@@ -633,7 +649,7 @@ header:has(.secondary-header){
   letter-spacing:var(--font-letter-spacing-h4);
   line-height:var(--font-height-h4);
   margin-bottom:16px;
-  text-transform:initial;
+  text-transform:var(--heading4-case);
 }
 .generic-body-copy h5{
   color:var(--heading-default);
@@ -643,7 +659,7 @@ header:has(.secondary-header){
   letter-spacing:var(--font-letter-spacing-h5);
   line-height:var(--font-height-h5);
   margin-bottom:16px;
-  text-transform:initial;
+  text-transform:var(--heading5-case);
 }
 .generic-body-copy h6{
   color:var(--body-default);
@@ -652,7 +668,7 @@ header:has(.secondary-header){
   font-weight:var(--font-weight-disc);
   letter-spacing:var(--font-letter-spacing-disc);
   line-height:var(--font-height-disclaimer);
-  text-transform:initial;
+  text-transform:var(--disclaimer-case);
 }
 .generic-body-copy p{
   color:var(--body-default);
@@ -662,7 +678,7 @@ header:has(.secondary-header){
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   margin-bottom:16px;
-  text-transform:initial;
+  text-transform:var(--body-case);
 }
 .generic-body-copy p a{
   color:var(--link-default);
@@ -674,7 +690,7 @@ header:has(.secondary-header){
   font-weight:var(--font-weight-body-bold);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:initial;
+  text-transform:var(--body-bold-case);
 }
 .generic-body-copy ul, .generic-body-copy ol{
   font-family:var(--font-family-body);
@@ -685,7 +701,7 @@ header:has(.secondary-header){
   list-style-type:disc;
   margin-bottom:24px;
   padding-left:24px;
-  text-transform:initial;
+  text-transform:var(--body-case);
 }
 .generic-body-copy ul li, .generic-body-copy ol li{
   margin-bottom:10px;
@@ -696,7 +712,7 @@ header:has(.secondary-header){
   font-weight:var(--font-weight-body-bold);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  text-transform:initial;
+  text-transform:var(--body-bold-case);
 }
 .generic-body-copy ul li a, .generic-body-copy ol li a{
   color:var(--link-default);
@@ -741,25 +757,25 @@ header:has(.secondary-header){
   width:12px;
 }
 .generic-body-copy .button-container a.secondary{
-  background-color:var(--color-button-primary-default);
-  border:none;
-  color:var(--color-button-text-stroke-reverse);
+  background-color:var(--color-button-outlined-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-default);
+  color:var(--color-button-text-stroke-default);
   font-size:var(--font-size-h5);
   font-style:normal;
   line-height:var(--font-height-h5);
   min-width:150px;
-  padding-block:8px;
+  padding-block:6px;
   text-decoration:unset;
 }
 .generic-body-copy .button-container a.secondary:hover{
-  background-color:var(--color-button-primary-hover);
-  border:none;
-  color:var(--color-button-text-stroke-reverse);
+  background-color:var(--color-button-outlined-hover);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-hover);
+  color:var(--color-button-text-stroke-hover);
 }
 .generic-body-copy .button-container a.secondary:active{
-  background-color:var(--color-button-primary-press);
-  border:none;
-  color:var(--color-button-text-stroke-reverse);
+  background-color:var(--color-button-outlined-press);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-press);
+  color:var(--color-button-text-stroke-press);
 }
 .generic-body-copy .button-container a.secondary:focus-visible{
   box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
@@ -785,6 +801,13 @@ svg.icon-svg.icon-invert-bg{
   background-color:var(--icon-bg-reverse) !important;
   border-radius:50%;
   color:var(--icon-reverse) !important;
+  padding:10px;
+}
+
+svg.icon-svg.icon-accent{
+  background-color:var(--icon-bg-accent) !important;
+  border-radius:50%;
+  color:var(--icon-2-accent) !important;
   padding:10px;
 }
 
