@@ -64,8 +64,13 @@ export default function decorate(block) {
     const body = div({ class: 'stepper-body' });
 
     if (stepTitle?.trim()) {
-      body.append(h3({ class: 'stepper-title' }));
+      const stepperTitle = h3({ class: 'stepper-title' });
+      body.append(stepperTitle);
       body.lastElementChild.innerHTML = stepTitle;
+      stepperTitle?.addEventListener('click', (e) => {
+        e.preventDefault();
+        setActiveStep(index);
+      });
     }
 
     const stepCollapse = div({ class: 'step-collapse' });

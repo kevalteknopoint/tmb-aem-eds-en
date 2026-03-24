@@ -144,6 +144,11 @@
   display:grid;
   gap:32px;
   grid-template-columns:repeat(auto-fit, minmax(304px, 1fr));
+  margin-bottom:32px;
+}
+
+.navigation-cards-container .navigation-cards.block:last-child{
+  margin-bottom:0;
 }
 
 .navigation-cards-container .nav-card{
@@ -155,6 +160,18 @@
   position:relative;
   text-align:center;
   transition:all 0.25s ease;
+}
+
+.navigation-cards-container .nav-card .is-clickable{
+  cursor:pointer;
+  display:block;
+  height:100%;
+  left:0;
+  opacity:0;
+  position:absolute;
+  top:0;
+  width:100%;
+  z-index:1;
 }
 
 .navigation-cards-container .nav-card:hover{
@@ -197,7 +214,7 @@
 
 .navigation-cards-container .card-header .icon{
   display:block;
-  margin-bottom:16px;
+  margin:0 auto 16px;
 }
 
 .navigation-cards-container .card-header .icon svg{
@@ -277,6 +294,7 @@
 @media screen and (max-width: 1023px){
   .navigation-cards-container .navigation-cards.block{
     gap:24px;
+    margin-bottom:24px;
   }
 }
 
@@ -295,5 +313,6 @@
 
   .navigation-cards-container .navigation-cards.block{
     gap:16px;
+    margin-bottom:16px;
   }
 }

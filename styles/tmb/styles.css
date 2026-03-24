@@ -440,8 +440,8 @@ ul, ol{
 }
 
 a{
-  color:inherit;
-  text-decoration:none;
+  color:var(--link-default);
+  text-decoration:underline;
 }
 
 img, picture, video, canvas, svg{

@@ -155,7 +155,7 @@
   width:12px;
 }
 
-@media screen and (min-width: 1279px){
+@media screen and (min-width: 1280px){
   .product-navigation .default-content-wrapper ul li a:hover::after{
     left:0;
     right:unset;
