@@ -58,13 +58,20 @@
     grid-template-columns: repeat(auto-fit, minmax(304px, 1fr));
     gap: 32px;
     align-items: stretch;
-
+    margin-bottom: 32px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
     @include tablet {
       gap: 24px;
+      margin-bottom: 24px;
     }
-
+    
     @include mobile {
       gap: 16px;
+      margin-bottom: 16px;
     }
   }
 
@@ -135,7 +142,7 @@
   /* icon circle */
   .card-header .icon {
     display: block;
-    margin-bottom: 16px;
+    margin: 0 auto 16px;
 
     svg {
       width: 96px;
