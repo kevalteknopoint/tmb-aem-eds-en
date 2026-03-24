@@ -1,4 +1,4 @@
-import { ctaInteraction, faqInteraction, minifyText, getComponentIndex, getPageRegion, getPersona } from "../../scripts/analytics/exports.js";
+import { ctaInteraction, faqInteraction, minifyText, getComponentIndex, getPageRegion, getPersona, downloadDocument } from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
   const { target } = e;
@@ -81,4 +81,55 @@ document.addEventListener('click', (e) => {
       );
     }
   }
+ const linkEle = target.closest('.sub-section-wrapper a');
+
+if (linkEle && linkEle.closest('.section-wrapper.faq-detail-container')) {
+
+  const ctaText = minifyText(linkEle.textContent);
+  const pageRegion = getPageRegion(linkEle);
+  const componentIndex = getComponentIndex(linkEle);
+  const nextPageURL = linkEle.getAttribute('href') || '';
+
+  // 👉 Identify downloadable documents
+  const cleanURL = nextPageURL.split('?')[0].toLowerCase();
+  const isDownload =
+    cleanURL.endsWith('.pdf') ||
+    cleanURL.endsWith('.doc') ||
+    cleanURL.endsWith('.docx') ||
+    cleanURL.endsWith('.xls') ||
+    cleanURL.endsWith('.xlsx') ||
+    cleanURL.endsWith('.ashx'); // 👈 important for your case
+
+  if (isDownload) {
+
+    downloadDocument(
+   pageRegion, 'faq category', 'faq', componentIndex, getPersona(), 'faq', nextPageURL, '', '', '', ctaText,'pdf','download'
+    );
+  } else {
+    const ctaTitle = linkEle.getAttribute('title') || ctaText;
+    const ctaSource = 'faq'; // or derive if you have logic
+    ctaInteraction(
+      pageRegion,
+      ctaText,
+      ctaTitle,
+      ctaSource,
+      'faq category',
+      'faq',
+      componentIndex,
+      getPersona(),
+      nextPageURL,
+      'cta-click',
+      'internal',
+      'in-page-nav',
+      'in-content',
+      '',
+      '',
+      '',
+      'faq',
+      ''
+    );
+
+  }
+}
+
 });
