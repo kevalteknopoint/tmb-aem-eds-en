@@ -126,20 +126,63 @@ body:has(.product-detail-banner) {
 
     .hero-banner-content {
       max-width: 660px;
+       :last-child {
+        margin-bottom: 0;
+      }
     }
 
-    h1, h2, h3 {
-      @include typo-intro;
+    h1 {
+      @include typo-large-heading;
+      color: $heading-default;
+      margin-bottom: 16px;
+    
+      > strong {
+        @include typo-intro;
+        text-transform: none;
 
+        color: $heading-default;
+        margin-bottom: 4px;
+        display: block;
+      }
+    }
+
+    h1 del {
+      border: 0;
+      clip-path: inset(50%); 
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    h2 {
+      @include typo-heading1;
+      color: $heading-default;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+       @include typo-heading3;
+       color: $heading-default;
+       margin-bottom: 4px;
+    }
+
+    h4 {
+      @include typo-heading4;
       color: $heading-default;
       margin-bottom: 4px;
     }
 
-    h4, h5, h6 {
-      @include typo-large-heading;
-
+    h5 {
+      @include typo-heading5;
       color: $heading-default;
-      padding-bottom: 16px;
+      margin-bottom: 4px;
+    }
+
+    p, h6 {
+      margin-bottom: 4px;
     }
 
     p:has(.interest-rate) {
@@ -287,20 +330,61 @@ body:has(.product-detail-banner) {
 
     .hero-banner-content {
       max-width: 660px;
+      :last-child {
+        margin-bottom: 0;
+      }
     }
 
-    h1, h2, h3 {
-      @include typo-intro;
+    h1 {
+      @include typo-large-heading;
+      color: $heading-default;
+      margin-bottom: 16px;
+    
+      > strong {
+        @include typo-intro;
+        text-transform: none;
+        margin-bottom: 4px;
+        display: block;
+      }
+    }
 
+    h1 del {
+      border: 0;
+      clip-path: inset(50%);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    h2 {
+      @include typo-heading1;
+      color: $heading-default;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+       @include typo-heading3;
+       color: $heading-default;
+       margin-bottom: 4px;
+    }
+
+    h4 {
+      @include typo-heading4;
       color: $heading-default;
       margin-bottom: 4px;
     }
 
-    h4, h5, h6 {
-      @include typo-large-heading;
-
+    h5 {
+      @include typo-heading5;
       color: $heading-default;
-      padding-bottom: 16px;
+      margin-bottom: 4px;
+    }
+
+    p, h6 {
+      margin-bottom: 4px;
     }
 
     p:has(.interest-rate) {
