@@ -1,4 +1,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  body{
+    display: none;
+  }
+  body.appear{
+    display: block;
+  }
+</style>
 <script>
   function getMetadata(name, doc = document) {
     const attr = name && name.includes(":") ? "property" : "name";
