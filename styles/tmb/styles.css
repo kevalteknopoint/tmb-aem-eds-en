@@ -1,4 +1,3 @@
-@import '../../libs/aos/aos.min.css';
 .generic-body-copy .button-container a:not(.secondary), .generic-body-copy .button-container a.secondary{
   align-items:center;
   border:none;

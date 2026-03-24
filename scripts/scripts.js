@@ -152,11 +152,11 @@ async function loadLazy(doc) {
 function loadDelayed() {
   // eslint-disable-next-line import/no-cycle
   window.setTimeout(() => import('./delayed.js'), 3000);
-  window.setTimeout(() => {
-    const script = document.createElement('script');
-    script.setAttribute('src', '/scripts/aos.min.js');
-    document.body.appendChild(script);
-  });
+  // window.setTimeout(() => {
+  //   const script = document.createElement('script');
+  //   script.setAttribute('src', '/scripts/aos.min.js');
+  //   document.body.appendChild(script);
+  // });
   // load anything that can be postponed to the latest here
 }
 
@@ -271,8 +271,8 @@ async function loadPage() {
   loadDelayed();
 }
 
-window.initAos = function initAos() {
-  window.AOS?.init();
-};
+// window.initAos = function initAos() {
+//   window.AOS?.init();
+// };
 
 loadPage();
