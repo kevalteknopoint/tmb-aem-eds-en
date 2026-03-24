@@ -6,7 +6,7 @@ export default function decorate(block) {
 
 
   if (href.includes('?')) {
-    // Avoid duplicating param
+    // Avoid duplicating params
     if (!/([?&])enablejsapi=1/.test(href)) {
       href += '&enablejsapi=1';
     }
