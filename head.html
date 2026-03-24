@@ -14,6 +14,12 @@
   document.head.appendChild(faviconLink);
 </script>
 <script>
+  const stylesheetPreload = document.createElement('link');
+  stylesheetPreload.as = 'style';
+  stylesheetPreload.rel = 'preload';
+  stylesheetPreload.href = `/styles/${getMetadata("theme") || 'tmb'}/styles.css`;
+  document.head.appendChild(stylesheetPreload);
+
   const stylesheetLink = document.createElement('link');
   stylesheetLink.rel = 'stylesheet';
   stylesheetLink.href = `/styles/${getMetadata("theme") || 'tmb'}/styles.css`;
