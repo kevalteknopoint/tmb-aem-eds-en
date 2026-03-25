@@ -1,37 +1,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+
 <style>
-  body{
+  body {
     display: none;
   }
-  body.appear{
+  body.appear {
     display: block;
   }
 </style>
-<script>
-  function getMetadata(name, doc = document) {
-    const attr = name && name.includes(":") ? "property" : "name";
-    const meta = [...doc.head.querySelectorAll(`meta[${attr}="${name}"]`)]
-      .map((m) => m.content)
-      .join(", ");
-    return meta || "";
-  }
 
-  const faviconLink = document.createElement('link');
-  faviconLink.rel = 'icon';
-  faviconLink.href = `${getMetadata("favicon") || '/favicon.ico'}`;
-  document.head.appendChild(faviconLink);
-</script>
 <script>
-  const stylesheetPreload = document.createElement('link');
-  stylesheetPreload.as = 'style';
-  stylesheetPreload.rel = 'preload';
-  stylesheetPreload.href = `/styles/${getMetadata("theme") || 'tmb'}/styles.css`;
-  document.head.appendChild(stylesheetPreload);
+  (function() {
+    // Helper function to get metadata content
+    function getMeta(name) {
+      const attr = name.includes(":") ? "property" : "name";
+      const meta = document.querySelector(`meta[${attr}="${name}"]`);
+      return meta ? meta.content : "";
+    }
 
-  const stylesheetLink = document.createElement('link');
-  stylesheetLink.rel = 'stylesheet';
-  stylesheetLink.href = `/styles/${getMetadata("theme") || 'tmb'}/styles.css`;
-  document.head.appendChild(stylesheetLink);
+    // Resolve values
+    const theme = getMeta("theme") || 'tmb';
+    const favicon = getMeta("favicon") || '/favicon.ico';
+    const stylesheet = `/styles/${theme}/styles.css`;
+
+    // Inject tags directly into the document stream
+    document.write(`<link rel="icon" href="${favicon}">`);
+    document.write(`<link rel="stylesheet" href="${stylesheet}">`);
+  })();
 </script>
 <script src="/scripts/aem.js" type="module"></script>
 <script src="/scripts/scripts.js" type="module"></script>
