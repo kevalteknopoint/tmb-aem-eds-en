@@ -12,7 +12,6 @@ import {
   loadCSS,
   loadPlaceholders,
   loadDmImages,
-  buildBlock
 } from './aem.js';
 import { pageIntialization, setPersona } from './analytics/exports.js';
 import { fetchPlaceholders } from './placeholders.js';
@@ -111,12 +110,11 @@ async function loadEager(doc) {
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
-  
   if (main) {
-    if (window.isErrorPage){ 
-      await load404Metadata();
-      await loadErrorPage(main)
-    };
+    if (window.isErrorPage) {
+    // Run the multi-site 404 logic to fetch the correct fragment
+      await loadMultiSite404(main);
+    }
     decorateMain(main);
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
@@ -277,60 +275,44 @@ async function loadPage() {
   loadDelayed();
 }
 
-/** Loading 404 page */
-async function loadErrorPage(main) {
-  if (window.errorCode === '404') {
-    const fragmentPath = '/tmbank/au/en/404';
-    const fragmentLink = document.createElement('a');
-    fragmentLink.href = fragmentPath;
-    fragmentLink.textContent = fragmentPath;
-    const fragment = buildBlock('fragment', [[fragmentLink]]);
-    const section = main.querySelector('.section');
-    if (section) section.replaceChildren(fragment);
-  }
-}
-
 /**
- * Loads metadata for the 404 page from the global metadata spreadsheet.
+ * Loads the correct 404 fragment based on site-specific metadata or URL path.
  */
-async function load404Metadata() {
-  if (window.isErrorPage) {
-    try {
-      // 1. Fetch the published metadata JSON from your project root
-      const resp = await fetch('/metadata.json');
-      if (!resp.ok) return;
-      
-      const { data } = await resp.json();
-      
-      // 2. Find the row specifically defined for the /404 path
-      const meta404 = data.find((row) => row.URL === '/404' || row.URL === '/404.html');
+async function loadMultiSite404(main) {
+  const { getMetadata, decorateMain } = await import('./aem.js');
 
-      if (meta404) {
-        // 3. Apply the values to the document head
-        Object.entries(meta404).forEach(([key, value]) => {
-          if (key === 'URL' || !value) return;
+  // 1. Site Detection Logic
+  // Option A: Detection via URL path (e.g., /site-a/broken-link)
+  const pathParts = window.location.pathname.split('/');
+  const sitePrefix = pathParts[1] || 'default';
 
-          if (key.toLowerCase() === 'title') {
-            document.title = value;
-          } else {
-            // Update existing or create new meta tags
-            let meta = document.head.querySelector(`meta[name="${key}"], meta[property="${key}"]`);
-            if (!meta) {
-              meta = document.createElement('meta');
-              if (key.includes(':')) meta.setAttribute('property', key);
-              else meta.setAttribute('name', key);
-              document.head.append(meta);
-            }
-            meta.content = value;
-          }
-        });
-      }
-    } catch (error) {
-      console.error('Failed to load 404 metadata:', error);
+  // Option B: Detection via Metadata Spreadsheet (e.g., a '404-source' column)
+  // This is better if you use custom domains for each site.
+  let fragmentPath = getMetadata('404-source') || `/${sitePrefix}/404`;
+
+  try {
+    // 2. Fetch the AEM-authored fragment
+    const resp = await fetch(`${fragmentPath}.plain.html`);
+    
+    if (resp.ok) {
+      const html = await resp.text();
+      main.innerHTML = html;
+
+      // 3. Apply the Site-Specific Theme
+      // This ensures 'site-a' gets Site A's CSS variables/styles
+      const theme = getMetadata('theme');
+      if (theme) document.body.classList.add(theme);
+
+      // 4. Decorate the new content so blocks (columns, hero, etc.) work
+      await decorateMain(main);
+    } else {
+      // Fallback if the specific 404 page is missing
+      main.innerHTML = '<h1>404 - Page Not Found</h1>';
     }
+  } catch (e) {
+    console.error('Critical Error loading 404 Fragment:', e);
   }
 }
-
 
 window.initAos = function initAos() {
   window.AOS?.init();

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>404 - Page not found</title>
+  <title>Page not found</title>
   <script type="text/javascript">
     window.isErrorPage = true;
     window.errorCode = '404';
@@ -10,26 +10,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:title" content="Page not found">
   <script src="/scripts/scripts.js" type="module"></script>
-  <script>
-    function getMetadata(name, doc = document) {
-      const attr = name && name.includes(":") ? "property" : "name";
-      const meta = [...doc.head.querySelectorAll(`meta[${attr}="${name}"]`)]
-        .map((m) => m.content)
-        .join(", ");
-      return meta || "";
-    }
-
-    const faviconLink = document.createElement('link');
-    faviconLink.rel = 'icon';
-    faviconLink.href = `${getMetadata("favicon") || '/favicon.ico'}`;
-    document.head.appendChild(faviconLink);
-  </script>
-  <script>
-    const stylesheetLink = document.createElement('link');
-    stylesheetLink.rel = 'stylesheet';
-    stylesheetLink.href = `/styles/${getMetadata("theme") || 'tmb'}/styles.css`;
-    document.head.appendChild(stylesheetLink);
-  </script>
   <script type="module">
     window.addEventListener('load', () => {
       if (document.referrer) {
@@ -50,7 +30,7 @@
     import { sampleRUM } from '/scripts/aem.js';
     sampleRUM('404', { source: document.referrer });
   </script>
-  <!-- <link rel="stylesheet" href="/styles/tmb/styles.css"> -->
+  <link rel="stylesheet" href="/styles/styles.css">
   <style>
     main.error {
       min-height: calc(100vh - var(--nav-height));
@@ -66,7 +46,7 @@
       font-family: monospace;
     }
   </style>
-  <!-- <link rel="stylesheet" href="/styles/tmb/lazy-styles.css"> -->
+  <link rel="stylesheet" href="/styles/lazy-styles.css">
 </head>
 
 <body>
@@ -78,7 +58,7 @@
       </svg>
       <h2 class="error-message">Page Not Found</h2>
       <p class="button-container">
-        <a href="/" class="button secondary error-button-home">Go back to home</a>
+        <a href="/" class="button secondary error-button-home">Go home</a>
       </p>
     </div>
   </main>
