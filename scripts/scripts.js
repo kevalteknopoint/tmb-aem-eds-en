@@ -111,11 +111,6 @@ async function loadEager(doc) {
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
   if (main) {
-    
-    if (window.isErrorPage) {
-      // Step A: Load the 404 Fragment & Theme
-      await loadMultiSite404(main);
-    }
     decorateMain(main);
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
@@ -142,11 +137,6 @@ async function loadLazy(doc) {
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();
-
-  if (window.isErrorPage) {
-    // Force the theme before showing the header/footer
-    await apply404Theme();
-  }
 
   loadHeader(doc.querySelector('header'));
   loadFooter(doc.querySelector('footer'));
@@ -246,6 +236,14 @@ async function pageAnalytics() {
 }
 
 async function loadPage() {
+  try {
+    if (window.hlx404MetaReady) {
+      await window.hlx404MetaReady;
+    }
+  } catch (e) {
+    // do nothing
+  }
+
   window.adobeDataLayer = window.adobeDataLayer || [];
   setPersona();
 
@@ -279,52 +277,6 @@ async function loadPage() {
 
   loadNonBlockLibs();
   loadDelayed();
-}
-
-/**
- * Loads the correct 404 fragment based on site-specific metadata or URL path.
- */
-async function loadMultiSite404(main) {
-  if (window.isErrorPage) {
-    // Detect site from URL (e.g., /site-a/...) or custom Metadata
-    const pathParts = window.location.pathname.split('/');
-    const sitePrefix = pathParts[1] || 'default';
-    
-    // Check metadata spreadsheet for '404-source' override
-    const fragmentPath = getMetadata('404-source') || `/${sitePrefix}/404`;
-
-    try {
-      const resp = await fetch(`${fragmentPath}.plain.html`);
-      if (resp.ok) {
-        const html = await resp.text();
-        main.innerHTML = html;
-        
-        // Force Theme Class onto Body (Critical for CSS variables)
-        const theme = getMetadata('theme');
-        if (theme) document.body.classList.add(theme);
-      }
-    } catch (e) {
-      console.error('Critical: 404 Fragment failed', e);
-    }
-  }
-}
-
-
-async function apply404Theme() {
-  const { getMetadata } = await import('./aem.js');
-  
-  // 1. Manually check the metadata JSON for the /404 path
-  const resp = await fetch('/metadata.json');
-  if (resp.ok) {
-    const json = await resp.json();
-    // Find metadata for /404 or based on the current site prefix
-    const sitePrefix = window.location.pathname.split('/')[1];
-    const meta = json.data.find((m) => m.URL === `/${sitePrefix}/**`) || json.data.find((m) => m.URL === '/404');
-
-    if (meta && meta.Theme) {
-      document.body.classList.add(meta.Theme);
-    }
-  }
 }
 
 window.initAos = function initAos() {

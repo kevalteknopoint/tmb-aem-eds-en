@@ -7,11 +7,163 @@
     window.isErrorPage = true;
     window.errorCode = '404';
   </script>
+  <script type="text/javascript">
+    function upsertMeta(name, content) {
+      if (!content) return;
+      let meta = document.head.querySelector(`meta[name="${name}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', name);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    }
+
+    function detectSiteKey() {
+      const hostname = window.location.hostname.toLowerCase();
+      const pathname = window.location.pathname.toLowerCase();
+
+      if (pathname.startsWith('/fmbank/')) return 'fmbank';
+      if (pathname.startsWith('/hpbank/')) return 'hpbank';
+      if (pathname.startsWith('/unibank/')) return 'unibank';
+      if (pathname.startsWith('/tmbl/')) return 'tmbl';
+      if (pathname.startsWith('/tmbank/')) return 'tmbank';
+
+      if (hostname.includes('firefighters') || hostname.includes('fmbank')) return 'fmbank';
+      if (hostname.includes('healthprofessionals') || hostname.includes('hpbank')) return 'hpbank';
+      if (hostname.includes('unibank')) return 'unibank';
+      if (hostname.includes('tmbl') || hostname.includes('teachersmutualbanklimited')) return 'tmbl';
+      if (hostname.includes('teachersmutual') || hostname.includes('tmbank')) return 'tmbank';
+
+      return 'tmbank';
+    }
+
+    function buildFallbackConfig(siteKey) {
+      const bySite = {
+        tmbank: {
+          theme: 'tmb',
+          nav: '/tmbank/nav',
+          footer: '/tmbank/footer',
+          basePath: '/tmbank/au/en',
+          brand: 'tmb',
+          source404: '/tmbank/au/en/404',
+        },
+        fmbank: {
+          theme: 'fmb',
+          nav: '/fmbank/nav',
+          footer: '/fmbank/footer',
+          basePath: '/fmbank/au/en',
+          brand: 'fmb',
+          source404: '/fmbank/au/en/404',
+        },
+        hpbank: {
+          theme: 'hp',
+          nav: '/hpbank/nav',
+          footer: '/hpbank/footer',
+          basePath: '/hpbank/au/en',
+          brand: 'hp',
+          source404: '/hpbank/au/en/404',
+        },
+        unibank: {
+          theme: 'ub',
+          nav: '/unibank/nav',
+          footer: '/unibank/footer',
+          basePath: '/unibank/au/en',
+          brand: 'ub',
+          source404: '/unibank/au/en/404',
+        },
+        tmbl: {
+          theme: 'tmbl',
+          nav: '/tmbl/nav',
+          footer: '/tmbl/footer',
+          basePath: '/tmbl/au/en',
+          brand: 'tmbl',
+          source404: '/tmbl/au/en/404',
+        },
+      };
+
+      return bySite[siteKey] || bySite.tmbank;
+    }
+
+    function applyConfig(config) {
+      upsertMeta('theme', config.theme);
+      upsertMeta('nav', config.nav);
+      upsertMeta('footer', config.footer);
+      upsertMeta('base-path', config.basePath);
+      upsertMeta('brand', config.brand);
+      upsertMeta('404-source', config.source404);
+
+      if (!document.head.querySelector('link[data-error-theme="true"]')) {
+        const stylesheetLink = document.createElement('link');
+        stylesheetLink.rel = 'stylesheet';
+        stylesheetLink.href = `/styles/${config.theme}/styles.css`;
+        stylesheetLink.setAttribute('data-error-theme', 'true');
+        document.head.appendChild(stylesheetLink);
+      }
+    }
+
+    async function hydrateConfigFromMetadata(siteKey, fallbackConfig) {
+      try {
+        const response = await fetch('/metadata.json', { cache: 'no-store' });
+        if (!response.ok) return fallbackConfig;
+
+        const json = await response.json();
+        const rows = Array.isArray(json?.data) ? json.data : [];
+
+        const siteRow = rows.find((row) => row?.url === `/${siteKey}/**`)
+          || rows.find((row) => String(row?.['base-path'] || '').startsWith(`/${siteKey}/`));
+
+        if (!siteRow) return fallbackConfig;
+
+        return {
+          theme: siteRow.theme || fallbackConfig.theme,
+          nav: siteRow.nav || fallbackConfig.nav,
+          footer: siteRow.footer || fallbackConfig.footer,
+          basePath: siteRow['base-path'] || fallbackConfig.basePath,
+          brand: siteRow.brand || fallbackConfig.brand,
+          source404: siteRow['404-source'] || `${siteRow['base-path'] || fallbackConfig.basePath}/404`,
+        };
+      } catch (e) {
+        return fallbackConfig;
+      }
+    }
+
+    window.hlx404MetaReady = (async () => {
+      const siteKey = detectSiteKey();
+      const fallbackConfig = buildFallbackConfig(siteKey);
+      const config = await hydrateConfigFromMetadata(siteKey, fallbackConfig);
+      window.errorPageConfig = config;
+      applyConfig(config);
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:title" content="Page not found">
   <script src="/scripts/scripts.js" type="module"></script>
   <script type="module">
+    async function loadAuthored404() {
+      try {
+        await window.hlx404MetaReady;
+        const sourcePath = window.errorPageConfig?.source404 || '/tmbank/au/en/404';
+        const response = await fetch(`${sourcePath}.plain.html`);
+        if (!response.ok) return;
+
+        const html = await response.text();
+        if (!html.trim()) return;
+
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const sourceMain = doc.querySelector('main');
+        const targetMain = document.querySelector('main.error');
+        if (!sourceMain || !targetMain) return;
+
+        targetMain.innerHTML = sourceMain.innerHTML;
+      } catch (e) {
+        // fallback to static 404 content
+      }
+    }
+
     window.addEventListener('load', () => {
+      loadAuthored404();
       if (document.referrer) {
         const { origin, pathname } = new URL(document.referrer);
         if (origin === window.location.origin) {
@@ -30,7 +182,6 @@
     import { sampleRUM } from '/scripts/aem.js';
     sampleRUM('404', { source: document.referrer });
   </script>
-  <link rel="stylesheet" href="/styles/styles.css">
   <style>
     main.error {
       min-height: calc(100vh - var(--nav-height));
