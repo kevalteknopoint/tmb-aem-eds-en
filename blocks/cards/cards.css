@@ -1390,6 +1390,7 @@ html{
   font-weight:var(--font-weight-sm-body);
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
+  text-decoration:unset;
   text-transform:var(--sm-body-case);
   text-underline-offset:2px;
 }

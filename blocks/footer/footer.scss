@@ -124,6 +124,7 @@
 
           display: block;
           color: $color-footer-text;
+          text-decoration: unset;
 
           &:has(svg) {
             display: inline-block;
@@ -187,6 +188,7 @@
           align-items: center;
           color: $color-footer-link;
           padding: 8px 0;
+          text-decoration: unset;
         }
       }
     }
@@ -373,6 +375,10 @@
 
       &:last-child {
         margin-bottom: 0;
+      }
+
+      a {
+        color: $link-reverse;
       }
     }
   }

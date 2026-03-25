@@ -21,6 +21,7 @@
       gap: 16px;
       align-items: center;
       color: $link-default;
+      text-decoration: unset;
 
       @include typo-heading3;
 

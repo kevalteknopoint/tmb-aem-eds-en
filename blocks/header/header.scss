@@ -74,6 +74,7 @@ html:has(.primary-header.search-active) {
     line-height: 24px;
     letter-spacing: 0;
     color: $color-header-nav-primary;
+    text-decoration: unset;
   }
 }
 
@@ -285,6 +286,7 @@ html:has(.primary-header.search-active) {
     display: block;
     color: $color-header-nav-secondary;
     position: relative;
+    text-decoration: unset;
 
     &::after {
       content: '';

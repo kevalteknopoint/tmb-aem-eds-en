@@ -27,7 +27,6 @@
   max-width:calc(1440px - 0px);
   padding-block:16px;
   padding-inline:64px;
-  text-transform:capitalize;
   width:100%;
 }
 
@@ -35,6 +34,7 @@
   align-items:center;
   display:flex;
   gap:8px;
+  text-decoration:unset;
 }
 
 .breadcrumb a:has(img){

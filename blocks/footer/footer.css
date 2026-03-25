@@ -172,6 +172,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
+  text-decoration:unset;
   text-transform:var(--body-case);
 }
 
@@ -241,6 +242,7 @@
   letter-spacing:var(--font-letter-spacing-h5);
   line-height:var(--font-height-h5);
   padding:8px 0;
+  text-decoration:unset;
   text-transform:var(--heading5-case);
 }
 
@@ -436,6 +438,10 @@
 
 .footer-bottom .footer-disclaimer p:last-child{
   margin-bottom:0;
+}
+
+.footer-bottom .footer-disclaimer p a{
+  color:var(--link-reverse);
 }
 
 @media screen and (max-width: 1279px){

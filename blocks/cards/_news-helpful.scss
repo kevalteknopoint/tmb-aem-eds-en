@@ -130,6 +130,7 @@ html {
                 color: $heading-default;
                 border-bottom: 2px solid $link-accent;
                 text-underline-offset: 2px;
+                text-decoration: unset;
 
                 @include typo-sm-body;
               }

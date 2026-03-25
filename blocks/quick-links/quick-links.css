@@ -36,6 +36,7 @@
   justify-content:flex-start;
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
+  text-decoration:unset;
   text-transform:var(--heading3-case);
 }
 
