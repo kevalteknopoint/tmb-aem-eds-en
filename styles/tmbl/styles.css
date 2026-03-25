@@ -817,6 +817,18 @@ svg.icon-svg.icon-accent{
   background-size:cover;
 }
 
+.align-default-left .default-content-wrapper *{
+  text-align:left !important;
+}
+
+.align-default-right .default-content-wrapper *{
+  text-align:right !important;
+}
+
+.align-default-center .default-content-wrapper *{
+  text-align:center !important;
+}
+
 @media screen and (max-width: 1439px){
   :root{
     --carousel-fix-x:64px;

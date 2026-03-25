@@ -312,3 +312,21 @@ svg.icon-svg.icon-accent {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.align-default-left {
+  .default-content-wrapper * {
+    text-align: left !important;
+  }
+}
+
+.align-default-right {
+  .default-content-wrapper * {
+    text-align: right !important;
+  }
+}
+
+.align-default-center {
+  .default-content-wrapper * {
+    text-align: center !important;
+  }
+}

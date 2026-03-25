@@ -535,6 +535,18 @@
           {
             "name": "Tabbed Navigation",
             "value": "tabbed-navigation"
+          },
+          {
+            "name": "Align Left (Default Content)",
+            "value": "align-default-left"
+          },
+          {
+            "name": "Align Right (Default Content)",
+            "value": "align-default-right"
+          },
+          {
+            "name": "Align Center (Default Content)",
+            "value": "align-default-center"
           }
         ]
       }
@@ -1531,6 +1543,50 @@
         "name": "mb-alt",
         "label": "Mobile Image Alt",
         "value": ""
+      },
+      {
+        "component": "select",
+        "name": "bg-variant",
+        "label": "Background Color - Variant",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "None",
+            "value": ""
+          },
+          {
+            "name": "Default",
+            "value": "bg-default"
+          },
+          {
+            "name": "Light-1",
+            "value": "bg-light-one"
+          },
+          {
+            "name": "Light-2",
+            "value": "bg-light-two"
+          },
+          {
+            "name": "Light-3",
+            "value": "bg-light-three"
+          },
+          {
+            "name": "Light-4",
+            "value": "bg-light-four"
+          },
+          {
+            "name": "reverse",
+            "value": "bg-reverse"
+          },
+          {
+            "name": "reverse-2",
+            "value": "bg-reverse-two"
+          },
+          {
+            "name": "accent",
+            "value": "bg-accent"
+          }
+        ]
       },
       {
         "component": "richtext",
