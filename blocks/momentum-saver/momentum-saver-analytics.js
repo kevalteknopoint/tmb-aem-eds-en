@@ -19,4 +19,13 @@ document.addEventListener('click', (e) => {
     const nextPageURL = e.target.closest(".momentum-image-saver .button-container .button")?.getAttribute("href");
     ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), '', 'momentum-image-saver', 'columns-container', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', 'momentum-saver', '', '', '', '');
   }
+    if (e.target.closest('.momentum-saver-section.image-swapping .button-container')) {
+    const secondaryLink = e.target.closest('.image-swapping .button-container .button');
+    const pageRegion = getPageRegion(e.target.closest('.image-swapping .button-container .button'));
+    console.log("click occured from second");
+    const componentIndex = getComponentIndex(e.target.closest('.image-swapping .button-container .button'));
+    const ctaTitle = e.target.closest('.image-swapping').querySelector("h2");
+    const nextPageURL = e.target.closest(".image-swapping .button-container .button")?.getAttribute("href");
+    ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), '', 'image-swapping', 'columns-container', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', 'momentum-saver', '', '', '', '');
+  }
 });
