@@ -10,6 +10,24 @@ import milestones from "./milestones.js";
 import './cant-find-looking-for-analytics.js';
 
 export default function decorate(block) {
+  const anchorDiv = block.querySelectorAll('div:has(> .button-container > a)');
+  anchorDiv.forEach((anchorItem) => {
+    const targetDiv = anchorItem?.nextElementSibling;
+    const target = targetDiv?.textContent?.trim();
+    if (target === '_blank' || target === '_self') {
+      const targetLink = anchorItem?.querySelector('a');
+      if (targetLink) targetLink.target = target;
+      targetDiv?.remove();
+    }
+  });
+
+  const allDivs = block.querySelectorAll('div');
+  allDivs.forEach((divEle) => {
+    if (divEle?.textContent?.trim() === '_blank' || divEle?.textContent?.trim() === '_self') {
+      divEle?.remove();
+    }
+  });
+
   if (block.classList.contains("expandable-tiles")) {
     expandableTiles(block);
   } else if (block.closest(".milestones")) {
