@@ -113,7 +113,10 @@ async function loadEager(doc) {
   const main = doc.querySelector('main');
   
   if (main) {
-    if (window.isErrorPage) loadErrorPage(main);
+    if (window.isErrorPage){ 
+      await load404Metadata();
+      await loadErrorPage(main)
+    };
     decorateMain(main);
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
@@ -284,6 +287,47 @@ async function loadErrorPage(main) {
     const fragment = buildBlock('fragment', [[fragmentLink]]);
     const section = main.querySelector('.section');
     if (section) section.replaceChildren(fragment);
+  }
+}
+
+/**
+ * Loads metadata for the 404 page from the global metadata spreadsheet.
+ */
+async function load404Metadata() {
+  if (window.isErrorPage) {
+    try {
+      // 1. Fetch the published metadata JSON from your project root
+      const resp = await fetch('/metadata.json');
+      if (!resp.ok) return;
+      
+      const { data } = await resp.json();
+      
+      // 2. Find the row specifically defined for the /404 path
+      const meta404 = data.find((row) => row.URL === '/404' || row.URL === '/404.html');
+
+      if (meta404) {
+        // 3. Apply the values to the document head
+        Object.entries(meta404).forEach(([key, value]) => {
+          if (key === 'URL' || !value) return;
+
+          if (key.toLowerCase() === 'title') {
+            document.title = value;
+          } else {
+            // Update existing or create new meta tags
+            let meta = document.head.querySelector(`meta[name="${key}"], meta[property="${key}"]`);
+            if (!meta) {
+              meta = document.createElement('meta');
+              if (key.includes(':')) meta.setAttribute('property', key);
+              else meta.setAttribute('name', key);
+              document.head.append(meta);
+            }
+            meta.content = value;
+          }
+        });
+      }
+    } catch (error) {
+      console.error('Failed to load 404 metadata:', error);
+    }
   }
 }
 
