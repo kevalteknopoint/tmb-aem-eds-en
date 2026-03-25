@@ -123,8 +123,6 @@ export default async function decorate(block) {
   const fragment = await loadFragment(navPath);
   const searchPath = `${getMetadata('base-path')}/search-results`;
 
-  fetchQueryJson();
-
   block.innerHTML = fragment.innerHTML;
 
   // --- SECONDARY NAV ---
@@ -354,4 +352,8 @@ export default async function decorate(block) {
     document.body.style.overflow = 'auto';
     mobileMenuSection.classList.remove('active');
   });
+
+  block?.classList.add('header-loaded');
+
+  fetchQueryJson();
 }
