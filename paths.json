@@ -4,7 +4,8 @@
     "/content/tmb/configuration:/.helix/config.json",
     "/content/tmb/metadata:/metadata.json",
     "/content/tmb/placeholders:/placeholders.json",
-    "/content/tmb/headers:/.helix/headers.json"
+    "/content/tmb/headers:/.helix/headers.json",
+    "/content/tmb/tmbank/au/en/404:/404.html"
   ],
   "includes": [
     "/content/tmb/",    
