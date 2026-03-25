@@ -110,6 +110,7 @@ html:has(.primary-header.search-active) .search-results-section{
   font-weight:400;
   letter-spacing:0;
   line-height:24px;
+  text-decoration:unset;
 }
 
 .primary-header{
@@ -241,6 +242,7 @@ html:has(.primary-header.search-active) .search-results-section{
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   position:relative;
+  text-decoration:unset;
   text-transform:var(--body-case);
 }
 

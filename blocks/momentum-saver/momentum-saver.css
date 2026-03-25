@@ -184,23 +184,18 @@
 .momentum-saver-section .columns.block > div h3,
 .momentum-saver-section .columns.block > div h4,
 .momentum-saver-section .columns.block > div h5,
-.momentum-saver-section .columns.block > div h6,
 .momentum-image-saver .columns.block > div h3,
 .momentum-image-saver .columns.block > div h4,
 .momentum-image-saver .columns.block > div h5,
-.momentum-image-saver .columns.block > div h6,
 .image-swapping .columns.block > div h3,
 .image-swapping .columns.block > div h4,
 .image-swapping .columns.block > div h5,
-.image-swapping .columns.block > div h6,
 .momentum-app-badges .columns.block > div h3,
 .momentum-app-badges .columns.block > div h4,
 .momentum-app-badges .columns.block > div h5,
-.momentum-app-badges .columns.block > div h6,
 .momentum-direct-variant .columns.block > div h3,
 .momentum-direct-variant .columns.block > div h4,
-.momentum-direct-variant .columns.block > div h5,
-.momentum-direct-variant .columns.block > div h6{
+.momentum-direct-variant .columns.block > div h5{
   color:var(--heading-default);
   font-family:var(--font-family-intro);
   font-size:var(--font-size-intro);
@@ -214,24 +209,34 @@
 .momentum-saver-section .columns.block > div h3:last-child,
 .momentum-saver-section .columns.block > div h4:last-child,
 .momentum-saver-section .columns.block > div h5:last-child,
-.momentum-saver-section .columns.block > div h6:last-child,
 .momentum-image-saver .columns.block > div h3:last-child,
 .momentum-image-saver .columns.block > div h4:last-child,
 .momentum-image-saver .columns.block > div h5:last-child,
-.momentum-image-saver .columns.block > div h6:last-child,
 .image-swapping .columns.block > div h3:last-child,
 .image-swapping .columns.block > div h4:last-child,
 .image-swapping .columns.block > div h5:last-child,
-.image-swapping .columns.block > div h6:last-child,
 .momentum-app-badges .columns.block > div h3:last-child,
 .momentum-app-badges .columns.block > div h4:last-child,
 .momentum-app-badges .columns.block > div h5:last-child,
-.momentum-app-badges .columns.block > div h6:last-child,
 .momentum-direct-variant .columns.block > div h3:last-child,
 .momentum-direct-variant .columns.block > div h4:last-child,
-.momentum-direct-variant .columns.block > div h5:last-child,
-.momentum-direct-variant .columns.block > div h6:last-child{
+.momentum-direct-variant .columns.block > div h5:last-child{
   margin-bottom:0;
+}
+
+.momentum-saver-section .columns.block > div h6,
+.momentum-image-saver .columns.block > div h6,
+.image-swapping .columns.block > div h6,
+.momentum-app-badges .columns.block > div h6,
+.momentum-direct-variant .columns.block > div h6{
+  color:var(--body-default);
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-weight:var(--font-weight-sm-body);
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
+  margin-bottom:16px;
+  text-transform:var(--sm-body-case);
 }
 
 .momentum-saver-section .columns.block > div p,

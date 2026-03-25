@@ -817,6 +817,22 @@ svg.icon-svg.icon-accent{
   background-size:cover;
 }
 
+.align-default-left .default-content-wrapper, .align-default-left .default-content-wrapper *{
+  margin-right:auto !important;
+  text-align:left !important;
+}
+
+.align-default-right .default-content-wrapper, .align-default-right .default-content-wrapper *{
+  margin-left:auto !important;
+  text-align:right !important;
+}
+
+.align-default-center .default-content-wrapper, .align-default-center .default-content-wrapper *{
+  margin-left:auto !important;
+  margin-right:auto !important;
+  text-align:center !important;
+}
+
 @media screen and (max-width: 1439px){
   :root{
     --carousel-fix-x:64px;

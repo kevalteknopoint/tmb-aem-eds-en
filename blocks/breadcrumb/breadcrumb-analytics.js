@@ -2,7 +2,7 @@ import { breadcrumbItemClick, minifyText, getPersona, getPageRegion, getComponen
 
 document.addEventListener('click', (e) => {
   if (e.target.closest('.breadcrumb-container')) {
-     const breadcrumblevel = e.target.closest('.breadcrumb-container').querySelector(".static-breadcrumb").innerText.replace(/[\n\r]+/g, '')
+    const breadcrumblevel = e.target.closest('.breadcrumb-container').querySelector(".static-breadcrumb").innerText.replace(/[\n\r]+/g, '');
     const level = e.target.closest('.breadcrumb-container').querySelector(".static-breadcrumb").innerText.split("/").length;
     const secondaryLink = e.target.closest('.breadcrumb-container .breadcrumb a');
     const pageRegion = getPageRegion(e.target.closest('.breadcrumb-container .breadcrumb a'));
