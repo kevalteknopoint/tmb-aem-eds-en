@@ -314,19 +314,23 @@ svg.icon-svg.icon-accent {
 }
 
 .align-default-left {
-  .default-content-wrapper * {
+  .default-content-wrapper, .default-content-wrapper * {
     text-align: left !important;
+    margin-right: auto !important;
   }
 }
 
 .align-default-right {
-  .default-content-wrapper * {
+  .default-content-wrapper, .default-content-wrapper * {
     text-align: right !important;
+    margin-left: auto !important;
   }
 }
 
 .align-default-center {
-  .default-content-wrapper * {
+  .default-content-wrapper, .default-content-wrapper * {
     text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
