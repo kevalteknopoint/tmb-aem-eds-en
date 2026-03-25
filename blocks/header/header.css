@@ -37,7 +37,7 @@
   --space-xs:16px;
 }
 
-header:has(.header.block){
+header:has(.header.block.header-loaded){
   min-height:unset;
 }
 

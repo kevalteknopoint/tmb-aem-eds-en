@@ -1,6 +1,6 @@
 @use '../../styles/base' as *;
 
-header:has(.header.block) {
+header:has(.header.block.header-loaded) {
   min-height: unset;
 }
 

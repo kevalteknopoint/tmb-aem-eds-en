@@ -353,5 +353,7 @@ export default async function decorate(block) {
     mobileMenuSection.classList.remove('active');
   });
 
+  block?.classList.add('header-loaded');
+
   fetchQueryJson();
 }
