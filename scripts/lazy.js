@@ -115,7 +115,7 @@ export default async function initLazy() {
   loadAos();
   await fetchPlaceholders();
   await fetchPlaceholders('dev', 'dev-placeholders.json');
-  loadPlaceholders();
+  loadPlaceholders(document.querySelector('main'));
   loadDmImages();
   pageAnalytics();
   loadSprite();

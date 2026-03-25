@@ -1,23 +1,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <style>
+  header {
+    min-height: 141px;
+  }
+
+  @media screen and (max-width: 768px) {
+    header {
+      min-height: 60px;
+    }
+  }
+
   body {
     display: none;
   }
+
   body.appear {
     display: block;
   }
 </style>
 
 <script>
-  (function() {
-    // Helper function to get metadata content
-    function getMeta(name) {
-      const attr = name.includes(":") ? "property" : "name";
-      const meta = document.querySelector(`meta[${attr}="${name}"]`);
-      return meta ? meta.content : "";
-    }
+  // Helper function to get metadata content
+  function getMeta(name) {
+    const attr = name.includes(":") ? "property" : "name";
+    const meta = document.querySelector(`meta[${attr}="${name}"]`);
+    return meta ? meta.content : "";
+  }
 
+  (function() {
     // Resolve values
     const theme = getMeta("theme") || 'tmb';
     const favicon = getMeta("favicon") || '/favicon.ico';
@@ -32,6 +43,6 @@
 <script src="/scripts/scripts.js" type="module"></script>
 <script>
   const launchScript = document.createElement('script');
-  launchScript.src = `${getMetadata("analytics-script") || 'https://assets.adobedtm.com/fb921698a526/6931f2c56d94/launch-10ebe48cc381-development.min.js'}`;
+  launchScript.src = `${getMeta("analytics-script") || 'https://assets.adobedtm.com/fb921698a526/6931f2c56d94/launch-10ebe48cc381-development.min.js'}`;
   document.head.appendChild(launchScript);
 </script>

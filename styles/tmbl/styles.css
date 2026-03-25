@@ -523,10 +523,6 @@ p{
   text-wrap:pretty;
 }
 
-header:has(.secondary-header){
-  min-height:141px;
-}
-
 .d-none{
   display:none !important;
 }
@@ -946,9 +942,6 @@ svg.icon-svg.icon-accent{
 }
 
 @media screen and (max-width: 767px){
-  header{
-    min-height:60px;
-  }
   .spacer-bottom{
     margin-bottom:40px;
   }

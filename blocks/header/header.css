@@ -37,6 +37,10 @@
   --space-xs:16px;
 }
 
+header:has(.header.block){
+  min-height:unset;
+}
+
 .mui-toast-wrapper{
   background-color:#323232;
   border-radius:4px;
