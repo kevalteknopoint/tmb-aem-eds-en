@@ -114,6 +114,7 @@ async function loadEager(doc) {
     if (window.isErrorPage) {
     // Run the multi-site 404 logic to fetch the correct fragment
       await loadMultiSite404(main);
+      await apply404Theme();
     }
     decorateMain(main);
     document.body.classList.add('appear');
