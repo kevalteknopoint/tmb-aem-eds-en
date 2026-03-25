@@ -12,7 +12,7 @@ import {
   loadCSS,
 } from './aem.js';
 import loadNonBlockLibs from './components.js';
-import { initLazy } from './lazy.js';
+import initLazy from './lazy.js';
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
