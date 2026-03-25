@@ -10,6 +10,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:title" content="Page not found">
   <script src="/scripts/scripts.js" type="module"></script>
+  <script>
+    function getMetadata(name, doc = document) {
+      const attr = name && name.includes(":") ? "property" : "name";
+      const meta = [...doc.head.querySelectorAll(`meta[${attr}="${name}"]`)]
+        .map((m) => m.content)
+        .join(", ");
+      return meta || "";
+    }
+
+    const faviconLink = document.createElement('link');
+    faviconLink.rel = 'icon';
+    faviconLink.href = `${getMetadata("favicon") || '/favicon.ico'}`;
+    document.head.appendChild(faviconLink);
+  </script>
+  <script>
+    const stylesheetLink = document.createElement('link');
+    stylesheetLink.rel = 'stylesheet';
+    stylesheetLink.href = `/styles/${getMetadata("theme") || 'tmb'}/styles.css`;
+    document.head.appendChild(stylesheetLink);
+  </script>
   <script type="module">
     window.addEventListener('load', () => {
       if (document.referrer) {
