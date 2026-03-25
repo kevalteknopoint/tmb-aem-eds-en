@@ -281,10 +281,10 @@ document.addEventListener("click", (e) => {
   const link = e.target.closest("a");
   if (!link) return;
 
-  const isExternal = link.hostname && link.hostname !== window.location.hostname;
+  const isExternal = (link.hostname && link.hostname !== window.location.hostname) || (link.href?.endsWith('#_blank'));
 
   if (isExternal) {
     e.preventDefault();
-    window.open(link.href, "_blank", "noopener,noreferrer");
+    window.open(link.href?.replace('#_blank', ''), "_blank", "noopener,noreferrer");
   }
 });
