@@ -12,6 +12,7 @@ import {
   loadCSS,
   loadPlaceholders,
   loadDmImages,
+  buildBlock
 } from './aem.js';
 import { pageIntialization, setPersona } from './analytics/exports.js';
 import { fetchPlaceholders } from './placeholders.js';
