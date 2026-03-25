@@ -276,3 +276,15 @@ window.initAos = function initAos() {
 };
 
 loadPage();
+
+document.addEventListener("click", (e) => {
+  const link = e.target.closest("a");
+  if (!link) return;
+
+  const isExternal = link.hostname && link.hostname !== window.location.hostname;
+
+  if (isExternal) {
+    e.preventDefault();
+    window.open(link.href, "_blank", "noopener,noreferrer");
+  }
+});
