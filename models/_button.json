@@ -36,6 +36,16 @@
         },
         {
           "component": "select",
+          "name": "default-button-target",
+          "label": "Button Target",
+          "value": "_self",
+          "options": [
+            { "name": "Same", "value": "_self" },
+            { "name": "New", "value": "_blank" }
+          ]
+        },
+        {
+          "component": "select",
           "name": "linkType",
           "label": "Type",
           "options": [
