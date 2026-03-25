@@ -12,6 +12,7 @@ import {
   loadCSS,
   loadPlaceholders,
   loadDmImages,
+  decorateMain,
 } from './aem.js';
 import { pageIntialization, setPersona } from './analytics/exports.js';
 import { fetchPlaceholders } from './placeholders.js';
@@ -116,6 +117,8 @@ async function loadEager(doc) {
       await loadMultiSite404(main);
       await apply404Theme();
     }
+    const { decorateMain } = await import('./aem.js');
+
     decorateMain(main);
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
