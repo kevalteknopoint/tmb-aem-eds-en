@@ -142,6 +142,11 @@ async function loadLazy(doc) {
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();
 
+  if (window.isErrorPage) {
+    // Force the theme before showing the header/footer
+    await apply404Theme();
+  }
+
   loadHeader(doc.querySelector('header'));
   loadFooter(doc.querySelector('footer'));
 
@@ -311,6 +316,23 @@ async function loadMultiSite404(main) {
     }
   } catch (e) {
     console.error('Critical Error loading 404 Fragment:', e);
+  }
+}
+
+async function apply404Theme() {
+  const { getMetadata } = await import('./aem.js');
+  
+  // 1. Manually check the metadata JSON for the /404 path
+  const resp = await fetch('/metadata.json');
+  if (resp.ok) {
+    const json = await resp.json();
+    // Find metadata for /404 or based on the current site prefix
+    const sitePrefix = window.location.pathname.split('/')[1];
+    const meta = json.data.find((m) => m.URL === `/${sitePrefix}/**`) || json.data.find((m) => m.URL === '/404');
+
+    if (meta && meta.Theme) {
+      document.body.classList.add(meta.Theme);
+    }
   }
 }
 
