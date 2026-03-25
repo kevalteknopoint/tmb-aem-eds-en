@@ -288,7 +288,7 @@ async function loadMultiSite404(main) {
 
   // Option B: Detection via Metadata Spreadsheet (e.g., a '404-source' column)
   // This is better if you use custom domains for each site.
-  let fragmentPath = getMetadata('404-source') || `/${sitePrefix}/404`;
+  let fragmentPath = getMetadata('404-source') || `/${sitePrefix}/au/en/404`;
 
   try {
     // 2. Fetch the AEM-authored fragment
