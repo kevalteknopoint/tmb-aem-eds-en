@@ -12,7 +12,6 @@ import {
   loadCSS,
   loadPlaceholders,
   loadDmImages,
-  decorateMain,
 } from './aem.js';
 import { pageIntialization, setPersona } from './analytics/exports.js';
 import { fetchPlaceholders } from './placeholders.js';
@@ -112,13 +111,11 @@ async function loadEager(doc) {
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
   if (main) {
+    
     if (window.isErrorPage) {
-    // Run the multi-site 404 logic to fetch the correct fragment
+      // Step A: Load the 404 Fragment & Theme
       await loadMultiSite404(main);
-      await apply404Theme();
     }
-    const { decorateMain } = await import('./aem.js');
-
     decorateMain(main);
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
@@ -288,40 +285,30 @@ async function loadPage() {
  * Loads the correct 404 fragment based on site-specific metadata or URL path.
  */
 async function loadMultiSite404(main) {
-  const { getMetadata, decorateMain } = await import('./aem.js');
-
-  // 1. Site Detection Logic
-  // Option A: Detection via URL path (e.g., /site-a/broken-link)
-  const pathParts = window.location.pathname.split('/');
-  const sitePrefix = pathParts[1] || 'default';
-
-  // Option B: Detection via Metadata Spreadsheet (e.g., a '404-source' column)
-  // This is better if you use custom domains for each site.
-  let fragmentPath = getMetadata('404-source') || `/${sitePrefix}/au/en/404`;
-
-  try {
-    // 2. Fetch the AEM-authored fragment
-    const resp = await fetch(`${fragmentPath}.plain.html`);
+  if (window.isErrorPage) {
+    // Detect site from URL (e.g., /site-a/...) or custom Metadata
+    const pathParts = window.location.pathname.split('/');
+    const sitePrefix = pathParts[1] || 'default';
     
-    if (resp.ok) {
-      const html = await resp.text();
-      main.innerHTML = html;
+    // Check metadata spreadsheet for '404-source' override
+    const fragmentPath = getMetadata('404-source') || `/${sitePrefix}/404`;
 
-      // 3. Apply the Site-Specific Theme
-      // This ensures 'site-a' gets Site A's CSS variables/styles
-      const theme = getMetadata('theme');
-      if (theme) document.body.classList.add(theme);
-
-      // 4. Decorate the new content so blocks (columns, hero, etc.) work
-      await decorateMain(main);
-    } else {
-      // Fallback if the specific 404 page is missing
-      main.innerHTML = '<h1>404 - Page Not Found</h1>';
+    try {
+      const resp = await fetch(`${fragmentPath}.plain.html`);
+      if (resp.ok) {
+        const html = await resp.text();
+        main.innerHTML = html;
+        
+        // Force Theme Class onto Body (Critical for CSS variables)
+        const theme = getMetadata('theme');
+        if (theme) document.body.classList.add(theme);
+      }
+    } catch (e) {
+      console.error('Critical: 404 Fragment failed', e);
     }
-  } catch (e) {
-    console.error('Critical Error loading 404 Fragment:', e);
   }
 }
+
 
 async function apply404Theme() {
   const { getMetadata } = await import('./aem.js');
