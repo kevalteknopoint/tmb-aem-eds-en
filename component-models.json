@@ -710,6 +710,22 @@
         "label": "Button Link"
       },
       {
+        "component": "select",
+        "name": "hp-banner-button-target",
+        "label": "Button Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
         "component": "text",
         "name": "banner-linkText",
         "label": "Button Text"
@@ -742,6 +758,22 @@
         "component": "aem-content",
         "name": "banner-link-2",
         "label": "Button 2 Link"
+      },
+      {
+        "component": "select",
+        "name": "hp-banner-2-button-target",
+        "label": "Button Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
       },
       {
         "component": "text",
@@ -1216,6 +1248,22 @@
         "label": "Button Link"
       },
       {
+        "component": "select",
+        "name": "default-card-button-target",
+        "label": "Button Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
         "component": "text",
         "name": "button-linkText",
         "label": "Button Text"
@@ -1248,6 +1296,22 @@
         "component": "aem-content",
         "name": "button-2-link",
         "label": "Button Link 2"
+      },
+      {
+        "component": "select",
+        "name": "default-card-button-2-target",
+        "label": "Button Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
       },
       {
         "component": "text",
@@ -1851,6 +1915,22 @@
         "name": "navigation-card-link",
         "label": "Navigation Card Link",
         "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "navigation-card-link-target",
+        "label": "Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
       }
     ]
   },

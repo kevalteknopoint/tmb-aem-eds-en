@@ -14,6 +14,7 @@ export default async function decorate(block) {
     let logo = sections[3];
     let description = sections[4];
     let cardLink = sections[5];
+    let cardLinkTarget = sections[6];
     let renderCardLink = false;
 
     // remove empty sections
@@ -23,6 +24,7 @@ export default async function decorate(block) {
     if (isEmpty(logo)) logo = null;
     if (isEmpty(description)) description = null;
     if (isEmpty(cardLink)) cardLink = null;
+    if (isEmpty(cardLinkTarget)) cardLinkTarget = null;
 
     const cardHref = cardLink?.querySelector('a')?.href;
 
@@ -69,6 +71,7 @@ export default async function decorate(block) {
       const cardLinkEle = document.createElement('a');
       cardLinkEle?.classList.add('is-clickable');
       cardLinkEle.href = cardHref;
+      cardLinkEle.target = cardLinkTarget?.textContent?.trim();
       card.appendChild(cardLinkEle);
     }
 

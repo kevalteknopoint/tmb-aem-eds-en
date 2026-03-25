@@ -18,10 +18,12 @@ function createSwiper(block) {
       const mobDiv = children[1];
       const richtextdiv = children[2];
       const button1Div = children[3]; // Div containing "<strong><a href="#">learn</a></strong>"
-      const button2LinkDiv = children[4]; // Div containing "<a href="#">#</a>"
-      const button2TextDiv = children[5]; // Div containing "discover" (Text)
-      const button2TitleDiv = children[6]; // Div containing "discover" (Title)
-      const button2ClassDiv = children[7]; // Div containing "secondary"
+      const button1TargetDiv = children[4];
+      const button2LinkDiv = children[5]; // Div containing "<a href="#">#</a>"
+      const button2TargetDiv = children[6];
+      const button2TextDiv = children[7]; // Div containing "discover" (Text)
+      const button2TitleDiv = children[8]; // Div containing "discover" (Title)
+      const button2ClassDiv = children[9]; // Div containing "secondary"
 
       row.classList.add("swiper-slide", "swiperinnerdiv");
 
@@ -33,6 +35,8 @@ function createSwiper(block) {
       if (button1Div) {
         const btn1Anchor = button1Div.querySelector('a');
         if (btn1Anchor) {
+          btn1Anchor.target = button1TargetDiv?.textContent;
+          button1TargetDiv?.remove();
           btn1Anchor.className = 'button primary'; // Apply standard button classes
           btnContainer.appendChild(btn1Anchor);
         }
@@ -50,6 +54,8 @@ function createSwiper(block) {
         btn2.href = b2Href;
         btn2.title = b2Title || b2Text;
         btn2.textContent = b2Text;
+        btn2.target = button2TargetDiv?.textContent;
+        button2TargetDiv?.remove();
         btn2.className = `button ${b2Class}`;
         btnContainer.appendChild(btn2);
       }

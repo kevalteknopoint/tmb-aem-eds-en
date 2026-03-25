@@ -112,6 +112,16 @@
           "label": "Button Link"
         },
         {
+          "component": "select",
+          "name": "hp-banner-button-target",
+          "label": "Button Target",
+          "value": "_self",
+          "options": [
+            { "name": "Same", "value": "_self" },
+            { "name": "New", "value": "_blank" }
+          ]
+        },
+        {
           "component": "text",
           "name": "banner-linkText",
           "label": "Button Text"
@@ -144,6 +154,16 @@
           "component": "aem-content",
           "name": "banner-link-2",
           "label": "Button 2 Link"
+        },
+        {
+          "component": "select",
+          "name": "hp-banner-2-button-target",
+          "label": "Button Target",
+          "value": "_self",
+          "options": [
+            { "name": "Same", "value": "_self" },
+            { "name": "New", "value": "_blank" }
+          ]
         },
         {
           "component": "text",
