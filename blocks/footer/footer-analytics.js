@@ -1,53 +1,179 @@
-import { ctaInteraction, menuInteraction, minifyText, socialmediaClick, getComponentIndex, getPageRegion, getPersona } from "../../scripts/analytics/exports.js";
+// import { ctaInteraction, menuInteraction, minifyText, socialmediaClick, getComponentIndex, getPageRegion, getPersona } from "../../scripts/analytics/exports.js";
+
+// document.addEventListener('click', (e) => {
+//   if (e.target.closest('.footer-col')) {
+//     const anchor = e.target.closest('a');
+//     if (!anchor) return;
+
+//     const pageRegion = getPageRegion(anchor);
+//     const componentIndex = getComponentIndex(anchor);
+//     const nextPageURL = anchor?.getAttribute('href') || '';
+
+//     const closestLi = anchor?.closest('ul')?.closest('li');
+
+//     let text = "";
+//     if (closestLi){
+//     closestLi.childNodes?.forEach((node) => {
+//       if (node.nodeType === Node.TEXT_NODE) {
+//         text += minifyText(node.textContent);
+//       }
+//     });
+//   }
+//     if (!text && closestLi?.querySelector(':scope > p')) {
+//       text = minifyText(closestLi?.querySelector(':scope > p')?.textContent);
+//     }
+// console.log('hi')
+//     menuInteraction(pageRegion, minifyText(text), minifyText(anchor.textContent), '', 'global footer', 'footer', componentIndex, getPersona(), nextPageURL, 'menu-click', 'internal', '', '', '', 'footer', '');
+//   }
+
+//   if (e.target.closest('.footer-meta-item')) {
+//     const anchor = e.target.closest('a');
+//     if (!anchor) return;
+
+//     const icon = anchor.querySelector('.icon');
+//     let iconClassString;
+//     let iconName;
+//     if(icon){
+//      iconClassString = icon.classList.toString();
+//      iconName = iconClassString?.replaceAll('icon-', '')?.replaceAll('icon', '')?.replaceAll(' ', '');}
+//     const pageRegion = getPageRegion(anchor);
+//     const componentIndex = getComponentIndex(anchor);
+//       console.log('social')
+//     socialmediaClick(pageRegion, minifyText(iconName), 'global footer', 'footer', componentIndex, getPersona(), 'socialmedia-click', '', '', '', 'global footer', '');
+//   }
+
+//   if (e.target.closest('.footer-contact')) {
+//     const anchor = e.target.closest('a');
+//     if (!anchor) return;
+
+//     const anchorLi = anchor?.closest('li');
+//     const pageRegion = getPageRegion(anchor);
+//     const componentIndex = getComponentIndex(anchor);
+//     const nextPageURL = anchor?.getAttribute('href') || '';
+// console.log('ta')
+//     ctaInteraction(pageRegion, minifyText(anchorLi?.textContent), minifyText(anchor?.getAttribute('title')), 'socialmedia-click', 'global footer', 'footer', componentIndex, getPersona(), nextPageURL, 'cta-click', 'internal', 'link', 'footer', '', '', '', 'global footer', '');
+//   }
+// });
+import {
+  ctaInteraction,
+  menuInteraction,
+  minifyText,
+  socialmediaClick,
+  getComponentIndex,
+  getPageRegion,
+  getPersona
+} from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
-  if (e.target.closest('.ul-4') || e.target.closest('.ul-9')) {
-    const anchor = e.target.closest('a');
-    if (!anchor) return;
+  const anchor = e.target.closest('a');
+  if (!anchor) return;
 
-    const pageRegion = getPageRegion(anchor);
-    const componentIndex = getComponentIndex(anchor);
-    const nextPageURL = anchor?.getAttribute('href') || '';
+  // ✅ FIX: pageRegion fallback
+  const pageRegion =
+    getPageRegion(anchor) ||
+    getPageRegion(anchor.closest('.footer-col')) ||
+    getPageRegion(anchor.closest('.footer-wrapper')) ||
+    'footer';
 
-    const closestLi = anchor?.closest('ul')?.closest('li');
+  // ✅ FIX: prevent negative index
+  let componentIndex = getComponentIndex(anchor);
+  if (componentIndex < 0 || componentIndex === undefined || componentIndex === null) {
+    componentIndex = 0;
+  }
 
-    let text = "";
+  const nextPageURL = anchor.getAttribute('href') || '';
 
-    closestLi.childNodes.forEach((node) => {
-      if (node.nodeType === Node.TEXT_NODE) {
-        text += minifyText(node.textContent);
-      }
-    });
+  /**
+   * ========================
+   * MENU CLICK (footer links)
+   * ========================
+   */
+  if (anchor.closest('.footer-links')) {
+    const closestLi = anchor.closest('li');
 
-    if (!text && closestLi?.querySelector(':scope > p')) {
-      text = minifyText(closestLi?.querySelector(':scope > p')?.textContent);
+    // ✅ FIX: simpler + safe
+    const text = minifyText(closestLi?.textContent || '');
+
+    menuInteraction(
+      pageRegion,
+      text,
+      minifyText(anchor.textContent),
+      '',
+      'global footer',
+      'footer',
+      componentIndex,
+      getPersona(),
+      nextPageURL,
+      'menu-click',
+      'internal',
+      '',
+      '',
+      '',
+      'footer',
+      ''
+    );
+  }
+
+  /**
+   * ========================
+   * META (help, phone, etc.)
+   * ========================
+   */
+  if (anchor.closest('.footer-meta-item')) {
+    const icon = anchor.querySelector('.icon');
+
+    let iconName = '';
+    if (icon) {
+      const iconClassString = icon.className || '';
+      iconName = iconClassString
+        .replaceAll('icon-', '')
+        .replaceAll('icon', '')
+        .replaceAll(' ', '');
     }
 
-    menuInteraction(pageRegion, minifyText(text), minifyText(anchor.textContent), '', 'global footer', 'footer', componentIndex, getPersona(), nextPageURL, 'menu-click', 'internal', '', '', '', 'footer', '');
+    socialmediaClick(
+      pageRegion,
+      minifyText(iconName || anchor.textContent),
+      'global footer',
+      'footer',
+      componentIndex,
+      getPersona(),
+      'socialmedia-click',
+      '',
+      '',
+      '',
+      'global footer',
+      ''
+    );
   }
 
-  if (e.target.closest('.ul-16')) {
-    const anchor = e.target.closest('a');
-    if (!anchor) return;
+  /**
+   * ========================
+   * CTA + SOCIAL (bottom area)
+   * ========================
+   */
+  if (anchor.closest('.footer-contact')) {
+    const anchorLi = anchor.closest('li');
 
-    const icon = anchor.querySelector('.icon');
-    const iconClassString = icon.classList.toString();
-    const iconName = iconClassString?.replaceAll('icon-', '')?.replaceAll('icon', '')?.replaceAll(' ', '');
-    const pageRegion = getPageRegion(anchor);
-    const componentIndex = getComponentIndex(anchor);
-
-    socialmediaClick(pageRegion, minifyText(iconName), 'global footer', 'footer', componentIndex, getPersona(), 'socialmedia-click', '', '', '', 'global footer', '');
-  }
-
-  if (e.target.closest('.ul-17')) {
-    const anchor = e.target.closest('a');
-    if (!anchor) return;
-
-    const anchorLi = anchor?.closest('li');
-    const pageRegion = getPageRegion(anchor);
-    const componentIndex = getComponentIndex(anchor);
-    const nextPageURL = anchor?.getAttribute('href') || '';
-
-    ctaInteraction(pageRegion, minifyText(anchorLi?.textContent), minifyText(anchor?.getAttribute('title')), 'socialmedia-click', 'global footer', 'footer', componentIndex, getPersona(), nextPageURL, 'cta-click', 'internal', 'link', 'footer', '', '', '', 'global footer', '');
+    ctaInteraction(
+      pageRegion,
+      minifyText(anchorLi?.textContent || ''),
+      minifyText(anchor.getAttribute('title') || ''),
+      'socialmedia-click',
+      'global footer',
+      'footer',
+      componentIndex,
+      getPersona(),
+      nextPageURL,
+      'cta-click',
+      'internal',
+      'link',
+      'footer',
+      '',
+      '',
+      '',
+      'global footer',
+      ''
+    );
   }
 });

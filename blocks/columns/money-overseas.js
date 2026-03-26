@@ -1,4 +1,5 @@
 import { div } from "../../scripts/dom-helpers.js";
+import './money-overseas-analytics.js';
 
 export default function decorateMoneyOverseas() {
   document

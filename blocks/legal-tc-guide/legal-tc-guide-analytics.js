@@ -1,7 +1,7 @@
 import { ctaInteraction, minifyText, getPersona, getPageRegion, getComponentIndex } from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
-  const link = e.target.closest('.legal-tc-guide a');
+  const link = (e.target.closest('.legal-tc-guide:not(.rates-saver) a'));
   if (link) {
     const block = link.closest('.legal-tc-guide');
 
@@ -11,6 +11,8 @@ document.addEventListener('click', (e) => {
 
     const ctaText = minifyText(link.textContent);
     const nextPageURL = link.href;
+    console.log('legal');
+    
     ctaInteraction(
       pageRegion,
       ctaText,

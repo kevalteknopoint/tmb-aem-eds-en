@@ -1,5 +1,6 @@
 import { applyCapsizeToElement } from '../../libs/capsize/capsize.min.js';
 import { div } from '../../scripts/dom-helpers.js';
+import './rate-details-analytics.js';
 
 function createGrid(block) {
   block.querySelectorAll(':scope > ul, .default-content-wrapper > ul').forEach((outerUl) => {

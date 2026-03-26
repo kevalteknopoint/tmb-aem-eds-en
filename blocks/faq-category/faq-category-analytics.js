@@ -64,12 +64,13 @@ document.addEventListener('click', (e) => {
         'faq',
         ''
       );
-    } else if (target.closest('.faq-cant-find-looking-for')) {
+    } else if (target.closest('.faq-cant-find-looking-for:not(.rates-saver)')) {
       const targetContainer = target.closest('.faq-cant-find-looking-for');
       const titleContainer = targetContainer?.querySelector('.default-content-wrapper');
       const title = titleContainer?.querySelector('h1, h2, h3, h4, h5, h6');
       const ctaTitleEle = linkEle?.closest('.cards-card-body')?.querySelector('h1, h2, h3, h4, h5, h6');
-
+      console.log('faq');
+      
       ctaInteraction(
         '',
         ctaText,
@@ -90,7 +91,7 @@ if (linkEle && linkEle.closest('.section-wrapper.faq-detail-container')) {
   const componentIndex = getComponentIndex(linkEle);
   const nextPageURL = linkEle.getAttribute('href') || '';
 
-  // 👉 Identify downloadable documents
+  //  Identify downloadable documents
   const cleanURL = nextPageURL.split('?')[0].toLowerCase();
   const isDownload =
     cleanURL.endsWith('.pdf') ||

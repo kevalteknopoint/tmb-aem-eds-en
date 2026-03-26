@@ -15,89 +15,44 @@ export const GLOBAL_COMPONENT_CLASSES = [
   "tmb-footer",
 ];
 
-export function pageIntialization(
-  pageName,
-  pageType,
-  siteSection,
-  sitesubSection,
-  pageLanguage,
-  pageId,
-  pageTemplate,
-  performanceTier,
-  brand,
-  webType,
-  backtrackFlag,
-  helpVisitFlag,
-  implementationVersion,
-  domInteractiveTime,
-  domInteractiveTimeBucket,
-  firstContentfulPaint,
-  firstContentfulPaintBucket,
-  httpStatusCode,
-  httpStatusGroup,
-  trackingVersion,
-  implementationEnvironment,
-  dataLayerReadyFlag,
-  requiredFieldMissingFlag,
-  testUserFlag,
-  qaSessionFlag,
-  product,
-  primaryProductGroup,
-  primaryProduct,
-  multiProductFlag,
-  personId,
-  loginStatus,
-  hasEverLoggedInFlag,
-  visitorType,
-) {
-  window.adobeDataLayer.push({
-    event: "pageInitialization",
-    page: {
-      name: pageName,
-      pageType,
-      pageURL: window.location.href,
-      pathName: window.location.pathname,
-      siteSection,
-      sitesubSection,
-      pageLanguage,
-      pageTitle: document.title,
-      pageId,
-      pageTemplate,
-      performanceTier,
-    },
-    data: {
-      brand,
-      webType,
-      backtrackFlag,
-      helpVisitFlag,
-      implementationVersion,
-      domInteractiveTime,
-      domInteractiveTimeBucket,
-      firstContentfulPaint,
-      firstContentfulPaintBucket,
-      httpStatusCode,
-      httpStatusGroup,
-      trackingVersion,
-      implementationEnvironment,
-      dataLayerReadyFlag,
-      requiredFieldMissingFlag,
-      testUserFlag,
-      qaSessionFlag,
-    },
-    products: {
-      product,
-      primaryProductGroup,
-      primaryProduct,
-      multiProductFlag,
-    },
-    user: {
-      personId,
-      loginStatus,
-      hasEverLoggedInFlag,
-      visitorType,
-    },
-  });
+export function pageIntialization(pageName,pageType,siteSection,sitesubSection,pageLanguage,pageId,pageTemplate,performanceTier,brand,webType,domInteractiveTime,domInteractiveTimeBucket,firstContentfulPaint,firstContentfulPaintBucket,httpStatusCode,httpStatusGroup,product,loginStatus,hasEverLoggedInFlag,visitorType){
+window.adobeDataLayer.push({
+    "event": "pageInitialization",
+        "page":{
+            "name": pageName, // for home page it will be Home
+            "pageType":pageType, //home page, Product Page or Other Page
+            "pageURL":location.href, // will take it automaticly
+            "pathName":location.pathname, // will take it automaticly
+            "siteSection":siteSection,  //Top-level area of site.e.g. home, home-loans, savings, help, about, rates, campaign.
+            "sitesubSection":sitesubSection,  //Second-level grouping under site_section.e.g. owner-occupier, investor, faqs, calculators.
+            "pageLanguage":pageLanguage,
+            "pageTitle":document.title,
+            "pageId":pageId,     //Internal page identifier from AEM / app router.e.g. hl-your-way-plus.
+            "pageTemplate":pageTemplate,    //Template used by the page.e.g. product-landing, campaign-landing, faq, help-article, tool-page.
+            "performanceTier":performanceTier    //e.g. good, needs-improvement, poor based on thresholds.
+        },
+        "data":{
+            "brand":brand,   //TMBL brand associated with the hit.e.g. tmb, hpb, fmb, unibank, tmbl, broker
+            "webType":webType,   //High-level surface.e.g. web (public website), ib (internet banking), mobile-app      
+            "domInteractiveTime":domInteractiveTime,  //Time until DOM becomes interactive.
+            "domInteractiveTimeBucket":domInteractiveTimeBucket,  //e.g. <1000ms, 1000–3000ms, 3001–5000ms, >5000ms.
+            "firstContentfulPaint":firstContentfulPaint,  //FCP timing for the page.
+            "firstContentfulPaintBucket":firstContentfulPaintBucket,  //Performance buckets for FCP.
+            "httpStatusCode":httpStatusCode,   //HTTP response code for the page or key API call.e.g. 200, 302, 404, 500.
+            "httpStatusGroup":httpStatusGroup  //e.g. 2xx-success, 3xx-redirect, 4xx-client-error, 5xx-server-error
+        },
+        "products":{
+            "product":product  //pass product name on product pages
+        },
+        "user":{
+            "loginStatus":loginStatus,  //e.g. logged-in, anonymous, guest.
+            "hasEverLoggedInFlag":hasEverLoggedInFlag,  //Yes if the person has ever had a logged-in event in their history.
+            "visitorType":visitorType  //e.g. anonymous-web-only, secure-user (has IB/app), mixed-web-secure.
+        }
+});
 }
+
+
 
 export function setPersona() {
   const personaSeq = [
@@ -445,6 +400,25 @@ export function downloadDocument(pageRegion, componentName, componentType, compo
       "linkType": linkType
     }
   });
+}
+//this function will fire when user click on any side nav menu item
+export function sideNavMenuClick(pageRegion,leveloneMenu,leveltwoMenu,componentName,componentType,componentIndex,componentPersona,nextpageUrl,interactionType,linkType,componentId){
+    window.adobeDataLayer.push({
+        "event": "sideNavMenuClick",
+            "data":{
+                "pageRegion":pageRegion,
+                "leveloneMenu":leveloneMenu,
+                "leveltwoMenu":leveltwoMenu,
+                "componentName":componentName,    
+                "componentType":componentType,  
+                "componentIndex":componentIndex,  
+                "componentPersona":componentPersona, 
+                "nextpageUrl":nextpageUrl,
+                "interactionType":interactionType,   
+                "linkType":linkType,
+                "componentId":componentId     
+            }
+});
 }
 
 

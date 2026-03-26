@@ -1,4 +1,5 @@
 import "./legal-tc-guide-analytics.js";
+import '../cards/cant-find-looking-for-analytics.js';
 
 (function decorateLegalTcGuide() {
   // const script = document.createElement("script");

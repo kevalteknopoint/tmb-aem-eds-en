@@ -1,5 +1,6 @@
 import { applyCapsizeToElement } from "../../libs/capsize/capsize.min.js";
 import { div, source, video } from "../../scripts/dom-helpers.js";
+import './hero-banner-analytics.js';
 
 const jsonMap = {
   1: 'desktop-media',
