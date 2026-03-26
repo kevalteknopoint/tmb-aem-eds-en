@@ -168,6 +168,19 @@
   text-transform:var(--heading1-case);
 }
 
+.momentum-saver-section .columns.block > div h1:has(+ h3, + h4, + h5),
+.momentum-saver-section .columns.block > div h2:has(+ h3, + h4, + h5),
+.momentum-image-saver .columns.block > div h1:has(+ h3, + h4, + h5),
+.momentum-image-saver .columns.block > div h2:has(+ h3, + h4, + h5),
+.image-swapping .columns.block > div h1:has(+ h3, + h4, + h5),
+.image-swapping .columns.block > div h2:has(+ h3, + h4, + h5),
+.momentum-app-badges .columns.block > div h1:has(+ h3, + h4, + h5),
+.momentum-app-badges .columns.block > div h2:has(+ h3, + h4, + h5),
+.momentum-direct-variant .columns.block > div h1:has(+ h3, + h4, + h5),
+.momentum-direct-variant .columns.block > div h2:has(+ h3, + h4, + h5){
+  margin-bottom:4px;
+}
+
 .momentum-saver-section .columns.block > div h1:last-child,
 .momentum-saver-section .columns.block > div h2:last-child,
 .momentum-image-saver .columns.block > div h1:last-child,
@@ -202,7 +215,7 @@
   font-weight:var(--font-weight-intro);
   letter-spacing:var(--font-letter-spacing-intro);
   line-height:var(--font-height-intro);
-  margin-bottom:4px;
+  margin-bottom:16px;
   text-transform:var(--intro-case);
 }
 
@@ -268,6 +281,14 @@
 .momentum-app-badges .columns.block > div p:has(.interest-rate) + p,
 .momentum-direct-variant .columns.block > div p:has(.interest-rate) + p{
   color:var(--heading-default);
+  margin-bottom:0;
+}
+
+.momentum-saver-section .columns.block > div p:last-child,
+.momentum-image-saver .columns.block > div p:last-child,
+.image-swapping .columns.block > div p:last-child,
+.momentum-app-badges .columns.block > div p:last-child,
+.momentum-direct-variant .columns.block > div p:last-child{
   margin-bottom:0;
 }
 

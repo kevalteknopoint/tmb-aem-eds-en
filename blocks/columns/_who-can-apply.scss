@@ -151,8 +151,7 @@
           h2,
           h3,
           h4,
-          h5,
-          h6 {
+          h5 {
             @include typo-heading3;
 
             color: $heading-default;
@@ -167,10 +166,15 @@
             }
           }
 
+          h6 {
+            margin-bottom: 16px;
+          }
+
           p {
             @include typo-body;
 
             margin: 0;
+            margin-bottom: 16px;
             color: $body-default;
 
             b {
@@ -185,7 +189,7 @@
 
           ol,
           ul {
-            margin-top: 16px;
+            margin-bottom: 16px;
             list-style: decimal;
             padding-left: 24px;
 

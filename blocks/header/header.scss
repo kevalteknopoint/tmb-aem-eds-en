@@ -470,6 +470,7 @@ header:has(.secondary-header) {
   }
   
   .no-results {
+    @include responsive-container;
     @include typo-heading2-std;
 
     color: $heading-default;
@@ -560,6 +561,7 @@ header:has(.secondary-header) {
           display: flex;
           justify-content: space-between;
           align-items: center;
+          text-decoration: none;
 
           svg {
             width: 7px;

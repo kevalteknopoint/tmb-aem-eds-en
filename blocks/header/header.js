@@ -3,6 +3,14 @@ import { createOptimizedPicture, getMetadata, injectIcon, isMobile, isTablet } f
 import { div, ul, li, a, button, input, form, h2, span, p } from '../../scripts/dom-helpers.js';
 import { loadFragment } from '../fragment/fragment.js';
 
+function truncateText(text, maxLength = isMobile() ? 35 : 60) {
+  if (text.length <= maxLength) return text;
+
+  const truncated = text.slice(0, maxLength);
+
+  return `${truncated.slice(0, truncated.lastIndexOf(' '))}...`;
+}
+
 function debounce(callback, delay = 300) {
   let timeoutId;
 
@@ -320,7 +328,7 @@ export default async function decorate(block) {
   });
 
   searchInp.addEventListener('input', debounce((e) => {
-    const targetValue = e.target.value;
+    const targetValue = e.target.value?.trim();
 
     if (targetValue?.length < 3) {
       searchDataWrapper.innerHTML = '';
@@ -331,7 +339,8 @@ export default async function decorate(block) {
 
     if (!filteredResults.length) {
       searchDataWrapper.innerHTML = '';
-      searchDataWrapper.appendChild(p({ class: 'no-results' }, `No results found for "${targetValue}"`));
+      const truncatedQuery = truncateText(targetValue);
+      searchDataWrapper.appendChild(p({ class: 'no-results' }, `No results found for "${truncatedQuery}"`));
       return;
     }
 

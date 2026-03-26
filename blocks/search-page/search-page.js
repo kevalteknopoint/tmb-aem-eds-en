@@ -1,8 +1,16 @@
-import { getMetadata, injectIcon } from "../../scripts/aem.js";
+import { getMetadata, injectIcon, isMobile } from "../../scripts/aem.js";
 import { a, b, button, div, form, input, li, p, span, ul } from "../../scripts/dom-helpers.js";
 
 const ITEMS_PER_PAGE = 10;
 const VISIBLE_PAGES = 4;
+
+function truncateText(text, maxLength = isMobile() ? 35 : 60) {
+  if (text.length <= maxLength) return text;
+
+  const truncated = text.slice(0, maxLength);
+
+  return `${truncated.slice(0, truncated.lastIndexOf(' '))}...`;
+}
 
 function highlightText(fullText, searchText) {
   if (!searchText) return fullText;
@@ -61,7 +69,7 @@ function renderSearchUI(container, searchVal, allResults, currentPage, onPageCha
   container.innerHTML = '';
 
   if (!allResults.length) {
-    container.appendChild(p({ class: 'no-results' }, `No results found for "${searchVal}"`));
+    container.appendChild(p({ class: 'no-results' }, `No results found for "${truncateText(searchVal)}"`));
     return;
   }
 
@@ -157,7 +165,11 @@ function renderSearchUI(container, searchVal, allResults, currentPage, onPageCha
   searchForm.addEventListener('submit', (e) => e.preventDefault());
 
   searchInp.addEventListener('input', debounce((e) => {
-    currentSearchTerm = e.target.value;
+    currentSearchTerm = e.target.value?.trim();
+
+    const url = new URL(window.location);
+    url.searchParams.set('search', currentSearchTerm);
+    window.history.replaceState({}, '', url);
 
     const basePath = getMetadata('base-path');
 
