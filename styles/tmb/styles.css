@@ -522,6 +522,17 @@ p{
   text-wrap:pretty;
 }
 
+h6{
+  color:var(--body-default);
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-weight:var(--font-weight-sm-body);
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
+  text-transform:var(--sm-body-case);
+  text-wrap:pretty;
+}
+
 .d-none{
   display:none !important;
 }
