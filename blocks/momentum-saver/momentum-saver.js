@@ -32,4 +32,14 @@ import './momentum-saver-analytics.js';
       console.log(error);
     }
   });
+
+  // ---------- Identified brand class and added to the container for specific style ----------- //
+
+  const momentumImpactContainer = document.querySelector('.momentum-impact');
+  const body = document.querySelector('body');
+  const brandClassName = body?.className?.split(' ')[0];
+
+  if (momentumImpactContainer && brandClassName) {
+    momentumImpactContainer.classList.add(brandClassName);
+  }
 }());

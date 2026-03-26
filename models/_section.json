@@ -444,6 +444,10 @@
             {
               "name": "Align Center (Default Content)",
               "value": "align-default-center"
+            },
+            {
+              "name": "Member Profile",
+              "value": "member-profile"
             }
           ]
         }

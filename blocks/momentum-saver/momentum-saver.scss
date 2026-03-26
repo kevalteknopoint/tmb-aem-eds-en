@@ -202,7 +202,6 @@
       }
     }
   }
-
 }
 
 .momentum-image-saver {
@@ -585,49 +584,216 @@
 }
 
 .momentum-impact {
+  // -------  BRAND OVERRIDE: tmbl (Specific Layout & style) -------- //
+  // -------  Identified via brand class added to the container during decoration ------- //
+
+  &.tmbl {
+    .momentum-section-wrapper {
+      .columns.block {
+        &>div {
+          border-left: $space-4xs solid $color-variants-burst-default;
+          div {
+            &:first-child {
+              padding-left: $space-lg;
+            }
+            &:last-child {
+              border-left: 0;
+              margin-left: 0;
+              padding-left: 0;
+            }
+          }
+          @include tablet {
+            div {
+              &:first-child {
+                padding-left: $space-md;
+              }
+                
+            }
+          }
+         @include mobile {
+          gap: $space-sm;
+          flex-direction: column;
+          border-left: 0;
+          div {
+            &:first-child {
+              padding-left: 0;
+            }
+            &:last-child {
+              padding-left: 0;
+              border: 0;
+              > p:first-child {
+                picture > img {
+                  border-radius: $radius-card;
+                  aspect-ratio: 16/12;
+                  object-fit: cover;
+                }
+              }
+              > p:last-child {
+                width: 100%;
+              }
+              p {
+                margin: 0;
+              }
+            }       
+          }
+        }
+      }
+    }
+    }
+  }
   .momentum-section-wrapper {
     .columns.block {
       position: relative;
 
       &>div {
-        &::after {
-          background: var(--line-default);
-          bottom: 0;
-          content: "";
-          height: 100%;
-          left: 0;
-          margin: 0 auto;
-          position: absolute;
-          right: 0;
-          width: 1px;
-          gap: 32px;
-          display: flex;
+        gap: $space-xl;
 
-          @include tablet{
-            content: unset;
+        div {
+          width: 50%;
+
+          &:first-child {
+            > *:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+          &:last-child {
+            border-left: 1px solid $line-default;
+            margin-left: 0;
+            padding-left: $space-xl;
+            display: flex;
+            align-items: center;
+            gap: $space-sm;
+
+            > p:first-child{
+              width: 33%;
+
+              picture > img {
+                border-radius: $radius-card;
+              }
+            }
+
+            > p:last-child {
+              width: 66%;
+            }
+
+            p {
+              margin: 0;
+            }
+          }
+
+            @include mobile {
+              width: 100%;
+            } 
+        }
+
+        @include tablet {
+          gap: $space-lg;
+          flex-direction: row;
+
+          div {
+            &:last-child {
+              padding-left: $space-lg;
+              flex-direction: column;
+              gap: $space-sm;
+
+              > p:first-child {
+                width: 100%;
+
+                picture > img {
+                  border-radius: $radius-card;
+                }
+              }
+
+              > p:last-child {
+                width: 100%;
+              }
+
+              p {
+                margin: 0;
+              }
+            }       
           }
         }
 
-        &>div:has(img) {
-          display: flex;
-          align-items: center;
-          gap: 24px;
-          margin-left: 32px;
+         @include mobile {
+          gap: $space-sm;
+          flex-direction: column;
 
-          @include tablet{
-            flex-direction: column;
-            margin-left: unset;
-            width: 100%;
-          }
+          div {
+            &:last-child {
+              padding-left: 0;
+              border: 0;
 
-          p{
-            @include tablet {
-              width: 100%;
-            }
+              > p:first-child {
+                picture > img {
+                  border-radius: $radius-card;
+                  aspect-ratio: 16/12;
+                  object-fit: cover;
+
+                }
+              }
+
+              > p:last-child {
+                width: 100%;
+              }
+
+              p {
+                margin: 0;
+              }
+            }       
           }
         }
       }
     }
   }
+}
 
+// Override style for TMBL member profile
+.member-profile {
+  .momentum-section-wrapper {
+      .columns.block {
+          > div {
+            align-items: start;
+
+            @include tablet {
+              flex-direction: row;
+            }
+
+            @include mobile {
+              flex-direction: column;
+            }
+
+            > div {
+              h2 {
+                margin-bottom: $space-4xs;
+              }
+              h4 {
+                font-size: $font-size-body;
+                margin-bottom: $space-xs;
+              }
+              > *:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+         .columns-img-col {
+          width: 25%;
+
+          @include tablet {
+            width: 33%;
+          }
+
+          @include mobile {
+            width: 100%;
+          }
+         }
+      }
+  }
+  &.top-padding {
+    padding-top: $gap-container-y;
+  }
+   &.bottom-padding {
+    padding-bottom: $gap-container-y;
+  }
 }

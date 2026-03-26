@@ -19,7 +19,10 @@ export default async function decorate(block) {
   // ---------- Identified brand class and added to the container for specific style ----------- //
 
   const quickLinkContainer = document.querySelector('.quick-links-container');
-  const bodyClassName = document.querySelector('body').className;
-  const brandClassName = bodyClassName.split(' ')[0];
-  quickLinkContainer.classList.add(brandClassName);
+  const body = document.querySelector('body');
+  const brandClassName = body?.className?.split(' ')[0];
+
+  if (quickLinkContainer && brandClassName) {
+    quickLinkContainer.classList.add(brandClassName);
+  }
 }
