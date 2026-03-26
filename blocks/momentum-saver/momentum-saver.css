@@ -632,13 +632,13 @@
   list-style:none;
 }
 
-.momentum-saver-section:not(.columns.block:has(img)) .columns.block{
+.momentum-saver-section .columns.block:has(:not(img)){
   background:var(--bg-default);
   border-radius:var(--radius-card);
   padding:64px;
 }
 
-.momentum-saver-section:not(.columns.block:has(img)) .columns.block > div > div:not(:has(.interest-rate)):first-child{
+.momentum-saver-section .columns.block:has(:not(img)) > div > div:not(:has(.interest-rate)):first-child{
   flex:0 0 auto;
 }
 
@@ -976,7 +976,7 @@
     gap:32px;
   }
 
-  .momentum-saver-section:not(.columns.block:has(img)) .columns.block{
+  .momentum-saver-section .columns.block:has(:not(img)){
     padding:40px 16px;
   }
 
