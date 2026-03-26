@@ -10,9 +10,12 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  loadDmImages,
+  loadPlaceholders,
 } from './aem.js';
 import loadNonBlockLibs from './components.js';
 import initLazy from './lazy.js';
+import { fetchPlaceholders } from './placeholders.js';
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -161,6 +164,11 @@ function loadDelayed() {
 
 async function loadPage() {
   window.adobeDataLayer = window.adobeDataLayer || [];
+
+  await fetchPlaceholders();
+  await fetchPlaceholders('dev', 'dev-placeholders.json');
+  loadPlaceholders(document.querySelector('main'));
+  loadDmImages();
 
   await loadEager(document);
   await loadLazy(document);
