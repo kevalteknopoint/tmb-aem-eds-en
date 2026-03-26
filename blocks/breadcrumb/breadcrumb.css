@@ -37,10 +37,6 @@
   text-decoration:unset;
 }
 
-.breadcrumb a:has(img){
-  font-weight:600;
-}
-
 .breadcrumb span{
   display:block;
   margin:0 8px 0 4px;
