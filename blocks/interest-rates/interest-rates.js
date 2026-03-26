@@ -1,3 +1,4 @@
+import { applyCapsizeToElement } from '../../libs/capsize/capsize.min.js';
 import { div } from '../../scripts/dom-helpers.js';
 
 export default function decorate(block) {
@@ -39,4 +40,13 @@ export default function decorate(block) {
 
   block.innerHTML = '';
   block.append(wrapper);
+
+  try {
+    setTimeout(() => {
+      const capsizeItems = block.querySelectorAll('.rate-num, .rate-percent, .rate-pa');
+      capsizeItems.forEach(applyCapsizeToElement);
+    }, 1000);
+  } catch (error) {
+    console.log(error);
+  }
 }
