@@ -298,8 +298,8 @@
   }
 }
 
-.momentum-saver-section:not(.columns.block:has(img)) {
-  .columns.block {
+.momentum-saver-section {
+  .columns.block:has(:not(img)) {
     background: $bg-default;
     padding: 64px;
     border-radius: $radius-card;
