@@ -908,29 +908,88 @@
   width:12px;
 }
 
+.momentum-impact.tmbl .momentum-section-wrapper .columns.block > div{
+  border-left:var(--space-4xs) solid var(--color-variants-burst-default);
+}
+
+.momentum-impact.tmbl .momentum-section-wrapper .columns.block > div div:first-child{
+  padding-left:var(--space-lg);
+}
+
+.momentum-impact.tmbl .momentum-section-wrapper .columns.block > div div:last-child{
+  border-left:0;
+  margin-left:0;
+  padding-left:0;
+}
+
 .momentum-impact .momentum-section-wrapper .columns.block{
   position:relative;
 }
 
-.momentum-impact .momentum-section-wrapper .columns.block > div::after{
-  background:var(--line-default);
-  bottom:0;
-  content:"";
-  display:flex;
-  gap:32px;
-  height:100%;
-  left:0;
-  margin:0 auto;
-  position:absolute;
-  right:0;
-  width:1px;
+.momentum-impact .momentum-section-wrapper .columns.block > div{
+  gap:var(--space-xl);
 }
 
-.momentum-impact .momentum-section-wrapper .columns.block > div > div:has(img){
+.momentum-impact .momentum-section-wrapper .columns.block > div div{
+  width:50%;
+}
+
+.momentum-impact .momentum-section-wrapper .columns.block > div div:first-child > *:last-child{
+  margin-bottom:0;
+}
+
+.momentum-impact .momentum-section-wrapper .columns.block > div div:last-child{
   align-items:center;
+  border-left:1px solid var(--line-default);
   display:flex;
-  gap:24px;
-  margin-left:32px;
+  gap:var(--space-sm);
+  margin-left:0;
+  padding-left:var(--space-xl);
+}
+
+.momentum-impact .momentum-section-wrapper .columns.block > div div:last-child > p:first-child{
+  width:33%;
+}
+
+.momentum-impact .momentum-section-wrapper .columns.block > div div:last-child > p:first-child picture > img{
+  border-radius:var(--radius-card);
+}
+
+.momentum-impact .momentum-section-wrapper .columns.block > div div:last-child > p:last-child{
+  width:66%;
+}
+
+.momentum-impact .momentum-section-wrapper .columns.block > div div:last-child p{
+  margin:0;
+}
+
+.member-profile .momentum-section-wrapper .columns.block > div{
+  align-items:start;
+}
+
+.member-profile .momentum-section-wrapper .columns.block > div > div h2{
+  margin-bottom:var(--space-4xs);
+}
+
+.member-profile .momentum-section-wrapper .columns.block > div > div h4{
+  font-size:var(--font-size-body);
+  margin-bottom:var(--space-xs);
+}
+
+.member-profile .momentum-section-wrapper .columns.block > div > div > *:last-child{
+  margin-bottom:0;
+}
+
+.member-profile .momentum-section-wrapper .columns.block .columns-img-col{
+  width:25%;
+}
+
+.member-profile.top-padding{
+  padding-top:var(--gap-container-y);
+}
+
+.member-profile.bottom-padding{
+  padding-bottom:var(--gap-container-y);
 }
 
 @media screen and (max-width: 1279px){
@@ -1045,18 +1104,43 @@
     gap:24px;
   }
 
-  .momentum-impact .momentum-section-wrapper .columns.block > div::after{
-    content:unset;
+  .momentum-impact.tmbl .momentum-section-wrapper .columns.block > div div:first-child{
+    padding-left:var(--space-md);
   }
 
-  .momentum-impact .momentum-section-wrapper .columns.block > div > div:has(img){
+  .momentum-impact .momentum-section-wrapper .columns.block > div{
+    flex-direction:row;
+    gap:var(--space-lg);
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div div:last-child{
     flex-direction:column;
-    margin-left:unset;
+    gap:var(--space-sm);
+    padding-left:var(--space-lg);
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div div:last-child > p:first-child{
     width:100%;
   }
 
-  .momentum-impact .momentum-section-wrapper .columns.block > div > div:has(img) p{
+  .momentum-impact .momentum-section-wrapper .columns.block > div div:last-child > p:first-child picture > img{
+    border-radius:var(--radius-card);
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div div:last-child > p:last-child{
     width:100%;
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div div:last-child p{
+    margin:0;
+  }
+
+  .member-profile .momentum-section-wrapper .columns.block > div{
+    flex-direction:row;
+  }
+
+  .member-profile .momentum-section-wrapper .columns.block .columns-img-col{
+    width:33%;
   }
 }
 
@@ -1112,6 +1196,73 @@
 
   .momentum-corporate-variation .columns.block > div{
     gap:16px;
+  }
+
+  .momentum-impact.tmbl .momentum-section-wrapper .columns.block > div{
+    border-left:0;
+    flex-direction:column;
+    gap:var(--space-sm);
+  }
+
+  .momentum-impact.tmbl .momentum-section-wrapper .columns.block > div div:first-child{
+    padding-left:0;
+  }
+
+  .momentum-impact.tmbl .momentum-section-wrapper .columns.block > div div:last-child{
+    border:0;
+    padding-left:0;
+  }
+
+  .momentum-impact.tmbl .momentum-section-wrapper .columns.block > div div:last-child > p:first-child picture > img{
+    aspect-ratio:16/12;
+    border-radius:var(--radius-card);
+    -o-object-fit:cover;
+       object-fit:cover;
+  }
+
+  .momentum-impact.tmbl .momentum-section-wrapper .columns.block > div div:last-child > p:last-child{
+    width:100%;
+  }
+
+  .momentum-impact.tmbl .momentum-section-wrapper .columns.block > div div:last-child p{
+    margin:0;
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div div{
+    width:100%;
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div{
+    flex-direction:column;
+    gap:var(--space-sm);
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div div:last-child{
+    border:0;
+    padding-left:0;
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div div:last-child > p:first-child picture > img{
+    aspect-ratio:16/12;
+    border-radius:var(--radius-card);
+    -o-object-fit:cover;
+       object-fit:cover;
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div div:last-child > p:last-child{
+    width:100%;
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div div:last-child p{
+    margin:0;
+  }
+
+  .member-profile .momentum-section-wrapper .columns.block > div{
+    flex-direction:column;
+  }
+
+  .member-profile .momentum-section-wrapper .columns.block .columns-img-col{
+    width:100%;
   }
 }
 
