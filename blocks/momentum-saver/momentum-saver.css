@@ -1041,6 +1041,22 @@
     flex-direction:column;
   }
 
+  .momentum-saver-section .columns.block > div div,
+  .momentum-image-saver .columns.block > div div,
+  .image-swapping .columns.block > div div,
+  .momentum-app-badges .columns.block > div div,
+  .momentum-direct-variant .columns.block > div div{
+    width:100%;
+  }
+
+  .momentum-saver-section .columns.block > div div:has(picture, img),
+  .momentum-image-saver .columns.block > div div:has(picture, img),
+  .image-swapping .columns.block > div div:has(picture, img),
+  .momentum-app-badges .columns.block > div div:has(picture, img),
+  .momentum-direct-variant .columns.block > div div:has(picture, img){
+    width:unset;
+  }
+
   .momentum-saver-section .columns.block > div .rate-unit,
   .momentum-image-saver .columns.block > div .rate-unit,
   .image-swapping .columns.block > div .rate-unit,

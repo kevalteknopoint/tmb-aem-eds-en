@@ -57,6 +57,14 @@
           border-radius: $radius-card;
         }
       }
+
+      @include tablet {
+        width: 100%;
+
+        &:has(picture, img) {
+          width: unset;
+        }
+      }
     }
 
     h1,

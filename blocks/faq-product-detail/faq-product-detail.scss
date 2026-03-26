@@ -13,6 +13,7 @@
 
   @include tablet {
     grid-template-columns: auto;
+    row-gap: 32px;
   }
 
   .default-content-wrapper {

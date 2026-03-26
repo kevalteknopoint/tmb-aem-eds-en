@@ -303,6 +303,7 @@
 @media screen and (max-width: 1023px){
   .faq-accordion{
     grid-template-columns:auto;
+    row-gap:32px;
   }
 }
 
