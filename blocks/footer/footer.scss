@@ -3,6 +3,10 @@
 .footer.block {
   background-color: $color-footer-bg;
 
+  a {
+    color: $color-footer-reverse-text;
+  }
+
   &.tmbl {
     .footer-panel {
       background-color: transparent;
@@ -375,10 +379,6 @@
 
       &:last-child {
         margin-bottom: 0;
-      }
-
-      a {
-        color: $link-reverse;
       }
     }
   }

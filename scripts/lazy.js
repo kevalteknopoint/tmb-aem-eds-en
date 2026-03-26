@@ -1,6 +1,5 @@
-import { getMetadata, loadDmImages, loadPlaceholders } from "./aem.js";
+import { getMetadata } from "./aem.js";
 import { pageIntialization, setPersona } from "./analytics/exports.js";
-import { fetchPlaceholders } from "./placeholders.js";
 
 async function loadSprite() {
   try {
@@ -113,10 +112,6 @@ async function pageAnalytics() {
 
 export default async function initLazy() {
   loadAos();
-  await fetchPlaceholders();
-  await fetchPlaceholders('dev', 'dev-placeholders.json');
-  loadPlaceholders(document.querySelector('main'));
-  loadDmImages();
   pageAnalytics();
   loadSprite();
 }
