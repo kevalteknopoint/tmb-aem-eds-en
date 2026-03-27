@@ -236,6 +236,14 @@ async function pageAnalytics() {
 }
 
 async function loadPage() {
+  try {
+    if (window.hlx404MetaReady) {
+      await window.hlx404MetaReady;
+    }
+  } catch (e) {
+    // do nothing
+  }
+
   window.adobeDataLayer = window.adobeDataLayer || [];
   setPersona();
 

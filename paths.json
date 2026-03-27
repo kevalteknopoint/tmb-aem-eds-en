@@ -4,7 +4,12 @@
     "/content/tmb/configuration:/.helix/config.json",
     "/content/tmb/metadata:/metadata.json",
     "/content/tmb/placeholders:/placeholders.json",
-    "/content/tmb/headers:/.helix/headers.json"
+    "/content/tmb/headers:/.helix/headers.json",
+    "/content/tmb/tmbank/au/en/404:/tmbank/au/en/404",
+    "/content/tmb/fmbank/au/en/404:/fmbank/au/en/404",
+    "/content/tmb/hpbank/au/en/404:/hpbank/au/en/404",
+    "/content/tmb/unibank/au/en/404:/unibank/au/en/404",
+    "/content/tmb/tmbl/au/en/404:/tmbl/au/en/404"
   ],
   "includes": [
     "/content/tmb/",    

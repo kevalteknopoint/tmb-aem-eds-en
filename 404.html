@@ -8,8 +8,34 @@
     window.errorCode = '404';
   </script>
   <script type="text/javascript">
-    (function redirectToAuthor404() {
-      const targetPath = '/content/tmbank/au/en/404';
+    function detectSiteKeyForRedirect() {
+      const hostname = window.location.hostname.toLowerCase();
+      const pathname = window.location.pathname.toLowerCase();
+
+      if (pathname.startsWith('/fmbank/')) return 'fmbank';
+      if (pathname.startsWith('/hpbank/')) return 'hpbank';
+      if (pathname.startsWith('/unibank/')) return 'unibank';
+      if (pathname.startsWith('/tmbl/')) return 'tmbl';
+      if (pathname.startsWith('/tmbank/')) return 'tmbank';
+
+      if (hostname.includes('firefighters') || hostname.includes('fmbank')) return 'fmbank';
+      if (hostname.includes('healthprofessionals') || hostname.includes('hpbank')) return 'hpbank';
+      if (hostname.includes('unibank')) return 'unibank';
+      if (hostname.includes('tmbl') || hostname.includes('teachersmutualbanklimited')) return 'tmbl';
+
+      return 'tmbank';
+    }
+
+    (function redirectToSite404() {
+      const siteKey = detectSiteKeyForRedirect();
+      const targetBySite = {
+        tmbank: '/tmbank/au/en/404',
+        fmbank: '/fmbank/au/en/404',
+        hpbank: '/hpbank/au/en/404',
+        unibank: '/unibank/au/en/404',
+        tmbl: '/tmbl/au/en/404',
+      };
+      const targetPath = targetBySite[siteKey] || targetBySite.tmbank;
       const currentPath = window.location.pathname;
 
       if (currentPath !== targetPath && currentPath !== `${targetPath}.html`) {
