@@ -8,6 +8,16 @@
     window.errorCode = '404';
   </script>
   <script type="text/javascript">
+    (function redirectToAuthor404() {
+      const targetPath = '/content/tmbank/au/en/404';
+      const currentPath = window.location.pathname;
+
+      if (currentPath !== targetPath && currentPath !== `${targetPath}.html`) {
+        window.location.replace(targetPath);
+      }
+    }());
+  </script>
+  <script type="text/javascript">
     function upsertMeta(name, content) {
       if (!content) return;
       let meta = document.head.querySelector(`meta[name="${name}"]`);
