@@ -1,4 +1,5 @@
 import { button, div } from "../../scripts/dom-helpers.js";
+import './tabs-analytics.js';
 
 export default async function decorate(block) {
   if (window.location.origin.includes('author')) return;
