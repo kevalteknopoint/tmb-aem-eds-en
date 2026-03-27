@@ -2,13 +2,23 @@ import { ctaInteraction, minifyText, getPersona, getPageRegion, getComponentInde
 
 document.addEventListener('click', (e) => {
 
-    if (e.target.closest('.who-can-apply-section.accordion-container .button-container')) {
-        const secondaryLink = e.target.closest('.who-can-apply-section.accordion-container .accordion-wrapper .button-container a');
-        const pageRegion = getPageRegion(e.target.closest('.who-can-apply-section.accordion-container .button-container a'));
+    if (e.target.closest('.accordion-container .button-container')) {
+        const secondaryLink = e.target.closest('.accordion-container .accordion-wrapper .button-container a');
+        const pageRegion = getPageRegion(e.target.closest('.accordion-container .button-container a'));
         console.log("click occured from second");
-        const componentIndex = getComponentIndex(e.target.closest('.who-can-apply-section.accordion-container .button-container a'));
-        const ctaTitle = e.target.closest('.who-can-apply-section.accordion-container .accordion-wrapper').querySelector('p');
-        const nextPageURL = e.target.closest(".who-can-apply-section.accordion-container .button-container a")?.getAttribute("href");
-        ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), '', 'who-can-apply-section', 'accordion-container', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', 'momentum-saver', '', '', '', '');
+        const componentIndex = getComponentIndex(e.target.closest('.accordion-container .button-container a'));
+        const ctaTitle = e.target.closest('.accordion-container .accordion-wrapper').querySelector('p');
+        const nextPageURL = e.target.closest(".accordion-container .button-container a")?.getAttribute("href");
+        ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), '', 'faq links', 'accordion-container', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', 'faq links', '', '', '', '');
+    }
+
+    if (e.target.closest('.tmb-acc-sec.accordion-container .button-container')) {
+        const secondaryLink = e.target.closest('.tmb-acc-sec.accordion-container .accordion-wrapper .button-container a');
+        const pageRegion = getPageRegion(e.target.closest('.tmb-acc-sec.accordion-container .button-container a'));
+        console.log("click occured from second");
+        const componentIndex = getComponentIndex(e.target.closest('.tmb-acc-sec.accordion-container .button-container a'));
+        const ctaTitle = e.target.closest('.tmb-acc-sec.accordion-container .accordion-wrapper').querySelector('p');
+        const nextPageURL = e.target.closest(".tmb-acc-sec.accordion-container .button-container a")?.getAttribute("href");
+        ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), '', 'faq links', 'accordion-container', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', 'faq links', '', '', '', '');
     }
 })

@@ -56,5 +56,14 @@ document.addEventListener('click', (e) => {
     console.log('q')
     ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), '', 'image-swapping', 'columns-container', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', 'momentum-saver', '', '', '', '');
   }
+    if (e.target.closest('.section-with-bg:not(.variant-404)  p a')) {
+    const secondaryLink = e.target.closest('.section-with-bg p a');
+    const pageRegion = getPageRegion(e.target.closest('.section-with-bg p a'));
+    const componentIndex = getComponentIndex(e.target.closest('.section-with-bg p a'));
+    const ctaTitle = e.target.closest('.section-with-bg').querySelector("h1,h2,h3,h4,h5,h6");
+    const nextPageURL = e.target.closest(".section-with-bg p a")?.getAttribute("href");
+    console.log('m')
+    ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), '', 'image-swapping', 'columns-container', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', 'momentum-saver', '', '', '', '');
+  }
 
 });
