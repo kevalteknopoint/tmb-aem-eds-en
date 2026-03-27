@@ -27,9 +27,21 @@
         color: $heading-default;
       }
 
-      h1, h2, h3, h4, h5, h6 {
+      h1, h2, h4, h6 {
         @include typo-heading2-std;
 
+        color: $heading-default;
+      }
+
+      h3 {
+         @include typo-heading3;
+         margin-bottom: $space-3xs;
+         color: $heading-default;
+      }
+
+      h5 {
+        @include typo-heading5;
+        margin-bottom: $space-3xs;
         color: $heading-default;
       }
     }
@@ -77,6 +89,20 @@
         a {
           @include button('primary');
         }
+      }
+
+      h3 {
+         @include typo-heading3;
+         margin-bottom: $space-3xs;
+         margin-top: $space-sm;
+         color: $heading-default;
+      }
+
+      h5 {
+        @include typo-heading5;
+        color: $heading-default;
+        margin-bottom: $space-3xs;
+        margin-top: $space-xs;
       }
     }
 
