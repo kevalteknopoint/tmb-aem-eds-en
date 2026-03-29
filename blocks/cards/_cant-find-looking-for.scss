@@ -123,6 +123,11 @@
               margin-bottom: 8px;
 
               @include typo-heading4;
+
+              a {
+                color: $heading-default;
+                text-decoration: none;
+              }
             }
 
             p:not(p:has(.icon)) {
@@ -383,6 +388,10 @@
               h6 {
                 color: $link-reverse;
                 border-bottom: 2px solid $link-reverse;
+
+                a {
+                  color: $link-reverse;
+                }
               }
 
               p {
@@ -487,6 +496,10 @@
               h6 {
                 color: $link-reverse;
                 border-bottom: none;
+
+                a {
+                  color: $link-reverse;
+                }
               }
             }
           }

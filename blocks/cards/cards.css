@@ -735,6 +735,16 @@
   text-transform:var(--heading4-case);
 }
 
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h1 a,
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h2 a,
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h3 a,
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h4 a,
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h5 a,
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h6 a{
+  color:var(--heading-default);
+  text-decoration:none;
+}
+
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body p:not(p:has(.icon)){
   color:var(--body-default);
   font-family:var(--font-family-body);
@@ -917,6 +927,15 @@
   color:var(--link-reverse);
 }
 
+.section.faq-cant-find-looking-for.variation-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h1 a,
+.section.faq-cant-find-looking-for.variation-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h2 a,
+.section.faq-cant-find-looking-for.variation-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h3 a,
+.section.faq-cant-find-looking-for.variation-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h4 a,
+.section.faq-cant-find-looking-for.variation-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h5 a,
+.section.faq-cant-find-looking-for.variation-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h6 a{
+  color:var(--link-reverse);
+}
+
 .section.faq-cant-find-looking-for.variation-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body p{
   color:var(--body-reverse);
 }
@@ -978,6 +997,15 @@
 .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h5,
 .section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h6{
   border-bottom:none;
+  color:var(--link-reverse);
+}
+
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h1 a,
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h2 a,
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h3 a,
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h4 a,
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h5 a,
+.section.faq-cant-find-looking-for.variation-non-border.background-color-teal .cards-wrapper .cards ul li .cards-card-body h6 a{
   color:var(--link-reverse);
 }
 
