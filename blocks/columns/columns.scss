@@ -2,6 +2,7 @@
 @use './who-can-apply' as *;
 @use './customer' as *;
 @use './money-overseas' as *;
+@use '../../styles/base' as *;
 
 .columns {
   img {
@@ -21,6 +22,14 @@
 
       img {
         display: block;
+      }
+    }
+
+    > .columns-img-col.col-width-default {
+      width: calc(50% - $space-md);
+
+      @include tablet {
+        width: 100%;
       }
     }
   }

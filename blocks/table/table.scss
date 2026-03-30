@@ -15,25 +15,38 @@
             }
         }
 
-        .ul-0{
+        .ul-0 {
             display: flex;
+            align-items: flex-end;
             justify-content: flex-start;
+            align-self: stretch;
+            gap: $space-md;
             border-bottom: 4px solid $heading-default;
+
+            @include  mobile {
+              min-width: 1600px;
+              padding-right: $space-xs;
+            }
 
             li{
                 width: 50%;
                 text-decoration: none;
                 color: $heading-default;
-                margin: 0 0 16px;
+                margin: 0 0 $space-xs;
 
-                @include typo-heading3;
+                @include typo-heading5;
             }
-        }
+        } 
 
         .ul-1 {
             display: flex;
             justify-content: flex-start;
             flex-direction: column;
+
+            @include  mobile {
+              min-width: 1600px;
+              padding-right: $space-xs;
+            }
 
             a {
               text-decoration: underline;
@@ -44,23 +57,32 @@
                 ul{
                     display: flex;
                     justify-content: flex-start;
+                    border-bottom: 1px solid rgb(0 0 0 / 20%); // FIGMA TOKEN MISSING
+                    align-items: flex-start;
+                    gap: $space-md;
+                    padding-top: $space-xs;
+                    padding-bottom: $space-xs;
+
+                    li:first-child {
+                      @include typo-heading5;
+                    }
 
                     li{
                         list-style: none;
                         width: 50%;
-                        padding: 16px 8px 16px 0;
+                       // padding: 16px 8px 16px 0;
                         color: $body-default;
-                        border-bottom: 1px solid rgb(0 0 0 / 20%); // FIGMA TOKEN MISSING
-
-                        @include typo-body;
+                       // border-bottom: 1px solid rgb(0 0 0 / 20%); // FIGMA TOKEN MISSING
+                        @include typo-body; 
+                        gap: $space-md;
                     }
                     
                     li:nth-child(odd) {
-                        padding: 16px 8px 16px 0;
+                       // padding: 16px 8px 16px 0;
                     }
 
                     li:nth-child(even) {
-                        padding: 16px 16px 16px 8px;
+                      //  padding: 16px 16px 16px 8px;
                         
                         @include tablet {
                           text-align: left;
@@ -73,7 +95,6 @@
                 }
                 
             }
-
             &:last-child {
               & > li:last-child {
                 li {
@@ -89,6 +110,9 @@
             border-bottom: 4px solid $heading-default;
 
             @include typo-heading3;
+             @include  mobile {
+              min-width: 1600px;
+            }
         }
 
         p {
@@ -131,5 +155,10 @@
             text-underline-offset: 3px;
           }
         }
+    }
+
+    @include  mobile {
+      overflow-x: auto;
+      min-width: 100vw;
     }
 }

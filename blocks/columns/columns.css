@@ -1187,6 +1187,10 @@
   display:block;
 }
 
+.columns > div > .columns-img-col.col-width-default{
+  width:calc(50% - var(--space-md));
+}
+
 @media (width >= 900px){
   .columns > div{
     align-items:center;
@@ -1259,6 +1263,10 @@
   .money-overseas-variant .overseas-columns .overseas-columns-wrapper div h2,
   .money-overseas-variant .overseas-columns .overseas-columns-wrapper div h3{
     max-width:unset;
+  }
+
+  .columns > div > .columns-img-col.col-width-default{
+    width:100%;
   }
 }
 
