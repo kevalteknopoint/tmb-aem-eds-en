@@ -4,7 +4,6 @@ export default function decorate(block) {
 
   let { href } = link;
 
-
   if (href.includes('?')) {
     // Avoid duplicating params
     if (!/([?&])enablejsapi=1/.test(href)) {

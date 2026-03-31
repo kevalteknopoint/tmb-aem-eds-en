@@ -380,24 +380,24 @@ export function downloadApp(
     },
   });
 }
-//this function will fire when any document gets downloaded or redirected to downloadable page
+
 export function downloadDocument(pageRegion, componentName, componentType, componentIndex, componentPersona, componentId, nextpageUrl, interactionType, navElementType, navLocation, ctaText, documentType, linkType) {
   window.adobeDataLayer.push({
-    "event": "downloadDocument",
-    "data": {
-      "pageRegion": pageRegion,
-      "componentName": componentName,
-      "componentType": componentType,
-      "componentIndex": componentIndex,
-      "componentPersona": componentPersona,
-      "componentId": componentId,
-      "nextpageUrl": nextpageUrl,
-      "interactionType": interactionType,
-      "navElementType": navElementType,
-      "navLocation": navLocation,
-      "ctaText": ctaText,
-      "documentType": documentType,
-      "linkType": linkType
+    event: "downloadDocument",
+    data: {
+      pageRegion,
+      componentName,
+      componentType,
+      componentIndex,
+      componentPersona,
+      componentId,
+      nextpageUrl,
+      interactionType,
+      navElementType,
+      navLocation,
+      ctaText,
+      documentType,
+      linkType
     }
   });
 }
@@ -420,7 +420,6 @@ export function sideNavMenuClick(pageRegion,leveloneMenu,leveltwoMenu,componentN
             }
 });
 }
-
 
 export function subMenuClick(
   pageRegion,

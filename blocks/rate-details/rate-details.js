@@ -1,4 +1,3 @@
-import { applyCapsizeToElement } from '../../libs/capsize/capsize.min.js';
 import { div } from '../../scripts/dom-helpers.js';
 import './rate-details-analytics.js';
 
@@ -74,14 +73,5 @@ function createGrid(block) {
     contentWrappers.forEach((wrapper) => {
       createGrid(wrapper);
     });
-
-    try {
-      setTimeout(() => {
-        const capsizeItems = section.querySelectorAll('.rate-num, .rate-percent, .rate-pa');
-        capsizeItems.forEach(applyCapsizeToElement);
-      }, 1000);
-    } catch (error) {
-      console.log(error);
-    }
   });
 }());

@@ -221,6 +221,7 @@
   letter-spacing:var(--font-letter-spacing-sm-body);
   line-height:var(--font-height-sm-body);
   padding-bottom:2px;
+  text-decoration:unset;
   text-transform:var(--sm-body-case);
   width:-moz-fit-content;
   width:fit-content;

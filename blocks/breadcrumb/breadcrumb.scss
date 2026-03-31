@@ -10,7 +10,6 @@
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-  text-transform: capitalize;
   color: $link-default;
   padding-block: 16px;
 
@@ -18,10 +17,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-
-    &:has(img) {
-      font-weight: 600;
-    }
+    text-decoration: unset;
   }
 
   span {

@@ -76,6 +76,7 @@ body:has(.product-detail-banner) .breadcrumb.block{
 }
 
 .product-detail-banner .hero-banner-main{
+  overflow-y:hidden;
   position:relative;
 }
 

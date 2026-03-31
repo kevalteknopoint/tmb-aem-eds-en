@@ -535,6 +535,22 @@
           {
             "name": "Tabbed Navigation",
             "value": "tabbed-navigation"
+          },
+          {
+            "name": "Align Left (Default Content)",
+            "value": "align-default-left"
+          },
+          {
+            "name": "Align Right (Default Content)",
+            "value": "align-default-right"
+          },
+          {
+            "name": "Align Center (Default Content)",
+            "value": "align-default-center"
+          },
+          {
+            "name": "Member Profile",
+            "value": "member-profile"
           }
         ]
       }
@@ -698,6 +714,22 @@
         "label": "Button Link"
       },
       {
+        "component": "select",
+        "name": "hp-banner-button-target",
+        "label": "Button Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
         "component": "text",
         "name": "banner-linkText",
         "label": "Button Text"
@@ -730,6 +762,22 @@
         "component": "aem-content",
         "name": "banner-link-2",
         "label": "Button 2 Link"
+      },
+      {
+        "component": "select",
+        "name": "hp-banner-2-button-target",
+        "label": "Button Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
       },
       {
         "component": "text",
@@ -1204,6 +1252,22 @@
         "label": "Button Link"
       },
       {
+        "component": "select",
+        "name": "default-card-button-target",
+        "label": "Button Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
         "component": "text",
         "name": "button-linkText",
         "label": "Button Text"
@@ -1236,6 +1300,22 @@
         "component": "aem-content",
         "name": "button-2-link",
         "label": "Button Link 2"
+      },
+      {
+        "component": "select",
+        "name": "default-card-button-2-target",
+        "label": "Button Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
       },
       {
         "component": "text",
@@ -1533,6 +1613,50 @@
         "value": ""
       },
       {
+        "component": "select",
+        "name": "bg-variant",
+        "label": "Background Color - Variant",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "None",
+            "value": ""
+          },
+          {
+            "name": "Default",
+            "value": "bg-default"
+          },
+          {
+            "name": "Light-1",
+            "value": "bg-light-one"
+          },
+          {
+            "name": "Light-2",
+            "value": "bg-light-two"
+          },
+          {
+            "name": "Light-3",
+            "value": "bg-light-three"
+          },
+          {
+            "name": "Light-4",
+            "value": "bg-light-four"
+          },
+          {
+            "name": "reverse",
+            "value": "bg-reverse"
+          },
+          {
+            "name": "reverse-2",
+            "value": "bg-reverse-two"
+          },
+          {
+            "name": "accent",
+            "value": "bg-accent"
+          }
+        ]
+      },
+      {
         "component": "richtext",
         "valueType": "string",
         "name": "content",
@@ -1795,6 +1919,22 @@
         "name": "navigation-card-link",
         "label": "Navigation Card Link",
         "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "navigation-card-link-target",
+        "label": "Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
       }
     ]
   },

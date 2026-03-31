@@ -33,9 +33,7 @@ document.addEventListener('click', (e) => {
       'legaltc',
       ''
     );
-  };
-
-
+  }
 
   const faqLink = e.target.closest('.faq-legal a');
 

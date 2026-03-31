@@ -35,6 +35,10 @@
   background-color:var(--color-footer-bg);
 }
 
+.footer.block a{
+  color:var(--color-footer-reverse-text);
+}
+
 .footer.block.tmbl .footer-panel{
   background-color:transparent;
   padding-top:16px;
@@ -172,6 +176,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
+  text-decoration:unset;
   text-transform:var(--body-case);
 }
 
@@ -241,6 +246,7 @@
   letter-spacing:var(--font-letter-spacing-h5);
   line-height:var(--font-height-h5);
   padding:8px 0;
+  text-decoration:unset;
   text-transform:var(--heading5-case);
 }
 

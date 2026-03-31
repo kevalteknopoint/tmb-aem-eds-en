@@ -212,6 +212,33 @@
   margin-top:8px;
 }
 
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body h1,
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body h2,
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body h3,
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body h4,
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body h5{
+  color:var(--heading-default);
+  font-family:var(--font-family-h3);
+  font-size:var(--font-size-h3);
+  font-weight:var(--font-weight-h3);
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
+  margin-top:40px;
+  text-transform:var(--heading3-case);
+}
+
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body h1:first-child,
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body h2:first-child,
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body h3:first-child,
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body h4:first-child,
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body h5:first-child{
+  margin-top:0;
+}
+
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body h6{
+  margin-bottom:16px;
+}
+
 .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body p{
   color:var(--body-default);
   font-family:var(--font-family-body);
@@ -219,7 +246,39 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
+  margin:0;
+  margin-bottom:16px;
   text-transform:var(--body-case);
+}
+
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body p b{
+  font-family:var(--font-family-body);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-body-bold);
+  letter-spacing:var(--font-letter-spacing-body);
+  line-height:var(--font-height-body);
+  text-transform:var(--body-bold-case);
+}
+
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body a{
+  color:var(--link-default);
+  text-decoration:underline;
+}
+
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body ol,
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body ul{
+  list-style:decimal;
+  margin-bottom:16px;
+  padding-left:24px;
+}
+
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body ol li,
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body ul li{
+  margin-bottom:8px;
+}
+
+.faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body ul{
+  list-style:disc;
 }
 
 .faq-accordion .accordion-wrapper .block .accordion-item[open] summary svg{
@@ -244,11 +303,20 @@
 @media screen and (max-width: 1023px){
   .faq-accordion{
     grid-template-columns:auto;
+    row-gap:32px;
   }
 }
 
 @media screen and (max-width: 767px){
   .faq-accordion{
     padding-inline:16px;
+  }
+
+  .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body h1,
+  .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body h2,
+  .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body h3,
+  .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body h4,
+  .faq-accordion .accordion-wrapper .block .accordion-item .accordion-item-body h5{
+    margin-top:24px;
   }
 }

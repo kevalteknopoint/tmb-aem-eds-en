@@ -229,8 +229,7 @@
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h2,
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h3,
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h4,
-.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h5,
-.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h6{
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h5{
   color:var(--heading-default);
   font-family:var(--font-family-h3);
   font-size:var(--font-size-h3);
@@ -245,9 +244,12 @@
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h2:first-child,
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h3:first-child,
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h4:first-child,
-.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h5:first-child,
-.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h6:first-child{
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h5:first-child{
   margin-top:0;
+}
+
+.who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h6{
+  margin-bottom:16px;
 }
 
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body p{
@@ -258,6 +260,7 @@
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   margin:0;
+  margin-bottom:16px;
   text-transform:var(--body-case);
 }
 
@@ -278,7 +281,7 @@
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body ol,
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body ul{
   list-style:decimal;
-  margin-top:16px;
+  margin-bottom:16px;
   padding-left:24px;
 }
 
@@ -687,8 +690,7 @@
   .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h2,
   .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h3,
   .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h4,
-  .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h5,
-  .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h6{
+  .who-can-apply-section .accordion-wrapper .accordion .accordion-item .accordion-item-body h5{
     margin-top:24px;
   }
 

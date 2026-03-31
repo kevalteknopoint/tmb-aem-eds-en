@@ -65,6 +65,7 @@ body:has(.product-detail-banner) {
 
   .hero-banner-main {
     position: relative;
+    overflow-y: hidden;
   }
 
   .hero-banner-main.bg-default {

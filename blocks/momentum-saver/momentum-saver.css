@@ -168,6 +168,19 @@
   text-transform:var(--heading1-case);
 }
 
+.momentum-saver-section .columns.block > div h1:has(+ h3, + h4, + h5),
+.momentum-saver-section .columns.block > div h2:has(+ h3, + h4, + h5),
+.momentum-image-saver .columns.block > div h1:has(+ h3, + h4, + h5),
+.momentum-image-saver .columns.block > div h2:has(+ h3, + h4, + h5),
+.image-swapping .columns.block > div h1:has(+ h3, + h4, + h5),
+.image-swapping .columns.block > div h2:has(+ h3, + h4, + h5),
+.momentum-app-badges .columns.block > div h1:has(+ h3, + h4, + h5),
+.momentum-app-badges .columns.block > div h2:has(+ h3, + h4, + h5),
+.momentum-direct-variant .columns.block > div h1:has(+ h3, + h4, + h5),
+.momentum-direct-variant .columns.block > div h2:has(+ h3, + h4, + h5){
+  margin-bottom:4px;
+}
+
 .momentum-saver-section .columns.block > div h1:last-child,
 .momentum-saver-section .columns.block > div h2:last-child,
 .momentum-image-saver .columns.block > div h1:last-child,
@@ -184,54 +197,59 @@
 .momentum-saver-section .columns.block > div h3,
 .momentum-saver-section .columns.block > div h4,
 .momentum-saver-section .columns.block > div h5,
-.momentum-saver-section .columns.block > div h6,
 .momentum-image-saver .columns.block > div h3,
 .momentum-image-saver .columns.block > div h4,
 .momentum-image-saver .columns.block > div h5,
-.momentum-image-saver .columns.block > div h6,
 .image-swapping .columns.block > div h3,
 .image-swapping .columns.block > div h4,
 .image-swapping .columns.block > div h5,
-.image-swapping .columns.block > div h6,
 .momentum-app-badges .columns.block > div h3,
 .momentum-app-badges .columns.block > div h4,
 .momentum-app-badges .columns.block > div h5,
-.momentum-app-badges .columns.block > div h6,
 .momentum-direct-variant .columns.block > div h3,
 .momentum-direct-variant .columns.block > div h4,
-.momentum-direct-variant .columns.block > div h5,
-.momentum-direct-variant .columns.block > div h6{
+.momentum-direct-variant .columns.block > div h5{
   color:var(--heading-default);
   font-family:var(--font-family-intro);
   font-size:var(--font-size-intro);
   font-weight:var(--font-weight-intro);
   letter-spacing:var(--font-letter-spacing-intro);
   line-height:var(--font-height-intro);
-  margin-bottom:4px;
+  margin-bottom:16px;
   text-transform:var(--intro-case);
 }
 
 .momentum-saver-section .columns.block > div h3:last-child,
 .momentum-saver-section .columns.block > div h4:last-child,
 .momentum-saver-section .columns.block > div h5:last-child,
-.momentum-saver-section .columns.block > div h6:last-child,
 .momentum-image-saver .columns.block > div h3:last-child,
 .momentum-image-saver .columns.block > div h4:last-child,
 .momentum-image-saver .columns.block > div h5:last-child,
-.momentum-image-saver .columns.block > div h6:last-child,
 .image-swapping .columns.block > div h3:last-child,
 .image-swapping .columns.block > div h4:last-child,
 .image-swapping .columns.block > div h5:last-child,
-.image-swapping .columns.block > div h6:last-child,
 .momentum-app-badges .columns.block > div h3:last-child,
 .momentum-app-badges .columns.block > div h4:last-child,
 .momentum-app-badges .columns.block > div h5:last-child,
-.momentum-app-badges .columns.block > div h6:last-child,
 .momentum-direct-variant .columns.block > div h3:last-child,
 .momentum-direct-variant .columns.block > div h4:last-child,
-.momentum-direct-variant .columns.block > div h5:last-child,
-.momentum-direct-variant .columns.block > div h6:last-child{
+.momentum-direct-variant .columns.block > div h5:last-child{
   margin-bottom:0;
+}
+
+.momentum-saver-section .columns.block > div h6,
+.momentum-image-saver .columns.block > div h6,
+.image-swapping .columns.block > div h6,
+.momentum-app-badges .columns.block > div h6,
+.momentum-direct-variant .columns.block > div h6{
+  color:var(--body-default);
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-weight:var(--font-weight-sm-body);
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
+  margin-bottom:16px;
+  text-transform:var(--sm-body-case);
 }
 
 .momentum-saver-section .columns.block > div p,
@@ -263,6 +281,14 @@
 .momentum-app-badges .columns.block > div p:has(.interest-rate) + p,
 .momentum-direct-variant .columns.block > div p:has(.interest-rate) + p{
   color:var(--heading-default);
+  margin-bottom:0;
+}
+
+.momentum-saver-section .columns.block > div p:last-child,
+.momentum-image-saver .columns.block > div p:last-child,
+.image-swapping .columns.block > div p:last-child,
+.momentum-app-badges .columns.block > div p:last-child,
+.momentum-direct-variant .columns.block > div p:last-child{
   margin-bottom:0;
 }
 
@@ -627,13 +653,13 @@
   list-style:none;
 }
 
-.momentum-saver-section:not(.columns.block:has(img)) .columns.block{
+.momentum-saver-section .columns.block:has(:not(img)){
   background:var(--bg-default);
   border-radius:var(--radius-card);
   padding:64px;
 }
 
-.momentum-saver-section:not(.columns.block:has(img)) .columns.block > div > div:not(:has(.interest-rate)):first-child{
+.momentum-saver-section .columns.block:has(:not(img)) > div > div:not(:has(.interest-rate)):first-child{
   flex:0 0 auto;
 }
 
@@ -903,29 +929,88 @@
   width:12px;
 }
 
+.momentum-impact.tmbl .momentum-section-wrapper .columns.block > div{
+  border-left:var(--space-4xs) solid var(--color-variants-burst-default);
+}
+
+.momentum-impact.tmbl .momentum-section-wrapper .columns.block > div div:first-child{
+  padding-left:var(--space-lg);
+}
+
+.momentum-impact.tmbl .momentum-section-wrapper .columns.block > div div:last-child{
+  border-left:0;
+  margin-left:0;
+  padding-left:0;
+}
+
 .momentum-impact .momentum-section-wrapper .columns.block{
   position:relative;
 }
 
-.momentum-impact .momentum-section-wrapper .columns.block > div::after{
-  background:var(--line-default);
-  bottom:0;
-  content:"";
-  display:flex;
-  gap:32px;
-  height:100%;
-  left:0;
-  margin:0 auto;
-  position:absolute;
-  right:0;
-  width:1px;
+.momentum-impact .momentum-section-wrapper .columns.block > div{
+  gap:var(--space-xl);
 }
 
-.momentum-impact .momentum-section-wrapper .columns.block > div > div:has(img){
+.momentum-impact .momentum-section-wrapper .columns.block > div div{
+  width:50%;
+}
+
+.momentum-impact .momentum-section-wrapper .columns.block > div div:first-child > *:last-child{
+  margin-bottom:0;
+}
+
+.momentum-impact .momentum-section-wrapper .columns.block > div div:last-child{
   align-items:center;
+  border-left:1px solid var(--line-default);
   display:flex;
-  gap:24px;
-  margin-left:32px;
+  gap:var(--space-sm);
+  margin-left:0;
+  padding-left:var(--space-xl);
+}
+
+.momentum-impact .momentum-section-wrapper .columns.block > div div:last-child > p:first-child{
+  width:33%;
+}
+
+.momentum-impact .momentum-section-wrapper .columns.block > div div:last-child > p:first-child picture > img{
+  border-radius:var(--radius-card);
+}
+
+.momentum-impact .momentum-section-wrapper .columns.block > div div:last-child > p:last-child{
+  width:66%;
+}
+
+.momentum-impact .momentum-section-wrapper .columns.block > div div:last-child p{
+  margin:0;
+}
+
+.member-profile .momentum-section-wrapper .columns.block > div{
+  align-items:start;
+}
+
+.member-profile .momentum-section-wrapper .columns.block > div > div h2{
+  margin-bottom:var(--space-4xs);
+}
+
+.member-profile .momentum-section-wrapper .columns.block > div > div h4{
+  font-size:var(--font-size-body);
+  margin-bottom:var(--space-xs);
+}
+
+.member-profile .momentum-section-wrapper .columns.block > div > div > *:last-child{
+  margin-bottom:0;
+}
+
+.member-profile .momentum-section-wrapper .columns.block .columns-img-col{
+  width:25%;
+}
+
+.member-profile.top-padding{
+  padding-top:var(--gap-container-y);
+}
+
+.member-profile.bottom-padding{
+  padding-bottom:var(--gap-container-y);
 }
 
 @media screen and (max-width: 1279px){
@@ -956,6 +1041,22 @@
     flex-direction:column;
   }
 
+  .momentum-saver-section .columns.block > div div,
+  .momentum-image-saver .columns.block > div div,
+  .image-swapping .columns.block > div div,
+  .momentum-app-badges .columns.block > div div,
+  .momentum-direct-variant .columns.block > div div{
+    width:100%;
+  }
+
+  .momentum-saver-section .columns.block > div div:has(picture, img),
+  .momentum-image-saver .columns.block > div div:has(picture, img),
+  .image-swapping .columns.block > div div:has(picture, img),
+  .momentum-app-badges .columns.block > div div:has(picture, img),
+  .momentum-direct-variant .columns.block > div div:has(picture, img){
+    width:unset;
+  }
+
   .momentum-saver-section .columns.block > div .rate-unit,
   .momentum-image-saver .columns.block > div .rate-unit,
   .image-swapping .columns.block > div .rate-unit,
@@ -971,7 +1072,7 @@
     gap:32px;
   }
 
-  .momentum-saver-section:not(.columns.block:has(img)) .columns.block{
+  .momentum-saver-section .columns.block:has(:not(img)){
     padding:40px 16px;
   }
 
@@ -1040,18 +1141,43 @@
     gap:24px;
   }
 
-  .momentum-impact .momentum-section-wrapper .columns.block > div::after{
-    content:unset;
+  .momentum-impact.tmbl .momentum-section-wrapper .columns.block > div div:first-child{
+    padding-left:var(--space-md);
   }
 
-  .momentum-impact .momentum-section-wrapper .columns.block > div > div:has(img){
+  .momentum-impact .momentum-section-wrapper .columns.block > div{
+    flex-direction:row;
+    gap:var(--space-lg);
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div div:last-child{
     flex-direction:column;
-    margin-left:unset;
+    gap:var(--space-sm);
+    padding-left:var(--space-lg);
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div div:last-child > p:first-child{
     width:100%;
   }
 
-  .momentum-impact .momentum-section-wrapper .columns.block > div > div:has(img) p{
+  .momentum-impact .momentum-section-wrapper .columns.block > div div:last-child > p:first-child picture > img{
+    border-radius:var(--radius-card);
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div div:last-child > p:last-child{
     width:100%;
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div div:last-child p{
+    margin:0;
+  }
+
+  .member-profile .momentum-section-wrapper .columns.block > div{
+    flex-direction:row;
+  }
+
+  .member-profile .momentum-section-wrapper .columns.block .columns-img-col{
+    width:33%;
   }
 }
 
@@ -1107,6 +1233,73 @@
 
   .momentum-corporate-variation .columns.block > div{
     gap:16px;
+  }
+
+  .momentum-impact.tmbl .momentum-section-wrapper .columns.block > div{
+    border-left:0;
+    flex-direction:column;
+    gap:var(--space-sm);
+  }
+
+  .momentum-impact.tmbl .momentum-section-wrapper .columns.block > div div:first-child{
+    padding-left:0;
+  }
+
+  .momentum-impact.tmbl .momentum-section-wrapper .columns.block > div div:last-child{
+    border:0;
+    padding-left:0;
+  }
+
+  .momentum-impact.tmbl .momentum-section-wrapper .columns.block > div div:last-child > p:first-child picture > img{
+    aspect-ratio:16/12;
+    border-radius:var(--radius-card);
+    -o-object-fit:cover;
+       object-fit:cover;
+  }
+
+  .momentum-impact.tmbl .momentum-section-wrapper .columns.block > div div:last-child > p:last-child{
+    width:100%;
+  }
+
+  .momentum-impact.tmbl .momentum-section-wrapper .columns.block > div div:last-child p{
+    margin:0;
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div div{
+    width:100%;
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div{
+    flex-direction:column;
+    gap:var(--space-sm);
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div div:last-child{
+    border:0;
+    padding-left:0;
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div div:last-child > p:first-child picture > img{
+    aspect-ratio:16/12;
+    border-radius:var(--radius-card);
+    -o-object-fit:cover;
+       object-fit:cover;
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div div:last-child > p:last-child{
+    width:100%;
+  }
+
+  .momentum-impact .momentum-section-wrapper .columns.block > div div:last-child p{
+    margin:0;
+  }
+
+  .member-profile .momentum-section-wrapper .columns.block > div{
+    flex-direction:column;
+  }
+
+  .member-profile .momentum-section-wrapper .columns.block .columns-img-col{
+    width:100%;
   }
 }
 

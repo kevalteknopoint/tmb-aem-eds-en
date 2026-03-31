@@ -432,6 +432,22 @@
             {
               "name": "Tabbed Navigation",
               "value": "tabbed-navigation"
+            },
+            {
+              "name": "Align Left (Default Content)",
+              "value": "align-default-left"
+            },
+            {
+              "name": "Align Right (Default Content)",
+              "value": "align-default-right"
+            },
+            {
+              "name": "Align Center (Default Content)",
+              "value": "align-default-center"
+            },
+            {
+              "name": "Member Profile",
+              "value": "member-profile"
             }
           ]
         }
