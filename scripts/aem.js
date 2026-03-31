@@ -765,6 +765,33 @@ function loadDmImages(block) {
   });
 }
 
+function storePerformanceMetrics() {
+  window.__perfMetrics = {
+    lcp: null,
+    lcpFinal: false
+  };
+
+  const observer = new PerformanceObserver((entryList) => {
+    const entries = entryList.getEntries();
+    const lastEntry = entries[entries.length - 1];
+    window.__perfMetrics.lcp = lastEntry.startTime;
+  });
+
+  observer.observe({ type: "largest-contentful-paint", buffered: true });
+
+  function finalizeLCP() {
+    if (window.__perfMetrics.lcpFinal) return;
+    observer.disconnect();
+    window.__perfMetrics.lcpFinal = true;
+  }
+
+  if (document.readyState === "complete") {
+    finalizeLCP();
+  } else {
+    window.addEventListener("load", finalizeLCP);
+  }
+}
+
 init();
 
 export {
@@ -800,5 +827,6 @@ export {
   isDesktopLg,
   camelToKebab,
   loadPlaceholders,
-  loadDmImages
+  loadDmImages,
+  storePerformanceMetrics
 };

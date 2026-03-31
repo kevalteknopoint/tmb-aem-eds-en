@@ -33,32 +33,14 @@ function loadAos() {
   });
 }
 
-function getPerformanceTier() {
-  return new Promise((resolve) => {
-    let lcpValue = null;
+function getPerformanceTierFromStore() {
+  const lcpValue = window.__perfMetrics?.lcp;
 
-    const observer = new PerformanceObserver((entryList) => {
-      const entries = entryList.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      lcpValue = lastEntry.startTime;
-    });
+  if (!lcpValue) return null;
 
-    observer.observe({ type: "largest-contentful-paint", buffered: true });
-
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        observer.disconnect();
-
-        if (!lcpValue) return resolve(null);
-
-        if (lcpValue <= 2500) resolve("good");
-        else if (lcpValue <= 4000) resolve("needs-improvement");
-        else resolve("poor");
-
-        return null;
-      }, 0);
-    });
-  });
+  if (lcpValue <= 2500) return "good";
+  if (lcpValue <= 4000) return "needs-improvement";
+  return "poor";
 }
 
 async function pageAnalytics() {
@@ -79,7 +61,7 @@ async function pageAnalytics() {
   const pageLanguage = document.documentElement.lang;
   const pageId = '';
   const pageTemplate = 'common';
-  const performanceTier = await getPerformanceTier();
+  const performanceTier = getPerformanceTierFromStore();
   const brand = getMetadata('brand');
   const webType = /Mobi|Android/i.test(navigator.userAgent) ? "mobile" : "desktop";
   const backtrackFlag = '';

@@ -12,6 +12,7 @@ import {
   loadCSS,
   loadDmImages,
   loadPlaceholders,
+  storePerformanceMetrics,
 } from './aem.js';
 import loadNonBlockLibs from './components.js';
 import initLazy from './lazy.js';
@@ -165,6 +166,7 @@ function loadDelayed() {
 async function loadPage() {
   window.adobeDataLayer = window.adobeDataLayer || [];
 
+  storePerformanceMetrics();
   await fetchPlaceholders();
   await fetchPlaceholders('dev', 'dev-placeholders.json');
   loadPlaceholders(document.querySelector('main'));
