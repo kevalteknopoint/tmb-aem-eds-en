@@ -36,20 +36,31 @@ function loadAos() {
 function getPerformanceTierFromStore() {
   const lcpValue = window.__perfMetrics?.lcp;
 
-  if (!lcpValue) return null;
+  if (!lcpValue || lcpValue === 0) return 'not-available';
 
   if (lcpValue <= 2500) return "good";
   if (lcpValue <= 4000) return "needs-improvement";
   return "poor";
 }
 
-async function pageAnalytics() {
+export async function pageAnalytics() {
   setPersona();
 
   function bucket(time) {
     if (time < 1000) return "fast";
     if (time < 3000) return "average";
     return "slow";
+  }
+
+  function getHttpStatus() {
+    const navEntry = performance.getEntriesByType("navigation")[0];
+    return navEntry?.responseStatus || 200;
+  }
+
+  function getHttpStatusGroup(code) {
+    if (!code) return 'unknown';
+    const firstDigit = String(code).charAt(0);
+    return `${firstDigit}xx`; // e.g., "2xx", "4xx"
   }
 
   const basePath = getMetadata('base-path');
@@ -72,8 +83,8 @@ async function pageAnalytics() {
   const domInteractiveTimeBucket = bucket(domInteractiveTime);
   const firstContentfulPaint = performance.getEntriesByType("paint").find((entry) => entry.name === "first-contentful-paint")?.startTime;
   const firstContentfulPaintBucket = bucket(firstContentfulPaint);
-  const httpStatusCode = '';
-  const httpStatusGroup = '';
+  const httpStatusCode = getHttpStatus();
+  const httpStatusGroup = getHttpStatusGroup();
   const trackingVersion = '';
   const implementationEnvironment = '';
   const dataLayerReadyFlag = '';
@@ -89,11 +100,10 @@ async function pageAnalytics() {
   const hasEverLoggedInFlag = '';
   const visitorType = '';
 
-  pageIntialization(pageName, pageType, siteSection, siteSubSection, pageLanguage, pageId, pageTemplate, performanceTier, brand, webType, backtrackFlag, helpVisitFlag, implementationVersion, domInteractiveTime, domInteractiveTimeBucket, firstContentfulPaint, firstContentfulPaintBucket, httpStatusCode, httpStatusGroup, trackingVersion, implementationEnvironment, dataLayerReadyFlag, requiredFieldMissingFlag, testUserFlag, qaSessionFlag, product, primaryProductGroup, primaryProduct, multiProductFlag, personId, loginStatus, hasEverLoggedInFlag, visitorType);
+  pageIntialization({ pageName, pageType, siteSection, siteSubSection, pageLanguage, pageId, pageTemplate, performanceTier, brand, webType, backtrackFlag, helpVisitFlag, implementationVersion, domInteractiveTime, domInteractiveTimeBucket, firstContentfulPaint, firstContentfulPaintBucket, httpStatusCode, httpStatusGroup, trackingVersion, implementationEnvironment, dataLayerReadyFlag, requiredFieldMissingFlag, testUserFlag, qaSessionFlag, product, primaryProductGroup, primaryProduct, multiProductFlag, personId, loginStatus, hasEverLoggedInFlag, visitorType });
 }
 
 export default async function initLazy() {
   loadAos();
-  pageAnalytics();
   loadSprite();
 }

@@ -12,10 +12,9 @@ import {
   loadCSS,
   loadDmImages,
   loadPlaceholders,
-  storePerformanceMetrics,
 } from './aem.js';
 import loadNonBlockLibs from './components.js';
-import initLazy from './lazy.js';
+import initLazy, { pageAnalytics } from './lazy.js';
 import { fetchPlaceholders } from './placeholders.js';
 
 /**
@@ -166,7 +165,19 @@ function loadDelayed() {
 async function loadPage() {
   window.adobeDataLayer = window.adobeDataLayer || [];
 
-  storePerformanceMetrics();
+  window.__perfMetrics = { lcp: 0 };
+
+  const lcpObserver = new PerformanceObserver((entryList) => {
+    const entries = entryList.getEntries();
+    window.__perfMetrics.lcp = entries[entries.length - 1].startTime;
+    if (!window.__analyticsSent) {
+      pageAnalytics();
+      window.__analyticsSent = true;
+    }
+  });
+
+  lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
+
   await fetchPlaceholders();
   await fetchPlaceholders('dev', 'dev-placeholders.json');
   loadPlaceholders(document.querySelector('main'));
