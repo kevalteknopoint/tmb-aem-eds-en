@@ -3,13 +3,14 @@ import { getComponentIndex, getPageRegion, getPersona, internalSearch, menuInter
 document.addEventListener('click', (e) => {
   if (e.target.closest('.secondary-nav-link')) {
     const secondaryLink = e.target.closest('.secondary-nav-link');
-    menuInteraction('', minifyText(secondaryLink?.textContent), '', '', 'top menu', '', '');
+    menuInteraction(getPageRegion, minifyText(secondaryLink?.textContent), '', '', 'top menu', 'menu',getComponentIndex(), getPersona(),'', 'menu-click', 'internal', '','','','header','');
   }
 
   if (e.target.closest('.primary-nav-link')) {
     const primaryLink = e.target.closest('.primary-nav-link');
-    menuInteraction('', minifyText(primaryLink?.textContent), '', '', 'main menu', '', '');
+    menuInteraction(getPageRegion, minifyText(primaryLink?.textContent),'','', 'header', 'menu',getComponentIndex(), getPersona(),'', 'menu-click', 'internal', '','','','header','');
   }
+   
 
   if (e.target.closest('.search-btn')) {
     searchInitiate(getPageRegion(e.target.closest('.search-btn')), 'search button', 'header', getComponentIndex(e.target.closest('.search-btn')), getPersona(), 'click', '');
