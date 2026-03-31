@@ -523,16 +523,34 @@ export const getPageRegion = (element) => {
   return "bottom";
 };
 
+// export function getComponentIndex(clickedElement) {
+//   if (!clickedElement) return -1;
+//   const section = clickedElement.closest(".section[data-section-status],.header-wrapper,.footer-wrapper");
+//   if (!section) return -1;
+//   const main = section.closest("main");
+//   if (!main) return -1;
+//   const sections = Array.from(main.children).filter((child) =>
+//     child.classList.contains("section"),
+//   );
+//   return sections.indexOf(section) + 1;
+// }
+
 export function getComponentIndex(clickedElement) {
   if (!clickedElement) return -1;
-  const section = clickedElement.closest(".section[data-section-status]");
-  if (!section) return -1;
-  const main = section.closest("main");
-  if (!main) return -1;
-  const sections = Array.from(main.children).filter((child) =>
-    child.classList.contains("section"),
+
+  const component = clickedElement.closest(
+    ".section[data-section-status], .header-wrapper, .footer-wrapper"
   );
-  return sections.indexOf(section) + 1;
+  if (!component) return -1;
+
+  // Get ALL components across the page (including inside header/footer)
+  const components = Array.from(
+    document.querySelectorAll(
+      ".header-wrapper, .footer-wrapper, .section[data-section-status]"
+    )
+  );
+
+  return components.indexOf(component) + 1;
 }
 
 export function socialmediaClick(

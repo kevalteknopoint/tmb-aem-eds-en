@@ -1,4 +1,5 @@
 import { injectIcon } from "../../scripts/aem.js";
+import '../columns/who-can-apply-analytics.js';
 
 export default function decorate(block) {
   if (window.location.href.includes("author")) return;
