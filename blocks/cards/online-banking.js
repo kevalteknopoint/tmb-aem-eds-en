@@ -74,14 +74,6 @@ export default function decorateOnlineBanking(block) {
         mainBody.appendChild(bottomContainer);
       }
 
-      // if(bottomContainer){
-      //   const iconDetails = bottomContainer.querySelectorAll(".card-bottom-2 p a");
-      //   console.log(iconDetails);
-      //   if(iconDetails.0.childNodes.length == 1 && $0.querySelector('.icon')){
-      //     console.log('icon present');
-      //   }
-      // }
-
       const bottomContainers = li.querySelector(".card-bottom-2");
       if (bottomContainers) {
         const links = Array.from(bottomContainers.querySelectorAll("a"));

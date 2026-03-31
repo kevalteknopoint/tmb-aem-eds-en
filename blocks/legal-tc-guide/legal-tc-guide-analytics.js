@@ -11,8 +11,7 @@ document.addEventListener('click', (e) => {
 
     const ctaText = minifyText(link.textContent);
     const nextPageURL = link.href;
-    console.log('legal');
-    
+
     ctaInteraction(
       pageRegion,
       ctaText,

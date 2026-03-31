@@ -9,7 +9,6 @@
     return;
   }
 
-  console.log('Decorating mortgage-insurance block', block);
   const rows = [...block.children];
 
   rows.forEach((row, idx) => {
@@ -33,6 +32,5 @@
         }
       }
     }
-    console.log(`Decorated row ${idx}`, row);
   });
 }());

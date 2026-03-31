@@ -10,4 +10,4 @@ document.addEventListener('click', (e) => {
     const nextPageURL = e.target.closest(".aboutus-grid-content .button-container a")?.getAttribute("href");
     ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), minifyText(ctaSource?.textContent), 'committee', 'columns', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', '', '', '', '', 'committee ');
   }
-})
+});

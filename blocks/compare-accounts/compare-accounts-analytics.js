@@ -1,16 +1,6 @@
 import { ctaInteraction, minifyText, getPersona, getPageRegion, getComponentIndex } from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
-  // if (e.target.closest('.compare-accounts a')) {
-  //   const secondaryLink = e.target.closest('.compare-accounts a');
-  //   const pageRegion = getPageRegion(e.target.closest('.compare-accounts a'));
-  //    const componentIndex = getComponentIndex(e.target.closest('.compare-accounts a'));
-  //    const ctaTitle =e.target.closest('.compare-accounts').querySelector("h1,h2,h3,h4");
-  //    console.log("fisrt");
-
-  //   const nextPageURL = e.target.closest(".compare-accounts a")?.getAttribute("href");
-  //   ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent) , 'customer', 'customer','customer',componentIndex,getPersona(),nextPageURL,'cta-link','internal','quick-link','in-content','','','','','','','','');
-  // }
   if (e.target.closest('.compare-accounts-wrapper .button-container')) {
     const ctaSource = e.target.closest('.card-fragments-container').querySelector("#explore-other-ways-to-save");
     const secondaryLink = e.target.closest('.compare-accounts-wrapper .button-container a');

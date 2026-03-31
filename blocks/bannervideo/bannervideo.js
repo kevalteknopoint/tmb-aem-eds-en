@@ -142,7 +142,6 @@ function mobileviewswiper(block) {
         child.classList.add(`mob-noswiper-child${i + 1}`);
       });
     });
-  console.log(block);
   const rows = Array.from(block.children);
   rows.forEach((row) => {
     row.classList.add("mob-swiper");
@@ -170,7 +169,6 @@ function mobileviewswiper(block) {
   });
 }
 export default function decorate(block) {
-  // console.log(block);
   if (!block.closest(".secsecond")) {
     createSwiper(block);
     const swiper = new Swiperblock(block, {

@@ -17,7 +17,6 @@ export default function decorate(block) {
 
       wrappers.forEach((wrapper) => fragmentParent.appendChild(wrapper));
 
-      console.log("Fragments successfully wrapped!");
       return true;
     }
     return false;

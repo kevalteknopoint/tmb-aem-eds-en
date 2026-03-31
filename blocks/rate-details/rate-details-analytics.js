@@ -9,6 +9,6 @@ document.addEventListener('click', (e) => {
     const ctaSource = e.target.closest('.rate-details').querySelector("h1,h2,h3,h4,h5,h6");
 
     const nextPageURL = e.target.closest(".rate-details .button-container a")?.getAttribute("href");
-    ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent),minifyText(ctaSource?.textContent), 'rate-details', 'columns-container', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', 'rate-details', '', '', '', '');
+    ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), minifyText(ctaSource?.textContent), 'rate-details', 'columns-container', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', 'rate-details', '', '', '', '');
   }
-})
+});

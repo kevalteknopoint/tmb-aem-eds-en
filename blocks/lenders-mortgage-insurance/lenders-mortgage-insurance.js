@@ -5,8 +5,6 @@
   const block = document.querySelector('.lenders-mortgage-insurance-check');
   if (!block) return;
 
-  console.log('Decorating lenders-mortgage-insurance block', block);
-
   // 2. Select all paragraphs within the block
   const paragraphs = block.querySelectorAll("p");
 
