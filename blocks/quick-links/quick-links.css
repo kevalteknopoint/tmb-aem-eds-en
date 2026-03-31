@@ -13,6 +13,24 @@
   --space-xs:16px;
 }
 
+.quick-links-container.tmbl .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)), .quick-links-container.tmbl .quick-links-wrapper > .quick-links > div > div > p > a, .quick-links-container.tmbl .quick-links-wrapper > .quick-links > div > div > h1:not(:has(a)), .quick-links-container.tmbl .quick-links-wrapper > .quick-links > div > div > h1 > a, .quick-links-container.tmbl .quick-links-wrapper > .quick-links > div > div > h2:not(:has(a)), .quick-links-container.tmbl .quick-links-wrapper > .quick-links > div > div > h2 > a, .quick-links-container.tmbl .quick-links-wrapper > .quick-links > div > div > h3:not(:has(a)), .quick-links-container.tmbl .quick-links-wrapper > .quick-links > div > div > h3 > a, .quick-links-container.tmbl .quick-links-wrapper > .quick-links > div > div > h4:not(:has(a)), .quick-links-container.tmbl .quick-links-wrapper > .quick-links > div > div > h4 > a, .quick-links-container.tmbl .quick-links-wrapper > .quick-links > div > div > h5:not(:has(a)), .quick-links-container.tmbl .quick-links-wrapper > .quick-links > div > div > h5 > a, .quick-links-container.tmbl .quick-links-wrapper > .quick-links > div > div > h6:not(:has(a)), .quick-links-container.tmbl .quick-links-wrapper > .quick-links > div > div > h6 > a{
+  border-left:var(--space-4xs) solid var(--color-variants-burst-default);
+  font-family:var(--font-family-h2);
+  font-size:var(--font-size-h2);
+  font-weight:var(--font-weight-h2);
+  height:68px;
+  letter-spacing:var(--font-letter-spacing-h2);
+  line-height:var(--font-height-h2);
+  padding-left:calc(32px - var(--space-4xs));
+  text-decoration:none;
+  text-transform:var(--heading2-case);
+}
+
+.quick-links-container.tmbl .quick-links-wrapper > div > div > div > ul{
+  padding-left:32px;
+  padding-top:12px;
+}
+
 .quick-links-container{
   display:grid;
   gap:40px;
@@ -36,6 +54,7 @@
   justify-content:flex-start;
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
+  text-decoration:unset;
   text-transform:var(--heading3-case);
 }
 
@@ -56,7 +75,7 @@
 }
 
 .quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)) .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1:not(:has(a)) .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1 > a .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2:not(:has(a)) .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2 > a .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3:not(:has(a)) .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3 > a .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4:not(:has(a)) .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4 > a .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5:not(:has(a)) .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5 > a .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6:not(:has(a)) .quick-link-text::after, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6 > a .quick-link-text::after{
-  background:var(--burst-default);
+  background:var(--link-default);
   bottom:0;
   content:"";
   height:2px;
@@ -130,7 +149,7 @@
 }
 
 .quick-links-container .quick-links-wrapper > div > div > div > ul > li > a::after{
-  background:var(--burst-default);
+  background:var(--link-default);
   bottom:0;
   content:"";
   height:1px;

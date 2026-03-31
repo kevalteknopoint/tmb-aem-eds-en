@@ -164,9 +164,9 @@
   --font-family-body-bold:var(--primary-font);
   --font-family-body:var(--primary-font);
   --font-family-disc:var(--primary-font);
-  --font-family-h1-std:var(--primary-font);
+  --font-family-h1-std:var(--secondary-font);
   --font-family-h1:var(--secondary-font);
-  --font-family-h2-std:var(--primary-font);
+  --font-family-h2-std:var(--secondary-font);
   --font-family-h2:var(--secondary-font);
   --font-family-h3:var(--secondary-font);
   --font-family-h4:var(--primary-font);
@@ -523,8 +523,15 @@ p{
   text-wrap:pretty;
 }
 
-header:has(.secondary-header){
-  min-height:141px;
+h6{
+  color:var(--body-default);
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-weight:var(--font-weight-sm-body);
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
+  text-transform:var(--sm-body-case);
+  text-wrap:pretty;
 }
 
 .d-none{
@@ -817,6 +824,22 @@ svg.icon-svg.icon-accent{
   background-size:cover;
 }
 
+.align-default-left .default-content-wrapper, .align-default-left .default-content-wrapper *{
+  margin-right:auto !important;
+  text-align:left !important;
+}
+
+.align-default-right .default-content-wrapper, .align-default-right .default-content-wrapper *{
+  margin-left:auto !important;
+  text-align:right !important;
+}
+
+.align-default-center .default-content-wrapper, .align-default-center .default-content-wrapper *{
+  margin-left:auto !important;
+  margin-right:auto !important;
+  text-align:center !important;
+}
+
 @media screen and (max-width: 1439px){
   :root{
     --carousel-fix-x:64px;
@@ -946,9 +969,6 @@ svg.icon-svg.icon-accent{
 }
 
 @media screen and (max-width: 767px){
-  header{
-    min-height:60px;
-  }
   .spacer-bottom{
     margin-bottom:40px;
   }

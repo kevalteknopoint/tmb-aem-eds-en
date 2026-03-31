@@ -1,28 +1,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<script>
-  function getMetadata(name, doc = document) {
-    const attr = name && name.includes(":") ? "property" : "name";
-    const meta = [...doc.head.querySelectorAll(`meta[${attr}="${name}"]`)]
-      .map((m) => m.content)
-      .join(", ");
-    return meta || "";
+
+<style>
+  header {
+    min-height: 141px;
   }
 
-  const faviconLink = document.createElement('link');
-  faviconLink.rel = 'icon';
-  faviconLink.href = `${getMetadata("favicon") || '/favicon.ico'}`;
-  document.head.appendChild(faviconLink);
-</script>
+  @media screen and (max-width: 768px) {
+    header {
+      min-height: 60px;
+    }
+  }
+
+  body {
+    display: none;
+  }
+
+  body.appear {
+    display: block;
+  }
+</style>
+
 <script>
-  const stylesheetLink = document.createElement('link');
-  stylesheetLink.rel = 'stylesheet';
-  stylesheetLink.href = `/styles/${getMetadata("theme") || 'tmb'}/styles.css`;
-  document.head.appendChild(stylesheetLink);
+  // Helper function to get metadata content
+  function getMeta(name) {
+    const attr = name.includes(":") ? "property" : "name";
+    const meta = document.querySelector(`meta[${attr}="${name}"]`);
+    return meta ? meta.content : "";
+  }
+
+  (function() {
+    // Resolve values
+    const theme = getMeta("theme") || 'tmb';
+    const favicon = getMeta("favicon") || '/favicon.ico';
+    const stylesheet = `/styles/${theme}/styles.css`;
+
+    // Inject tags directly into the document stream
+    document.write(`<link rel="icon" href="${favicon}">`);
+    document.write(`<link rel="stylesheet" href="${stylesheet}">`);
+  })();
 </script>
 <script src="/scripts/aem.js" type="module"></script>
 <script src="/scripts/scripts.js" type="module"></script>
 <script>
   const launchScript = document.createElement('script');
-  launchScript.src = `${getMetadata("analytics-script") || 'https://assets.adobedtm.com/fb921698a526/6931f2c56d94/launch-10ebe48cc381-development.min.js'}`;
+  launchScript.src = `${getMeta("analytics-script") || 'https://assets.adobedtm.com/fb921698a526/6931f2c56d94/launch-10ebe48cc381-development.min.js'}`;
   document.head.appendChild(launchScript);
 </script>

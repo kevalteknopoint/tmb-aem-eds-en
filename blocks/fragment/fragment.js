@@ -13,6 +13,7 @@ import {
   loadPlaceholders,
   loadSections,
 } from '../../scripts/aem.js';
+import loadNonBlockLibs from '../../scripts/components.js';
 
 /**
  * Loads a fragment.
@@ -57,6 +58,11 @@ export default async function decorate(block) {
       block.replaceChildren(...fragmentSection.childNodes);
       loadPlaceholders(block);
       loadDmImages(block);
+      try {
+        loadNonBlockLibs();
+      } catch (e) {
+        // do nothing
+      }
     }
   }
 }

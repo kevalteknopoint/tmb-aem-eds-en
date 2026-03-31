@@ -215,6 +215,8 @@
 .navigation-cards-container .card-header .icon{
   display:block;
   margin:0 auto 16px;
+  width:-moz-fit-content;
+  width:fit-content;
 }
 
 .navigation-cards-container .card-header .icon svg{

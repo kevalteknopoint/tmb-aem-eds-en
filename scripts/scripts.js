@@ -10,12 +10,12 @@ import {
   loadSection,
   loadSections,
   loadCSS,
-  loadPlaceholders,
   loadDmImages,
+  loadPlaceholders,
 } from './aem.js';
-import { pageIntialization, setPersona } from './analytics/exports.js';
-import { fetchPlaceholders } from './placeholders.js';
 import loadNonBlockLibs from './components.js';
+import initLazy from './lazy.js';
+import { fetchPlaceholders } from './placeholders.js';
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -109,6 +109,7 @@ export function decorateMain(main) {
 async function loadEager(doc) {
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
+  loadHeader(doc.querySelector('header'));
   const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);
@@ -121,6 +122,12 @@ async function loadEager(doc) {
     if (window.innerWidth >= 900 || sessionStorage.getItem('fonts-loaded')) {
       loadFonts();
     }
+  } catch (e) {
+    // do nothing
+  }
+
+  try {
+    loadNonBlockLibs();
   } catch (e) {
     // do nothing
   }
@@ -138,11 +145,11 @@ async function loadLazy(doc) {
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();
 
-  loadHeader(doc.querySelector('header'));
   loadFooter(doc.querySelector('footer'));
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
+  setTimeout(initLazy);
 }
 
 /**
@@ -152,127 +159,32 @@ async function loadLazy(doc) {
 function loadDelayed() {
   // eslint-disable-next-line import/no-cycle
   window.setTimeout(() => import('./delayed.js'), 3000);
-  window.setTimeout(() => {
-    const script = document.createElement('script');
-    script.setAttribute('src', '/scripts/aos.min.js');
-    document.body.appendChild(script);
-  });
   // load anything that can be postponed to the latest here
-}
-
-function getPerformanceTier() {
-  return new Promise((resolve) => {
-    let lcpValue = null;
-
-    const observer = new PerformanceObserver((entryList) => {
-      const entries = entryList.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      lcpValue = lastEntry.startTime;
-    });
-
-    observer.observe({ type: "largest-contentful-paint", buffered: true });
-
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        observer.disconnect();
-
-        if (!lcpValue) return resolve(null);
-
-        if (lcpValue <= 2500) resolve("good");
-        else if (lcpValue <= 4000) resolve("needs-improvement");
-        else resolve("poor");
-
-        return null;
-      }, 0);
-    });
-  });
-}
-
-async function pageAnalytics() {
-  function bucket(time) {
-    if (time < 1000) return "fast";
-    if (time < 3000) return "average";
-    return "slow";
-  }
-
-  const basePath = getMetadata('base-path');
-  const pagePath = window.location.pathname.replace(basePath, '');
-  const pageName = document.title;
-  const pageType = getMetadata('page-type');
-  const siteSection = pagePath === '/' ? 'home' : pagePath?.split('/')?.[1];
-  const siteSubSection = pagePath === '/' ? 'home' : (pagePath?.split('/')?.[2] || '');
-  const pageLanguage = document.documentElement.lang;
-  const pageId = '';
-  const pageTemplate = 'common';
-  const performanceTier = await getPerformanceTier();
-  const brand = getMetadata('brand');
-  const webType = /Mobi|Android/i.test(navigator.userAgent) ? "mobile" : "desktop";
-  const backtrackFlag = '';
-  const helpVisitFlag = '';
-  const implementationVersion = '';
-  const navEntry = performance.getEntriesByType("navigation")[0];
-  const domInteractiveTime = navEntry.domInteractive;
-  const domInteractiveTimeBucket = bucket(domInteractiveTime);
-  const firstContentfulPaint = performance.getEntriesByType("paint").find((entry) => entry.name === "first-contentful-paint")?.startTime;
-  const firstContentfulPaintBucket = bucket(firstContentfulPaint);
-  const httpStatusCode = '';
-  const httpStatusGroup = '';
-  const trackingVersion = '';
-  const implementationEnvironment = '';
-  const dataLayerReadyFlag = '';
-  const requiredFieldMissingFlag = '';
-  const testUserFlag = '';
-  const qaSessionFlag = '';
-  const product = '';
-  const primaryProductGroup = '';
-  const primaryProduct = '';
-  const multiProductFlag = '';
-  const personId = '';
-  const loginStatus = '';
-  const hasEverLoggedInFlag = '';
-  const visitorType = '';
-
-  pageIntialization(pageName, pageType, siteSection, siteSubSection, pageLanguage, pageId, pageTemplate, performanceTier, brand, webType, backtrackFlag, helpVisitFlag, implementationVersion, domInteractiveTime, domInteractiveTimeBucket, firstContentfulPaint, firstContentfulPaintBucket, httpStatusCode, httpStatusGroup, trackingVersion, implementationEnvironment, dataLayerReadyFlag, requiredFieldMissingFlag, testUserFlag, qaSessionFlag, product, primaryProductGroup, primaryProduct, multiProductFlag, personId, loginStatus, hasEverLoggedInFlag, visitorType);
 }
 
 async function loadPage() {
   window.adobeDataLayer = window.adobeDataLayer || [];
-  setPersona();
-
-  pageAnalytics();
 
   await fetchPlaceholders();
   await fetchPlaceholders('dev', 'dev-placeholders.json');
-  loadPlaceholders();
+  loadPlaceholders(document.querySelector('main'));
   loadDmImages();
 
   await loadEager(document);
   await loadLazy(document);
-
-  try {
-    const response = await fetch(`/icons/icon-sprite.svg`);
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const svgText = await response.text();
-
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(svgText, 'image/svg+xml');
-    const svgElement = doc.documentElement;
-
-    document.body.appendChild(svgElement);
-  } catch (error) {
-    console.error('Error loading SVG:', error);
-  }
-
-  loadNonBlockLibs();
   loadDelayed();
 }
 
-window.initAos = function initAos() {
-  window.AOS?.init();
-};
-
 loadPage();
+
+document.addEventListener("click", (e) => {
+  const link = e.target.closest("a");
+  if (!link) return;
+
+  const isExternal = (link.hostname && link.hostname !== window.location.hostname) || (link.href?.endsWith('#_blank'));
+
+  if (isExternal) {
+    e.preventDefault();
+    window.open(link.href?.replace('#_blank', ''), "_blank", "noopener,noreferrer");
+  }
+});

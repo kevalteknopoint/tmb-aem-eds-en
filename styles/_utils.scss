@@ -1,15 +1,5 @@
 @use './base' as *;
 
-header {
-  &:has(.secondary-header) {
-    min-height: 141px;
-  }
-
-  @include mobile {
-    min-height: 60px;
-  }
-}
-
 .d-none {
   display: none !important;
 }
@@ -311,4 +301,26 @@ svg.icon-svg.icon-accent {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.align-default-left {
+  .default-content-wrapper, .default-content-wrapper * {
+    text-align: left !important;
+    margin-right: auto !important;
+  }
+}
+
+.align-default-right {
+  .default-content-wrapper, .default-content-wrapper * {
+    text-align: right !important;
+    margin-left: auto !important;
+  }
+}
+
+.align-default-center {
+  .default-content-wrapper, .default-content-wrapper * {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }

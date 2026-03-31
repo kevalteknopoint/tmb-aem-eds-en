@@ -109,3 +109,10 @@ p {
   color: $body-default;
   text-wrap: pretty;
 }
+
+h6 {
+  @include typo-sm-body;
+
+  color: $body-default;
+  text-wrap: pretty;
+}

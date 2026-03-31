@@ -1,5 +1,9 @@
 @use '../../styles/base' as *;
 
+header:has(.header.block.header-loaded) {
+  min-height: unset;
+}
+
 .mui-toast-wrapper {
   position: fixed;
   bottom: 24px;
@@ -74,6 +78,7 @@ html:has(.primary-header.search-active) {
     line-height: 24px;
     letter-spacing: 0;
     color: $color-header-nav-primary;
+    text-decoration: unset;
   }
 }
 
@@ -285,6 +290,7 @@ html:has(.primary-header.search-active) {
     display: block;
     color: $color-header-nav-secondary;
     position: relative;
+    text-decoration: unset;
 
     &::after {
       content: '';
@@ -464,6 +470,7 @@ header:has(.secondary-header) {
   }
   
   .no-results {
+    @include responsive-container;
     @include typo-heading2-std;
 
     color: $heading-default;
@@ -554,6 +561,7 @@ header:has(.secondary-header) {
           display: flex;
           justify-content: space-between;
           align-items: center;
+          text-decoration: none;
 
           svg {
             width: 7px;

@@ -70,6 +70,16 @@
                   "name": "navigation-card-link",
                   "label": "Navigation Card Link",
                   "valueType": "string"
+                },
+                {
+                  "component": "select",
+                  "name": "navigation-card-link-target",
+                  "label": "Target",
+                  "value": "_self",
+                  "options": [
+                    { "name": "Same", "value": "_self" },
+                    { "name": "New", "value": "_blank" }
+                  ]
                 }
             ]
         }

@@ -1,6 +1,35 @@
 @use '../../styles/base' as *;
 
 .quick-links-container {
+
+  // -------  BRAND OVERRIDE: tmbl (Specific Layout & style) -------- //
+  // -------  Identified via brand class added to the container during decoration ------- //
+  &.tmbl {
+    $padding-target: 32px;
+    .quick-links-wrapper {
+      & > .quick-links > div > div > p:not(:has(a)), & > .quick-links > div > div > p > a,
+      & > .quick-links > div > div > h1:not(:has(a)), & > .quick-links > div > div > h1 > a,
+      & > .quick-links > div > div > h2:not(:has(a)), & > .quick-links > div > div > h2 > a,
+      & > .quick-links > div > div > h3:not(:has(a)), & > .quick-links > div > div > h3 > a,
+      & > .quick-links > div > div > h4:not(:has(a)), & > .quick-links > div > div > h4 > a,
+      & > .quick-links > div > div > h5:not(:has(a)), & > .quick-links > div > div > h5 > a,
+      & > .quick-links > div > div > h6:not(:has(a)), & > .quick-links > div > div > h6 > a {
+
+        @include typo-heading2;
+        text-decoration: none;
+        height: 68px;
+        border-left: $space-4xs solid $color-variants-burst-default;
+        padding-left: calc(#{$padding-target} - #{$space-4xs});
+      }
+      
+      & > div > div > div > ul {
+        padding-left: 32px;
+        padding-top: 12px;
+      }
+    }
+  }
+ // ------- End -------- //
+ 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
@@ -21,6 +50,7 @@
       gap: 16px;
       align-items: center;
       color: $link-default;
+      text-decoration: unset;
 
       @include typo-heading3;
 
@@ -49,7 +79,7 @@
           height: 2px;
           width: 0;
           transition: all 0.2s ease-in-out;
-          background: $burst-default;
+          background: $link-default;
         }
       }
 
@@ -117,7 +147,7 @@
             height: 1px;
             width: 0;
             transition: all 0.2s ease-in-out;
-            background: $burst-default;
+            background: $link-default;
           }
         }
       }

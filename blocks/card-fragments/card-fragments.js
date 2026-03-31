@@ -2,6 +2,7 @@ import { div, h3, h4, h5, p, a, span } from "../../scripts/dom-helpers.js";
 import { decorateMain } from "../../scripts/scripts.js";
 import { loadSections } from "../../scripts/aem.js";
 import { fetchPlaceholders } from "../../scripts/placeholders.js";
+import loadNonBlockLibs from "../../scripts/components.js";
 
 /**
  * Renders all collected rows into the exact nested HTML structure requested.
@@ -179,5 +180,10 @@ export default async function decorate(block) {
 
   if (allRows.length > 0) {
     await renderAllCards(block, allRows);
+    try {
+      loadNonBlockLibs();
+    } catch (e) {
+      // do nothing
+    }
   }
 }
