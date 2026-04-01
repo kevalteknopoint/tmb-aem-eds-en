@@ -25,7 +25,7 @@ document.addEventListener('click', (e) => {
     const nextPageURL = e.target.closest(".image-swapping .button-container .button")?.getAttribute("href");
     ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), '', 'image-swapping', 'columns-container', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', 'momentum-saver', '', '', '', '');
   }
-  if (e.target.closest('.image-swapping:not(.variant-404)  p a')) {
+  if (e.target.closest('.legal-tc-guide.image-swapping:not(.variant-404)  p a')) {
     const secondaryLink = e.target.closest('.image-swapping p a');
     const pageRegion = getPageRegion(e.target.closest('.image-swapping p a'));
     const componentIndex = getComponentIndex(e.target.closest('.image-swapping p a'));

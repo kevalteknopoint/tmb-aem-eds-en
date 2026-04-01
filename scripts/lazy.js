@@ -68,7 +68,7 @@ export async function pageAnalytics() {
   const pageName = document.title;
   const pageType = getMetadata('page-type');
   const siteSection = pagePath === '/' ? 'home' : pagePath?.split('/')?.[1];
-  const siteSubSection = pagePath === '/' ? 'home' : (pagePath?.split('/')?.[2] || '');
+  const sitesubSection = pagePath === '/' ? 'home' : (pagePath?.split('/')?.[2] || '');
   const pageLanguage = document.documentElement.lang;
   const pageId = '';
   const pageTemplate = 'common';
@@ -100,7 +100,7 @@ export async function pageAnalytics() {
   const hasEverLoggedInFlag = '';
   const visitorType = '';
 
-  pageIntialization({ pageName, pageType, siteSection, siteSubSection, pageLanguage, pageId, pageTemplate, performanceTier, brand, webType, backtrackFlag, helpVisitFlag, implementationVersion, domInteractiveTime, domInteractiveTimeBucket, firstContentfulPaint, firstContentfulPaintBucket, httpStatusCode, httpStatusGroup, trackingVersion, implementationEnvironment, dataLayerReadyFlag, requiredFieldMissingFlag, testUserFlag, qaSessionFlag, product, primaryProductGroup, primaryProduct, multiProductFlag, personId, loginStatus, hasEverLoggedInFlag, visitorType });
+  pageIntialization({ pageName, pageType, siteSection, sitesubSection, pageLanguage, pageId, pageTemplate, performanceTier, brand, webType, backtrackFlag, helpVisitFlag, implementationVersion, domInteractiveTime, domInteractiveTimeBucket, firstContentfulPaint, firstContentfulPaintBucket, httpStatusCode, httpStatusGroup, trackingVersion, implementationEnvironment, dataLayerReadyFlag, requiredFieldMissingFlag, testUserFlag, qaSessionFlag, product, primaryProductGroup, primaryProduct, multiProductFlag, personId, loginStatus, hasEverLoggedInFlag, visitorType });
 }
 
 export default async function initLazy() {
