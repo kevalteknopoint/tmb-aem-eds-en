@@ -3,7 +3,11 @@ import { ctaInteraction, menuInteraction, minifyText, socialmediaClick, getCompo
 document.addEventListener('click', (e) => {
   if (e.target.closest('.footer-col')) {
     const anchor = e.target.closest('a');
+     const icon = anchor.querySelector('.icon');
     if (!anchor) return;
+    if (!icon) {
+      
+    
     const componentIndex = getComponentIndex(anchor);
     const nextPageURL = anchor?.getAttribute('href') || '';
 
@@ -20,10 +24,10 @@ document.addEventListener('click', (e) => {
     if (!text && closestLi?.querySelector(':scope > p')) {
       text = minifyText(closestLi?.querySelector(':scope > p')?.textContent);
     }
-    menuInteraction('bottom', minifyText(text), minifyText(anchor.textContent), '', 'global footer', 'footer', componentIndex, getPersona(), nextPageURL, 'menu-click', 'internal', '', '', '', 'footer', '');
+    menuInteraction('bottom', minifyText(text), minifyText(anchor.textContent), '', 'global footer', 'footer', componentIndex, getPersona(), nextPageURL, 'menu-click', 'internal', '', '', '', 'footer', '');}
   }
 
-  if (e.target.closest('.footer-meta-item')) {
+  if (e.target.closest('.footer-links')) {
     const anchor = e.target.closest('a');
     if (!anchor) return;
 
@@ -33,9 +37,10 @@ document.addEventListener('click', (e) => {
     if (icon) {
       iconClassString = icon.classList.toString();
       iconName = iconClassString?.replaceAll('icon-', '')?.replaceAll('icon', '')?.replaceAll(' ', '');
-    }
-    const componentIndex = getComponentIndex(anchor);
+       const componentIndex = getComponentIndex(anchor);
     socialmediaClick('bottom', minifyText(iconName), 'global footer', 'footer', componentIndex, getPersona(), 'socialmedia-click', '', '', '', 'global footer', '');
+  
+    }
   }
   if (e.target.closest('.footer-bottom')) {
     const anchor = e.target.closest('a');
