@@ -103,7 +103,32 @@ export async function pageAnalytics() {
   pageIntialization({ pageName, pageType, siteSection, sitesubSection, pageLanguage, pageId, pageTemplate, performanceTier, brand, webType, backtrackFlag, helpVisitFlag, implementationVersion, domInteractiveTime, domInteractiveTimeBucket, firstContentfulPaint, firstContentfulPaintBucket, httpStatusCode, httpStatusGroup, trackingVersion, implementationEnvironment, dataLayerReadyFlag, requiredFieldMissingFlag, testUserFlag, qaSessionFlag, product, primaryProductGroup, primaryProduct, multiProductFlag, personId, loginStatus, hasEverLoggedInFlag, visitorType });
 }
 
+function loadChatbot() {
+  const encoded = getMetadata('chatbot-script');
+
+  if (!encoded) return;
+
+  // Decode HTML entities
+  const textarea = document.createElement('textarea');
+  textarea.innerHTML = encoded;
+  const decoded = textarea.value;
+
+  // Extract JS inside <script>...</script>
+  const match = decoded.match(/<script[^>]*>([\s\S]*?)<\/script>/i);
+  if (!match) return;
+
+  const scriptContent = match[1];
+
+  // Create and execute script
+  const script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.text = scriptContent;
+
+  document.body.appendChild(script);
+}
+
 export default async function initLazy() {
   loadAos();
   loadSprite();
+  loadChatbot();
 }
