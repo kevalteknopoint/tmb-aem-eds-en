@@ -1,4 +1,4 @@
-import { ctaInteraction, menuInteraction, minifyText, socialmediaClick, getComponentIndex, getPageRegion, getPersona } from "../../scripts/analytics/exports.js";
+import { ctaInteraction, menuInteraction, minifyText, socialmediaClick, getComponentIndex, getPersona } from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
   if (e.target.closest('.footer-col')) {
@@ -37,11 +37,9 @@ document.addEventListener('click', (e) => {
     const componentIndex = getComponentIndex(anchor);
     socialmediaClick('bottom', minifyText(iconName), 'global footer', 'footer', componentIndex, getPersona(), 'socialmedia-click', '', '', '', 'global footer', '');
   }
-
-    if (e.target.closest('.footer-bottom')) {
+  if (e.target.closest('.footer-bottom')) {
     const anchor = e.target.closest('a');
     if (!anchor) return;
-
     const anchorLi = anchor?.closest('li');
     const componentIndex = getComponentIndex(anchor);
     const nextPageURL = anchor?.getAttribute('href') || '';
