@@ -7,7 +7,9 @@ document.addEventListener('click', (e) => {
     const componentIndex = getComponentIndex(e.target.closest('.quick-links-container .quick-links').querySelector('.button-container'));
     const nextPageURL = e.target.closest('.quick-links-container .quick-links').querySelector('.button-container a')?.getAttribute("href");
     const ctaText = e.target.closest('.quick-links-container .quick-links').querySelector('.button-container');
-    ctaInteraction(getPageRegion(e.target.closest('.quick-links-container .quick-links').querySelector('.button-container a')), minifyText(ctaText?.textContent), minifyText(ctaTitle?.textContent), 'cta-click', '', 'quick links', 'quick links', componentIndex, getPersona(), nextPageURL, 'cta-click', 'internal', 'quick-link', 'internal', '', '', '', 'quicklinkshomepage', '');
+    const sectionEl = e.target.closest('.section');
+    const componentId = sectionEl?.getAttribute('id') || "";
+    ctaInteraction(getPageRegion(e.target.closest('.quick-links-container .quick-links').querySelector('.button-container a')), minifyText(ctaText?.textContent), minifyText(ctaTitle?.textContent), 'cta-click', '', 'quick links', 'quick links', componentIndex, getPersona(), nextPageURL, 'cta-click', 'internal', 'quick-link', 'internal', '', '', '', componentId, '');
   }
 
   if (e.target.closest('a')?.closest('li')?.closest('.quick-links')) {
@@ -15,6 +17,8 @@ document.addEventListener('click', (e) => {
     const componentIndex = getComponentIndex(e.target.closest('.quick-links-container .quick-links').querySelector('.button-container'));
     const nextPageURL = e.target.closest('.quick-links-container .quick-links').querySelector('.button-container a')?.getAttribute("href");
     const ctaText = e.target.closest('.quick-links-container .quick-links').querySelector('.button-container');
-    ctaInteraction(getPageRegion(e.target.closest('.quick-links-container .quick-links').querySelector('a')), minifyText(ctaText?.textContent), minifyText(ctaTitle?.textContent), '', 'quick links', 'quick links', componentIndex, getPersona(), nextPageURL, 'cta-click', 'internal', 'quick-link', 'internal', '', '', '', 'quicklinkshomepage', '');
+    const sectionEl = e.target.closest('.section');
+    const componentId = sectionEl?.getAttribute('id') || "";
+    ctaInteraction(getPageRegion(e.target.closest('.quick-links-container .quick-links').querySelector('a')), minifyText(ctaText?.textContent), minifyText(ctaTitle?.textContent), '', 'quick links', 'quick links', componentIndex, getPersona(), nextPageURL, 'cta-click', 'internal', 'quick-link', 'internal', '', '', '', componentId, '');
   }
 });

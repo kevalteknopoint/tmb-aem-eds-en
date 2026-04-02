@@ -17,7 +17,7 @@ document.addEventListener('click', (e) => {
     const componentIndex = getComponentIndex(link);
     const nextPageURL = link.getAttribute("href");
     const menuText = minifyText(link.textContent);
-
+    const componentId = target.closest('.section').getAttribute('id');
     subMenuClick(
       pageRegion,
       menuText,
@@ -30,7 +30,7 @@ document.addEventListener('click', (e) => {
       'in-page-nav',
       'external',
       'in-content',
-      'navigation'
+      componentId
     );
   }
 });
@@ -44,7 +44,7 @@ document.addEventListener('click', (e) => {
     const pageRegion = getPageRegion(button);
     const componentIndex = getComponentIndex(button);
     const nextPageURL = button.getAttribute("href");
-
+    const componentId = target.closest('.section').getAttribute('id');
     ctaInteraction(
       pageRegion,
       minifyText(button.textContent),
@@ -62,7 +62,7 @@ document.addEventListener('click', (e) => {
       '',
       '',
       '',
-      'navigation',
+      componentId,
       ''
     );
   }

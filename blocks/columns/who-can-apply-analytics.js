@@ -18,4 +18,22 @@ document.addEventListener('click', (e) => {
     const nextPageURL = e.target.closest(".tmb-acc-sec.accordion-container .button-container a")?.getAttribute("href");
     ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), '', 'faq links', 'accordion-container', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', 'faq links', '', '', '', '');
   }
+
+    if (e.target.closest('.who-can-apply-section.accordion-container ul li')) {
+    const secondaryLink = e.target.closest('.accordion-container .accordion-wrapper ul li a');
+    const pageRegion = getPageRegion(e.target.closest('.accordion-container ul li a'));
+    const componentIndex = getComponentIndex(e.target.closest('.accordion-container ul li a'));
+    const ctaTitle = e.target.closest('.accordion-container .accordion-wrapper').querySelector('p');
+    const nextPageURL = e.target.closest(".accordion-container ul li a")?.getAttribute("href");
+    ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), '', 'faq links', 'accordion-container', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', 'faq links', '', '', '', '');
+  }
+
+    if (e.target.closest('.tmb-acc-sec.accordion-container ol li')) {
+    const secondaryLink = e.target.closest('.tmb-acc-sec.accordion-container .accordion-wrapper li a');
+    const pageRegion = getPageRegion(e.target.closest('.tmb-acc-sec.accordion-container li a'));
+    const componentIndex = getComponentIndex(e.target.closest('.tmb-acc-sec.accordion-container li a'));
+    const ctaTitle = e.target.closest('.tmb-acc-sec.accordion-container .accordion-wrapper').querySelector('p');
+    const nextPageURL = e.target.closest(".tmb-acc-sec.accordion-container li a")?.getAttribute("href");
+    ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), '', 'faq links', 'accordion-container', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', 'faq links', '', '', '', '');
+  }
 });

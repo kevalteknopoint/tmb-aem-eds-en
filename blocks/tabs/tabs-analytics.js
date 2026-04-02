@@ -1,4 +1,4 @@
-import { ctaInteraction, minifyText, getPersona, getPageRegion, getComponentIndex } from "../../scripts/analytics/exports.js";
+import { minifyText, getPersona, getPageRegion, getComponentIndex, sideNavMenuClick } from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
   if (e.target.closest('.tabbed-navigation.tabs-container .tabs-tab')) {
@@ -9,6 +9,7 @@ document.addEventListener('click', (e) => {
     const ctaLink = e.target.closest('.tabbed-navigation.tabs-container .tabs-tab');
     const ctaTitle = e.target.closest('.tabbed-navigation.tabs-container').querySelector('p');
     const pageRegion = getPageRegion(e.target.closest('.tabbed-navigation.tabs-container .tabs-tab'));
-    ctaInteraction(pageRegion, minifyText(ctaLink?.textContent), minifyText(ctaTitle?.textContent), minifyText(ctaSource?.textContent), 'tabs', 'tabs navigation', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', 'tabs-navigation', '', '', '');
+    sideNavMenuClick(pageRegion, minifyText(ctaLink?.textContent), minifyText(ctaTitle?.textContent), minifyText(ctaSource?.textContent), 'tabs', 'tabs navigation', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content',"");
   }
+
 });

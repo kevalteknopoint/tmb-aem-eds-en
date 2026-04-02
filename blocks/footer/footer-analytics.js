@@ -2,27 +2,54 @@ import { ctaInteraction, menuInteraction, minifyText, socialmediaClick, getCompo
 
 document.addEventListener('click', (e) => {
   if (e.target.closest('.footer-col')) {
-    const anchor = e.target.closest('a');
-    const icon = anchor.querySelector('.icon');
-    if (!anchor) return;
-    if (!icon) {
-      const componentIndex = getComponentIndex(anchor);
-      const nextPageURL = anchor?.getAttribute('href') || '';
-      const closestLi = anchor?.closest('ul')?.closest('li');
-      let text = "";
-      if (closestLi) {
-        closestLi.childNodes?.forEach((node) => {
-          if (node.nodeType === Node.TEXT_NODE) {
-            text += minifyText(node.textContent);
-          }
-        });
+  const anchor = e.target.closest('a');
+  if (!anchor) return;
+  const icon = anchor.querySelector('.icon');
+  if (icon) return;
+  const componentIndex = getComponentIndex(anchor);
+  const nextPageURL = anchor.getAttribute('href') || '';
+  const sectionEl = e.target.closest('.section');
+  const componentId = sectionEl?.getAttribute('id') || "";
+  const closestLi = anchor.closest('li');
+  // LEVEL 1 MENU (h3)
+  const footerCol = anchor.closest('.footer-col');
+  const levelOneMenu = minifyText(
+    footerCol?.querySelector('h1,h2,h3,h4,h5,h6')?.textContent
+  );
+
+  let text = "";
+  if (closestLi) {
+    closestLi.childNodes?.forEach((node) => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        text += minifyText(node.textContent);
       }
-      if (!text && closestLi?.querySelector(':scope > p')) {
-        text = minifyText(closestLi?.querySelector(':scope > p')?.textContent);
-      }
-      menuInteraction('bottom', minifyText(text), minifyText(anchor.textContent), '', 'global footer', 'footer', componentIndex, getPersona(), nextPageURL, 'menu-click', 'internal', '', '', '', 'footer', '');
-    }
+    });
   }
+
+  if (!text && closestLi?.querySelector(':scope > p')) {
+    text = minifyText(
+      closestLi.querySelector(':scope > p')?.textContent
+    );
+  }
+  menuInteraction(
+    'bottom',
+    levelOneMenu, // FIXED: Level 1 menu instead of random text
+    minifyText(anchor.textContent),
+    '',
+    'global footer',
+    'footer',
+    componentIndex,
+    getPersona(),
+    nextPageURL,
+    'menu-click',
+    'internal',
+    '',
+    '',
+    '',
+    componentId,
+    ''
+  );
+}
   if (e.target.closest('.footer-links')) {
     const anchor = e.target.closest('a');
     if (!anchor) return;
@@ -48,7 +75,6 @@ document.addEventListener('click', (e) => {
   if (e.target.closest('.footer-contact')) {
     const anchor = e.target.closest('a');
     if (!anchor) return;
-
     const anchorLi = anchor?.closest('li');
     const componentIndex = getComponentIndex(anchor);
     const nextPageURL = anchor?.getAttribute('href') || '';
