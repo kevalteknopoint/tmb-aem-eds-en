@@ -17,7 +17,8 @@ document.addEventListener('click', (e) => {
     const componentIndex = getComponentIndex(link);
     const nextPageURL = link.getAttribute("href");
     const menuText = minifyText(link.textContent);
-    const componentId = target.closest('.section').getAttribute('id');
+    const sectionEl = e.target.closest('.section');
+    const componentId = sectionEl?.getAttribute('id') || "";
     subMenuClick(
       pageRegion,
       menuText,
@@ -44,7 +45,8 @@ document.addEventListener('click', (e) => {
     const pageRegion = getPageRegion(button);
     const componentIndex = getComponentIndex(button);
     const nextPageURL = button.getAttribute("href");
-    const componentId = target.closest('.section').getAttribute('id');
+    const sectionEl = e.target.closest('.section');
+    const componentId = sectionEl?.getAttribute('id') || "";
     ctaInteraction(
       pageRegion,
       minifyText(button.textContent),

@@ -9,20 +9,26 @@ import {
 
 document.addEventListener('click', (e) => {
   const ctaLink = e.target.closest('.hero-banner-container .hero-banner-actions a');
+
   if (!ctaLink) return;
 
   const container = ctaLink.closest('.hero-banner-container');
+
   const heading = container?.querySelector('h1,h2,h3,h4,h5,h6');
 
   const pageRegion = getPageRegion(ctaLink);
+
   const componentIndex = getComponentIndex(ctaLink);
   const nextPageURL = ctaLink.getAttribute("href");
+
   const persona = getPersona();
 
   const ctaText = minifyText(ctaLink.textContent);
   const titleText = minifyText(heading?.textContent);
+  const sectionEl = e.target.closest('.section');
+  const componentId = sectionEl?.getAttribute('id') || "";
 
-  //File detection
+  // File detection
   const fileExtensions = [
     'pdf', 'doc', 'docx', 'xls', 'xlsx', 'csv',
     'ppt', 'pptx', 'zip', 'rar', 'txt'
@@ -48,11 +54,11 @@ document.addEventListener('click', (e) => {
       'in-content',
       ctaText,
       fileExt,
-      'download'
+      componentId
     );
     return; //  prevents ctaInteraction
   }
-
+  
   //  Otherwise → normal CTA tracking
   ctaInteraction(
     pageRegion,
@@ -71,7 +77,7 @@ document.addEventListener('click', (e) => {
     '',
     '',
     '',
-    'hero banner container',
+    componentId,
     '',
     '',
     ''

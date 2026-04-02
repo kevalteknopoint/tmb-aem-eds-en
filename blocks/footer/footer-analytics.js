@@ -2,9 +2,12 @@ import { ctaInteraction, menuInteraction, minifyText, socialmediaClick, getCompo
 
 document.addEventListener('click', (e) => {
   if (e.target.closest('.footer-col')) {
+
   const anchor = e.target.closest('a');
   if (!anchor) return;
+
   const icon = anchor.querySelector('.icon');
+
   if (icon) return;
   const componentIndex = getComponentIndex(anchor);
   const nextPageURL = anchor.getAttribute('href') || '';
@@ -51,11 +54,15 @@ document.addEventListener('click', (e) => {
   );
 }
   if (e.target.closest('.footer-links')) {
+
     const anchor = e.target.closest('a');
     if (!anchor) return;
+
     const icon = anchor.querySelector('.icon');
     let iconClassString;
+
     let iconName;
+
     if (icon) {
       iconClassString = icon.classList.toString();
       iconName = iconClassString?.replaceAll('icon-', '')?.replaceAll('icon', '')?.replaceAll(' ', '');
@@ -64,8 +71,10 @@ document.addEventListener('click', (e) => {
     }
   }
   if (e.target.closest('.footer-bottom')) {
+
     const anchor = e.target.closest('a');
     if (!anchor) return;
+
     const anchorLi = anchor?.closest('li');
     const componentIndex = getComponentIndex(anchor);
     const nextPageURL = anchor?.getAttribute('href') || '';
@@ -73,8 +82,10 @@ document.addEventListener('click', (e) => {
   }
 
   if (e.target.closest('.footer-contact')) {
+
     const anchor = e.target.closest('a');
     if (!anchor) return;
+    
     const anchorLi = anchor?.closest('li');
     const componentIndex = getComponentIndex(anchor);
     const nextPageURL = anchor?.getAttribute('href') || '';

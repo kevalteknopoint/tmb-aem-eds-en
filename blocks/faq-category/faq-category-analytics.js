@@ -70,7 +70,7 @@ document.addEventListener('click', (e) => {
       const titleContainer = targetContainer?.querySelector('.default-content-wrapper');
       const title = titleContainer?.querySelector('h1, h2, h3, h4, h5, h6');
       const ctaTitleEle = linkEle?.closest('.cards-card-body')?.querySelector('h1, h2, h3, h4, h5, h6');
-      
+
       ctaInteraction(
         '',
         ctaText,
@@ -89,7 +89,7 @@ document.addEventListener('click', (e) => {
     const pageRegion = getPageRegion(linkEle);
     const componentIndex = getComponentIndex(linkEle);
     const nextPageURL = linkEle.getAttribute('href') || '';
-
+    
     //  Identify downloadable documents
     const cleanURL = nextPageURL.split('?')[0].toLowerCase();
     const isDownload = cleanURL.endsWith('.pdf') || cleanURL.endsWith('.doc') || cleanURL.endsWith('.docx') || cleanURL.endsWith('.xls') || cleanURL.endsWith('.xlsx') || cleanURL.endsWith('.ashx'); // 👈 important for your case
