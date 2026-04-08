@@ -56,10 +56,8 @@ document.addEventListener('click', (e) => {
       fileExt,
       componentId
     );
-    return; //  prevents ctaInteraction
+    return;
   }
-  
-  //  Otherwise → normal CTA tracking
   ctaInteraction(
     pageRegion,
     ctaText,

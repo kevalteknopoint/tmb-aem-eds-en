@@ -1,5 +1,6 @@
 import { div } from "../../scripts/dom-helpers.js";
 import './who-can-apply-analytics.js';
+import '../cards/cant-find-looking-for-analytics.js';
 
 export default function decorateWhoCanApply(block) {
   const column = block.querySelector("div");

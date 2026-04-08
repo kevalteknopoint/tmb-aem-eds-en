@@ -7,7 +7,7 @@ import newsHelpful from "./news-helpful.js";
 import newsHomepage from "./news-homepage.js";
 import decorateLookingAnotherway from "./looking-for-anotherway.js";
 import milestones from "./milestones.js";
-import './cant-find-looking-for-analytics.js';
+// import './cant-find-looking-for-analytics.js';
 
 export default function decorate(block) {
   const anchorDiv = block.querySelectorAll('div:has(> .button-container > a)');

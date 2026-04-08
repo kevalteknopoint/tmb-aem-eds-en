@@ -89,8 +89,8 @@ document.addEventListener('click', (e) => {
     const pageRegion = getPageRegion(linkEle);
     const componentIndex = getComponentIndex(linkEle);
     const nextPageURL = linkEle.getAttribute('href') || '';
-    
-    //  Identify downloadable documents
+
+    // Identify downloadable documents
     const cleanURL = nextPageURL.split('?')[0].toLowerCase();
     const isDownload = cleanURL.endsWith('.pdf') || cleanURL.endsWith('.doc') || cleanURL.endsWith('.docx') || cleanURL.endsWith('.xls') || cleanURL.endsWith('.xlsx') || cleanURL.endsWith('.ashx'); // 👈 important for your case
     const componentId = target.closest('.section').getAttribute('id');
@@ -123,4 +123,5 @@ document.addEventListener('click', (e) => {
       );
     }
   }
+ 
 });

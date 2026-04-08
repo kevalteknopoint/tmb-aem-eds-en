@@ -1,23 +1,28 @@
 import { ctaInteraction, minifyText, getPersona, getPageRegion, getComponentIndex } from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
-  const link = (e.target.closest('.legal-tc-guide:not(.rates-saver, .background-color-secondary) a'));
+  const link = e.target.closest('.legal-tc-guide:not(.rates-saver, .background-color-secondary) a');
+
   if (link) {
     const block = link.closest('.legal-tc-guide');
 
     const pageRegion = getPageRegion(link);
     const componentIndex = getComponentIndex(block);
-    const ctaTitle = block.querySelector('h1, h2, h3, h4, h5, h6');
+
+    // FIX:  title extraction
+    const sectionTitleEl = block.querySelector('.default-content-wrapper h1, h2, h3, h4, h5, h6');
 
     const ctaText = minifyText(link.textContent);
     const nextPageURL = link.href;
-    console.log('ll');
-    
+
+    const sectionEl = e.target.closest('.section');
+    const componentId = sectionEl?.getAttribute('id') || "";
+
     ctaInteraction(
       pageRegion,
       ctaText,
-      minifyText(ctaTitle?.textContent),
-      '',
+      minifyText(sectionTitleEl?.textContent),
+      minifyText(sectionTitleEl?.textContent),
       'legal tc guide',
       'legal tc guide',
       componentIndex,
@@ -30,7 +35,7 @@ document.addEventListener('click', (e) => {
       '',
       '',
       '',
-      'legaltc',
+      componentId,
       ''
     );
   }
@@ -47,7 +52,8 @@ document.addEventListener('click', (e) => {
     const allLinks = Array.from(container.querySelectorAll('a'));
     const componentIndex = allLinks.indexOf(faqLink) + 1;
     const nextPageURL = faqLink.getAttribute('href') || '';
-
+    const sectionEl = e.target.closest('.section');
+    const componentId = sectionEl?.getAttribute('id') || "";
     ctaInteraction(
       pageRegion,
       ctaText,
@@ -65,7 +71,7 @@ document.addEventListener('click', (e) => {
       '',
       '',
       '',
-      'faqlegal',
+      componentId,
       ''
     );
   }
