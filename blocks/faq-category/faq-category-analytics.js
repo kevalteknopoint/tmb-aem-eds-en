@@ -124,35 +124,40 @@ document.addEventListener('click', (e) => {
     }
   }
   if (target.closest('#faqs-section-scroll')) {
-  const section = target.closest('.section');
+    const section = target.closest('.section');
+    // Grab <p> inside summary label
+    const labelP = target.querySelector('.accordion-item-label > p');
+    const faqTitle = minifyText(labelP?.textContent); // more precise
+    const heading = section?.querySelector('h1, h2, h3, h4, h5, h6');
+    const pageRegion = getPageRegion(target);
+    const componentIndex = getComponentIndex(target);
+    const componentId = section?.getAttribute('id');
 
-  // Grab <p> inside summary label
-  const labelP = target.querySelector('.accordion-item-label > p');
-  const faqTitle = minifyText(labelP?.textContent); // more precise
-
-  const heading = section?.querySelector('h1, h2, h3, h4, h5, h6');
-  const pageRegion = getPageRegion(target);
-  const componentIndex = getComponentIndex(target);
-  const componentId = section?.getAttribute('id');
-
-  faqInteraction(
-    pageRegion,
-    faqTitle,
-    minifyText(heading?.textContent),
-    'faq frequently',
-    'faq',
-    componentIndex,
-    getPersona(),
-    'faq toggle',
-    'faq expand',
-    'FAQ CARD LIMITS',
-    'open',
-    '',
-    'faq swift code',
-    '',
-    '', '', '', '', '', '', '', '', '',
-    componentId
-  );
-}
+    faqInteraction(
+      pageRegion,
+      faqTitle,
+      minifyText(heading?.textContent),
+      'faq frequently',
+      'faq',
+      componentIndex,
+      getPersona(),
+      'faq toggle',
+      'faq expand',
+      'FAQ CARD LIMITS',
+      'open',
+      '',
+      'faq swift code',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      componentId
+    );
+  }
 });
-

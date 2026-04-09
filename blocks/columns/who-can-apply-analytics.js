@@ -1,4 +1,4 @@
-import { ctaInteraction, minifyText, getPersona, getPageRegion, getComponentIndex, downloadDocument, faqInteraction } from "../../scripts/analytics/exports.js";
+import { ctaInteraction, minifyText, getPersona, getPageRegion, getComponentIndex, downloadDocument } from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
   if (e.target.closest('.accordion-container .button-container')) {
