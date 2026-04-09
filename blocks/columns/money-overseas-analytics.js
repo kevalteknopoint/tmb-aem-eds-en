@@ -7,6 +7,8 @@ document.addEventListener('click', (e) => {
     const componentIndex = getComponentIndex(e.target.closest('.money-overseas.money-overseas-variant .button-container a'));
     const ctaTitle = e.target.closest('.money-overseas.money-overseas-variant .overseas-columns-wrapper').querySelector("h1,h2,h3,h4,h5,h6");
     const nextPageURL = e.target.closest(".money-overseas.money-overseas-variant .button-container a")?.getAttribute("href");
-    ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), '', 'money-overseas', 'columns-container', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', 'momentum-saver', '', '', '', '');
+    const sectionEl = e.target.closest('.section');
+    const componentId = sectionEl?.getAttribute('id') || "";
+    ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), '', 'money-overseas', 'columns-container', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', componentId, '', '', '', '');
   }
 });

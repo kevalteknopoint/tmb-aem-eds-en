@@ -8,13 +8,17 @@ document.addEventListener('click', (e) => {
     const componentIndex = getComponentIndex(e.target.closest('.compare-accounts-wrapper .button-container a'));
     const ctaTitle = e.target.closest('.compare-accounts-card').querySelector("h1,h2,h3,h4");
     const nextPageURL = e.target.closest(".compare-accounts-wrapper .button-container a")?.getAttribute("href");
-    ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), minifyText(ctaSource?.textContent), 'customer', 'customer', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', '', '', '', '', '');
+    const sectionEl = e.target.closest('.section');
+    const componentId = sectionEl?.getAttribute('id') || "";
+    ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), minifyText(ctaSource?.textContent), 'customer', 'customer', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', componentId, 'in-content', '', '', '', '', '', '', '', '');
   }
   if (e.target.closest('.compare-accounts.card-fragments-container .default-content-wrapper')) {
     const secondaryLink = e.target.closest('.compare-accounts.card-fragments-container .default-content-wrapper a');
     const pageRegion = getPageRegion(e.target.closest('.compare-accounts.card-fragments-container .default-content-wrapper a'));
     const componentIndex = getComponentIndex(e.target.closest('.compare-accounts.card-fragments-container .default-content-wrapper a'));
     const nextPageURL = e.target.closest(".compare-accounts.card-fragments-container .default-content-wrapper a")?.getAttribute("href");
-    ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), '', '', 'customer', 'customer', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', '', '', '', '', '');
+    const sectionEl = e.target.closest('.section');
+    const componentId = sectionEl?.getAttribute('id') || "";
+    ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), '', '', 'customer', 'customer', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', componentId, 'in-content', '', '', '', '', '', '', '', '');
   }
 });
