@@ -5,7 +5,7 @@ document.addEventListener('click', (e) => {
     const anchor = e.target.closest('a');
     if (anchor) {
     const icon = anchor.querySelector('.icon');
-    if (icon) return;
+    if (!icon){
     const componentIndex = getComponentIndex(anchor);
     const nextPageURL = anchor.getAttribute('href') || '';
     const sectionEl = e.target.closest('.section');
@@ -49,6 +49,7 @@ document.addEventListener('click', (e) => {
       ''
     );
   }
+}
 }
   if (e.target.closest('.footer-links')) {
     const anchor = e.target.closest('a');
