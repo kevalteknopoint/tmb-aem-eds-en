@@ -3,7 +3,7 @@ import { ctaInteraction, menuInteraction, minifyText, socialmediaClick, getCompo
 document.addEventListener('click', (e) => {
   if (e.target.closest('.footer-col')) {
     const anchor = e.target.closest('a');
-    if (!anchor) return;
+    if (anchor) {
     const icon = anchor.querySelector('.icon');
     if (icon) return;
     const componentIndex = getComponentIndex(anchor);
@@ -49,6 +49,7 @@ document.addEventListener('click', (e) => {
       ''
     );
   }
+}
   if (e.target.closest('.footer-links')) {
     const anchor = e.target.closest('a');
     if (!anchor) return;
@@ -56,12 +57,34 @@ document.addEventListener('click', (e) => {
     let iconClassString;
     let iconName;
 
-    if (icon) {
-      iconClassString = icon.classList.toString();
-      iconName = iconClassString?.replaceAll('icon-', '')?.replaceAll('icon', '')?.replaceAll(' ', '');
-      const componentIndex = getComponentIndex(anchor);
-      socialmediaClick('bottom', minifyText(iconName), 'global footer', 'footer', componentIndex, getPersona(), 'socialmedia-click', '', '', '', 'global footer', '');
-    }
+   if (e.target.closest('.footer-links')) {
+  const anchor = e.target.closest('a');
+  if (!anchor) return;
+
+  const iconSpan = anchor.querySelector('.icon');
+  if (!iconSpan) return;
+
+  // Extract the social media name from the class
+  const classList = Array.from(iconSpan.classList); // e.g., ['icon', 'icon-linkedin']
+  const iconClass = classList.find(cls => cls.startsWith('icon-') && cls !== 'icon'); // 'icon-linkedin'
+  const iconName = iconClass?.replace('icon-', ''); // 'linkedin'
+
+  const componentIndex = getComponentIndex(anchor);
+  socialmediaClick(
+    'bottom',
+    minifyText(iconName),
+    'global footer',
+    'footer',
+    componentIndex,
+    getPersona(),
+    'socialmedia-click',
+    '',
+    '',
+    '',
+    'global footer',
+    ''
+  );
+}
   }
   if (e.target.closest('.footer-bottom')) {
     const anchor = e.target.closest('a');

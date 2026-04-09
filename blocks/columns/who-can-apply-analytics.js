@@ -63,7 +63,6 @@ document.addEventListener('click', (e) => {
   const fileExt = cleanUrl?.split('.').pop();
   const isDownload = fileExtensions.includes(fileExt);
 
-  // If file → ONLY downloadDocument
   if (isDownload) {
     downloadDocument(
       pageRegion,
@@ -82,7 +81,7 @@ document.addEventListener('click', (e) => {
     );
     return;
   }
-  // Otherwise → CTA tracking
+
   ctaInteraction(
     pageRegion,
     ctaText,
@@ -105,73 +104,4 @@ document.addEventListener('click', (e) => {
     '',
     ''
   );
-
-  // Assuming `target` is the FAQ item you want to trigger
-const target = document.querySelector('#b-corporation .accordion-item'); // dynamically select your FAQ item
-
-if (target.closest('.faq-link')) {
-  const linkEle = target.closest('.faq-link');
-  const faqTitle = minifyText(linkEle?.textContent);
-
-  if (target.closest('.faq-frequently-question')) {
-    const ctaSourceEle = linkEle?.closest('.faq-items-list')?.parentElement?.querySelector('h1, h2, h3, h4, h5, h6');
-    const pageRegion = getPageRegion(target.closest('.faq-link'));
-    const componentIndex = getComponentIndex(target.closest('.faq-link'));
-    const componentId = target.closest('.section').getAttribute('id');
-
-    // Trigger programmatically
-    faqInteraction(
-      pageRegion,
-      faqTitle,
-      minifyText(ctaSourceEle?.textContent),
-      'faq frequently',
-      'faq',
-      componentIndex,
-      getPersona(),
-      'faq toggle',
-      'faq expand',
-      'FAQ CARD LIMITS',
-      'open',
-      '',
-      'faq swift code',
-      '',
-      '', '', '', '', '', '', '', '', '',
-      componentId
-    );
-
-  } else if (target.closest('.faq-frequently-question-list')) {
-    const targetContainer = target.closest('.faq-frequently-question-list');
-    const titleContainer = targetContainer?.previousElementSibling;
-    const title = titleContainer?.querySelector('h1, h2, h3, h4, h5, h6');
-    const ctaSourceEle = linkEle?.closest('.faq-items-list')?.parentElement?.querySelector('h1, h2, h3, h4, h5, h6');
-    const pageRegion = getPageRegion(target.closest('.faq-link'));
-    const componentIndex = getComponentIndex(target.closest('.faq-link'));
-    const componentId = target.closest('.section').getAttribute('id');
-
-    // Trigger programmatically
-    faqInteraction(
-      pageRegion,
-      faqTitle,
-      minifyText(ctaSourceEle?.textContent),
-      minifyText(title?.textContent),
-      'faq frequently',
-      '',
-      componentIndex,
-      getPersona(),
-      'faq toggle',
-      'faq expand',
-      'FAQ CARD LIMITS',
-      '',
-      'open',
-      '',
-      'faq swift code',
-      '',
-      '', '', '', '', '', componentId,
-      ''
-    );
-  }
-}
-
-// Optionally expand the FAQ visually
-target.setAttribute('open', '');
 });

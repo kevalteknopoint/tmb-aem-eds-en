@@ -65,7 +65,7 @@ document.addEventListener('click', (e) => {
         componentId,
         ''
       );
-    } else if (target.closest('.faq-cant-find-looking-for:not(.rates-saver)')) {
+    } else if (target.closest('.faq-cant-find-looking-for:not(.rates-saver, .navigation-cards-container)')) {
       const targetContainer = target.closest('.faq-cant-find-looking-for');
       const titleContainer = targetContainer?.querySelector('.default-content-wrapper');
       const title = titleContainer?.querySelector('h1, h2, h3, h4, h5, h6');
@@ -123,5 +123,36 @@ document.addEventListener('click', (e) => {
       );
     }
   }
- 
+  if (target.closest('#faqs-section-scroll')) {
+  const section = target.closest('.section');
+
+  // Grab <p> inside summary label
+  const labelP = target.querySelector('.accordion-item-label > p');
+  const faqTitle = minifyText(labelP?.textContent); // more precise
+
+  const heading = section?.querySelector('h1, h2, h3, h4, h5, h6');
+  const pageRegion = getPageRegion(target);
+  const componentIndex = getComponentIndex(target);
+  const componentId = section?.getAttribute('id');
+
+  faqInteraction(
+    pageRegion,
+    faqTitle,
+    minifyText(heading?.textContent),
+    'faq frequently',
+    'faq',
+    componentIndex,
+    getPersona(),
+    'faq toggle',
+    'faq expand',
+    'FAQ CARD LIMITS',
+    'open',
+    '',
+    'faq swift code',
+    '',
+    '', '', '', '', '', '', '', '', '',
+    componentId
+  );
+}
 });
+

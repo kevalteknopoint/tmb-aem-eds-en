@@ -1,4 +1,4 @@
-import { getComponentIndex, getPageRegion, getPersona, internalSearch, menuInteraction, minifyText, popularSearchClick, searchInitiate, suggestedSearchClick } from "../../scripts/analytics/exports.js";
+import { getComponentIndex, getPageRegion, getPersona, menuInteraction, minifyText, popularSearchClick, searchInitiate, suggestedSearchClick } from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
   // --- Existing tracking ---
@@ -102,27 +102,26 @@ document.addEventListener('click', (e) => {
     );
   }
 
-  // --- Logo click tracking ---
   if (e.target.closest('.logo-wrap a')) {
     const logoLink = e.target.closest('.logo-wrap a');
 
     menuInteraction(
       getPageRegion(logoLink),
-      'Logo',             // fixed CTA text
+      'Logo',
       '',
       '',
-      'Header',           // section context
-      'header',           // component type
+      'Header',
+      'header',
       getComponentIndex(logoLink),
       getPersona(),
       '',
-      'cta-link',         // click type
-      'internal',         // link nature
+      'cta-link',
+      'internal',
       '',
       '',
       '',
-      'header',           // component ID
-      logoLink.href       // target URL
+      'header',
+      logoLink.href
     );
   }
 });
