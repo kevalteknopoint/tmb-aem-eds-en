@@ -1,15 +1,18 @@
 import { ctaInteraction, minifyText, getPersona, getPageRegion, getComponentIndex, downloadDocument } from "../../scripts/analytics/exports.js";
 
-document.addEventListener('click', (e) => {
-  if (e.target.closest('.momentum-saver-section:not(.momentum-image-saver)')) {
+const FILE_EXTENSIONS = [
+  'pdf', 'doc', 'docx', 'xls', 'xlsx', 'csv',
+  'ppt', 'pptx', 'zip', 'rar', 'txt'
+];
 
+document.addEventListener('click', (e) => {
+  // momentum-saver-section (excluding momentum-image-saver)
+  if (e.target.closest('.momentum-saver-section:not(.momentum-image-saver)')) {
     const ctaLink = e.target.closest('.momentum-saver-section a');
     if (!ctaLink) return;
-
     const container = ctaLink.closest('.momentum-saver-section');
     const heading = container?.querySelector('h1,h2,h3,h4,h5,h6');
     const nextPageURL = ctaLink.getAttribute("href");
-
     const pageRegion = getPageRegion(ctaLink);
     const componentIndex = getComponentIndex(ctaLink);
     const persona = getPersona();
@@ -18,17 +21,10 @@ document.addEventListener('click', (e) => {
     const sectionEl = e.target.closest('.section');
     const componentId = sectionEl?.getAttribute('id') || "";
 
-    // ✅ File detection
-    const fileExtensions = [
-      'pdf', 'doc', 'docx', 'xls', 'xlsx', 'csv',
-      'ppt', 'pptx', 'zip', 'rar', 'txt'
-    ];
-
     const cleanUrl = nextPageURL?.split('?')[0].toLowerCase();
     const fileExt = cleanUrl?.split('.').pop();
-    const isDownload = fileExtensions.includes(fileExt);
+    const isDownload = FILE_EXTENSIONS.includes(fileExt);
 
-    // ✅ If file → download only
     if (isDownload) {
       downloadDocument(
         pageRegion,
@@ -48,7 +44,6 @@ document.addEventListener('click', (e) => {
       return;
     }
 
-    // ✅ Otherwise → CTA tracking
     ctaInteraction(
       pageRegion,
       ctaText,
@@ -73,14 +68,15 @@ document.addEventListener('click', (e) => {
       ''
     );
   }
-  if (e.target.closest('.momentum-image-saver .button-container')) {
+
+  // momentum-image-saver
+  if (e.target.closest('.momentum-image-saver:not(.image-swapping) .button-container')) {
     const ctaLink = e.target.closest('.momentum-image-saver .button');
     if (!ctaLink) return;
 
     const container = ctaLink.closest('.momentum-image-saver');
     const heading = container?.querySelector('h1,h2,h3,h4,h5,h6');
     const nextPageURL = ctaLink.getAttribute("href");
-
     const pageRegion = getPageRegion(ctaLink);
     const componentIndex = getComponentIndex(ctaLink);
     const persona = getPersona();
@@ -89,17 +85,10 @@ document.addEventListener('click', (e) => {
     const sectionEl = e.target.closest('.section');
     const componentId = sectionEl?.getAttribute('id') || "";
 
-    // ✅ File detection
-    const fileExtensions = [
-      'pdf', 'doc', 'docx', 'xls', 'xlsx', 'csv',
-      'ppt', 'pptx', 'zip', 'rar', 'txt'
-    ];
-
     const cleanUrl = nextPageURL?.split('?')[0].toLowerCase();
     const fileExt = cleanUrl?.split('.').pop();
-    const isDownload = fileExtensions.includes(fileExt);
+    const isDownload = FILE_EXTENSIONS.includes(fileExt);
 
-    // ✅ If file → downloadDocument ONLY
     if (isDownload) {
       downloadDocument(
         pageRegion,
@@ -116,10 +105,9 @@ document.addEventListener('click', (e) => {
         fileExt,
         componentId
       );
-      return; // 🚨 important: stop CTA firing
+      return;
     }
 
-    // ✅ Otherwise → CTA tracking
     ctaInteraction(
       pageRegion,
       ctaText,
@@ -144,98 +132,25 @@ document.addEventListener('click', (e) => {
       ''
     );
   }
-  document.addEventListener('click', (e) => {
 
-    // ======================
-    // MOMENTUM IMAGE SAVER
-    // ======================
-    if (e.target.closest('.momentum-image-saver .button-container')) {
-      const ctaLink = e.target.closest('.momentum-image-saver .button');
-      if (!ctaLink) return;
-
-      const container = ctaLink.closest('.momentum-image-saver');
-      const heading = container?.querySelector('h1,h2,h3,h4,h5,h6');
-      const nextPageURL = ctaLink.getAttribute("href");
-
-      ctaInteraction(
-        getPageRegion(ctaLink),
-        minifyText(ctaLink.textContent),
-        minifyText(heading?.textContent),
-        '',
-        'momentum-image-saver',
-        'columns-container',
-        getComponentIndex(ctaLink),
-        getPersona(),
-        nextPageURL,
-        'cta-link',
-        'internal',
-        'quick-link',
-        'in-content',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-        ''
-      );
-    }
-
-    // ======================
-    // IMAGE SWAPPING
-    // ======================
-    const imageSwapContainer = e.target.closest('.image-swapping:not(.variant-404)');
-    if (!imageSwapContainer) return;
-
-    const ctaLink = e.target.closest('.image-swapping .button');
-    if (!ctaLink) return;
-
-    const heading = imageSwapContainer.querySelector('h1,h2,h3,h4,h5,h6');
-    const nextPageURL = ctaLink.getAttribute("href");
+  // image-swapping (non-variant-404)
+  if (e.target.closest('.image-swapping:not(.variant-404, .momentum-impact) p a')) {
+    const secondaryLink = e.target.closest('.image-swapping p a');
+    const pageRegion = getPageRegion(secondaryLink);
+    const componentIndex = getComponentIndex(secondaryLink);
+    const ctaTitle = e.target.closest('.image-swapping').querySelector("h1,h2,h3,h4,h5,h6");
+    const nextPageURL = secondaryLink?.getAttribute("href");
     const sectionEl = e.target.closest('.section');
     const componentId = sectionEl?.getAttribute('id') || "";
 
-    const ctaText = minifyText(ctaLink.textContent);
-    const titleText = minifyText(heading?.textContent);
-
-    // File detection
-    const fileExtensions = [
-      'pdf', 'doc', 'docx', 'xls', 'xlsx', 'csv',
-      'ppt', 'pptx', 'zip', 'rar', 'txt'
-    ];
-
-    const cleanUrl = nextPageURL?.split('?')[0].toLowerCase();
-    const fileExt = cleanUrl?.split('.').pop();
-    const isDownload = fileExtensions.includes(fileExt);
-
-    if (isDownload) {
-      downloadDocument(
-        getPageRegion(ctaLink),
-        'image-swapping',
-        'columns-container',
-        getComponentIndex(ctaLink),
-        getPersona(),
-        '',
-        nextPageURL,
-        'cta-link',
-        'internal',
-        'in-content',
-        ctaText,
-        fileExt,
-        componentId
-      );
-      return;
-    }
-
     ctaInteraction(
-      getPageRegion(ctaLink),
-      ctaText,
-      titleText,
+      pageRegion,
+      minifyText(secondaryLink?.textContent),
+      minifyText(ctaTitle?.textContent),
       '',
       'image-swapping',
       'columns-container',
-      getComponentIndex(ctaLink),
+      componentIndex,
       getPersona(),
       nextPageURL,
       'cta-link',
@@ -251,52 +166,117 @@ document.addEventListener('click', (e) => {
       '',
       ''
     );
-
-  });
-
-  if (e.target.closest('.image-swapping:not(.variant-404, .momentum-impact)  p a')) {
-    const secondaryLink = e.target.closest('.image-swapping p a');
-    const pageRegion = getPageRegion(e.target.closest('.image-swapping p a'));
-    const componentIndex = getComponentIndex(e.target.closest('.image-swapping p a'));
-    const ctaTitle = e.target.closest('.image-swapping').querySelector("h1,h2,h3,h4,h5,h6");
-    const nextPageURL = e.target.closest(".image-swapping p a")?.getAttribute("href");
-    const sectionEl = e.target.closest('.section');
-    const componentId = sectionEl?.getAttribute('id') || "";
-    ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), '', 'image-swapping', 'columns-container', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', componentId, '', '', '', '');
   }
+
+  // image-swapping variant-404
   if (e.target.closest('.image-swapping.variant-404 p a')) {
     const secondaryLink = e.target.closest('.image-swapping.variant-404 p a');
-    const pageRegion = getPageRegion(e.target.closest('.image-swapping.variant-404 p a'));
-    const componentIndex = getComponentIndex(e.target.closest('.image-swapping.variant-404 p a'));
+    const pageRegion = getPageRegion(secondaryLink);
+    const componentIndex = getComponentIndex(secondaryLink);
     const ctaTitle = e.target.closest('.image-swapping.variant-404').querySelector("h1,h2,h3,h4,h5,h6");
-    const nextPageURL = e.target.closest(".image-swapping.variant-404 p a")?.getAttribute("href");
+    const nextPageURL = secondaryLink?.getAttribute("href");
     const sectionEl = e.target.closest('.section');
     const componentId = sectionEl?.getAttribute('id') || "";
-    ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), '', 'image-swapping', 'columns-container', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', componentId, '', '', '', '');
-  }
-  if (e.target.closest('.variant-404 +.box-container p a')) {
-    const secondaryLink = e.target.closest('.variant-404 +.box-container p a');
-    const pageRegion = getPageRegion(e.target.closest('.variant-404 +.box-container p a'));
-    const componentIndex = getComponentIndex(e.target.closest('.variant-404 +.box-container p a'));
-    const ctaTitle = e.target.closest('.variant-404 +.box-container').querySelector("pf");
-    const nextPageURL = e.target.closest(".variant-404 +.box-container p a")?.getAttribute("href");
-    const sectionEl = e.target.closest('.section');
-    const componentId = sectionEl?.getAttribute('id') || "";
-    ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), '', 'image-swapping', 'columns-container', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', componentId, '', '', '', '');
-  }
-  if (e.target.closest('.section-with-bg:not(.variant-404)  p a')) {
-    const secondaryLink = e.target.closest('.section-with-bg p a');
-    const pageRegion = getPageRegion(e.target.closest('.section-with-bg p a'));
-    const componentIndex = getComponentIndex(e.target.closest('.section-with-bg p a'));
-    const ctaTitle = e.target.closest('.section-with-bg').querySelector("h1,h2,h3,h4,h5,h6");
-    const nextPageURL = e.target.closest(".section-with-bg p a")?.getAttribute("href");
-    const sectionEl = e.target.closest('.section');
-    const componentId = sectionEl?.getAttribute('id') || "";
-    ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), '', 'image-swapping', 'columns-container', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', componentId, '', '', '', '');
-  }
-  const ctaLink = e.target.closest('.momentum-impact p a');
 
+    ctaInteraction(
+      pageRegion,
+      minifyText(secondaryLink?.textContent),
+      minifyText(ctaTitle?.textContent),
+      '',
+      'image-swapping',
+      'columns-container',
+      componentIndex,
+      getPersona(),
+      nextPageURL,
+      'cta-link',
+      'internal',
+      'quick-link',
+      'in-content',
+      '',
+      '',
+      '',
+      componentId,
+      '',
+      '',
+      '',
+      ''
+    );
+  }
+
+  // variant-404 + box-container
+  if (e.target.closest('.variant-404 + .box-container p a')) {
+    const secondaryLink = e.target.closest('.variant-404 + .box-container p a');
+    const pageRegion = getPageRegion(secondaryLink);
+    const componentIndex = getComponentIndex(secondaryLink);
+    const ctaTitle = e.target.closest('.variant-404 + .box-container').querySelector("p");
+    const nextPageURL = secondaryLink?.getAttribute("href");
+    const sectionEl = e.target.closest('.section');
+    const componentId = sectionEl?.getAttribute('id') || "";
+
+    ctaInteraction(
+      pageRegion,
+      minifyText(secondaryLink?.textContent),
+      minifyText(ctaTitle?.textContent),
+      '',
+      'image-swapping',
+      'columns-container',
+      componentIndex,
+      getPersona(),
+      nextPageURL,
+      'cta-link',
+      'internal',
+      'quick-link',
+      'in-content',
+      '',
+      '',
+      '',
+      componentId,
+      '',
+      '',
+      '',
+      ''
+    );
+  }
+
+  // section-with-bg (excluding variant-404)
+  if (e.target.closest('.section-with-bg:not(.variant-404) p a')) {
+    const secondaryLink = e.target.closest('.section-with-bg p a');
+    const pageRegion = getPageRegion(secondaryLink);
+    const componentIndex = getComponentIndex(secondaryLink);
+    const ctaTitle = e.target.closest('.section-with-bg').querySelector("h1,h2,h3,h4,h5,h6");
+    const nextPageURL = secondaryLink?.getAttribute("href");
+    const sectionEl = e.target.closest('.section');
+    const componentId = sectionEl?.getAttribute('id') || "";
+
+    ctaInteraction(
+      pageRegion,
+      minifyText(secondaryLink?.textContent),
+      minifyText(ctaTitle?.textContent),
+      '',
+      'image-swapping',
+      'columns-container',
+      componentIndex,
+      getPersona(),
+      nextPageURL,
+      'cta-link',
+      'internal',
+      'quick-link',
+      'in-content',
+      '',
+      '',
+      '',
+      componentId,
+      '',
+      '',
+      '',
+      ''
+    );
+  }
+
+  // momentum-impact p a
+  const ctaLink = e.target.closest('.momentum-impact p a');
   if (!ctaLink) return;
+
   const container = ctaLink.closest('.momentum-impact');
   const heading = container?.querySelector('h1,h2,h3,h4,h5,h6');
   const pageRegion = getPageRegion(ctaLink);
@@ -308,18 +288,10 @@ document.addEventListener('click', (e) => {
   const sectionEl = e.target.closest('.section');
   const componentId = sectionEl?.getAttribute('id') || "";
 
-  // File detection
-  const fileExtensions = [
-    'pdf', 'doc', 'docx', 'xls', 'xlsx', 'csv',
-    'ppt', 'pptx', 'zip', 'rar', 'txt'
-  ];
-
   const cleanUrl = nextPageURL?.split('?')[0].toLowerCase();
   const fileExt = cleanUrl?.split('.').pop();
+  const isDownload = FILE_EXTENSIONS.includes(fileExt);
 
-  const isDownload = fileExtensions.includes(fileExt);
-
-  // If file → ONLY downloadDocument
   if (isDownload) {
     downloadDocument(
       pageRegion,
@@ -336,10 +308,9 @@ document.addEventListener('click', (e) => {
       fileExt,
       componentId
     );
-    return; //  prevents ctaInteraction
+    return;
   }
 
-  //  Otherwise → normal CTA tracking
   ctaInteraction(
     pageRegion,
     ctaText,

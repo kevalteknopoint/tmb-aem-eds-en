@@ -92,9 +92,7 @@ document.addEventListener('click', (e) => {
 
       const componentName = sectionTitle;
       const ctaTitle = sectionTitle;
-      const componentType =
-        container?.querySelector('[data-block-name]')?.getAttribute('data-block-name') ||
-        'navigation-cards';
+      const componentType = container?.querySelector('[data-block-name]')?.getAttribute('data-block-name') || 'navigation-cards';
 
       const pageRegion = getPageRegion(ctaLink);
       const componentIndex = getComponentIndex(ctaLink);
