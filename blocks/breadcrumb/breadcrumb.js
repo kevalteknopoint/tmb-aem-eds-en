@@ -73,11 +73,20 @@ export default async function decorate(block) {
   }
 
   const basePath = getMetadata('base-path');
-  const urlPathArr = window.location.pathname.split("/").slice(4);
+  let urlPathArr;
+
+  if (basePath === '/') {
+    urlPathArr = window.location.pathname.split("/").filter(Boolean);
+  } else {
+    urlPathArr = window.location.pathname.replace(basePath, '').split("/").filter(Boolean);
+  }
+
   const promiseArr = urlPathArr.map((_, index) => {
-    const path = window.location.pathname.split("/").slice(4, ((urlPathArr.length + 4) - index));
-    return getBreadcrumbName(`/${path.join('/')}`, index === 0);
+    const currentSegments = urlPathArr.slice(0, urlPathArr.length - index);
+    const path = `/${currentSegments.join('/')}`;
+    return getBreadcrumbName(path, index === 0);
   });
+
   const resolvedPromises = await Promise.all(promiseArr);
   const reversedArray = resolvedPromises?.reverse();
   if (window.innerWidth <= 767 && urlPathArr?.length > 1) {
@@ -86,6 +95,7 @@ export default async function decorate(block) {
     block.innerHTML = '';
     block.appendChild(lastBtn);
   } else {
-    block.innerHTML = `<a href="${basePath}/">Home</a><span>/</span>${reversedArray.join("<span>/</span>")}`;
+    block.innerHTML = `<a href="${basePath === '/' ? `${basePath}` : `${basePath}/`}">Home</a>${reversedArray?.length ? `<span>/</span>${reversedArray.join("<span>/</span>")}` : ''}`;
+    // if (!reversedArray?.length) block.classList.add('d-none');
   }
 }
