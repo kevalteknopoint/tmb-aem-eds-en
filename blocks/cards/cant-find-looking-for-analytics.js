@@ -30,37 +30,29 @@ document.addEventListener('click', (e) => {
       ctaInteraction(pageRegion, ctaText, minifyText(ctaTitleEle?.textContent), 'WAYS TO GET IN TOUCH', minifyText(title?.textContent), '', componentIndex, getPersona(), nextPageURL, 'cta-click', 'external', 'in-page-nav', 'in-content', '', '', '', componentId, '');
     }
     const HEADING_SELECTOR = 'h1, h2, h3, h4, h5, h6';
-    if (e.target.closest('.navigation-cards-container .navigation-cards-wrapper:not(.rates-saver.faq-cant-find-looking-for-variant)')) {
-      const link = e.target.closest('a');
+    // NORMAL LINKS (exclude clickable cards)
+    if (
+      e.target.closest('.navigation-cards-container .navigation-cards-wrapper:not(.rates-saver.faq-cant-find-looking-for-variant)') && !e.target.closest('.navigation-cards-container .nav-card a.is-clickable') // ✅ prevent overlap
+    ) {
+      const link = e.target.closest('.navigation-cards-container a');
       if (!link) return;
 
       const card = link.closest('.nav-card');
       if (!card) return;
 
       const container = link.closest('.navigation-cards-container');
-
-      // Card title (fallback for CTA text)
       const cardTitle = card.querySelector(HEADING_SELECTOR);
-
-      // Source
       const ctaSource = card.querySelector('.card-header p:nth-of-type(2)');
-
-      // Section title (h1–h6)
       const sectionTitleEl = container?.querySelector(`.default-content-wrapper ${HEADING_SELECTOR}`);
       const sectionTitle = minifyText(sectionTitleEl?.textContent || '');
-
-      // Component values
       const componentName = sectionTitle;
       const ctaTitle = sectionTitle;
       const componentType = container?.querySelector('[data-block-name]')?.getAttribute('data-block-name') || 'navigation-cards';
-
       const pageRegion = getPageRegion(link);
       const componentIndex = getComponentIndex(link);
       const nextPageURL = link.getAttribute("href");
       const componentId = link.closest('.section')?.getAttribute('id') || '';
-
       const titlectaText = minifyText(link.textContent || cardTitle?.textContent);
-      console.log('hii');
 
       ctaInteraction(
         pageRegion,
@@ -84,18 +76,20 @@ document.addEventListener('click', (e) => {
       );
     }
 
+    // ==========================
+    // CLICKABLE CARD LINKS ONLY
+    // ==========================
     const ctaLink = e.target.closest('.navigation-cards-container .nav-card a.is-clickable');
-    if (!ctaLink) return; {
+
+    if (ctaLink) {
       const card = ctaLink.closest('.nav-card');
       const container = ctaLink.closest('.navigation-cards-container');
 
       const cardTitleEl = card?.querySelector('h3');
 
-      // Section title (h1–h6)
       const sectionTitleEl = container?.querySelector(`.default-content-wrapper ${HEADING_SELECTOR}`);
       const sectionTitle = minifyText(sectionTitleEl?.textContent || '');
 
-      // Component values
       const componentName = sectionTitle;
       const ctaTitle = sectionTitle;
       const componentType = container?.querySelector('[data-block-name]')?.getAttribute('data-block-name') || 'navigation-cards';
@@ -108,7 +102,6 @@ document.addEventListener('click', (e) => {
       const ectaText = minifyText(cardTitleEl?.textContent);
       const sectionEl = ctaLink.closest('.section');
       const componentId = sectionEl?.getAttribute('id') || "";
-      console.log('ji');
 
       ctaInteraction(
         pageRegion,
