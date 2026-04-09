@@ -54,9 +54,9 @@ document.addEventListener('click', (e) => {
   if (e.target.closest('.footer-links')) {
     const anchor = e.target.closest('a');
     if (!anchor) return;
-    const icon = anchor.querySelector('.icon');
-    let iconClassString;
-    let iconName;
+    // const icon = anchor.querySelector('.icon');
+    // let iconClassString;
+    // let iconName;
 
    if (e.target.closest('.footer-links')) {
   const anchor = e.target.closest('a');
