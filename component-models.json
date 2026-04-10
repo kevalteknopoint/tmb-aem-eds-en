@@ -497,6 +497,10 @@
             "value": "evergreen-image-swapping-variant"
           },
           {
+            "name": "Spacing 40px",
+            "value": "spacing-40-px"
+          },
+          {
             "name": "Info Well",
             "value": "info-well"
           },

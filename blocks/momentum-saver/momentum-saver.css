@@ -791,6 +791,10 @@
   gap:32px;
 }
 
+.spacing-40-px.image-swapping .columns.block > div h3{
+  margin-top:40px;
+}
+
 .variant-404 .columns.block > div{
   align-items:center;
   gap:64px;
