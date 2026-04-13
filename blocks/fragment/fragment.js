@@ -27,7 +27,8 @@ export async function loadFragment(path) {
     const resp = await fetch(`${path}.plain.html`);
     if (resp.ok) {
       const main = document.createElement('main');
-      main.innerHTML = await resp.text();
+      const resText = await resp.text();
+      main.innerHTML = resText;
 
       // reset base path for media to fragment base
       const resetAttributeBase = (tag, attr) => {
@@ -51,11 +52,14 @@ export default async function decorate(block) {
   const path = link ? link.getAttribute('href') : block.textContent.trim();
   const fragment = await loadFragment(path);
   if (fragment) {
-    const fragmentSection = fragment.querySelector(':scope .section');
-    if (fragmentSection) {
-      block.classList.add(...fragmentSection.classList);
+    const fragmentSection = fragment.querySelectorAll(':scope .section');
+    if (fragmentSection && fragmentSection.length) {
+      // block.classList.add(...fragmentSection.classList);
       // block.classList.remove('section');
-      block.replaceChildren(...fragmentSection.childNodes);
+      // block.replaceChildren(...fragmentSection.childNodes);
+      block.innerHTML = '';
+
+      fragmentSection.forEach((frag) => block.appendChild(frag));
       loadPlaceholders(block);
       loadDmImages(block);
       try {
