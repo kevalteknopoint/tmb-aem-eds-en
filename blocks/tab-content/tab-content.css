@@ -93,6 +93,7 @@
   display:flex;
   gap:64px;
   justify-content:space-between;
+  width:100%;
 }
 
 .section.tab-content-container .tab-content.block .tab-content-body p{

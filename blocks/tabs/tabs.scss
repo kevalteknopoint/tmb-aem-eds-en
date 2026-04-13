@@ -48,6 +48,7 @@
         border-top: 1px solid $link-default;
         border-bottom: 1px solid $link-default;
         border-right: 1px solid $link-default;
+        border-left: 1px solid $link-default;
 
         &:first-child {
           border-top-left-radius: $radius-card;
