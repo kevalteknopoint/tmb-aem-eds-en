@@ -37,6 +37,10 @@
   justify-content:space-between;
 }
 
+.section.tab-content-container .tab-content.block .tab-content-item{
+  width:100%;
+}
+
 .section.tab-content-container .tab-content.block .tab-content-item:not(:last-child){
   border-right:1px solid var(--line-default);
   padding-right:32px;
@@ -341,6 +345,12 @@
 @media screen and (max-width: 767px){
   .section.tab-content-container .tab-content.block{
     flex-direction:column;
+  }
+
+  .section.tab-content-container .tab-content.block .tab-content-item:not(:last-child){
+    border-bottom:1px solid var(--line-default);
+    padding-bottom:32px;
+    padding-right:0;
   }
 
   .section.tab-content-container .tab-content.block .tab-body-wrap{

@@ -166,7 +166,7 @@ export default async function decorate(block) {
 
     // Previous button
     const prevBtn = button({ class: "faq-page-btn prev" });
-    injectIcon('chevron-left-default', prevBtn);
+    injectIcon('chevron-left-links-default', prevBtn);
     prevBtn.disabled = currentPage === 1;
     prevBtn.addEventListener("click", () => {
       if (currentPage > 1) {
