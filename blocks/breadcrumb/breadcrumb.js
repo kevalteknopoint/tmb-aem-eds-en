@@ -14,7 +14,7 @@ function extractTitleFromHtml(rawHtml, pagePath) {
   const doc = parser.parseFromString(rawHtml, "text/html");
 
   // 0. Get text from breadcrumb component
-  const breadcrumbBlockTitle = doc.querySelector('.breadcrumb');
+  const breadcrumbBlockTitle = doc.querySelector('.breadcrumb:not(.static-breadcrumb)');
   if (breadcrumbBlockTitle && breadcrumbBlockTitle.textContent?.trim()) {
     return breadcrumbBlockTitle.textContent?.trim();
   }
