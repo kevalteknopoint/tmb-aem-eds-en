@@ -35,12 +35,14 @@
 
       h3 {
          @include typo-heading3;
+
          margin-bottom: $space-3xs;
          color: $heading-default;
       }
 
       h5 {
         @include typo-heading5;
+
         margin-bottom: $space-3xs;
         color: $heading-default;
       }
@@ -94,6 +96,7 @@
 
       h3 {
          @include typo-heading3;
+
          margin-bottom: $space-3xs;
          margin-top: $space-sm;
          color: $heading-default;
@@ -101,6 +104,7 @@
 
       h5 {
         @include typo-heading5;
+        
         color: $heading-default;
         margin-bottom: $space-3xs;
         margin-top: $space-xs;
