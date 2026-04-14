@@ -104,27 +104,22 @@ export async function pageAnalytics() {
 }
 
 function loadChatbot() {
-  const encoded = getMetadata('chatbot-script');
+  const scriptContent = getMetadata('chatbot-script');
 
-  if (!encoded) return;
+  if (!scriptContent) {
+    console.warn('Chatbot script content not found in metadata.');
+    return;
+  }
 
-  // Decode HTML entities
-  const textarea = document.createElement('textarea');
-  textarea.innerHTML = encoded;
-  const decoded = textarea.value;
-
-  // Extract JS inside <script>...</script>
-  const match = decoded.match(/<script[^>]*>([\s\S]*?)<\/script>/i);
-  if (!match) return;
-
-  const scriptContent = match[1];
-
-  // Create and execute script
+  // Create the script element
   const script = document.createElement('script');
   script.type = 'text/javascript';
+
+  // Inject the raw JS code directly
   script.text = scriptContent;
 
-  document.body.appendChild(script);
+  // Append to head or body to execute
+  document.head.appendChild(script);
 }
 
 export default async function initLazy() {
