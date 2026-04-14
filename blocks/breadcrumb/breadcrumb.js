@@ -13,6 +13,12 @@ function extractTitleFromHtml(rawHtml, pagePath) {
   const parser = new DOMParser();
   const doc = parser.parseFromString(rawHtml, "text/html");
 
+  // 0. Get text from breadcrumb component
+  const breadcrumbBlockTitle = doc.querySelector('.breadcrumb');
+  if (breadcrumbBlockTitle && breadcrumbBlockTitle.textContent?.trim()) {
+    return breadcrumbBlockTitle.textContent?.trim();
+  }
+
   // 1. Prioritize a specific <meta> tag for cleaner breadcrumb text (e.g., dedicated "breadcrumb-title")
   const metaTitle = doc.querySelector('meta[name="breadcrumb-title"]');
   if (metaTitle && metaTitle.content) {
