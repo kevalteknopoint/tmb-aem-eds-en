@@ -343,6 +343,12 @@
     flex-direction:column;
   }
 
+  .section.tab-content-container .tab-content.block .tab-content-item:not(:last-child){
+    border-bottom:1px solid var(--line-default);
+    padding-bottom:32px;
+    padding-right:0;
+  }
+
   .section.tab-content-container .tab-content.block .tab-body-wrap{
     flex-direction:column-reverse;
     gap:16px;
