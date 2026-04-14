@@ -165,7 +165,6 @@
 
 .faq-accordion .accordion-wrapper .block .accordion-item{
   border-bottom:1px solid var(--line-default);
-  border-top:1px solid var(--line-default);
   padding:16px 0;
 }
 

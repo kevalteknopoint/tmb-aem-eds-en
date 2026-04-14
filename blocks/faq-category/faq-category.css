@@ -75,6 +75,7 @@
   gap:24px;
   justify-content:space-between;
   padding:13px 8px;
+  text-decoration:none !important;
 }
 
 .faq-category-container:not(.faq-category-container.faq-frequently-question, .faq-category-container.faq-frequently-question-list) ul{

@@ -103,7 +103,8 @@
       "button",
       "title",
       "content-fragment",
-      "accordion"
+      "accordion",
+      "embed-iframe"
     ]
   },
   {
