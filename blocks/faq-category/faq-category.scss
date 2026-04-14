@@ -68,6 +68,7 @@
         color: $body-default;
         padding: 13px 8px;
         gap: 24px;
+        text-decoration: none !important;
 
         @include tablet {
           padding-right: 4px;

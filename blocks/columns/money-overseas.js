@@ -2,17 +2,19 @@ import { div } from "../../scripts/dom-helpers.js";
 import './money-overseas-analytics.js';
 
 export default function decorateMoneyOverseas() {
-  document
-    .querySelectorAll(".money-overseas .default-content-wrapper")
-    .forEach((el) => el.classList.add("overseas-wrapper"));
+    requestAnimationFrame(() => {
+       document
+      .querySelectorAll(".money-overseas .default-content-wrapper")
+      .forEach((el) => el.classList.add("overseas-wrapper"));
 
-  document
-    .querySelectorAll(".money-overseas .columns-wrapper")
-    .forEach((el) => el.classList.add("overseas-columns"));
+    document
+      .querySelectorAll(".money-overseas .columns-wrapper")
+      .forEach((el) => el.classList.add("overseas-columns"));
 
-  document
-    .querySelectorAll(".money-overseas .columns-wrapper .columns > div")
-    .forEach((el) => el.classList.add("overseas-columns-wrapper"));
+    document
+      .querySelectorAll(".money-overseas .columns-wrapper .columns > div")
+      .forEach((el) => el.classList.add("overseas-columns-wrapper"));
+
 
   const moneyContainerSecorder = document.querySelector(
     ".money-overseas .overseas-columns  ul li ul"
@@ -57,4 +59,5 @@ export default function decorateMoneyOverseas() {
       });
     });
   });
+});
 }

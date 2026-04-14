@@ -170,6 +170,10 @@
               "value": "tmb-sub-footer"
             },
             {
+              "name": "Common Style Rte",
+              "value": "common-style-rte"
+            },
+            {
               "name": "Bottom Spacer",
               "value": "spacer-bottom"
             },
