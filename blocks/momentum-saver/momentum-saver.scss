@@ -453,6 +453,12 @@
   }
 }
 
+.spacing-40-px.image-swapping{
+  .columns.block > div h3{
+    margin-top: 40px;
+  }
+}
+
 .variant-404 {
   .columns.block>div {
     justify-content: space-between;
