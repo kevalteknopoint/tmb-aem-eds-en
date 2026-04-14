@@ -11,6 +11,8 @@
     }
 
     .tab-content-item {
+      width: 100%;
+      
       &:not(:last-child) {
         padding-right: 32px;
         border-right: 1px solid $line-default;
