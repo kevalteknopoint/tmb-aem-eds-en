@@ -11,10 +11,6 @@ export default function loadNonBlockLibs() {
       name: 'rate-details',
     },
     {
-      selector: '.icon-library',
-      name: 'icon-library',
-    },
-    {
       selector: '.interest-table-section',
       name: 'table',
     },

@@ -1,4 +1,4 @@
-import { getMetadata } from "./aem.js";
+import { getMetadata, loadCSS } from "./aem.js";
 import { pageIntialization, setPersona } from "./analytics/exports.js";
 
 async function loadSprite() {
@@ -16,6 +16,9 @@ async function loadSprite() {
     const svgElement = doc.documentElement;
 
     document.body.appendChild(svgElement);
+
+    import(`../blocks/${'icon-library'}/${'icon-library'}.js`);
+    loadCSS(`${window.hlx.codeBasePath}/blocks/${'icon-library'}/${'icon-library'}.css`);
   } catch (error) {
     console.error('Error loading SVG:', error);
   }
