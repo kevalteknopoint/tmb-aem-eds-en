@@ -3,6 +3,10 @@
     <path d="M6 0L12 5.95745L10.95 7L6 2.08511L1.05 7L0 5.95745L6 0Z" fill="currentColor"/>
   </symbol>
 
+  <symbol id="chevron-down-square" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 7" fill="none">
+    <path d="M6 7L0 1.04255L1.05 0L6 4.91489L10.95 0L12 1.04255L6 7Z" fill="currentColor"/>
+  </symbol>
+
   <symbol id="quick-link-border-tmbl" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
     <mask id="path-1-inside-1_2001_12510" fill="white"><path d="M0 0H48V48H0V0Z"/></mask>
     <path d="M0 48H4V0H0H-4V48H0Z" fill="#B91A4D" mask="url(#path-1-inside-1_2001_12510)"/>
@@ -21,9 +25,9 @@
       stroke-linecap="round" stroke-linejoin="round" />
   </symbol>
 
-  <symbol id="chevron-right-links" viewBox="0 0 12 19" fill="none" preserveAspectRatio="xMidYMid meet"
-    xmlns="http://www.w3.org/2000/svg">
-    <path d="M11.4 9.5L1.69787 19L0 17.3375L8.00426 9.5L0 1.6625L1.69787 0L11.4 9.5Z" fill="currentColor" />
+  <symbol id="chevron-left-links" viewBox="0 0 12 19" fill="none" preserveAspectRatio="xMidYMid meet"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M0.600001 9.5L10.3021 19L12 17.3375L3.99574 9.5L12 1.6625L10.3021 0L0.600001 9.5Z" fill="currentColor" />
   </symbol>
 
   <symbol id="chevron-right-links-default" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,8 +53,8 @@
       stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" />
   </symbol>
 
-  <symbol id="chevron-left-default" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M14 16L10 12L14 8" stroke="#0B231F" stroke-linecap="round" stroke-linejoin="round" />
+  <symbol id="chevron-left-links-default" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M14 16L10 12L14 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
   </symbol>
 
   <symbol id="chevron-left-circle" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,10 +67,21 @@
       stroke-linejoin="round" />
   </symbol>
 
+  <symbol id="chevron-left-links-alt" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+      d="M1.84306 12.7116L7.50006 18.3686L8.91406 16.9546L3.96406 12.0046L8.91406 7.05463L7.50006 5.64062L1.84306 11.2976C1.65552 11.4852 1.55026 11.7395 1.55026 12.0046C1.55026 12.2698 1.65552 12.5241 1.84306 12.7116Z"
+      fill="currentColor" />
+  </symbol>
+
   <symbol id="chevron-right-links-alt" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" clip-rule="evenodd"
       d="M10.1569 12.7116L4.49994 18.3686L3.08594 16.9546L8.03594 12.0046L3.08594 7.05463L4.49994 5.64062L10.1569 11.2976C10.3444 11.4852 10.4497 11.7395 10.4497 12.0046C10.4497 12.2698 10.3444 12.5241 10.1569 12.7116Z"
       fill="currentColor" />
+  </symbol>
+
+  <symbol id="chevron-left-links-round" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M11.6992 3.59961L6.29922 8.99961L11.6992 14.3996" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round" />
   </symbol>
 
   <symbol id="chevron-right-links-round" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,6 +89,10 @@
       stroke-linecap="round" stroke-linejoin="round" />
   </symbol>
 
+  <symbol id="chevron-down-round" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6 9L11.5 15L17 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+      stroke-linejoin="round" />
+  </symbol>
 
   <symbol id="chevron-up-round" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M6 15L11.5 9L17 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -110,9 +129,9 @@
       fill="currentColor" />
   </symbol>
 
-  <symbol id="chevron-right-circle-filled" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="chevron-left-circle-filled" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect width="40" height="40" rx="20" fill="none" />
-    <path d="M18 14L24 19.5L18 25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+    <path d="M22 14L16 19.5L22 25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
       stroke-linejoin="round" />
   </symbol>
 
