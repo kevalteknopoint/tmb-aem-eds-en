@@ -67,7 +67,7 @@ import { div, h1, input, p } from "../../scripts/dom-helpers.js";
 
   const iconLibHeading = document.querySelector('.icon-library h1');
   const newWrap = div({ class: 'icon-lib-wrap' }, h1(iconLibHeading.textContent), div({ class: 'search-inp-wrap' }, input({ type: 'text', class: 'search-icon-lib', name: 'search-icon-lib', id: 'search-icon-lib', placeholder: 'Search icons...' })));
-  injectIcon('magnifying-glass-header', newWrap?.querySelector('.search-inp-wrap'));
+  injectIcon('search-magnifying-glass', newWrap?.querySelector('.search-inp-wrap'));
   const searchInp = newWrap?.querySelector('#search-icon-lib');
 
   searchInp?.addEventListener('input', (e) => {

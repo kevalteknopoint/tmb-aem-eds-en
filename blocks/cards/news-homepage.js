@@ -75,8 +75,8 @@ export default function cardCarouselHomepage(block) {
   const nextBtn = button({ class: "swiper-button-next" });
   const prevBtn = button({ class: "swiper-button-prev" });
 
-  injectIcon('chevron-right-circle-filled', nextBtn);
-  injectIcon('chevron-right-circle-filled', prevBtn);
+  injectIcon('chevron-right-links-default', nextBtn);
+  injectIcon('chevron-right-links-default', prevBtn);
 
   const navWrapper = div(
     { class: "nav-wrapper" },

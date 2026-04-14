@@ -463,6 +463,9 @@ function decorateIcon(span) {
     iconType = ' icon-accent';
   }
 
+  span.classList.add('icon-svg-wrap');
+  if (iconType) span.classList.add(iconType?.trim());
+
   span.innerHTML = `
     <svg class="icon-svg${iconType}">
       <use href="#${iconName?.replace('--invert-bg', '')?.replace('--invert', '')?.replace('--accent', '')}"></use>
@@ -478,9 +481,11 @@ function decorateIcon(span) {
  */
 function injectIcon(id, ele, position = 'beforeend', version = '') {
   ele?.insertAdjacentHTML(position, `
-    <svg class="icon icon-svg ${version}">
+    <span class="icon-svg-wrap ${version}">
+      <svg class="icon icon-svg ${version}">
       <use href="#${id}"></use>
-    </svg>
+      </svg>
+    </span>
   `);
 }
 

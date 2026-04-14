@@ -797,23 +797,32 @@ h6{
   margin-bottom:unset;
 }
 
-svg.icon-svg.icon-invert{
+.icon-svg-wrap.icon-invert{
   background-color:var(--icon-bg-default) !important;
   border-radius:50%;
+}
+
+.icon-svg-wrap.icon-invert-bg{
+  background-color:var(--icon-bg-reverse) !important;
+  border-radius:50%;
+}
+
+.icon-svg-wrap.icon-accent{
+  background-color:var(--icon-bg-accent) !important;
+  border-radius:50%;
+}
+
+svg.icon-svg.icon-invert{
   color:var(--icon-default) !important;
   padding:10px;
 }
 
 svg.icon-svg.icon-invert-bg{
-  background-color:var(--icon-bg-reverse) !important;
-  border-radius:50%;
   color:var(--icon-reverse) !important;
   padding:10px;
 }
 
 svg.icon-svg.icon-accent{
-  background-color:var(--icon-bg-accent) !important;
-  border-radius:50%;
   color:var(--icon-2-accent) !important;
   padding:10px;
 }
