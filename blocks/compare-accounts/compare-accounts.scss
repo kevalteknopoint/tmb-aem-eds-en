@@ -14,7 +14,6 @@
   .default-content-wrapper {
     h1, h2, h3, h4, h5, h6 {
       display: block;
-      margin-bottom: 16px;
       color: $heading-default;
 
       @include typo-heading1;
@@ -22,6 +21,7 @@
 
     p {
       color: $heading-default;
+      margin-top: 16px;
 
       @include typo-body;
 
@@ -39,7 +39,9 @@
   }
 
   .compare-accounts.block {
-    overflow-x: auto;
+    @include tablet {
+      overflow-x: auto;
+    }
 
     .compare-accounts-cards {
       display: flex;
@@ -50,17 +52,31 @@
         flex-direction: row;
       }
 
+      &:has(.active) {
+        .product-title, .product-description, .product-interest-pretitle, p {
+          padding-left: 24px;
+        }
+
+        .product-title {
+          padding-top: 32px;
+        }
+      }
+
       .compare-accounts-card {
         display: flex;
         flex-direction: column;
-        min-width: 304px;
+        width: 100%;
+        max-width: 304px;
         border-radius: $radius-card;
         min-height: 100%;
         flex: 1;
 
+        @include tablet {
+          min-width: 304px;
+        }
+
         &.active {
           background-color: $bg-reverse;
-          
 
           h3, h5, p:has(.interest-rate), .interest-rate {
             color: $heading-reverse;
@@ -78,7 +94,7 @@
     }
 
     .product-title {
-      padding: 32px 24px 8px;
+      padding: 0 24px 8px 0;
       border-bottom: 5px solid $heading-default;
       color: $heading-default;
 
@@ -86,14 +102,14 @@
     }
 
     .product-description {
-      padding: 16px 24px 0;
+      padding: 16px 24px 0 0;
       color: $body-default;
 
       @include typo-body;
     }
 
     .product-interest-pretitle {
-      padding: 16px 24px 0;
+      padding: 16px 24px 0 0;
       color: $heading-default;
 
       @include typo-disclaimer;
@@ -115,7 +131,7 @@
     }
 
     p {
-      padding: 16px 24px 0;
+      padding: 16px 24px 0 0;
       color: $body-default;
 
       @include typo-disclaimer;

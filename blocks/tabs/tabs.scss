@@ -10,7 +10,7 @@
     gap: 32px;
   }
 
-  & > .default-content-wrapper {
+  &>.default-content-wrapper {
     @include responsive-container;
 
     h1,
@@ -25,10 +25,10 @@
   .tabs {
     .tab-list-wrapper {
       @include responsive-container;
-      
+
       overflow-x: auto;
     }
-    
+
     .tabs-list {
       display: grid;
       grid-auto-flow: column;
@@ -54,7 +54,7 @@
           border-top-left-radius: $radius-card;
           border-bottom-left-radius: $radius-card;
         }
-        
+
         &:last-child {
           border-top-right-radius: $radius-card;
           border-bottom-right-radius: $radius-card;
@@ -93,7 +93,7 @@
     gap: 24px;
   }
 
-  & > .default-content-wrapper {
+  &>.default-content-wrapper {
     @include responsive-container;
 
     h1,
@@ -123,7 +123,7 @@
       gap: 40px;
     }
 
-    .tab-list-wrapper {      
+    .tab-list-wrapper {
       overflow-x: auto;
       min-width: 449px;
       width: fit-content;
@@ -133,7 +133,7 @@
         width: unset;
       }
     }
-    
+
     .tabs-list {
       display: flex;
       flex-direction: column;
@@ -174,7 +174,7 @@
           right: 0;
           left: 0;
           bottom: 0;
-          
+
           @include tablet {
             margin: auto 0;
             top: 0;
@@ -218,22 +218,28 @@
             color: $heading-reverse;
           }
 
-          svg.icon-svg.icon-accent {
+          span.icon-svg-wrap.icon-accent {
             background-color: $icon-bg-reverse !important;
+          }
+
+          svg.icon-svg.icon-accent {
             color: $icon-reverse !important;
           }
         }
 
         &:not([aria-selected='true']):hover {
-          svg.icon-svg.icon-accent {
+          span.icon-svg-wrap.icon-accent {
             background-color: $icon-bg-default !important;
+          }
+
+          svg.icon-svg.icon-accent {
             color: $icon-default !important;
           }
         }
 
         p {
           @include typo-heading3;
-          
+
           display: flex;
           justify-content: flex-start;
           align-items: center;
@@ -248,6 +254,10 @@
             flex-direction: column;
             gap: 8px;
             text-align: center;
+          }
+
+          .icon-svg-wrap {
+            transition: all 0.3s ease-in-out;
           }
 
           svg {

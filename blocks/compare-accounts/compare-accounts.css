@@ -57,7 +57,6 @@
   font-weight:var(--font-weight-h1);
   letter-spacing:var(--font-letter-spacing-h1);
   line-height:var(--font-height-h1);
-  margin-bottom:16px;
   text-transform:var(--heading1-case);
 }
 
@@ -68,6 +67,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
+  margin-top:16px;
   text-transform:var(--body-case);
 }
 
@@ -80,14 +80,18 @@
   color:var(--body-default);
 }
 
-.section.compare-accounts .compare-accounts.block{
-  overflow-x:auto;
-}
-
 .section.compare-accounts .compare-accounts.block .compare-accounts-cards{
   align-items:stretch;
   display:flex;
   gap:0;
+}
+
+.section.compare-accounts .compare-accounts.block .compare-accounts-cards:has(.active) .product-title, .section.compare-accounts .compare-accounts.block .compare-accounts-cards:has(.active) .product-description, .section.compare-accounts .compare-accounts.block .compare-accounts-cards:has(.active) .product-interest-pretitle, .section.compare-accounts .compare-accounts.block .compare-accounts-cards:has(.active) p{
+  padding-left:24px;
+}
+
+.section.compare-accounts .compare-accounts.block .compare-accounts-cards:has(.active) .product-title{
+  padding-top:32px;
 }
 
 .section.compare-accounts .compare-accounts.block .compare-accounts-cards .compare-accounts-card{
@@ -95,8 +99,9 @@
   display:flex;
   flex:1;
   flex-direction:column;
+  max-width:304px;
   min-height:100%;
-  min-width:304px;
+  width:100%;
 }
 
 .section.compare-accounts .compare-accounts.block .compare-accounts-cards .compare-accounts-card.active{
@@ -141,7 +146,7 @@
   font-weight:var(--font-weight-h3);
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
-  padding:32px 24px 8px;
+  padding:0 24px 8px 0;
   text-transform:var(--heading3-case);
 }
 
@@ -152,7 +157,7 @@
   font-weight:var(--font-weight-body);
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
-  padding:16px 24px 0;
+  padding:16px 24px 0 0;
   text-transform:var(--body-case);
 }
 
@@ -163,7 +168,7 @@
   font-weight:var(--font-weight-disc);
   letter-spacing:var(--font-letter-spacing-disc);
   line-height:var(--font-height-disclaimer);
-  padding:16px 24px 0;
+  padding:16px 24px 0 0;
   text-transform:var(--disclaimer-case);
 }
 
@@ -198,7 +203,7 @@
   font-weight:var(--font-weight-disc);
   letter-spacing:var(--font-letter-spacing-disc);
   line-height:var(--font-height-disclaimer);
-  padding:16px 24px 0;
+  padding:16px 24px 0 0;
   text-transform:var(--disclaimer-case);
 }
 
@@ -234,8 +239,16 @@
 }
 
 @media screen and (max-width: 1023px){
+  .section.compare-accounts .compare-accounts.block{
+    overflow-x:auto;
+  }
+
   .section.compare-accounts .compare-accounts.block .compare-accounts-cards{
     flex-direction:row;
+  }
+
+  .section.compare-accounts .compare-accounts.block .compare-accounts-cards .compare-accounts-card{
+    min-width:304px;
   }
 }
 
