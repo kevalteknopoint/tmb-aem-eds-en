@@ -134,7 +134,7 @@ export default async function decorate(block) {
 
           const titleButton = button({ class: 'result-action-button', value: itemName }, 'Copy Title');
           const pathButton = button({ class: 'result-action-button', value: itemPath }, 'Copy Path');
-          const authorButton = a({ class: 'result-action-button', target: '_blank', href: `/ui#/@tmbank/aem/universal-editor/canvas/${window.location.origin?.replace('https://', '')}${itemPath}` }, 'Open in Author');
+          const authorButton = a({ class: 'result-action-button', target: '_blank', href: `/ui#/@tmbank/aem/universal-editor/canvas/${window.location.origin?.replace('https://', '')}${itemPath}.html` }, 'Author Page');
 
           injectIcon('document-note-paper-multiple', titleButton, 'afterbegin');
           injectIcon('document-note-paper-multiple', pathButton, 'afterbegin');
