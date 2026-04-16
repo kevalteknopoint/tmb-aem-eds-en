@@ -1,5 +1,5 @@
-import { getMetadata } from "../../scripts/aem.js";
-import { button, div, form, input, label, ul, li, span } from "../../scripts/dom-helpers.js";
+import { getMetadata, injectIcon } from "../../scripts/aem.js";
+import { button, div, form, input, label, ul, li, span, a } from "../../scripts/dom-helpers.js";
 import { fetchPlaceholders } from "../../scripts/placeholders.js";
 
 function showToast(message, timeout = 3000) {
@@ -126,7 +126,44 @@ export default async function decorate(block) {
     try {
       const apiData = await fetch(queryApiUrl);
       const jsonData = await apiData.json();
-      console.log('Query Data: ', jsonData);
+
+      if (jsonData && jsonData.success && jsonData.results > 0) {
+        jsonData.hits.forEach((item) => {
+          const itemName = item.title;
+          const itemPath = item.path;
+
+          const titleButton = button({ class: 'result-action-button', value: itemName }, 'Copy Title');
+          const pathButton = button({ class: 'result-action-button', value: itemPath }, 'Copy Path');
+          const authorButton = a({ class: 'result-action-button', target: '_blank', href: `/ui#/@tmbank/aem/universal-editor/canvas/${window.location.origin?.replace('https://', '')}${itemPath}` }, 'Open in Author');
+
+          injectIcon('document-note-paper-multiple', titleButton, 'afterbegin');
+          injectIcon('document-note-paper-multiple', pathButton, 'afterbegin');
+          injectIcon('arrow-web-external-link', authorButton, 'afterbegin');
+
+          const copyButtonValue = (clickEvent) => {
+            clickEvent.preventDefault();
+            navigator.clipboard.writeText(clickEvent.target.value);
+            showToast('Copied to clipboard!');
+          };
+
+          titleButton.addEventListener('click', copyButtonValue);
+          pathButton.addEventListener('click', copyButtonValue);
+
+          const resultItem = div({ class: 'query-result-item' },
+            div({ class: 'result-title-wrap' },
+              span({ class: 'result-title' }, itemName),
+              span({ class: 'result-path' }, itemPath),
+            ),
+            div({ class: 'result-actions-wrap' },
+              titleButton,
+              pathButton,
+              authorButton
+            )
+          );
+
+          resultsWrapper.appendChild(resultItem);
+        });
+      }
     } catch (error) {
       console.log('Failed to fetch query builder data: ', error);
     }

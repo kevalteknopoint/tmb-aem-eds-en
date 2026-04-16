@@ -95,3 +95,51 @@
   border-radius: 10px;
   border: 2px solid #ffffff;
 }
+
+.query-result-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+
+  &:not(:last-child) {
+    padding-bottom: 16px;
+    border-bottom: 1px solid $line-default;
+    margin-bottom: 16px;
+  }
+
+  .result-title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .result-title {
+      @include typo-heading3;
+
+      color: $heading-default;
+    }
+
+    .result-path {
+      @include typo-body;
+
+      color: $body-default;
+    }
+  }
+
+  .result-actions-wrap {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    align-items: center;
+    min-width: max-content;
+
+    .result-action-button {
+      @include button('outlined');
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  
+}
