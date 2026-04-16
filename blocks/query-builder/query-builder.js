@@ -136,6 +136,8 @@ export default async function decorate(block) {
       if (jsonData && jsonData.success && jsonData.results > 0) {
         resultsWrapper.innerHTML = '';
         jsonData.hits.forEach((item) => {
+          if (item.path.includes('/placeholders')) return;
+
           const itemName = item.title;
           const itemPath = item.path;
 
