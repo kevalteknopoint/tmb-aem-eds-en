@@ -16,12 +16,19 @@
     h2,
     h3,
     h4,
-    h5,
-    h6 {
+    h5 {
       @include typo-heading1;
 
       text-align: center;
       color: $heading-default;
+    }
+
+    h6 {
+      @include typo-sm-body;
+      text-align: center;
+      color: $heading-default;
+      margin-bottom: 24px;
+
     }
 
     p {
@@ -191,15 +198,20 @@
         }
 
         .cards-card-body {
+
           h1,
           h2,
           h3,
           h4,
-          h5,
-          h6 {
+          h5 {
             margin-bottom: 16px;
 
             @include typo-heading3;
+          }
+
+          h6 {
+            @include typo-sm-body;
+            margin-bottom: 16px;
           }
 
           p:not(p:has(.icon)) {
@@ -219,6 +231,7 @@
 
   &.faq-cant-find-looking-for-variant {
     .default-content-wrapper {
+
       h1,
       h2,
       h3,
@@ -331,18 +344,24 @@
     .default-content-wrapper {
       margin-inline: 0;
 
-      h1, h2, h3, h4, h5, h6, p {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
         text-align: left;
       }
     }
 
     .cards-wrapper .cards ul {
       grid-template-columns: 1fr 1fr 1fr;
-      
+
       @include tablet {
         grid-template-columns: 1fr;
       }
-      
+
       @include mobile {
         grid-template-columns: 1fr;
       }
@@ -363,6 +382,7 @@
 .section.faq-cant-find-looking-for.variation-border {
   &.background-color-teal {
     .default-content-wrapper {
+
       h1,
       h2,
       h3,
@@ -380,6 +400,7 @@
             background-color: $bg-reverse;
 
             .cards-card-body {
+
               h1,
               h2,
               h3,
@@ -411,6 +432,7 @@
   }
 
   .default-content-wrapper {
+
     h1,
     h2,
     h3,
@@ -438,6 +460,7 @@
           }
 
           .cards-card-body {
+
             h1,
             h2,
             h3,
@@ -466,6 +489,7 @@
 .section.faq-cant-find-looking-for.variation-non-border {
   &.background-color-teal {
     .default-content-wrapper {
+
       h1,
       h2,
       h3,
@@ -509,6 +533,7 @@
   }
 
   .default-content-wrapper {
+
     h1,
     h2,
     h3,
@@ -536,6 +561,7 @@
           }
 
           .cards-card-body {
+
             h1,
             h2,
             h3,
@@ -563,6 +589,7 @@
 
 .section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant.white-non-border {
   .default-content-wrapper {
+
     h1,
     h2,
     h3,

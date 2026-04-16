@@ -6,7 +6,7 @@
 .momentum-image-saver .columns.block > div .button-container a.secondary,
 .image-swapping .columns.block > div .button-container a.secondary,
 .momentum-app-badges .columns.block > div .button-container a.secondary,
-.momentum-direct-variant .columns.block > div .button-container a.secondary, .momentum-image-saver.background-color-teal .columns.block > div .button-container a:not(.secondary), .momentum-image-saver.background-color-teal .columns.block > div .button-container a.secondary, .momentum-saver-section.circular-image.background-color-teal .columns.block > div .button-container a:not(.secondary), .momentum-saver-section.circular-image.background-color-teal .columns.block > div .button-container a.secondary, .momentum-corporate-variation .columns.block > div .button-container a:not(.secondary), .momentum-corporate-variation .columns.block > div .button-container a.secondary{
+.momentum-direct-variant .columns.block > div .button-container a.secondary, .momentum-image-saver.background-color-teal .columns.block > div .button-container a:not(.secondary), .momentum-image-saver.background-color-teal .columns.block > div .button-container a.secondary, .momentum-saver-section.circular-image.background-color-teal .columns.block > div .button-container a:not(.secondary), .momentum-saver-section.circular-image.background-color-teal .columns.block > div .button-container a.secondary, .momentum-corporate-variation .columns.block > div .button-container a:not(.secondary), .momentum-corporate-variation .columns.block > div .button-container a.secondary, .momentum-corporate-variation-without-bg .columns.block > div .button-container a:not(.secondary), .momentum-corporate-variation-without-bg .columns.block > div .button-container a.secondary{
   align-items:center;
   border:none;
   border-radius:var(--radius-button);
@@ -853,17 +853,25 @@
 .momentum-corporate-variation .columns.block .columns-img-col{
   border-right:1px solid #fff;
   padding:2px 71px 2px 29px;
+  width:-moz-fit-content;
+  width:fit-content;
 }
 
 .momentum-corporate-variation .columns.block > div{
   gap:64px;
 }
 
-.momentum-corporate-variation .columns.block > div h1, .momentum-corporate-variation .columns.block > div h2, .momentum-corporate-variation .columns.block > div h3, .momentum-corporate-variation .columns.block > div h4, .momentum-corporate-variation .columns.block > div h5, .momentum-corporate-variation .columns.block > div h6{
+.momentum-corporate-variation .columns.block > div h1,
+.momentum-corporate-variation .columns.block > div h2,
+.momentum-corporate-variation .columns.block > div h3,
+.momentum-corporate-variation .columns.block > div h4,
+.momentum-corporate-variation .columns.block > div h5,
+.momentum-corporate-variation .columns.block > div h6{
   color:var(--heading-reverse);
 }
 
-.momentum-corporate-variation .columns.block > div p, .momentum-corporate-variation .columns.block > div ul{
+.momentum-corporate-variation .columns.block > div p,
+.momentum-corporate-variation .columns.block > div ul{
   color:var(--body-reverse);
 }
 
@@ -929,6 +937,90 @@
 }
 
 .momentum-corporate-variation .columns.block > div .button-container a.secondary svg{
+  height:12px;
+  width:12px;
+}
+
+.momentum-corporate-variation-without-bg .columns.block > div{
+  gap:64px;
+}
+
+.momentum-corporate-variation-without-bg .columns.block > div h1,
+.momentum-corporate-variation-without-bg .columns.block > div h2,
+.momentum-corporate-variation-without-bg .columns.block > div h3,
+.momentum-corporate-variation-without-bg .columns.block > div h4,
+.momentum-corporate-variation-without-bg .columns.block > div h5,
+.momentum-corporate-variation-without-bg .columns.block > div h6{
+  color:var(--heading-default);
+}
+
+.momentum-corporate-variation-without-bg .columns.block > div p,
+.momentum-corporate-variation-without-bg .columns.block > div ul{
+  color:var(--body-default);
+}
+
+.momentum-corporate-variation-without-bg .columns.block > div .button-container a:not(.secondary){
+  background-color:var(--color-button-secondary-default);
+  border:none;
+  color:var(--color-button-text-stroke-default);
+  font-size:var(--font-size-h5);
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:8px;
+}
+
+.momentum-corporate-variation-without-bg .columns.block > div .button-container a:not(.secondary):hover{
+  background-color:var(--color-button-secondary-hover);
+  border:none;
+  color:var(--color-button-text-stroke-hover);
+}
+
+.momentum-corporate-variation-without-bg .columns.block > div .button-container a:not(.secondary):active{
+  background-color:var(--color-button-secondary-press);
+  border:none;
+  color:var(--color-button-text-stroke-press);
+}
+
+.momentum-corporate-variation-without-bg .columns.block > div .button-container a:not(.secondary):focus-visible{
+  box-shadow:0 0 0 1px var(--color-focus-reversed), 0 0 0 3px var(--color-focus-default);
+  outline:none;
+}
+
+.momentum-corporate-variation-without-bg .columns.block > div .button-container a:not(.secondary) svg{
+  height:12px;
+  width:12px;
+}
+
+.momentum-corporate-variation-without-bg .columns.block > div .button-container a.secondary{
+  background-color:var(--color-button-outlined-reverse-default);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+  font-size:var(--font-size-h5);
+  font-style:normal;
+  line-height:var(--font-height-h5);
+  min-width:150px;
+  padding-block:6px;
+  text-decoration:unset;
+}
+
+.momentum-corporate-variation-without-bg .columns.block > div .button-container a.secondary:hover{
+  background-color:var(--color-button-outlined-reverse-hover);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.momentum-corporate-variation-without-bg .columns.block > div .button-container a.secondary:active{
+  background-color:var(--color-button-outlined-reverse-press);
+  border:var(--stroke-button) solid var(--color-button-text-stroke-reverse);
+  color:var(--color-button-text-stroke-reverse);
+}
+
+.momentum-corporate-variation-without-bg .columns.block > div .button-container a.secondary:focus-visible{
+  box-shadow:0 0 0 2px var(--color-focus-default), 0 0 0 3px var(--color-focus-reversed);
+  outline:none;
+}
+
+.momentum-corporate-variation-without-bg .columns.block > div .button-container a.secondary svg{
   height:12px;
   width:12px;
 }
@@ -1135,13 +1227,19 @@
     width:175px;
   }
 
-  .momentum-corporate-variation .columns.block .columns-img-col picture, .momentum-corporate-variation .columns.block .columns-img-col img{
+  .momentum-corporate-variation .columns.block .columns-img-col picture,
+  .momentum-corporate-variation .columns.block .columns-img-col img{
     height:175px;
     margin:0 auto;
-    width:auto;
+    width:-moz-fit-content;
+    width:fit-content;
   }
 
   .momentum-corporate-variation .columns.block > div{
+    gap:24px;
+  }
+
+  .momentum-corporate-variation-without-bg .columns.block > div{
     gap:24px;
   }
 
@@ -1236,6 +1334,10 @@
   }
 
   .momentum-corporate-variation .columns.block > div{
+    gap:16px;
+  }
+
+  .momentum-corporate-variation-without-bg .columns.block > div{
     gap:16px;
   }
 

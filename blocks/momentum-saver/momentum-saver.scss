@@ -223,6 +223,7 @@
 .momentum-image-saver {
   &.background-color-teal {
     .columns.block>div {
+
       h1,
       h2,
       h3,
@@ -453,8 +454,8 @@
   }
 }
 
-.spacing-40-px.image-swapping{
-  .columns.block > div h3{
+.spacing-40-px.image-swapping {
+  .columns.block>div h3 {
     margin-top: 40px;
   }
 }
@@ -555,17 +556,20 @@
     .columns-img-col {
       padding: 2px 71px 2px 29px;
       border-right: 1px solid #fff;
-      
+      width: fit-content;
+
       @include tablet {
         border-right: 0;
         padding: 0;
         width: 175px;
         height: 175px;
 
-        picture, img {
+        picture,
+        img {
           height: 175px;
-          width: auto;
+          // width: auto;
           margin: 0 auto;
+          width: fit-content;
         }
       }
     }
@@ -581,11 +585,17 @@
         gap: 16px;
       }
 
-      h1, h2, h3, h4, h5, h6 {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         color: $heading-reverse;
       }
 
-      p, ul {
+      p,
+      ul {
         color: $body-reverse;
       }
 
@@ -605,6 +615,50 @@
   }
 }
 
+.momentum-corporate-variation-without-bg {
+  .columns.block {
+    &>div {
+      gap: 64px;
+
+      @include tablet {
+        gap: 24px;
+      }
+
+      @include mobile {
+        gap: 16px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: $heading-default;
+      }
+
+      p,
+      ul {
+        color: $body-default;
+      }
+
+      .button-container {
+        a:not(.secondary) {
+          @include button('secondary');
+        }
+
+        a.secondary {
+          @include button('outlined-reverse');
+
+          font-style: normal;
+          text-decoration: unset;
+        }
+      }
+    }
+  }
+
+}
+
 .momentum-impact {
   // -------  BRAND OVERRIDE: tmbl (Specific Layout & style) -------- //
   // -------  Identified via brand class added to the container during decoration ------- //
@@ -614,55 +668,65 @@
       .columns.block {
         &>div {
           border-left: $space-4xs solid $color-variants-burst-default;
+
           div {
             &:first-child {
               padding-left: $space-lg;
             }
+
             &:last-child {
               border-left: 0;
               margin-left: 0;
               padding-left: 0;
             }
           }
+
           @include tablet {
             div {
               &:first-child {
                 padding-left: $space-md;
               }
-                
+
             }
           }
-         @include mobile {
-          gap: $space-sm;
-          flex-direction: column;
-          border-left: 0;
-          div {
-            &:first-child {
-              padding-left: 0;
-            }
-            &:last-child {
-              padding-left: 0;
-              border: 0;
-              > p:first-child {
-                picture > img {
-                  border-radius: $radius-card;
-                  aspect-ratio: 16/12;
-                  object-fit: cover;
+
+          @include mobile {
+            gap: $space-sm;
+            flex-direction: column;
+            border-left: 0;
+
+            div {
+              &:first-child {
+                padding-left: 0;
+              }
+
+              &:last-child {
+                padding-left: 0;
+                border: 0;
+
+                >p:first-child {
+                  picture>img {
+                    border-radius: $radius-card;
+                    aspect-ratio: 16/12;
+                    object-fit: cover;
+                  }
+                }
+
+                >p:last-child {
+                  width: 100%;
+                }
+
+                p {
+                  margin: 0;
                 }
               }
-              > p:last-child {
-                width: 100%;
-              }
-              p {
-                margin: 0;
-              }
-            }       
+            }
           }
         }
       }
     }
-    }
   }
+
   .momentum-section-wrapper {
     .columns.block {
       position: relative;
@@ -674,7 +738,7 @@
           width: 50%;
 
           &:first-child {
-            > *:last-child {
+            >*:last-child {
               margin-bottom: 0;
             }
           }
@@ -687,15 +751,15 @@
             align-items: center;
             gap: $space-sm;
 
-            > p:first-child{
+            >p:first-child {
               width: 33%;
 
-              picture > img {
+              picture>img {
                 border-radius: $radius-card;
               }
             }
 
-            > p:last-child {
+            >p:last-child {
               width: 66%;
             }
 
@@ -704,9 +768,9 @@
             }
           }
 
-            @include mobile {
-              width: 100%;
-            } 
+          @include mobile {
+            width: 100%;
+          }
         }
 
         @include tablet {
@@ -719,26 +783,26 @@
               flex-direction: column;
               gap: $space-sm;
 
-              > p:first-child {
+              >p:first-child {
                 width: 100%;
 
-                picture > img {
+                picture>img {
                   border-radius: $radius-card;
                 }
               }
 
-              > p:last-child {
+              >p:last-child {
                 width: 100%;
               }
 
               p {
                 margin: 0;
               }
-            }       
+            }
           }
         }
 
-         @include mobile {
+        @include mobile {
           gap: $space-sm;
           flex-direction: column;
 
@@ -747,8 +811,8 @@
               padding-left: 0;
               border: 0;
 
-              > p:first-child {
-                picture > img {
+              >p:first-child {
+                picture>img {
                   border-radius: $radius-card;
                   aspect-ratio: 16/12;
                   object-fit: cover;
@@ -756,14 +820,14 @@
                 }
               }
 
-              > p:last-child {
+              >p:last-child {
                 width: 100%;
               }
 
               p {
                 margin: 0;
               }
-            }       
+            }
           }
         }
       }
@@ -774,48 +838,53 @@
 // Override style for TMBL member profile
 .member-profile {
   .momentum-section-wrapper {
-      .columns.block {
-          > div {
-            align-items: start;
+    .columns.block {
+      >div {
+        align-items: start;
 
-            @include tablet {
-              flex-direction: row;
-            }
+        @include tablet {
+          flex-direction: row;
+        }
 
-            @include mobile {
-              flex-direction: column;
-            }
+        @include mobile {
+          flex-direction: column;
+        }
 
-            > div {
-              h2 {
-                margin-bottom: $space-4xs;
-              }
-              h4 {
-                font-size: $font-size-body;
-                margin-bottom: $space-xs;
-              }
-              > *:last-child {
-                margin-bottom: 0;
-              }
-            }
-          }
-         .columns-img-col {
-          width: 25%;
-
-          @include tablet {
-            width: 33%;
+        >div {
+          h2 {
+            margin-bottom: $space-4xs;
           }
 
-          @include mobile {
-            width: 100%;
+          h4 {
+            font-size: $font-size-body;
+            margin-bottom: $space-xs;
           }
-         }
+
+          >*:last-child {
+            margin-bottom: 0;
+          }
+        }
       }
+
+      .columns-img-col {
+        width: 25%;
+
+        @include tablet {
+          width: 33%;
+        }
+
+        @include mobile {
+          width: 100%;
+        }
+      }
+    }
   }
+
   &.top-padding {
     padding-top: $gap-container-y;
   }
-   &.bottom-padding {
+
+  &.bottom-padding {
     padding-bottom: $gap-container-y;
   }
 }
