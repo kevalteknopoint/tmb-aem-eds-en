@@ -150,6 +150,9 @@
     ]
   },
   {
+    "id": "query-builder"
+  },
+  {
     "id": "stepper",
     "components": [
       "stepper-item"
