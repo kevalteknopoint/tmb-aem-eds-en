@@ -1,3 +1,4 @@
+import { getMetadata } from "../../scripts/aem.js";
 import { button, div, form, input, label, ul, li, span } from "../../scripts/dom-helpers.js";
 import { fetchPlaceholders } from "../../scripts/placeholders.js";
 
@@ -18,12 +19,18 @@ function showToast(message, timeout = 3000) {
 }
 
 export default async function decorate(block) {
-  let authorDomain = block.children[0]?.textContent?.trim();
-  const filterPath = block.children[1]?.textContent?.trim() || '/content/tmb';
+  const filterPath = block.children[0]?.textContent?.trim() || '/content/tmb';
 
-  if (!authorDomain) return;
+  if (!window.location.origin.includes('author')) return;
 
-  authorDomain = authorDomain?.endsWith('/') ? authorDomain?.replace(/\/$/, '') : authorDomain;
+  (function loadStyles() {
+    // Resolve values
+    const theme = getMetadata("theme") || 'tmb';
+    const stylesheet = `/styles/${theme}/styles.css`;
+
+    // Inject tags directly into the document stream
+    document.head.insertAdjacentHTML('beforeend', `<link rel="stylesheet" href="${stylesheet}">`);
+  }());
 
   const placeholders = await fetchPlaceholders();
   const allPlaceholders = Object.keys(placeholders);
@@ -114,7 +121,7 @@ export default async function decorate(block) {
     }
 
     const encodedFilterPath = encodeURIComponent(filterPath);
-    const queryApiUrl = `${authorDomain}/bin/querybuilder.json?fulltext=${searchVal}&p.limit=-1&path=${encodedFilterPath}&type=cq%3aPage`;
+    const queryApiUrl = `/bin/querybuilder.json?fulltext=${searchVal}&p.limit=-1&path=${encodedFilterPath}&type=cq%3aPage`;
 
     try {
       const apiData = await fetch(queryApiUrl);

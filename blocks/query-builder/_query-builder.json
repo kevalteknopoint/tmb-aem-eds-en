@@ -22,13 +22,6 @@
       "id": "query-builder",
       "fields": [
         {
-          "component": "text",
-          "name": "author-domain",
-          "label": "Author Domain",
-          "valueType": "string",
-          "value": "https://author-p162853-e1744823.adobeaemcloud.com/"
-        },
-        {
           "component": "aem-content",
           "name": "path-filter",
           "label": "Path Filter",
