@@ -5,7 +5,8 @@
   position: relative;
   display: flex;
   gap: 8px;
-  max-width: 500px; /* Adjust as needed */
+  max-width: 500px;
+  /* Adjust as needed */
   margin-bottom: 24px;
 }
 
@@ -22,7 +23,8 @@
 }
 
 .query-search-inp:focus {
-  border-color: #3b82f6; /* Modern blue focus */
+  border-color: #3b82f6;
+  /* Modern blue focus */
   box-shadow: 0 0 0 3px rgb(59 130 246 / 2%);
 }
 
@@ -35,12 +37,15 @@
 
 /* Dropdown Container */
 .query-suggestions-list {
-  display: none; /* Hidden by default via JS class */
+  display: none;
+  /* Hidden by default via JS class */
   position: absolute;
-  top: calc(100% + 8px); /* Float just below the input */
+  top: calc(100% + 8px);
+  /* Float just below the input */
   left: 0;
   width: 100%;
-  max-width: calc(100% - 100px); /* Adjust to match input width, leaving space for button */
+  max-width: calc(100% - 100px);
+  /* Adjust to match input width, leaving space for button */
   background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
@@ -141,5 +146,39 @@
       }
     }
   }
-  
+}
+
+.loader {
+  display: block;
+  margin: 0 auto;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-top: 4px solid $burst-default;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-bottom: 4px solid $burst-accent;
+  border-left: 4px solid transparent;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

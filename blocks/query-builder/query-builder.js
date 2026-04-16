@@ -1,5 +1,5 @@
 import { getMetadata, injectIcon } from "../../scripts/aem.js";
-import { button, div, form, input, label, ul, li, span, a } from "../../scripts/dom-helpers.js";
+import { button, div, form, input, label, ul, li, span, a, h2 } from "../../scripts/dom-helpers.js";
 import { fetchPlaceholders } from "../../scripts/placeholders.js";
 
 function showToast(message, timeout = 3000) {
@@ -122,12 +122,19 @@ export default async function decorate(block) {
 
     const encodedFilterPath = encodeURIComponent(filterPath);
     const queryApiUrl = `/bin/querybuilder.json?fulltext=${searchVal}&p.limit=-1&path=${encodedFilterPath}&type=cq%3aPage`;
+    const noResultsFound = h2({ class: 'no-data-text-query' }, 'No Results Found!');
+    const errorFound = h2({ class: 'no-data-text-query' }, 'Something Went Wrong!');
+    const loader = span({ class: 'loader' });
+
+    resultsWrapper.innerHTML = '';
+    resultsWrapper.appendChild(loader);
 
     try {
       const apiData = await fetch(queryApiUrl);
       const jsonData = await apiData.json();
 
       if (jsonData && jsonData.success && jsonData.results > 0) {
+        resultsWrapper.innerHTML = '';
         jsonData.hits.forEach((item) => {
           const itemName = item.title;
           const itemPath = item.path;
@@ -163,8 +170,12 @@ export default async function decorate(block) {
 
           resultsWrapper.appendChild(resultItem);
         });
+      } else {
+        resultsWrapper.appendChild(noResultsFound);
       }
     } catch (error) {
+      resultsWrapper.innerHTML = '';
+      resultsWrapper.appendChild(errorFound);
       console.log('Failed to fetch query builder data: ', error);
     }
   });
