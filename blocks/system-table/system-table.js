@@ -1,8 +1,12 @@
 (function decorateLegalTcGuide() {
   if (window.location.origin.includes("author")) return;
-  const block = document.querySelector(".system-table");
 
+  const block = document.querySelector(".system-table");
   if (!block) return;
+
+  if (block.dataset.initialized) return;
+  block.dataset.initialized = 'true';
+
   if (block) {
     const statusItems = document.querySelectorAll(".system-table li li");
 

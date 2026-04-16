@@ -5,6 +5,9 @@
   const block = document.querySelector('.lenders-mortgage-insurance-check');
   if (!block) return;
 
+  if (block.dataset.initialized) return;
+  block.dataset.initialized = 'true';
+
   // 2. Select all paragraphs within the block
   const paragraphs = block.querySelectorAll("p");
 

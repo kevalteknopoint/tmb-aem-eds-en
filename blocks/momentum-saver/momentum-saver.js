@@ -8,6 +8,9 @@ import './momentum-saver-analytics.js';
   const momentumSaverSections = document.querySelectorAll('.momentum-saver-section, .momentum-image-saver, .image-swapping, .momentum-app-badges, .momentum-direct-variant, .circular-image, .variant-404, .momentum-corporate-variation');
 
   momentumSaverSections.forEach((section) => {
+    if (section.dataset.initialized) return;
+    section.dataset.initialized = 'true';
+
     const newWrapper = div({ class: 'momentum-section-wrapper' });
 
     if (section.classList.contains('momentum-corporate-variation') && section.classList.contains('section-with-bg')) {

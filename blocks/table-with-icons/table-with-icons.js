@@ -4,6 +4,9 @@ import { div } from "../../scripts/dom-helpers.js";
   const allBlocks = document.querySelectorAll('.table-with-icons');
 
   allBlocks.forEach((block) => {
+    if (block.dataset.initialized) return;
+    block.dataset.initialized = 'true';
+
     block.querySelectorAll(':scope > ul, .default-content-wrapper > ul').forEach((outerUl) => {
       const outerLis = [...outerUl.querySelectorAll(':scope > li')];
       if (!outerLis.length) return;

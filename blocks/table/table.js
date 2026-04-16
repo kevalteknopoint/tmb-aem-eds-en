@@ -1,6 +1,9 @@
 (function decorateTable() {
   const sections = document.querySelectorAll(".interest-table-section");
   sections.forEach((section) => {
+    if (section.dataset.initialized) return;
+    section.dataset.initialized = 'true';
+
     const headingContainers = section.querySelectorAll(
       ".default-content-wrapper"
     );

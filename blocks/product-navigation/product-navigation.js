@@ -18,6 +18,10 @@ function isElementInView(container, element, percentVisible = 1) {
 
 (function decorateProductNavigation() {
   const productNav = document.querySelector(".product-navigation");
+
+  if (productNav.dataset.initialized) return;
+  productNav.dataset.initialized = 'true';
+
   const scrollWrapper = productNav?.querySelector(".default-content-wrapper");
   const scrollContainer = productNav?.querySelector(".default-content-wrapper ul");
 

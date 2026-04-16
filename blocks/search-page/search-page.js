@@ -140,6 +140,10 @@ function renderSearchUI(container, searchVal, allResults, currentPage, onPageCha
   if (window.location.origin.includes('author')) return;
 
   const searchPageSection = document.querySelector('.search-results-page');
+
+  if (searchPageSection.dataset.initialized) return;
+  searchPageSection.dataset.initialized = 'true';
+
   const searchResultsContainer = div({ class: 'search-page-results-container', id: 'searchPageResults' });
 
   let currentFilteredData = [];

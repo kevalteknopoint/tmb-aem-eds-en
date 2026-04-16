@@ -94,6 +94,7 @@
 }
 
 .section.tab-content-container .tab-content.block .tab-body-wrap{
+  align-items:flex-start;
   display:flex;
   gap:64px;
   justify-content:space-between;

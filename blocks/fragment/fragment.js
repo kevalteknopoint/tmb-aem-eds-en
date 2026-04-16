@@ -63,7 +63,7 @@ export default async function decorate(block) {
       loadPlaceholders(block);
       loadDmImages(block);
       try {
-        loadNonBlockLibs();
+        loadNonBlockLibs(block, true);
       } catch (e) {
         // do nothing
       }

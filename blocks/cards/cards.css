@@ -577,8 +577,7 @@
 .section.faq-cant-find-looking-for .default-content-wrapper h2,
 .section.faq-cant-find-looking-for .default-content-wrapper h3,
 .section.faq-cant-find-looking-for .default-content-wrapper h4,
-.section.faq-cant-find-looking-for .default-content-wrapper h5,
-.section.faq-cant-find-looking-for .default-content-wrapper h6{
+.section.faq-cant-find-looking-for .default-content-wrapper h5{
   color:var(--heading-default);
   font-family:var(--font-family-h1);
   font-size:var(--font-size-h1);
@@ -587,6 +586,18 @@
   line-height:var(--font-height-h1);
   text-align:center;
   text-transform:var(--heading1-case);
+}
+
+.section.faq-cant-find-looking-for .default-content-wrapper h6{
+  color:var(--heading-default);
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-weight:var(--font-weight-sm-body);
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
+  margin-bottom:24px;
+  text-align:center;
+  text-transform:var(--sm-body-case);
 }
 
 .section.faq-cant-find-looking-for .default-content-wrapper p{
@@ -821,8 +832,7 @@
 .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-body h2,
 .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-body h3,
 .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-body h4,
-.section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-body h5,
-.section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-body h6{
+.section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-body h5{
   font-family:var(--font-family-h3);
   font-size:var(--font-size-h3);
   font-weight:var(--font-weight-h3);
@@ -830,6 +840,16 @@
   line-height:var(--font-height-h3);
   margin-bottom:16px;
   text-transform:var(--heading3-case);
+}
+
+.section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-body h6{
+  font-family:var(--font-family-sm-body);
+  font-size:var(--font-size-sm-body);
+  font-weight:var(--font-weight-sm-body);
+  letter-spacing:var(--font-letter-spacing-sm-body);
+  line-height:var(--font-height-sm-body);
+  margin-bottom:16px;
+  text-transform:var(--sm-body-case);
 }
 
 .section.faq-cant-find-looking-for.rates-saver .cards-wrapper .cards ul li .cards-card-body p:not(p:has(.icon)){
@@ -887,7 +907,13 @@
   margin-inline:0;
 }
 
-.section.faq-cant-find-looking-for.left-aligned .default-content-wrapper h1, .section.faq-cant-find-looking-for.left-aligned .default-content-wrapper h2, .section.faq-cant-find-looking-for.left-aligned .default-content-wrapper h3, .section.faq-cant-find-looking-for.left-aligned .default-content-wrapper h4, .section.faq-cant-find-looking-for.left-aligned .default-content-wrapper h5, .section.faq-cant-find-looking-for.left-aligned .default-content-wrapper h6, .section.faq-cant-find-looking-for.left-aligned .default-content-wrapper p{
+.section.faq-cant-find-looking-for.left-aligned .default-content-wrapper h1,
+.section.faq-cant-find-looking-for.left-aligned .default-content-wrapper h2,
+.section.faq-cant-find-looking-for.left-aligned .default-content-wrapper h3,
+.section.faq-cant-find-looking-for.left-aligned .default-content-wrapper h4,
+.section.faq-cant-find-looking-for.left-aligned .default-content-wrapper h5,
+.section.faq-cant-find-looking-for.left-aligned .default-content-wrapper h6,
+.section.faq-cant-find-looking-for.left-aligned .default-content-wrapper p{
   text-align:left;
 }
 
