@@ -1951,6 +1951,18 @@
     ]
   },
   {
+    "id": "query-builder",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "path-filter",
+        "label": "Path Filter",
+        "description": "The Path Filter decides where the search looks on the website. If a path is provided, it will search only within that page and its sub-pages. If left as the default, it searches the entire website.",
+        "value": "/content/tmb"
+      }
+    ]
+  },
+  {
     "id": "quick-links",
     "fields": [
       {
