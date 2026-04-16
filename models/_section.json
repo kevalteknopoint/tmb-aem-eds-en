@@ -511,7 +511,8 @@
         "evergreen-left-menu",
         "card-with-quote",
         "tmb-calculator-accordion",
-        "tab-content"
+        "tab-content",
+        "query-builder"
       ]
     }
   ]
