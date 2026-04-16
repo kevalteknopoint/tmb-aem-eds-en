@@ -643,12 +643,12 @@
       }
 
       .button-container {
-        a:not(.secondary) {
-          @include button('secondary');
+        a.primary {
+          @include button('primary');
         }
 
         a.secondary {
-          @include button('outlined-reverse');
+          @include button('outlined');
 
           font-style: normal;
           text-decoration: unset;
