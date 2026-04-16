@@ -58,11 +58,15 @@ function calculateReadingTime(wordCount) {
   const breadcrumb = document.querySelector('.section.breadcrumb-container');
   const leftMenu = document.querySelector('.evergreen-left-menu');
   const rightMenu = document.querySelector('.evergreen-right-sticky');
+
+  if (!leftMenu) return;
+
+  if (leftMenu.dataset.initialized) return;
+  leftMenu.dataset.initialized = 'true';
+
   const leftMenuUl = leftMenu.querySelector('ul') || ul();
 
   leftMenuUl.innerHTML = '';
-
-  if (!leftMenu) return;
 
   const allSections = document.querySelectorAll('main .section');
   const sectionClasses = ['mortage-insurance', 'lenders-mortgage-insurance', 'embed-iframe', 'customer-evergreen-variant', 'evergreen-image-swapping-variant', 'stepper-evergreen'];

@@ -9,6 +9,9 @@
     return;
   }
 
+  if (block.dataset.initialized) return;
+  block.dataset.initialized = 'true';
+
   const rows = [...block.children];
 
   rows.forEach((row, idx) => {

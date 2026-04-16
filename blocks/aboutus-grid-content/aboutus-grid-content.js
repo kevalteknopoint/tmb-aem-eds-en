@@ -6,7 +6,7 @@ import {
   getComponentIndex
 } from "../../scripts/analytics/exports.js";
 
-document.addEventListener('click', (e) => {
+const eventListener = (e) => {
   const link = e.target.closest('.aboutus-grid-content .button-container a');
   if (!link) return;
 
@@ -46,4 +46,7 @@ document.addEventListener('click', (e) => {
     '',
     'committee'
   );
-});
+};
+
+document.removeEventListener('click', eventListener);
+document.addEventListener('click', eventListener);

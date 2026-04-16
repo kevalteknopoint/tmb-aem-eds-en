@@ -1,10 +1,14 @@
 import { loadCSS } from "./aem.js";
 
-function blockExists(selector) {
-  return !!document.querySelector(selector);
+function blockExists(selector, scope = document) {
+  if (scope === document) {
+    return !!document.querySelector(selector);
+  }
+
+  return !!scope.querySelector(selector) || (scope.matches && scope.matches(selector));
 }
 
-export default function loadNonBlockLibs() {
+export default function loadNonBlockLibs(scope = document, isFragment = false) {
   const blocks = [
     {
       selector: '.rate-details',
@@ -29,6 +33,7 @@ export default function loadNonBlockLibs() {
     {
       selector: '.page-heading',
       name: 'page-heading',
+      noJs: true
     },
     {
       selector: '.legal-tc-guide',
@@ -37,22 +42,22 @@ export default function loadNonBlockLibs() {
     {
       selector: '.online-banking-legal',
       name: 'online-banking-legal',
+      noJs: true
     },
     {
       selector: '.faq-legal',
       name: 'faq-legal',
+      noJs: true
     },
     {
       selector: '.faq-legal-table',
       name: 'faq-legal-table',
+      noJs: true
     },
     {
       selector: '.legal-privacy',
       name: 'legal-privacy',
-    },
-    {
-      selector: '.calculator',
-      name: 'calculator',
+      noJs: true
     },
     {
       selector: '.search-results-page',
@@ -77,6 +82,7 @@ export default function loadNonBlockLibs() {
     {
       selector: '.form-banner',
       name: 'form-banner',
+      noJs: true
     },
     {
       selector: '.aboutus-grid-content',
@@ -84,9 +90,13 @@ export default function loadNonBlockLibs() {
     }
   ];
 
+  const cacheBuster = isFragment ? `?v=${Date.now()}` : '';
+
   blocks.forEach(({ selector, name, noCss, noJs }) => {
-    if (blockExists(selector)) {
-      if (!noJs) import(`../blocks/${name}/${name}.js`);
+    if (blockExists(selector, scope)) {
+      if (!noJs) {
+        import(`../blocks/${name}/${name}.js${cacheBuster}`).catch((err) => console.error(`Failed to load ${name}`, err));
+      }
       if (!noCss) loadCSS(`${window.hlx.codeBasePath}/blocks/${name}/${name}.css`);
     }
   });

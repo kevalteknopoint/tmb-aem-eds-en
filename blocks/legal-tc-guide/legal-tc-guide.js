@@ -10,6 +10,9 @@ import '../cards/cant-find-looking-for-analytics.js';
   const block = document.querySelector('.legal-tc-guide');
   if (!block) return;
 
+  if (block.dataset.initialized) return;
+  block.dataset.initialized = 'true';
+
   // 2. Find all buttons within this specific block
   const allButtons = block.querySelectorAll('.button-container a.button');
 

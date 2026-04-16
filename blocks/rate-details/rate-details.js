@@ -69,6 +69,9 @@ function createGrid(block) {
   const allRateDetailSections = document.querySelectorAll('.rate-details');
 
   allRateDetailSections.forEach((section) => {
+    if (section.dataset.initialized) return;
+    section.dataset.initialized = 'true';
+
     const contentWrappers = section.querySelectorAll('.default-content-wrapper,.accordion-item-body');
     contentWrappers.forEach((wrapper) => {
       createGrid(wrapper);
