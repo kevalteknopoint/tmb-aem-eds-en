@@ -61,6 +61,7 @@
       justify-content: space-between;
       gap: 64px;
       width: 100%;
+      align-items: flex-start;
 
       @include mobile {
         flex-direction: column-reverse;
