@@ -39,7 +39,7 @@
 
 .breadcrumb span{
   display:block;
-  margin:0 8px 0 4px;
+  margin:0 6px;
 }
 
 @media screen and (max-width: 1279px){
