@@ -1,23 +1,2510 @@
 [
   {
-    "...": "./_page.json#/models"
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:title",
+        "label": "Title"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:description",
+        "label": "Description"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "keywords",
+        "multi": true,
+        "label": "Keywords"
+      }
+    ]
   },
   {
-    "...": "./_image.json#/models"
+    "id": "image",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      }
+    ]
   },
   {
-    "...": "./_title.json#/models"
+    "id": "title",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "titleType",
+        "label": "Title Type",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          },
+          {
+            "name": "h5",
+            "value": "h5"
+          },
+          {
+            "name": "h6",
+            "value": "h6"
+          }
+        ]
+      }
+    ]
   },
   {
-    "...": "./_text.json#/models"
+    "id": "button",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "name": "linkTitle",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "linkType",
+        "label": "Type",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Primary",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
   },
   {
-    "...": "./_button.json#/models"
+    "id": "section",
+    "fields": [
+      {
+        "component": "text",
+        "name": "name",
+        "label": "Section Name",
+        "description": "The label shown for this section in the Content Tree"
+      },
+      {
+        "component": "text",
+        "name": "id",
+        "label": "Section ID",
+        "description": "Unique identifier for this section (HTML ID)",
+        "validation": {
+          "regex": "^[a-zA-Z][\\w:.-]*$"
+        }
+      },
+      {
+        "component": "reference",
+        "name": "section-bg-img",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "select",
+        "name": "section-bg-variant",
+        "label": "Background Color - Variant",
+        "valueType": "string",
+        "value": "",
+        "options": [
+          {
+            "name": "None",
+            "value": ""
+          },
+          {
+            "name": "Default",
+            "value": "bg-default"
+          },
+          {
+            "name": "Light-1",
+            "value": "bg-light-one"
+          },
+          {
+            "name": "Light-2",
+            "value": "bg-light-two"
+          },
+          {
+            "name": "Light-3",
+            "value": "bg-light-three"
+          },
+          {
+            "name": "reverse",
+            "value": "bg-reverse"
+          },
+          {
+            "name": "reverse-2",
+            "value": "bg-reverse-two"
+          },
+          {
+            "name": "accent",
+            "value": "bg-accent"
+          }
+        ]
+      },
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Box Container",
+            "value": "box-container"
+          },
+          {
+            "name": "Top Spacing",
+            "value": "top-margin"
+          },
+          {
+            "name": "Bottom Spacing",
+            "value": "bottom-margin"
+          },
+          {
+            "name": "Top Inner Spacing",
+            "value": "top-padding"
+          },
+          {
+            "name": "Bottom Inner Spacing",
+            "value": "bottom-padding"
+          },
+          {
+            "name": "Top Partition",
+            "value": "top-partition"
+          },
+          {
+            "name": "Bottom Partition",
+            "value": "bottom-partition"
+          },
+          {
+            "name": "secfirst",
+            "value": "secfirst"
+          },
+          {
+            "name": "secsecond",
+            "value": "secsecond"
+          },
+          {
+            "name": "quick-links",
+            "value": "quick-links"
+          },
+          {
+            "name": "Momentum Saver Section",
+            "value": "momentum-saver-section"
+          },
+          {
+            "name": "Momentum Image Saver",
+            "value": "momentum-image-saver"
+          },
+          {
+            "name": "Momentum Saver Product Detail Variant",
+            "value": "image-swapping"
+          },
+          {
+            "name": "Momentum Saver App Badges",
+            "value": "momentum-app-badges"
+          },
+          {
+            "name": "Momentum Checked Icon List",
+            "value": "momentum-direct-variant"
+          },
+          {
+            "name": "Left Percentage Section",
+            "value": "left-percentage-section"
+          },
+          {
+            "name": "Primary Section Background",
+            "value": "background-color-teal"
+          },
+          {
+            "name": "Secondary Section Background",
+            "value": "background-color-secondary"
+          },
+          {
+            "name": "Gradient Section Background (TMB only)",
+            "value": "background-color-gradient"
+          },
+          {
+            "name": "Bg Image Saver",
+            "value": "bg-image-saver"
+          },
+          {
+            "name": "online-banking",
+            "value": "online-banking"
+          },
+          {
+            "name": "Expandable Tiles",
+            "value": "expandable-tiles-section"
+          },
+          {
+            "name": "Highlight",
+            "value": "highlight"
+          },
+          {
+            "name": "AOS Enabled",
+            "value": "aos-enabled"
+          },
+          {
+            "name": "tmb-acc-sec",
+            "value": "tmb-acc-sec"
+          },
+          {
+            "name": "banking-container",
+            "value": "banking-container"
+          },
+          {
+            "name": "TMB Footer Logo",
+            "value": "tmb-footer"
+          },
+          {
+            "name": "TMB Footer Links",
+            "value": "tmb-footer-links"
+          },
+          {
+            "name": "TMB Footer Icon Links",
+            "value": "tmb-footer-icon-links"
+          },
+          {
+            "name": "TMB Footer Contact",
+            "value": "tmb-footer-contact"
+          },
+          {
+            "name": "TMB Footer Disclaimers",
+            "value": "tmb-sub-footer"
+          },
+          {
+            "name": "Common Style Rte",
+            "value": "common-style-rte"
+          },
+          {
+            "name": "Bottom Spacer",
+            "value": "spacer-bottom"
+          },
+          {
+            "name": "Top Spacer",
+            "value": "spacer-top"
+          },
+          {
+            "name": "Hide Section",
+            "value": "d-none"
+          },
+          {
+            "name": "faq-Looking",
+            "value": "faq-looking-for"
+          },
+          {
+            "name": "FAQ Landing Banner",
+            "value": "faq-landing-banner"
+          },
+          {
+            "name": "Faq container",
+            "value": "faq-container"
+          },
+          {
+            "name": "Faq question",
+            "value": "faq-question"
+          },
+          {
+            "name": "FAQ List",
+            "value": "faq-frequently-question"
+          },
+          {
+            "name": "FAQ Title",
+            "value": "faq-frequently-question-title"
+          },
+          {
+            "name": "FAQ Category List",
+            "value": "faq-frequently-question-list"
+          },
+          {
+            "name": "Faq-cant-find-looking-for",
+            "value": "faq-cant-find-looking-for"
+          },
+          {
+            "name": "Faq-cant-find-looking-for Variant",
+            "value": "faq-cant-find-looking-for-variant"
+          },
+          {
+            "name": "navigation-cards-container",
+            "value": "navigation-cards-container"
+          },
+          {
+            "name": "Section Wrapper",
+            "value": "section-wrapper"
+          },
+          {
+            "name": "Banking Good",
+            "value": "banking-goods"
+          },
+          {
+            "name": "Rates Saver",
+            "value": "rates-saver"
+          },
+          {
+            "name": "Rates Saver Left Aligned",
+            "value": "left-aligned"
+          },
+          {
+            "name": "Who can apply",
+            "value": "who-can-apply-section"
+          },
+          {
+            "name": "Customer",
+            "value": "customer"
+          },
+          {
+            "name": "FAQ Accordion",
+            "value": "faq-accordion"
+          },
+          {
+            "name": "Interest Table",
+            "value": "interest-table-section"
+          },
+          {
+            "name": "Product Navigation",
+            "value": "product-navigation"
+          },
+          {
+            "name": "Compare Accounts Cards",
+            "value": "compare-accounts"
+          },
+          {
+            "name": "News helpful",
+            "value": "news-helpful"
+          },
+          {
+            "name": "Overseas Variant",
+            "value": "overseas-variant"
+          },
+          {
+            "name": "Money Overseas",
+            "value": "money-overseas"
+          },
+          {
+            "name": "Money Overseas Variant",
+            "value": "money-overseas-variant"
+          },
+          {
+            "name": "News helpful homepage",
+            "value": "news-helpful-homepage"
+          },
+          {
+            "name": "Icon library",
+            "value": "icon-library"
+          },
+          {
+            "name": "looking-for-another-way",
+            "value": "looking-for-another-way"
+          },
+          {
+            "name": "Momentum Circular Image",
+            "value": "circular-image "
+          },
+          {
+            "name": "Momentum Corporate Variation",
+            "value": "momentum-corporate-variation"
+          },
+          {
+            "name": "Momentum Impact",
+            "value": "momentum-impact"
+          },
+          {
+            "name": "Variation Border",
+            "value": "variation-border"
+          },
+          {
+            "name": "Variation Non Border",
+            "value": "variation-non-border"
+          },
+          {
+            "name": "White Non Border",
+            "value": ".white-non-border"
+          },
+          {
+            "name": "Milestones",
+            "value": "milestones"
+          },
+          {
+            "name": "Rate Details",
+            "value": "rate-details"
+          },
+          {
+            "name": "Home Loan Explained",
+            "value": "home-loan-explained"
+          },
+          {
+            "name": "Table Section",
+            "value": "table-with-icons"
+          },
+          {
+            "name": "Page Heading",
+            "value": "page-heading"
+          },
+          {
+            "name": "Legal TC Guide",
+            "value": "legal-tc-guide"
+          },
+          {
+            "name": "Online Banking Legal",
+            "value": "online-banking-legal"
+          },
+          {
+            "name": "faq-legal",
+            "value": "faq-legal"
+          },
+          {
+            "name": "faq-legal-table",
+            "value": "faq-legal-table"
+          },
+          {
+            "name": "legal-privacy",
+            "value": "legal-privacy"
+          },
+          {
+            "name": "Search Results Section (Header)",
+            "value": "search-results-section"
+          },
+          {
+            "name": "Search Results Page",
+            "value": "search-results-page"
+          },
+          {
+            "name": "System Table",
+            "value": "system-table"
+          },
+          {
+            "name": "Mortage Insurance",
+            "value": "mortage-insurance"
+          },
+          {
+            "name": "Lenders Mortgage Insurance",
+            "value": "lenders-mortgage-insurance"
+          },
+          {
+            "name": "Lenders Mortgage Insurance Check",
+            "value": "lenders-mortgage-insurance-check"
+          },
+          {
+            "name": "Embed Iframe",
+            "value": "embed-iframe"
+          },
+          {
+            "name": "Generic Body Copy",
+            "value": "generic-body-copy"
+          },
+          {
+            "name": "Stepper Evergreen",
+            "value": "stepper-evergreen"
+          },
+          {
+            "name": "Evergreen Image swapping Variant",
+            "value": "evergreen-image-swapping-variant"
+          },
+          {
+            "name": "Spacing 40px",
+            "value": "spacing-40-px"
+          },
+          {
+            "name": "Info Well",
+            "value": "info-well"
+          },
+          {
+            "name": "customer-evergreen-variant",
+            "value": "customer-evergreen-variant"
+          },
+          {
+            "name": "evergreen Left menu",
+            "value": "evergreen-left-menu"
+          },
+          {
+            "name": "Evergreen Right Sticky",
+            "value": "evergreen-right-sticky"
+          },
+          {
+            "name": "Margin Bottom Unset",
+            "value": "margin-bottom-unset"
+          },
+          {
+            "name": "404 Page",
+            "value": "variant-404"
+          },
+          {
+            "name": "Forms Banner",
+            "value": "form-banner"
+          },
+          {
+            "name": "About Us Columns Content (Governance Columns)",
+            "value": "aboutus-grid-content"
+          },
+          {
+            "name": "Tab Panel",
+            "value": "tabs-panel"
+          },
+          {
+            "name": "Tabbed Navigation",
+            "value": "tabbed-navigation"
+          },
+          {
+            "name": "Align Left (Default Content)",
+            "value": "align-default-left"
+          },
+          {
+            "name": "Align Right (Default Content)",
+            "value": "align-default-right"
+          },
+          {
+            "name": "Align Center (Default Content)",
+            "value": "align-default-center"
+          },
+          {
+            "name": "Member Profile",
+            "value": "member-profile"
+          }
+        ]
+      }
+    ]
   },
   {
-    "...": "./_section.json#/models"
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Single Item Expansion",
+            "value": "single-expansion"
+          }
+        ]
+      }
+    ]
   },
   {
-    "...": "../blocks/*/_*.json#/models"
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "value": "",
+        "label": "Heading"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "value": "",
+        "label": "Body"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Default Open",
+            "value": "accordion-open"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "alerts",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Styles",
+        "options": [
+          {
+            "name": "Blue",
+            "value": "blue-alert"
+          },
+          {
+            "name": "Orange",
+            "value": "orange-alert"
+          },
+          {
+            "name": "Red",
+            "value": "red-alert"
+          },
+          {
+            "name": "Container Width",
+            "value": "alert-container"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "icon",
+        "value": "",
+        "label": "Alerts Icon",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "value": "",
+        "label": "Alerts Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "close-button-text",
+        "label": "Close Button Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "bannervideo",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Video banner",
+            "value": "video-banner"
+          },
+          {
+            "name": "Text Center",
+            "value": "text-center"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "banner-video-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "desk_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "desk_imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "mob_image",
+        "label": "Mobile Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "mob_imageAlt",
+        "label": "Mobile Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "context",
+        "value": "",
+        "label": "Banner Content",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "banner-link",
+        "label": "Button Link"
+      },
+      {
+        "component": "select",
+        "name": "hp-banner-button-target",
+        "label": "Button Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "banner-linkText",
+        "label": "Button Text"
+      },
+      {
+        "component": "text",
+        "name": "banner-linkTitle",
+        "label": "Button Title"
+      },
+      {
+        "component": "select",
+        "name": "banner-linkType",
+        "label": "Button Classes",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "banner-link-2",
+        "label": "Button 2 Link"
+      },
+      {
+        "component": "select",
+        "name": "hp-banner-2-button-target",
+        "label": "Button Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "banner-linkText-2",
+        "label": "Button 2 Text"
+      },
+      {
+        "component": "text",
+        "name": "banner-linkTitle-2",
+        "label": "Button 2 Title"
+      },
+      {
+        "component": "select",
+        "name": "banner-linkType-2",
+        "label": "Button 2 Classes",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "banner-video-item-2",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "desk_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "desk_imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "mob_image",
+        "label": "Mobile Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "mob_imageAlt",
+        "label": "Mobile Alt",
+        "value": ""
+      },
+      {
+        "component": "aem-content",
+        "name": "context_video",
+        "value": "",
+        "label": "Video",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "context",
+        "value": "",
+        "label": "Banner Content",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "banner-link",
+        "label": "Button Link"
+      },
+      {
+        "component": "text",
+        "name": "banner-linkText",
+        "label": "Button Text"
+      },
+      {
+        "component": "text",
+        "name": "banner-linkTitle",
+        "label": "Button Title"
+      },
+      {
+        "component": "select",
+        "name": "banner-linkType",
+        "label": "Button Classes",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "banner-link-2",
+        "label": "Button 2 Link"
+      },
+      {
+        "component": "text",
+        "name": "banner-linkText-2",
+        "label": "Button 2 Text"
+      },
+      {
+        "component": "text",
+        "name": "banner-linkTitle-2",
+        "label": "Button 2 Title"
+      },
+      {
+        "component": "select",
+        "name": "banner-linkType-2",
+        "label": "Button 2 Classes",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "breadcrumb",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Breadcrumb Text",
+        "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Static Breadcrumb",
+            "value": "static-breadcrumb"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "calculator",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Sum",
+            "value": "sum"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "input1",
+        "label": "Input 1"
+      },
+      {
+        "component": "text",
+        "name": "input2",
+        "label": "Input 2"
+      }
+    ]
+  },
+  {
+    "id": "fragment-item",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "reference",
+        "label": "Reference"
+      }
+    ]
+  },
+  {
+    "id": "card-with-quote",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Reversed Content",
+            "value": "quote-reversed-content"
+          },
+          {
+            "name": "With Background",
+            "value": "quote-background"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "card-quote-img",
+        "label": "Card Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "card-quote-img-alt",
+        "label": "Card Image Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "quote-card-content",
+        "label": "Content",
+        "value": ""
+      },
+      {
+        "component": "container",
+        "label": "Expand Quote Fields",
+        "name": "quote-content-container",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text",
+            "name": "quote-content-text",
+            "label": "Quote",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "quote-author-img",
+            "label": "Quote Author Image",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "quote-author-img-alt",
+            "label": "Quote Author Alt",
+            "value": ""
+          },
+          {
+            "component": "text",
+            "name": "quote-author-name",
+            "label": "Quote Author Name",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "quote-author-profession",
+            "label": "Quote Author Profession",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "quote-author-extra",
+            "label": "Quote Author Other Information",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Expand Button 1 Fields",
+        "name": "quote-card-button-1-container",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text",
+            "name": "quote-card-btn-1-text",
+            "label": "Button 1 Text",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "quote-card-btn-1-title",
+            "label": "Button 1 Title",
+            "valueType": "string"
+          },
+          {
+            "component": "aem-content",
+            "name": "quote-card-btn-1-link",
+            "label": "Button 1 Link",
+            "valueType": "string"
+          },
+          {
+            "component": "select",
+            "name": "quote-card-btn-1-target",
+            "label": "Button 1 Target",
+            "value": "_self",
+            "options": [
+              {
+                "name": "Same",
+                "value": "_self"
+              },
+              {
+                "name": "New",
+                "value": "_blank"
+              }
+            ]
+          },
+          {
+            "component": "select",
+            "name": "quote-card-btn-1-style",
+            "label": "Button 1 Style",
+            "value": "primary",
+            "options": [
+              {
+                "name": "Primary Button",
+                "value": "primary"
+              },
+              {
+                "name": "Secondary Button",
+                "value": "secondary"
+              },
+              {
+                "name": "Outlined Button",
+                "value": "outlined"
+              },
+              {
+                "name": "Outlined Reverse Button",
+                "value": "outlined-reverse"
+              },
+              {
+                "name": "White Button",
+                "value": "white"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Expand Button 2 Fields",
+        "name": "quote-card-button-2-container",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text",
+            "name": "quote-card-btn-2-text",
+            "label": "Button 2 Text",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "quote-card-btn-2-title",
+            "label": "Button 2 Title",
+            "valueType": "string"
+          },
+          {
+            "component": "aem-content",
+            "name": "quote-card-btn-2-link",
+            "label": "Button 2 Link",
+            "valueType": "string"
+          },
+          {
+            "component": "select",
+            "name": "quote-card-btn-2-target",
+            "label": "Button 2 Target",
+            "value": "_self",
+            "options": [
+              {
+                "name": "Same",
+                "value": "_self"
+              },
+              {
+                "name": "New",
+                "value": "_blank"
+              }
+            ]
+          },
+          {
+            "component": "select",
+            "name": "quote-card-btn-2-style",
+            "label": "Button 2 Style",
+            "value": "outlined",
+            "options": [
+              {
+                "name": "Primary Button",
+                "value": "primary"
+              },
+              {
+                "name": "Secondary Button",
+                "value": "secondary"
+              },
+              {
+                "name": "Outlined Button",
+                "value": "outlined"
+              },
+              {
+                "name": "Outlined Reverse Button",
+                "value": "outlined-reverse"
+              },
+              {
+                "name": "White Button",
+                "value": "white"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Expandable Tiles",
+            "value": "expandable-tiles"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "button-link",
+        "label": "Button Link"
+      },
+      {
+        "component": "select",
+        "name": "default-card-button-target",
+        "label": "Button Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "button-linkText",
+        "label": "Button Text"
+      },
+      {
+        "component": "text",
+        "name": "button-linkTitle",
+        "label": "Button Title"
+      },
+      {
+        "component": "select",
+        "name": "button-style-linkType",
+        "label": "Button Classes",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Primary",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary",
+            "value": "secondary"
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "button-2-link",
+        "label": "Button Link 2"
+      },
+      {
+        "component": "select",
+        "name": "default-card-button-2-target",
+        "label": "Button Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "button-2-linkText",
+        "label": "Button Text 2"
+      },
+      {
+        "component": "text",
+        "name": "button-2-linkTitle",
+        "label": "Button Title 2"
+      },
+      {
+        "component": "select",
+        "name": "button-2-style-linkType",
+        "label": "Button Classes",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Primary",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "columns",
+    "description": "Choose a column layout. Left and right widths are desktop-first. Columns stack automatically on mobile. Extra gap increases spacing between columns.",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "columns",
+        "value": "",
+        "label": "Columns"
+      },
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "rows",
+        "value": "",
+        "label": "Rows"
+      },
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Column Layout (D for desktop, T for tablet)",
+        "value": "",
+        "options": [
+          {
+            "name": "Default (no style)",
+            "value": ""
+          },
+          {
+            "name": "1 col default",
+            "value": "col-1-100"
+          },
+          {
+            "name": "1 col 75D",
+            "value": "col-1-75"
+          },
+          {
+            "name": "1 col 66D",
+            "value": "col-1-66"
+          },
+          {
+            "name": "1 col 50D",
+            "value": "col-1-50"
+          },
+          {
+            "name": "2 col default",
+            "value": "col-2-1-1"
+          },
+          {
+            "name": "2 col 50T",
+            "value": "col-2-1-1-t"
+          },
+          {
+            "name": "2 col wide right",
+            "value": "col-2-1-2"
+          },
+          {
+            "name": "2 col wide left",
+            "value": "col-2-2-1"
+          },
+          {
+            "name": "2 col extra wide right",
+            "value": "col-2-1-3"
+          },
+          {
+            "name": "2 col extra wide left",
+            "value": "col-2-3-1"
+          },
+          {
+            "name": "2 col default extra gap",
+            "value": "col-2-1-1-g"
+          },
+          {
+            "name": "2 col 50T extra gap",
+            "value": "col-2-1-2-t-g"
+          },
+          {
+            "name": "2 col wide right extra gap",
+            "value": "col-2-1-2-g"
+          },
+          {
+            "name": "2 col wide left extra gap",
+            "value": "col-2-2-1-g"
+          },
+          {
+            "name": "2 col extra wide right extra gap",
+            "value": "col-2-1-3-g"
+          },
+          {
+            "name": "2 col extra wide left extra gap",
+            "value": "col-2-3-1-g"
+          },
+          {
+            "name": "3 col default",
+            "value": "col-3-1-1-1"
+          },
+          {
+            "name": "3 col extra gap",
+            "value": "col-3-1-1-1-g"
+          },
+          {
+            "name": "4 col default",
+            "value": "col-4-1-1-1-1"
+          },
+          {
+            "name": "4 col 50T",
+            "value": "col-4-1-1-1-1-t"
+          },
+          {
+            "name": "4 col default extra gap",
+            "value": "col-4-1-1-1-1-g"
+          },
+          {
+            "name": "4 col 50T extra gap",
+            "value": "col-4-1-1-1-1-t-g"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "account-card",
+    "fields": [
+      {
+        "component": "boolean",
+        "label": "Active Product",
+        "name": "active-card",
+        "valueType": "boolean"
+      },
+      {
+        "component": "text",
+        "name": "product-title",
+        "label": "Product Title",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "product-description",
+        "label": "Product Description",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "product-interest-pretitle",
+        "label": "Product Interest Pretitle",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "product-interest-rate",
+        "label": "Product Interest Rate",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "product-disclaimer",
+        "label": "Product Disclaimer",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "product-button-text",
+        "label": "Product Button Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "product-button-title",
+        "label": "Product Button Title",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "product-button-link",
+        "label": "Product Button Link",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "select",
+        "name": "product-button-target",
+        "label": "Product Button Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "product-button-style",
+        "label": "Product Button Style",
+        "value": "outlined",
+        "options": [
+          {
+            "name": "Outlined Button",
+            "value": "outlined"
+          },
+          {
+            "name": "Secondary Button",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aem-content-fragment",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "picker",
+        "label": "Content Fragment Picker",
+        "valueType": "string",
+        "variationName": "contentFragmentVariation",
+        "validation": {
+          "rootPath": "/content/dam/tmb/content-fragments"
+        }
+      }
+    ]
+  },
+  {
+    "id": "embed-iframe",
+    "fields": [
+      {
+        "component": "text",
+        "name": "video-link",
+        "label": "Embed Link",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "faq-category",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "FAQ Content",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-tag",
+        "label": "FAQ Tag",
+        "name": "aem",
+        "valueType": "string"
+      },
+      {
+        "component": "number",
+        "name": "number",
+        "label": "Number of FAQs to be rendered",
+        "valueType": "number",
+        "value": 0
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "With Pagination",
+            "value": "enable-pagination"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aem-content-fragment",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "picker",
+        "label": "Content Fragment Picker",
+        "valueType": "string",
+        "variationName": "contentFragmentVariation",
+        "validation": {
+          "rootPath": "/content/dam/tmb/content-fragments"
+        }
+      }
+    ]
+  },
+  {
+    "id": "faq-accordion-item",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "picker",
+        "label": "Content Fragment Picker",
+        "valueType": "string",
+        "variationName": "contentFragmentVariation",
+        "validation": {
+          "rootPath": "/content/dam/tmb/content-fragments"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fragment",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "reference",
+        "label": "Reference"
+      }
+    ]
+  },
+  {
+    "id": "hero-banner",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Product Detail Banner",
+            "value": "product-detail-banner"
+          },
+          {
+            "name": "Alternate Text Color Variation",
+            "value": "text-color-variation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "banner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "dt-media",
+        "label": "Desktop Media (Image/Video)",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "dt-alt",
+        "label": "Desktop Image Alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "mb-media",
+        "label": "Mobile Media (Image/Video)",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "mb-alt",
+        "label": "Mobile Image Alt",
+        "value": ""
+      },
+      {
+        "component": "select",
+        "name": "bg-variant",
+        "label": "Background Color - Variant",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "None",
+            "value": ""
+          },
+          {
+            "name": "Default",
+            "value": "bg-default"
+          },
+          {
+            "name": "Light-1",
+            "value": "bg-light-one"
+          },
+          {
+            "name": "Light-2",
+            "value": "bg-light-two"
+          },
+          {
+            "name": "Light-3",
+            "value": "bg-light-three"
+          },
+          {
+            "name": "Light-4",
+            "value": "bg-light-four"
+          },
+          {
+            "name": "reverse",
+            "value": "bg-reverse"
+          },
+          {
+            "name": "reverse-2",
+            "value": "bg-reverse-two"
+          },
+          {
+            "name": "accent",
+            "value": "bg-accent"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Content",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "hero-banner-content-btn-1-text",
+        "label": "Button 1 Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "hero-banner-content-btn-1-title",
+        "label": "Button 1 Title",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "hero-banner-content-btn-1-link",
+        "label": "Button 1 Link",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "hero-banner-content-btn-1-target",
+        "label": "Button 1 Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "hero-banner-content-btn-1-style",
+        "label": "Button 1 Style",
+        "value": "primary",
+        "options": [
+          {
+            "name": "Primary Button",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary Button",
+            "value": "secondary"
+          },
+          {
+            "name": "Outlined Button",
+            "value": "outlined"
+          },
+          {
+            "name": "Outlined Reverse Button",
+            "value": "outlined-reverse"
+          },
+          {
+            "name": "White Button",
+            "value": "white"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "hero-banner-content-btn-2-text",
+        "label": "Button 2 Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "hero-banner-content-btn-2-title",
+        "label": "Button 2 Title",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "hero-banner-content-btn-2-link",
+        "label": "Button 2 Link",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "hero-banner-content-btn-2-target",
+        "label": "Button 2 Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "hero-banner-content-btn-2-style",
+        "label": "Button 2 Style",
+        "value": "outlined",
+        "options": [
+          {
+            "name": "Primary Button",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary Button",
+            "value": "secondary"
+          },
+          {
+            "name": "Outlined Button",
+            "value": "outlined"
+          },
+          {
+            "name": "Outlined Reverse Button",
+            "value": "outlined-reverse"
+          },
+          {
+            "name": "White Button",
+            "value": "white"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hero",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "info-well",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "info-well-description",
+        "label": "Info Well Description",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "rate-details",
+    "fields": [
+      {
+        "component": "text",
+        "name": "rate-title",
+        "label": "Rate Title",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "interest-rate",
+        "label": "Interest Rate / Placeholder",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "rate-disclaimer",
+        "label": "Rate Disclaimer",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "mortage-insurance",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "mortage-insurance-title",
+        "label": "Mortage Insurance Title",
+        "valueType": "string"
+      },
+      {
+        "component": "date-time",
+        "valueType": "date",
+        "name": "date",
+        "label": "Date",
+        "placeholder": "YYYY-MM-DD",
+        "displayFormat": null,
+        "valueFormat": null
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "mortage-insurance-description",
+        "label": "Mortage Insurance Description",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "navigation-card",
+    "fields": [
+      {
+        "component": "text",
+        "name": "icon-text",
+        "label": "Icon Text"
+      },
+      {
+        "component": "richtext",
+        "name": "navigation-main-content",
+        "label": "Navigation main content",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "image-text",
+        "label": "Image Text"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "navigation-below-content",
+        "label": "navigation below content",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "navigation-card-link",
+        "label": "Navigation Card Link",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "navigation-card-link-target",
+        "label": "Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "quick-links",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "quick-links-block",
+            "value": "quick-links-block"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stepper-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "step-number",
+        "label": "Step Number",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "step-title",
+        "label": "Step Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "label": "Content",
+        "name": "step-content",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "label": "Tip Box",
+        "name": "step-tip-content",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "content-btn-1-text",
+        "label": "Button 1 Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "content-btn-1-title",
+        "label": "Button 1 Title",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "content-btn-1-link",
+        "label": "Button 1 Link",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "content-btn-1-target",
+        "label": "Button 1 Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "content-btn-1-style",
+        "label": "Button 1 Style",
+        "value": "primary",
+        "options": [
+          {
+            "name": "Primary Button",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary Button",
+            "value": "secondary"
+          },
+          {
+            "name": "Outlined Button",
+            "value": "outlined"
+          },
+          {
+            "name": "Outlined Reverse Button",
+            "value": "outlined-reverse"
+          },
+          {
+            "name": "White Button",
+            "value": "white"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "content-btn-2-text",
+        "label": "Button 2 Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "content-btn-2-title",
+        "label": "Button 2 Title",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "content-btn-2-link",
+        "label": "Button 2 Link",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "content-btn-2-target",
+        "label": "Button 2 Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "content-btn-2-style",
+        "label": "Button 2 Style",
+        "value": "outlined",
+        "options": [
+          {
+            "name": "Primary Button",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary Button",
+            "value": "secondary"
+          },
+          {
+            "name": "Outlined Button",
+            "value": "outlined"
+          },
+          {
+            "name": "Outlined Reverse Button",
+            "value": "outlined-reverse"
+          },
+          {
+            "name": "White Button",
+            "value": "white"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tab-content-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "tab-content-header",
+        "label": "Tab Content Heading",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "tab-content-body",
+        "label": "Tab Content Body",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "tab-content-rate",
+        "label": "Tab Content Rate Item",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "tab-content-image",
+        "label": "Tab Content Body Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "tab-content-button-text",
+        "label": "Tab Content Button Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "tab-content-button-title",
+        "label": "Tab Content Button Title",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "tab-content-button-link",
+        "label": "Tab Content Button Link",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "select",
+        "name": "tab-content-button-target",
+        "label": "Tab Content Button Target",
+        "value": "_self",
+        "options": [
+          {
+            "name": "Same",
+            "value": "_self"
+          },
+          {
+            "name": "New",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "tab-content-button-style",
+        "label": "Tab Content Button Style",
+        "value": "primary",
+        "options": [
+          {
+            "name": "Primary Button",
+            "value": "primary"
+          },
+          {
+            "name": "Outlined Button",
+            "value": "outlined"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tabsitem",
+    "fields": [
+      {
+        "component": "text",
+        "name": "tab-title",
+        "label": "Tab Title"
+      },
+      {
+        "component": "text",
+        "name": "tab-id",
+        "label": "Tab ID"
+      }
+    ]
+  },
+  {
+    "id": "teachers-calculator-block",
+    "fields": [
+      {
+        "component": "text",
+        "name": "iframe-id",
+        "label": "Enter ID for iframe"
+      },
+      {
+        "component": "text",
+        "name": "iframe-link",
+        "label": "Enter iframe Link"
+      },
+      {
+        "component": "text",
+        "name": "iframe-js-link",
+        "label": "Enter JavaScript Link for Iframe"
+      }
+    ]
+  },
+  {
+    "id": "tmb-calculator-accordion",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Single Item Expansion",
+            "value": "single-expansion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tmb-calculator-accordion-item",
+    "fields": [
+      {
+        "component": "boolean",
+        "label": "Default Open",
+        "name": "tmb-calculator-accordion-item-open",
+        "valueType": "boolean"
+      },
+      {
+        "component": "text",
+        "name": "calc-item-title",
+        "label": "Enter title of accordion"
+      },
+      {
+        "component": "text",
+        "name": "calc-item-iframe-id",
+        "label": "Enter ID for iframe"
+      },
+      {
+        "component": "text",
+        "name": "calc-item-iframe-link",
+        "label": "Enter iframe Link"
+      },
+      {
+        "component": "text",
+        "name": "calc-item-iframe-js-link",
+        "label": "Enter JavaScript Link for Iframe"
+      }
+    ]
+  },
+  {
+    "id": "transformd-form",
+    "fields": [
+      {
+        "component": "text",
+        "name": "css-link",
+        "label": "Enter CSS Path"
+      },
+      {
+        "component": "text",
+        "name": "js-link",
+        "label": "Enter JavaScript Path"
+      },
+      {
+        "component": "text",
+        "name": "form-id",
+        "label": "Enter Form API key"
+      },
+      {
+        "component": "text",
+        "name": "form-key",
+        "label": "Enter Form Id"
+      },
+      {
+        "component": "text",
+        "name": "action-link",
+        "label": "Enter Action Link"
+      },
+      {
+        "name": "branch",
+        "component": "select",
+        "type": "select",
+        "label": "Select channel",
+        "options": [
+          {
+            "name": "Staging",
+            "value": "Staging"
+          },
+          {
+            "name": "Live",
+            "value": "Live"
+          }
+        ]
+      },
+      {
+        "name": "channel",
+        "component": "select",
+        "type": "select",
+        "label": "Select environment branch",
+        "options": [
+          {
+            "name": "Teachers Mutual Bank",
+            "value": "tmb"
+          },
+          {
+            "name": "Health Professionals Bank",
+            "value": "hpb"
+          },
+          {
+            "name": "Firefighters Mutual Bank",
+            "value": "fmb"
+          },
+          {
+            "name": "UniBank",
+            "value": "ub"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "config",
+        "label": "Enter Form Config"
+      },
+      {
+        "component": "text",
+        "name": "container",
+        "label": "Enter Form Container"
+      }
+    ]
   }
 ]

@@ -4,6 +4,69 @@
   display: none !important;
 }
 
+.section[data-theme="bg-default"]:not(:root) {
+  @include section-theme(
+    $bg-default,
+    $body-default,
+    $heading-default,
+    $link-default
+  );
+}
+
+.section[data-theme="bg-light-one"]:not(:root) {
+  @include section-theme(
+    $bg-light,
+    $body-light,
+    $heading-light,
+    $link-light
+  );
+}
+
+.section[data-theme="bg-light-two"]:not(:root) {
+  @include section-theme(
+    $bg-light-2,
+    $body-light-2,
+    $heading-light-2,
+    $link-light-2
+  );
+}
+
+.section[data-theme="bg-light-three"]:not(:root) {
+  @include section-theme(
+    $bg-light-3,
+    $body-light-3,
+    $heading-light-3,
+    $link-light-3
+  );
+}
+
+.section[data-theme="bg-reverse"]:not(:root) {
+  @include section-theme(
+    $bg-reverse,
+    $body-reverse,
+    $heading-reverse,
+    $link-reverse
+  );
+}
+
+.section[data-theme="bg-reverse-two"]:not(:root) {
+  @include section-theme(
+    $bg-reverse-2,
+    $body-reverse-2,
+    $heading-reverse-2,
+    $link-reverse-2
+  );
+}
+
+.section[data-theme="bg-accent"]:not(:root) {
+  @include section-theme(
+    $bg-accent,
+    $body-accent,
+    $heading-accent,
+    $link-accent
+  );
+}
+
 .spacer-bottom {
   margin-bottom: 80px;
   
@@ -88,8 +151,8 @@
     max-width: calc($container-width - 128px);
     width: 100%;
     margin: 0 auto;
-    height: 1px;
-    background: $line-default;
+    height: 0;
+    border-bottom: 1px solid $line-default;
 
     @include tablet-lg {
       max-width: calc(100% - 48px);

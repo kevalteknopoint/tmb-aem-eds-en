@@ -448,3 +448,92 @@ $text-styles: (
 @mixin typo-disclaimer {
     @include typography('disclaimer');
 }
+
+/// Section background + text theme
+/// @param $bg - background color
+/// @param $text - body text color
+/// @param $heading - heading color
+/// @param $link - link color
+/// @param $link-hover - hover state (optional)
+@mixin section-theme(
+  $bg,
+  $text,
+  $heading,
+  $link
+  //$link-hover: darken($link, 10%)
+) {
+  background-color: $bg;
+  color: $text;
+
+  .default-content-wrapper h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $heading;
+  }
+  // Body text
+  p,
+  li,
+  span {
+    color: $text;
+  }
+
+  // Headings
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $heading;
+  }
+
+  // Links
+  a {
+    color: $link;
+    text-decoration: underline;
+
+    // &:hover,
+    // &:focus {
+    //   color: $link-hover;
+    // }
+  }
+}
+// Column layouts
+@mixin responsive-grid(
+  $desktop-columns,
+  $tablet-columns: null,
+  $mobile-columns: null,
+  $gap-desktop: 32px,
+  $gap-tablet: 24px,
+  $gap-mobile: 16px
+) {
+  > div {
+    display: grid;
+    grid-template-columns: $desktop-columns;
+    gap: $gap-desktop;
+
+    @include tablet {
+      gap: $gap-tablet;
+
+      @if $tablet-columns != null {
+        grid-template-columns: $tablet-columns;
+      }
+    }
+
+    @include mobile {
+      gap: $gap-mobile;
+
+      @if $mobile-columns != null {
+        grid-template-columns: $mobile-columns;
+      }
+    }
+
+    > div {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+}

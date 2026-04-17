@@ -148,18 +148,17 @@
     ol>li {
       margin-bottom: 10px;
       color: $body-default;
-      position: relative;
+
       @include typo-body;
 
       counter-increment: step-counter;
-      // display: flex;
-      // gap: 12px;
+      display: flex;
+      gap: 12px;
       align-items: baseline;
 
       &::before {
         content: counter(step-counter);
         display: flex;
-        position: absolute;
         justify-content: center;
         align-items: center;
         min-width: 32px;
@@ -170,8 +169,6 @@
         color: $heading-default;
         font-size: 16px;
         font-weight: 500;
-        margin-left: -45px;
-        bottom: -5px;
       }
 
       p {
@@ -190,10 +187,9 @@
 
         p {
           counter-increment: step-counter;
-          // display: flex;
-          // gap: 12px;
+          display: flex;
+          gap: 12px;
           align-items: baseline;
-          position: relative;
   
           &::before {
             content: counter(step-counter);
@@ -208,9 +204,6 @@
             color: $heading-default;
             font-size: 16px;
             font-weight: 500;
-            position: absolute;
-            margin-left: -44px;
-            bottom: -5px;
           }
         }
       }
@@ -354,6 +347,10 @@
           text-decoration: underline;
           text-underline-offset: 3px;
           color: $link-default;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
         }
       }
 
