@@ -539,6 +539,9 @@ function decorateSections(main) {
         } else if (key === 'section-bg-img') {
           section.style.backgroundImage = `url(${meta[key]})`;
           section.classList?.add('section-with-bg');
+        } else if (key === 'section-bg-variant') {
+          const bgClassName = meta['section-bg-variant'];
+          section.setAttribute('data-theme', bgClassName);
         } else {
           section.dataset[toCamelCase(key)] = meta[key];
         }
