@@ -9,7 +9,8 @@
             "resourceType": "core/franklin/components/columns/v1/columns",
             "template": {
               "columns": "2",
-              "rows": "1"
+              "rows": "1",
+              "colLayout": "2-1-1"
             }
           }
         }
@@ -19,6 +20,7 @@
   "models": [
     {
       "id": "columns",
+      "description": "Choose a column layout. Left and right widths are desktop-first. Columns stack automatically on mobile. Extra gap increases spacing between columns.",
       "fields": [
         {
           "component": "text",
@@ -33,8 +35,38 @@
           "name": "rows",
           "value": "",
           "label": "Rows"
+        },
+        {
+          "component": "select",
+          "name": "classes",
+          "label": "Column Layout (D for desktop, T for tablet)",
+          "value": "",
+          "options": [
+            { "name": "Default (no style)", "value": "" },
+            { "name": "1 col default", "value": "col-1-100" },
+            { "name": "1 col 75D", "value": "col-1-75" },
+            { "name": "1 col 66D", "value": "col-1-66" },
+            { "name": "1 col 50D", "value": "col-1-50" },
+            { "name": "2 col default", "value": "col-2-1-1" },
+            { "name": "2 col 50T", "value": "col-2-1-1-t" },
+            { "name": "2 col wide right", "value": "col-2-1-2" },
+            { "name": "2 col wide left", "value": "col-2-2-1" },
+            { "name": "2 col extra wide right", "value": "col-2-1-3" },
+            { "name": "2 col extra wide left", "value": "col-2-3-1" },
+            { "name": "2 col default extra gap", "value": "col-2-1-1-g" },
+            { "name": "2 col 50T extra gap", "value": "col-2-1-2-t-g" },
+            { "name": "2 col wide right extra gap", "value": "col-2-1-2-g" },
+            { "name": "2 col wide left extra gap", "value": "col-2-2-1-g" },
+            { "name": "2 col extra wide right extra gap", "value": "col-2-1-3-g" },
+            { "name": "2 col extra wide left extra gap", "value": "col-2-3-1-g" },
+            { "name": "3 col default", "value": "col-3-1-1-1" },
+            { "name": "3 col extra gap", "value": "col-3-1-1-1-g" },
+            { "name": "4 col default", "value": "col-4-1-1-1-1" },
+            { "name": "4 col 50T", "value": "col-4-1-1-1-1-t" },
+            { "name": "4 col default extra gap", "value": "col-4-1-1-1-1-g" },
+            { "name": "4 col 50T extra gap", "value": "col-4-1-1-1-1-t-g" }
+          ]
         }
-        
       ]
     }
   ],
