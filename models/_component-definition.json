@@ -5,16 +5,56 @@
       "id": "default",
       "components": [
         {
-          "...": "./_text.json#/definitions"
+          "title": "Text",
+          "id": "text",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/text/v1/text",
+                "template": {}
+              }
+            }
+          }
         },
         {
-          "...": "./_title.json#/definitions"
+          "title": "Title",
+          "id": "title",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/title/v1/title",
+                "template": {
+                  "model": "title"
+                }
+              }
+            }
+          }
         },
         {
-          "...": "./_image.json#/definitions"
+          "title": "Image",
+          "id": "image",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/image/v1/image",
+                "template": {}
+              }
+            }
+          }
         },
         {
-          "...": "./_button.json#/definitions"
+          "title": "Button",
+          "id": "button",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/button/v1/button",
+                "template": {
+                  "model": "button"
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -23,7 +63,18 @@
       "id": "sections",
       "components": [
         {
-          "...": "./_section.json#/definitions"
+          "title": "Section",
+          "id": "section",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/section/v1/section",
+                "template": {
+                  "model": "section"
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -32,7 +83,684 @@
       "id": "blocks",
       "components": [
         {
-          "...": "../blocks/*/_*.json#/definitions"
+          "title": "Accordion",
+          "id": "accordion",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Accordion",
+                  "model": "accordion",
+                  "filter": "accordion"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Accordion Item",
+          "id": "accordion-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Accordion Item",
+                  "model": "accordion-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Alerts",
+          "id": "alerts",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Alerts",
+                  "model": "alerts",
+                  "filter": "alerts"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Homepage Banner",
+          "id": "bannervideo",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Homepage Banner",
+                  "filter": "bannervideo",
+                  "model": "bannervideo"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Banner Image Item",
+          "id": "banner-video-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Banner Image Item",
+                  "model": "banner-video-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Banner Video Item",
+          "id": "banner-video-item-2",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Banner Video Item",
+                  "model": "banner-video-item-2"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Breadcrumb",
+          "id": "breadcrumb",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Breadcrumb",
+                  "model": "breadcrumb",
+                  "filter": "breadcrumb"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Calculator",
+          "id": "calculator",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Calculator",
+                  "model": "calculator"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Card Fragments",
+          "id": "card-fragments",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Card Fragments",
+                  "model": "card-fragments",
+                  "filter": "card-fragments"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Fragment Item",
+          "id": "fragment-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Fragment Item",
+                  "model": "fragment-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Card With Quote",
+          "id": "card-with-quote",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Card With Quote",
+                  "model": "card-with-quote",
+                  "filter": "card-with-quote"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Cards",
+          "id": "cards",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Cards",
+                  "model": "cards",
+                  "filter": "cards"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Card",
+          "id": "card",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Card",
+                  "model": "card"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Columns",
+          "id": "columns",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/columns/v1/columns",
+                "template": {
+                  "columns": "2",
+                  "rows": "1",
+                  "colLayout": "2-1-1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Compare Accounts",
+          "id": "compare-accounts",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Compare Accounts",
+                  "model": "compare-accounts",
+                  "filter": "compare-accounts"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Account Card",
+          "id": "account-card",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Account Card",
+                  "model": "account-card"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Content fragment",
+          "id": "content-fragment",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "content-fragment",
+                  "model": "aem-content-fragment"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Embed Iframe",
+          "id": "embed-iframe",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Embed Iframe",
+                  "model": "embed-iframe",
+                  "filter": "embed-iframe"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "FAQ Category",
+          "id": "faq-category",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "faq-category",
+                  "model": "faq-category"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "FAQ  Category Item",
+          "id": "faq-category-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "faq-category-item",
+                  "model": "faq-category-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "FAQ Detail Page",
+          "id": "faq-detail",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "faq-detail",
+                  "model": "aem-content-fragment"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "FAQ Product Detail Page",
+          "id": "faq-productdetail",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "FAQ Product Detail",
+                  "filter": "faq-productdetail"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "FAQ Accordion Item",
+          "id": "faq-accordion-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "FAQ Accordion Item",
+                  "model": "faq-accordion-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Fragment",
+          "id": "fragment",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Fragment",
+                  "model": "fragment"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Hero Banner",
+          "id": "hero-banner",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Hero Banner",
+                  "filter": "hero-banner",
+                  "model": "hero-banner"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Banner",
+          "id": "banner",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Banner",
+                  "model": "banner"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Hero",
+          "id": "hero",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Hero",
+                  "model": "hero"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Info Well",
+          "id": "info-well",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Info Well",
+                  "model": "info-well",
+                  "filter": "info-well"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Interest Rates",
+          "id": "interest-rates",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Interest Rates",
+                  "model": "interest-rates",
+                  "filter": "interest-rates"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Rate Details",
+          "id": "rate-details",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Rate Details",
+                  "model": "rate-details"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Mortage Insurance",
+          "id": "mortage-insurance",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Mortage Insurance",
+                  "model": "mortage-insurance",
+                  "filter": "mortage-insurance"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Navigation Cards",
+          "id": "navigation-cards",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Navigation Cards",
+                  "model": "navigation-cards",
+                  "filter": "navigation-cards"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Navigation Card",
+          "id": "navigation-card",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Navigation Card",
+                  "model": "navigation-card"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "quick-links",
+          "id": "quick-links",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "quick-links",
+                  "model": "quick-links"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Stepper",
+          "id": "stepper",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Stepper",
+                  "model": "stepper",
+                  "filter": "stepper"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Stepper Item",
+          "id": "stepper-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Stepper Item",
+                  "model": "stepper-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Tab Content",
+          "id": "tab-content",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Tab Content",
+                  "model": "tab-content",
+                  "filter": "tab-content"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Tab Content Item",
+          "id": "tab-content-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Tab Content Item",
+                  "model": "tab-content-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Tabs",
+          "id": "tabs",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Tabs",
+                  "filter": "tabs",
+                  "model": "tabs"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Tabs item",
+          "id": "tabsitem",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Tabs item",
+                  "model": "tabsitem"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Teachers Calculator Block",
+          "id": "teachers-calculator-block",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Teachers Calculator Block",
+                  "filter": "teachers-calculator-block",
+                  "model": "teachers-calculator-block"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "TMB Calculator Accordion",
+          "id": "tmb-calculator-accordion",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "TMB Calculator Accordion",
+                  "filter": "tmb-calculator-accordion",
+                  "model": "tmb-calculator-accordion"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "TMB Calculator Accordion Item",
+          "id": "tmb-calculator-accordion-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "TMB Calculator Accordion Item",
+                  "model": "tmb-calculator-accordion-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Transformd form",
+          "id": "transformd-form",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "transformd-form",
+                  "model": "transformd-form"
+                }
+              }
+            }
+          }
         }
       ]
     }
