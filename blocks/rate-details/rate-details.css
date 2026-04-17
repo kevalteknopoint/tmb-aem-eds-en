@@ -170,6 +170,7 @@
 
 .rate-details .accordion-wrapper .block .accordion-item .accordion-item-label{
   align-items:flex-start;
+  cursor:pointer;
   display:flex;
   justify-content:space-between;
   list-style:none;
