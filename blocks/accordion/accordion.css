@@ -363,29 +363,90 @@
   padding-right:48px;
 }
 
-.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h1,
-.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h2,
-.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h3,
-.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h4,
-.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h5,
-.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h6{
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h1{
+  color:var(--heading-default);
+  font-family:var(--font-family-h1);
+  font-size:var(--font-size-h1);
+  font-weight:var(--font-weight-h1);
+  letter-spacing:var(--font-letter-spacing-h1);
+  line-height:var(--font-height-h1);
+  margin-bottom:40px;
+  text-transform:var(--heading1-case);
+}
+
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h1:has(.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h1 + p){
+  margin-bottom:16px;
+}
+
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h1:has(.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h1 + p) + p{
+  margin-bottom:40px;
+}
+
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h2{
+  color:var(--heading-default);
+  font-family:var(--font-family-h2-std);
+  font-size:var(--font-size-h2-std);
+  font-weight:var(--font-weight-h2-std);
+  letter-spacing:var(--font-letter-spacing-h2-std);
+  line-height:var(--font-height-h2-std);
+  margin-bottom:24px;
+  text-transform:var(--heading2-std-case);
+}
+
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h2:not(:first-child){
+  margin-top:40px;
+}
+
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h2:has(.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h2 + p){
+  margin-bottom:16px;
+}
+
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h2:has(.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h2 + p) + p{
+  margin-bottom:24px;
+}
+
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h3{
   color:var(--heading-default);
   font-family:var(--font-family-h3);
   font-size:var(--font-size-h3);
   font-weight:var(--font-weight-h3);
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
-  margin-top:40px;
+  margin-bottom:16px;
+  margin-top:24px;
   text-transform:var(--heading3-case);
 }
 
-.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h1:first-child,
-.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h2:first-child,
-.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h3:first-child,
-.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h4:first-child,
-.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h5:first-child,
-.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h6:first-child{
-  margin-top:0;
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h4{
+  color:var(--heading-default);
+  font-family:var(--font-family-h4);
+  font-size:var(--font-size-h4);
+  font-weight:var(--font-weight-h4);
+  letter-spacing:var(--font-letter-spacing-h4);
+  line-height:var(--font-height-h4);
+  margin-bottom:16px;
+  text-transform:var(--heading4-case);
+}
+
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h5{
+  color:var(--heading-default);
+  font-family:var(--font-family-h5);
+  font-size:var(--font-size-h5);
+  font-weight:var(--font-weight-h5);
+  letter-spacing:var(--font-letter-spacing-h5);
+  line-height:var(--font-height-h5);
+  margin-bottom:16px;
+  text-transform:var(--heading5-case);
+}
+
+.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h6{
+  color:var(--body-default);
+  font-family:var(--font-family-disc);
+  font-size:var(--font-size-disclaimer);
+  font-weight:var(--font-weight-disc);
+  letter-spacing:var(--font-letter-spacing-disc);
+  line-height:var(--font-height-disclaimer);
+  text-transform:var(--disclaimer-case);
 }
 
 .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body p{
@@ -480,12 +541,19 @@
     padding-right:24px;
   }
 
-  .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h1,
-  .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h2,
-  .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h3,
-  .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h4,
-  .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h5,
-  .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h6{
+  .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h1{
+    margin-bottom:24px;
+  }
+
+  .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h1:has(.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h1 + p){
+    margin-bottom:16px;
+  }
+
+  .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h1:has(.tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h1 + p) + p{
+    margin-bottom:24px;
+  }
+
+  .tmb-acc-sec.accordion-container .accordion-wrapper .accordion details .accordion-item-body h2:not(:first-child){
     margin-top:24px;
   }
 }

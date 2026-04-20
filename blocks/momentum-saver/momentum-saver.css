@@ -178,7 +178,7 @@
 .momentum-app-badges .columns.block > div h2:has(+ h3, + h4, + h5),
 .momentum-direct-variant .columns.block > div h1:has(+ h3, + h4, + h5),
 .momentum-direct-variant .columns.block > div h2:has(+ h3, + h4, + h5){
-  margin-bottom:4px;
+  margin-bottom:40px;
 }
 
 .momentum-saver-section .columns.block > div h1:last-child,

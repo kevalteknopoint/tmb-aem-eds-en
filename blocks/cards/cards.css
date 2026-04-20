@@ -726,8 +726,7 @@
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h2,
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h3,
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h4,
-.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h5,
-.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h6{
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h5{
   color:var(--heading-default);
   font-family:var(--font-family-h4);
   font-size:var(--font-size-h4);
@@ -743,8 +742,7 @@
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h2 a,
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h3 a,
 .section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h4 a,
-.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h5 a,
-.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h6 a{
+.section.faq-cant-find-looking-for .cards-wrapper .cards ul li .cards-card-body h5 a{
   color:var(--heading-default);
   text-decoration:none;
 }

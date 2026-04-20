@@ -1,6 +1,38 @@
 import { isMobile } from "../../scripts/aem.js";
 import './product-navigation-analytics.js';
 
+function fixCtaLinks() {
+  document.querySelectorAll('a[href*="ast.tmbank.com.au"]').forEach((link) => {
+    try {
+      const url = new URL(link.href);
+
+      if (url.searchParams.has("encp")) {
+        let encp = url.searchParams.get("encp");
+
+        let prev;
+        do {
+          prev = encp;
+          encp = decodeURIComponent(encp);
+        } while (encp !== prev);
+
+        const fixed = encodeURIComponent(encp);
+
+        url.searchParams.set("encp", fixed);
+        link.href = url.toString();
+      }
+    } catch (e) {
+      // ignore invalid URLs
+    }
+  });
+}
+
+function runCtaFix() {
+  fixCtaLinks();
+}
+
+requestAnimationFrame(runCtaFix);
+setTimeout(runCtaFix, 500);
+
 function isElementInView(container, element, percentVisible = 1) {
   const containerRect = container.getBoundingClientRect();
   const elemRect = element.getBoundingClientRect();
