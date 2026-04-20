@@ -41,6 +41,47 @@
           "multi": false
         },
         {
+          "component": "select",
+          "name": "section-bg-variant",
+          "label": "Background Color - Variant",
+          "valueType": "string",
+          "value": "",
+          "options": [
+             {
+              "name": "None",
+              "value": ""
+            },
+            {
+              "name": "Default",
+              "value": "bg-default"
+            },
+            {
+              "name": "Light-1",
+              "value": "bg-light-one"
+            },
+            {
+              "name": "Light-2",
+              "value": "bg-light-two"
+            },
+            {
+              "name": "Light-3",
+              "value": "bg-light-three"
+            },
+            {
+              "name": "reverse",
+              "value": "bg-reverse"
+            },
+            {
+              "name": "reverse-2",
+              "value": "bg-reverse-two"
+            },
+            {
+              "name": "accent",
+              "value": "bg-accent"
+            }
+          ]
+        },
+        {
           "component": "multiselect",
           "name": "style",
           "label": "Style",
@@ -168,10 +209,6 @@
             {
               "name": "TMB Footer Disclaimers",
               "value": "tmb-sub-footer"
-            },
-            {
-              "name": "Momentum Corporate Variation without Bg",
-              "value": "momentum-corporate-variation-without-bg"
             },
             {
               "name": "Common Style Rte",

@@ -1,0 +1,184 @@
+@use '../../styles/base' as *;
+
+/* Wrapper styling */
+.query-search-inp-wrap {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  max-width: 500px;
+  /* Adjust as needed */
+  margin-bottom: 24px;
+}
+
+/* Modern Input */
+.query-search-inp {
+  flex-grow: 1;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.query-search-inp:focus {
+  border-color: #3b82f6;
+  /* Modern blue focus */
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 2%);
+}
+
+/* Modern Button */
+.query-search-btn {
+  padding: 12px 24px;
+
+  @include button;
+}
+
+/* Dropdown Container */
+.query-suggestions-list {
+  display: none;
+  /* Hidden by default via JS class */
+  position: absolute;
+  top: calc(100% + 8px);
+  /* Float just below the input */
+  left: 0;
+  width: 100%;
+  max-width: calc(100% - 100px);
+  /* Adjust to match input width, leaving space for button */
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -4px rgb(0 0 0 / 5%);
+  margin: 0;
+  padding: 8px 0;
+  list-style-type: none;
+  max-height: 280px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+/* Toggle class applied via JS */
+.query-suggestions-list.show {
+  display: block;
+}
+
+/* Dropdown Items */
+.query-suggestion-item {
+  padding: 10px 16px;
+  font-size: 15px;
+  color: #374151;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.query-suggestion-item:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+/* No Results State */
+.query-suggestion-no-results {
+  padding: 10px 16px;
+  font-size: 15px;
+  color: #9ca3af;
+  font-style: italic;
+  cursor: default;
+}
+
+/* Custom Scrollbar for Dropdown (Optional but nice) */
+.query-suggestions-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.query-suggestions-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.query-suggestions-list::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+}
+
+.query-result-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+
+  &:not(:last-child) {
+    padding-bottom: 16px;
+    border-bottom: 1px solid $line-default;
+    margin-bottom: 16px;
+  }
+
+  .result-title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .result-title {
+      @include typo-heading3;
+
+      color: $heading-default;
+    }
+
+    .result-path {
+      @include typo-body;
+
+      color: $body-default;
+    }
+  }
+
+  .result-actions-wrap {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    align-items: center;
+    min-width: max-content;
+
+    .result-action-button {
+      @include button('outlined');
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+.loader {
+  display: block;
+  margin: 0 auto;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-top: 4px solid $burst-default;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-bottom: 4px solid $burst-accent;
+  border-left: 4px solid transparent;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

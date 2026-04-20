@@ -427,7 +427,7 @@ html{
 
 body{
   background-color:#fff;
-  color:var(--body-default);
+  color:#000;
   font-family:var(--primary-font);
   -webkit-font-smoothing:antialiased;
   line-height:1.5;
@@ -538,6 +538,216 @@ h6{
   display:none !important;
 }
 
+.section[data-theme=bg-default]:not(:root){
+  background-color:var(--bg-default);
+  color:var(--body-default);
+}
+.section[data-theme=bg-default]:not(:root) .default-content-wrapper h1,
+.section[data-theme=bg-default]:not(:root) h2,
+.section[data-theme=bg-default]:not(:root) h3,
+.section[data-theme=bg-default]:not(:root) h4,
+.section[data-theme=bg-default]:not(:root) h5,
+.section[data-theme=bg-default]:not(:root) h6{
+  color:var(--heading-default);
+}
+.section[data-theme=bg-default]:not(:root) p,
+.section[data-theme=bg-default]:not(:root) li,
+.section[data-theme=bg-default]:not(:root) span{
+  color:var(--body-default);
+}
+.section[data-theme=bg-default]:not(:root) h1,
+.section[data-theme=bg-default]:not(:root) h2,
+.section[data-theme=bg-default]:not(:root) h3,
+.section[data-theme=bg-default]:not(:root) h4,
+.section[data-theme=bg-default]:not(:root) h5,
+.section[data-theme=bg-default]:not(:root) h6{
+  color:var(--heading-default);
+}
+.section[data-theme=bg-default]:not(:root) a{
+  color:var(--link-default);
+  text-decoration:underline;
+}
+
+.section[data-theme=bg-light-one]:not(:root){
+  background-color:var(--bg-light);
+  color:var(--body-light);
+}
+.section[data-theme=bg-light-one]:not(:root) .default-content-wrapper h1,
+.section[data-theme=bg-light-one]:not(:root) h2,
+.section[data-theme=bg-light-one]:not(:root) h3,
+.section[data-theme=bg-light-one]:not(:root) h4,
+.section[data-theme=bg-light-one]:not(:root) h5,
+.section[data-theme=bg-light-one]:not(:root) h6{
+  color:var(--heading-light);
+}
+.section[data-theme=bg-light-one]:not(:root) p,
+.section[data-theme=bg-light-one]:not(:root) li,
+.section[data-theme=bg-light-one]:not(:root) span{
+  color:var(--body-light);
+}
+.section[data-theme=bg-light-one]:not(:root) h1,
+.section[data-theme=bg-light-one]:not(:root) h2,
+.section[data-theme=bg-light-one]:not(:root) h3,
+.section[data-theme=bg-light-one]:not(:root) h4,
+.section[data-theme=bg-light-one]:not(:root) h5,
+.section[data-theme=bg-light-one]:not(:root) h6{
+  color:var(--heading-light);
+}
+.section[data-theme=bg-light-one]:not(:root) a{
+  color:var(--link-light);
+  text-decoration:underline;
+}
+
+.section[data-theme=bg-light-two]:not(:root){
+  background-color:var(--bg-light-2);
+  color:var(--body-light-2);
+}
+.section[data-theme=bg-light-two]:not(:root) .default-content-wrapper h1,
+.section[data-theme=bg-light-two]:not(:root) h2,
+.section[data-theme=bg-light-two]:not(:root) h3,
+.section[data-theme=bg-light-two]:not(:root) h4,
+.section[data-theme=bg-light-two]:not(:root) h5,
+.section[data-theme=bg-light-two]:not(:root) h6{
+  color:var(--heading-light-2);
+}
+.section[data-theme=bg-light-two]:not(:root) p,
+.section[data-theme=bg-light-two]:not(:root) li,
+.section[data-theme=bg-light-two]:not(:root) span{
+  color:var(--body-light-2);
+}
+.section[data-theme=bg-light-two]:not(:root) h1,
+.section[data-theme=bg-light-two]:not(:root) h2,
+.section[data-theme=bg-light-two]:not(:root) h3,
+.section[data-theme=bg-light-two]:not(:root) h4,
+.section[data-theme=bg-light-two]:not(:root) h5,
+.section[data-theme=bg-light-two]:not(:root) h6{
+  color:var(--heading-light-2);
+}
+.section[data-theme=bg-light-two]:not(:root) a{
+  color:var(--link-light-2);
+  text-decoration:underline;
+}
+
+.section[data-theme=bg-light-three]:not(:root){
+  background-color:var(--bg-light-3);
+  color:var(--body-light-3);
+}
+.section[data-theme=bg-light-three]:not(:root) .default-content-wrapper h1,
+.section[data-theme=bg-light-three]:not(:root) h2,
+.section[data-theme=bg-light-three]:not(:root) h3,
+.section[data-theme=bg-light-three]:not(:root) h4,
+.section[data-theme=bg-light-three]:not(:root) h5,
+.section[data-theme=bg-light-three]:not(:root) h6{
+  color:var(--heading-light-3);
+}
+.section[data-theme=bg-light-three]:not(:root) p,
+.section[data-theme=bg-light-three]:not(:root) li,
+.section[data-theme=bg-light-three]:not(:root) span{
+  color:var(--body-light-3);
+}
+.section[data-theme=bg-light-three]:not(:root) h1,
+.section[data-theme=bg-light-three]:not(:root) h2,
+.section[data-theme=bg-light-three]:not(:root) h3,
+.section[data-theme=bg-light-three]:not(:root) h4,
+.section[data-theme=bg-light-three]:not(:root) h5,
+.section[data-theme=bg-light-three]:not(:root) h6{
+  color:var(--heading-light-3);
+}
+.section[data-theme=bg-light-three]:not(:root) a{
+  color:var(--link-light-3);
+  text-decoration:underline;
+}
+
+.section[data-theme=bg-reverse]:not(:root){
+  background-color:var(--bg-reverse);
+  color:var(--body-reverse);
+}
+.section[data-theme=bg-reverse]:not(:root) .default-content-wrapper h1,
+.section[data-theme=bg-reverse]:not(:root) h2,
+.section[data-theme=bg-reverse]:not(:root) h3,
+.section[data-theme=bg-reverse]:not(:root) h4,
+.section[data-theme=bg-reverse]:not(:root) h5,
+.section[data-theme=bg-reverse]:not(:root) h6{
+  color:var(--heading-reverse);
+}
+.section[data-theme=bg-reverse]:not(:root) p,
+.section[data-theme=bg-reverse]:not(:root) li,
+.section[data-theme=bg-reverse]:not(:root) span{
+  color:var(--body-reverse);
+}
+.section[data-theme=bg-reverse]:not(:root) h1,
+.section[data-theme=bg-reverse]:not(:root) h2,
+.section[data-theme=bg-reverse]:not(:root) h3,
+.section[data-theme=bg-reverse]:not(:root) h4,
+.section[data-theme=bg-reverse]:not(:root) h5,
+.section[data-theme=bg-reverse]:not(:root) h6{
+  color:var(--heading-reverse);
+}
+.section[data-theme=bg-reverse]:not(:root) a{
+  color:var(--link-reverse);
+  text-decoration:underline;
+}
+
+.section[data-theme=bg-reverse-two]:not(:root){
+  background-color:var(--bg-reverse-2);
+  color:var(--body-reverse-2);
+}
+.section[data-theme=bg-reverse-two]:not(:root) .default-content-wrapper h1,
+.section[data-theme=bg-reverse-two]:not(:root) h2,
+.section[data-theme=bg-reverse-two]:not(:root) h3,
+.section[data-theme=bg-reverse-two]:not(:root) h4,
+.section[data-theme=bg-reverse-two]:not(:root) h5,
+.section[data-theme=bg-reverse-two]:not(:root) h6{
+  color:var(--heading-reverse-2);
+}
+.section[data-theme=bg-reverse-two]:not(:root) p,
+.section[data-theme=bg-reverse-two]:not(:root) li,
+.section[data-theme=bg-reverse-two]:not(:root) span{
+  color:var(--body-reverse-2);
+}
+.section[data-theme=bg-reverse-two]:not(:root) h1,
+.section[data-theme=bg-reverse-two]:not(:root) h2,
+.section[data-theme=bg-reverse-two]:not(:root) h3,
+.section[data-theme=bg-reverse-two]:not(:root) h4,
+.section[data-theme=bg-reverse-two]:not(:root) h5,
+.section[data-theme=bg-reverse-two]:not(:root) h6{
+  color:var(--heading-reverse-2);
+}
+.section[data-theme=bg-reverse-two]:not(:root) a{
+  color:var(--link-reverse-2);
+  text-decoration:underline;
+}
+
+.section[data-theme=bg-accent]:not(:root){
+  background-color:var(--bg-accent);
+  color:var(--body-accent);
+}
+.section[data-theme=bg-accent]:not(:root) .default-content-wrapper h1,
+.section[data-theme=bg-accent]:not(:root) h2,
+.section[data-theme=bg-accent]:not(:root) h3,
+.section[data-theme=bg-accent]:not(:root) h4,
+.section[data-theme=bg-accent]:not(:root) h5,
+.section[data-theme=bg-accent]:not(:root) h6{
+  color:var(--heading-accent);
+}
+.section[data-theme=bg-accent]:not(:root) p,
+.section[data-theme=bg-accent]:not(:root) li,
+.section[data-theme=bg-accent]:not(:root) span{
+  color:var(--body-accent);
+}
+.section[data-theme=bg-accent]:not(:root) h1,
+.section[data-theme=bg-accent]:not(:root) h2,
+.section[data-theme=bg-accent]:not(:root) h3,
+.section[data-theme=bg-accent]:not(:root) h4,
+.section[data-theme=bg-accent]:not(:root) h5,
+.section[data-theme=bg-accent]:not(:root) h6{
+  color:var(--heading-accent);
+}
+.section[data-theme=bg-accent]:not(:root) a{
+  color:var(--link-accent);
+  text-decoration:underline;
+}
+
 .spacer-bottom{
   margin-bottom:80px;
 }
@@ -566,10 +776,10 @@ h6{
   position:relative;
 }
 .bottom-partition::after{
-  background:var(--line-default);
+  border-bottom:1px solid var(--line-default);
   bottom:0;
   content:"";
-  height:1px;
+  height:0;
   left:0;
   margin:0 auto;
   max-width:1312px;
