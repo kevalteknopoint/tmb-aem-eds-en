@@ -46,32 +46,3 @@ import './momentum-saver-analytics.js';
     momentumImpactContainer.classList.add(brandClassName);
   }
 }());
-
-document.addEventListener("click", function (e) {
-  const link = e.target.closest("a");
-
-  if (!link || !link.href) return;
-
-  // Only target your problematic domain
-  if (!link.href.includes("ast.tmbank.com.au")) return;
-
-  try {
-    const url = new URL(link.href);
-
-    if (url.searchParams.has("encp")) {
-      e.preventDefault();
-
-      let encp = url.searchParams.get("encp");
-
-      // Re-encode safely
-      const fixedEncp = encodeURIComponent(encp);
-
-      url.searchParams.set("encp", fixedEncp);
-
-      // Redirect with corrected URL
-      window.location.href = url.toString();
-    }
-  } catch (err) {
-    // fail silently
-  }
-});
