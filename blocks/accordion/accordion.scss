@@ -51,7 +51,7 @@
 
           p {
             @include typo-heading5;
-            
+
             color: $heading-default;
           }
 
@@ -76,24 +76,101 @@
             padding-right: 24px;
           }
 
-          h1,
-          h2,
-          h3,
-          h4,
-          h5,
-          h6 {
+          // h1,
+          // h2,
+          // h3,
+          // h4,
+          // h5,
+          // h6 {
+          //   @include typo-heading3;
+
+          //   color: $heading-default;
+          //   margin-top: 40px;
+
+          //   &:first-child {
+          //     margin-top: 0;
+          //   }
+
+          //   @include mobile {
+          //     margin-top: 24px;
+          //   }
+          // }
+          h1 {
+            @include typo-heading1;
+
+            color: $heading-default;
+            margin-bottom: 40px;
+
+            @include mobile {
+              margin-bottom: 24px;
+            }
+
+            &:has(& + p) {
+              margin-bottom: 16px;
+
+              @include mobile {
+                margin-bottom: 16px
+              }
+
+              &+p {
+                margin-bottom: 40px;
+
+                @include mobile {
+                  margin-bottom: 24px;
+                }
+              }
+            }
+          }
+
+          h2 {
+            @include typo-heading2-std;
+
+            color: $heading-default;
+            margin-bottom: 24px;
+
+            &:not(:first-child) {
+              margin-top: 40px;
+
+              @include mobile {
+                margin-top: 24px;
+              }
+            }
+
+            &:has(& + p) {
+              margin-bottom: 16px;
+
+              &+p {
+                margin-bottom: 24px;
+              }
+            }
+          }
+
+          h3 {
             @include typo-heading3;
 
             color: $heading-default;
-            margin-top: 40px;
+            margin-bottom: 16px;
+            margin-top: 24px;
+          }
 
-            &:first-child {
-              margin-top: 0;
-            }
+          h4 {
+            @include typo-heading4;
 
-            @include mobile {
-              margin-top: 24px;
-            }
+            color: $heading-default;
+            margin-bottom: 16px;
+          }
+
+          h5 {
+            @include typo-heading5;
+
+            color: $heading-default;
+            margin-bottom: 16px;
+          }
+
+          h6 {
+            @include typo-disclaimer;
+
+            color: $body-default;
           }
 
           p {
