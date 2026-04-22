@@ -55,13 +55,33 @@
 
   .navigation-cards.block {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(304px, 1fr));
+    grid-template-columns: 1fr;
     gap: 32px;
     align-items: stretch;
     margin-bottom: 32px;
     
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &:has(> :nth-child(3):last-child) {
+     grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      @include mobile {
+         grid-template-columns: 1fr;
+      }
+    }
+
+    &:has(> :nth-child(4):last-child) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+
+      @include tablet {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      @include mobile {
+         grid-template-columns: 1fr;
+      }
     }
     
     @include tablet {
