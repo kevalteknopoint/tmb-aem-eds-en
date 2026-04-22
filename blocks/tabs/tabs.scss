@@ -153,6 +153,7 @@
         border-radius: $radius-card;
         padding: 24px 32px;
         outline: none;
+        -webkit-tap-highlight-color: transparent;
 
         @include tablet {
           display: flex;
@@ -181,7 +182,8 @@
             left: unset;
             bottom: 0;
             height: calc(100% - 48px);
-            width: 1px;
+            width: 0;
+            border-left: 1px solid $heading-default;
           }
         }
 
@@ -190,11 +192,17 @@
         }
 
         &:focus-visible {
-          box-shadow: 0 0 0 2px $color-focus-reversed, 0 0 0 6px $color-focus-default;
-          margin: 8px;
+          box-shadow: inset 0 0 0 2px $color-focus-default, inset 0 0 0 4px $color-focus-reversed;
 
           &::after {
             content: unset;
+          }
+        }
+
+        &:hover p {
+          .icon-svg-wrap,
+          svg {
+            transition: none;
           }
         }
 
@@ -212,7 +220,7 @@
 
         &[aria-selected='true'] {
           background-color: $heading-default;
-          border: 2px solid $link-reverse;
+          //border: 2px solid $link-reverse;
 
           p {
             color: $heading-reverse;
@@ -257,11 +265,11 @@
           }
 
           .icon-svg-wrap {
-            transition: all 0.3s ease-in-out;
+            transition: all 0.15s ease-in-out;
           }
 
           svg {
-            transition: all 0.3s ease-in-out;
+            transition: all 0.15s ease-in-out;
             min-width: 64px;
             min-height: 64px;
             width: 64px;
