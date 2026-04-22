@@ -1142,7 +1142,7 @@
   width:100%;
 }
 
-.overseas-variant .overseas-columns .overseas-columns-wrapper .content-with-icon span{
+.overseas-variant .overseas-columns .overseas-columns-wrapper .content-with-icon > span:first-child{
   position:relative;
   top:4px;
 }
