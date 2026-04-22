@@ -1142,6 +1142,11 @@
   width:100%;
 }
 
+.overseas-variant .overseas-columns .overseas-columns-wrapper .content-with-icon span{
+  position:relative;
+  top:4px;
+}
+
 .overseas-variant .overseas-columns .overseas-columns-wrapper .content-with-icon p{
   font-family:var(--font-family-body);
   font-size:var(--font-size-body);
@@ -1163,17 +1168,25 @@
   margin-bottom:0;
 }
 
-.overseas-variant .overseas-columns .overseas-columns-wrapper .icon-checkmark .icon-svg,
-.overseas-variant .overseas-columns .overseas-columns-wrapper .icon-circle-close-cross-close .icon-svg{
+.overseas-variant .overseas-columns .overseas-columns-wrapper .icon-checkmark .icon-svg{
   color:var(--icon-2-default);
   height:32px;
   min-width:32px;
   width:32px;
 }
 
+.overseas-variant .overseas-columns .overseas-columns-wrapper .icon-thick-cross .icon-svg{
+  color:var(--icon-2-default);
+  height:24px;
+  min-width:24px;
+  width:24px;
+}
+
 .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)){
+  border-left:1px solid var(--line-default);
   display:grid;
   grid-template-columns:repeat(2, 1fr);
+  padding-left:var(--space-xl);
 }
 
 .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) > h1, .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) h2, .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) h3, .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) h4, .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) h5, .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) h6{
@@ -1528,6 +1541,12 @@
     max-width:unset;
   }
 
+  .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)){
+    border-left:0;
+    display:block;
+    padding-left:0;
+  }
+
   .columns > div > .columns-img-col.col-width-default{
     width:100%;
   }
@@ -1707,6 +1726,12 @@
 
   .money-overseas .overseas-columns-wrapper{
     gap:24px;
+  }
+
+  .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)){
+    border-left:0;
+    display:block;
+    padding-left:0;
   }
 
   .section.has-col-layout .columns.col-1-100.block > div{
