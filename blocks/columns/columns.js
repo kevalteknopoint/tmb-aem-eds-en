@@ -4,6 +4,18 @@ import decorateCustomer from "./customer.js";
 import decorateMoneyOverseas from "./money-overseas.js";
 
 export default function decorate(block) {
+  // Check if the block has any col-* layout class
+  // Adding col layout class to section
+  const hasColLayout = [...block.classList].some((cls) =>
+    cls.startsWith('col-')
+  );
+
+  if (hasColLayout) {
+    const section = block.closest('.section');
+    if (section) {
+      section.classList.add('has-col-layout');
+    }
+  }
   if (window.location.origin.includes('author')) return;
 
   if (block.closest('.faq-landing-banner')) {

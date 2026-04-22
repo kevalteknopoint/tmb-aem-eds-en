@@ -884,13 +884,14 @@
   align-items:baseline;
   color:var(--body-default);
   counter-increment:step-counter;
+  display:flex;
   font-family:var(--font-family-body);
   font-size:var(--font-size-body);
   font-weight:var(--font-weight-body);
+  gap:12px;
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   margin-bottom:10px;
-  position:relative;
   text-transform:var(--body-case);
 }
 
@@ -898,7 +899,6 @@
   align-items:center;
   border:1px solid rgb(0 82 91 / 10%);
   border-radius:var(--radius-button);
-  bottom:-5px;
   color:var(--heading-default);
   content:counter(step-counter);
   display:flex;
@@ -906,9 +906,7 @@
   font-weight:500;
   height:32px;
   justify-content:center;
-  margin-left:-45px;
   min-width:32px;
-  position:absolute;
   width:-moz-fit-content;
   width:fit-content;
 }
@@ -931,14 +929,14 @@
 .money-overseas .overseas-columns-wrapper ol > li:has(p) p{
   align-items:baseline;
   counter-increment:step-counter;
-  position:relative;
+  display:flex;
+  gap:12px;
 }
 
 .money-overseas .overseas-columns-wrapper ol > li:has(p) p::before{
   align-items:center;
   border:1px solid rgb(0 82 91 / 10%);
   border-radius:var(--radius-button);
-  bottom:-5px;
   color:var(--heading-default);
   content:counter(step-counter);
   display:flex;
@@ -946,9 +944,7 @@
   font-weight:500;
   height:32px;
   justify-content:center;
-  margin-left:-44px;
   min-width:32px;
-  position:absolute;
   width:-moz-fit-content;
   width:fit-content;
 }
@@ -1146,6 +1142,11 @@
   width:100%;
 }
 
+.overseas-variant .overseas-columns .overseas-columns-wrapper .content-with-icon span{
+  position:relative;
+  top:4px;
+}
+
 .overseas-variant .overseas-columns .overseas-columns-wrapper .content-with-icon p{
   font-family:var(--font-family-body);
   font-size:var(--font-size-body);
@@ -1163,11 +1164,33 @@
   text-underline-offset:3px;
 }
 
+.overseas-variant .overseas-columns .overseas-columns-wrapper .content-with-icon:last-of-type{
+  margin-bottom:0;
+}
+
 .overseas-variant .overseas-columns .overseas-columns-wrapper .icon-checkmark .icon-svg{
   color:var(--icon-2-default);
   height:32px;
   min-width:32px;
   width:32px;
+}
+
+.overseas-variant .overseas-columns .overseas-columns-wrapper .icon-thick-cross .icon-svg{
+  color:var(--icon-2-default);
+  height:24px;
+  min-width:24px;
+  width:24px;
+}
+
+.overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)){
+  border-left:1px solid var(--line-default);
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  padding-left:var(--space-xl);
+}
+
+.overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) > h1, .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) h2, .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) h3, .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) h4, .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) h5, .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) h6{
+  grid-column:1/-1;
 }
 
 .columns img{
@@ -1192,6 +1215,255 @@
 }
 
 .columns > div > .columns-img-col.col-width-default{
+  width:calc(50% - var(--space-md));
+}
+
+.section.has-col-layout .columns{
+  display:grid;
+}
+
+.section.has-col-layout .columns.col-1-100.block > div{
+  display:grid;
+  gap:32px;
+  grid-template-columns:1fr;
+}
+
+.section.has-col-layout .columns.col-1-100.block > div > div{
+  min-width:0;
+  width:100%;
+}
+
+.section.has-col-layout .columns.col-1-75.block > div{
+  display:grid;
+  gap:32px;
+  grid-template-columns:75%;
+}
+
+.section.has-col-layout .columns.col-1-75.block > div > div{
+  min-width:0;
+  width:100%;
+}
+
+.section.has-col-layout .columns.col-1-66.block > div{
+  display:grid;
+  gap:32px;
+  grid-template-columns:66%;
+}
+
+.section.has-col-layout .columns.col-1-66.block > div > div{
+  min-width:0;
+  width:100%;
+}
+
+.section.has-col-layout .columns.col-1-50.block > div{
+  display:grid;
+  gap:32px;
+  grid-template-columns:50%;
+}
+
+.section.has-col-layout .columns.col-1-50.block > div > div{
+  min-width:0;
+  width:100%;
+}
+
+.section.has-col-layout .columns.col-2-1-1.block > div{
+  display:grid;
+  gap:32px;
+  grid-template-columns:1fr 1fr;
+}
+
+.section.has-col-layout .columns.col-2-1-1.block > div > div{
+  min-width:0;
+  width:100%;
+}
+
+.section.has-col-layout .columns.col-2-1-1-t.block > div{
+  display:grid;
+  gap:32px;
+  grid-template-columns:1fr 1fr;
+}
+
+.section.has-col-layout .columns.col-2-1-1-t.block > div > div{
+  min-width:0;
+  width:100%;
+}
+
+.section.has-col-layout .columns.col-2-1-2.block > div{
+  display:grid;
+  gap:32px;
+  grid-template-columns:1fr 2fr;
+}
+
+.section.has-col-layout .columns.col-2-1-2.block > div > div{
+  min-width:0;
+  width:100%;
+}
+
+.section.has-col-layout .columns.col-2-2-1.block > div{
+  display:grid;
+  gap:32px;
+  grid-template-columns:2fr 1fr;
+}
+
+.section.has-col-layout .columns.col-2-2-1.block > div > div{
+  min-width:0;
+  width:100%;
+}
+
+.section.has-col-layout .columns.col-2-1-3.block > div{
+  display:grid;
+  gap:32px;
+  grid-template-columns:1fr 3fr;
+}
+
+.section.has-col-layout .columns.col-2-1-3.block > div > div{
+  min-width:0;
+  width:100%;
+}
+
+.section.has-col-layout .columns.col-2-3-1.block > div{
+  display:grid;
+  gap:32px;
+  grid-template-columns:3fr 1fr;
+}
+
+.section.has-col-layout .columns.col-2-3-1.block > div > div{
+  min-width:0;
+  width:100%;
+}
+
+.section.has-col-layout .columns.col-2-1-2-g.block > div{
+  display:grid;
+  gap:80px;
+  grid-template-columns:1fr 2fr;
+}
+
+.section.has-col-layout .columns.col-2-1-2-g.block > div > div{
+  min-width:0;
+  width:100%;
+}
+
+.section.has-col-layout .columns.col-2-2-1-g.block > div{
+  display:grid;
+  gap:80px;
+  grid-template-columns:2fr 1fr;
+}
+
+.section.has-col-layout .columns.col-2-2-1-g.block > div > div{
+  min-width:0;
+  width:100%;
+}
+
+.section.has-col-layout .columns.col-2-1-3-g.block > div{
+  display:grid;
+  gap:80px;
+  grid-template-columns:1fr 3fr;
+}
+
+.section.has-col-layout .columns.col-2-1-3-g.block > div > div{
+  min-width:0;
+  width:100%;
+}
+
+.section.has-col-layout .columns.col-2-3-1-g.block > div{
+  display:grid;
+  gap:80px;
+  grid-template-columns:3fr 1fr;
+}
+
+.section.has-col-layout .columns.col-2-3-1-g.block > div > div{
+  min-width:0;
+  width:100%;
+}
+
+.section.has-col-layout .columns.col-3-1-1-1.block > div{
+  display:grid;
+  gap:32px;
+  grid-template-columns:1fr 1fr 1fr;
+}
+
+.section.has-col-layout .columns.col-3-1-1-1.block > div > div{
+  min-width:0;
+  width:100%;
+}
+
+.section.has-col-layout .columns.col-3-1-1-1-g.block > div{
+  display:grid;
+  gap:80px;
+  grid-template-columns:1fr 1fr 1fr;
+}
+
+.section.has-col-layout .columns.col-3-1-1-1-g.block > div > div{
+  min-width:0;
+  width:100%;
+}
+
+.section.has-col-layout .columns.col-4-1-1-1-1.block > div{
+  display:grid;
+  gap:32px;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+}
+
+.section.has-col-layout .columns.col-4-1-1-1-1.block > div > div{
+  min-width:0;
+  width:100%;
+}
+
+.section.has-col-layout .columns.col-4-1-1-1-1-t.block > div{
+  display:grid;
+  gap:32px;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+}
+
+.section.has-col-layout .columns.col-4-1-1-1-1-t.block > div > div{
+  min-width:0;
+  width:100%;
+}
+
+.section.has-col-layout .columns.col-4-1-1-1-1-g.block > div{
+  display:grid;
+  gap:64px;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+}
+
+.section.has-col-layout .columns.col-4-1-1-1-1-g.block > div > div{
+  min-width:0;
+  width:100%;
+}
+
+.section.has-col-layout .columns.col-4-1-1-1-1-t-g.block > div{
+  display:grid;
+  gap:64px;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+}
+
+.section.has-col-layout .columns.col-4-1-1-1-1-t-g.block > div > div{
+  min-width:0;
+  width:100%;
+}
+
+.section.has-col-layout .columns img{
+  width:100%;
+}
+
+.section.has-col-layout .columns > div{
+  display:flex;
+  flex-direction:column;
+}
+
+.section.has-col-layout .columns > div > div{
+  order:1;
+}
+
+.section.has-col-layout .columns > div > .columns-img-col{
+  order:0;
+}
+
+.section.has-col-layout .columns > div > .columns-img-col img{
+  display:block;
+}
+
+.section.has-col-layout .columns > div > .columns-img-col.col-width-default{
   width:calc(50% - var(--space-md));
 }
 
@@ -1269,7 +1541,115 @@
     max-width:unset;
   }
 
+  .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)){
+    border-left:0;
+    display:block;
+    padding-left:0;
+  }
+
   .columns > div > .columns-img-col.col-width-default{
+    width:100%;
+  }
+
+  .section.has-col-layout .columns.col-1-100.block > div{
+    gap:24px;
+  }
+
+  .section.has-col-layout .columns.col-1-75.block > div{
+    gap:24px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-1-66.block > div{
+    gap:24px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-1-50.block > div{
+    gap:24px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-2-1-1.block > div{
+    gap:24px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-2-1-1-t.block > div{
+    gap:24px;
+  }
+
+  .section.has-col-layout .columns.col-2-1-2.block > div{
+    gap:24px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-2-2-1.block > div{
+    gap:24px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-2-1-3.block > div{
+    gap:24px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-2-3-1.block > div{
+    gap:24px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-2-1-2-g.block > div{
+    gap:24px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-2-2-1-g.block > div{
+    gap:24px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-2-1-3-g.block > div{
+    gap:24px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-2-3-1-g.block > div{
+    gap:24px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-3-1-1-1.block > div{
+    gap:24px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-3-1-1-1-g.block > div{
+    gap:24px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-4-1-1-1-1.block > div{
+    gap:24px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-4-1-1-1-1-t.block > div{
+    gap:24px;
+    grid-template-columns:1fr 1fr;
+  }
+
+  .section.has-col-layout .columns.col-4-1-1-1-1-g.block > div{
+    gap:24px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-4-1-1-1-1-t-g.block > div{
+    gap:24px;
+    grid-template-columns:1fr 1fr;
+  }
+
+  .section.has-col-layout .columns > div > .columns-img-col.col-width-default{
     width:100%;
   }
 }
@@ -1346,5 +1726,110 @@
 
   .money-overseas .overseas-columns-wrapper{
     gap:24px;
+  }
+
+  .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)){
+    border-left:0;
+    display:block;
+    padding-left:0;
+  }
+
+  .section.has-col-layout .columns.col-1-100.block > div{
+    gap:16px;
+  }
+
+  .section.has-col-layout .columns.col-1-75.block > div{
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-1-66.block > div{
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-1-50.block > div{
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-2-1-1.block > div{
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-2-1-1-t.block > div{
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-2-1-2.block > div{
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-2-2-1.block > div{
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-2-1-3.block > div{
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-2-3-1.block > div{
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-2-1-2-g.block > div{
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-2-2-1-g.block > div{
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-2-1-3-g.block > div{
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-2-3-1-g.block > div{
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-3-1-1-1.block > div{
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-3-1-1-1-g.block > div{
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-4-1-1-1-1.block > div{
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-4-1-1-1-1-t.block > div{
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-4-1-1-1-1-g.block > div{
+    gap:16px;
+    grid-template-columns:1fr;
+  }
+
+  .section.has-col-layout .columns.col-4-1-1-1-1-t-g.block > div{
+    gap:16px;
+    grid-template-columns:1fr;
   }
 }
