@@ -336,11 +336,11 @@
         max-width: unset;
         margin-bottom: 10px;
 
-        span {
+        > span:first-child {
           position: relative;
           top: 4px;
         }
-
+        
         p {
           padding: 4px 0;
           margin-bottom: 0;
@@ -394,7 +394,7 @@
           }
       }
       
-      // ✅ Divider ONLY when 2nd column has 4 content-with-icon items
+      // Divider ONLY when 2nd column has 4 content-with-icon items
       > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) {
         border-left: 1px solid $line-default;
         padding-left: $space-xl;
