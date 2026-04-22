@@ -1,195 +1,239 @@
 @use '../../styles/base' as *;
 
-.faq-product-detail-wrapper {
-  width: 100%;
+html {
+  scroll-behavior: smooth;
 }
 
-.faq-accordion {
+.faq-heading-section {
   @include responsive-container;
 
-  display: grid;
-  grid-template-columns: 417px auto;
-  column-gap: 32px;
+  h1, h2, h3, h4, h5, h6 {
+    color: $heading-default;
+    font-family: $primary-font;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0;
+    padding: 32px 0;
+    max-width: 1440px;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 1;
+    transform: translateY(0);
 
-  @include tablet {
-    grid-template-columns: auto;
-    row-gap: 32px;
+    @include tablet {
+      font-size: 32px;
+      line-height: 40px;
+      padding: 24px 0 0;
+    }
+
+    &[style*="none"] {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+}
+
+.section-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 74px;
+  position: relative;
+  align-items: start;
+  padding-block: 32px;
+
+  &:has(.right-section-wrapper) {
+    grid-template-columns: 1fr 392px;
   }
 
   .default-content-wrapper {
-    &:last-child:not(:nth-child(2)) {
-      margin-top: 16px;
-      grid-column: 1 / -1;
-      text-align: center;
-    }
+    display: none;
+  }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: $heading-default;
+  @include responsive-container;
 
-      @include typo-heading1;
-    }
+  @include tablet {
+    padding-block: 24px;
+  }
 
-    p {
-      @include typo-body;
+  .sub-section-wrapper h3[id] {
+    scroll-margin-top: 0;
+  }
 
-      margin-top: 16px;
+  .sub-section-wrapper:not(.right-section-wrapper) {
+    grid-column: 1;
+    grid-row: auto;
+
+    h3 {
       color: $body-default;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0;
+      padding: 0 0 30px;
+    }
+
+    h1, p, h2, h4, h5, h6, li {
+      color: $body-default;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      padding-bottom: 32px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-bottom: 32px;
+      list-style-position: outside;
+      padding-left: 24px;
+
+      li {
+        padding-bottom: 8px;
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    ol {
+      padding-bottom: 32px;
+      list-style-type: decimal;
+      list-style-position: inside;
+
+      li {
+        padding: 0;
+      }
     }
 
     a {
       color: $link-default;
       text-decoration: underline;
+      text-decoration-color: $link-default;
     }
 
-    .button-container {
-      display: inline-block;
-      margin-top: 24px;
-      margin-right: 8px;
-      margin-bottom: 0;
-
-      a:not(.secondary) {
-        @include button('primary');
-
-        font-style: normal;
-        text-decoration: unset;
-      }
-      
-      a.secondary {
-        @include button('outlined');
-        
-        font-style: normal;
-        text-decoration: unset;
-      }
+    iframe {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      margin-top: 16px;
+      height: auto;
     }
   }
 
-  .accordion-wrapper {
-    width: 100%;
+  .right-section-wrapper {
+    grid-column: 2;
+    grid-row: 1 / 100;
+    align-self: start;
+    margin-top: 0;
+    position: sticky;
+    top: 0;
+    height: max-content;
+    width: 326px;
 
-    .block {
-      .accordion-item {
-        border-bottom: 1px solid var(--line-default);
-        // border-top: 1px solid var(--line-default);
-        padding: 16px 0;
+    h1, h2, h3, h4, h5, h6 {
+      color: $heading-default;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 36px;
+      letter-spacing: -1px;
+      padding: 12px 0;
+      border-bottom: 1px solid #00525b33; /* FIGMA TOKEN MISSING */
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
 
-        &::-webkit-details-marker {
-          display: none !important;
-        }
-
-        .accordion-item-label {
-          list-style: none;
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-
-          // Safari Fix: Ensure the summary behaves like a block/flex item
-          &::marker,
-          &::-webkit-details-marker {
-            display: none;
-          }
-
-          p {
-            color: $color-button-primary-default;
-            margin-top: 4px;
-
-            @include typo-heading3
-          }
-
-          svg {
-            color: $color-button-primary-default;
-            min-width: 40px;
-            width: 40px;
-            height: 40px;
-            padding: 8px;
-            border-radius: 44px;
-            background: $bg-light;
-            cursor: pointer;
-            margin-left: 32px;
-            transform: rotate(180deg);
-          }
-        }
-
-        .accordion-item-body {
-          margin-top: 8px;
-
-          h1,
-          h2,
-          h3,
-          h4,
-          h5 {
-            @include typo-heading3;
-
-            color: $heading-default;
-            margin-top: 40px;
-
-            &:first-child {
-              margin-top: 0;
-            }
-
-            @include mobile {
-              margin-top: 24px;
-            }
-          }
-
-          h6 {
-            margin-bottom: 16px;
-          }
-
-          p {
-            @include typo-body;
-
-            margin: 0;
-            margin-bottom: 16px;
-            color: $body-default;
-
-            b {
-              @include typo-body-bold;
-            }
-          }
-
-          a {
-            color: $link-default;
-            text-decoration: underline;
-          }
-
-          ol,
-          ul {
-            margin-bottom: 16px;
-            list-style: decimal;
-            padding-left: 24px;
-
-            li {
-              margin-bottom: 8px;
-            }
-          }
-
-          ul {
-            list-style: disc;
-          }
-        }
-
-        &[open] {
-          summary {
-            svg {
-              transform: rotate(0deg);
-            }
-          }
-        }
-
-        &.accordion-item:first-child {
-          border-top: none;
-          padding-top: 0;
-        }
-
-        &.accordion-item:last-child {
-          border-bottom: none;
-        }
+      &.hide-heading {
+        padding: 0;
       }
+    }
+
+    p {
+      color: #565659; /* FIGMA TOKEN MISSING */
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0;
+      padding: 24px 0;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex: 1 0 0;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #00525b33; /* FIGMA TOKEN MISSING */
+
+      .faq-number {
+        display: block;
+        min-width: 28px;
+        width: fit-content;
+      }
+
+      a {
+        padding: 5px;
+        color: $body-default;
+        text-decoration: none;
+        transition: color 0.3s;
+        width: 100%;
+      }
+
+      a:hover {
+        text-decoration-line: underline;
+      }
+
+      a.active {
+        background-color: $color-footer-info;
+        transition: 0.3s;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: $body-default;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0;
+      }
+    }
+  }
+}
+
+.img-1-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  img {
+    width: 100%;
+  }
+}
+
+.img-2-grid, .img-4-grid, .img-6-grid {
+  max-width: 1328px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  img {
+    width: 100%;
+  }
+}
+
+@include tablet {
+  .section-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    .right-section-wrapper {
+      display: none;
     }
   }
 }
