@@ -73,13 +73,37 @@ document.addEventListener('click', (e) => {
       'online banking',
     );
   }
-  if (e.target.closest('.online-banking .banking-li-3')?.querySelector(".card-bottom-2 a")) {
-    // const secondaryLink = e.target.closest('.quick-links-container').querySelector("card-bottom-3 a");
-    const pageRegion = getPageRegion(e.target.closest('.online-banking .banking-li-3')?.querySelector(".card-bottom-2 a"));
-    const componentIndexLi3 = getComponentIndex(e.target.closest('.online-banking .banking-li-3')?.querySelector(".card-bottom-2 a"));
-    const ctaLink = e.target.closest('.online-banking .banking-li-3')?.querySelector(".card-bottom-2 a");
-    const ctaTitleLi3 = e.target.closest('.online-banking .banking-li-3').querySelector('.banking-desc-1');
-    const nextPageURL3 = e.target.closest('.online-banking .banking-li-3').querySelector(".card-bottom-2 a")?.getAttribute("href");
-    ctaInteraction(pageRegion, minifyText(ctaLink?.textContent), minifyText(ctaTitleLi3?.textContent), '', 'online-banking', 'cards-container', componentIndexLi3, getPersona(), nextPageURL3, 'cta-click', 'internal', 'quick-link', 'internal', '', '', '', 'online-banking', '');
-  }
+const card = e.target.closest('.online-banking li');
+if (card?.querySelector('.card-bottom-2 a')) {
+  const ctaLink = card.querySelector('.card-bottom-2 a');
+  const ctaTitleEl = card.querySelector('.banking-desc-1');
+  const sectionEl = e.target.closest('.online-banking');
+  const componentId = sectionEl?.getAttribute('data-component-id') || sectionEl?.id || '';
+  const titleText = minifyText(ctaTitleEl?.textContent);
+  const ctaSource = minifyText(sectionEl?.querySelector('h1, h2, h3, h4, h5, h6')?.textContent);
+  const componentIndex = getComponentIndex(ctaLink);
+  const pageRegion = getPageRegion(ctaLink);
+  const nextPageURL = ctaLink.getAttribute("href");
+
+  ctaInteraction(
+    pageRegion,
+    minifyText(ctaLink?.textContent),
+    titleText,
+    ctaSource,
+    'online-banking',
+    '',
+    componentIndex,
+    getPersona(),
+    nextPageURL,
+    'cta-click',
+    'internal',
+    'quick-link',
+    'internal',
+    '',
+    '',
+    '',
+    componentId,
+    ''
+  );
+}
 });

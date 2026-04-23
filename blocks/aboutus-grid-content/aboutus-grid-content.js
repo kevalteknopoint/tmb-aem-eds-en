@@ -6,30 +6,40 @@ import {
   getComponentIndex
 } from "../../scripts/analytics/exports.js";
 
+const HEADING_SELECTOR = 'h1, h2, h3, h4, h5, h6';
+
 const eventListener = (e) => {
   const link = e.target.closest('.aboutus-grid-content .button-container a');
   if (!link) return;
 
-  //  Get the correct card (each <div> block)
+  const section = link.closest('.aboutus-grid-content');
   const card = link.closest('div');
 
-  //  Title for that specific card
-  const ctaTitle = card?.querySelector('h1, h2, h3, h4');
+  // ✅ Card title (per item)
+  const ctaTitleEl = card?.querySelector(HEADING_SELECTOR);
+  const ctaTitle = minifyText(ctaTitleEl?.textContent || '');
 
-  //  Optional source (keep if needed, else remove)
-  const ctaSource = card?.querySelector('p');
+  // ✅ Section heading (fallback logic)
+  const sectionHeadingEl = section?.querySelector(`.default-content-wrapper ${HEADING_SELECTOR}`) ||section?.querySelector(HEADING_SELECTOR);
+  const sectionHeading = minifyText(sectionHeadingEl?.textContent || '');
 
+  // ✅ Dynamic fields
+  const ctaText = minifyText(link.textContent);
+  const ctaSource = sectionHeading;
+  const componentName = sectionHeading;
+  const componentType = section?.querySelector('[data-block-name]')?.getAttribute('data-block-name') || '';
+  const componentId =section?.getAttribute('data-component-id') ||section?.id ||'';
   const pageRegion = getPageRegion(link);
   const componentIndex = getComponentIndex(link);
   const nextPageURL = link.getAttribute("href");
 
   ctaInteraction(
     pageRegion,
-    minifyText(link.textContent),
-    minifyText(ctaTitle?.textContent),
-    minifyText(ctaSource?.textContent || ''),
-    'committee',
-    'columns',
+    ctaText,
+    ctaTitle,
+    ctaSource,
+    componentName,
+    componentType,
     componentIndex,
     getPersona(),
     nextPageURL,
@@ -40,11 +50,11 @@ const eventListener = (e) => {
     '',
     '',
     '',
+    componentId,
     '',
     '',
     '',
-    '',
-    'committee'
+    ''
   );
 };
 

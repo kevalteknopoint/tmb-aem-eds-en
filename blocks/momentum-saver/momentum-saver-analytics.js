@@ -32,18 +32,17 @@ document.addEventListener('click', (e) => {
         'columns-container',
         componentIndex,
         persona,
-        '',
+        componentId,
         nextPageURL,
         'cta-link',
         'internal',
         'in-content',
         ctaText,
         fileExt,
-        componentId
+        'download'
       );
       return;
     }
-
     ctaInteraction(
       pageRegion,
       ctaText,
@@ -96,14 +95,14 @@ document.addEventListener('click', (e) => {
         'columns-container',
         componentIndex,
         persona,
-        '',
+        componentId,
         nextPageURL,
         'cta-link',
         'internal',
         'in-content',
         ctaText,
         fileExt,
-        componentId
+        'download'
       );
       return;
     }
@@ -299,14 +298,14 @@ document.addEventListener('click', (e) => {
       'columns container',
       componentIndex,
       persona,
-      '',
+      componentId,
       nextPageURL,
       'cta-link',
       'internal',
       'in-content',
       ctaText,
       fileExt,
-      componentId
+      'download'
     );
     return;
   }
