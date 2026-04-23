@@ -28,19 +28,27 @@ export default function decorateMoneyOverseas() {
             container.remove();
           });
         }
-        const paragraphs = textCol.querySelectorAll("p");
-        paragraphs.forEach((pTag) => {
-          if (!pTag?.querySelector("span.icon")) return;
-          const innerSpan = pTag.querySelector("span.icon")?.cloneNode(true);
-          pTag.querySelector("span.icon")?.remove();
-          const newDiv = div(
-            { class: "content-with-icon" },
-            innerSpan,
-            pTag.cloneNode(true)
-          );
-          pTag.insertAdjacentElement('afterend', newDiv);
-          pTag.remove();
-        });
+      });
+      // apply content-with-icon in any column
+      const paragraphsWithIcons = col?.querySelectorAll("p:has(span.icon)");
+      paragraphsWithIcons?.forEach((pTag) => {
+        // avoid double wrapping
+        if (pTag.parentElement.classList.contains("content-with-icon")) return;
+
+        const iconSpan = pTag.querySelector("span.icon");
+        if (!iconSpan) return;
+
+        // clone icon
+        const iconClone = iconSpan.cloneNode(true);
+        iconSpan.remove();
+
+        // wrap
+        const newDiv = div(
+          { class: "content-with-icon" },
+          iconClone,
+          pTag.cloneNode(true)
+        );
+        pTag.replaceWith(newDiv);
       });
     });
   });
