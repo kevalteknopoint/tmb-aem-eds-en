@@ -70,6 +70,7 @@
     }
 
     .tab-content-body {
+      width: 100%;
       p {
         @include typo-body;
 
@@ -124,6 +125,7 @@
       padding-left: 22px;
       border-left: 2px solid $icon-bg-default;
       max-width: 224px;
+      width: 100%;
 
       h1, h2, h3, h4, h5, h6 {
         @include typo-heading4;
