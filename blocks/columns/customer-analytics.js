@@ -8,7 +8,6 @@ import {
 
 export default function executeAnalytics() {
   document.addEventListener('click', (e) => {
-
     const link = e.target.closest('.customer a');
     if (!link) return;
 
@@ -20,7 +19,7 @@ export default function executeAnalytics() {
     const ctaTitle = headingText;
     const ctaSource = headingText;
     const componentName = headingText;
-    const componentId = section?.getAttribute('data-component-id') || section?.id ||'';
+    const componentId = section?.getAttribute('data-component-id') || section?.id || '';
     const pageRegion = getPageRegion(link);
     const componentIndex = getComponentIndex(link);
     const nextPageURL = link.getAttribute("href");

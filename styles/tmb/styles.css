@@ -426,7 +426,7 @@ html{
 
 body{
   background-color:#fff;
-  color:#000;
+  color:var(--body-default);
   font-family:var(--primary-font);
   -webkit-font-smoothing:antialiased;
   line-height:1.5;

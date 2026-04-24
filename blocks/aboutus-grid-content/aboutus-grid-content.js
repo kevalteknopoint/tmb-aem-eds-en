@@ -15,20 +15,24 @@ const eventListener = (e) => {
   const section = link.closest('.aboutus-grid-content');
   const card = link.closest('div');
 
-  // ✅ Card title (per item)
+  // Card title
   const ctaTitleEl = card?.querySelector(HEADING_SELECTOR);
   const ctaTitle = minifyText(ctaTitleEl?.textContent || '');
 
-  // ✅ Section heading (fallback logic)
-  const sectionHeadingEl = section?.querySelector(`.default-content-wrapper ${HEADING_SELECTOR}`) ||section?.querySelector(HEADING_SELECTOR);
+  // Section heading
+  const sectionHeadingEl = section?.querySelector(`.default-content-wrapper ${HEADING_SELECTOR}`) || section?.querySelector(HEADING_SELECTOR);
+
   const sectionHeading = minifyText(sectionHeadingEl?.textContent || '');
 
-  // ✅ Dynamic fields
+  // Dynamic fields
   const ctaText = minifyText(link.textContent);
   const ctaSource = sectionHeading;
   const componentName = sectionHeading;
+
   const componentType = section?.querySelector('[data-block-name]')?.getAttribute('data-block-name') || '';
-  const componentId =section?.getAttribute('data-component-id') ||section?.id ||'';
+
+  const componentId = section?.getAttribute('data-component-id') || section?.id || '';
+
   const pageRegion = getPageRegion(link);
   const componentIndex = getComponentIndex(link);
   const nextPageURL = link.getAttribute("href");

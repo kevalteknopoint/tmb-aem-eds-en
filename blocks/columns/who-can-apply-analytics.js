@@ -8,20 +8,16 @@ import {
 } from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
-
   if (e.target.closest('.accordion-container .button-container')) {
     const link = e.target.closest('.accordion-container .accordion-wrapper .button-container a');
     if (!link) return;
 
     const container = link.closest('.accordion-container');
     const section = link.closest('.section');
-
     const pageRegion = getPageRegion(link);
     const componentIndex = getComponentIndex(link);
     const nextPageURL = link.getAttribute("href");
-
     const ctaText = minifyText(link?.textContent);
-
     const sectionHeading = minifyText(
       section?.querySelector('h1,h2,h3,h4,h5,h6')?.textContent || ''
     );
@@ -30,7 +26,6 @@ document.addEventListener('click', (e) => {
     const ctaTitle = sectionHeading;
     const componentName = sectionHeading;
 
-    // ✅ lint-safe component type
     let componentType = 'component';
 
     if (container?.classList.contains('accordion-container')) {
@@ -133,7 +128,6 @@ document.addEventListener('click', (e) => {
   if (!ctaLink) return;
 
   const accordionItem = ctaLink.closest('.accordion-item');
-
   const yearTitle = accordionItem?.querySelector('summary p');
 
   const pageRegion = getPageRegion(ctaLink);

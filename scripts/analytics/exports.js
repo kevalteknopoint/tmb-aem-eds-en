@@ -509,6 +509,31 @@ export function resetForm(
   });
 }
 
+export function headerlogoClick(
+  pageRegion,
+  componentName,
+  componentType,
+  componentIndex,
+  componentPersona,
+  nextpageUrl,
+  interactionType,
+  linkType,
+  componentId) {
+  window.adobeDataLayer.push({
+    event: "headerlogoClick",
+    data: {
+      pageRegion,
+      componentName,
+      componentType,
+      componentIndex,
+      componentPersona,
+      nextpageUrl,
+      interactionType,
+      linkType,
+      componentId
+    },
+  });
+}
 export function getAllComponents() {
   return GLOBAL_COMPONENT_CLASSES.flatMap((className) => [
     ...document.querySelectorAll(`.${className}`),
