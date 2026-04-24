@@ -152,6 +152,7 @@
   outline:none;
   padding:24px 32px;
   position:relative;
+  -webkit-tap-highlight-color:transparent;
 }
 
 .tabbed-navigation .tabs .tabs-list .tabs-tab::after{
@@ -172,12 +173,16 @@
 }
 
 .tabbed-navigation .tabs .tabs-list .tabs-tab:focus-visible{
-  box-shadow:0 0 0 2px var(--color-focus-reversed), 0 0 0 6px var(--color-focus-default);
-  margin:8px;
+  box-shadow:inset 0 0 0 2px var(--color-focus-default), inset 0 0 0 4px var(--color-focus-reversed);
 }
 
 .tabbed-navigation .tabs .tabs-list .tabs-tab:focus-visible::after{
   content:unset;
+}
+
+.tabbed-navigation .tabs .tabs-list .tabs-tab:hover p .icon-svg-wrap,
+.tabbed-navigation .tabs .tabs-list .tabs-tab:hover p svg{
+  transition:none;
 }
 
 .tabbed-navigation .tabs .tabs-list .tabs-tab:has(+ [aria-selected="true"])::after{
@@ -190,7 +195,6 @@
 
 .tabbed-navigation .tabs .tabs-list .tabs-tab[aria-selected="true"]{
   background-color:var(--heading-default);
-  border:2px solid var(--link-reverse);
 }
 
 .tabbed-navigation .tabs .tabs-list .tabs-tab[aria-selected="true"] p{
@@ -229,14 +233,14 @@
 }
 
 .tabbed-navigation .tabs .tabs-list .tabs-tab p .icon-svg-wrap{
-  transition:all 0.3s ease-in-out;
+  transition:all 0.15s ease-in-out;
 }
 
 .tabbed-navigation .tabs .tabs-list .tabs-tab p svg{
   height:64px;
   min-height:64px;
   min-width:64px;
-  transition:all 0.3s ease-in-out;
+  transition:all 0.15s ease-in-out;
   width:64px;
 }
 
@@ -325,12 +329,13 @@
   }
 
   .tabbed-navigation .tabs .tabs-list .tabs-tab::after{
+    border-left:1px solid var(--heading-default);
     bottom:0;
     height:calc(100% - 48px);
     left:unset;
     margin:auto 0;
     top:0;
-    width:1px;
+    width:0;
   }
 
   .tabbed-navigation .tabs .tabs-list .tabs-tab p{

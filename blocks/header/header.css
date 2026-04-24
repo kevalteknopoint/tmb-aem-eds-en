@@ -206,7 +206,7 @@ html:has(.primary-header.search-active) .search-results-section{
 .logo-nav-wrap{
   align-items:center;
   display:flex;
-  gap:28px;
+  gap:40px;
   justify-content:flex-start;
   opacity:1;
   transition:all 0.3s ease-in-out;
@@ -220,6 +220,10 @@ html:has(.primary-header.search-active) .search-results-section{
   display:block;
   height:auto;
   width:100%;
+}
+
+body:not(.tmbl) .logo-nav-wrap .logo-wrap{
+  max-width:150px;
 }
 
 .primary-nav-list{
@@ -695,6 +699,10 @@ header:has(.secondary-header) .mobile-menu-wrapper{
   }
 
   .logo-nav-wrap .logo-wrap{
+    max-width:105px;
+  }
+
+  body:not(.tmbl) .logo-nav-wrap .logo-wrap{
     max-width:105px;
   }
 

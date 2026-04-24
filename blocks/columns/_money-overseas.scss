@@ -336,6 +336,11 @@
         max-width: unset;
         margin-bottom: 10px;
 
+        > span:first-child {
+          position: relative;
+          top: 4px;
+        }
+        
         p {
           padding: 4px 0;
           margin-bottom: 0;
@@ -360,6 +365,48 @@
           width: 32px;
           height: 32px;
           color: $icon-2-default;
+        }
+      }
+      
+      .icon-thick-cross {
+        .icon-svg {
+          min-width: 24px;
+          width: 24px;
+          height: 24px;
+          color: $icon-2-default;
+        }
+      }
+
+      > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+
+          > h1,h2,h3,h4,h5,h6 {
+            grid-column: 1 / -1;
+          }
+
+          @include tablet {
+            display: block;
+          }
+
+          @include mobile {
+            display: block;
+          }
+      }
+      
+      // Divider ONLY when 2nd column has 4 content-with-icon items
+      > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) {
+        border-left: 1px solid $line-default;
+        padding-left: $space-xl;
+
+        @include tablet {
+          border-left: 0;
+          padding-left: 0;
+        }
+
+        @include mobile {
+          border-left: 0;
+          padding-left: 0;
         }
       }
     }

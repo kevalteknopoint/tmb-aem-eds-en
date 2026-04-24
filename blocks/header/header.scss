@@ -217,7 +217,7 @@ html:has(.primary-header.search-active) {
   justify-content: flex-start;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  gap: 28px;
+  gap: 40px;
 
   @include tablet {
     gap: 16px;
@@ -225,7 +225,7 @@ html:has(.primary-header.search-active) {
   }
 
   .logo-wrap {
-    max-width: 195px;
+    max-width: 195px; // tmbl default
 
     @include mobile {
       max-width: 105px;
@@ -235,6 +235,15 @@ html:has(.primary-header.search-active) {
       display: block;
       width: 100%;
       height: auto;
+    }
+
+    // non-tmbl
+    body:not(.tmbl) & {
+      max-width: 150px;
+
+      @include mobile {
+        max-width: 105px;
+      }
     }
   }
 }

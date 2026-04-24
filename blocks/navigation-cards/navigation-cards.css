@@ -143,12 +143,20 @@
   align-items:stretch;
   display:grid;
   gap:32px;
-  grid-template-columns:repeat(auto-fit, minmax(304px, 1fr));
+  grid-template-columns:1fr;
   margin-bottom:32px;
 }
 
 .navigation-cards-container .navigation-cards.block:last-child{
   margin-bottom:0;
+}
+
+.navigation-cards-container .navigation-cards.block:has(> :nth-child(3):last-child){
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+}
+
+.navigation-cards-container .navigation-cards.block:has(> :nth-child(4):last-child){
+  grid-template-columns:repeat(4, minmax(0, 1fr));
 }
 
 .navigation-cards-container .nav-card{
@@ -294,6 +302,10 @@
 }
 
 @media screen and (max-width: 1023px){
+  .navigation-cards-container .navigation-cards.block:has(> :nth-child(4):last-child){
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+  }
+
   .navigation-cards-container .navigation-cards.block{
     gap:24px;
     margin-bottom:24px;
@@ -311,6 +323,14 @@
 
   .navigation-cards-container .default-content-wrapper .button-container{
     margin-top:24px;
+  }
+
+  .navigation-cards-container .navigation-cards.block:has(> :nth-child(3):last-child){
+    grid-template-columns:1fr;
+  }
+
+  .navigation-cards-container .navigation-cards.block:has(> :nth-child(4):last-child){
+    grid-template-columns:1fr;
   }
 
   .navigation-cards-container .navigation-cards.block{
