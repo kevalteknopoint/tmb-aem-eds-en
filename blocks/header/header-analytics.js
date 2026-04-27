@@ -10,22 +10,23 @@ import {
 } from "../../scripts/analytics/exports.js";
 
 const getComponentName = (el) =>
-  minifyText(
-    el.getAttribute('title')
-    || el.querySelector('img')?.alt
-    || el.textContent
-    || 'na'
-  );
+  minifyText(el.getAttribute('title') || el.querySelector('img')?.alt || el.textContent || 'na');
 
 const getComponentType = (el) =>
   (el.querySelector('img') ? 'image' : el.tagName.toLowerCase());
 
-const getComponentId = (el) =>
-  el.id
-  || el.getAttribute('data-id')
-  || el.dataset?.componentId
-  || el.closest('[data-component-id]')?.getAttribute('data-component-id')
-  || '';
+const getComponentId = (el) => el.id || el.getAttribute('data-id') || el.dataset?.componentId || el.closest('[data-component-id]')?.getAttribute('data-component-id') || '';
+
+const getSafeHref = (el) => {
+  const href = el?.getAttribute('href') || el?.href || '';
+  if (!href) return '';
+
+  try {
+    return new URL(href, window.location.origin).pathname;
+  } catch (e) {
+    return href;
+  }
+};
 
 document.addEventListener('click', (e) => {
   const logoEl = e.target.closest('.logo-wrap a');
@@ -37,7 +38,7 @@ document.addEventListener('click', (e) => {
       getComponentType(logoEl),
       '1',
       'header',
-      logoEl.getAttribute('href') || '',
+      getSafeHref(logoEl),
       'click',
       'internal',
       getComponentId(logoEl)
@@ -47,34 +48,40 @@ document.addEventListener('click', (e) => {
 
   if (e.target.closest('.primary-nav-link')) {
     const el = e.target.closest('.primary-nav-link');
+    const linkEl = el.closest('a');
+
+    const nextpageUrl = getSafeHref(linkEl);
+
+    const leveltwoMenu = linkEl?.getAttribute('title') || linkEl?.textContent?.trim() || 'na';
 
     menuInteraction(
-      getPageRegion(el),
-      getComponentName(el),
-      getComponentType(el),
+      getPageRegion(linkEl),
       '',
-      'header',
+      leveltwoMenu,
+      '',
+      getComponentName(linkEl),
       'menu',
       '1',
       getPersona(),
-      '',
+      nextpageUrl,
       'menu-click',
       'internal',
       '',
       '',
       '',
-      'header',
-      el.getAttribute('href') || ''
+      getComponentId(linkEl),
+      ''
     );
   }
 
   if (e.target.closest('.secondary-nav-link')) {
     const el = e.target.closest('.secondary-nav-link');
+    const linkEl = el?.tagName === 'A' ? el : el?.closest('a');
 
     menuInteraction(
-      getPageRegion(el),
-      getComponentName(el),
-      getComponentType(el),
+      getPageRegion(linkEl),
+      getComponentName(linkEl),
+      getComponentType(linkEl),
       '',
       'top menu',
       'menu',
@@ -87,7 +94,7 @@ document.addEventListener('click', (e) => {
       '',
       '',
       'header',
-      el.getAttribute('href') || ''
+      getSafeHref(linkEl)
     );
   }
 
@@ -106,26 +113,35 @@ document.addEventListener('click', (e) => {
   }
 
   if (e.target.closest('a') && e.target.closest('.popular-search-results')) {
-    const el = e.target.closest('a');
-    const searchTerm = document.querySelector('.header-search-inp')?.value;
+    const linkEle = e.target.closest('a');
+
+    const wrapper = linkEle.closest('.popular-search-results');
+    const section = linkEle.closest('.section');
+    const clickedText = linkEle.getAttribute('title')?.trim() || linkEle.textContent.trim();
+
+    const componentName = wrapper.querySelector('h2')?.textContent.trim() || '';
+    const componentType = 'popular-search-results';
+
+    const componentId = section?.id || '';
+
+    const componentIndex = Array.from(wrapper.querySelectorAll('a')).indexOf(linkEle) + 1;
 
     popularSearchClick(
-      getPageRegion(el),
-      getComponentName(el),
-      getComponentType(el),
-      '1',
+      getPageRegion(linkEle),
+      componentName,
+      componentType,
+      componentIndex.toString(),
       getPersona(),
-      '',
-      el.href,
+      componentId,
+      linkEle.href,
       'click',
       'anchor',
       window.location.pathname,
       'global site search',
-      minifyText(searchTerm),
-      'popular searches'
+      minifyText(clickedText),
+      clickedText
     );
   }
-
   if (e.target.closest('a') && e.target.closest('.dynamic-search-results')) {
     const el = e.target.closest('a');
     const headEle = el.closest('.default-content-wrapper')
@@ -139,7 +155,7 @@ document.addEventListener('click', (e) => {
       '1',
       getPersona(),
       '',
-      el.href,
+      getSafeHref(el),
       'click',
       'anchor',
       window.location.pathname,
