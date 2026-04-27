@@ -1,24 +1,53 @@
-import { ctaInteraction, minifyText, getPersona, getPageRegion, getComponentIndex } from "../../scripts/analytics/exports.js";
+import {
+  ctaInteraction,
+  minifyText,
+  getPersona,
+  getPageRegion,
+  getComponentIndex
+} from "../../scripts/analytics/exports.js";
 
 export default function executeAnalytics() {
   document.addEventListener('click', (e) => {
-    if (e.target.closest('.customer .button-container')) {
-      const secondaryLink = e.target.closest('.customer .button-container .button');
-      const pageRegion = getPageRegion(e.target.closest('.customer .button-container .button'));
-      const componentIndex = getComponentIndex(e.target.closest('.customer .button-container .button'));
-      const ctaTitle = e.target.closest('.customer').querySelector("h1,h2,h3,h4");
-      const nextPageURL = e.target.closest(".customer .button-container .button")?.getAttribute("href");
-      ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), 'customer', 'customer', 'customer', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', '', '', '', '', '');
-    }
-    if (e.target.closest('.customer .content-container')) {
-      const secondaryLink = e.target.closest('.customer .content-container a');
-      const pageRegion = getPageRegion(e.target.closest('.customer .content-container a'));
+    const link = e.target.closest('.customer a');
+    if (!link) return;
 
-      const componentIndex = getComponentIndex(e.target.closest('.customer .content-container a'));
-      const ctaTitle = e.target.closest('.customer').querySelector("h1,h2,h3,h4");
-      const nextPageURL = e.target.closest(".customer .content-container a")?.getAttribute("href");
-      ctaInteraction(pageRegion, minifyText(secondaryLink?.textContent), minifyText(ctaTitle?.textContent), 'customer', 'customer', 'customer', componentIndex, getPersona(), nextPageURL, 'cta-link', 'internal', 'quick-link', 'in-content', '', '', '', '', '', '', '', '');
-    }
+    const section = link.closest('.customer');
+    const headingEl = section?.querySelector('h1, h2, h3, h4, h5, h6');
+    const headingText = minifyText(headingEl?.textContent);
+    const componentType = section?.querySelector('[data-block-name]')?.getAttribute('data-block-name') || '';
+    const ctaText = minifyText(link?.textContent);
+    const ctaTitle = headingText;
+    const ctaSource = headingText;
+    const componentName = headingText;
+    const componentId = section?.getAttribute('data-component-id') || section?.id || '';
+    const pageRegion = getPageRegion(link);
+    const componentIndex = getComponentIndex(link);
+    const nextPageURL = link.getAttribute("href");
+
+    ctaInteraction(
+      pageRegion,
+      ctaText,
+      ctaTitle,
+      ctaSource,
+      componentName,
+      componentType,
+      componentIndex,
+      getPersona(),
+      nextPageURL,
+      'cta-link',
+      'internal',
+      'quick-link',
+      'in-content',
+      '',
+      '',
+      '',
+      componentId,
+      '',
+      '',
+      '',
+      ''
+    );
   });
+
   window.customerAnalyticsLoaded = true;
 }
