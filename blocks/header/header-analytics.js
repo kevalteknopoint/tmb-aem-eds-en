@@ -10,26 +10,13 @@ import {
 } from "../../scripts/analytics/exports.js";
 
 const getComponentName = (el) =>
-  minifyText(
-    el.getAttribute('title')
-    || el.querySelector('img')?.alt
-    || el.textContent
-    || 'na'
-  );
+  minifyText(el.getAttribute('title') || el.querySelector('img')?.alt || el.textContent || 'na');
 
 const getComponentType = (el) =>
   (el.querySelector('img') ? 'image' : el.tagName.toLowerCase());
 
-const getComponentId = (el) =>
-  el.id
-  || el.getAttribute('data-id')
-  || el.dataset?.componentId
-  || el.closest('[data-component-id]')?.getAttribute('data-component-id')
-  || '';
+const getComponentId = (el) => el.id || el.getAttribute('data-id') || el.dataset?.componentId || el.closest('[data-component-id]')?.getAttribute('data-component-id') || '';
 
-/**
- * ✅ FIX: Safe href resolver (prevents blank nextpage)
- */
 const getSafeHref = (el) => {
   const href = el?.getAttribute('href') || el?.href || '';
   if (!href) return '';
@@ -59,37 +46,33 @@ document.addEventListener('click', (e) => {
     return;
   }
 
-if (e.target.closest('.primary-nav-link')) {
-  const el = e.target.closest('.primary-nav-link');
-  const linkEl = el.closest('a');
+  if (e.target.closest('.primary-nav-link')) {
+    const el = e.target.closest('.primary-nav-link');
+    const linkEl = el.closest('a');
 
-  const nextpageUrl = getSafeHref(linkEl);
+    const nextpageUrl = getSafeHref(linkEl);
 
-  const leveltwoMenu =
-    linkEl?.getAttribute('title') ||
-    linkEl?.textContent?.trim() ||
-    'na';
+    const leveltwoMenu = linkEl?.getAttribute('title') || linkEl?.textContent?.trim() || 'na';
 
-  menuInteraction(
-      getPageRegion(linkEl),                // pageRegion
-    '',                                   // leveloneMenu
-    leveltwoMenu,                         // leveltwoMenu ✅ FIXED
-    '',                                   // levelthreeMenu
-    getComponentName(linkEl),             // componentName
-    'menu',             // componentType
-    '1',                                  // componentIndex
-    getPersona(),                         // componentPersona
-    nextpageUrl,                          // nextpageUrl ✅ FIXED
-    'menu-click',                         // interactionType
-    'internal',                           // linkType
-    '',                                   // requiredFieldMissingFlag
-    '',                                   // testUserFlag
-    '',                                   // qaSessionFlag
-    getComponentId(linkEl),               // componentId
-    ''          
-  );
-}
-
+    menuInteraction(
+      getPageRegion(linkEl),
+      '',
+      leveltwoMenu,
+      '',
+      getComponentName(linkEl),
+      'menu',
+      '1',
+      getPersona(),
+      nextpageUrl,
+      'menu-click',
+      'internal',
+      '',
+      '',
+      '',
+      getComponentId(linkEl),
+      ''
+    );
+  }
 
   if (e.target.closest('.secondary-nav-link')) {
     const el = e.target.closest('.secondary-nav-link');
@@ -111,7 +94,7 @@ if (e.target.closest('.primary-nav-link')) {
       '',
       '',
       'header',
-      getSafeHref(linkEl)   // ✅ FIXED
+      getSafeHref(linkEl)
     );
   }
 
@@ -129,34 +112,36 @@ if (e.target.closest('.primary-nav-link')) {
     );
   }
 
-if (e.target.closest('a') && e.target.closest('a')?.closest('.popular-search-results')) {
-  const linkEle = e.target.closest('a');
+  if (e.target.closest('a') && e.target.closest('.popular-search-results')) {
+    const linkEle = e.target.closest('a');
 
-  // ✅ Get clicked popular search text
-  const clickedText = linkEle.textContent.trim();
+    const wrapper = linkEle.closest('.popular-search-results');
+    const section = linkEle.closest('.section');
+    const clickedText = linkEle.getAttribute('title')?.trim() || linkEle.textContent.trim();
 
-  // ✅ Dynamic component values
-  const componentId = linkEle.closest('.popular-search-results')?.id || 'popular-searches';
-  const componentName = linkEle.closest('.popular-search-results')?.querySelector('h2')?.textContent.trim() || 'popular searches';
-  const componentType = linkEle.closest('.popular-search-results')?.className || 'popular-search-results';
+    const componentName = wrapper.querySelector('h2')?.textContent.trim() || '';
+    const componentType = 'popular-search-results';
 
-  popularSearchClick(
-    getPageRegion(linkEle),
-    componentId,              // dynamic
-    componentType,            // dynamic
-    getComponentIndex(linkEle),
-    getPersona(),
-    '',
-    linkEle.href,
-    'click',
-    'anchor',
-    window.location.pathname,
-    componentName,            // dynamic
-    minifyText(clickedText),  // ✅ clicked value instead of input
-    'popular searches'
-  );
-}
+    const componentId = section?.id || '';
 
+    const componentIndex = Array.from(wrapper.querySelectorAll('a')).indexOf(linkEle) + 1;
+
+    popularSearchClick(
+      getPageRegion(linkEle),
+      componentName,
+      componentType,
+      componentIndex.toString(),
+      getPersona(),
+      componentId,
+      linkEle.href,
+      'click',
+      'anchor',
+      window.location.pathname,
+      'global site search',
+      minifyText(clickedText),
+      clickedText
+    );
+  }
   if (e.target.closest('a') && e.target.closest('.dynamic-search-results')) {
     const el = e.target.closest('a');
     const headEle = el.closest('.default-content-wrapper')
