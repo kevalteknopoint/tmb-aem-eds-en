@@ -905,12 +905,12 @@
   counter-increment:unset;
   display:block;
   gap:unset;
-  position:relative;
 }
 
 .money-overseas .overseas-columns-wrapper ol > li:has(p) p{
   counter-increment:step-counter;
   display:block;
+  height:32px;
 }
 
 .money-overseas .overseas-columns-wrapper ol > li:has(p) p::before{
