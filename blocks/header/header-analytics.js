@@ -27,6 +27,20 @@ const getComponentId = (el) =>
   || el.closest('[data-component-id]')?.getAttribute('data-component-id')
   || '';
 
+/**
+ * ✅ FIX: Safe href resolver (prevents blank nextpage)
+ */
+const getSafeHref = (el) => {
+  const href = el?.getAttribute('href') || el?.href || '';
+  if (!href) return '';
+
+  try {
+    return new URL(href, window.location.origin).pathname;
+  } catch (e) {
+    return href;
+  }
+};
+
 document.addEventListener('click', (e) => {
   const logoEl = e.target.closest('.logo-wrap a');
 
@@ -37,7 +51,7 @@ document.addEventListener('click', (e) => {
       getComponentType(logoEl),
       '1',
       'header',
-      logoEl.getAttribute('href') || '',
+      getSafeHref(logoEl),
       'click',
       'internal',
       getComponentId(logoEl)
@@ -45,36 +59,46 @@ document.addEventListener('click', (e) => {
     return;
   }
 
-  if (e.target.closest('.primary-nav-link')) {
-    const el = e.target.closest('.primary-nav-link');
+if (e.target.closest('.primary-nav-link')) {
+  const el = e.target.closest('.primary-nav-link');
+  const linkEl = el.closest('a');
 
-    menuInteraction(
-      getPageRegion(el),
-      getComponentName(el),
-      getComponentType(el),
-      '',
-      'header',
-      'menu',
-      '1',
-      getPersona(),
-      '',
-      'menu-click',
-      'internal',
-      '',
-      '',
-      '',
-      'header',
-      el.getAttribute('href') || ''
-    );
-  }
+  const nextpageUrl = getSafeHref(linkEl);
+
+  const leveltwoMenu =
+    linkEl?.getAttribute('title') ||
+    linkEl?.textContent?.trim() ||
+    'na';
+
+  menuInteraction(
+      getPageRegion(linkEl),                // pageRegion
+    '',                                   // leveloneMenu
+    leveltwoMenu,                         // leveltwoMenu ✅ FIXED
+    '',                                   // levelthreeMenu
+    getComponentName(linkEl),             // componentName
+    'menu',             // componentType
+    '1',                                  // componentIndex
+    getPersona(),                         // componentPersona
+    nextpageUrl,                          // nextpageUrl ✅ FIXED
+    'menu-click',                         // interactionType
+    'internal',                           // linkType
+    '',                                   // requiredFieldMissingFlag
+    '',                                   // testUserFlag
+    '',                                   // qaSessionFlag
+    getComponentId(linkEl),               // componentId
+    ''          
+  );
+}
+
 
   if (e.target.closest('.secondary-nav-link')) {
     const el = e.target.closest('.secondary-nav-link');
+    const linkEl = el?.tagName === 'A' ? el : el?.closest('a');
 
     menuInteraction(
-      getPageRegion(el),
-      getComponentName(el),
-      getComponentType(el),
+      getPageRegion(linkEl),
+      getComponentName(linkEl),
+      getComponentType(linkEl),
       '',
       'top menu',
       'menu',
@@ -87,7 +111,7 @@ document.addEventListener('click', (e) => {
       '',
       '',
       'header',
-      el.getAttribute('href') || ''
+      getSafeHref(linkEl)   // ✅ FIXED
     );
   }
 
@@ -116,7 +140,7 @@ document.addEventListener('click', (e) => {
       '1',
       getPersona(),
       '',
-      el.href,
+      getSafeHref(el),
       'click',
       'anchor',
       window.location.pathname,
@@ -139,7 +163,7 @@ document.addEventListener('click', (e) => {
       '1',
       getPersona(),
       '',
-      el.href,
+      getSafeHref(el),
       'click',
       'anchor',
       window.location.pathname,

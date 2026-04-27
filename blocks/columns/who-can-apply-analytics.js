@@ -123,71 +123,99 @@ document.addEventListener('click', (e) => {
     );
   }
 
-  const ctaLink = e.target.closest('.who-can-apply-section.accordion-container ul li a');
+const ctaLink = e.target.closest(
+  '.who-can-apply-section.accordion-container ul li a'
+);
 
-  if (!ctaLink) return;
+if (!ctaLink) return;
 
-  const accordionItem = ctaLink.closest('.accordion-item');
-  const yearTitle = accordionItem?.querySelector('summary p');
+const accordionItem = ctaLink.closest('.accordion-item');
+const yearTitle = accordionItem?.querySelector('summary p');
 
-  const pageRegion = getPageRegion(ctaLink);
-  const componentIndex = getComponentIndex(ctaLink);
-  const nextPageURL = ctaLink.getAttribute("href");
-  const persona = getPersona();
-  const ctaText = minifyText(ctaLink.textContent);
-  const titleText = minifyText(yearTitle?.textContent);
+const pageRegion = getPageRegion(ctaLink);
+const componentIndex = getComponentIndex(ctaLink);
+const nextPageURL = ctaLink.getAttribute('href');
+const persona = getPersona();
 
-  const sectionEl = ctaLink.closest('.section');
-  const componentId = sectionEl?.getAttribute('id') || "";
+const ctaText = minifyText(ctaLink.textContent);
+const titleText = minifyText(yearTitle?.textContent);
 
-  const fileExtensions = [
-    'pdf', 'doc', 'docx', 'xls', 'xlsx', 'csv',
-    'ppt', 'pptx', 'zip', 'rar', 'txt'
-  ];
+const sectionEl = ctaLink.closest('.section');
+const componentId = sectionEl?.getAttribute('id') || '';
 
-  const cleanUrl = nextPageURL?.split('?')[0]?.toLowerCase();
-  const fileExt = cleanUrl?.split('.').pop();
-  const isDownload = fileExtensions.includes(fileExt);
+/**
+ * ✅ Normalize URL safely (removes query + hash)
+ */
+const getCleanUrl = (url = '') => {
+  const baseUrl = url.split('?')[0].split('#')[0];
+  return baseUrl.toLowerCase();
+};
 
-  if (isDownload) {
-    downloadDocument(
-      pageRegion,
-      'faq links',
-      'accordion-container',
-      componentIndex,
-      persona,
-      componentId,
-      nextPageURL,
-      'cta-link',
-      'internal',
-      'in-content',
-      ctaText,
-      fileExt,
-      'download'
-    );
-    return;
-  }
+/**
+ * ✅ Extract file extension safely
+ */
+const getFileExtension = (url = '') => {
+  const parts = url.split('.');
+  return parts.length > 1 ? parts.pop() : '';
+};
 
-  ctaInteraction(
+const fileExtensions = [
+  'pdf',
+  'doc',
+  'docx',
+  'xls',
+  'xlsx',
+  'csv',
+  'ppt',
+  'pptx',
+  'zip',
+  'rar',
+  'txt'
+];
+
+const cleanUrl = getCleanUrl(nextPageURL);
+const fileExt = getFileExtension(cleanUrl);
+const isDownload = fileExtensions.includes(fileExt);
+
+if (isDownload) {
+  downloadDocument(
     pageRegion,
-    ctaText,
-    titleText,
-    '',
     'faq links',
     'accordion-container',
     componentIndex,
     persona,
+    componentId,
     nextPageURL,
     'cta-link',
     'internal',
-    'quick-link',
     'in-content',
-    '',
-    '',
-    '',
-    componentId,
-    '',
-    '',
-    ''
+    ctaText,
+    fileExt,
+    'download'
   );
+  return;
+}
+
+ctaInteraction(
+  pageRegion,
+  ctaText,
+  titleText,
+  '',
+  'faq links',
+  'accordion-container',
+  componentIndex,
+  persona,
+  nextPageURL,
+  'cta-link',
+  'internal',
+  'quick-link',
+  'in-content',
+  '',
+  '',
+  '',
+  componentId,
+  '',
+  '',
+  ''
+);
 });

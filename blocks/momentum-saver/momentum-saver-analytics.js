@@ -69,68 +69,75 @@ document.addEventListener('click', (e) => {
   }
 
   // momentum-image-saver
-  if (e.target.closest('.momentum-image-saver:not(.image-swapping) .button-container')) {
-    const ctaLink = e.target.closest('.momentum-image-saver .button');
-    if (!ctaLink) return;
+ if (e.target.closest('.momentum-image-saver:not(.image-swapping) .button-container')) {
+  const ctaLink = e.target.closest('.momentum-image-saver .button');
+  if (!ctaLink) return;
 
-    const container = ctaLink.closest('.momentum-image-saver');
-    const heading = container?.querySelector('h1,h2,h3,h4,h5,h6');
-    const nextPageURL = ctaLink.getAttribute("href");
-    const pageRegion = getPageRegion(ctaLink);
-    const componentIndex = getComponentIndex(ctaLink);
-    const persona = getPersona();
-    const ctaText = minifyText(ctaLink.textContent);
-    const titleText = minifyText(heading?.textContent);
-    const sectionEl = e.target.closest('.section');
-    const componentId = sectionEl?.getAttribute('id') || "";
+  const container = ctaLink.closest('.momentum-image-saver');
+  const heading = container?.querySelector('h1,h2,h3,h4,h5,h6');
 
-    const cleanUrl = nextPageURL?.split('?')[0].toLowerCase();
-    const fileExt = cleanUrl?.split('.').pop();
-    const isDownload = FILE_EXTENSIONS.includes(fileExt);
+  const nextPageURL = ctaLink.getAttribute('href');
+  const pageRegion = getPageRegion(ctaLink);
+  const componentIndex = getComponentIndex(ctaLink);
+  const persona = getPersona();
 
-    if (isDownload) {
-      downloadDocument(
-        pageRegion,
-        'momentum-image-saver',
-        'columns-container',
-        componentIndex,
-        persona,
-        componentId,
-        nextPageURL,
-        'cta-link',
-        'internal',
-        'in-content',
-        ctaText,
-        fileExt,
-        'download'
-      );
-      return;
-    }
+  const ctaText = minifyText(ctaLink.textContent);
+  const titleText = minifyText(heading?.textContent);
 
-    ctaInteraction(
+  // ✅ NEW: CTA SOURCE (required change)
+  const ctaSource = minifyText(heading?.textContent || '');
+
+  const sectionEl = e.target.closest('.section');
+  const componentId = sectionEl?.getAttribute('id') || '';
+
+  const cleanUrl = nextPageURL?.split('?')[0]?.split('#')[0]?.toLowerCase();
+  const fileExt = cleanUrl?.split('.').pop();
+
+  const isDownload = FILE_EXTENSIONS.includes(fileExt);
+
+  if (isDownload) {
+    downloadDocument(
       pageRegion,
-      ctaText,
-      titleText,
-      '',
       'momentum-image-saver',
       'columns-container',
       componentIndex,
       persona,
+      componentId,
       nextPageURL,
       'cta-link',
       'internal',
-      'quick-link',
       'in-content',
-      '',
-      '',
-      '',
-      componentId,
-      '',
-      '',
-      '',
-      ''
+      ctaText,
+      fileExt,
+      'download'
     );
+    return;
   }
+
+  ctaInteraction(
+    pageRegion,
+    ctaText,
+    titleText,
+    ctaSource,              // ✅ FIX: heading ("Nominating for...")
+    'momentum-image-saver',
+    'columns-container',
+    componentIndex,
+    persona,
+    nextPageURL,
+    'cta-link',
+    'internal',
+    'quick-link',
+    'in-content',
+    '',
+    '',
+    '',
+    componentId,
+    '',
+    '',
+    '',
+    ''
+  );
+}
 
   // image-swapping (non-variant-404)
   if (e.target.closest('.image-swapping:not(.variant-404, .momentum-impact) p a')) {
