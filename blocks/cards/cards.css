@@ -420,6 +420,27 @@
   text-transform:var(--heading3-case);
 }
 
+.section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-1 h1 strong, .section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-1 h1 em,
+.section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-1 h2 strong,
+.section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-1 h2 em,
+.section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-1 h3 strong,
+.section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-1 h3 em,
+.section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-1 h4 strong,
+.section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-1 h4 em,
+.section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-1 h5 strong,
+.section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-1 h5 em,
+.section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-1 h6 strong,
+.section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-1 h6 em{
+  color:var(--heading-default);
+  font-family:var(--font-family-h3);
+  font-size:var(--font-size-h3);
+  font-style:normal;
+  font-weight:var(--font-weight-h3);
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
+  text-transform:var(--heading3-case);
+}
+
 .section.online-banking .cards-wrapper .cards .banking-cards-ul li:has(.cards-card-image) .cards-card-body .card-bottom-1 p{
   color:var(--body-accent);
   font-family:var(--font-family-body);

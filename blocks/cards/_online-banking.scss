@@ -134,6 +134,11 @@
                 @include typo-heading3;
 
                 color: $heading-default;
+                strong,em{
+                  @include typo-heading3;
+                  color: $heading-default;
+                  font-style: normal;
+                }
 
               }
 
