@@ -42,13 +42,13 @@ export default function decorateOnlineBanking(block) {
       if (heading) {
         const h2 = document.createElement("h2");
         h2.className = "banking-desc-1";
-        h2.textContent = heading.textContent.trim();
+        h2.innerHTML = heading.innerHTML.trim();
         topContainer.appendChild(h2);
       }
 
       if (description) {
         const pDesc = document.createElement("p");
-        pDesc.textContent = description.textContent.trim();
+        pDesc.innerHTML = description.innerHTML.trim();
         topContainer.appendChild(pDesc);
       }
 
