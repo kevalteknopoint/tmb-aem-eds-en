@@ -123,7 +123,7 @@
 .table-with-icons .pipe-grid-row{
   border-bottom:1px solid var(--line-default);
   display:grid;
-  grid-template-columns:repeat(var(--cols), minmax(0, 1fr));
+  grid-template-columns:75% repeat(calc(var(--cols) - 1), minmax(0, 1fr));
   padding:16px 0;
 }
 
