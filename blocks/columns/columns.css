@@ -892,23 +892,8 @@
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   margin-bottom:10px;
+  position:relative;
   text-transform:var(--body-case);
-}
-
-.money-overseas .overseas-columns-wrapper ol > li::before{
-  align-items:center;
-  border:1px solid rgb(0 82 91 / 10%);
-  border-radius:var(--radius-button);
-  color:var(--heading-default);
-  content:counter(step-counter);
-  display:flex;
-  font-size:16px;
-  font-weight:500;
-  height:32px;
-  justify-content:center;
-  min-width:32px;
-  width:-moz-fit-content;
-  width:fit-content;
 }
 
 .money-overseas .overseas-columns-wrapper ol > li p{
@@ -920,17 +905,12 @@
   counter-increment:unset;
   display:block;
   gap:unset;
-}
-
-.money-overseas .overseas-columns-wrapper ol > li:has(p)::before{
-  content:unset;
+  position:relative;
 }
 
 .money-overseas .overseas-columns-wrapper ol > li:has(p) p{
-  align-items:baseline;
   counter-increment:step-counter;
-  display:flex;
-  gap:12px;
+  display:block;
 }
 
 .money-overseas .overseas-columns-wrapper ol > li:has(p) p::before{
@@ -944,7 +924,10 @@
   font-weight:500;
   height:32px;
   justify-content:center;
+  left:-36px;
   min-width:32px;
+  position:absolute;
+  top:-5px;
   width:-moz-fit-content;
   width:fit-content;
 }
@@ -1117,7 +1100,10 @@
   width:100%;
 }
 
-.overseas-variant .overseas-columns .overseas-columns-wrapper div h3, .overseas-variant .overseas-columns .overseas-columns-wrapper div h4, .overseas-variant .overseas-columns .overseas-columns-wrapper div h5, .overseas-variant .overseas-columns .overseas-columns-wrapper div h6{
+.overseas-variant .overseas-columns .overseas-columns-wrapper div h3,
+.overseas-variant .overseas-columns .overseas-columns-wrapper div h4,
+.overseas-variant .overseas-columns .overseas-columns-wrapper div h5,
+.overseas-variant .overseas-columns .overseas-columns-wrapper div h6{
   color:var(--heading-default);
   font-family:var(--font-family-h3);
   font-size:var(--font-size-h3);
@@ -1189,7 +1175,12 @@
   padding-left:var(--space-xl);
 }
 
-.overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) > h1, .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) h2, .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) h3, .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) h4, .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) h5, .overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) h6{
+.overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) > h1,
+.overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) h2,
+.overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) h3,
+.overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) h4,
+.overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) h5,
+.overseas-variant .overseas-columns .overseas-columns-wrapper > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) h6{
   grid-column:1/-1;
 }
 

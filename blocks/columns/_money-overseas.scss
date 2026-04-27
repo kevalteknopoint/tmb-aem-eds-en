@@ -11,7 +11,7 @@
     }
 
     &:last-child {
-      & > .columns.block {
+      &>.columns.block {
         border-bottom: 0;
       }
 
@@ -20,7 +20,7 @@
       }
     }
 
-    & > .columns.block {
+    &>.columns.block {
       border-bottom: 1px solid $line-default;
     }
   }
@@ -34,7 +34,7 @@
       margin-bottom: 24px;
     }
 
-    & + .overseas-columns {
+    &+.overseas-columns {
       .overseas-columns-wrapper {
         padding-top: 0;
       }
@@ -61,7 +61,8 @@
     padding: 40px 0;
     gap: 80px;
     display: flex;
-    align-items: flex-start;;
+    align-items: flex-start;
+    ;
     padding-bottom: 40px;
 
     @include tablet-lg {
@@ -111,22 +112,22 @@
       color: $body-default;
       margin-bottom: 16px;
 
-      &:has(a):not(.button-container){
-        a{
-            color: $link-default;
-            font-size: $font-size-body;
-            font-style: normal;
-            font-weight: 400;
-            line-height: $font-height-body;
-            letter-spacing: $font-letter-spacing-body;
-            text-decoration-line: underline;
-            text-decoration-style: solid;
-            text-decoration-skip-ink: auto;
-            text-decoration-thickness: auto;
-            text-underline-offset: auto;
-            text-underline-position: from-font;
+      &:has(a):not(.button-container) {
+        a {
+          color: $link-default;
+          font-size: $font-size-body;
+          font-style: normal;
+          font-weight: 400;
+          line-height: $font-height-body;
+          letter-spacing: $font-letter-spacing-body;
+          text-decoration-line: underline;
+          text-decoration-style: solid;
+          text-decoration-skip-ink: auto;
+          text-decoration-thickness: auto;
+          text-underline-offset: auto;
+          text-underline-position: from-font;
         }
-       
+
       }
     }
 
@@ -148,28 +149,32 @@
     ol>li {
       margin-bottom: 10px;
       color: $body-default;
-
+      position: relative;
       @include typo-body;
 
       counter-increment: step-counter;
       display: flex;
       gap: 12px;
       align-items: baseline;
+      
 
-      &::before {
-        content: counter(step-counter);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: 32px;
-        width: fit-content;
-        height: 32px;
-        border-radius: $radius-button;
-        border: 1px solid rgb(0 82 91 / 10%);
-        color: $heading-default;
-        font-size: 16px;
-        font-weight: 500;
-      }
+      // &::before {
+      //   position: absolute;
+      //   left: -36px;
+      //   top: -5px;
+      //   content: counter(step-counter);
+      //   display: flex;
+      //   justify-content: center;
+      //   align-items: center;
+      //   min-width: 32px;
+      //   width: fit-content;
+      //   height: 32px;
+      //   border-radius: $radius-button;
+      //   border: 1px solid rgb(0 82 91 / 10%);
+      //   color: $heading-default;
+      //   font-size: 16px;
+      //   font-weight: 500;
+      // }
 
       p {
         margin-bottom: 0;
@@ -180,17 +185,12 @@
         gap: unset;
         counter-increment: unset;
         align-items: unset;
-        
-        &::before {
-          content: unset;
-        }
+        position: relative;
 
         p {
           counter-increment: step-counter;
-          display: flex;
-          gap: 12px;
-          align-items: baseline;
-  
+          display: block;
+
           &::before {
             content: counter(step-counter);
             display: flex;
@@ -204,6 +204,9 @@
             color: $heading-default;
             font-size: 16px;
             font-weight: 500;
+            position: absolute;
+            left: -36px;
+            top: -5px;
           }
         }
       }
@@ -273,6 +276,7 @@
       align-items: flex-start;
 
       div {
+
         h1,
         h2,
         h3 {
@@ -283,8 +287,8 @@
           width: fit-content;
 
           @include typo-heading1;
-            
-          @include tablet{
+
+          @include tablet {
             max-width: unset;
           }
         }
@@ -304,6 +308,7 @@
       align-items: flex-start;
 
       div {
+
         h1,
         h2 {
           color: $heading-default;
@@ -315,7 +320,10 @@
           @include typo-heading1;
         }
 
-        h3,h4,h5,h6{
+        h3,
+        h4,
+        h5,
+        h6 {
           color: $heading-default;
           white-space: normal;
           overflow-wrap: break-word;
@@ -336,11 +344,11 @@
         max-width: unset;
         margin-bottom: 10px;
 
-        > span:first-child {
+        >span:first-child {
           position: relative;
           top: 4px;
         }
-        
+
         p {
           padding: 4px 0;
           margin-bottom: 0;
@@ -367,7 +375,7 @@
           color: $icon-2-default;
         }
       }
-      
+
       .icon-thick-cross {
         .icon-svg {
           min-width: 24px;
@@ -377,25 +385,30 @@
         }
       }
 
-      > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
+      >div:nth-child(2):has(.content-with-icon:nth-of-type(4)) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
 
-          > h1,h2,h3,h4,h5,h6 {
-            grid-column: 1 / -1;
-          }
+        >h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          grid-column: 1 / -1;
+        }
 
-          @include tablet {
-            display: block;
-          }
+        @include tablet {
+          display: block;
+        }
 
-          @include mobile {
-            display: block;
-          }
+        @include mobile {
+          display: block;
+        }
       }
-      
+
       // Divider ONLY when 2nd column has 4 content-with-icon items
-      > div:nth-child(2):has(.content-with-icon:nth-of-type(4)) {
+      >div:nth-child(2):has(.content-with-icon:nth-of-type(4)) {
         border-left: 1px solid $line-default;
         padding-left: $space-xl;
 
