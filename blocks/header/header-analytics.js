@@ -129,26 +129,33 @@ if (e.target.closest('.primary-nav-link')) {
     );
   }
 
-  if (e.target.closest('a') && e.target.closest('.popular-search-results')) {
-    const el = e.target.closest('a');
-    const searchTerm = document.querySelector('.header-search-inp')?.value;
+if (e.target.closest('a') && e.target.closest('a')?.closest('.popular-search-results')) {
+  const linkEle = e.target.closest('a');
 
-    popularSearchClick(
-      getPageRegion(el),
-      getComponentName(el),
-      getComponentType(el),
-      '1',
-      getPersona(),
-      '',
-      getSafeHref(el),
-      'click',
-      'anchor',
-      window.location.pathname,
-      'global site search',
-      minifyText(searchTerm),
-      'popular searches'
-    );
-  }
+  // ✅ Get clicked popular search text
+  const clickedText = linkEle.textContent.trim();
+
+  // ✅ Dynamic component values
+  const componentId = linkEle.closest('.popular-search-results')?.id || 'popular-searches';
+  const componentName = linkEle.closest('.popular-search-results')?.querySelector('h2')?.textContent.trim() || 'popular searches';
+  const componentType = linkEle.closest('.popular-search-results')?.className || 'popular-search-results';
+
+  popularSearchClick(
+    getPageRegion(linkEle),
+    componentId,              // dynamic
+    componentType,            // dynamic
+    getComponentIndex(linkEle),
+    getPersona(),
+    '',
+    linkEle.href,
+    'click',
+    'anchor',
+    window.location.pathname,
+    componentName,            // dynamic
+    minifyText(clickedText),  // ✅ clicked value instead of input
+    'popular searches'
+  );
+}
 
   if (e.target.closest('a') && e.target.closest('.dynamic-search-results')) {
     const el = e.target.closest('a');
