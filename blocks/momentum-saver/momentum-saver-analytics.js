@@ -32,18 +32,17 @@ document.addEventListener('click', (e) => {
         'columns-container',
         componentIndex,
         persona,
-        '',
+        componentId,
         nextPageURL,
         'cta-link',
         'internal',
         'in-content',
         ctaText,
         fileExt,
-        componentId
+        'download'
       );
       return;
     }
-
     ctaInteraction(
       pageRegion,
       ctaText,
@@ -76,17 +75,24 @@ document.addEventListener('click', (e) => {
 
     const container = ctaLink.closest('.momentum-image-saver');
     const heading = container?.querySelector('h1,h2,h3,h4,h5,h6');
-    const nextPageURL = ctaLink.getAttribute("href");
+
+    const nextPageURL = ctaLink.getAttribute('href');
     const pageRegion = getPageRegion(ctaLink);
     const componentIndex = getComponentIndex(ctaLink);
     const persona = getPersona();
+
     const ctaText = minifyText(ctaLink.textContent);
     const titleText = minifyText(heading?.textContent);
-    const sectionEl = e.target.closest('.section');
-    const componentId = sectionEl?.getAttribute('id') || "";
 
-    const cleanUrl = nextPageURL?.split('?')[0].toLowerCase();
+    // ✅ NEW: CTA SOURCE (required change)
+    const ctaSource = minifyText(heading?.textContent || '');
+
+    const sectionEl = e.target.closest('.section');
+    const componentId = sectionEl?.getAttribute('id') || '';
+
+    const cleanUrl = nextPageURL?.split('?')[0]?.split('#')[0]?.toLowerCase();
     const fileExt = cleanUrl?.split('.').pop();
+
     const isDownload = FILE_EXTENSIONS.includes(fileExt);
 
     if (isDownload) {
@@ -96,14 +102,14 @@ document.addEventListener('click', (e) => {
         'columns-container',
         componentIndex,
         persona,
-        '',
+        componentId,
         nextPageURL,
         'cta-link',
         'internal',
         'in-content',
         ctaText,
         fileExt,
-        componentId
+        'download'
       );
       return;
     }
@@ -112,7 +118,7 @@ document.addEventListener('click', (e) => {
       pageRegion,
       ctaText,
       titleText,
-      '',
+      ctaSource,
       'momentum-image-saver',
       'columns-container',
       componentIndex,
@@ -299,14 +305,14 @@ document.addEventListener('click', (e) => {
       'columns container',
       componentIndex,
       persona,
-      '',
+      componentId,
       nextPageURL,
       'cta-link',
       'internal',
       'in-content',
       ctaText,
       fileExt,
-      componentId
+      'download'
     );
     return;
   }

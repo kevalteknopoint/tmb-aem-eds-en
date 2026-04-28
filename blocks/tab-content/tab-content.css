@@ -101,6 +101,10 @@
   width:100%;
 }
 
+.section.tab-content-container .tab-content.block .tab-content-body{
+  width:100%;
+}
+
 .section.tab-content-container .tab-content.block .tab-content-body p{
   color:var(--body-default);
   font-family:var(--font-family-body);
@@ -196,6 +200,7 @@
   border-left:2px solid var(--icon-bg-default);
   max-width:224px;
   padding-left:22px;
+  width:100%;
 }
 
 .section.tab-content-container .tab-content.block .tab-content-rate h1, .section.tab-content-container .tab-content.block .tab-content-rate h2, .section.tab-content-container .tab-content.block .tab-content-rate h3, .section.tab-content-container .tab-content.block .tab-content-rate h4, .section.tab-content-container .tab-content.block .tab-content-rate h5, .section.tab-content-container .tab-content.block .tab-content-rate h6{

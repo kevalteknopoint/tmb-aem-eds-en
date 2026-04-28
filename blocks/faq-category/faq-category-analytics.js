@@ -125,9 +125,11 @@ document.addEventListener('click', (e) => {
   }
   if (target.closest('#faqs-section-scroll')) {
     const section = target.closest('.section');
-    // Grab <p> inside summary label
-    const labelP = target.querySelector('.accordion-item-label > p');
-    const faqTitle = minifyText(labelP?.textContent); // more precise
+
+    const faqTitle = minifyText(
+      section?.querySelector('.default-content-wrapper h1, h2, h3, h4, h5, h6')?.textContent
+    );
+
     const heading = section?.querySelector('h1, h2, h3, h4, h5, h6');
     const pageRegion = getPageRegion(target);
     const componentIndex = getComponentIndex(target);
