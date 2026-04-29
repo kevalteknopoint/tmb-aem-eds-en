@@ -12,10 +12,13 @@ import {
   loadCSS,
   loadDmImages,
   loadPlaceholders,
+  // handleBoxContainerCtaClick
 } from './aem.js';
 import loadNonBlockLibs from './components.js';
 import initLazy, { pageAnalytics } from './lazy.js';
 import { fetchPlaceholders } from './placeholders.js';
+// import { handleBoxContainerCtaClick } from '..../scripts/analytics/generic-analytics.js';
+import { handleBoxContainerCtaClick } from './analytics/generic-analytics.js';
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -200,4 +203,10 @@ document.addEventListener("click", (e) => {
     e.preventDefault();
     window.open(link.href?.replace('#_blank', ''), "_blank", "noopener,noreferrer");
   }
+});
+
+
+
+document.addEventListener('click', (e) => {
+  handleBoxContainerCtaClick(e);
 });

@@ -6,7 +6,8 @@ import {
   popularSearchClick,
   searchInitiate,
   suggestedSearchClick,
-  headerlogoClick
+  headerlogoClick,
+  internalSearch
 } from "../../scripts/analytics/exports.js";
 
 const getComponentName = (el) =>
@@ -52,12 +53,12 @@ document.addEventListener('click', (e) => {
 
     const nextpageUrl = getSafeHref(linkEl);
 
-    const leveltwoMenu = linkEl?.getAttribute('title') || linkEl?.textContent?.trim() || 'na';
+    const leveloneMenu = linkEl?.getAttribute('title') || linkEl?.textContent?.trim() || 'na';
 
     menuInteraction(
       getPageRegion(linkEl),
+      leveloneMenu,
       '',
-      leveltwoMenu,
       '',
       getComponentName(linkEl),
       'menu',
@@ -111,6 +112,33 @@ document.addEventListener('click', (e) => {
       getComponentId(el)
     );
   }
+
+if (e.target.closest('button.search-btn')) {
+  const btn = e.target.closest('button.search-btn');
+  const section = btn.closest('.section');
+
+  const inputs = section?.querySelectorAll('input.header-search-inp');
+
+  // pick the visible one
+  const input = Array.from(inputs || []).find(i => i.offsetParent !== null);
+
+  const searchTerm = (input?.value || '').trim();
+
+  const componentId = section?.id || "";
+
+  internalSearch(
+    getPageRegion(section || btn),
+    'primary-header',
+    'primary-header',
+    '1',
+    getPersona(),
+    componentId,
+    'click',
+    'global site search',
+    searchTerm,
+    0
+  );
+}
 
   if (e.target.closest('a') && e.target.closest('.popular-search-results')) {
     const linkEle = e.target.closest('a');
