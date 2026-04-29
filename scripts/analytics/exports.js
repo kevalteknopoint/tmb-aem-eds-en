@@ -678,7 +678,7 @@ export function popularSearchClick(
   });
 }
 
-export function searchresultitemClick(
+export function suggestedSearchClick(
   pageRegion,
   componentName,
   componentType,

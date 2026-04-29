@@ -113,32 +113,32 @@ document.addEventListener('click', (e) => {
     );
   }
 
-if (e.target.closest('button.search-btn')) {
-  const btn = e.target.closest('button.search-btn');
-  const section = btn.closest('.section');
+  if (e.target.closest('button.search-btn')) {
+    const btn = e.target.closest('button.search-btn');
 
-  const inputs = section?.querySelectorAll('input.header-search-inp');
+    const section = btn.closest('.section') || document;
 
-  // pick the visible one
-  const input = Array.from(inputs || []).find(i => i.offsetParent !== null);
+    const input =
+      section.querySelector('input.header-search-inp') ||
+      document.querySelector('input.header-search-inp');
 
-  const searchTerm = (input?.value || '').trim();
+    const searchTerm = (input?.value || '').trim();
 
-  const componentId = section?.id || "";
+    const componentId = section?.id || 'header';
 
-  internalSearch(
-    getPageRegion(section || btn),
-    'primary-header',
-    'primary-header',
-    '1',
-    getPersona(),
-    componentId,
-    'click',
-    'global site search',
-    searchTerm,
-    0
-  );
-}
+    internalSearch(
+      getPageRegion(btn),
+      'primary-header',
+      'primary-header',
+      '1',
+      getPersona(),
+      componentId,
+      'click',
+      'global site search',
+      searchTerm,
+      0
+    );
+  }
 
   if (e.target.closest('a') && e.target.closest('.popular-search-results')) {
     const linkEle = e.target.closest('a');

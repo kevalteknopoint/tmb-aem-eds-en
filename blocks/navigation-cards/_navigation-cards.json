@@ -80,6 +80,12 @@
                     { "name": "Same", "value": "_self" },
                     { "name": "New", "value": "_blank" }
                   ]
+                },
+                {
+                    "component": "text",
+                    "name": "title",
+                    "label": "Title",
+                    "valueType": "string"
                 }
             ]
         }
