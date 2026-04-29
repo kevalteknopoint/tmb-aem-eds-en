@@ -64,7 +64,11 @@ function calculateReadingTime(wordCount) {
   if (leftMenu.dataset.initialized) return;
   leftMenu.dataset.initialized = 'true';
 
-  const leftMenuUl = leftMenu.querySelector('ul') || ul();
+  let leftMenuUl = leftMenu.querySelector('ul');
+
+  if (!leftMenuUl) leftMenuUl = ul();
+
+  leftMenu?.querySelector('.default-content-wrapper')?.appendChild(leftMenuUl);
 
   leftMenuUl.innerHTML = '';
 
@@ -79,7 +83,8 @@ function calculateReadingTime(wordCount) {
     }
   });
 
-  const overallGridWrapper = div({ class: 'evergreen-grid-wrapper top-margin bottom-margin' }, leftMenu, contentWrapper, rightMenu);
+  const overallGridWrapper = div({ class: 'evergreen-grid-wrapper top-margin bottom-margin' }, leftMenu, contentWrapper);
+  if (rightMenu) overallGridWrapper?.appendChild(rightMenu);
   mainEle.insertAdjacentElement('afterbegin', overallGridWrapper);
   mainEle.insertAdjacentElement('afterbegin', breadcrumb);
 
@@ -101,35 +106,72 @@ function calculateReadingTime(wordCount) {
 
       const linkedHeading = document.querySelector(`.evergreen-main-content h2#${slugId}, .evergreen-main-content h3#${slugId}`);
       window.scrollTo({
-        top: linkedHeading.offsetTop - 340,
+        top: linkedHeading.offsetTop - 200,
         behavior: 'smooth'
       });
     });
   });
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entries.every((ent) => !ent.isIntersecting)) {
-          leftMenuUl?.querySelectorAll('li')?.forEach((link) => link.classList.remove("active"));
-          return;
-        }
+  // Scroll-based active highlighting.
+  // The click handler scrolls headings to `offset` px from the top of the viewport,
+  // so use the same offset (plus a small buffer) to decide which heading is "current".
+  const ACTIVE_OFFSET = 340;
+  const headingsArr = Array.from(allHeadings);
 
-        if (!entry.isIntersecting) return;
+  const setActive = (id) => {
+    leftMenuUl?.querySelectorAll('li')?.forEach((link) => link.classList.remove('active'));
+    if (!id) return;
+    const active = leftMenuUl?.querySelector(`a[href="#${id}"].left-menu-item-link`)?.parentElement;
+    if (active) active.classList.add('active');
+  };
 
-        const { id } = entry.target;
-        leftMenuUl?.querySelectorAll('li')?.forEach((link) => link.classList.remove("active"));
-        const active = document.querySelector(`a[href="#${id}"].left-menu-item-link`)?.parentElement;
-        if (active) active.classList.add("active");
-      });
-    },
-    {
-      threshold: 0.2,
-      rootMargin: "0px 0px 0px 0px",
+  const updateActiveHeading = () => {
+    if (!headingsArr.length) return;
+
+    // Threshold line: a heading is considered "passed" once its top crosses this Y.
+    // Add a small buffer so the next heading activates slightly before reaching exact offset.
+    const threshold = ACTIVE_OFFSET + 1;
+
+    let currentId = '';
+    for (let i = 0; i < headingsArr.length; i += 1) {
+      const rect = headingsArr[i].getBoundingClientRect();
+      if (rect.top <= threshold) {
+        currentId = headingsArr[i].id;
+      } else {
+        break;
+      }
     }
-  );
 
-  // createRootMarginOverlay("340px 0px 0px 0px");
+    // If we're scrolled to the very bottom of the page, force-activate the last heading
+    // (covers the case where the last section is shorter than the viewport offset).
+    const scrolledToBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+    if (scrolledToBottom) {
+      currentId = headingsArr[headingsArr.length - 1].id;
+    }
 
-  allHeadings.forEach((head) => observer.observe(head));
+    // If nothing has been passed yet (above first heading), default to the first one
+    // once the content area is in view; otherwise clear.
+    if (!currentId) {
+      const firstRect = headingsArr[0].getBoundingClientRect();
+      if (firstRect.top < window.innerHeight) {
+        currentId = headingsArr[0].id;
+      }
+    }
+
+    setActive(currentId);
+  };
+
+  let scrollScheduled = false;
+  const onScrollOrResize = () => {
+    if (scrollScheduled) return;
+    scrollScheduled = true;
+    window.requestAnimationFrame(() => {
+      scrollScheduled = false;
+      updateActiveHeading();
+    });
+  };
+
+  window.addEventListener('scroll', onScrollOrResize, { passive: true });
+  window.addEventListener('resize', onScrollOrResize);
+  updateActiveHeading();
 }());
