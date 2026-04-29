@@ -132,6 +132,6 @@ export default async function initLazy() {
   try {
     loadChatbot();
   } catch (error) {
-    console.log('Error loading web chat script: ', error);
+    console.log('Error loading Web Chat script: ', error);
   }
 }
