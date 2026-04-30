@@ -3,26 +3,33 @@ import './product-navigation-analytics.js';
 
 function fixCtaLinks() {
   document.querySelectorAll('a[href*="ast.tmbank.com.au"]').forEach((link) => {
-    try {
-      const url = new URL(link.href);
+    const raw = link.getAttribute('href');
+    if (!raw || !/[?&]encp=/.test(raw)) return;
 
-      if (url.searchParams.has("encp")) {
-        let encp = url.searchParams.get("encp");
-
+    const fixed = raw.replace(/([?&]encp=)([^&#]*)/, (_, prefix, val) => {
+      // Fully decode any (possibly multi-level) percent-encoding, then
+      // re-encode only the characters that are unsafe inside a query value.
+      let v = val;
+      try {
         let prev;
         do {
-          prev = encp;
-          encp = decodeURIComponent(encp);
-        } while (encp !== prev);
-
-        const fixed = encodeURIComponent(encp);
-
-        url.searchParams.set("encp", fixed);
-        link.href = url.toString();
+          prev = v;
+          v = decodeURIComponent(v);
+        } while (v !== prev);
+      } catch (e) {
+        // value contained a stray % that isn't valid encoding; use as-is
       }
-    } catch (e) {
-      // ignore invalid URLs
-    }
+
+      const reEncoded = v
+        .replace(/%/g, '%25')
+        .replace(/\+/g, '%2B')
+        .replace(/\//g, '%2F')
+        .replace(/=/g, '%3D');
+
+      return prefix + reEncoded;
+    });
+
+    if (fixed !== raw) link.setAttribute('href', fixed);
   });
 }
 
