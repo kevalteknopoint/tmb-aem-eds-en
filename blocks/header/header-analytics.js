@@ -7,16 +7,24 @@ import {
   searchInitiate,
   suggestedSearchClick,
   headerlogoClick,
-  internalSearch
+  internalSearch,
+  searchresultitemClick
 } from "../../scripts/analytics/exports.js";
 
+/**
+ * HELPERS
+ */
 const getComponentName = (el) =>
-  minifyText(el.getAttribute('title') || el.querySelector('img')?.alt || el.textContent || 'na');
+  minifyText(
+    el?.getAttribute('title') ||
+    el?.querySelector('img')?.alt ||
+    el?.textContent ||
+    'na'
+  );
 
-const getComponentType = (el) =>
-  (el.querySelector('img') ? 'image' : el.tagName.toLowerCase());
+const getComponentType = (el) => el?.querySelector('img') ? 'image' : el?.tagName?.toLowerCase();
 
-const getComponentId = (el) => el.id || el.getAttribute('data-id') || el.dataset?.componentId || el.closest('[data-component-id]')?.getAttribute('data-component-id') || '';
+const getComponentId = (el) => el?.id || el?.getAttribute('data-id') || el?.dataset?.componentId || el?.closest('[data-component-id]')?.getAttribute('data-component-id') || '';
 
 const getSafeHref = (el) => {
   const href = el?.getAttribute('href') || el?.href || '';
@@ -24,12 +32,66 @@ const getSafeHref = (el) => {
 
   try {
     return new URL(href, window.location.origin).pathname;
-  } catch (e) {
+  } catch {
     return href;
   }
 };
 
+const fireInternalSearchOnLoad = () => {
+  const page = document.querySelector('.search-results-page');
+  if (!page || page.dataset.internalTracked) return;
+
+  const input = document.querySelector('.results-search-inp') || document.querySelector('.header-search-inp');
+
+  const searchTerm = (input?.value || '').trim();
+
+  const resultsContainer = document.querySelector('.search-results-list');
+
+  if (!resultsContainer) return;
+
+  const triggerAnalytics = () => {
+    const count = resultsContainer.querySelectorAll('.search-result-item').length;
+
+    if (count === 0) return;
+
+    if (page.dataset.internalTracked) return;
+    page.dataset.internalTracked = 'true';
+
+    internalSearch(
+      getPageRegion(page),
+      'search-results-page',
+      'search-results-page',
+      '1',
+      getPersona(),
+      page.id || 'search-results-page',
+      'page-load',
+      'global site search',
+      searchTerm,
+      count
+    );
+  };
+
+  triggerAnalytics();
+  const observer = new MutationObserver(() => {
+    triggerAnalytics();
+  });
+
+  observer.observe(resultsContainer, {
+    childList: true,
+    subtree: true
+  });
+};
+document.addEventListener('DOMContentLoaded', fireInternalSearchOnLoad);
+
+const observer = new MutationObserver(fireInternalSearchOnLoad);
+
+observer.observe(document.body, {
+  childList: true,
+  subtree: true
+});
+
 document.addEventListener('click', (e) => {
+
   const logoEl = e.target.closest('.logo-wrap a');
 
   if (logoEl) {
@@ -48,23 +110,18 @@ document.addEventListener('click', (e) => {
   }
 
   if (e.target.closest('.primary-nav-link')) {
-    const el = e.target.closest('.primary-nav-link');
-    const linkEl = el.closest('a');
-
-    const nextpageUrl = getSafeHref(linkEl);
-
-    const leveloneMenu = linkEl?.getAttribute('title') || linkEl?.textContent?.trim() || 'na';
+    const linkEl = e.target.closest('a');
 
     menuInteraction(
       getPageRegion(linkEl),
-      leveloneMenu,
+      linkEl?.getAttribute('title') || linkEl?.textContent?.trim() || 'na',
       '',
       '',
       getComponentName(linkEl),
       'menu',
       '1',
       getPersona(),
-      nextpageUrl,
+      getSafeHref(linkEl),
       'menu-click',
       'internal',
       '',
@@ -76,8 +133,7 @@ document.addEventListener('click', (e) => {
   }
 
   if (e.target.closest('.secondary-nav-link')) {
-    const el = e.target.closest('.secondary-nav-link');
-    const linkEl = el?.tagName === 'A' ? el : el?.closest('a');
+    const linkEl = e.target.closest('a');
 
     menuInteraction(
       getPageRegion(linkEl),
@@ -113,54 +169,49 @@ document.addEventListener('click', (e) => {
     );
   }
 
-  if (e.target.closest('button.search-btn')) {
-    const btn = e.target.closest('button.search-btn');
+  if (
+    e.target.closest('button.search-btn') ||
+    e.target.closest('button.results-search-btn')
+  ) {
+    const btn = e.target.closest(
+      'button.search-btn, button.results-search-btn'
+    );
 
     const section = btn.closest('.section') || document;
 
-    const input =
-      section.querySelector('input.header-search-inp') ||
-      document.querySelector('input.header-search-inp');
+    const input = section.querySelector('.results-search-inp') || section.querySelector('.header-search-inp') || document.querySelector('.results-search-inp') || document.querySelector('.header-search-inp');
 
     const searchTerm = (input?.value || '').trim();
 
-    const componentId = section?.id || 'header';
-
     internalSearch(
       getPageRegion(btn),
-      'primary-header',
-      'primary-header',
+      'search-results-page',
+      'search-results-page',
       '1',
       getPersona(),
-      componentId,
+      section?.id || 'search-results-page',
       'click',
       'global site search',
       searchTerm,
       0
     );
   }
-
-  if (e.target.closest('a') && e.target.closest('.popular-search-results')) {
+  if (e.target.closest('.popular-search-results a')) {
     const linkEle = e.target.closest('a');
 
     const wrapper = linkEle.closest('.popular-search-results');
     const section = linkEle.closest('.section');
     const clickedText = linkEle.getAttribute('title')?.trim() || linkEle.textContent.trim();
-
-    const componentName = wrapper.querySelector('h2')?.textContent.trim() || '';
-    const componentType = 'popular-search-results';
-
-    const componentId = section?.id || '';
-
-    const componentIndex = Array.from(wrapper.querySelectorAll('a')).indexOf(linkEle) + 1;
+    const componentIndex =
+      Array.from(wrapper.querySelectorAll('a')).indexOf(linkEle) + 1;
 
     popularSearchClick(
       getPageRegion(linkEle),
-      componentName,
-      componentType,
+      wrapper.querySelector('h2')?.textContent.trim() || '',
+      'popular-search-results',
       componentIndex.toString(),
       getPersona(),
-      componentId,
+      section?.id || '',
       linkEle.href,
       'click',
       'anchor',
@@ -170,11 +221,14 @@ document.addEventListener('click', (e) => {
       clickedText
     );
   }
-  if (e.target.closest('a') && e.target.closest('.dynamic-search-results')) {
+
+  if (e.target.closest('.dynamic-search-results a')) {
     const el = e.target.closest('a');
-    const headEle = el.closest('.default-content-wrapper')
-      ?.querySelector('h1, h2, h3, h4, h5, h6');
-    const searchTerm = document.querySelector('.header-search-inp')?.value;
+
+    const headEle = el.closest('.default-content-wrapper') ?.querySelector('h1, h2, h3, h4, h5, h6');
+
+    const searchTerm =
+      document.querySelector('.header-search-inp')?.value || '';
 
     suggestedSearchClick(
       getPageRegion(el),
@@ -190,8 +244,49 @@ document.addEventListener('click', (e) => {
       'global site search',
       minifyText(searchTerm),
       minifyText(el?.textContent),
-      minifyText(headEle?.textContent),
+      minifyText(headEle?.textContent || ''),
       getComponentId(el)
+    );
+  }
+
+  if (e.target.closest('.search-results-page a')) {
+    const el = e.target.closest('a');
+
+    const pageRegion = getPageRegion(el);
+
+    const parent = el.closest('.search-results-page');
+    const links = Array.from(parent?.querySelectorAll('a') || []);
+    const componentIndex = (links.indexOf(el) + 1).toString();
+
+    const isRightSide = el.classList.contains('item-category');
+
+    let ctaText = '';
+    let ctaTitle = '';
+
+    if (isRightSide) {
+      ctaText = 'reports and disclosure';
+      ctaTitle = 'annual reports';
+    } else {
+      ctaText = minifyText(el.textContent);
+      ctaTitle = '';
+    }
+
+    const searchTerm = document.querySelector('.results-search-inp')?.value || document.querySelector('.header-search-inp')?.value || '';
+    searchresultitemClick(
+      pageRegion,
+      ctaText,
+      'search-result',
+      componentIndex,
+      getPersona(),
+      el.closest('.section')?.id || '',
+      el.getAttribute('href') || '',
+      'click',
+      'anchor',
+      'in-content',
+      'global site search',
+      minifyText(searchTerm),
+      minifyText(el.textContent),
+      ctaTitle
     );
   }
 });
