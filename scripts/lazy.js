@@ -63,7 +63,15 @@ export async function pageAnalytics() {
   function getHttpStatusGroup(code) {
     if (!code) return 'unknown';
     const firstDigit = String(code).charAt(0);
-    return `${firstDigit}xx`; // e.g., "2xx", "4xx"
+    const labels = {
+      1: 'informational',
+      2: 'success',
+      3: 'redirection',
+      4: 'client-error',
+      5: 'server-error',
+    };
+    const label = labels[firstDigit];
+    return label ? `${firstDigit}xx-${label}` : `${firstDigit}xx`; // e.g., "2xx-success", "4xx-client-error"
   }
 
   const basePath = getMetadata('base-path');
