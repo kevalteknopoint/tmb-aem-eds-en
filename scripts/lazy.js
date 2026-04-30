@@ -87,7 +87,7 @@ export async function pageAnalytics() {
   const firstContentfulPaint = performance.getEntriesByType("paint").find((entry) => entry.name === "first-contentful-paint")?.startTime;
   const firstContentfulPaintBucket = bucket(firstContentfulPaint);
   const httpStatusCode = getHttpStatus();
-  const httpStatusGroup = getHttpStatusGroup();
+  const httpStatusGroup = getHttpStatusGroup(httpStatusCode);
   const trackingVersion = '';
   const implementationEnvironment = '';
   const dataLayerReadyFlag = '';
@@ -128,5 +128,10 @@ function loadChatbot() {
 export default async function initLazy() {
   loadAos();
   loadSprite();
-  loadChatbot();
+
+  try {
+    loadChatbot();
+  } catch (error) {
+    console.log('Error loading Web Chat script: ', error);
+  }
 }
