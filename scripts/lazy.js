@@ -128,5 +128,10 @@ function loadChatbot() {
 export default async function initLazy() {
   loadAos();
   loadSprite();
-  loadChatbot();
+
+  try {
+    loadChatbot();
+  } catch (error) {
+    console.log('Error loading Web Chat script: ', error);
+  }
 }
