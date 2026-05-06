@@ -16,11 +16,11 @@
       &:not(:last-child) {
         padding-right: 32px;
         border-right: 1px solid $line-default;
-        
         @include mobile {
           padding-right: 0;
           padding-bottom: 32px;
           border-bottom: 1px solid $line-default;
+          border-right: 0;
         }
       }
     }
@@ -86,7 +86,12 @@
 
         li {
           margin-bottom: 8px;
+          text-wrap: pretty;
         }
+      }
+
+      ul li:last-child {
+        margin-bottom: 0;
       }
 
       ol {
@@ -124,8 +129,14 @@
     .tab-content-rate {
       padding-left: 22px;
       border-left: 2px solid $icon-bg-default;
-      max-width: 224px;
+      min-width: 358px;
+      max-width: 358px;
       width: 100%;
+
+      @include mobile {
+        min-width: 100%;
+        max-width: 100%;
+      }
 
       h1, h2, h3, h4, h5, h6 {
         @include typo-heading4;
@@ -180,6 +191,7 @@
         @include typo-sm-body;
 
         color: $heading-default;
+        text-wrap: balance;
       }
     }
 

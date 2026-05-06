@@ -2,6 +2,17 @@
 
 
 .section.faq-cant-find-looking-for {
+
+  // hard code for icon to be centered align
+  span.icon.icon-chat-conversation-square-communication-message--invert.icon-svg-wrap.icon-invert > svg {
+    position: relative;
+    bottom: -2px;
+  }
+  span.icon.icon-chat-speech-bubble-message--invert.icon-svg-wrap.icon-invert svg {
+    position: relative;
+    top: -2px;
+  }
+
   .default-content-wrapper {
     @include responsive-container;
 
@@ -332,7 +343,7 @@
 
   &.left-aligned {
     .default-content-wrapper {
-      margin-inline: 0;
+      margin-inline: auto;
 
       h1, h2, h3, h4, h5, h6, p {
         text-align: left;
@@ -359,6 +370,13 @@
         margin-right: 0;
       }
     }
+  }
+}
+
+// for left align
+.section.faq-cant-find-looking-for.faq-cant-find-looking-for-variant.top-padding.align-default-left {
+  + div .navigation-cards-wrapper {
+    padding-top: 40px;
   }
 }
 

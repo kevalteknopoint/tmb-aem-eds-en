@@ -42,21 +42,23 @@
     .cards {
       .banking-cards-ul {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(421px, 1fr));
-        gap: 24px;
+        grid-template-columns: repeat(auto-fit, minmax(342px, 1fr));
+        gap: $space-md;
         list-style-type: none;
         min-height: 520px;
         padding-left: 0;
 
         @media (min-width: 766px) and (max-width: 1220px) {
-          gap: 20px;
           min-height: 480px;
         }
 
+        @include tablet {
+          gap: $space-xs;
+        }
 
         @include mobile{
           display: flex;
-          gap: 18px;
+          gap: $space-xs;
           flex-direction: column;
         }
 
