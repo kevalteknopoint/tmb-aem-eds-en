@@ -4,7 +4,8 @@
   @include responsive-container;
 
   display: grid;
-  grid-template-columns: 384px auto;
+  grid-template-columns: 385px auto;
+  gap: 0 $space-xl;
 
   @include tablet-lg {
     grid-template-columns: auto;

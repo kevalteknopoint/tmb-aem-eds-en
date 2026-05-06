@@ -2,10 +2,10 @@
 @import "../../libs/swiper/swiper-bundle.min.css";
 
 .section.expandable-tiles-section {
-  background: $gradient-1;
+  /* background: $gradient-1; */
 
   @include tablet {
-    padding-right: 16px;
+    padding-right: 0;
   }
 
   .default-content-wrapper {
@@ -41,7 +41,7 @@
 
   .cards-wrapper {
     box-sizing: border-box;
-    margin-bottom: 40px;
+    margin-bottom: $space-2xs;
     overflow: auto;
     scrollbar-width: none;
 
@@ -59,7 +59,7 @@
     .cards.expandable-tiles.block {
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: $space-md;
 
       @include mobile {
         --swiper-pagination-bottom: 0;
@@ -88,7 +88,8 @@
         flex: 1;
         flex-direction: column;
         gap: 20px;
-        transition: all 1.7s;
+        height: 500px;
+        transition: flex 1000ms ease;
         transition-timing-function: cubic-bezier(0.11, 0.45, 0.4, 1);
 
         &::after {
@@ -121,10 +122,11 @@
           }
 
           .tile-content {
+            visibility: hidden;
             visibility: visible;
             opacity: 1;
             pointer-events: all;
-            transition-delay: 1s; 
+            transition: opacity 850ms ease 650ms, visibility 0s linear 850ms;
           }
 
           .tile-image img {
@@ -136,18 +138,18 @@
           border-radius: $radius-card;
           cursor: pointer;
           font-size: 0;
-          height: 500px;
+          min-height: 500px;
           width: auto;
           overflow: hidden;
 
           img {
             border-radius: $radius-card;
             width: 100%;
-            height: 500px;
+            min-height: 500px;
             object-fit: cover;
             object-position: center;
             transition: all 0.7s ease-in-out;
-            transition-delay: 1s;
+            transition-delay: 0.4s;
           }
 
           @include mobile {
@@ -164,41 +166,45 @@
           position: absolute;
           bottom: 0;
           display: block;
-          width: calc(100% - 32px);
+          width: calc(100% - #{$space-3xs});
           padding: 24px;
-          margin: 0 16px 16px;
+          margin: 0 4px 4px;
           text-decoration: none;
-          background-color: $bg-default;
-          border-radius: $radius-card;
+          background-color: $color-variants-bg-reverse;
+          border-radius: calc(#{$radius-card} - 3px);
           pointer-events: none;
           opacity: 0;
           visibility: hidden;
-          transition: opacity 0.4s ease-in-out, visibility 0s linear 0.4s; 
+          transition: opacity 100ms ease 0ms, visibility 0s linear 100ms;
           
           @include mobile {
             visibility: visible;
             pointer-events: all;
-            width: calc(100% - 32px);
-            margin: 16px;
+            /* width: calc(100% - 32px); */
+            /* margin: 16px; */
             opacity: 1;
           }
 
-          .content-title {
-            @include typo-heading1;
+          > :last-child {
+            margin-bottom: 0;
+          }
 
-            color: $heading-default;
+          .content-title {
+            @include typo-heading3;
+
+            color: $color-variants-heading-reverse;
             margin-bottom: 16px;
 
-            @include mobile {
-              font-size: 38px;
-              line-height: 38px;
-            }
+            // @include mobile {
+            //   /* font-size: 38px; */
+            //   /* line-height: 38px; */
+            // }
           }
 
           .content-description {
             @include typo-body;
 
-            color: $body-default;
+            color: $color-variants-body-reverse;
             margin-bottom: 16px;
           }
 
@@ -279,7 +285,7 @@
         width: 24px;
         height: 24px;
         color: $color-pagination-selected;
-        filter: drop-shadow(0 1px 3px rgb(0 0 0 / 40%));
+        /* filter: drop-shadow(0 1px 3px rgb(0 0 0 / 40%)); */
       }
     }
   }

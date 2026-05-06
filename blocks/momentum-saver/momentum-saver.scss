@@ -141,8 +141,8 @@
 
     .button-container {
       display: inline-block;
-      margin-top: 24px;
-      margin-right: 8px;
+      margin-top: $space-xs;
+      margin-right: $space-3xs;
       margin-bottom: 0;
 
       a:not(.secondary) {
@@ -541,6 +541,7 @@
   .momentum-section-wrapper {
     padding: 32px;
     border-radius: $radius-card;
+    background-color: $bg-reverse;
 
     @include tablet {
       border-radius: 0;
@@ -595,6 +596,7 @@
       }
 
       p,
+      p > a:not(.button),
       ul {
         color: $body-reverse;
       }
