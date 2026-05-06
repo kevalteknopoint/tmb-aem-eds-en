@@ -58,13 +58,20 @@
         div {
           display: block;
 
-          h3,
+          h3 {
+            @include typo-heading3;
+
+            color: $heading-default;
+            margin-bottom: $space-xs;
+          }
+
           h4,
           h5,
           h6 {
             @include typo-heading3;
 
             color: $heading-default;
+            margin-bottom: $space-3xs;
           }
 
           p {
@@ -103,6 +110,11 @@
               margin-left: 25px;
               list-style: disc;
               color: $body-default;
+              margin-bottom: $space-3xs;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
             }
           }
         }

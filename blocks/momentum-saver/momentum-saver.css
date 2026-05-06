@@ -331,8 +331,8 @@
 .momentum-direct-variant .columns.block > div .button-container{
   display:inline-block;
   margin-bottom:0;
-  margin-right:8px;
-  margin-top:24px;
+  margin-right:var(--space-3xs);
+  margin-top:var(--space-xs);
 }
 
 .momentum-saver-section .columns.block > div .button-container a:not(.secondary),
@@ -846,6 +846,7 @@
 }
 
 .momentum-corporate-variation .momentum-section-wrapper{
+  background-color:var(--bg-reverse);
   border-radius:var(--radius-card);
   padding:32px;
 }
@@ -871,6 +872,7 @@
 }
 
 .momentum-corporate-variation .columns.block > div p,
+.momentum-corporate-variation .columns.block > div p > a:not(.button),
 .momentum-corporate-variation .columns.block > div ul{
   color:var(--body-reverse);
 }

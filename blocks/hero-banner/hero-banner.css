@@ -714,6 +714,13 @@ body:has(.product-detail-banner) .breadcrumb.block{
   width:12px;
 }
 
+@media screen and (min-width: 1728px){
+  body.tmb .product-detail-banner, body.hp .product-detail-banner{
+    border-radius:40px;
+    overflow:hidden;
+  }
+}
+
 @media screen and (max-width: 1279px){
   .product-detail-banner .no-media .hero-banner-content-wrap{
     padding-inline:24px;
@@ -809,9 +816,10 @@ body:has(.product-detail-banner) .breadcrumb.block{
   }
 
   .product-detail-banner .has-media .hero-banner-content-wrap{
+    min-height:0;
     padding-inline:16px;
     padding-bottom:40px;
-    padding-top:56.25vw;
+    padding-top:59.25vw;
   }
 
   .product-detail-banner .has-media .hero-banner-content-wrap .interest-rates-wrapper{
