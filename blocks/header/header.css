@@ -405,7 +405,7 @@ header:has(.secondary-header) .search-results-section{
 }
 
 header:has(.secondary-header) .mobile-menu-wrapper{
-  top:61px;
+  top:0;
 }
 
 .search-results-section{
@@ -529,7 +529,7 @@ header:has(.secondary-header) .mobile-menu-wrapper{
   transform:translateX(100%);
   transition:all 0.3s ease-in-out;
   width:100%;
-  z-index:2;
+  z-index:10;
 }
 
 .mobile-menu-wrapper.active{

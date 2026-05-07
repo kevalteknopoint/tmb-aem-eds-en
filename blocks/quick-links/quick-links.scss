@@ -87,6 +87,15 @@
         &:first-child {
           padding: 6.5px 0;
 
+          body:not(.tmbl) & {
+            width: $space-xl;
+            height: $space-xl;
+            display: flex;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+          }
+
           svg {
             display: block;
             min-width: 48px;
@@ -112,7 +121,7 @@
 
     & > div > div > div > ul {
       margin-bottom: 0;
-      padding-left: 64px;
+      padding-left: $space-2xl;
 
       & > li {
         display: flex;
@@ -121,6 +130,10 @@
         padding: 6px 0 2px;
         vertical-align: bottom;
         width: fit-content;
+
+        body:not(.tmbl) & {
+          padding: 0 0 2px;
+        }
 
         & > a {
           position: relative;

@@ -70,7 +70,17 @@
   display:block;
 }
 
-.who-can-apply-section .columns-wrapper .block .column-container div h3,
+.who-can-apply-section .columns-wrapper .block .column-container div h3{
+  color:var(--heading-default);
+  font-family:var(--font-family-h3);
+  font-size:var(--font-size-h3);
+  font-weight:var(--font-weight-h3);
+  letter-spacing:var(--font-letter-spacing-h3);
+  line-height:var(--font-height-h3);
+  margin-bottom:var(--space-xs);
+  text-transform:var(--heading3-case);
+}
+
 .who-can-apply-section .columns-wrapper .block .column-container div h4,
 .who-can-apply-section .columns-wrapper .block .column-container div h5,
 .who-can-apply-section .columns-wrapper .block .column-container div h6{
@@ -80,6 +90,7 @@
   font-weight:var(--font-weight-h3);
   letter-spacing:var(--font-letter-spacing-h3);
   line-height:var(--font-height-h3);
+  margin-bottom:var(--space-3xs);
   text-transform:var(--heading3-case);
 }
 
@@ -180,8 +191,13 @@
   letter-spacing:var(--font-letter-spacing-body);
   line-height:var(--font-height-body);
   list-style:disc;
+  margin-bottom:var(--space-3xs);
   margin-left:25px;
   text-transform:var(--body-case);
+}
+
+.who-can-apply-section .columns-wrapper .block .column-container div ul li:last-child{
+  margin-bottom:0;
 }
 
 .who-can-apply-section .accordion-wrapper .accordion .accordion-item{
@@ -306,7 +322,7 @@
   position:relative;
 }
 
-.customer::after{
+body.fmb .customer::after{
   background-image:var(--gradient-after);
   background-repeat:no-repeat;
   background-size:100%;

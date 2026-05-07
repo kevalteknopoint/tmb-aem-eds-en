@@ -89,6 +89,15 @@
   padding:6.5px 0;
 }
 
+body:not(.tmbl) .quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)) > .icon:first-child, body:not(.tmbl) .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a > .icon:first-child, body:not(.tmbl) .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1:not(:has(a)) > .icon:first-child, body:not(.tmbl) .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1 > a > .icon:first-child, body:not(.tmbl) .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2:not(:has(a)) > .icon:first-child, body:not(.tmbl) .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2 > a > .icon:first-child, body:not(.tmbl) .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3:not(:has(a)) > .icon:first-child, body:not(.tmbl) .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3 > a > .icon:first-child, body:not(.tmbl) .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4:not(:has(a)) > .icon:first-child, body:not(.tmbl) .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4 > a > .icon:first-child, body:not(.tmbl) .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5:not(:has(a)) > .icon:first-child, body:not(.tmbl) .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5 > a > .icon:first-child, body:not(.tmbl) .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6:not(:has(a)) > .icon:first-child, body:not(.tmbl) .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6 > a > .icon:first-child{
+  align-items:center;
+  display:flex;
+  height:var(--space-xl);
+  justify-content:center;
+  padding:0;
+  width:var(--space-xl);
+}
+
 .quick-links-container .quick-links-wrapper > .quick-links > div > div > p:not(:has(a)) > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > p > a > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1:not(:has(a)) > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h1 > a > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2:not(:has(a)) > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h2 > a > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3:not(:has(a)) > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h3 > a > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4:not(:has(a)) > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h4 > a > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5:not(:has(a)) > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h5 > a > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6:not(:has(a)) > .icon:first-child svg, .quick-links-container .quick-links-wrapper > .quick-links > div > div > h6 > a > .icon:first-child svg{
   display:block;
   height:48px;
@@ -112,7 +121,7 @@
 
 .quick-links-container .quick-links-wrapper > div > div > div > ul{
   margin-bottom:0;
-  padding-left:64px;
+  padding-left:var(--space-2xl);
 }
 
 .quick-links-container .quick-links-wrapper > div > div > div > ul > li{
@@ -123,6 +132,10 @@
   vertical-align:bottom;
   width:-moz-fit-content;
   width:fit-content;
+}
+
+body:not(.tmbl) .quick-links-container .quick-links-wrapper > div > div > div > ul > li{
+  padding:0 0 2px;
 }
 
 .quick-links-container .quick-links-wrapper > div > div > div > ul > li > a{

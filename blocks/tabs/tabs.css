@@ -41,12 +41,18 @@
 }
 
 .home-loan-explained .tabs .tab-list-wrapper{
+  margin:calc(var(--space-3xs) * -1) auto;
   margin-left:auto;
   margin-right:auto;
   max-width:calc(1440px - 0px);
   overflow-x:auto;
+  padding:var(--space-3xs) var(--space-xl);
   padding-inline:64px;
   width:100%;
+}
+
+.home-loan-explained .tabs .tab-list-wrapper + .tabs-panels{
+  padding-top:var(--space-lg);
 }
 
 .home-loan-explained .tabs .tabs-list{
@@ -69,6 +75,7 @@
   display:flex;
   flex:1;
   justify-content:center;
+  margin-left:-1px;
   min-width:-moz-max-content;
   min-width:max-content;
   padding:8px 24px;
@@ -77,6 +84,7 @@
 .home-loan-explained .tabs .tabs-list .tabs-tab:first-child{
   border-bottom-left-radius:var(--radius-card);
   border-top-left-radius:var(--radius-card);
+  margin-left:0;
 }
 
 .home-loan-explained .tabs .tabs-list .tabs-tab:last-child{

@@ -41,6 +41,28 @@
   .compare-accounts.block {
     @include tablet {
       overflow-x: auto;
+      margin: 0 -24px;
+
+      .compare-accounts-wrapper {
+        padding-left: 24px;
+      }
+
+      .compare-accounts-cards::after {
+        content: "";
+        padding-left: 24px;
+      }
+    }
+    @include mobile {
+      margin: 0 -16px;
+
+      .compare-accounts-wrapper {
+        padding-left: 16px;
+      }
+
+      .compare-accounts-cards::after {
+        content: "";
+        padding-left: 16px;
+      }
     }
 
     .compare-accounts-cards {
@@ -62,6 +84,12 @@
         }
       }
 
+      &:has(> .compare-accounts-card:nth-child(2):last-child) {
+        .compare-accounts-card {
+          max-width: 100%;
+        }
+      }
+
       .compare-accounts-card {
         display: flex;
         flex-direction: column;
@@ -70,6 +98,10 @@
         border-radius: $radius-card;
         min-height: 100%;
         flex: 1;
+
+        p:empty {
+          display: none;
+        }
 
         @include tablet {
           min-width: 304px;
@@ -116,13 +148,25 @@
     }
 
     .interest-rate {
-      display: block;
+      display: flex;
       color: $heading-default;
 
       @include typo-heading1-std;
 
       .rate-pa {
         @include typo-body;
+        color: $heading-default;
+      }
+
+      .rate-unit {
+        display: flex;
+        align-items: baseline;
+        color: $heading-default;
+      }
+
+      .rate-num,
+      .rate-percent {
+         color: $heading-default;
       }
     }
 
@@ -137,7 +181,7 @@
       @include typo-disclaimer;
 
       &:has(.interest-rate) {
-        padding: 4px 24px 0;
+        padding: 4px 0 0;
       }
 
       &:has(a) {

@@ -7,16 +7,18 @@
   flex-direction: column;
   gap: 40px;
 
-  &::after {
-    content: '';
-    position: absolute;
-    height: 20px;
-    width: 100%;
-    background-image: $gradient-after;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    left: 0;
-    bottom: 0;
+  body.fmb & {
+    &::after {
+      content: '';
+      position: absolute;
+      height: 20px;
+      width: 100%;
+      background-image: $gradient-after;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      left: 0;
+      bottom: 0;
+    }
   }
 
   .columns-wrapper {

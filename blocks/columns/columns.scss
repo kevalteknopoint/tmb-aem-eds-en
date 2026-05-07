@@ -4,6 +4,20 @@
 @use './money-overseas' as *;
 @use '../../styles/base' as *;
 
+.section[data-theme="bg-reverse"]:not(:root) {
+  .columns.block > div {
+    h1, h2, h3, h4, h5, h6 {
+      color: $heading-reverse;
+    }
+  }
+
+  .columns-wrapper .block .column-container div {
+    p, li {
+      color: $body-reverse;
+    }
+  }
+}
+
 .columns {
   img {
     width: 100%;
@@ -137,7 +151,7 @@
 
     > div {
       display: flex;
-      flex-direction: column;
+      /* flex-direction: column; */
 
       > div {
         order: 1;

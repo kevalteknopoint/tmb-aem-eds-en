@@ -14,6 +14,21 @@
     "comment-empty-line-before": null,
     "no-descending-specificity": null,
     "color-hex-length": null,
-    "value-keyword-case": null
-  }
+    "value-keyword-case": null,
+    "selector-class-pattern": [
+      "^[a-z][a-z0-9-]*(?:--[a-z0-9-]+)?$",
+      {
+        "message": "Expected class selector to be kebab-case with optional --modifier"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.css"],
+      "rules": {
+        "block-no-empty": null
+      }
+    }
+  ]
+
 }
