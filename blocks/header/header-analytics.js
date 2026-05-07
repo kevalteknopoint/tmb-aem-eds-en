@@ -15,14 +15,9 @@ import {
  * HELPERS
  */
 const getComponentName = (el) =>
-  minifyText(
-    el?.getAttribute('title') ||
-    el?.querySelector('img')?.alt ||
-    el?.textContent ||
-    'na'
-  );
+  minifyText(el?.getAttribute('title') || el?.querySelector('img')?.alt || el?.textContent || 'na');
 
-const getComponentType = (el) => el?.querySelector('img') ? 'image' : el?.tagName?.toLowerCase();
+const getComponentType = (el) => (el?.querySelector('img') ? 'image' : el?.tagName?.toLowerCase());
 
 const getComponentId = (el) => el?.id || el?.getAttribute('data-id') || el?.dataset?.componentId || el?.closest('[data-component-id]')?.getAttribute('data-component-id') || '';
 
@@ -53,8 +48,8 @@ const fireInternalSearchOnLoad = () => {
     const count = resultsContainer.querySelectorAll('.search-result-item').length;
 
     if (count === 0) return;
-
     if (page.dataset.internalTracked) return;
+
     page.dataset.internalTracked = 'true';
 
     internalSearch(
@@ -72,6 +67,7 @@ const fireInternalSearchOnLoad = () => {
   };
 
   triggerAnalytics();
+
   const observer = new MutationObserver(() => {
     triggerAnalytics();
   });
@@ -81,6 +77,7 @@ const fireInternalSearchOnLoad = () => {
     subtree: true
   });
 };
+
 document.addEventListener('DOMContentLoaded', fireInternalSearchOnLoad);
 
 const observer = new MutationObserver(fireInternalSearchOnLoad);
@@ -91,7 +88,6 @@ observer.observe(document.body, {
 });
 
 document.addEventListener('click', (e) => {
-
   const logoEl = e.target.closest('.logo-wrap a');
 
   if (logoEl) {
@@ -170,12 +166,9 @@ document.addEventListener('click', (e) => {
   }
 
   if (
-    e.target.closest('button.search-btn') ||
-    e.target.closest('button.results-search-btn')
+    e.target.closest('button.search-btn') || e.target.closest('button.results-search-btn')
   ) {
-    const btn = e.target.closest(
-      'button.search-btn, button.results-search-btn'
-    );
+    const btn = e.target.closest('button.search-btn, button.results-search-btn');
 
     const section = btn.closest('.section') || document;
 
@@ -183,27 +176,30 @@ document.addEventListener('click', (e) => {
 
     const searchTerm = (input?.value || '').trim();
 
-    internalSearch(
-      getPageRegion(btn),
-      'search-results-page',
-      'search-results-page',
-      '1',
-      getPersona(),
-      section?.id || 'search-results-page',
-      'click',
-      'global site search',
-      searchTerm,
-      0
-    );
+    if (e.target.closest('.primary-header').classList.contains('search-active')) {
+      internalSearch(
+        getPageRegion(btn),
+        'search-results-page',
+        'search-results-page',
+        '1',
+        getPersona(),
+        section?.id || 'search-results-page',
+        'click',
+        'global site search',
+        searchTerm,
+        0
+      );
+    }
   }
+
   if (e.target.closest('.popular-search-results a')) {
     const linkEle = e.target.closest('a');
-
     const wrapper = linkEle.closest('.popular-search-results');
     const section = linkEle.closest('.section');
+
     const clickedText = linkEle.getAttribute('title')?.trim() || linkEle.textContent.trim();
-    const componentIndex =
-      Array.from(wrapper.querySelectorAll('a')).indexOf(linkEle) + 1;
+
+    const componentIndex = Array.from(wrapper.querySelectorAll('a')).indexOf(linkEle) + 1;
 
     popularSearchClick(
       getPageRegion(linkEle),
@@ -225,10 +221,9 @@ document.addEventListener('click', (e) => {
   if (e.target.closest('.dynamic-search-results a')) {
     const el = e.target.closest('a');
 
-    const headEle = el.closest('.default-content-wrapper') ?.querySelector('h1, h2, h3, h4, h5, h6');
+    const headEle = el.closest('.default-content-wrapper')?.querySelector('h1, h2, h3, h4, h5, h6');
 
-    const searchTerm =
-      document.querySelector('.header-search-inp')?.value || '';
+    const searchTerm = document.querySelector('.header-search-inp')?.value || '';
 
     suggestedSearchClick(
       getPageRegion(el),
@@ -263,19 +258,28 @@ document.addEventListener('click', (e) => {
     let ctaText = '';
     let ctaTitle = '';
 
+    // Dynamic componentName & componentType
+    const componentRoot = el.closest('.search-results-page') || el.closest('.search-result-item');
+    const componentName = componentRoot?.className?.split(' ')[0] || 'search-results';
+    const componentType = componentRoot?.className?.includes('item-category-section') ? 'category-result' : 'search-result';
+
+    // FULL CTA TEXT (robust)
+    const rawLabel = el.cloneNode(true)?.textContent || '';
+
+    ctaText = minifyText(rawLabel.replace(/\s+/g, ' ').trim());
+
+    // Right side CTA title from description
     if (isRightSide) {
-      ctaText = 'reports and disclosure';
-      ctaTitle = 'annual reports';
-    } else {
-      ctaText = minifyText(el.textContent);
-      ctaTitle = '';
+      const titleEl = el.closest('.search-result-item')?.querySelector('.item-title');
+      ctaTitle = minifyText(titleEl?.textContent || '');
     }
 
     const searchTerm = document.querySelector('.results-search-inp')?.value || document.querySelector('.header-search-inp')?.value || '';
+
     searchresultitemClick(
       pageRegion,
-      ctaText,
-      'search-result',
+      componentName,
+      componentType,
       componentIndex,
       getPersona(),
       el.closest('.section')?.id || '',
@@ -286,7 +290,8 @@ document.addEventListener('click', (e) => {
       'global site search',
       minifyText(searchTerm),
       minifyText(el.textContent),
-      ctaTitle
+      ctaTitle,
+      ctaText
     );
   }
 });

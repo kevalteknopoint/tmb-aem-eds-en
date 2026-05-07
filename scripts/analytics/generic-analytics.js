@@ -5,44 +5,23 @@ import {
   getPageRegion,
   getComponentIndex,
   downloadDocument
-} from "../../scripts/analytics/exports.js";
+} from "./exports.js";
 
-/**
- * Extract best possible CTA context from article/content sections
- * - Title: nearest h1–h6
- * - Source: first meaningful paragraph
- */
 const getCTAContext = (ctaLink) => {
   const section = ctaLink.closest('.section');
 
-  if (!section) {
-    return { title: '', source: '' };
-  }
+  if (!section) return { title: '', source: '' };
 
-  // =========================
-  // TITLE (h1–h6)
-  // =========================
   const heading = section.querySelector('h1,h2,h3,h4,h5,h6');
 
-  const title = heading
-    ? minifyText(heading.textContent)
-    : '';
-
-  // =========================
-  // SOURCE (best paragraph fallback)
-  // =========================
+  const title = heading ? minifyText(heading.textContent) : '';
   const paragraphs = section.querySelectorAll('p');
 
   let source = '';
-
   if (paragraphs.length > 0) {
-    // pick first meaningful paragraph (not empty)
-    for (const p of paragraphs) {
-      const text = minifyText(p.textContent);
-      if (text) {
-        source = text;
-        break;
-      }
+    const texts = Array.from(paragraphs).map((p) => minifyText(p.textContent)).filter((text) => text);
+    if (texts.length > 0) {
+      [source] = texts;
     }
   }
 
@@ -52,35 +31,17 @@ const getCTAContext = (ctaLink) => {
   };
 };
 
-/**
- * Normalize URL safely
- */
-const getCleanUrl = (url = '') =>
-  url.split('?')[0].split('#')[0].toLowerCase();
+const getCleanUrl = (url = '') => url.split('?')[0].split('#')[0].toLowerCase();
 
-/**
- * Extract file extension safely
- */
-const getFileExtension = (url = '') =>
-  url
-    .split('?')[0]
-    .split('#')[0]
-    .split('.')
-    .pop()
-    .toLowerCase();
+const getFileExtension = (url = '') => url.split('?')[0].split('#')[0].split('.').pop().toLowerCase();
 
 const fileExtensions = [
-  'pdf','doc','docx','xls','xlsx','csv',
-  'ppt','pptx','zip','rar','txt'
+  'pdf', 'doc', 'docx', 'xls', 'xlsx', 'csv',
+  'ppt', 'pptx', 'zip', 'rar', 'txt'
 ];
 
-/**
- * MAIN CTA HANDLER
- */
-export function handleBoxContainerCtaClick(e) {
-  const ctaLink = e.target.closest(
-    '.section.box-container.generic-body-copy a'
-  );
+export default function handleBoxContainerCtaClick(e) {
+  const ctaLink = e.target.closest('.section.box-container.generic-body-copy a');
 
   if (!ctaLink) return;
 
@@ -102,9 +63,6 @@ export function handleBoxContainerCtaClick(e) {
   const fileExt = getFileExtension(cleanUrl);
   const isDownload = fileExtensions.includes(fileExt);
 
-  // =========================
-  // DOWNLOAD TRACKING
-  // =========================
   if (isDownload) {
     downloadDocument(
       pageRegion,
@@ -123,10 +81,6 @@ export function handleBoxContainerCtaClick(e) {
     );
     return;
   }
-
-  // =========================
-  // CTA TRACKING
-  // =========================
   ctaInteraction(
     pageRegion,
     ctaText,

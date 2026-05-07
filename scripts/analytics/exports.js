@@ -730,11 +730,14 @@ export function searchresultitemClick(
   searchTerm,
   selectedSearchTerm,
   ctaTitle,
+  ctaText,
+
 ) {
   window.adobeDataLayer.push({
     event: "searchresultitemClick",
     data: {
       pageRegion,
+
       componentName,
       componentType,
       componentIndex,
@@ -748,6 +751,7 @@ export function searchresultitemClick(
       searchTerm,
       selectedSearchTerm,
       ctaTitle,
+      ctaText,
     },
   });
 }

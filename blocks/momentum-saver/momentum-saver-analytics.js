@@ -253,7 +253,6 @@ document.addEventListener('click', (e) => {
     const nextPageURL = secondaryLink?.getAttribute("href");
     const sectionEl = e.target.closest('.section');
     const componentId = sectionEl?.getAttribute('id') || "";
-
     ctaInteraction(
       pageRegion,
       minifyText(secondaryLink?.textContent),
@@ -281,22 +280,42 @@ document.addEventListener('click', (e) => {
 
   // momentum-impact p a
   const ctaLink = e.target.closest('.momentum-impact p a');
+
   if (!ctaLink) return;
 
   const container = ctaLink.closest('.momentum-impact');
   const heading = container?.querySelector('h1,h2,h3,h4,h5,h6');
+
   const pageRegion = getPageRegion(ctaLink);
   const componentIndex = getComponentIndex(ctaLink);
-  const nextPageURL = ctaLink.getAttribute("href");
+
+  const nextPageURL = ctaLink.getAttribute('href');
+
   const persona = getPersona();
+
   const ctaText = minifyText(ctaLink.textContent);
   const titleText = minifyText(heading?.textContent);
-  const sectionEl = e.target.closest('.section');
-  const componentId = sectionEl?.getAttribute('id') || "";
 
-  const cleanUrl = nextPageURL?.split('?')[0].toLowerCase();
+  const sectionEl = ctaLink.closest('.section');
+
+  const componentId = sectionEl?.getAttribute('id') || '';
+
+  // =========================
+  // FILE DETECTION
+  // =========================
+
+  const cleanUrl = nextPageURL
+    ?.split('?')[0]
+    ?.split('#')[0]
+    ?.toLowerCase();
+
   const fileExt = cleanUrl?.split('.').pop();
+
   const isDownload = FILE_EXTENSIONS.includes(fileExt);
+
+  // =========================
+  // DOWNLOAD CASE
+  // =========================
 
   if (isDownload) {
     downloadDocument(
@@ -314,8 +333,13 @@ document.addEventListener('click', (e) => {
       fileExt,
       'download'
     );
+
     return;
   }
+
+  // =========================
+  // CTA CASE
+  // =========================
 
   ctaInteraction(
     pageRegion,
