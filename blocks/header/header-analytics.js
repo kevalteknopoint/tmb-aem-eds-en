@@ -154,14 +154,54 @@ document.addEventListener('click', (e) => {
   if (e.target.closest('.search-btn')) {
     const el = e.target.closest('.search-btn');
 
+    // =========================
+    // SECTION + CONTAINER
+    // =========================
+
+    const sectionEl = el.closest('.section');
+
+    const container = el.closest('[data-block-name]')
+      || el.closest('[class*="header"]')
+      || el.closest('[class*="container"]');
+
+    // =========================
+    // DYNAMIC VALUES
+    // =========================
+
+    const componentId = sectionEl?.getAttribute('id') || '';
+
+    // dynamically derive from clicked class
+    const componentName = minifyText(
+      [...el.classList]
+        ?.find((cls) => cls.includes('search'))
+        ?.replace(/-/g, ' ')
+    )
+      || minifyText(
+        container?.className?.split(' ')[0]
+      )
+      || 'component';
+
+    const componentType = container?.getAttribute('data-block-name')
+      || minifyText(
+        container?.className?.split(' ')[0]
+      )
+      || minifyText(
+        sectionEl?.className?.split(' ')[1]
+      )
+      || 'component';
+
+    // =========================
+    // SEARCH ANALYTICS
+    // =========================
+
     searchInitiate(
       getPageRegion(el),
-      getComponentName(el),
-      'header',
+      componentName,
+      componentType,
       '1',
       getPersona(),
       'click',
-      getComponentId(el)
+      componentId
     );
   }
 
@@ -221,14 +261,24 @@ document.addEventListener('click', (e) => {
   if (e.target.closest('.dynamic-search-results a')) {
     const el = e.target.closest('a');
 
+    const sectionEl = el.closest('.section');
+
+    const container = el.closest('.dynamic-search-results') || el.closest('[data-block-name]') || el.closest('[class*="container"]');
+
     const headEle = el.closest('.default-content-wrapper')?.querySelector('h1, h2, h3, h4, h5, h6');
+
+    const componentId = sectionEl?.getAttribute('id') || '';
+
+    const componentName = minifyText(headEle?.textContent) || minifyText(sectionEl?.className?.split(' ')[1]) || 'component';
+
+    const componentType = container?.getAttribute('data-block-name') || minifyText(container?.className?.split(' ')[0]) || minifyText(sectionEl?.className?.split(' ')[1]) || 'component';
 
     const searchTerm = document.querySelector('.header-search-inp')?.value || '';
 
     suggestedSearchClick(
       getPageRegion(el),
-      getComponentName(el),
-      getComponentType(el),
+      componentName,
+      componentType,
       '1',
       getPersona(),
       '',
@@ -240,7 +290,7 @@ document.addEventListener('click', (e) => {
       minifyText(searchTerm),
       minifyText(el?.textContent),
       minifyText(headEle?.textContent || ''),
-      getComponentId(el)
+      componentId
     );
   }
 
