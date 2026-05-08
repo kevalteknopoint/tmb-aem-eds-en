@@ -7,27 +7,48 @@ import {
   downloadApp
 } from "../../scripts/analytics/exports.js";
 
+/* ---------------- HELPERS ---------------- */
+
+const getComponentName = (section) =>
+  minifyText(
+    section?.querySelector('h1, h2, h3, h4, h5, h6')?.textContent || ''
+  );
+
+const getComponentId = (section) =>
+  section?.getAttribute('data-component-id') || section?.id || '';
+
+const getCardTitle = (card) =>
+  minifyText(
+    card?.querySelector('h2, h3, .banking-desc-1')?.textContent || ''
+  );
+
+/* ---------------- LISTENER ---------------- */
+
 document.addEventListener('click', (e) => {
-  const clickedAnchor = e.target.closest('.online-banking .banking-li-1 a');
+  const section = e.target.closest('.online-banking');
+  if (!section) return;
 
-  if (clickedAnchor) {
-    const componentIndex = getComponentIndex(clickedAnchor);
-    const ctaTitle = clickedAnchor.closest('.cards-card-body')?.querySelector('h2');
-    const nextPageURL = clickedAnchor.getAttribute("href");
+  const componentName = getComponentName(section);
+  const componentId = getComponentId(section);
 
-    const pageRegion = getPageRegion(clickedAnchor);
-    console.log("pp");
+  /* =======================================================
+     LI-1 (simple list links)
+  ======================================================= */
+  const li1Link = e.target.closest('.banking-li-1 .cards-card-body a');
+
+  if (li1Link) {
+    const card = li1Link.closest('.banking-li-1');
 
     ctaInteraction(
-      pageRegion,
-      minifyText(clickedAnchor.textContent),
-      minifyText(ctaTitle?.textContent),
-      '',
+      getPageRegion(li1Link),
+      minifyText(li1Link.textContent),
+      getCardTitle(card),
+      componentName,
       'online-banking',
-      '',
-      componentIndex,
+      'text-card',
+      getComponentIndex(li1Link),
       getPersona(),
-      nextPageURL,
+      li1Link.getAttribute('href'),
       'cta-click',
       'internal',
       'quick-link',
@@ -35,46 +56,49 @@ document.addEventListener('click', (e) => {
       '',
       '',
       '',
-      'online-banking',
+      componentId,
       ''
     );
   }
 
-  const li2CTA = e.target.closest('.online-banking .banking-li-2')?.querySelector('.card-bottom-2 a');
+  /* =======================================================
+     LI-2 (standard CTA card)
+  ======================================================= */
+  const li2CTA = e.target.closest('.banking-li-2 .card-bottom-2 a');
 
   if (li2CTA) {
-    const pageRegion = getPageRegion(li2CTA);
-    const componentIndex = getComponentIndex(li2CTA);
-    const ctaTitleLi2 = e.target
-      .closest('.online-banking .banking-li-2')
-      .querySelector('.banking-desc-1');
-    const nextPageURL2 = li2CTA.getAttribute("href");
+    const card = li2CTA.closest('.banking-li-2');
+
+    const ctaTitle = getCardTitle(card);
 
     ctaInteraction(
-      pageRegion,
+      getPageRegion(li2CTA),
       minifyText(li2CTA.textContent),
-      minifyText(ctaTitleLi2?.textContent),
-      '',
+      ctaTitle,
+      componentName,
       'online-banking',
       'cards-container',
-      componentIndex,
+      getComponentIndex(li2CTA),
       getPersona(),
-      nextPageURL2,
+      li2CTA.getAttribute('href'),
       'cta-click',
       'internal',
       'quick-link',
-      'internal',
+      'in-content',
       '',
       '',
       '',
-      'online-banking',
+      componentId,
       ''
     );
   }
 
-  const badgeLink = e.target.closest('.online-banking .banking-li-3')?.querySelector('.card-bottom-2.is-badge-link a');
+  /* =======================================================
+     LI-3 (download app)
+  ======================================================= */
+  const li3Card = e.target.closest('.banking-li-3');
 
-  if (badgeLink) {
+  if (li3Card && e.target.closest('.card-bottom-2.is-badge-link a')) {
     const clickedBadge = e.target.closest('a');
 
     let iconName = '';
@@ -84,60 +108,19 @@ document.addEventListener('click', (e) => {
       iconName = 'app store';
     }
 
-    const pageRegion = getPageRegion(badgeLink);
-    const componentIndex = getComponentIndex(badgeLink);
-    const parentCard = e.target.closest('.online-banking .banking-li-3');
-    const ctaTitleLi3 = parentCard?.querySelector('.banking-desc-1');
-
     downloadApp(
-      pageRegion,
+      getPageRegion(clickedBadge),
       iconName,
-      minifyText(ctaTitleLi3?.textContent),
-      'online banking',
-      'cards container',
-      componentIndex,
+      getCardTitle(li3Card),
+      'online-banking',
+      'cards-container',
+      getComponentIndex(clickedBadge),
       getPersona(),
       'cta-click',
       'download',
       '',
       'internal',
-      'online banking'
-    );
-  }
-
-  const card = e.target.closest('.online-banking li');
-
-  if (card?.querySelector('.card-bottom-2 a')) {
-    const ctaLink = card.querySelector('.card-bottom-2 a');
-    const ctaTitleEl = card.querySelector('.banking-desc-1');
-
-    const sectionEl = e.target.closest('.online-banking');
-    const componentId = sectionEl?.getAttribute('data-component-id') || sectionEl?.id || '';
-
-    const componentIndex = getComponentIndex(ctaLink);
-    const pageRegion = getPageRegion(ctaLink);
-    const nextPageURL = ctaLink.getAttribute("href");
-    console.log('hello');
-
-    ctaInteraction(
-      pageRegion,
-      minifyText(ctaLink.textContent),
-      minifyText(ctaTitleEl?.textContent),
-      minifyText(sectionEl?.querySelector('h1, h2, h3, h4, h5, h6')?.textContent),
-      'online-banking',
-      '',
-      componentIndex,
-      getPersona(),
-      nextPageURL,
-      'cta-click',
-      'internal',
-      'quick-link',
-      'internal',
-      '',
-      '',
-      '',
-      componentId,
-      ''
+      componentId
     );
   }
 });

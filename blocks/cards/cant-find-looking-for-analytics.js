@@ -55,11 +55,11 @@ document.addEventListener('click', (e) => {
       const titleContainer = container?.querySelector('.default-content-wrapper');
       const title = titleContainer?.querySelector('h1, h2, h3, h4, h5, h6');
       const ctaTitleEle = linkEle?.closest('.cards-card-body')?.querySelector('h1, h2, h3, h4, h5, h6');
-
       const pageRegion = getPageRegion(linkEle);
       const componentIndex = getComponentIndex(linkEle);
       const nextPageURL = linkEle?.getAttribute("href");
       const componentId = target.closest('.section')?.getAttribute('id') || '';
+      const componentType = linkEle?.closest('.cards-card-body')?.querySelector('h1, h2, h3, h4, h5, h6');
 
       ctaInteraction(
         pageRegion,
@@ -67,7 +67,8 @@ document.addEventListener('click', (e) => {
         minifyText(ctaTitleEle?.textContent),
         'WAYS TO GET IN TOUCH',
         minifyText(title?.textContent),
-        '',
+        minifyText(componentType?.textContent),
+
         componentIndex,
         getPersona(),
         nextPageURL,
