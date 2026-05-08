@@ -16,6 +16,7 @@ document.addEventListener('click', (e) => {
     const nextPageURL = clickedAnchor.getAttribute("href");
 
     const pageRegion = getPageRegion(clickedAnchor);
+    console.log("pp");
 
     ctaInteraction(
       pageRegion,
@@ -116,6 +117,7 @@ document.addEventListener('click', (e) => {
     const componentIndex = getComponentIndex(ctaLink);
     const pageRegion = getPageRegion(ctaLink);
     const nextPageURL = ctaLink.getAttribute("href");
+    console.log('hello');
 
     ctaInteraction(
       pageRegion,

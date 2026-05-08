@@ -91,12 +91,12 @@ document.addEventListener('click', (e) => {
       const link = target.closest('.navigation-cards-container a');
       if (!link) return;
       const container = link.closest('.navigation-cards-container');
-      const sectionTitleEl = container?.querySelector(`.default-content-wrapper ${HEADING_SELECTOR}`);
-      const sectionHeading = minifyText(sectionTitleEl?.textContent || '');
+      // const sectionTitleEl = container?.querySelector(`.default-content-wrapper ${HEADING_SELECTOR}`);
+      // const sectionHeading = minifyText(sectionTitleEl?.textContent || '');
       const ctaText = minifyText(link.textContent);
-      const ctaTitle = sectionHeading;
-      const ctaSource = sectionHeading;
-      const componentName = sectionHeading;
+      const ctaTitle = minifyText(link.textContent);
+      const ctaSource = minifyText(link.textContent);
+      const componentName = minifyText(link.textContent);
       const componentType = container?.querySelector('[data-block-name]')?.getAttribute('data-block-name') || 'navigation-cards';
       const pageRegion = getPageRegion(link);
       const componentIndex = getComponentIndex(link);

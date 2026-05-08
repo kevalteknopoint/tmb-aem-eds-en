@@ -715,6 +715,47 @@ export function suggestedSearchClick(
   });
 }
 
+export function searchresultitemClick(
+  pageRegion,
+  componentName,
+  componentType,
+  componentIndex,
+  componentPersona,
+  componentId,
+  nextpageUrl,
+  interactionType,
+  navElementType,
+  navLocation,
+  searchType,
+  searchTerm,
+  selectedSearchTerm,
+  ctaTitle,
+  ctaText,
+
+) {
+  window.adobeDataLayer.push({
+    event: "searchresultitemClick",
+    data: {
+      pageRegion,
+
+      componentName,
+      componentType,
+      componentIndex,
+      componentPersona,
+      componentId,
+      nextpageUrl,
+      interactionType,
+      navElementType,
+      navLocation,
+      searchType,
+      searchTerm,
+      selectedSearchTerm,
+      ctaTitle,
+      ctaText,
+    },
+  });
+}
+
 export function internalSearch(
   pageRegion,
   componentName,

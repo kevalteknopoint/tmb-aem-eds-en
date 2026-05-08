@@ -7,184 +7,188 @@ import {
   downloadDocument
 } from "../../scripts/analytics/exports.js";
 
-document.addEventListener('click', (e) => {
-  if (e.target.closest('.accordion-container .button-container')) {
-    const link = e.target.closest('.accordion-container .accordion-wrapper .button-container a');
-    if (!link) return;
+const resolveComponentMeta = (el) => {
+  const section = el.closest('.section');
+  const container = el.closest('.accordion-container') || el.closest('.columns-container') || el.closest('[class*="container"]');
+  const heading = section?.querySelector('h1,h2,h3,h4,h5,h6');
 
-    const container = link.closest('.accordion-container');
-    const section = link.closest('.section');
-    const pageRegion = getPageRegion(link);
-    const componentIndex = getComponentIndex(link);
-    const nextPageURL = link.getAttribute("href");
-    const ctaText = minifyText(link?.textContent);
-    const sectionHeading = minifyText(
-      section?.querySelector('h1,h2,h3,h4,h5,h6')?.textContent || ''
+  return {
+    componentId: section?.getAttribute('id') || '',
+
+    componentName:
+      minifyText(heading?.textContent) || minifyText(container?.querySelector('h1,h2,h3,h4,h5,h6')?.textContent) || 'component',
+
+    componentType:
+      container?.getAttribute('data-block-name') || container?.className?.split(' ')[0] || 'component',
+
+    ctaTitle:
+      minifyText(heading?.textContent) || '',
+
+    ctaSource:
+      container?.getAttribute('data-block-name') || container?.className?.split(' ')[0] || 'component'
+  };
+};
+
+document.addEventListener('click', (e) => {
+  const persona = getPersona();
+  // 1. GENERIC ACCORDION CTA
+  const accordionBtn = e.target.closest('.accordion-container .button-container a');
+  if (accordionBtn) {
+    const meta = resolveComponentMeta(accordionBtn);
+    const pageRegion = getPageRegion(accordionBtn);
+    const componentIndex = getComponentIndex(accordionBtn);
+    const nextPageURL = accordionBtn.getAttribute("href");
+    const ctaText = minifyText(accordionBtn.textContent);
+
+    ctaInteraction(
+      pageRegion,
+      ctaText,
+      meta.ctaTitle,
+      meta.ctaSource,
+      meta.componentName,
+      meta.componentType,
+      componentIndex,
+      persona,
+      nextPageURL,
+      'cta-link',
+      'internal',
+      meta.ctaSource,
+      'in-content',
+      '',
+      '',
+      '',
+      meta.componentId,
+      '',
+      '',
+      ''
     );
 
-    const ctaSource = sectionHeading;
-    const ctaTitle = sectionHeading;
-    const componentName = sectionHeading;
+    return;
+  }
 
-    let componentType = 'component';
+  // 2. FAQ LINKS
+  const faqLink = e.target.closest('.tmb-acc-sec.accordion-container a');
+  if (faqLink) {
+    const meta = resolveComponentMeta(faqLink);
 
-    if (container?.classList.contains('accordion-container')) {
-      componentType = 'accordion';
-    } else if (container?.classList.contains('columns-container')) {
-      componentType = 'column';
+    const pageRegion = getPageRegion(faqLink);
+    const componentIndex = getComponentIndex(faqLink);
+    const nextPageURL = faqLink.getAttribute("href");
+
+    const ctaText = minifyText(faqLink.textContent);
+
+    ctaInteraction(
+      pageRegion,
+      ctaText,
+      meta.ctaTitle,
+      meta.ctaSource,
+      meta.componentName,
+      meta.componentType,
+      componentIndex,
+      persona,
+      nextPageURL,
+      'cta-link',
+      'internal',
+      meta.ctaSource,
+      'in-content',
+      '',
+      '',
+      '',
+      meta.componentId,
+      '',
+      '',
+      ''
+    );
+
+    return;
+  }
+
+  // 3. WHO CAN APPLY (WITH DOWNLOAD LOGIC)
+  const applyLink = e.target.closest('.who-can-apply-section.accordion-container ul li a');
+  if (applyLink) {
+    const meta = resolveComponentMeta(applyLink);
+    const pageRegion = getPageRegion(applyLink);
+    const componentIndex = getComponentIndex(applyLink);
+    const nextPageURL = applyLink.getAttribute('href');
+    const ctaText = minifyText(applyLink.textContent);
+    const cleanUrl = nextPageURL?.split('?')[0].split('#')[0].toLowerCase();
+    const fileExt = cleanUrl?.split('.').pop();
+    const fileExtensions = [
+      'pdf', 'doc', 'docx', 'xls', 'xlsx',
+      'csv', 'ppt', 'pptx', 'zip', 'rar', 'txt'
+    ];
+    const isDownload = fileExtensions.includes(fileExt);
+    if (isDownload) {
+      downloadDocument(
+        pageRegion,
+        meta.componentName,
+        meta.componentType,
+        componentIndex,
+        persona,
+        meta.componentId,
+        nextPageURL,
+        'cta-link',
+        'internal',
+        'in-content',
+        ctaText,
+        fileExt,
+        'download'
+      );
+      return;
     }
 
     ctaInteraction(
       pageRegion,
       ctaText,
-      ctaTitle,
-      ctaSource,
-      componentName,
-      componentType,
+      meta.ctaTitle,
+      meta.ctaSource,
+      meta.componentName,
+      meta.componentType,
       componentIndex,
-      getPersona(),
+      persona,
       nextPageURL,
       'cta-link',
       'internal',
-      'quick-link',
+      meta.ctaSource,
       'in-content',
       '',
       '',
       '',
-      '',
-      '',
-      '',
-      '',
-      ''
-    );
-  }
-
-  if (e.target.closest('.tmb-acc-sec.accordion-container .button-container')) {
-    const secondaryLink = e.target.closest('.tmb-acc-sec.accordion-container .accordion-wrapper .button-container a');
-    const pageRegion = getPageRegion(e.target.closest('.tmb-acc-sec.accordion-container .button-container a'));
-    const componentIndex = getComponentIndex(e.target.closest('.tmb-acc-sec.accordion-container .button-container a'));
-    const ctaTitle = e.target.closest('.tmb-acc-sec.accordion-container .accordion-wrapper').querySelector('p');
-    const nextPageURL = e.target.closest(".tmb-acc-sec.accordion-container .button-container a")?.getAttribute("href");
-
-    ctaInteraction(
-      pageRegion,
-      minifyText(secondaryLink?.textContent),
-      minifyText(ctaTitle?.textContent),
-      '',
-      'faq links',
-      'accordion-container',
-      componentIndex,
-      getPersona(),
-      nextPageURL,
-      'cta-link',
-      'internal',
-      'quick-link',
-      'in-content',
-      '',
-      '',
-      '',
-      'faq links',
-      '',
+      meta.componentId,
       '',
       '',
       ''
     );
+
+    return;
   }
 
-  if (e.target.closest('.tmb-acc-sec.accordion-container ol li')) {
-    const secondaryLink = e.target.closest('.tmb-acc-sec.accordion-container .accordion-wrapper li a');
-    const pageRegion = getPageRegion(e.target.closest('.tmb-acc-sec.accordion-container li a'));
-    const componentIndex = getComponentIndex(e.target.closest('.tmb-acc-sec.accordion-container li a'));
-    const ctaTitle = e.target.closest('.tmb-acc-sec.accordion-container .accordion-wrapper').querySelector('p');
-    const nextPageURL = e.target.closest(".tmb-acc-sec.accordion-container li a")?.getAttribute("href");
+  // 4. MEDIA RELEASES
+  const mediaReleaseLink = e.target.closest('.faq-accordion.accordion-container .accordion-item-body a');
 
-    ctaInteraction(
-      pageRegion,
-      minifyText(secondaryLink?.textContent),
-      minifyText(ctaTitle?.textContent),
-      '',
-      'faq links',
-      'accordion-container',
-      componentIndex,
-      getPersona(),
-      nextPageURL,
-      'cta-link',
-      'internal',
-      'quick-link',
-      'in-content',
-      '',
-      '',
-      '',
-      'faq links',
-      '',
-      '',
-      '',
-      ''
-    );
-  }
-
-  const ctaLink = e.target.closest(
-    '.who-can-apply-section.accordion-container ul li a'
-  );
-
-  if (!ctaLink) return;
-
-  const accordionItem = ctaLink.closest('.accordion-item');
-  const yearTitle = accordionItem?.querySelector('summary p');
-
-  const pageRegion = getPageRegion(ctaLink);
-  const componentIndex = getComponentIndex(ctaLink);
-  const nextPageURL = ctaLink.getAttribute('href');
-  const persona = getPersona();
-
-  const ctaText = minifyText(ctaLink.textContent);
-  const titleText = minifyText(yearTitle?.textContent);
-
-  const sectionEl = ctaLink.closest('.section');
-  const componentId = sectionEl?.getAttribute('id') || '';
-
-  /**
-   * ✅ Normalize URL safely (removes query + hash)
-   */
-  const getCleanUrl = (url = '') => {
-    const baseUrl = url.split('?')[0].split('#')[0];
-    return baseUrl.toLowerCase();
-  };
-
-  /**
-   * ✅ Extract file extension safely
-   */
-  const getFileExtension = (url = '') => {
-    const parts = url.split('.');
-    return parts.length > 1 ? parts.pop() : '';
-  };
-
+  if (!mediaReleaseLink) return;
+  const meta = resolveComponentMeta(mediaReleaseLink);
+  const pageRegion = getPageRegion(mediaReleaseLink);
+  const componentIndex = getComponentIndex(mediaReleaseLink);
+  const nextPageURL = mediaReleaseLink.getAttribute('href');
+  const ctaText = minifyText(mediaReleaseLink.textContent);
+  const cleanUrl = nextPageURL?.split('?')[0].split('#')[0].toLowerCase();
+  const fileExt = cleanUrl?.split('.').pop();
   const fileExtensions = [
-    'pdf',
-    'doc',
-    'docx',
-    'xls',
-    'xlsx',
-    'csv',
-    'ppt',
-    'pptx',
-    'zip',
-    'rar',
-    'txt'
+    'pdf', 'doc', 'docx', 'xls', 'xlsx',
+    'csv', 'ppt', 'pptx', 'zip', 'rar', 'txt'
   ];
 
-  const cleanUrl = getCleanUrl(nextPageURL);
-  const fileExt = getFileExtension(cleanUrl);
   const isDownload = fileExtensions.includes(fileExt);
 
   if (isDownload) {
     downloadDocument(
       pageRegion,
-      'faq links',
-      'accordion-container',
+      meta.componentName,
+      meta.componentType,
       componentIndex,
       persona,
-      componentId,
+      meta.componentId,
       nextPageURL,
       'cta-link',
       'internal',
@@ -193,27 +197,28 @@ document.addEventListener('click', (e) => {
       fileExt,
       'download'
     );
+
     return;
   }
 
   ctaInteraction(
     pageRegion,
     ctaText,
-    titleText,
-    '',
-    'faq links',
-    'accordion-container',
+    meta.ctaTitle,
+    meta.ctaSource,
+    meta.componentName,
+    meta.componentType,
     componentIndex,
     persona,
     nextPageURL,
     'cta-link',
     'internal',
-    'quick-link',
+    meta.ctaSource,
     'in-content',
     '',
     '',
     '',
-    componentId,
+    meta.componentId,
     '',
     '',
     ''
