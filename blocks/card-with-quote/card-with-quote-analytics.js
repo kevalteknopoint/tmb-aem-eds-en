@@ -7,29 +7,27 @@ import {
 } from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
-  const ctaLink = e.target.closest('.compare-accounts a');
+  const ctaLink = e.target.closest('.card-with-quote-container a.button');
   if (!ctaLink) return;
 
   const sectionEl = ctaLink.closest('.section');
-
-  const cardEl = ctaLink.closest('.compare-accounts-card');
-  const wrapperEl = ctaLink.closest('.compare-accounts-wrapper');
+  const blockEl = ctaLink.closest('.card-with-quote');
+  const contentEl = ctaLink.closest('.card-with-quote-content');
 
   // =========================
-  // DYNAMIC COMPONENT VALUES
+  // COMPONENT DYNAMIC VALUES
   // =========================
 
   const componentId = sectionEl?.id
     || sectionEl?.getAttribute('data-component-id')
-    || wrapperEl?.getAttribute('data-component-id')
     || '';
 
   const componentName = sectionEl?.className
     ?.split(' ')
-    ?.find((cls) => cls.includes('compare'))
-    || 'compare-accounts';
+    ?.find((cls) => cls.includes('card'))
+    || 'card-with-quote';
 
-  const componentType = wrapperEl?.getAttribute('data-block-name')
+  const componentType = blockEl?.getAttribute('data-block-name')
     || sectionEl?.getAttribute('data-block-name')
     || 'component';
 
@@ -40,14 +38,14 @@ document.addEventListener('click', (e) => {
   const ctaText = minifyText(ctaLink.textContent);
 
   const ctaTitle = minifyText(
-    cardEl?.querySelector('h1,h2,h3,h4,h5,h6')?.textContent
+    contentEl?.querySelector('h1,h2,h3,h4,h5,h6')?.textContent
       || sectionEl?.querySelector('h1,h2,h3,h4,h5,h6')?.textContent
       || ''
   );
 
   const ctaSource = minifyText(
-    sectionEl?.querySelector('.default-content-wrapper h1,h2,h3,h4,h5,h6')?.textContent
-      || sectionEl?.querySelector('h1,h2,h3,h4,h5,h6')?.textContent
+    sectionEl?.querySelector('.card-with-quote-content h1,h2,h3,h4,h5,h6')?.textContent
+      || sectionEl?.querySelector('.card-with-quote-content p')?.textContent
       || ''
   );
 
@@ -61,11 +59,11 @@ document.addEventListener('click', (e) => {
 
   ctaInteraction(
     pageRegion,
-    ctaText, // CTA text (dynamic)
-    ctaTitle, // title (dynamic)
-    ctaSource, // source (dynamic)
-    componentName, // component name (dynamic)
-    componentType, // component type (dynamic)
+    ctaText, // CTA text
+    ctaTitle, // title (heading)
+    ctaSource, // source (description/content)
+    componentName, // component name
+    componentType, // component type
     componentIndex,
     getPersona(),
     nextPageURL,

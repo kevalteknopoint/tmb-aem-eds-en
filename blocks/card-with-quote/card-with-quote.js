@@ -3,6 +3,7 @@ import {
   div,
   p,
 } from '../../scripts/dom-helpers.js';
+import './card-with-quote-analytics.js';
 
 export default function decorate(block) {
   const rows = [...block.children];
