@@ -71,11 +71,7 @@
                     "label": "Navigation Card Link",
                     "valueType": "string"
                 },
-                {
-                    "component": "title",
-                    "name": "navigation-randomm-title",
-                    "label": "Navigation Randomm Title"
-                },
+             
                 {
                     "component": "select",
                     "name": "navigation-card-link-target",
