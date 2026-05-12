@@ -162,4 +162,64 @@ document.addEventListener('click', (e) => {
       componentId
     );
   }
+
+  const faqLabel = target.closest('.faq-accordion .accordion-item-label');
+
+  if (faqLabel) {
+    const faqItem = faqLabel.closest('.accordion-item');
+    const section = faqLabel.closest('.section');
+
+    const faqItems = [...section.querySelectorAll('.accordion-item')];
+    const faqQuestionRank = faqItems.indexOf(faqItem) + 1;
+
+    const sectionHeading = minifyText(
+      section?.querySelector('.default-content-wrapper h1, h2, h3, h4, h5, h6')?.textContent
+    );
+
+    const faqTitle = sectionHeading; // REQUIRED
+
+    const pageRegion = getPageRegion(faqLabel);
+    const componentIndex = getComponentIndex(faqItem);
+    const componentId = section?.getAttribute('id');
+
+    const container = section?.querySelector('.accordion-container');
+
+    const componentType = container?.getAttribute('data-block-name')
+    || container?.className?.split(' ')[0]
+    || 'faq';
+
+    const componentName = sectionHeading || 'faq';
+    const ctaSource = componentType;
+
+    faqInteraction(
+      pageRegion,
+      faqTitle,
+      ctaSource,
+      componentName,
+      componentType,
+      componentIndex,
+      getPersona(),
+
+      'faq-toggle', // interactionType
+      'faq-expand', // microengagementType
+      'FAQ_CARD_LIMITS', // helpcontentId
+      ' ', // helpContentType (as requested)
+
+      'open', // faqAccordionToggleType
+      'faq swift code', // faqQuestionId
+
+      faqQuestionRank, // faqQuestionRank
+
+      '', // searchSuccessFlag
+      '', // searchResultClickPosition
+      'faq', // searchResultType
+
+      '', // requiredFieldMissingFlag
+      '', // testUserFlag
+      '', // qaSessionFlag
+
+      componentId, // componentId
+      '' // componentIdValidFlag
+    );
+  }
 });
