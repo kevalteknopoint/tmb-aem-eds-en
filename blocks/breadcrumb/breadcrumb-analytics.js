@@ -7,7 +7,6 @@ import {
 } from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
-
   const link = e.target.closest('.breadcrumb-container .breadcrumb a');
   if (!link) return;
 
@@ -23,17 +22,14 @@ document.addEventListener('click', (e) => {
 
   const ctaText = minifyText(link?.textContent);
 
-  const componentName =
-    minifyText(container?.closest('.section')?.querySelector('h1, h2, h3, h4, h5, h6')?.textContent) ||
-    'breadcrumb';
+  const componentName = minifyText(container?.closest('.section')?.querySelector('h1, h2, h3, h4, h5, h6')?.textContent)
+    || 'breadcrumb';
 
-  const componentType =
-    container?.getAttribute('data-block-name') ||
-    container?.className?.split(' ')[0] ||
-    'breadcrumb';
+  const componentType = container?.getAttribute('data-block-name')
+    || container?.className?.split(' ')[0]
+    || 'breadcrumb';
 
-  const componentId =
-    container?.closest('.section')?.getAttribute('id') || '';
+  const componentId = container?.closest('.section')?.getAttribute('id') || '';
 
   breadcrumbItemClick(
     pageRegion,
