@@ -100,7 +100,7 @@ document.addEventListener('click', (e) => {
       );
     } else {
       const ctaTitle = linkEle.getAttribute('title') || ctaText;
-      const ctaSource = 'faq'; // or derive if you have logic
+      const ctaSource = 'faq';
       ctaInteraction(
         pageRegion,
         ctaText,
@@ -185,8 +185,8 @@ document.addEventListener('click', (e) => {
     const container = section?.querySelector('.accordion-container');
 
     const componentType = container?.getAttribute('data-block-name')
-    || container?.className?.split(' ')[0]
-    || 'faq';
+      || container?.className?.split(' ')[0]
+      || 'faq';
 
     const componentName = sectionHeading || 'faq';
     const ctaSource = componentType;
@@ -200,26 +200,26 @@ document.addEventListener('click', (e) => {
       componentIndex,
       getPersona(),
 
-      'faq-toggle', // interactionType
-      'faq-expand', // microengagementType
-      'FAQ_CARD_LIMITS', // helpcontentId
-      ' ', // helpContentType (as requested)
+      'faq-toggle',
+      'faq-expand',
+      'FAQ_CARD_LIMITS',
+      ' ',
 
-      'open', // faqAccordionToggleType
-      'faq swift code', // faqQuestionId
+      'open',
+      'faq swift code',
 
-      faqQuestionRank, // faqQuestionRank
+      faqQuestionRank,
 
-      '', // searchSuccessFlag
-      '', // searchResultClickPosition
-      'faq', // searchResultType
+      '',
+      '',
+      'faq',
 
-      '', // requiredFieldMissingFlag
-      '', // testUserFlag
-      '', // qaSessionFlag
+      '',
+      '',
+      '',
 
-      componentId, // componentId
-      '' // componentIdValidFlag
+      componentId,
+      ''
     );
   }
 });
