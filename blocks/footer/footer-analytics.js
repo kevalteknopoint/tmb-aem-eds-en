@@ -81,20 +81,21 @@ document.addEventListener("click", (e) => {
   if (e.target.closest(".footer-bottom")) {
     const anchor = e.target.closest("a");
     if (!anchor) return;
+
     const anchorLi = anchor?.closest("li");
     const componentIndex = getComponentIndex(anchor);
     const nextPageURL = anchor?.getAttribute("href") || "";
-    ctaInteraction(
+
+    menuInteraction(
       "bottom",
       minifyText(anchorLi?.textContent),
       minifyText(anchor?.getAttribute("title")),
-      "menu-click",
       "global footer",
       "footer",
       componentIndex,
       getPersona(),
       nextPageURL,
-      "cta-click",
+      "menu-click",
       "internal",
       "link",
       "footer",

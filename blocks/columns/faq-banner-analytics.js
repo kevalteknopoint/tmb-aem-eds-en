@@ -1,13 +1,57 @@
-// import { ctaInteraction, minifyText , getPersona, getPageRegion, getComponentIndex } from "../../scripts/analytics/exports.js";
+import {
+  bannerSearch,
+  getPersona,
+  getPageRegion,
+  getComponentIndex
+} from "../../scripts/analytics/exports.js";
 
-// document.addEventListener('click', (e) => {
-//   if (e.target.closest('.news-helpful-homepage.news-helpful .button-container')) {
-//     // const secondaryLink = e.target.closest('.news-helpful-homepage.news-helpful .button-container .button');
-//      const componentIndex = getComponentIndex(e.target.closest('.news-helpful-homepage.news-helpful .button-container .button'));
-//      const nextPageURL = e.target.closest('.news-helpful-homepage.news-helpful .button-container .button')?.getAttribute("href");
-//       const ctaLink = e.target.closest('.news-helpful-homepage.news-helpful .button-container .button');
-//     const ctaTitle =e.target.closest('.news-helpful-homepage.news-helpful').querySelector('p');
-//      const pageRegion = getPageRegion(e.target.closest('.news-helpful-homepage.news-helpful .button-container .button'));
-//     ctaInteraction(pageRegion, minifyText(ctaLink?.textContent),minifyText(ctaTitle?.textContent)  , '', 'read more','news-helpful',componentIndex,getPersona(),nextPageURL,'cta-link','internal','quick-link','in-content','','','','news-info-homepage','','','');
-//   }
-// });
+document.addEventListener("input", (e) => {
+  const input = e.target;
+
+  if (!input || input.id !== "faq-search") return;
+
+  const component = input.closest(".faq-landing-banner");
+  if (!component) return;
+
+  const pageRegion = getPageRegion(component);
+  const componentIndex = getComponentIndex(component);
+
+  const searchTerm = input.value.trim();
+  if (searchTerm.length < 3) return;
+
+  const sectionId = component.closest(".section")?.id || "";
+
+  // TODO: replace with real API/UI result count if available
+  const resultCount = document.querySelectorAll(".search-result-item")?.length || 0;
+
+  // bucket logic - avoid nested ternary
+  let searchResultCountBucket;
+  if (resultCount === 0) {
+    searchResultCountBucket = "0";
+  } else if (resultCount <= 5) {
+    searchResultCountBucket = "1-5";
+  } else if (resultCount <= 10) {
+    searchResultCountBucket = "6-10";
+  } else {
+    searchResultCountBucket = "10+";
+  }
+
+  bannerSearch(
+    pageRegion,
+    "help-search",
+    searchTerm,
+    "",
+    searchResultCountBucket,
+    "",
+    "faq-landing-banner",
+    "search-input",
+    componentIndex,
+    getPersona(),
+    "banner-click",
+    "",
+    "",
+    "",
+    sectionId,
+    ""
+  );
+});

@@ -12,6 +12,7 @@ document.addEventListener('click', (e) => {
       const pageRegion = getPageRegion(target.closest('.faq-link'));
       const componentIndex = getComponentIndex(target.closest('.faq-link'));
       const componentId = target.closest('.section').getAttribute('id');
+
       faqInteraction(pageRegion, faqTitle, minifyText(ctaSourceEle?.textContent), 'faq frequently', 'faq', componentIndex, getPersona(), 'faq toggle', 'faq expand', 'FAQ CARD LIMITS', 'open', '', 'faq swift code', '', '', '', '', '', '', '', '', '', '', componentId);
     } else if (target.closest('.faq-frequently-question-list')) {
       const targetContainer = target.closest('.faq-frequently-question-list');
@@ -21,6 +22,7 @@ document.addEventListener('click', (e) => {
       const pageRegion = getPageRegion(target.closest('.faq-link'));
       const componentIndex = getComponentIndex(target.closest('.faq-link'));
       const componentId = target.closest('.section').getAttribute('id');
+
       faqInteraction(pageRegion, faqTitle, minifyText(ctaSourceEle?.textContent), minifyText(title?.textContent), 'faq frequently', '', componentIndex, getPersona(), 'faq toggle', 'faq expand', 'FAQ CARD LIMITS', '', 'open', '', 'faq swift code', '', '', '', '', '', componentId, '');
     }
   }
@@ -163,7 +165,7 @@ document.addEventListener('click', (e) => {
     );
   }
 
-  const faqLabel = target.closest('.faq-accordion .accordion-item-label');
+  const faqLabel = target.closest('.faq-accordion:not(#faqs-section-scroll) .accordion-item-label');
 
   if (faqLabel) {
     const faqItem = faqLabel.closest('.accordion-item');
