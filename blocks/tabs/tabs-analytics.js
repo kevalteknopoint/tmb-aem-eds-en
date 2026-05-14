@@ -18,14 +18,6 @@ document.addEventListener('click', (e) => {
       '.tabbed-navigation.tabs-container'
     );
 
-    const sectionTitleEl = componentWrapper?.querySelector(
-      '.default-content-wrapper h2'
-    );
-
-    const sectionTitle = minifyText(
-      sectionTitleEl?.textContent || ''
-    );
-
     const componentId = componentWrapper?.getAttribute('id') || '';
 
     const ctaSource = minifyText(
@@ -40,7 +32,7 @@ document.addEventListener('click', (e) => {
       pageRegion,
       ctaSource,
       '',
-      sectionTitle,
+      'side widget',
       'tabs',
       componentIndex,
       getPersona(),
@@ -49,6 +41,8 @@ document.addEventListener('click', (e) => {
       'internal',
       componentId
     );
+
+    return;
   }
 
   /* ---------------- CTA CLICK ---------------- */
@@ -66,27 +60,15 @@ document.addEventListener('click', (e) => {
     '.tab-content-container'
   );
 
-  /* ✅ FIX: Get ACTIVE visible tab panel */
   const activePanel = componentWrapper?.querySelector(
     '.tabs-panel[aria-hidden="false"]'
   );
 
-  /* Optional fallback: ensure correct item */
   const tabContentItem = primaryLink.closest('.tab-content-item')
     || activePanel?.querySelector('.tab-content-item');
 
   const activeTab = componentWrapper?.querySelector(
     '.tabs-tab[aria-selected="true"]'
-  );
-
-  /* ---------- DYNAMIC VALUES ---------- */
-
-  const sectionTitleEl = componentWrapper?.querySelector(
-    '.default-content-wrapper h2'
-  );
-
-  const sectionTitle = minifyText(
-    sectionTitleEl?.textContent || ''
   );
 
   const componentId = componentWrapper?.getAttribute('id') || '';
@@ -99,7 +81,6 @@ document.addEventListener('click', (e) => {
     primaryLink?.textContent || ''
   );
 
-  /* ✅ FIXED: Dynamic CTA title */
   const ctaTitle = minifyText(
     tabContentItem?.querySelector(
       '.tab-content-heading h3'
@@ -117,8 +98,8 @@ document.addEventListener('click', (e) => {
     ctaText,
     ctaTitle,
     ctaSource,
-    sectionTitle,
-    sectionTitle,
+    'side widget',
+    'tabs',
     componentIndex,
     getPersona(),
     nextPageURL,
