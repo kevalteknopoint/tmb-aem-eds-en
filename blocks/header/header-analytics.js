@@ -8,18 +8,31 @@ import {
   suggestedSearchClick,
   headerlogoClick,
   internalSearch,
-  searchresultitemClick
+  searchresultitemClick,
+  ctaInteraction,
+  getComponentIndex // ✅ FIX: ADDED (was missing and causing crash)
 } from "../../scripts/analytics/exports.js";
 
 /**
  * HELPERS
  */
 const getComponentName = (el) =>
-  minifyText(el?.getAttribute('title') || el?.querySelector('img')?.alt || el?.textContent || 'na');
+  minifyText(
+    el?.getAttribute('title')
+    || el?.querySelector('img')?.alt
+    || el?.textContent
+    || 'na'
+  );
 
-const getComponentType = (el) => (el?.querySelector('img') ? 'image' : el?.tagName?.toLowerCase());
+const getComponentType = (el) =>
+  (el?.querySelector('img') ? 'image' : el?.tagName?.toLowerCase());
 
-const getComponentId = (el) => el?.id || el?.getAttribute('data-id') || el?.dataset?.componentId || el?.closest('[data-component-id]')?.getAttribute('data-component-id') || '';
+const getComponentId = (el) =>
+  el?.id
+  || el?.getAttribute('data-id')
+  || el?.dataset?.componentId
+  || el?.closest('[data-component-id]')?.getAttribute('data-component-id')
+  || '';
 
 const getSafeHref = (el) => {
   const href = el?.getAttribute('href') || el?.href || '';
@@ -36,12 +49,12 @@ const fireInternalSearchOnLoad = () => {
   const page = document.querySelector('.search-results-page');
   if (!page || page.dataset.internalTracked) return;
 
-  const input = document.querySelector('.results-search-inp') || document.querySelector('.header-search-inp');
+  const input = document.querySelector('.results-search-inp')
+    || document.querySelector('.header-search-inp');
 
   const searchTerm = (input?.value || '').trim();
 
   const resultsContainer = document.querySelector('.search-results-list');
-
   if (!resultsContainer) return;
 
   const triggerAnalytics = () => {
@@ -68,9 +81,7 @@ const fireInternalSearchOnLoad = () => {
 
   triggerAnalytics();
 
-  const observer = new MutationObserver(() => {
-    triggerAnalytics();
-  });
+  const observer = new MutationObserver(() => triggerAnalytics());
 
   observer.observe(resultsContainer, {
     childList: true,
@@ -88,22 +99,65 @@ observer.observe(document.body, {
 });
 
 document.addEventListener('click', (e) => {
-  const logoEl = e.target.closest('.logo-wrap a');
+  // =========================
+  // HEADER LOGO + LOGIN CTA
+  // =========================
 
-  if (logoEl) {
+  const headerEl = e.target.closest(
+    '.logo-wrap a, .login-btn-wrap a.login-btn'
+  );
+
+  if (headerEl) {
+    const isLogin = headerEl.classList.contains('login-btn');
+
+    // LOGIN CTA
+    if (isLogin) {
+      ctaInteraction(
+        getPageRegion(headerEl),
+        minifyText(headerEl.textContent),
+        'login',
+        'login',
+        'header',
+        'columns-container',
+        getComponentIndex(headerEl),
+        getPersona(),
+        getSafeHref(headerEl),
+        'cta-link',
+        'internal',
+        'header-login',
+        'in-content',
+        '',
+        '',
+        '',
+        getComponentId(headerEl),
+        '',
+        '',
+        '',
+        ''
+      );
+
+      return;
+    }
+
+    // LOGO CLICK
     headerlogoClick(
-      getPageRegion(logoEl),
-      getComponentName(logoEl),
-      getComponentType(logoEl),
+      getPageRegion(headerEl),
+      getComponentName(headerEl),
+      getComponentType(headerEl),
       '1',
       'header',
-      getSafeHref(logoEl),
+      getSafeHref(headerEl),
       'click',
       'internal',
-      getComponentId(logoEl)
+      getComponentId(headerEl)
     );
+
     return;
   }
+
+  // =========================
+  // PRIMARY NAV
+  // =========================
 
   if (e.target.closest('.primary-nav-link')) {
     const linkEl = e.target.closest('a');
@@ -128,6 +182,10 @@ document.addEventListener('click', (e) => {
     );
   }
 
+  // =========================
+  // SECONDARY NAV
+  // =========================
+
   if (e.target.closest('.secondary-nav-link')) {
     const linkEl = e.target.closest('a');
 
@@ -151,12 +209,12 @@ document.addEventListener('click', (e) => {
     );
   }
 
+  // =========================
+  // SEARCH INITIATE
+  // =========================
+
   if (e.target.closest('.search-btn')) {
     const el = e.target.closest('.search-btn');
-
-    // =========================
-    // SECTION + CONTAINER
-    // =========================
 
     const sectionEl = el.closest('.section');
 
@@ -164,35 +222,20 @@ document.addEventListener('click', (e) => {
       || el.closest('[class*="header"]')
       || el.closest('[class*="container"]');
 
-    // =========================
-    // DYNAMIC VALUES
-    // =========================
-
     const componentId = sectionEl?.getAttribute('id') || '';
 
-    // dynamically derive from clicked class
     const componentName = minifyText(
       [...el.classList]
         ?.find((cls) => cls.includes('search'))
         ?.replace(/-/g, ' ')
     )
-      || minifyText(
-        container?.className?.split(' ')[0]
-      )
+      || minifyText(container?.className?.split(' ')[0])
       || 'component';
 
     const componentType = container?.getAttribute('data-block-name')
-      || minifyText(
-        container?.className?.split(' ')[0]
-      )
-      || minifyText(
-        sectionEl?.className?.split(' ')[1]
-      )
+      || minifyText(container?.className?.split(' ')[0])
+      || minifyText(sectionEl?.className?.split(' ')[1])
       || 'component';
-
-    // =========================
-    // SEARCH ANALYTICS
-    // =========================
 
     searchInitiate(
       getPageRegion(el),
@@ -205,18 +248,30 @@ document.addEventListener('click', (e) => {
     );
   }
 
+  // =========================
+  // SEARCH BUTTON
+  // =========================
+
   if (
-    e.target.closest('button.search-btn') || e.target.closest('button.results-search-btn')
+    e.target.closest('button.search-btn')
+    || e.target.closest('button.results-search-btn')
   ) {
-    const btn = e.target.closest('button.search-btn, button.results-search-btn');
+    const btn = e.target.closest(
+      'button.search-btn, button.results-search-btn'
+    );
 
     const section = btn.closest('.section') || document;
 
-    const input = section.querySelector('.results-search-inp') || section.querySelector('.header-search-inp') || document.querySelector('.results-search-inp') || document.querySelector('.header-search-inp');
+    const input = section.querySelector('.results-search-inp')
+      || section.querySelector('.header-search-inp')
+      || document.querySelector('.results-search-inp')
+      || document.querySelector('.header-search-inp');
 
     const searchTerm = (input?.value || '').trim();
 
-    if (e.target.closest('.primary-header').classList.contains('search-active')) {
+    if (
+      e.target.closest('.primary-header')?.classList.contains('search-active')
+    ) {
       internalSearch(
         getPageRegion(btn),
         'search-results-page',
@@ -232,12 +287,17 @@ document.addEventListener('click', (e) => {
     }
   }
 
+  // =========================
+  // POPULAR SEARCH
+  // =========================
+
   if (e.target.closest('.popular-search-results a')) {
     const linkEle = e.target.closest('a');
     const wrapper = linkEle.closest('.popular-search-results');
     const section = linkEle.closest('.section');
 
-    const clickedText = linkEle.getAttribute('title')?.trim() || linkEle.textContent.trim();
+    const clickedText = linkEle.getAttribute('title')?.trim()
+      || linkEle.textContent.trim();
 
     const componentIndex = Array.from(wrapper.querySelectorAll('a')).indexOf(linkEle) + 1;
 
@@ -258,20 +318,32 @@ document.addEventListener('click', (e) => {
     );
   }
 
+  // =========================
+  // DYNAMIC SEARCH RESULTS
+  // =========================
+
   if (e.target.closest('.dynamic-search-results a')) {
     const el = e.target.closest('a');
 
     const sectionEl = el.closest('.section');
 
-    const container = el.closest('.dynamic-search-results') || el.closest('[data-block-name]') || el.closest('[class*="container"]');
+    const container = el.closest('.dynamic-search-results')
+      || el.closest('[data-block-name]')
+      || el.closest('[class*="container"]');
 
-    const headEle = el.closest('.default-content-wrapper')?.querySelector('h1, h2, h3, h4, h5, h6');
+    const headEle = el.closest('.default-content-wrapper')
+      ?.querySelector('h1, h2, h3, h4, h5, h6');
 
     const componentId = sectionEl?.getAttribute('id') || '';
 
-    const componentName = minifyText(headEle?.textContent) || minifyText(sectionEl?.className?.split(' ')[1]) || 'component';
+    const componentName = minifyText(headEle?.textContent)
+      || minifyText(sectionEl?.className?.split(' ')[1])
+      || 'component';
 
-    const componentType = container?.getAttribute('data-block-name') || minifyText(container?.className?.split(' ')[0]) || minifyText(sectionEl?.className?.split(' ')[1]) || 'component';
+    const componentType = container?.getAttribute('data-block-name')
+      || minifyText(container?.className?.split(' ')[0])
+      || minifyText(sectionEl?.className?.split(' ')[1])
+      || 'component';
 
     const searchTerm = document.querySelector('.header-search-inp')?.value || '';
 
@@ -294,6 +366,10 @@ document.addEventListener('click', (e) => {
     );
   }
 
+  // =========================
+  // SEARCH RESULTS CLICK
+  // =========================
+
   if (e.target.closest('.search-results-page a')) {
     const el = e.target.closest('a');
 
@@ -308,23 +384,28 @@ document.addEventListener('click', (e) => {
     let ctaText = '';
     let ctaTitle = '';
 
-    // Dynamic componentName & componentType
-    const componentRoot = el.closest('.search-results-page') || el.closest('.search-result-item');
-    const componentName = componentRoot?.className?.split(' ')[0] || 'search-results';
-    const componentType = componentRoot?.className?.includes('item-category-section') ? 'category-result' : 'search-result';
+    const componentRoot = el.closest('.search-results-page')
+      || el.closest('.search-result-item');
 
-    // FULL CTA TEXT (robust)
+    const componentName = componentRoot?.className?.split(' ')[0] || 'search-results';
+
+    const componentType = componentRoot?.className?.includes('item-category-section')
+      ? 'category-result'
+      : 'search-result';
+
     const rawLabel = el.cloneNode(true)?.textContent || '';
 
     ctaText = minifyText(rawLabel.replace(/\s+/g, ' ').trim());
 
-    // Right side CTA title from description
     if (isRightSide) {
       const titleEl = el.closest('.search-result-item')?.querySelector('.item-title');
+
       ctaTitle = minifyText(titleEl?.textContent || '');
     }
 
-    const searchTerm = document.querySelector('.results-search-inp')?.value || document.querySelector('.header-search-inp')?.value || '';
+    const searchTerm = document.querySelector('.results-search-inp')?.value
+      || document.querySelector('.header-search-inp')?.value
+      || '';
 
     searchresultitemClick(
       pageRegion,

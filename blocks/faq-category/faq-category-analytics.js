@@ -12,6 +12,7 @@ document.addEventListener('click', (e) => {
       const pageRegion = getPageRegion(target.closest('.faq-link'));
       const componentIndex = getComponentIndex(target.closest('.faq-link'));
       const componentId = target.closest('.section').getAttribute('id');
+
       faqInteraction(pageRegion, faqTitle, minifyText(ctaSourceEle?.textContent), 'faq frequently', 'faq', componentIndex, getPersona(), 'faq toggle', 'faq expand', 'FAQ CARD LIMITS', 'open', '', 'faq swift code', '', '', '', '', '', '', '', '', '', '', componentId);
     } else if (target.closest('.faq-frequently-question-list')) {
       const targetContainer = target.closest('.faq-frequently-question-list');
@@ -21,6 +22,7 @@ document.addEventListener('click', (e) => {
       const pageRegion = getPageRegion(target.closest('.faq-link'));
       const componentIndex = getComponentIndex(target.closest('.faq-link'));
       const componentId = target.closest('.section').getAttribute('id');
+
       faqInteraction(pageRegion, faqTitle, minifyText(ctaSourceEle?.textContent), minifyText(title?.textContent), 'faq frequently', '', componentIndex, getPersona(), 'faq toggle', 'faq expand', 'FAQ CARD LIMITS', '', 'open', '', 'faq swift code', '', '', '', '', '', componentId, '');
     }
   }
@@ -100,7 +102,7 @@ document.addEventListener('click', (e) => {
       );
     } else {
       const ctaTitle = linkEle.getAttribute('title') || ctaText;
-      const ctaSource = 'faq'; // or derive if you have logic
+      const ctaSource = 'faq';
       ctaInteraction(
         pageRegion,
         ctaText,
@@ -160,6 +162,66 @@ document.addEventListener('click', (e) => {
       '',
       '',
       componentId
+    );
+  }
+
+  const faqLabel = target.closest('.faq-accordion:not(#faqs-section-scroll) .accordion-item-label');
+
+  if (faqLabel) {
+    const faqItem = faqLabel.closest('.accordion-item');
+    const section = faqLabel.closest('.section');
+
+    const faqItems = [...section.querySelectorAll('.accordion-item')];
+    const faqQuestionRank = faqItems.indexOf(faqItem) + 1;
+
+    const sectionHeading = minifyText(
+      section?.querySelector('.default-content-wrapper h1, h2, h3, h4, h5, h6')?.textContent
+    );
+
+    const faqTitle = sectionHeading; // REQUIRED
+
+    const pageRegion = getPageRegion(faqLabel);
+    const componentIndex = getComponentIndex(faqItem);
+    const componentId = section?.getAttribute('id');
+
+    const container = section?.querySelector('.accordion-container');
+
+    const componentType = container?.getAttribute('data-block-name')
+      || container?.className?.split(' ')[0]
+      || 'faq';
+
+    const componentName = sectionHeading || 'faq';
+    const ctaSource = componentType;
+
+    faqInteraction(
+      pageRegion,
+      faqTitle,
+      ctaSource,
+      componentName,
+      componentType,
+      componentIndex,
+      getPersona(),
+
+      'faq-toggle',
+      'faq-expand',
+      'FAQ_CARD_LIMITS',
+      ' ',
+
+      'open',
+      'faq swift code',
+
+      faqQuestionRank,
+
+      '',
+      '',
+      'faq',
+
+      '',
+      '',
+      '',
+
+      componentId,
+      ''
     );
   }
 });
