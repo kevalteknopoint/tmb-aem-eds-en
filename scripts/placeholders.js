@@ -10,13 +10,15 @@
  * governing permissions and limitations under the License.
  */
 
+import { getMetadata } from "./aem.js";
+
 /**
  * Gets placeholders object.
  * @param {string} [prefix] Location of placeholders
  * @returns {object} Window placeholders object
  */
 // eslint-disable-next-line import/prefer-default-export
-export async function fetchPlaceholders(prefix = 'default', urlKey = 'placeholders.json') {
+export async function fetchPlaceholders(prefix = 'default', urlKey = getMetadata('rates-sheet')) {
   window.placeholders = window.placeholders || {};
   if (!window.placeholders[prefix]) {
     window.placeholders[prefix] = new Promise((resolve) => {
