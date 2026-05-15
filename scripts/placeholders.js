@@ -10,7 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
-import { getMetadata } from "./scripts.js";
+import { getMetadata } from "./aem.js";
 
 /**
  * Gets placeholders object.
