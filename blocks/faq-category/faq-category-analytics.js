@@ -47,7 +47,6 @@ document.addEventListener('click', (e) => {
         '',
         componentId
       );
-
     } else if (target.closest('.faq-frequently-question-list')) {
       const targetContainer = target.closest('.faq-frequently-question-list');
       const titleContainer = targetContainer?.previousElementSibling;
@@ -124,7 +123,6 @@ document.addEventListener('click', (e) => {
         componentId,
         ''
       );
-
     } else if (target.closest('.faq-cant-find-looking-for:not(.rates-saver, .navigation-cards-container)')) {
       const targetContainer = target.closest('.faq-cant-find-looking-for');
       const titleContainer = targetContainer?.querySelector('.default-content-wrapper');
@@ -152,13 +150,12 @@ document.addEventListener('click', (e) => {
     const nextPageURL = linkEle.getAttribute('href') || '';
 
     const cleanURL = nextPageURL.split('?')[0].toLowerCase();
-    const isDownload =
-      cleanURL.endsWith('.pdf') ||
-      cleanURL.endsWith('.doc') ||
-      cleanURL.endsWith('.docx') ||
-      cleanURL.endsWith('.xls') ||
-      cleanURL.endsWith('.xlsx') ||
-      cleanURL.endsWith('.ashx');
+    const isDownload = cleanURL.endsWith('.pdf')
+      || cleanURL.endsWith('.doc')
+      || cleanURL.endsWith('.docx')
+      || cleanURL.endsWith('.xls')
+      || cleanURL.endsWith('.xlsx')
+      || cleanURL.endsWith('.ashx');
 
     const componentId = target.closest('.section')?.getAttribute('id') || '';
 
@@ -255,7 +252,7 @@ document.addEventListener('click', (e) => {
 
     let faqQuestionRank = '';
 
-    for (let i = 0; i < faqItems.length; i++) {
+    for (let i = 0; i < faqItems.length; i += 1) {
       if (faqItems[i].contains(faqLabel)) {
         faqQuestionRank = String(i + 1);
         break;
@@ -276,10 +273,9 @@ document.addEventListener('click', (e) => {
 
     const container = section?.querySelector('.accordion-container');
 
-    const componentType =
-      container?.getAttribute('data-block-name') ||
-      container?.className?.split(' ')[0] ||
-      'faq';
+    const componentType = container?.getAttribute('data-block-name')
+      || container?.className?.split(' ')[0]
+      || 'faq';
 
     const componentName = sectionHeading || 'faq';
     const ctaSource = componentType;
