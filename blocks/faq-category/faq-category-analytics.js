@@ -1,4 +1,12 @@
-import { ctaInteraction, faqInteraction, minifyText, getComponentIndex, getPageRegion, getPersona, downloadDocument } from "../../scripts/analytics/exports.js";
+import {
+  ctaInteraction,
+  faqInteraction,
+  minifyText,
+  getComponentIndex,
+  getPageRegion,
+  getPersona,
+  downloadDocument
+} from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
   const { target } = e;
@@ -11,19 +19,68 @@ document.addEventListener('click', (e) => {
       const ctaSourceEle = linkEle?.closest('.faq-items-list')?.parentElement?.querySelector('h1, h2, h3, h4, h5, h6');
       const pageRegion = getPageRegion(target.closest('.faq-link'));
       const componentIndex = getComponentIndex(target.closest('.faq-link'));
-      const componentId = target.closest('.section').getAttribute('id');
+      const componentId = target.closest('.section')?.getAttribute('id') || '';
 
-      faqInteraction(pageRegion, faqTitle, minifyText(ctaSourceEle?.textContent), 'faq frequently', 'faq', componentIndex, getPersona(), 'faq toggle', 'faq expand', 'FAQ CARD LIMITS', 'open', '', 'faq swift code', '', '', '', '', '', '', '', '', '', '', componentId);
+      faqInteraction(
+        pageRegion,
+        faqTitle,
+        minifyText(ctaSourceEle?.textContent),
+        'faq frequently',
+        'faq',
+        componentIndex,
+        getPersona(),
+        'faq toggle',
+        'faq expand',
+        'FAQ CARD LIMITS',
+        'open',
+        '',
+        'faq swift code',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        componentId
+      );
     } else if (target.closest('.faq-frequently-question-list')) {
       const targetContainer = target.closest('.faq-frequently-question-list');
       const titleContainer = targetContainer?.previousElementSibling;
       const title = titleContainer?.querySelector('h1, h2, h3, h4, h5, h6');
+
       const ctaSourceEle = linkEle?.closest('.faq-items-list')?.parentElement?.querySelector('h1, h2, h3, h4, h5, h6');
+
       const pageRegion = getPageRegion(target.closest('.faq-link'));
       const componentIndex = getComponentIndex(target.closest('.faq-link'));
-      const componentId = target.closest('.section').getAttribute('id');
+      const componentId = target.closest('.section')?.getAttribute('id') || '';
 
-      faqInteraction(pageRegion, faqTitle, minifyText(ctaSourceEle?.textContent), minifyText(title?.textContent), 'faq frequently', '', componentIndex, getPersona(), 'faq toggle', 'faq expand', 'FAQ CARD LIMITS', '', 'open', '', 'faq swift code', '', '', '', '', '', componentId, '');
+      faqInteraction(
+        pageRegion,
+        faqTitle,
+        minifyText(ctaSourceEle?.textContent),
+        minifyText(title?.textContent),
+        'faq frequently',
+        '',
+        componentIndex,
+        getPersona(),
+        'faq toggle',
+        'faq expand',
+        'FAQ CARD LIMITS',
+        '',
+        'open',
+        '',
+        'faq swift code',
+        '',
+        '',
+        '',
+        '',
+        '',
+        componentId
+      );
     }
   }
 
@@ -37,16 +94,15 @@ document.addEventListener('click', (e) => {
       const cardWrapper = linkEle.closest('.faq-category-wrapper');
       const ctaTitle = cardWrapper?.querySelector('h1, h2, h3, h4, h5, h6');
 
-      const ctaSourceEle = listSection
-        ?.previousElementSibling
-        ?.classList.contains('faq-frequently-question-title')
+      const ctaSourceEle = listSection?.previousElementSibling?.classList.contains('faq-frequently-question-title')
         ? listSection.previousElementSibling.querySelector('h1, h2, h3, h4, h5, h6')
         : document.querySelector('.faq-frequently-question-title h1, .faq-frequently-question-title h2, .faq-frequently-question-title h3, .faq-frequently-question-title h4, .faq-frequently-question-title h5, .faq-frequently-question-title h6');
 
       const pageRegion = getPageRegion(linkEle);
       const componentIndex = getComponentIndex(linkEle);
       const nextPageURL = linkEle?.getAttribute('href');
-      const componentId = target.closest('.section').getAttribute('id');
+      const componentId = target.closest('.section')?.getAttribute('id') || '';
+
       ctaInteraction(
         pageRegion,
         minifyText(linkEle?.textContent),
@@ -84,6 +140,7 @@ document.addEventListener('click', (e) => {
       );
     }
   }
+
   const linkEle = target.closest('.sub-section-wrapper a');
 
   if (linkEle && linkEle.closest('.section-wrapper.faq-detail-container')) {
@@ -92,17 +149,36 @@ document.addEventListener('click', (e) => {
     const componentIndex = getComponentIndex(linkEle);
     const nextPageURL = linkEle.getAttribute('href') || '';
 
-    // Identify downloadable documents
     const cleanURL = nextPageURL.split('?')[0].toLowerCase();
-    const isDownload = cleanURL.endsWith('.pdf') || cleanURL.endsWith('.doc') || cleanURL.endsWith('.docx') || cleanURL.endsWith('.xls') || cleanURL.endsWith('.xlsx') || cleanURL.endsWith('.ashx'); // 👈 important for your case
-    const componentId = target.closest('.section').getAttribute('id');
+    const isDownload = cleanURL.endsWith('.pdf')
+      || cleanURL.endsWith('.doc')
+      || cleanURL.endsWith('.docx')
+      || cleanURL.endsWith('.xls')
+      || cleanURL.endsWith('.xlsx')
+      || cleanURL.endsWith('.ashx');
+
+    const componentId = target.closest('.section')?.getAttribute('id') || '';
+
     if (isDownload) {
       downloadDocument(
-        pageRegion, 'faq category', 'faq', componentIndex, getPersona(), componentId, nextPageURL, '', '', '', ctaText, 'pdf', 'download'
+        pageRegion,
+        'faq category',
+        'faq',
+        componentIndex,
+        getPersona(),
+        componentId,
+        nextPageURL,
+        '',
+        '',
+        '',
+        ctaText,
+        'pdf',
+        'download'
       );
     } else {
       const ctaTitle = linkEle.getAttribute('title') || ctaText;
       const ctaSource = 'faq';
+
       ctaInteraction(
         pageRegion,
         ctaText,
@@ -125,6 +201,7 @@ document.addEventListener('click', (e) => {
       );
     }
   }
+
   if (target.closest('#faqs-section-scroll')) {
     const section = target.closest('.section');
 
@@ -135,7 +212,7 @@ document.addEventListener('click', (e) => {
     const heading = section?.querySelector('h1, h2, h3, h4, h5, h6');
     const pageRegion = getPageRegion(target);
     const componentIndex = getComponentIndex(target);
-    const componentId = section?.getAttribute('id');
+    const componentId = section?.getAttribute('id') || '';
 
     faqInteraction(
       pageRegion,
@@ -169,20 +246,30 @@ document.addEventListener('click', (e) => {
 
   if (faqLabel) {
     const faqItem = faqLabel.closest('.accordion-item');
-    const section = faqLabel.closest('.section');
+    const faqContainer = target.closest('.faq-accordion');
 
-    const faqItems = [...section.querySelectorAll('.accordion-item')];
-    const faqQuestionRank = faqItems.indexOf(faqItem) + 1;
+    const faqItems = [...faqContainer.querySelectorAll('.accordion-item')];
+
+    let faqQuestionRank = '';
+
+    for (let i = 0; i < faqItems.length; i += 1) {
+      if (faqItems[i].contains(faqLabel)) {
+        faqQuestionRank = String(i + 1);
+        break;
+      }
+    }
+
+    const section = faqLabel.closest('.section');
 
     const sectionHeading = minifyText(
       section?.querySelector('.default-content-wrapper h1, h2, h3, h4, h5, h6')?.textContent
     );
 
-    const faqTitle = sectionHeading; // REQUIRED
+    const faqTitle = sectionHeading;
 
     const pageRegion = getPageRegion(faqLabel);
     const componentIndex = getComponentIndex(faqItem);
-    const componentId = section?.getAttribute('id');
+    const componentId = section?.getAttribute('id') || '';
 
     const container = section?.querySelector('.accordion-container');
 
