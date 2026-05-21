@@ -60,9 +60,14 @@
           "multi": false
         },
         {
+          "name": "imageMimeType",
+          "value": "image/png",
+          "component": "hidden"
+        },
+        {
           "component": "richtext",
           "name": "text",
-          "label": "Text",
+          "label": "Card Text",
           "valueType": "string"
         },
         {

@@ -24,9 +24,14 @@
           "multi": false
         },
         {
+          "name": "imageMimeType",
+          "value": "image/png",
+          "component": "hidden"
+        },
+        {
           "component": "text",
           "name": "imageAlt",
-          "label": "Alt Text"
+          "label": "Alternate Text"
         }
       ]
     }
