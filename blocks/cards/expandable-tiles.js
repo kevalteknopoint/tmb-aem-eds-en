@@ -2,6 +2,7 @@
 import { createOptimizedPicture, injectIcon } from '../../scripts/aem.js';
 import { button, div } from '../../scripts/dom-helpers.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
+import './expandable-tiles-analytics.js';
 
 function htmlToElement(htmlString) {
   if (!htmlString) return document.createElement('div');

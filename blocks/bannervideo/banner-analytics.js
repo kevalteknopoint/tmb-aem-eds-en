@@ -3,45 +3,59 @@ import {
   minifyText,
   getPersona,
   getPageRegion,
-  getComponentIndex,
+  getComponentIndex
 } from "../../scripts/analytics/exports.js";
 
 document.addEventListener("click", (e) => {
-  if (e.target.closest(".bannervideo-wrapper .button")) {
-    const secondaryLink = e.target.closest(".bannervideo-wrapper .button");
-    const bannerName = e.target
-      .closest(".bannervideo-wrapper")
-      .querySelector("h1,h2,h3,h4,h5,h6")
-      ?.getAttribute("id");
-    const button = e.target.closest(".bannervideo-wrapper .button");
-    const pageRegion = getPageRegion(button);
-    const componentIndex = getComponentIndex(button);
-    const nextPageURL = e.target
-      .closest(".bannervideo-wrapper .button")
-      ?.getAttribute("href");
-    const carouselPosition = e.target
-      .closest(".bannervideo-wrapper .button")
-      .closest(".swiper-slide")
-      .getAttribute("aria-label")
-      .split(" / ")[0];
-    bannerInteraction(
-      pageRegion,
-      minifyText(secondaryLink?.textContent),
-      bannerName,
-      carouselPosition,
-      "bannervideo",
-      "bannervideo",
-      componentIndex,
-      getPersona(),
-      nextPageURL,
-      "banner-click",
-      "internal",
-      "",
-      "",
-      "",
-      "homepage-banner",
-      "",
-      "",
-    );
-  }
+  const button = e.target.closest(".bannervideo-wrapper .button");
+  if (!button) return;
+
+  const isNewsHelpful = button.closest(".news-helpful");
+
+  const componentType = isNewsHelpful
+    ? "news-helpful"
+    : "bannervideo";
+
+  const componentName = componentType;
+
+  const section = button.closest(".section");
+
+  // banner heading (for text)
+  const heading = section?.querySelector("h1,h2,h3,h4,h5,h6");
+
+  const bannerName = heading?.textContent?.trim() || "";
+
+  // ✅ FIXED: componentId should come ONLY from section id
+  const componentId = section?.id || "";
+
+  const pageRegion = getPageRegion(button);
+  const componentIndex = getComponentIndex(button);
+
+  const nextPageURL = button?.getAttribute("href");
+
+  const carouselPosition = button
+    .closest(".swiper-slide")
+    ?.getAttribute("aria-label")
+    ?.split(" / ")[0] || "";
+
+  if (isNewsHelpful) return;
+
+  bannerInteraction(
+    pageRegion,
+    minifyText(button?.textContent),
+    minifyText(bannerName),
+    carouselPosition,
+    componentType,
+    componentName,
+    componentIndex,
+    getPersona(),
+    nextPageURL,
+    "banner-click",
+    "internal",
+    "",
+    "",
+    "",
+    componentId, // "" if not authored
+    "",
+  );
 });
