@@ -25,7 +25,7 @@
         },
         {
           "name": "imageMimeType",
-          "value": "image/jpg",
+          "value": "image/png",
           "component": "hidden"
         },
         {
