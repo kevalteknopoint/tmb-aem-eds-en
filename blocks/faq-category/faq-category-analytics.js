@@ -70,9 +70,7 @@ document.addEventListener('click', (e) => {
     const faqTitle = minifyText(linkEle?.textContent);
 
     if (target.closest('.faq-frequently-question')) {
-      const ctaSourceEle = linkEle?.closest('.faq-items-list')
-        ?.parentElement
-        ?.querySelector('h1, h2, h3, h4, h5, h6');
+      const ctaSourceEle = linkEle?.closest('.faq-items-list')?.parentElement?.querySelector('h1, h2, h3, h4, h5, h6');
 
       const pageRegion = getPageRegion(target.closest('.faq-link'));
       const componentIndex = getComponentIndex(target.closest('.faq-link'));
@@ -104,13 +102,12 @@ document.addEventListener('click', (e) => {
         '',
         componentId
       );
-    }
-    else if (target.closest('.faq-frequently-question-list')) {
+    } else if (target.closest('.faq-frequently-question-list')) {
       const targetContainer = target.closest('.faq-frequently-question-list');
       const titleContainer = targetContainer?.previousElementSibling;
       const title = titleContainer?.querySelector('h1, h2, h3, h4, h5, h6');
 
-      const ctaSourceEle = linkEle?.closest('.faq-items-list') ?.parentElement ?.querySelector('h1, h2, h3, h4, h5, h6');
+      const ctaSourceEle = linkEle?.closest('.faq-items-list')?.parentElement?.querySelector('h1, h2, h3, h4, h5, h6');
       const pageRegion = getPageRegion(target.closest('.faq-link'));
       const componentIndex = getComponentIndex(target.closest('.faq-link'));
       const componentId = target.closest('.section')?.getAttribute('id') || '';
@@ -188,7 +185,7 @@ document.addEventListener('click', (e) => {
       const targetContainer = target.closest('.faq-cant-find-looking-for');
       const titleContainer = targetContainer?.querySelector('.default-content-wrapper');
       const title = titleContainer?.querySelector('h1, h2, h3, h4, h5, h6');
-      const ctaTitleEle = linkEle?.closest('.cards-card-body') ?.querySelector('h1, h2, h3, h4, h5, h6');
+      const ctaTitleEle = linkEle?.closest('.cards-card-body')?.querySelector('h1, h2, h3, h4, h5, h6');
 
       ctaInteraction(
         '',
