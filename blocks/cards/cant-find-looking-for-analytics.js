@@ -19,13 +19,34 @@ const getFileExt = (url = '') => {
   return cleanUrl.split('.').pop();
 };
 
+// =========================
+// COMPONENT TYPE HELPER
+// =========================
+const getComponentType = (element) => {
+  if (!element) return '';
+
+  if (element.closest('.faq-cant-find-looking-for-variant')) {
+    return 'faq-cant-find-looking-for-variant';
+  }
+
+  if (element.closest('.rates-saver')) {
+    return 'faq-rates-saver';
+  }
+
+  if (element.closest('.navigation-cards-container')) {
+    return 'navigation-cards';
+  }
+
+  return element.closest('[data-block-name]')?.getAttribute('data-block-name') || '';
+};
+
 document.addEventListener('click', (e) => {
   const { target } = e;
 
   const linkEle = target.closest('a');
   if (!linkEle) return;
 
-  const nextPageURL = linkEle.getAttribute("href") || '';
+  const nextPageURL = linkEle.getAttribute('href') || '';
   const fileExt = getFileExt(nextPageURL);
   const isDownload = fileExtensions.includes(fileExt);
 
@@ -43,14 +64,22 @@ document.addEventListener('click', (e) => {
     target.closest('.faq-cant-find-looking-for.rates-saver:not(.navigation-cards-container)')
   ) {
     const container = target.closest('.faq-cant-find-looking-for');
-    const title = container?.querySelector('.default-content-wrapper h1,h2,h3,h4,h5,h6');
-    const ctaTitleEle = linkEle?.closest('.cards-card-body')?.querySelector(HEADING_SELECTOR);
+
+    const title = container?.querySelector(
+      '.default-content-wrapper h1,h2,h3,h4,h5,h6'
+    );
+
+    const ctaTitleEle = linkEle
+      ?.closest('.cards-card-body')
+      ?.querySelector(HEADING_SELECTOR);
+
+    const componentType = getComponentType(target);
 
     if (isDownload) {
       downloadDocument(
         pageRegion,
         'faq-rates-saver',
-        'component',
+        componentType,
         componentIndex,
         persona,
         componentId,
@@ -62,6 +91,7 @@ document.addEventListener('click', (e) => {
         fileExt,
         'download'
       );
+
       return;
     }
 
@@ -71,7 +101,7 @@ document.addEventListener('click', (e) => {
       minifyText(ctaTitleEle?.textContent),
       'cant find what you are looking for?',
       minifyText(title?.textContent),
-      '',
+      componentType,
       componentIndex,
       persona,
       nextPageURL,
@@ -85,6 +115,7 @@ document.addEventListener('click', (e) => {
       componentId,
       ''
     );
+
     return;
   }
 
@@ -92,17 +123,27 @@ document.addEventListener('click', (e) => {
   // 2. FAQ VARIANT
   // =========================
   if (
-    target.closest('.faq-cant-find-looking-for.faq-cant-find-looking-for-variant.cards-container:not(.navigation-cards-container)')
+    target.closest(
+      '.faq-cant-find-looking-for.faq-cant-find-looking-for-variant.cards-container:not(.navigation-cards-container)'
+    )
   ) {
     const container = target.closest('.faq-cant-find-looking-for');
-    const title = container?.querySelector('.default-content-wrapper h1,h2,h3,h4,h5,h6');
-    const ctaTitleEle = linkEle?.closest('.cards-card-body')?.querySelector(HEADING_SELECTOR);
+
+    const title = container?.querySelector(
+      '.default-content-wrapper h1,h2,h3,h4,h5,h6'
+    );
+
+    const ctaTitleEle = linkEle
+      ?.closest('.cards-card-body')
+      ?.querySelector(HEADING_SELECTOR);
+
+    const componentType = getComponentType(target);
 
     if (isDownload) {
       downloadDocument(
         pageRegion,
         'faq-variant',
-        'component',
+        componentType,
         componentIndex,
         persona,
         componentId,
@@ -114,6 +155,7 @@ document.addEventListener('click', (e) => {
         fileExt,
         'download'
       );
+
       return;
     }
 
@@ -123,7 +165,7 @@ document.addEventListener('click', (e) => {
       minifyText(ctaTitleEle?.textContent),
       'WAYS TO GET IN TOUCH',
       minifyText(title?.textContent),
-      '',
+      componentType,
       componentIndex,
       persona,
       nextPageURL,
@@ -137,6 +179,7 @@ document.addEventListener('click', (e) => {
       componentId,
       ''
     );
+
     return;
   }
 
@@ -144,9 +187,12 @@ document.addEventListener('click', (e) => {
   // 3. NAVIGATION CARDS
   // =========================
   if (
-    target.closest('.navigation-cards-container .navigation-cards-wrapper:not(.rates-saver.faq-cant-find-looking-for-variant)')
+    target.closest(
+      '.navigation-cards-container .navigation-cards-wrapper:not(.rates-saver.faq-cant-find-looking-for-variant)'
+    )
   ) {
     const link = target.closest('.navigation-cards-container a');
+
     if (!link) return;
 
     const container = link.closest('.navigation-cards-container');
@@ -154,11 +200,9 @@ document.addEventListener('click', (e) => {
     const ctaText = minifyText(link.textContent || '');
     const ctaTitle = ctaText;
 
-    const componentName = minifyText(container?.getAttribute('data-block-name'))
-      || 'navigation-cards';
+    const componentName = minifyText(container?.getAttribute('data-block-name')) || 'navigation-cards';
 
-    const componentType = container?.querySelector('[data-block-name]')?.getAttribute('data-block-name')
-      || 'navigation-cards';
+    const componentType = getComponentType(target);
 
     if (isDownload) {
       downloadDocument(
@@ -176,6 +220,7 @@ document.addEventListener('click', (e) => {
         fileExt,
         'download'
       );
+
       return;
     }
 
@@ -199,27 +244,39 @@ document.addEventListener('click', (e) => {
       componentId,
       ''
     );
+
     return;
   }
 
   // =========================
   // 4. NAV CARD (PDF OR CTA)
   // =========================
-  const ctaLink = target.closest('.navigation-cards-container .nav-card a.is-clickable');
+  const ctaLink = target.closest(
+    '.navigation-cards-container .nav-card a.is-clickable'
+  );
 
   if (ctaLink) {
     const card = ctaLink.closest('.nav-card');
+
     const container = ctaLink.closest('.navigation-cards-container');
 
-    const ctaText = minifyText(card?.querySelector('h3')?.textContent || '');
+    const ctaText = minifyText(
+      card?.querySelector('h3')?.textContent || ''
+    );
 
-    const sectionTitle = minifyText(container?.querySelector(`.default-content-wrapper ${HEADING_SELECTOR}`)?.textContent || '');
+    const sectionTitle = minifyText(
+      container?.querySelector(
+        `.default-content-wrapper ${HEADING_SELECTOR}`
+      )?.textContent || ''
+    );
+
+    const componentType = getComponentType(target);
 
     if (isDownload) {
       downloadDocument(
         pageRegion,
         sectionTitle,
-        'navigation-cards',
+        componentType,
         componentIndex,
         persona,
         componentId,
@@ -231,6 +288,7 @@ document.addEventListener('click', (e) => {
         fileExt,
         'download'
       );
+
       return;
     }
 
@@ -240,7 +298,7 @@ document.addEventListener('click', (e) => {
       sectionTitle,
       '',
       sectionTitle,
-      'navigation-cards',
+      componentType,
       componentIndex,
       persona,
       nextPageURL,

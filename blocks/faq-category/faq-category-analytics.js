@@ -11,12 +11,69 @@ import {
 document.addEventListener('click', (e) => {
   const { target } = e;
 
+  // =====================================================
+  // 1. FAQ CATEGORY CONTAINER (NEW - YOUR HTML)
+  // =====================================================
+  const faqCategoryLink = target.closest('.faq-category-container .faq-link');
+
+  if (faqCategoryLink) {
+    const container = faqCategoryLink.closest('.faq-category');
+
+    const faqTitle = minifyText(faqCategoryLink.textContent || '');
+    const pageRegion = getPageRegion(faqCategoryLink);
+
+    const section = faqCategoryLink.closest('.section');
+    const componentId = section?.getAttribute('id') || '';
+
+    const persona = getPersona();
+
+    // index from HTML data-index (best source)
+    const componentIndex = faqCategoryLink.getAttribute('data-index') ? Number(faqCategoryLink.getAttribute('data-index')) + 1 : getComponentIndex(faqCategoryLink);
+
+    const categoryTitleEl = container?.querySelector('h1, h2, h3, h4, h5, h6');
+
+    const categoryTitle = minifyText(categoryTitleEl?.textContent || '');
+
+    faqInteraction(
+      pageRegion,
+      faqTitle,
+      categoryTitle,
+      'faq category',
+      container?.getAttribute('data-block-name') || 'faq-category',
+      componentIndex,
+      persona,
+      'faq click',
+      'faq open',
+      'faq category container',
+      'open',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      componentId
+    );
+
+    return;
+  }
+
+  // =====================================================
+  // 2. EXISTING FAQ LINK LOGIC (UNCHANGED)
+  // =====================================================
   if (target.closest('.faq-link')) {
     const linkEle = target.closest('.faq-link');
     const faqTitle = minifyText(linkEle?.textContent);
 
     if (target.closest('.faq-frequently-question')) {
-      const ctaSourceEle = linkEle?.closest('.faq-items-list')?.parentElement?.querySelector('h1, h2, h3, h4, h5, h6');
+      const ctaSourceEle = linkEle?.closest('.faq-items-list')
+        ?.parentElement
+        ?.querySelector('h1, h2, h3, h4, h5, h6');
+
       const pageRegion = getPageRegion(target.closest('.faq-link'));
       const componentIndex = getComponentIndex(target.closest('.faq-link'));
       const componentId = target.closest('.section')?.getAttribute('id') || '';
@@ -47,13 +104,13 @@ document.addEventListener('click', (e) => {
         '',
         componentId
       );
-    } else if (target.closest('.faq-frequently-question-list')) {
+    }
+    else if (target.closest('.faq-frequently-question-list')) {
       const targetContainer = target.closest('.faq-frequently-question-list');
       const titleContainer = targetContainer?.previousElementSibling;
       const title = titleContainer?.querySelector('h1, h2, h3, h4, h5, h6');
 
-      const ctaSourceEle = linkEle?.closest('.faq-items-list')?.parentElement?.querySelector('h1, h2, h3, h4, h5, h6');
-
+      const ctaSourceEle = linkEle?.closest('.faq-items-list') ?.parentElement ?.querySelector('h1, h2, h3, h4, h5, h6');
       const pageRegion = getPageRegion(target.closest('.faq-link'));
       const componentIndex = getComponentIndex(target.closest('.faq-link'));
       const componentId = target.closest('.section')?.getAttribute('id') || '';
@@ -84,6 +141,9 @@ document.addEventListener('click', (e) => {
     }
   }
 
+  // =====================================================
+  // 3. CTA BUTTON LOGIC (UNCHANGED)
+  // =====================================================
   if (target.closest('a') && target.closest('.button-container')) {
     const linkEle = target.closest('a');
     const ctaText = minifyText(linkEle?.textContent);
@@ -123,11 +183,12 @@ document.addEventListener('click', (e) => {
         componentId,
         ''
       );
-    } else if (target.closest('.faq-cant-find-looking-for:not(.rates-saver, .navigation-cards-container)')) {
+    }
+    else if (target.closest('.faq-cant-find-looking-for:not(.rates-saver, .navigation-cards-container)')) {
       const targetContainer = target.closest('.faq-cant-find-looking-for');
       const titleContainer = targetContainer?.querySelector('.default-content-wrapper');
       const title = titleContainer?.querySelector('h1, h2, h3, h4, h5, h6');
-      const ctaTitleEle = linkEle?.closest('.cards-card-body')?.querySelector('h1, h2, h3, h4, h5, h6');
+      const ctaTitleEle = linkEle?.closest('.cards-card-body') ?.querySelector('h1, h2, h3, h4, h5, h6');
 
       ctaInteraction(
         '',
@@ -141,15 +202,19 @@ document.addEventListener('click', (e) => {
     }
   }
 
-  const linkEle = target.closest('.sub-section-wrapper a');
+  // =====================================================
+  // 4. FAQ DETAIL DOWNLOAD LOGIC (UNCHANGED)
+  // =====================================================
+  const subLink = target.closest('.sub-section-wrapper a');
 
-  if (linkEle && linkEle.closest('.section-wrapper.faq-detail-container')) {
-    const ctaText = minifyText(linkEle.textContent);
-    const pageRegion = getPageRegion(linkEle);
-    const componentIndex = getComponentIndex(linkEle);
-    const nextPageURL = linkEle.getAttribute('href') || '';
+  if (subLink && subLink.closest('.section-wrapper.faq-detail-container')) {
+    const ctaText = minifyText(subLink.textContent);
+    const pageRegion = getPageRegion(subLink);
+    const componentIndex = getComponentIndex(subLink);
+    const nextPageURL = subLink.getAttribute('href') || '';
 
     const cleanURL = nextPageURL.split('?')[0].toLowerCase();
+
     const isDownload = cleanURL.endsWith('.pdf')
       || cleanURL.endsWith('.doc')
       || cleanURL.endsWith('.docx')
@@ -176,14 +241,13 @@ document.addEventListener('click', (e) => {
         'download'
       );
     } else {
-      const ctaTitle = linkEle.getAttribute('title') || ctaText;
-      const ctaSource = 'faq';
+      const ctaTitle = subLink.getAttribute('title') || ctaText;
 
       ctaInteraction(
         pageRegion,
         ctaText,
         ctaTitle,
-        ctaSource,
+        'faq',
         'faq category',
         'faq',
         componentIndex,
@@ -202,6 +266,9 @@ document.addEventListener('click', (e) => {
     }
   }
 
+  // =====================================================
+  // 5. SCROLL FAQ (UNCHANGED)
+  // =====================================================
   if (target.closest('#faqs-section-scroll')) {
     const section = target.closest('.section');
 
@@ -242,6 +309,9 @@ document.addEventListener('click', (e) => {
     );
   }
 
+  // =====================================================
+  // 6. ACCORDION FAQ (UNCHANGED)
+  // =====================================================
   const faqLabel = target.closest('.faq-accordion:not(#faqs-section-scroll) .accordion-item-label');
 
   if (faqLabel) {
@@ -261,25 +331,13 @@ document.addEventListener('click', (e) => {
 
     const section = faqLabel.closest('.section');
 
-    const sectionHeading = minifyText(
-      section?.querySelector('.default-content-wrapper h1, h2, h3, h4, h5, h6')?.textContent
-    );
-
-    const faqTitle = sectionHeading;
-
+    const sectionHeading = minifyText(section?.querySelector('.default-content-wrapper h1, h2, h3, h4, h5, h6')?.textContent);
     const pageRegion = getPageRegion(faqLabel);
     const componentIndex = getComponentIndex(faqItem);
     const componentId = section?.getAttribute('id') || '';
-
     const container = section?.querySelector('.accordion-container');
-
-    const componentType = container?.getAttribute('data-block-name')
-      || container?.className?.split(' ')[0]
-      || 'faq';
-
+    const componentType = container?.getAttribute('data-block-name') || container?.className?.split(' ')[0] || 'faq';
     const componentName = sectionHeading || 'faq';
-    const ctaSource = componentType;
-
     faqInteraction(
       pageRegion,
       faqTitle,
@@ -288,25 +346,19 @@ document.addEventListener('click', (e) => {
       componentType,
       componentIndex,
       getPersona(),
-
       'faq-toggle',
       'faq-expand',
       'FAQ_CARD_LIMITS',
       ' ',
-
       'open',
       'faq swift code',
-
       faqQuestionRank,
-
       '',
       '',
       'faq',
-
       '',
       '',
       '',
-
       componentId,
       ''
     );
