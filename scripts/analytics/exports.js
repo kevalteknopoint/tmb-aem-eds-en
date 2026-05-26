@@ -176,8 +176,6 @@ export function faqInteraction(
 
 // this function will fire when the user expand any accrodian
 export function accrodianExpand(pageRegion, ctaText, ctaTitle, componentName, componentType, componentIndex, componentPersona, interactionType, navElementType, navLocation, componentId) {
-  console.log("Expkanded");
-
   window.adobeDataLayer.push({
     event: "accrodianExpand",
     data: {
