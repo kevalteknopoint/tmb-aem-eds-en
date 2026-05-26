@@ -180,8 +180,7 @@ document.addEventListener('click', (e) => {
         componentId,
         ''
       );
-    }
-    else if (target.closest('.faq-cant-find-looking-for:not(.rates-saver, .navigation-cards-container)')) {
+    } else if (target.closest('.faq-cant-find-looking-for:not(.rates-saver, .navigation-cards-container)')) {
       const targetContainer = target.closest('.faq-cant-find-looking-for');
       const titleContainer = targetContainer?.querySelector('.default-content-wrapper');
       const title = titleContainer?.querySelector('h1, h2, h3, h4, h5, h6');
@@ -337,8 +336,8 @@ document.addEventListener('click', (e) => {
     const componentName = sectionHeading || 'faq';
     faqInteraction(
       pageRegion,
-      faqTitle,
-      ctaSource,
+      // faqTitle,
+      // ctaSource,
       componentName,
       componentType,
       componentIndex,
