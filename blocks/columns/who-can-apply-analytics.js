@@ -66,7 +66,6 @@ document.addEventListener('click', (e) => {
       const componentIndex = getComponentIndex(accordion);
 
       const ctaText = minifyText(summary.textContent || '');
-
       // force componentType as accordion-container
       meta.componentType = accordion
         .closest('.accordion-container')

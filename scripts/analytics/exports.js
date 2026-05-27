@@ -77,7 +77,8 @@ export function setPersona() {
 }
 
 export function getPersona() {
-  return localStorage.getItem("persona");
+  const persona = localStorage.getItem("persona") ? localStorage.getItem("persona") : "";
+  return persona;
 }
 
 export function menuInteraction(
@@ -194,7 +195,7 @@ export function accrodianExpand(pageRegion, ctaText, ctaTitle, componentName, co
   });
 }
 
-//this function will fire when the user click on any tab
+//this function will fire when the user click on any tab 
 export function tabInteraction(
   pageRegion,
   tabText,
@@ -227,8 +228,6 @@ export function tabInteraction(
     }
   });
 }
-
-
 
 export function ctaInteraction(
   pageRegion,

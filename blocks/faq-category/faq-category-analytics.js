@@ -267,8 +267,8 @@ document.addEventListener('click', (e) => {
   // =====================================================
   if (target.closest('#faqs-section-scroll')) {
     const section = target.closest('.section');
-
     const faqTitle = minifyText(
+      target.closest('.accordion-item-label')?.textContent ||
       section?.querySelector('.default-content-wrapper h1, h2, h3, h4, h5, h6')?.textContent
     );
 

@@ -20,8 +20,7 @@ document.addEventListener('click', (e) => {
 
     const homeSection = tab.closest('.home-loan-explained');
 
-    const componentId =
-      componentWrapper.getAttribute('id') || '';
+    const componentId = componentWrapper.getAttribute('id') || '';
 
     const pageRegion = getPageRegion(tab);
     const componentIndex = getComponentIndex(tab);
