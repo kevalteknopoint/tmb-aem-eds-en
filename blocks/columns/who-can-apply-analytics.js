@@ -105,7 +105,7 @@ document.addEventListener('click', (e) => {
         ctaText,
         meta.ctaTitle,
         meta.componentName,
-        meta.componentType,
+        'accordion',
         componentIndex,
         persona,
         'expand',
