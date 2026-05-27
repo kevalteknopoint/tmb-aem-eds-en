@@ -186,26 +186,49 @@ document.addEventListener('click', (e) => {
   // SECONDARY NAV
   // =========================
 
+  // if (e.target.closest('.secondary-nav-link')) {
+  //   const linkEl = e.target.closest('a');
+
+  //   menuInteraction(
+  //     getPageRegion(linkEl),
+  //     getComponentName(linkEl),
+  //     getComponentType(linkEl),
+  //     '',
+  //     'top menu',
+  //     'menu',
+  //     '1',
+  //     getPersona(),
+  //     '',
+  //     'menu-click',
+  //     'internal',
+  //     '',
+  //     '',
+  //     '',
+  //     'header',
+  //     getSafeHref(linkEl)
+  //   );
+  // }
+
   if (e.target.closest('.secondary-nav-link')) {
-    const linkEl = e.target.closest('a');
+    const linkEl = e.target.closest('.secondary-nav-link');
 
     menuInteraction(
       getPageRegion(linkEl),
-      getComponentName(linkEl),
-      getComponentType(linkEl),
+      linkEl.textContent.trim().toLowerCase(),
+      '',
       '',
       'top menu',
       'menu',
       '1',
       getPersona(),
-      '',
+      getSafeHref(linkEl),
       'menu-click',
       'internal',
       '',
       '',
       '',
       'header',
-      getSafeHref(linkEl)
+      ''
     );
   }
 

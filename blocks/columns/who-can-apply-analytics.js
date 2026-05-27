@@ -67,6 +67,13 @@ document.addEventListener('click', (e) => {
 
       const ctaText = minifyText(summary.textContent || '');
 
+      // force componentType as accordion-container
+      meta.componentType = accordion
+        .closest('.accordion-container')
+        ?.classList.contains('accordion-container')
+        ? 'accordion-container'
+        : meta.componentType;
+
       if (isSingleExpansion) {
         faqInteraction(
           pageRegion,
