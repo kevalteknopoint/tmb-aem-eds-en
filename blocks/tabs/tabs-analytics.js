@@ -9,12 +9,10 @@ import {
 } from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
-
   const tab = e.target.closest('.tabs-tab');
 
   /* ================= TAB CLICK ================= */
   if (tab) {
-
     const componentWrapper = tab.closest('.tabs-container');
     if (!componentWrapper) return;
 
@@ -31,8 +29,7 @@ document.addEventListener('click', (e) => {
       || ''
     );
 
-    const rawTabHTML =
-      tab.querySelector('p')?.innerHTML
+    const rawTabHTML = tab.querySelector('p')?.innerHTML
       || tab.innerHTML
       || '';
 
@@ -42,21 +39,16 @@ document.addEventListener('click', (e) => {
         .replace(/<[^>]+>/g, '')
     );
 
-    const activePanel =
-      componentWrapper.querySelector('.tabs-panel[aria-hidden="false"]');
+    const activePanel = componentWrapper.querySelector('.tabs-panel[aria-hidden="false"]');
 
-    const componentName =
-      minifyText(componentWrapper.querySelector('h1, h2')?.textContent || '');
+    const componentName = minifyText(componentWrapper.querySelector('h1, h2')?.textContent || '');
 
-    const componentType =
-      componentWrapper.dataset?.blockName || 'tabs';
+    const componentType = componentWrapper.dataset?.blockName || 'tabs';
 
-    const interactionSource =
-      activePanel?.getAttribute('id') || componentId;
+    const interactionSource = activePanel?.getAttribute('id') || componentId;
 
     /* ================= TAB INTERACTION ================= */
     if (homeSection) {
-
       tabInteraction(
         pageRegion,
         tabText,
@@ -72,9 +64,7 @@ document.addEventListener('click', (e) => {
         interactionSource,
         componentId
       );
-
     } else {
-
       sideNavMenuClick(
         pageRegion,
         tabText,
@@ -98,38 +88,29 @@ document.addEventListener('click', (e) => {
 
   if (!primaryLink) return;
 
-  const componentWrapper =
-    primaryLink.closest('.tabs-container');
+  const componentWrapper = primaryLink.closest('.tabs-container');
 
-  const currentSection =
-    primaryLink.closest('.tab-content-container');
+  const currentSection = primaryLink.closest('.tab-content-container');
 
-  const activePanel =
-    componentWrapper?.querySelector('.tabs-panel[aria-hidden="false"]');
+  const activePanel = componentWrapper?.querySelector('.tabs-panel[aria-hidden="false"]');
 
-  const tabContentItem =
-    primaryLink.closest('.tab-content-item')
+  const tabContentItem = primaryLink.closest('.tab-content-item')
     || activePanel?.querySelector('.tab-content-item');
 
-  const activeTab =
-    componentWrapper?.querySelector('.tabs-tab[aria-selected="true"]');
+  const activeTab = componentWrapper?.querySelector('.tabs-tab[aria-selected="true"]');
 
-  const componentId =
-    componentWrapper?.getAttribute('id') || '';
+  const componentId = componentWrapper?.getAttribute('id') || '';
 
   const ctaSource = minifyText(activeTab?.textContent || '');
   const ctaText = minifyText(primaryLink.textContent || '');
 
-  const ctaTitle =
-    minifyText(tabContentItem?.querySelector('h1, h2, h3')?.textContent || '');
+  const ctaTitle = minifyText(tabContentItem?.querySelector('h1, h2, h3')?.textContent || '');
 
-  const nextPageURL =
-    primaryLink.getAttribute('href') || '';
+  const nextPageURL = primaryLink.getAttribute('href') || '';
 
   const pageRegion = getPageRegion(primaryLink);
 
-  const componentIndex =
-    getComponentIndex(currentSection);
+  const componentIndex = getComponentIndex(currentSection);
 
   ctaInteraction(
     pageRegion,

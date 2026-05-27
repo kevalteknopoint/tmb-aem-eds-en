@@ -195,7 +195,7 @@ export function accrodianExpand(pageRegion, ctaText, ctaTitle, componentName, co
   });
 }
 
-//this function will fire when the user click on any tab 
+// this function will fire when the user click on any tab
 export function tabInteraction(
   pageRegion,
   tabText,

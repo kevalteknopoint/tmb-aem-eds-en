@@ -183,81 +183,75 @@ document.addEventListener('click', (e) => {
     return;
   }
 
-// =========================
-// 3. NAVIGATION CARDS (FULLY DYNAMIC FIX)
-// =========================
-if (target.closest('.navigation-cards-container')) {
-  const link = target.closest('.navigation-cards-container a.is-clickable');
-  if (!link) return;
+  // =========================
+  // 3. NAVIGATION CARDS (FULLY DYNAMIC FIX)
+  // =========================
+  if (target.closest('.navigation-cards-container')) {
+    const link = target.closest('.navigation-cards-container a.is-clickable');
+    if (!link) return;
 
-  const container = link.closest('.navigation-cards-container');
-  const card = link.closest('.nav-card');
+    const container = link.closest('.navigation-cards-container');
+    const card = link.closest('.nav-card');
 
-  const pageTitle =
-    container?.querySelector(`.default-content-wrapper ${HEADING_SELECTOR}`)?.textContent?.trim() ||
-    container?.querySelector('h1,h2,h3,h4,h5,h6')?.textContent?.trim() ||
-    '';
+    const pageTitle = container?.querySelector(`.default-content-wrapper ${HEADING_SELECTOR}`)?.textContent?.trim()
+      || container?.querySelector('h1,h2,h3,h4,h5,h6')?.textContent?.trim() || '';
 
-  const cardTitle =
-    card?.querySelector('h3')?.textContent?.trim() ||
-    '';
+    const cardTitle = card?.querySelector('h3')?.textContent?.trim() || '';
 
-  const cardPrefix =
-    card?.querySelector('.card-header p')?.textContent?.trim() ||
-    '';
+    const cardPrefix = card?.querySelector('.card-header p')?.textContent?.trim()
+      || '';
 
-  const ctaText = minifyText(cardTitle || cardPrefix || link.textContent);
+    const ctaText = minifyText(cardTitle || cardPrefix || link.textContent);
 
-  const componentName =
-    container?.getAttribute('data-block-name') ||
-    'navigation-cards';
+    const componentName = container?.getAttribute('data-block-name')
+      || 'navigation-cards';
 
-  const componentType = getComponentType(link) || 'navigation-cards';
+    const componentType = getComponentType(link) || 'navigation-cards';
 
-  const nextPageURL = link.getAttribute('href') || '';
+    const navPageURL = link.getAttribute('href') || '';
 
-  if (isDownload) {
-    downloadDocument(
+    if (isDownload) {
+      downloadDocument(
+        pageRegion,
+        componentName,
+        componentType,
+        componentIndex,
+        persona,
+        componentId,
+        navPageURL,
+        'cta-click',
+        'internal',
+        'card',
+        ctaText,
+        fileExt,
+        'download'
+      );
+      return;
+    }
+
+    ctaInteraction(
       pageRegion,
-      componentName,
+      ctaText, // CTA TEXT (dynamic)
+      cardTitle || ctaText, // CTA TITLE (dynamic)
+      cardPrefix, // CTA SOURCE (dynamic small label like "Buy my")
+      pageTitle, // section/component title (dynamic)
       componentType,
       componentIndex,
       persona,
-      componentId,
-      nextPageURL,
+      navPageURL,
       'cta-click',
       'internal',
       'card',
-      ctaText,
-      fileExt,
-      'download'
+      'in-content',
+      '',
+      '',
+      '',
+      componentId,
+      ''
     );
+
     return;
   }
-
-  ctaInteraction(
-    pageRegion,
-    ctaText,              // CTA TEXT (dynamic)
-    cardTitle || ctaText, // CTA TITLE (dynamic)
-    cardPrefix,           // CTA SOURCE (dynamic small label like "Buy my")
-    pageTitle,            // section/component title (dynamic)
-    componentType,
-    componentIndex,
-    persona,
-    nextPageURL,
-    'cta-click',
-    'internal',
-    'card',
-    'in-content',
-    '',
-    '',
-    '',
-    componentId,
-    ''
-  );
-
-  return;
-}
 
   // =========================
   // 4. NAV CARD (PDF OR CTA)
