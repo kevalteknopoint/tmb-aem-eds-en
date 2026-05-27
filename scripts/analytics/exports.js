@@ -194,6 +194,42 @@ export function accrodianExpand(pageRegion, ctaText, ctaTitle, componentName, co
   });
 }
 
+//this function will fire when the user click on any tab
+export function tabInteraction(
+  pageRegion,
+  tabText,
+  ctaTitle,
+  componentName,
+  componentType,
+  componentIndex,
+  componentPersona,
+  interactionType,
+  linkType,
+  navElementType,
+  navLocation,
+  componentId
+) {
+  window.adobeDataLayer.push({
+    event: 'tabInteraction',
+    data: {
+      pageRegion,
+      tabText,
+      ctaTitle,
+      componentName,
+      componentType,
+      componentIndex,
+      componentPersona,
+      interactionType,
+      linkType,
+      navElementType,
+      navLocation,
+      componentId
+    }
+  });
+}
+
+
+
 export function ctaInteraction(
   pageRegion,
   ctaText,

@@ -4,94 +4,133 @@ import {
   getPageRegion,
   getComponentIndex,
   sideNavMenuClick,
-  ctaInteraction
+  ctaInteraction,
+  tabInteraction
 } from "../../scripts/analytics/exports.js";
 
 document.addEventListener('click', (e) => {
-  /* ---------------- TAB CLICK ---------------- */
-  const tab = e.target.closest(
-    '.tabbed-navigation.tabs-container .tabs-tab'
-  );
 
+  const tab = e.target.closest('.tabs-tab');
+
+  /* ================= TAB CLICK ================= */
   if (tab) {
-    const componentWrapper = tab.closest(
-      '.tabbed-navigation.tabs-container'
-    );
 
-    const componentId = componentWrapper?.getAttribute('id') || '';
+    const componentWrapper = tab.closest('.tabs-container');
+    if (!componentWrapper) return;
 
-    const ctaSource = minifyText(
-      tab?.textContent || ''
-    );
+    const homeSection = tab.closest('.home-loan-explained');
+
+    const componentId =
+      componentWrapper.getAttribute('id') || '';
 
     const pageRegion = getPageRegion(tab);
-
     const componentIndex = getComponentIndex(tab);
 
-    sideNavMenuClick(
-      pageRegion,
-      ctaSource,
-      '',
-      'side widget',
-      'tabs',
-      componentIndex,
-      getPersona(),
-      '',
-      'cta-link',
-      'internal',
-      componentId
+    const tabText = minifyText(
+      tab.querySelector('p')?.textContent
+      || tab.textContent
+      || ''
     );
+
+    const rawTabHTML =
+      tab.querySelector('p')?.innerHTML
+      || tab.innerHTML
+      || '';
+
+    const ctaTitle = minifyText(
+      rawTabHTML
+        .replace(/<br\s*\/?>/gi, '\n')
+        .replace(/<[^>]+>/g, '')
+    );
+
+    const activePanel =
+      componentWrapper.querySelector('.tabs-panel[aria-hidden="false"]');
+
+    const componentName =
+      minifyText(componentWrapper.querySelector('h1, h2')?.textContent || '');
+
+    const componentType =
+      componentWrapper.dataset?.blockName || 'tabs';
+
+    const interactionSource =
+      activePanel?.getAttribute('id') || componentId;
+
+    /* ================= TAB INTERACTION ================= */
+    if (homeSection) {
+
+      tabInteraction(
+        pageRegion,
+        tabText,
+        ctaTitle,
+        componentName,
+        componentType,
+        componentIndex,
+        getPersona(),
+        "cta-link",
+        "in-content",
+        "in-page-nav",
+        "tabs",
+        interactionSource,
+        componentId
+      );
+
+    } else {
+
+      sideNavMenuClick(
+        pageRegion,
+        tabText,
+        '',
+        'side widget',
+        'tabs',
+        componentIndex,
+        getPersona(),
+        '',
+        'cta-link',
+        'internal',
+        componentId
+      );
+    }
 
     return;
   }
 
-  /* ---------------- CTA CLICK ---------------- */
-  const primaryLink = e.target.closest(
-    '.tab-content-actions .button'
-  );
+  /* ================= CTA CLICK ================= */
+  const primaryLink = e.target.closest('.tab-content-actions .button');
 
   if (!primaryLink) return;
 
-  const componentWrapper = primaryLink.closest(
-    '.tabbed-navigation.tabs-container'
-  );
+  const componentWrapper =
+    primaryLink.closest('.tabs-container');
 
-  const currentSection = primaryLink.closest(
-    '.tab-content-container'
-  );
+  const currentSection =
+    primaryLink.closest('.tab-content-container');
 
-  const activePanel = componentWrapper?.querySelector(
-    '.tabs-panel[aria-hidden="false"]'
-  );
+  const activePanel =
+    componentWrapper?.querySelector('.tabs-panel[aria-hidden="false"]');
 
-  const tabContentItem = primaryLink.closest('.tab-content-item')
+  const tabContentItem =
+    primaryLink.closest('.tab-content-item')
     || activePanel?.querySelector('.tab-content-item');
 
-  const activeTab = componentWrapper?.querySelector(
-    '.tabs-tab[aria-selected="true"]'
-  );
+  const activeTab =
+    componentWrapper?.querySelector('.tabs-tab[aria-selected="true"]');
 
-  const componentId = componentWrapper?.getAttribute('id') || '';
+  const componentId =
+    componentWrapper?.getAttribute('id') || '';
 
-  const ctaSource = minifyText(
-    activeTab?.textContent || ''
-  );
+  const ctaSource = minifyText(activeTab?.textContent || '');
+  const ctaText = minifyText(primaryLink.textContent || '');
 
-  const ctaText = minifyText(
-    primaryLink?.textContent || ''
-  );
+  const ctaTitle =
+    minifyText(tabContentItem?.querySelector('h1, h2, h3')?.textContent || '');
 
-  const ctaTitle = minifyText(
-    tabContentItem?.querySelector(
-      '.tab-content-heading h3'
-    )?.textContent || ''
-  );
-
-  const nextPageURL = primaryLink?.getAttribute('href') || '';
+  const nextPageURL =
+    primaryLink.getAttribute('href') || '';
 
   const pageRegion = getPageRegion(primaryLink);
 
-  const componentIndex = getComponentIndex(currentSection);
+  const componentIndex =
+    getComponentIndex(currentSection);
 
   ctaInteraction(
     pageRegion,

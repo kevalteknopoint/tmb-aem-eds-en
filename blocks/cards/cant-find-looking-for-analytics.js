@@ -183,70 +183,81 @@ document.addEventListener('click', (e) => {
     return;
   }
 
-  // =========================
-  // 3. NAVIGATION CARDS
-  // =========================
-  if (
-    target.closest(
-      '.navigation-cards-container .navigation-cards-wrapper:not(.rates-saver.faq-cant-find-looking-for-variant)'
-    )
-  ) {
-    const link = target.closest('.navigation-cards-container a');
+// =========================
+// 3. NAVIGATION CARDS (FULLY DYNAMIC FIX)
+// =========================
+if (target.closest('.navigation-cards-container')) {
+  const link = target.closest('.navigation-cards-container a.is-clickable');
+  if (!link) return;
 
-    if (!link) return;
+  const container = link.closest('.navigation-cards-container');
+  const card = link.closest('.nav-card');
 
-    const container = link.closest('.navigation-cards-container');
+  const pageTitle =
+    container?.querySelector(`.default-content-wrapper ${HEADING_SELECTOR}`)?.textContent?.trim() ||
+    container?.querySelector('h1,h2,h3,h4,h5,h6')?.textContent?.trim() ||
+    '';
 
-    const ctaText = minifyText(link.textContent || '');
-    const ctaTitle = ctaText;
+  const cardTitle =
+    card?.querySelector('h3')?.textContent?.trim() ||
+    '';
 
-    const componentName = minifyText(container?.getAttribute('data-block-name')) || 'navigation-cards';
+  const cardPrefix =
+    card?.querySelector('.card-header p')?.textContent?.trim() ||
+    '';
 
-    const componentType = getComponentType(target);
+  const ctaText = minifyText(cardTitle || cardPrefix || link.textContent);
 
-    if (isDownload) {
-      downloadDocument(
-        pageRegion,
-        componentName,
-        componentType,
-        componentIndex,
-        persona,
-        componentId,
-        nextPageURL,
-        'cta-link',
-        'internal',
-        'in-content',
-        ctaText,
-        fileExt,
-        'download'
-      );
+  const componentName =
+    container?.getAttribute('data-block-name') ||
+    'navigation-cards';
 
-      return;
-    }
+  const componentType = getComponentType(link) || 'navigation-cards';
 
-    ctaInteraction(
+  const nextPageURL = link.getAttribute('href') || '';
+
+  if (isDownload) {
+    downloadDocument(
       pageRegion,
-      ctaText,
-      ctaTitle,
-      ctaText,
       componentName,
       componentType,
       componentIndex,
       persona,
+      componentId,
       nextPageURL,
       'cta-click',
       'internal',
-      'in-page-nav',
-      'in-content',
-      '',
-      '',
-      '',
-      componentId,
-      ''
+      'card',
+      ctaText,
+      fileExt,
+      'download'
     );
-
     return;
   }
+
+  ctaInteraction(
+    pageRegion,
+    ctaText,              // CTA TEXT (dynamic)
+    cardTitle || ctaText, // CTA TITLE (dynamic)
+    cardPrefix,           // CTA SOURCE (dynamic small label like "Buy my")
+    pageTitle,            // section/component title (dynamic)
+    componentType,
+    componentIndex,
+    persona,
+    nextPageURL,
+    'cta-click',
+    'internal',
+    'card',
+    'in-content',
+    '',
+    '',
+    '',
+    componentId,
+    ''
+  );
+
+  return;
+}
 
   // =========================
   // 4. NAV CARD (PDF OR CTA)
