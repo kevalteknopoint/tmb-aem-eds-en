@@ -33,6 +33,7 @@ document.addEventListener('click', (e) => {
     const categoryTitleEl = container?.querySelector('h1, h2, h3, h4, h5, h6');
 
     const categoryTitle = minifyText(categoryTitleEl?.textContent || '');
+    console.log("hiii");
 
     faqInteraction(
       pageRegion,
@@ -334,6 +335,7 @@ document.addEventListener('click', (e) => {
     const container = section?.querySelector('.accordion-container');
     const componentType = container?.getAttribute('data-block-name') || container?.className?.split(' ')[0] || 'faq';
     const componentName = sectionHeading || 'faq';
+
     faqInteraction(
       pageRegion,
       // faqTitle,
