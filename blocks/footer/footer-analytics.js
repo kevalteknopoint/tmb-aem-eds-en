@@ -134,4 +134,35 @@ document.addEventListener("click", (e) => {
       ""
     );
   }
+  if (e.target.closest(".footer-meta-item")) {
+    const anchor = e.target.closest("a");
+    if (!anchor) return;
+
+    const footerMetaItem = anchor.closest(".footer-meta-item");
+    const heading = footerMetaItem?.querySelector("h1,h2,h3,h4,h5,h6");
+
+    const componentIndex = getComponentIndex(anchor);
+    const nextPageURL = anchor.getAttribute("href") || "";
+    const sectionEl = e.target.closest(".section");
+    const componentId = sectionEl?.getAttribute("id") || "";
+
+    menuInteraction(
+      "bottom",
+      minifyText(heading?.textContent), // Need help?, Enquiries, Contact Overseas, etc.
+      minifyText(anchor.textContent), // Help Center, 13 12 2, +6552155
+      "",
+      "global footer",
+      "footer",
+      componentIndex,
+      getPersona(),
+      nextPageURL,
+      "menu-click",
+      "internal",
+      "",
+      "",
+      "",
+      componentId,
+      ""
+    );
+  }
 });
