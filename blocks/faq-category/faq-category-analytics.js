@@ -27,13 +27,13 @@ document.addEventListener('click', (e) => {
 
     const persona = getPersona();
 
-    // index from HTML data-index (best source)
-    const componentIndex = faqCategoryLink.getAttribute('data-index') ? Number(faqCategoryLink.getAttribute('data-index')) + 1 : getComponentIndex(faqCategoryLink);
+    const componentIndex = faqCategoryLink.getAttribute('data-index')
+      ? Number(faqCategoryLink.getAttribute('data-index')) + 1
+      : getComponentIndex(faqCategoryLink);
 
     const categoryTitleEl = container?.querySelector('h1, h2, h3, h4, h5, h6');
 
     const categoryTitle = minifyText(categoryTitleEl?.textContent || '');
-    console.log("hiii");
 
     faqInteraction(
       pageRegion,
@@ -64,17 +64,24 @@ document.addEventListener('click', (e) => {
   }
 
   // =====================================================
-  // 2. EXISTING FAQ LINK LOGIC (UNCHANGED)
+  // 2. EXISTING FAQ LINK LOGIC (UPDATED - NO ID DEPENDENCY)
   // =====================================================
-  if (target.closest('.faq-link')) {
-    const linkEle = target.closest('.faq-link');
+  const faqLink = target.closest('.faq-link');
+
+  // detect scroll FAQ structurally (NO ID USED)
+  const isScrollFaqLink = faqLink?.closest('.faq-accordion')
+    ?.querySelector('.accordion-wrapper');
+
+  if (faqLink && !isScrollFaqLink) {
+    const linkEle = faqLink;
     const faqTitle = minifyText(linkEle?.textContent);
 
     if (target.closest('.faq-frequently-question')) {
-      const ctaSourceEle = linkEle?.closest('.faq-items-list')?.parentElement?.querySelector('h1, h2, h3, h4, h5, h6');
+      const ctaSourceEle = linkEle?.closest('.faq-items-list')
+        ?.parentElement?.querySelector('h1, h2, h3, h4, h5, h6');
 
-      const pageRegion = getPageRegion(target.closest('.faq-link'));
-      const componentIndex = getComponentIndex(target.closest('.faq-link'));
+      const pageRegion = getPageRegion(linkEle);
+      const componentIndex = getComponentIndex(linkEle);
       const componentId = target.closest('.section')?.getAttribute('id') || '';
 
       faqInteraction(
@@ -108,9 +115,11 @@ document.addEventListener('click', (e) => {
       const titleContainer = targetContainer?.previousElementSibling;
       const title = titleContainer?.querySelector('h1, h2, h3, h4, h5, h6');
 
-      const ctaSourceEle = linkEle?.closest('.faq-items-list')?.parentElement?.querySelector('h1, h2, h3, h4, h5, h6');
-      const pageRegion = getPageRegion(target.closest('.faq-link'));
-      const componentIndex = getComponentIndex(target.closest('.faq-link'));
+      const ctaSourceEle = linkEle?.closest('.faq-items-list')
+        ?.parentElement?.querySelector('h1, h2, h3, h4, h5, h6');
+
+      const pageRegion = getPageRegion(linkEle);
+      const componentIndex = getComponentIndex(linkEle);
       const componentId = target.closest('.section')?.getAttribute('id') || '';
 
       faqInteraction(
@@ -154,7 +163,9 @@ document.addEventListener('click', (e) => {
 
       const ctaSourceEle = listSection?.previousElementSibling?.classList.contains('faq-frequently-question-title')
         ? listSection.previousElementSibling.querySelector('h1, h2, h3, h4, h5, h6')
-        : document.querySelector('.faq-frequently-question-title h1, .faq-frequently-question-title h2, .faq-frequently-question-title h3, .faq-frequently-question-title h4, .faq-frequently-question-title h5, .faq-frequently-question-title h6');
+        : document.querySelector(
+          '.faq-frequently-question-title h1, .faq-frequently-question-title h2, .faq-frequently-question-title h3, .faq-frequently-question-title h4, .faq-frequently-question-title h5, .faq-frequently-question-title h6'
+        );
 
       const pageRegion = getPageRegion(linkEle);
       const componentIndex = getComponentIndex(linkEle);
@@ -266,8 +277,9 @@ document.addEventListener('click', (e) => {
   // =====================================================
   // 5. SCROLL FAQ (UNCHANGED)
   // =====================================================
-  if (target.closest('#faqs-section-scroll')) {
+  if (target.closest('.faq-accordion') && target.closest('.accordion-item-label')) {
     const section = target.closest('.section');
+
     const faqTitle = minifyText(
       target.closest('.accordion-item-label')?.textContent
       || section?.querySelector('.default-content-wrapper h1, h2, h3, h4, h5, h6')?.textContent
@@ -307,11 +319,14 @@ document.addEventListener('click', (e) => {
   }
 
   // =====================================================
-  // 6. ACCORDION FAQ (UNCHANGED)
+  // 6. ACCORDION FAQ (UPDATED - NO ID DEPENDENCY)
   // =====================================================
-  const faqLabel = target.closest('.faq-accordion:not(#faqs-section-scroll) .accordion-item-label');
+  const faqLabel = target.closest('.accordion-item-label');
 
-  if (faqLabel) {
+  const isScrollAccordion = faqLabel?.closest('.faq-accordion')
+    ?.querySelector('.accordion-wrapper');
+
+  if (faqLabel && !isScrollAccordion) {
     const faqItem = faqLabel.closest('.accordion-item');
     const faqContainer = target.closest('.faq-accordion');
 
@@ -328,18 +343,24 @@ document.addEventListener('click', (e) => {
 
     const section = faqLabel.closest('.section');
 
-    const sectionHeading = minifyText(section?.querySelector('.default-content-wrapper h1, h2, h3, h4, h5, h6')?.textContent);
+    const sectionHeading = minifyText(
+      section?.querySelector('.default-content-wrapper h1, h2, h3, h4, h5, h6')?.textContent
+    );
+
     const pageRegion = getPageRegion(faqLabel);
     const componentIndex = getComponentIndex(faqItem);
     const componentId = section?.getAttribute('id') || '';
+
     const container = section?.querySelector('.accordion-container');
-    const componentType = container?.getAttribute('data-block-name') || container?.className?.split(' ')[0] || 'faq';
+
+    const componentType = container?.getAttribute('data-block-name')
+      || container?.className?.split(' ')[0]
+      || 'faq';
+
     const componentName = sectionHeading || 'faq';
 
     faqInteraction(
       pageRegion,
-      // faqTitle,
-      // ctaSource,
       componentName,
       componentType,
       componentIndex,
