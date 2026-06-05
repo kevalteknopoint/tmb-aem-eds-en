@@ -7,99 +7,159 @@ import {
   downloadApp
 } from "../../scripts/analytics/exports.js";
 
-document.addEventListener('click', (e) => {
-  if (
-    e.target.closest('.money-overseas.money-overseas-variant .button-container')
-  ) {
-    const secondaryLink = e.target.closest(
-      '.money-overseas.money-overseas-variant .overseas-columns-wrapper .button-container a'
+/* =======================================================
+   CTA + PHONE TRACKING (OVERSEAS)
+======================================================= */
+
+document.addEventListener(
+  'click',
+  (e) => {
+    /* -----------------------------
+       BUTTON CTA TRACKING
+    ----------------------------- */
+
+    const buttonLink = e.target.closest(
+      '.money-overseas.overseas-variant .button-container a'
     );
 
-    const pageRegion = getPageRegion(
-      e.target.closest(
-        '.money-overseas.money-overseas-variant .button-container a'
-      )
-    );
+    if (buttonLink) {
+      const pageRegion = getPageRegion(buttonLink);
+      const componentIndex = getComponentIndex(buttonLink);
 
-    const componentIndex = getComponentIndex(
-      e.target.closest(
-        '.money-overseas.money-overseas-variant .button-container a'
-      )
-    );
+      const ctaTitle = buttonLink
+        .closest('.overseas-columns-wrapper')
+        ?.querySelector('h1,h2,h3,h4,h5,h6');
 
-    const ctaTitle = e.target
-      .closest('.money-overseas.money-overseas-variant .overseas-columns-wrapper')
-      .querySelector('h1,h2,h3,h4,h5,h6');
+      const nextPageURL = buttonLink.getAttribute('href');
 
-    const nextPageURL = e.target
-      .closest('.money-overseas.money-overseas-variant .button-container a')
-      ?.getAttribute('href');
+      const sectionEl = buttonLink.closest('.section');
+      const componentId = sectionEl?.id || '';
 
-    const sectionEl = e.target.closest('.section');
-    const componentId = sectionEl?.getAttribute('id') || '';
+      ctaInteraction(
+        pageRegion,
+        minifyText(buttonLink.textContent),
+        minifyText(ctaTitle?.textContent),
+        '',
+        'money-overseas',
+        'columns-container',
+        componentIndex,
+        getPersona(),
+        nextPageURL,
+        'cta-link',
+        'internal',
+        'quick-link',
+        'in-content',
+        '',
+        '',
+        '',
+        componentId,
+        '',
+        '',
+        '',
+        ''
+      );
 
-    ctaInteraction(
-      pageRegion,
-      minifyText(secondaryLink?.textContent),
-      minifyText(ctaTitle?.textContent),
-      '',
-      'money-overseas',
-      'columns-container',
-      componentIndex,
-      getPersona(),
-      nextPageURL,
-      'cta-link',
-      'internal',
-      'quick-link',
-      'in-content',
-      '',
-      '',
-      '',
-      componentId,
-      '',
-      '',
-      '',
-      ''
-    );
-  }
-});
+      return;
+    }
+
+    /* -----------------------------
+       PHONE TRACKING
+    ----------------------------- */
+
+    const phoneLink = e.target.closest('a[href^="tel:"]');
+
+    if (phoneLink) {
+      const section = phoneLink.closest(
+        '.money-overseas.overseas-variant'
+      );
+
+      if (!section) return;
+
+      const sectionEl = phoneLink.closest('.section');
+      const componentId = sectionEl?.id || '';
+
+      const ctaTitle = phoneLink
+        .closest('.overseas-columns-wrapper')
+        ?.querySelector('h1,h2,h3,h4,h5,h6');
+
+      ctaInteraction(
+        getPageRegion(phoneLink),
+        minifyText(phoneLink.textContent),
+        minifyText(ctaTitle?.textContent),
+        '',
+        'money-overseas',
+        'columns-container',
+        getComponentIndex(phoneLink),
+        getPersona(),
+        phoneLink.getAttribute('href'),
+        'cta-link',
+        'internal',
+        'phone',
+        'in-content',
+        '',
+        '',
+        '',
+        componentId,
+        '',
+        '',
+        '',
+        ''
+      );
+    }
+  },
+  true // capture phase
+);
 
 /* =======================================================
    DOWNLOAD APP TRACKING (OVERSEAS)
 ======================================================= */
 
 document.addEventListener('click', (e) => {
-  const section = e.target.closest('.money-overseas.overseas-variant');
-  if (!section) return;
-
   const clickedLink = e.target.closest('a');
   if (!clickedLink) return;
 
-  const sectionEl = e.target.closest('.section');
-  const componentId = sectionEl?.getAttribute('id') || '';
+  const section = clickedLink.closest(
+    '.money-overseas.overseas-variant'
+  );
+  if (!section) return;
 
-  const iconContainer = clickedLink.closest('.content-with-icon') || clickedLink.closest('.overseas-columns-wrapper');
+  const isDownload = clickedLink.href?.includes('apps.apple.com')
+    || clickedLink.href?.includes('play.google.com');
 
-  const iconEl = iconContainer?.querySelector('.icon-google-play-badge, .icon-app-store-badge');
-
-  const iconName = iconEl ? minifyText([...iconEl.classList].find((c) => c.includes('icon')) || '') : '';
-
-  const isDownload = clickedLink.href?.includes('apps.apple.com') || clickedLink.href?.includes('play.google.com');
   if (!isDownload) return;
 
-  const titleEl = e.target.closest('.overseas-columns-wrapper')?.querySelector('h1,h2,h3,h4,h5,h6');
+  const sectionEl = clickedLink.closest('.section');
+  const componentId = sectionEl?.id || '';
+
+  const iconContainer = clickedLink.closest(
+    '.content-with-icon, .overseas-columns-wrapper'
+  );
+
+  const iconName = minifyText(
+    iconContainer
+      ?.querySelector(
+        '.icon-google-play-badge, .icon-app-store-badge'
+      )
+      ?.classList?.value
+      ?.split(' ')
+      ?.find((c) => c.includes('icon')) || ''
+  );
+
+  const titleEl = clickedLink
+    .closest('.overseas-columns-wrapper')
+    ?.querySelector('h1,h2,h3,h4,h5,h6');
 
   downloadApp(
     getPageRegion(clickedLink),
     iconName,
-    minifyText(titleEl?.textContent),
+    minifyText(titleEl?.textContent || ''),
     'money-overseas',
     'columns-container',
     getComponentIndex(clickedLink),
     getPersona(),
     'cta-click',
     'download',
-    clickedLink.getAttribute('href') || '',
+    clickedLink.href || '',
     'internal',
     componentId
   );

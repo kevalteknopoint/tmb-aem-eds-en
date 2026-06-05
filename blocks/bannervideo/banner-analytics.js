@@ -19,30 +19,32 @@ document.addEventListener("click", (e) => {
   const componentName = componentType;
 
   const section = button.closest(".section");
+  const slide = button.closest(".swiper-slide");
 
-  // banner heading (for text)
-  const heading = section?.querySelector("h1,h2,h3,h4,h5,h6");
+  // Get heading only from the clicked slide
+  const heading = slide?.querySelector(
+    "h1, h2, h3, h4, h5, h6"
+  );
 
-  const bannerName = heading?.textContent?.trim() || "";
+  const bannerName = heading?.textContent
+    ?.replace(/\s+/g, " ")
+    ?.trim() || "";
 
-  // ✅ FIXED: componentId should come ONLY from section id
+  // Component ID comes from section ID
   const componentId = section?.id || "";
 
   const pageRegion = getPageRegion(button);
   const componentIndex = getComponentIndex(button);
 
-  const nextPageURL = button?.getAttribute("href");
+  const nextPageURL = button?.getAttribute("href") || "";
 
-  const carouselPosition = button
-    .closest(".swiper-slide")
-    ?.getAttribute("aria-label")
-    ?.split(" / ")[0] || "";
+  const carouselPosition = slide?.getAttribute("aria-label")?.split(" / ")[0] || "";
 
   if (isNewsHelpful) return;
 
   bannerInteraction(
     pageRegion,
-    minifyText(button?.textContent),
+    minifyText(button?.textContent || ""),
     minifyText(bannerName),
     carouselPosition,
     componentType,
@@ -55,7 +57,7 @@ document.addEventListener("click", (e) => {
     "",
     "",
     "",
-    componentId, // "" if not authored
-    "",
+    componentId,
+    ""
   );
 });
