@@ -217,5 +217,6 @@ document.addEventListener("click", (e) => {
       componentId,
       ""
     );
+    ;
   }
 });
